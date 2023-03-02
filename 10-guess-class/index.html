@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    background-color:darksalmon;
+    /* background: -webkit-linear-gradient(to right, #7b4397, #dc2430); */
+    /* background: linear-gradient(to right, #7b4397, #dc2430); */
+}
+
+.box {
+    margin: auto;
+    width: 60%;
+    text-align: center
+}
+
+P {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    cursor: default;
+}
+
+span {
+    display: block;
+    font-size: 18px;
+    word-spacing: 5px;
+    margin-bottom: 30px;
+    line-height: 30px;
+    color: black;
+}
+
+input {
+    display: block;
+    margin: 15px auto;
+    width: 60%;
+    height: 22px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    outline: 0;
+}
+
+button {
+    width: 45%;
+    min-height: 40px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: transparent;
+    ;
+    color: #fff;
+    display: block;
+    margin: 10px auto
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+}
+
+.image img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0, 0);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.image img:first-child {
+    height: 230px;
+    width: 230px
+}
+
+.image img:last-child {
+    height: 200px;
+    width: 200px;
+}
+
+img#mo7amed {
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+img#mo7amed:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 5px 5px 15px #000
+}
+    </style>
+</head>
+
+<body>
+<div class="box">
+    <p class="ques two mo7amed test-five time show class-2 khalid parag content">猜一猜:下列哪些单词在我的class列表中!!!</p>
+    <span>[ parag , p , text , question , paragraph , one , two , three , words , mohamed , show , content , classes
+        , classlist , mo7amed , khalid , khaled , one-time , test-3 , test-five , time , ques , class-2 , para ]
+    </span>
+    <input type="text" name="guess" placeholder="输入你的猜测">
+    <button id="btn">检测</button>
+     <button id="reset">再试一次</button>
+    <div class="image">
+        <img
+            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0MC42MDggMjQwLjYwOCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQwLjYwOCAyNDAuNjA4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBhdGggZD0iTTIwOC43ODksMjkuOTcybDMxLjgxOSwzMS44Mkw5MS43NjMsMjEwLjYzN0wwLDExOC44NzZsMzEuODE5LTMxLjgybDU5Ljk0NCw1OS45NDJMMjA4Ljc4OSwyOS45NzJ6IiBmaWxsPSIjMzJjNzQxIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+        <img
+            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI4IDI4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyOCAyODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxnIGlkPSJ4Ij4KCQk8Zz4KCQkJPHBvbHlnb24gcG9pbnRzPSIyOCwyMi4zOTggMTkuNTk0LDE0IDI4LDUuNjAyIDIyLjM5OCwwIDE0LDguNDAyIDUuNTk4LDAgMCw1LjYwMiA4LjM5OCwxNCAwLDIyLjM5OCAgICAgIDUuNTk4LDI4IDE0LDE5LjU5OCAyMi4zOTgsMjggICAgIiBmaWxsPSIjZmYxMjEyIi8+CgkJPC9nPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+    </div>
+</div>
+
+
+<script>
+    var paraClasses = document.querySelector("p"),
+        inputClass = document.getElementsByTagName("input")[0],
+        btn = document.getElementById("btn"),
+        reset = document.getElementById("reset"),
+        rightMark = document.querySelectorAll("img")[0],
+        wrongMark = document.querySelectorAll("img")[1];
+
+    btn.onclick = function () {
+        'use strict';
+
+        if (paraClasses.classList.contains(inputClass.value)) {
+            rightMark.style = "transform:     translateX(-50%) scale(1,1);opacity:1";
+            wrongMark.style = "transform:     translateX(-50%) scale(0,0);opacity:0";
+            btn.textContent = "正确！";
+        } else if (inputClass.value === "") {
+            // btn.textContent = "请输入你的猜测";
+            alert('请输入你的猜测')
+            rightMark.style = "transform:     translateX(-50%) scale(0,0);opacity:0";
+            wrongMark.style = "transform:     translateX(-50%) scale(0,0);opacity:0";
+        } else {
+            wrongMark.style = "transform:     translateX(-50%) scale(1,1);opacity:1";
+            rightMark.style = "transform:     translateX(-50%) scale(0,0);opacity:0";
+            btn.textContent = "错误";
+        }
+
+    };
+
+    reset.onclick = function () {
+        'use strict';
+
+        rightMark.style = "transform:     translateX(-50%) scale(0,0);opacity:0";
+        wrongMark.style = "transform:     translateX(-50%) scale(0,0);opacity:0";
+        btn.textContent = "检测";
+        inputClass.value = "";
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
+aside {
+    padding: 10px 20px;
+    width: 250px;
+    border-right: 1px solid #111;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #111;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+main {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+h2 {
+    border-bottom: 1px solid #111;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+h3 {
+    background-color: #fff;
+    border-bottom: 1px solid #111;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    margin: 20px 0 0;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+    </style>
+</head>
+
+<body>
+<h1>富豪排行榜</h1>
+<div class="container">
+    <aside>
+        <button id="add-user">增加富豪</button>
+        <button id="double">加倍财富</button>
+        <button id="sort">富豪排行</button>
+        <button id="show-millionaires">仅显示百万+富豪</button>
+        <button id="calculate-wealth">计算全部财富</button>
+    </aside>
+    <main id="main">
+        <h2><strong>姓名</strong>身价</h2>
+    </main>
+</div>
+    <script>
+        //data
+        const dataArr = [
+            ['赵', '钱', '孙', '欧阳', '李', '周', '吴', '郑', '王', '冯', '陈', '褚', '卫', '蒋', '沈', '韩', '杨', '朱', '秦', '尤', '许', '何', '吕', '施', '张', '孔', '曹', '严', '华', '金', '魏', '陶', '姜'],
+            ['伟', '芳', '娜', '敏', '静', '秀英', '浩然', '小蒙', '子轩', '欣怡', '梓涵', '浩宇', '雨桐', '子墨', '宇航']
+        ]
+        var arr = [] // ['张三', 10],]]
+        //获取元素
+        let addBtn = document.querySelector('#add-user')
+        const main = document.querySelector('#main')
+        const doubleBtn = document.querySelector('#double')
+        const sortBtn = document.querySelector('#sort')
+        const showBtn = document.querySelector('#show-millionaires')
+        const allBtn = document.querySelector('#calculate-wealth')
+        const allMoneyBox = document.querySelector('.allmoney')
+
+        //定义变量
+        let str = ''
+        //生成富豪数组
+        create$()
+        function create$() {
+            /****第一步：把数据添加到arr数组中*****/
+            //1. 生成随机姓名
+            const name$ = dataArr[0][parseInt(Math.random() * dataArr[0].length)] + dataArr[1][parseInt(Math.random() * dataArr[1].length)]
+            //2. 生成随机财富
+            const money = parseInt(Math.random() * 300000)
+            arr.push([name$, money])
+
+            /****第二步：把arr数组元素渲染到DOM中*****/
+            render(arr)
+        }
+        //点击按钮，添加富豪
+        addBtn.addEventListener('click', create$)
+
+        //定义渲染函数
+        function render(ARR) {
+            main.innerHTML = '<h2><strong>姓名</strong>身价</h2>'
+
+            ARR.forEach((v) => {
+                const oDiv = document.createElement('div')
+                oDiv.className = 'person'
+                oDiv.innerHTML = `<strong>${v[0]}</strong>${v[1]}`
+                main.appendChild(oDiv)
+            })
+
+        }
+
+        //按钮2：点击加倍财富按钮：加倍财富
+        doubleBtn.addEventListener('click', doubleFn)
+        function doubleFn() {
+            arr = arr.map(function (item) {
+                return [item[0], item[1] * 2]
+            })
+            render(arr)
+        }
+        //按钮3：点击符号排行按钮：对arr数组进行排序，再渲染
+        sortBtn.addEventListener('click', sortFn)
+        function sortFn() {
+            arr.sort(function (a, b) {
+                return a[1] < b[1]
+            })
+            render(arr)
+        }
+        //按钮4：仅显示百万+富豪
+        showBtn.addEventListener('click', showFn)
+        function showFn() {
+            arr = arr.filter(function (item) {
+                return item[1] > 1000000
+            })
+            render(arr)
+        }
+
+        //按钮5：计算财富总和
+        allBtn.addEventListener('click', allFn)
+        let allMoney = 0
+        function allFn() {
+            const oResult = arr.reduce((total, v) => { return total += v[1] }, 0)
+            console.log(oResult)
+            const oDiv = document.createElement('div')
+            oDiv.innerHTML = `<h3>共计: <strong>${oResult}</strong></h3>`
+            main.appendChild(oDiv)
+        }
+
+// const data = {"results": [
+// {"gender": "女","name": {"title": "Mademoiselle","first": "刘","last": "丽丽"}},
+// {"gender": "男","name": {"title": "Mademoiselle","first": "张","last": "老板"}},
+// {"gender": "女","name": {"title": "Mademoiselle","first": "王","last": "兰兰"}},
+// {"gender": "男","name": {"title": "Mademoiselle","first": "孙","last": "悟空"}},
+// {"gender": "女","name": {"title": "Mademoiselle","first": "糖","last": "三藏"}},
+// ]}
+    </script>
+</body>
+
+</html>
