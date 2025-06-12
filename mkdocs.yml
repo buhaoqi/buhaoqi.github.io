@@ -1,0 +1,170 @@
+# Basic information
+site_name: 高二九班对口高考计算机
+site_url: https://buhaoqi.github.io
+site_author: 村长
+site_description: >-
+  2026年河北省中职对口升学考试计算机类专业考试学习交流。
+
+# Copyright
+copyright: Copyright &copy; 2023 - 2025 村长 <a href="https://beian.mps.gov.cn/#/query/webSearch?code=13040202001048" target="_blank">冀公网安备13040202001048号</a><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>
+    
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  logo: assets/logo.png
+  favicon: images/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    # - navigation.path
+    - navigation.prune
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.select
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - tags
+  # - blog:
+    # - blog_dir: /blog/
+  #- minify:
+      #minify_html: true
+extra:
+  social:
+    - icon: fontawesome/brands/mastodon 
+      link: https://fosstodon.org/@squidfunk
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+# Page tree
+nav:
+  - 首页: index.md
+  - C#教程:
+    - 学习路线: csharp/index.md
+    - 环境搭建: csharp/01-environment-setup.md
+    - 认识C#: csharp/02-what-csharp-is.md
+    - Hello World(2道): csharp/03-hello-world.md
+    - 数据类型(2道): csharp/04-data-type.md
+    - 变量与常量(20道): csharp/05-variable-constant.md
+    - 输入输出: csharp/06-input-and-output.md
+    - 赋值运算符: csharp/07-assignment-operators.md
+    - 算数运算符(29道): csharp/08-arithmetic-operators.md
+    - 整数类型(35道): csharp/09-integer.md
+    - 浮点数类型(7道): csharp/10-float.md
+    - 数据类型转换(20道): csharp/11-convert-data-type.md
+    - INT方法: csharp/12-int-methods.md
+    - FLOAT方法: csharp/13-float-methods.md
+    - 字符类型: csharp/14-char.md
+    - 字符串类型(49道): csharp/15-string.md
+    - 布尔类型: csharp/16-boolean.md
+    - 关系运算符: csharp/17-comparison-operators.md
+    - 逻辑运算符: csharp/18-logical-operators.md
+    - 条件语句: csharp/19-conditional-statements.md
+    - 循环语句: csharp/20-loop-statements.md
+    - 数组: csharp/21-array.md
+    - 数组方法: csharp/22-array-methods.md
+    - 练习题: csharp/readline.md
+  - MySQL文档:
+    - 练习题: mysql/exercises.md
+    - SQL语句结构: mysql/sql-statement.md
+    - 数据库基础:
+      - 数据与数据库: mysql/database.md
+    - 管理数据结构: mysql/operate-data-structure/add.md
+    - 管理数据: mysql/operate-data-structure/add.md
+    - 数据类型:
+      - 数值: mysql/data-type/number.md
+      - 字符串: mysql/data-type/number.md
+      - 日期时间: mysql/data-type/number.md
+      - 布尔值: mysql/data-type/number.md
+    - 约束条件: 
+      - PRIMARY KEY: mysql/constraint/primary-key.md
+      - FOREIGN KEY: mysql/constraint/foreign-key.md
+      - Candidate Key: mysql/constraint/candidate-key.md
+    - 数据查询:
+      - 基础知识: mysql/query/query-basic.md
+      - SELECT子句: mysql/query/clause-select.md
+      - FROM子句: mysql/query/clause-from.md
+      - JOIN子句: mysql/query/clause-join.md
+      - 多表查询: mysql/query/query-multiple-tables.md
+      - WHERE子句: mysql/query/clause-where.md
+    - 分类汇总与排序:
+      - GROUP BY子句: mysql/query/clause-group-by.md
+      - HAVING子句: mysql/query/clause-having.md
+      - ORDER BY子句: mysql/query/clause-order-by.md
+      - LIMIT子句: mysql/query/clause-limit.md
+    - 关键词:
+      - 关键字简介: mysql/keywords/keywords.md
+      - DISTINCT: mysql/keywords/distinct.md
+      - AS: mysql/keywords/as.md
+      - on: mysql/keywords/on.md
+      - join: mysql/keywords/join.md
+      - 索引index: mysql/keywords/index.md
+    - 字符串函数:
+      - Length()函数: mysql/function/length.md
+      - Upper()函数: mysql/function/upper.md
+      - Lower()函数: mysql/function/lower.md
+      - Left()函数: mysql/function/left.md
+      - Right()函数: mysql/function/right.md
+      - Rtrim()函数: mysql/function/rtrim.md
+      - Substring()函数: mysql/function/substring.md
+      - Locate()函数: mysql/function/locate.md
+      - Position()函数: mysql/function/position.md
+      - Reverse()函数: mysql/function/reverse.md
+      - field()函数: mysql/function/field.md
+      - concat()函数: mysql/function/concat.md
+      - format()函数: mysql/function/format.md
+    - 数学函数: 
+      - abs(): mysql/function/abs.md
+      - rand(): mysql/function/rand.md
+      - ceil(): mysql/function/ceil.md
+      - floor(): mysql/function/floor.md
+      - round(): mysql/function/round.md
+      - truncate(): mysql/function/truncate.md
+      - pow(): mysql/function/pow.md
+      - sqrt(): mysql/function/sqrt.md
+      - mod(): mysql/function/mod.md
+      - PI(): mysql/function/pi.md
+      - if(): mysql/function/if.md
+      - ifnull(): mysql/function/ifnull.md
+      - version(): mysql/function/version.md
+    - MySQL函数: mysql/09-function.md
+    - 聚合函数: mysql/function-aggregate.md
+    - COUNT()函数: mysql/function-count.md
+    - 生成数据: mysql/generate-data.md
+  - 计算机基础:
+    - 首页: computer-basics/index.md
+    - 编程基础:
+      - 编程语言: computer-basics/programming-languages.md
+      - 科学计数法: computer-basics/programming/scientific-notation.md
+      - 浮点数: computer-basics/programming/float.md
+      - 二进制: computer-basics/programming/binary.md
+    
