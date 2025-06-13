@@ -103,54 +103,27 @@ nav:
     - 操作数据库结构:
       - 创建数据库:  mysql/04-create-database.md
       - 删除数据库: mysql/05-drop-database.md
-      - 修改数据库: mysql/06-alter-database.md
+      - 修改数据库名: mysql/06-alter-database.md
       - 查询数据库: mysql/07-show-database.md
+      - 选择数据库: mysql/08-use-database.md
     - 操作表结构: 
-      - 创建表结构: mysql/08-create-table.md
-      - 删除表结构: mysql/09-drop-table.md
-      - 修改表结构: mysql/10-alter-table.md
-      - 查询表结构: mysql/11-show-table.md
+      - 创建表结构: mysql/09-create-table.md
+      - 删除表结构: mysql/10-drop-table.md
+      - 修改表结构: mysql/11-alter-table.md
+      - 查询表结构: mysql/12-show-table.md
+      - 重命名表: mysql/13-rename-table.md
     - 操作数据: 
-      - 添加数据: mysql/12-insert-data.md
-      - 删除数据: mysql/13-delete-data.md
-      - 修改数据: mysql/14-update-data.md
-      - 查询数据: mysql/15-select-data.md
-    - 其他语句: mysql/16-other-statements.md
-    - 修改表: mysql/modify-table/modify-table.md
-    - SQL语句结构: mysql/sql-statement.md
-    - 数据库基础:
-      - 数据与数据库: mysql/database.md
-    - 管理数据结构: mysql/operate-data-structure/add.md
-    - 管理数据: mysql/operate-data-structure/add.md
-    - 数据类型:
-      - 数值: mysql/data-type/number.md
-      - 字符串: mysql/data-type/number.md
-      - 日期时间: mysql/data-type/number.md
-      - 布尔值: mysql/data-type/number.md
-    - 约束条件: 
-      - PRIMARY KEY: mysql/constraint/primary-key.md
-      - FOREIGN KEY: mysql/constraint/foreign-key.md
-      - Candidate Key: mysql/constraint/candidate-key.md
-    - 数据查询:
-      - 基础知识: mysql/query/query-basic.md
-      - SELECT子句: mysql/query/clause-select.md
-      - FROM子句: mysql/query/clause-from.md
-      - JOIN子句: mysql/query/clause-join.md
-      - 多表查询: mysql/query/query-multiple-tables.md
-      - WHERE子句: mysql/query/clause-where.md
-    - 分类汇总与排序:
-      - GROUP BY子句: mysql/query/clause-group-by.md
-      - HAVING子句: mysql/query/clause-having.md
-      - ORDER BY子句: mysql/query/clause-order-by.md
-      - LIMIT子句: mysql/query/clause-limit.md
-    - 关键词:
-      - 关键字简介: mysql/keywords/keywords.md
-      - DISTINCT: mysql/keywords/distinct.md
-      - AS: mysql/keywords/as.md
-      - on: mysql/keywords/on.md
-      - join: mysql/keywords/join.md
-      - 索引index: mysql/keywords/index.md
-    - MySQL函数: mysql/09-function.md
+      - 添加数据: mysql/14-insert-data.md
+      - 删除数据: mysql/15-delete-data.md
+      - 修改数据: mysql/16-update-data.md
+      - 查询数据: mysql/17-select-data.md
+    - 数据类型: mysql/18-data-type.md
+    - 数据完整性约束: mysql/19-constraint.md
+    - 索引: mysql/20-index.md
+    - 视图: mysql/21-view.md
+    - 数据库设计: mysql/22-database-design.md
+    - 数据库安全性: mysql/23-database-security.md
+    - 数据库的备份与恢复: mysql/24-database-backup-recovery.md
     - 字符串函数:
       - Length()函数: mysql/function/string-length.md
       - Upper()函数: mysql/function/string-upper.md
@@ -200,8 +173,5 @@ nav:
       - if(): mysql/function/others-if.md
       - IFNULL(): mysql/function/others-ifnull.md
       - version(): mysql/function/others-version.md
-    - 聚合函数: mysql/function-aggregate.md
-    - COUNT()函数: mysql/function-count.md
-    - 生成数据: mysql/generate-data.md
   
     
