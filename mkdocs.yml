@@ -1,5 +1,5 @@
 # Basic information
-site_name: 高二九班对口高考计算机
+site_name: 高二九班(对口计算机)
 site_url: https://buhaoqi.github.io
 site_author: 村长
 site_description: >-
@@ -34,6 +34,8 @@ theme:
   palette: 
     # Palette toggle for light mode
     - scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
@@ -69,7 +71,7 @@ markdown_extensions:
 nav:
   - 首页: index.md
   - C#教程:
-    - 学习路线: csharp/index.md
+    - 考试大纲: csharp/index.md
     - 环境搭建: csharp/01-environment-setup.md
     - 认识C#: csharp/02-what-csharp-is.md
     - Hello World(2道): csharp/03-hello-world.md
@@ -94,6 +96,7 @@ nav:
     - 数组方法: csharp/22-array-methods.md
     - 练习题: csharp/readline.md
   - MySQL文档:
+    - 考试大纲: mysql/index.md
     - 练习题: mysql/exercises.md
     - SQL语句结构: mysql/sql-statement.md
     - 数据库基础:
@@ -160,11 +163,5 @@ nav:
     - 聚合函数: mysql/function-aggregate.md
     - COUNT()函数: mysql/function-count.md
     - 生成数据: mysql/generate-data.md
-  - 计算机基础:
-    - 首页: computer-basics/index.md
-    - 编程基础:
-      - 编程语言: computer-basics/programming-languages.md
-      - 科学计数法: computer-basics/programming/scientific-notation.md
-      - 浮点数: computer-basics/programming/float.md
-      - 二进制: computer-basics/programming/binary.md
+  
     
