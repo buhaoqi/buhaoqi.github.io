@@ -21,7 +21,7 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
+    # - navigation.sections
     - navigation.expand
     # - navigation.path
     - navigation.prune
@@ -97,7 +97,26 @@ nav:
     - 练习题: csharp/readline.md
   - MySQL文档:
     - 考试大纲: mysql/index.md
-    - 练习题: mysql/exercises.md
+    - MySQL的基本概念: mysql/01-basic-concept.md
+    - MySQL的安装与配置: mysql/02-install-config.md
+    - 登录与退出MySQL: mysql/03-login-logout.md
+    - 操作数据库结构:
+      - 创建数据库:  mysql/04-create-database.md
+      - 删除数据库: mysql/05-drop-database.md
+      - 修改数据库: mysql/06-alter-database.md
+      - 查询数据库: mysql/07-show-database.md
+    - 操作表结构: 
+      - 创建表结构: mysql/08-create-table.md
+      - 删除表结构: mysql/09-drop-table.md
+      - 修改表结构: mysql/10-alter-table.md
+      - 查询表结构: mysql/11-show-table.md
+    - 操作数据: 
+      - 添加数据: mysql/12-insert-data.md
+      - 删除数据: mysql/13-delete-data.md
+      - 修改数据: mysql/14-update-data.md
+      - 查询数据: mysql/15-select-data.md
+    - 其他语句: mysql/16-other-statements.md
+    - 修改表: mysql/modify-table/modify-table.md
     - SQL语句结构: mysql/sql-statement.md
     - 数据库基础:
       - 数据与数据库: mysql/database.md
@@ -131,20 +150,21 @@ nav:
       - on: mysql/keywords/on.md
       - join: mysql/keywords/join.md
       - 索引index: mysql/keywords/index.md
+    - MySQL函数: mysql/09-function.md
     - 字符串函数:
-      - Length()函数: mysql/function/length.md
-      - Upper()函数: mysql/function/upper.md
-      - Lower()函数: mysql/function/lower.md
-      - Left()函数: mysql/function/left.md
-      - Right()函数: mysql/function/right.md
-      - Rtrim()函数: mysql/function/rtrim.md
-      - Substring()函数: mysql/function/substring.md
-      - Locate()函数: mysql/function/locate.md
-      - Position()函数: mysql/function/position.md
-      - Reverse()函数: mysql/function/reverse.md
-      - field()函数: mysql/function/field.md
-      - concat()函数: mysql/function/concat.md
-      - format()函数: mysql/function/format.md
+      - Length()函数: mysql/function/string-length.md
+      - Upper()函数: mysql/function/string-upper.md
+      - Lower()函数: mysql/function/string-lower.md
+      - Left()函数: mysql/function/string-left.md
+      - Right()函数: mysql/function/string-right.md
+      - Rtrim()函数: mysql/function/string-rtrim.md
+      - Substring()函数: mysql/function/string-substring.md
+      - Locate()函数: mysql/function/string-locate.md
+      - Position()函数: mysql/function/string-position.md
+      - Reverse()函数: mysql/function/string-reverse.md
+      - field()函数: mysql/function/string-field.md
+      - concat()函数: mysql/function/string-concat.md
+      - format()函数: mysql/function/string-format.md
     - 数学函数: 
       - abs(): mysql/function/abs.md
       - rand(): mysql/function/rand.md
@@ -159,7 +179,27 @@ nav:
       - if(): mysql/function/if.md
       - ifnull(): mysql/function/ifnull.md
       - version(): mysql/function/version.md
-    - MySQL函数: mysql/09-function.md
+    - 聚合函数:
+      - count(): mysql/function/aggregate-count.md
+      - sum(): mysql/function/aggregate-sum.md
+      - avg(): mysql/function/aggregate-avg.md
+      - max(): mysql/function/aggregate-max.md
+      - min(): mysql/function/aggregate-min.md
+    - 日期函数:
+      - now(): mysql/function/date-now.md
+      - curdate(): mysql/function/date-curdate.md
+      - curtime(): mysql/function/date-curtime.md
+      - date_format(): mysql/function/date-date_format.md
+      - year(): mysql/function/date-year.md
+      - month(): mysql/function/date-month.md
+      - day(): mysql/function/date-day.md
+      - hour(): mysql/function/date-hour.md
+      - minute(): mysql/function/date-minute.md
+      - second(): mysql/function/date-second.md
+    - 其他函数:
+      - if(): mysql/function/others-if.md
+      - IFNULL(): mysql/function/others-ifnull.md
+      - version(): mysql/function/others-version.md
     - 聚合函数: mysql/function-aggregate.md
     - COUNT()函数: mysql/function-count.md
     - 生成数据: mysql/generate-data.md

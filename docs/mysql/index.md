@@ -5,18 +5,18 @@ tags: []
 ---
 ##《数据库原理与应用技术》
 
-## 数据库基础知识 
-### 1.数据库理论基础
+
+## 0A.数据库理论基础
 1. 理解数据库相关的基本概念；
 2. 掌握数据库系统的特点与结构；
 3. 理解概念模型、逻辑模型和物理模型等数据模型的概念；掌握层次模型、网状模型、关系模型等数据模型的概念；
 4. 掌握关系模型、表、列、关键字、候选键和外部关键字、域、数据类型等常用关系术语。
-### 2.MySQL概述
+## 0B.MySQL概述
 1. 了解MySQL系统特性；
 2. 了解MySQL服务器的安装与配置；
 3. 掌握MySQL服务器的启动与关闭；
 4. 掌握MySQL客户端管理工具。
-### 3.MySQL编程语言
+## 0C.MySQL编程语言
 1.了解结构化查询语言SQL的作用和主要特点；
 
 2.掌握MySQL语言组成；
@@ -29,16 +29,14 @@ tags: []
 - 日期和时间函数：CURDATE()、CURRENT_DATE()、CURTIME()、NOW()、CURRENT_TIME()、DATEDIFF()、ADDDATE()、ADDDATE()、SUBDATE()；
 - 其他常用函数：IF()、IFNULL()、VERSION()。
 
-## 数据定义
-
-### 一、定义数据库
+## 1.定义数据库
 1. 掌握数据库的创建、查看、选择、修改和删除等操作；
 2. 掌握数据库的建立命令：CREATE DATABASE；
 3. 掌握选择数据库的命令：USE db_name；
 4. 掌握查看数据库的命令：SHOW { DATABASES|SCHEMAS}；
 5. 掌握修改数据库的命令：ALTER { DATABASES|SCHEMAS}；
 6. 掌握删除数据库的命令：DROP { DATABASES|SCHEMAS}。
-### 二、定义表
+## 2.定义表
 1. 掌握MySQL常用的数据类型、掌握创建表、查看表、修改表、重命名表、复制表和删除表的基本操作；
 2. 掌握MySQL的常用数据类型：数字类型、字符串类型、日期和时间类型等；
 3. 掌握建立数据表的命令：CREATE TABLE；
@@ -47,7 +45,7 @@ tags: []
 6. 掌握重命名表的命令：RENAME TABLE；
 7. 掌握复制表的命令：CREATE TABLE …LIKE；
 8. 掌握删除表的命令：DROP TABLE；
-### 三、数据完整性约束
+## 3.数据完整性约束
 1．理解实体完整性、参照完整性、更新完整性的概念；
 
 2．掌握主键、候选键、外键的概念；
@@ -63,7 +61,7 @@ tags: []
 7．ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] PRIMARY KEY（主键字段）、
 ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] FOREIGN KEY（外键字段名）REFERENCES 被参照表（主键字段名）、
 ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
-### 四、数据查询
+## 4.数据查询
 1.掌握基本查询语句SELECT的使用；
 2.掌握单表查询的相关操作：
 
@@ -79,7 +77,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 5.掌握子查询；
 
 6.掌握合并查询结果。
-### 五、数据更新
+## 5.数据更新
 1．掌握插入数据的语句：`INSERT…VALUES、INSERT…SET、INSERT…SELECT；`
 
 2．掌握修改数据的语句：`UPDATE…SET；`
@@ -87,7 +85,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 3．掌握删除数据的语句：`DELETE FROM、TRUNCAE TABLE；`
 
 4．掌握带子查询的删除语句：`DELETE FROM…WHERE…=(SELECT)。`
-### 六、索引
+## 6.索引
 1．掌握表的索引操作；
 
 2．掌握普通索引、唯一性索引、主键索引、聚簇索引和全文索引的概念；
@@ -101,7 +99,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 6．掌握修改数据表结构同时为数据表添加索引的语句：`ALTER TABLE … ADD[UNIQUE|FULLTEXT][INDEX|KEY] index_ name；`
 
 7．掌握删除索引的语句：DROP INDEX、ALTER TABLE…DROP INDEX。 
-### 七、视图
+## 7.视图
 1．理解视图的概念；
 
 2．掌握视图的作用；
@@ -115,7 +113,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 6．掌握更新视图数据的相关语句：INSERT、UPDATE、DELETE；
 
 7．掌握删除视图的语句：DROP VIEW。
-### 八、MySQL的数据库编程
+## 8.MySQL的数据库编程
 
 1．掌握触发器的基本概念与作用，掌握使用SQL语句创建、删除触发器的操作方法及应用，掌握触发器的种类及区别，理解触发器的使用及原则；
 
@@ -130,7 +128,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 - 存储过程的调用方法；
 - 使用SQL语句创建、修改、删除存储函数的操作方法及应用；
 - 存储函数的调用方法。
-### 九、数据库设计
+## 9.数据库设计
 1．了解数据库设计的方法；
 
 2．掌握数据库设计的步骤；
@@ -140,7 +138,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 4．掌握模式的规范化；
 
 5．掌握E-R模型转化为关系模式的方法。
-### 十、数据库安全性
+## 10.数据库安全性
 1．了解数据库的不安全因素，掌握数据库的安全性的概念；
 
 2．了解计算机以及信息安全技术方面的系列安全标准；
@@ -150,7 +148,7 @@ ALTER TABLE<表名> ADD [CONSTRAINT <约束名>] UNIQUE KEY（字段名）
 4．掌握权限的授予、查看和回收；
 
 5．掌握角色的创建、授权和回收。
-### 十一、数据库安全性
+## 11.数据库安全性
 1．熟悉数据库备份和恢复的概念；
 
 2．掌握备份的类型、策略和方法；
