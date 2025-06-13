@@ -94,7 +94,6 @@ nav:
     - 循环语句: csharp/20-loop-statements.md
     - 数组: csharp/21-array.md
     - 数组方法: csharp/22-array-methods.md
-    - 练习题: csharp/readline.md
   - MySQL文档:
     - 考试大纲: mysql/index.md
     - MySQL的基本概念: mysql/01-basic-concept.md
@@ -135,43 +134,36 @@ nav:
       - Locate()函数: mysql/function/string-locate.md
       - Position()函数: mysql/function/string-position.md
       - Reverse()函数: mysql/function/string-reverse.md
-      - field()函数: mysql/function/string-field.md
       - concat()函数: mysql/function/string-concat.md
-      - format()函数: mysql/function/string-format.md
     - 数学函数: 
-      - abs(): mysql/function/abs.md
-      - rand(): mysql/function/rand.md
-      - ceil(): mysql/function/ceil.md
-      - floor(): mysql/function/floor.md
-      - round(): mysql/function/round.md
-      - truncate(): mysql/function/truncate.md
-      - pow(): mysql/function/pow.md
-      - sqrt(): mysql/function/sqrt.md
-      - mod(): mysql/function/mod.md
-      - PI(): mysql/function/pi.md
-      - if(): mysql/function/if.md
-      - ifnull(): mysql/function/ifnull.md
-      - version(): mysql/function/version.md
-    - 聚合函数:
-      - count(): mysql/function/aggregate-count.md
-      - sum(): mysql/function/aggregate-sum.md
-      - avg(): mysql/function/aggregate-avg.md
-      - max(): mysql/function/aggregate-max.md
-      - min(): mysql/function/aggregate-min.md
+      - abs(): mysql/function/math-abs.md
+      - rand(): mysql/function/math-rand.md
+      - ceil(): mysql/function/math-ceil.md
+      - floor(): mysql/function/math-floor.md
+      - round(): mysql/function/math-round.md
+      - truncate(): mysql/function/math-truncate.md
+      - pow(): mysql/function/math-pow.md
+      - sqrt(): mysql/function/math-sqrt.md
+      - mod(): mysql/function/math-mod.md
+      - PI(): mysql/function/math-pi.md
+    - 聚合函数: mysql/function/aggregate-function.md
     - 日期函数:
       - now(): mysql/function/date-now.md
       - curdate(): mysql/function/date-curdate.md
       - curtime(): mysql/function/date-curtime.md
-      - date_format(): mysql/function/date-date_format.md
+      - date_format(): mysql/function/date-date-format.md
       - year(): mysql/function/date-year.md
       - month(): mysql/function/date-month.md
       - day(): mysql/function/date-day.md
       - hour(): mysql/function/date-hour.md
       - minute(): mysql/function/date-minute.md
       - second(): mysql/function/date-second.md
+      - format: mysql/function/date-format.md
     - 其他函数:
       - if(): mysql/function/others-if.md
       - IFNULL(): mysql/function/others-ifnull.md
       - version(): mysql/function/others-version.md
+      - version(): mysql/function/other-field.md
+      - version(): mysql/function/other-format.md
   
     
