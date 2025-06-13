@@ -97,10 +97,6 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/csharp/readline/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
          <loc>https://buhaoqi.github.io/mysql/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
@@ -133,143 +129,119 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/08-create-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/08-use-database/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/09-drop-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/09-create-table/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/10-alter-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/10-drop-table/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/11-show-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/11-alter-table/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/12-insert-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/12-show-table/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/13-delete-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/13-rename-table/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/14-update-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/14-insert-data/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/15-select-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/15-delete-data/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/16-other-statements/</loc>
+         <loc>https://buhaoqi.github.io/mysql/16-update-data/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/data-structure-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/17-select-data/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/exercises/</loc>
+         <loc>https://buhaoqi.github.io/mysql/18-data-type/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/exercises1-create-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/19-constraint/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/exercises2-query/</loc>
+         <loc>https://buhaoqi.github.io/mysql/20-index/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function-aggregate/</loc>
+         <loc>https://buhaoqi.github.io/mysql/21-view/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function-count/</loc>
+         <loc>https://buhaoqi.github.io/mysql/22-database-design/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function-date-format/</loc>
+         <loc>https://buhaoqi.github.io/mysql/23-database-security/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/gabedge/</loc>
+         <loc>https://buhaoqi.github.io/mysql/24-database-backup-recovery/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/generate-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/aggregate-function/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/query-01-system/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-curdate/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/query-02-basic-query/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-curtime/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/query-exercise1/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-date-format/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/sql-statement/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-day/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/statement-group-by/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-format/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/constraint/candidate-key/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-hour/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/constraint/foreign-key/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-minute/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/constraint/primary-key/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-month/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/data-type/boolean/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-now/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/data-type/datetime/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-second/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/data-type/number/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/data-type/string/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/field/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/format/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/if/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/ifnull/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/instr/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/date-year/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
@@ -297,6 +269,10 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/mysql/function/math-rand/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-round/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
@@ -305,7 +281,27 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/rand/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-truncate/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/other-field/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/other-format/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/others-if/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/others-ifnull/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/others-version/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
@@ -329,6 +325,10 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/mysql/function/string-position/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-reverse/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
@@ -346,86 +346,6 @@
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-upper/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/string/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/truncate/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/version/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/keywords/as/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/keywords/distinct/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/keywords/join/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/keywords/keywords/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/keywords/on/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-from/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-group-by/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-having/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-limit/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-order-by/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-select/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause-where/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/clause/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/query-basic/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/query/query-multiple-tables/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/tutorials/519-query-multiple-tables/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/tutorials/519/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
 </urlset>
