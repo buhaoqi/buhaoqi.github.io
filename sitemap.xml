@@ -105,7 +105,67 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/01-introduction/</loc>
+         <loc>https://buhaoqi.github.io/mysql/01-basic-concept/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/02-install-config/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/03-login-logout/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/04-create-database/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/05-drop-database/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/06-alter-database/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/07-show-database/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/08-create-table/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/09-drop-table/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/10-alter-table/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/11-show-table/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/12-insert-data/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/13-delete-data/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/14-update-data/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/15-select-data/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/16-other-statements/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
@@ -193,23 +253,7 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/abs/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/ceil/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/concat/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
          <loc>https://buhaoqi.github.io/mysql/function/field/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/floor/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
@@ -229,31 +273,35 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/left/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-abs/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/length/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-ceil/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/locate/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-floor/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/lower/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-mod/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/mod/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-pi/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/pi/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-pow/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/pow/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/math-round/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/math-sqrt/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
@@ -261,23 +309,43 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/reverse/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/string-concat/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/right/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/string-left/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/round/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/string-length/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/rtrim/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/string-locate/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/sqrt/</loc>
+         <loc>https://buhaoqi.github.io/mysql/function/string-lower/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/string-reverse/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/string-right/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/string-rtrim/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/string-substring/</loc>
+         <lastmod>2025-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/function/string-upper/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
@@ -285,15 +353,7 @@
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/function/substring/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
          <loc>https://buhaoqi.github.io/mysql/function/truncate/</loc>
-         <lastmod>2025-06-13</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/function/upper/</loc>
          <lastmod>2025-06-13</lastmod>
     </url>
     <url>
