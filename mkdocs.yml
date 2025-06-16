@@ -107,6 +107,7 @@ nav:
       - 选择数据库: mysql/08-use-database.md
     - 操作表结构: 
       - 创建表结构: mysql/09-create-table.md
+      - 复制表结构: mysql/09-copy-table.md
       - 删除表结构: mysql/10-drop-table.md
       - 修改表结构: mysql/11-alter-table.md
       - 查询表结构: mysql/12-show-table.md
@@ -165,5 +166,17 @@ nav:
       - version(): mysql/function/others-version.md
       - version(): mysql/function/other-field.md
       - version(): mysql/function/other-format.md
-  
+  - Excel:
+    - 考试大纲: excel/index.md
+    - Excel的基本概念: excel/01.md
+    - Excel的安装与配置: excel/02.md
+    - Excel的界面介绍: excel/03.md
+    - 工作簿与工作表: excel/04.md
+    - 数据输入与编辑: excel/05.md
+    - 数据格式设置: excel/06.md
+    - 数据排序与筛选: excel/07-data-sorting-filtering.md
+    - 数据查找与替换: excel/08-data-find-replace.md
+    - 数据验证: excel/09-data-validation.md
+    - 函数与公式: excel/10-functions-formulas.md
+    - 图表制作: excel/11-chart-creation.md
     

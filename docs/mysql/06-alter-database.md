@@ -4,13 +4,18 @@ tags: []
 
 ---
 
-# MySQL 修改数据库名的方法
+## 简述
 
-在 MySQL 中，直接修改数据库名并不是一个简单的操作，因为 MySQL 没有提供类似 `RENAME DATABASE` 的直接命令。以下是几种可行的修改数据库名的方法：
+在 MySQL 中，直接修改数据库名并不是一个简单的操作，因为 MySQL 没有提供类似
 
-## 方法一：创建新数据库并迁移数据（推荐）
+```sql
+RENAME DATABASE;
+```
+的直接命令。以下是几种可行的修改数据库名的方法：
 
-这是最安全可靠的方法：
+## 方法一：重新创建新数据库
+
+创建新数据库并迁移数据，是最安全可靠的方法：
 
 ```sql
 -- 1. 创建新数据库
@@ -27,7 +32,9 @@ mysql -u username -p new_database_name < dump.sql
 DROP DATABASE old_database_name;
 ```
 
-## 方法二：重命名所有表（适用于小型数据库）
+## 方法二：重命名所有表
+
+适用于小型数据库。
 
 ```sql
 -- 1. 创建新数据库
@@ -42,14 +49,6 @@ RENAME TABLE old_database_name.table1 TO new_database_name.table1,
 DROP DATABASE old_database_name;
 ```
 
-## 方法三：直接修改数据目录（不推荐）
-
-**警告**：此方法需要停止 MySQL 服务，可能带来风险。
-
-1. 停止 MySQL 服务
-2. 进入 MySQL 数据目录（通常是 `/var/lib/mysql`）
-3. 重命名数据库文件夹
-4. 重启 MySQL 服务
 
 ## 注意事项
 
@@ -58,9 +57,10 @@ DROP DATABASE old_database_name;
 3. **应用程序配置**：修改后需要更新应用程序中的数据库连接配置
 4. **备份**：操作前务必备份重要数据
 
-## 为什么 MySQL 不直接支持重命名数据库？
+## 为什么MySQL不支持重命名数据库？
 
 MySQL 不提供直接重命名数据库的命令，主要是因为：
+
 - 数据库名被许多内部系统表引用
 - 可能破坏存储过程、视图等对象
 - 确保数据完整性需要复杂的操作
