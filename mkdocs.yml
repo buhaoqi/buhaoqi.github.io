@@ -168,15 +168,13 @@ nav:
       - version(): mysql/function/other-format.md
   - Excel:
     - 考试大纲: excel/index.md
+    - 题库: excel/exercises.md
     - Excel的基本概念: excel/01.md
-    - Excel的安装与配置: excel/02.md
-    - Excel的界面介绍: excel/03.md
-    - 工作簿与工作表: excel/04.md
-    - 数据输入与编辑: excel/05.md
-    - 数据格式设置: excel/06.md
-    - 数据排序与筛选: excel/07-data-sorting-filtering.md
-    - 数据查找与替换: excel/08-data-find-replace.md
-    - 数据验证: excel/09-data-validation.md
-    - 函数与公式: excel/10-functions-formulas.md
-    - 图表制作: excel/11-chart-creation.md
+    - 工作簿的基本操作: excel/02.md
+    - 工作表的基本操作: excel/03.md
+    - 单元格的基本操作: excel/04.md
+    - 公式与函数: excel/05.md
+    - 使用图表: excel/06.md
+    - 数据清单管理: excel/07.md
+    - 页面设置与打印: excel/08.md
     
