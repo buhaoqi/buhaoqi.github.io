@@ -72,6 +72,7 @@ nav:
   - 首页: index.md
   - C#教程:
     - 考试大纲: csharp/index.md
+    - 问题汇总: csharp/00-questions.md
     - 环境搭建: csharp/01-environment-setup.md
     - 认识C#: csharp/02-what-csharp-is.md
     - Hello World(2道): csharp/03-hello-world.md
@@ -177,4 +178,16 @@ nav:
     - 使用图表: excel/06.md
     - 数据清单管理: excel/07.md
     - 页面设置与打印: excel/08.md
-    
+  - 计算机基础:
+    - 考试大纲: computer-basics/index.md
+    - 计算机进制: computer-basics/number-system.md
+    - 计算机的组成: computer-basics/02-computer-structure.md
+    - 操作系统: computer-basics/03-operating-system.md
+    - Windows操作系统: computer-basics/04-windows-os.md
+    - Linux操作系统: computer-basics/05-linux-os.md
+    - 网络基础: computer-basics/06-network-basics.md
+    - 网络协议: computer-basics/07-network-protocols.md
+    - 网络设备: computer-basics/08-network-devices.md
+  - 暑期作业:
+    - 6月21日: exercises/csharp/0621.md
+    - 6月22日: exercises/csharp/0622.md

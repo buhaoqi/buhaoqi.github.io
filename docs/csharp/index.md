@@ -159,3 +159,5 @@ tags: []
 1．了解绘图常用类：Graphics、Pen、Brush、Font；
 
 2．了解Graphics类的方法、Drawing类的方法、Brush类方法。
+
+
