@@ -4,8 +4,19 @@ tags: []
 
 ---
 
-《变量与常量》测试题：[https://wj.qq.com/s2/22908897/0d8c/](https://wj.qq.com/s2/22908897/0d8c/)
+今日作业：
 
+1. 《变量与常量》测试题：[https://wj.qq.com/s2/22908897/0d8c/](https://wj.qq.com/s2/22908897/0d8c/)
+2. 变量名中遇到不会的英文单词，动手查，别犯懒。常见的英语单词务必记住：
+   ```
+   登录：login
+   平均: average
+   分数: score
+   完成: complete
+   产品: product
+   价格: price
+   ```
+3. 阅读变量与常量知识点：[http://buhaoqi.github.io/csharp/05-variable-constant/](http://buhaoqi.github.io/csharp/05-variable-constant/)
 
 ## 练习
 
