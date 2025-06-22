@@ -192,8 +192,47 @@ int[] evens = Array.FindAll(numbers, x => x % 2 == 0);
 ```csharp
 bool allPositive = Array.TrueForAll(numbers, x => x > 0);
 ```
-
 ------
+
+
+## foreach
+
+
+## foreach 循环
+
+**语法结构：**
+```csharp
+foreach (类型 变量名 in 集合)
+{
+    // 循环体
+}
+```
+
+**特点：**
+- 专门用于遍历集合元素
+- 只读访问，不能修改集合
+- 代码简洁易读
+
+
+
+**示例：**
+```csharp
+string[] fruits = { "Apple", "Banana", "Orange" };
+foreach (string fruit in fruits)
+{
+    Console.WriteLine(fruit);
+}
+```
+
+
+## 2. 带索引的foreach（C# 7.0+）
+
+```csharp
+foreach (var (item, index) in collection.Select((item, index) => (item, index)))
+{
+    Console.WriteLine($"{index}: {item}");
+}
+```
 
 ## 总结
 

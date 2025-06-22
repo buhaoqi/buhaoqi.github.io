@@ -77,7 +77,7 @@ nav:
     - 认识C#: csharp/02-what-csharp-is.md
     - Hello World(2道): csharp/03-hello-world.md
     - 数据类型(2道): csharp/04-data-type.md
-    - 变量与常量(20道): csharp/05-variable-constant.md
+    - 变量与常量: csharp/05-variable-constant.md
     - 输入输出: csharp/06-input-and-output.md
     - 赋值运算符: csharp/07-assignment-operators.md
     - 算数运算符(29道): csharp/08-arithmetic-operators.md
@@ -92,7 +92,10 @@ nav:
     - 关系运算符: csharp/17-comparison-operators.md
     - 逻辑运算符: csharp/18-logical-operators.md
     - 条件语句: csharp/19-conditional-statements.md
-    - 循环语句: csharp/20-loop-statements.md
+    - 循环语句:
+      - for循环: csharp/20-for-loop-statement.md
+      - while循环: csharp/21-while-loop-statement.md
+      - do-while循环语句: csharp/22-do-while-loop-statement.md
     - 数组: csharp/21-array.md
     - 数组方法: csharp/22-array-methods.md
   - MySQL文档:
@@ -189,5 +192,7 @@ nav:
     - 网络协议: computer-basics/07-network-protocols.md
     - 网络设备: computer-basics/08-network-devices.md
   - 暑期作业:
-    - 6月21日: exercises/csharp/0621.md
-    - 6月22日: exercises/csharp/0622.md
+    - 6月21日:For循环笔记: exercises/csharp/0621.md
+    - 6月22日:For循环练习: exercises/csharp/0622.md
+    - 6月23日:变量与常量: exercises/csharp/0623-variables.md
+    - 6月24日: exercises/csharp/0624.md

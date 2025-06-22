@@ -2,442 +2,486 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://buhaoqi.github.io/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/computer-basics/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/computer-basics/number-system/</loc>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/00-questions/</loc>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/01-environment-setup/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/02-what-csharp-is/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/03-hello-world/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/04-data-type/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/05-variable-constant/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/06-input-and-output/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/07-assignment-operators/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/08-arithmetic-operators/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/09-integer/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/10-float/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/11-convert-data-type/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/12-int-methods/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/13-float-methods/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/14-char/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/15-string/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/16-boolean/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/17-comparison-operators/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/18-logical-operators/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/19-conditional-statements/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/20-loop-statements/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/21-array/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/22-array-methods/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/terms/class/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/terms/is-int-class/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/terms/static-methods-struct/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/terms/static-methods/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/terms/struct/</loc>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/01/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/02/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/03/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/04/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/05/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/06/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/07/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/08/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/excel/exercises/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/exercises/csharp/0621/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/exercises/csharp/0622/</loc>
+         <lastmod>2025-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/exercises/csharp/if-statement/</loc>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/bool/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/data-type/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/grammar/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/null/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/object/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/string/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/javascript/undefined/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/01-basic-concept/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/02-install-config/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/03-login-logout/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/04-create-database/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/05-drop-database/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/06-alter-database/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/07-show-database/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/08-use-database/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/09-copy-table/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/09-create-table/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/10-drop-table/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/11-alter-table/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/12-show-table/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/13-rename-table/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/14-insert-data/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/15-delete-data/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/16-update-data/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/17-select-data/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/18-data-type/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/19-constraint/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/20-index/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/21-view/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/22-database-design/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/23-database-security/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/24-database-backup-recovery/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/aggregate-function/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-curdate/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-curtime/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-date-format/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-day/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-format/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-hour/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-minute/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-month/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-now/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-second/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/date-year/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-abs/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-ceil/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-floor/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-mod/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-pi/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-pow/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-rand/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-round/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-sqrt/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/math-truncate/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/other-field/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/other-format/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/others-if/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/others-ifnull/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/others-version/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-concat/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-left/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-length/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-locate/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-lower/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-position/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-reverse/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-right/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-rtrim/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-substring/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/function/string-upper/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/python/01/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/python/2/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/python/3/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/python/4/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/python/5/</loc>
-         <lastmod>2025-06-16</lastmod>
+         <lastmod>2025-06-21</lastmod>
     </url>
 </urlset>
