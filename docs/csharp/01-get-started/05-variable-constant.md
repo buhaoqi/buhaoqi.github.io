@@ -6,14 +6,14 @@ tags: []
 
 ## 量是什么
 
-![变量](./images/measure.jpg)
+![变量](./../images/measure.jpg)
 
 - 动词:测量、计量、丈量
 - 名词：容器
 
 ## 变量
 
-![变量](./images/what-is-variables.jpeg)
+![变量](./../images/what-is-variables.jpeg)
 
 ### 变量是什么
 定义：

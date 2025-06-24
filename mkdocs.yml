@@ -22,11 +22,11 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     # - navigation.sections
-    - navigation.expand
     # - navigation.path
     - navigation.prune
     - navigation.top
     - navigation.footer
+    - navigation.expand
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -73,31 +73,36 @@ nav:
   - C#教程:
     - 考试大纲: csharp/index.md
     - 问题汇总: csharp/00-questions.md
-    - 环境搭建: csharp/01-environment-setup.md
-    - 认识C#: csharp/02-what-csharp-is.md
-    - Hello World(2道): csharp/03-hello-world.md
-    - 数据类型(2道): csharp/04-data-type.md
-    - 变量与常量: csharp/05-variable-constant.md
-    - 输入输出: csharp/06-input-and-output.md
-    - 赋值运算符: csharp/07-assignment-operators.md
-    - 算数运算符(29道): csharp/08-arithmetic-operators.md
-    - 整数类型(35道): csharp/09-integer.md
-    - 浮点数类型(7道): csharp/10-float.md
-    - 数据类型转换(20道): csharp/11-convert-data-type.md
-    - INT方法: csharp/12-int-methods.md
-    - FLOAT方法: csharp/13-float-methods.md
-    - 字符类型: csharp/14-char.md
-    - 字符串类型(49道): csharp/15-string.md
-    - 布尔类型: csharp/16-boolean.md
-    - 关系运算符: csharp/17-comparison-operators.md
-    - 逻辑运算符: csharp/18-logical-operators.md
-    - 条件语句: csharp/19-conditional-statements.md
-    - 循环语句:
-      - for循环: csharp/20-for-loop-statement.md
-      - while循环: csharp/21-while-loop-statement.md
-      - do-while循环语句: csharp/22-do-while-loop-statement.md
-    - 数组: csharp/21-array.md
-    - 数组方法: csharp/22-array-methods.md
+    - 起步:
+      - 环境搭建: csharp/01-get-started/01-environment-setup.md
+      - 认识C#: csharp/01-get-started/02-what-csharp-is.md
+      - Hello World: csharp/01-get-started/03-hello-world.md
+      - 变量与常量: csharp/01-get-started/05-variable-constant.md
+      - 输入输出: csharp/01-get-started/06-input-and-output.md
+    - 数据类型:
+      - 数据类型: csharp/02-data-type/01-data-type.md
+      - 整数类型: csharp/02-data-type/02-integer.md
+      - 浮点数类型(7道): csharp/02-data-type/03-float.md
+      - 字符类型: csharp/02-data-type/04-char.md
+      - 字符串类型: csharp/02-data-type/05-string.md
+      - 布尔类型: csharp/02-data-type/06-boolean.md
+      - 数组: csharp/02-data-type/07-array.md
+      - 数据类型转换(20道): csharp/02-data-type/15-convert-data-type.md
+    - 运算符:
+      - 赋值运算符: csharp/03-operators/01-assignment-operators.md
+      - 算数运算符: csharp/03-operators/02-arithmetic-operators.md
+      - 关系运算符: csharp/03-operators/03-comparison-operators.md
+      - 逻辑运算符: csharp/03-operators/04-logical-operators.md
+    - 语句:
+      - 条件语句: csharp/04-statements/01-conditional-statements.md
+      - for循环: csharp/04-statements/02-for-loop-statement.md
+      - while循环: csharp/04-statements/03-while-loop-statement.md
+      - do-while循环语句: csharp/04-statements/04-do-while-loop-statement.md
+    - 方法:
+      - 字符串方法: csharp/05-methods/01-string-methods.md
+      - INT方法: csharp/05-methods/02-int-methods.md
+      - FLOAT方法: csharp/05-methods/03-float-methods.md
+      - 数组方法: csharp/05-methods/04-array-methods.md
   - MySQL文档:
     - 考试大纲: mysql/index.md
     - MySQL的基本概念: mysql/01-basic-concept.md
@@ -196,4 +201,37 @@ nav:
     - 6月22日:For循环练习: exercises/csharp/0622.md
     - 6月23日:变量与常量: exercises/csharp/0623-variables.md
     - 6月24日:while循环: exercises/csharp/0624-while-loop.md
-    
+    - 6月25日:if 语句: exercises/csharp/0625-data-type.md
+    - 6月26日:关系运算符: exercises/csharp/0626-.md
+  - C#练习题:
+    - 首页: csharp-exercises/index.md
+    - 起步:
+      - 环境搭建: csharp-exercises/01-get-started/01-environment-setup.md
+      - 认识C#: csharp-exercises/01-get-started/02-what-csharp-is.md
+      - Hello World(2道): csharp-exercises/01-get-started/03-hello-world.md
+      - 变量与常量(14道): csharp-exercises/01-get-started/05-variable-constant.md
+      - 输入输出: csharp-exercises/01-get-started/06-input-and-output.md
+    - 数据类型:
+      - 数据类型(33道): csharp-exercises/02-data-type/01-data-type.md
+      - 整数类型(40道): csharp-exercises/02-data-type/02-integer.md
+      - 浮点数类型(11道): csharp-exercises/02-data-type/03-float.md
+      - 字符类型: csharp-exercises/02-data-type/04-char.md
+      - 字符串类型(49道): csharp-exercises/02-data-type/05-string.md
+      - 布尔类型: csharp-exercises/02-data-type/06-boolean.md
+      - 数组(49道): csharp-exercises/02-data-type/07-array.md
+      - 数据类型转换(20道): csharp-exercises/02-data-type/15-convert-data-type.md
+    - 运算符:
+      - 赋值运算符: csharp-exercises/03-operators/01-assignment-operators.md
+      - 算数运算符(41道): csharp-exercises/03-operators/02-arithmetic-operators.md
+      - 关系运算符: csharp-exercises/03-operators/03-comparison-operators.md
+      - 逻辑运算符: csharp-exercises/03-operators/04-logical-operators.md
+    - 语句:
+      - 条件语句: csharp-exercises/04-statements/01-conditional-statements.md
+      - for循环: csharp-exercises/04-statements/02-for-loop-statement.md
+      - while循环: csharp-exercises/04-statements/03-while-loop-statement.md
+      - do-while循环语句: csharp-exercises/04-statements/04-do-while-loop-statement.md
+    - 方法:
+      - 字符串方法: csharp-exercises/05-methods/01-string-methods.md
+      - INT方法: csharp-exercises/05-methods/02-int-methods.md
+      - FLOAT方法: csharp-exercises/05-methods/03-float-methods.md
+      - 数组方法: csharp-exercises/05-methods/04-array-methods.md

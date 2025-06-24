@@ -16,7 +16,7 @@ tags: []
    产品: product
    价格: price
    ```
-3. 阅读变量与常量知识点：[http://buhaoqi.github.io/csharp/05-variable-constant/](http://buhaoqi.github.io/csharp/05-variable-constant/)
+3. 阅读变量与常量知识点：[http://buhaoqi.com/csharp/01-get-started/05-variable-constant/](http://buhaoqi.com/csharp/01-get-started/05-variable-constant/)
 
 ## 练习
 
