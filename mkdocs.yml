@@ -201,8 +201,8 @@ nav:
     - 6月22日:For循环练习: exercises/csharp/0622.md
     - 6月23日:变量与常量: exercises/csharp/0623-variables.md
     - 6月24日:while循环: exercises/csharp/0624-while-loop.md
-    - 6月25日:if 语句: exercises/csharp/0625-data-type.md
-    - 6月26日:关系运算符: exercises/csharp/0626-.md
+    - 6月25日:算数运算符: exercises/csharp/0625.md
+    - 6月26日:练习(41道): exercises/csharp/0626.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
