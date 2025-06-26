@@ -203,6 +203,8 @@ nav:
     - 6月24日:while循环: exercises/csharp/0624-while-loop.md
     - 6月25日:算数运算符: exercises/csharp/0625.md
     - 6月26日:练习(41道): exercises/csharp/0626.md
+    - 6月27日:练习(16道): exercises/csharp/0627.md
+    - 6月28日:练习(18道): exercises/csharp/0628.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
@@ -223,8 +225,8 @@ nav:
     - 运算符:
       - 赋值运算符: csharp-exercises/03-operators/01-assignment-operators.md
       - 算数运算符(41道): csharp-exercises/03-operators/02-arithmetic-operators.md
-      - 关系运算符: csharp-exercises/03-operators/03-comparison-operators.md
-      - 逻辑运算符: csharp-exercises/03-operators/04-logical-operators.md
+      - 关系运算符(16道): csharp-exercises/03-operators/03-comparison-operators.md
+      - 逻辑运算符(18道): csharp-exercises/03-operators/04-logical-operators.md
     - 语句:
       - 条件语句: csharp-exercises/04-statements/01-conditional-statements.md
       - for循环: csharp-exercises/04-statements/02-for-loop-statement.md
