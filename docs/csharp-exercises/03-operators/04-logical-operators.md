@@ -238,3 +238,67 @@ x 是横轴，y是纵轴。
 ```
 yes
 ```
+
+## 答案
+
+```c#
+ // 1. 判断是否为工作日
+string day = "星期三";
+bool isWorkday = day != "星期六" && day != "星期日";
+Console.WriteLine($"是否为工作日：{isWorkday}");
+
+// 2. 判断是否为成年人且有驾照
+int age = 20;
+bool hasLicense = true;
+bool canDrive = age >= 18 && hasLicense;
+Console.WriteLine($"可以独立开车：{canDrive}");
+
+// 3. 判断是否是合法三角形角度
+int a = 60, b = 60, c = 60;
+bool isTriangle = a > 0 && b > 0 && c > 0 && (a + b + c == 180);
+Console.WriteLine($"是合法三角形角度：{isTriangle}");
+
+// 4. 判断是否有权限访问后台
+bool isAdmin = true;
+bool isLoggedIn = false;
+bool canAccess = isAdmin && isLoggedIn;
+Console.WriteLine($"是否可以访问后台：{canAccess}");
+
+// 5. 判断是否是闰年
+int year = 2024;
+bool isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+Console.WriteLine($"是否为闰年：{isLeap}");
+
+// 6. 判断学生是否需要补考
+int score = 55;
+bool hasExcuse = false;
+bool needsMakeup = score < 60 && !hasExcuse;
+Console.WriteLine($"是否需要补考：{needsMakeup}");
+
+// 7. 判断是否享受购物优惠
+bool isMember = true;
+double amount = 120.0;
+bool isVIP = false;
+bool hasDiscount = (isMember && amount >= 100) || isVIP;
+Console.WriteLine($"是否享受折扣：{hasDiscount}");
+
+// 8. 判断用户是否可以注册账号
+bool parentalConsent = true;
+bool agreeTerms = true;
+age = 16;
+bool canRegister = (age >= 18 || parentalConsent) && agreeTerms;
+Console.WriteLine($"是否可以注册：{canRegister}");
+
+// 9. 判断是否为高危人群
+age = 65;
+bool hasChronic = false;
+bool isHighRisk = age > 60 || hasChronic;
+Console.WriteLine($"是否为高危人群：{isHighRisk}");
+
+// 10. 判断是否为合法登录
+string username = "admin";
+string password = "1234";
+bool captchaCorrect = true;
+bool canLogin = username != "" && password != "" && captchaCorrect;
+Console.WriteLine($"是否为合法登录：{canLogin}");
+```

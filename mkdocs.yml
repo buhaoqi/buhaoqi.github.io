@@ -217,7 +217,7 @@ nav:
       - 数据类型(33道): csharp-exercises/02-data-type/01-data-type.md
       - 整数类型(40道): csharp-exercises/02-data-type/02-integer.md
       - 浮点数类型(11道): csharp-exercises/02-data-type/03-float.md
-      - 字符类型: csharp-exercises/02-data-type/04-char.md
+      - 字符类型(6道): csharp-exercises/02-data-type/04-char.md
       - 字符串类型(49道): csharp-exercises/02-data-type/05-string.md
       - 布尔类型: csharp-exercises/02-data-type/06-boolean.md
       - 数组(49道): csharp-exercises/02-data-type/07-array.md
@@ -227,13 +227,19 @@ nav:
       - 算数运算符(41道): csharp-exercises/03-operators/02-arithmetic-operators.md
       - 关系运算符(16道): csharp-exercises/03-operators/03-comparison-operators.md
       - 逻辑运算符(18道): csharp-exercises/03-operators/04-logical-operators.md
+      - 三目运算符: csharp-exercises/03-operators/05-ternary-operator.md
+      - 特殊运算符: csharp-exercises/03-operators/06-special-operators.md
+      - 运算符优先级: csharp-exercises/03-operators/07-operator-precedence.md
     - 语句:
-      - 条件语句: csharp-exercises/04-statements/01-conditional-statements.md
-      - for循环: csharp-exercises/04-statements/02-for-loop-statement.md
-      - while循环: csharp-exercises/04-statements/03-while-loop-statement.md
-      - do-while循环语句: csharp-exercises/04-statements/04-do-while-loop-statement.md
+      - 条件语句: csharp-exercises/04-statements/01-if.md
+      - switch语句: csharp-exercises/04-statements/02-switch.md
+      - for循环: csharp-exercises/04-statements/03-for-loop-statement.md
+      - while循环: csharp-exercises/04-statements/04-while-loop-statement.md
+      - do-while循环语句: csharp-exercises/04-statements/05-do-while-loop-statement.md
+      - 嵌套分支语句: csharp-exercises/04-statements/06-nested-branching-statements.md
     - 方法:
       - 字符串方法: csharp-exercises/05-methods/01-string-methods.md
       - INT方法: csharp-exercises/05-methods/02-int-methods.md
       - FLOAT方法: csharp-exercises/05-methods/03-float-methods.md
+      - 数组方法: csharp-exercises/05-methods/04-array-methods.md
       - 数组方法: csharp-exercises/05-methods/04-array-methods.md

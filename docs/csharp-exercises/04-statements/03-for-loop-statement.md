@@ -395,3 +395,34 @@ while (attempts < 3)
 >编写程序将 0℃ 到 100℃ 每隔 5 度转换为华氏温度（F = C×9/5+32），但当华氏温度超过 200℉ 时使用 break 停止后续转换。
 
 
+## 生成 5×5 空心矩形矩阵的代码
+
+
+
+```c#
+*****
+*   *
+*   *
+*   *
+*****
+  
+int size = 5;  // 矩阵尺寸 5x5
+        
+for (int row = 0; row < size; row++)
+{
+    for (int col = 0; col < size; col++)
+    {
+        // 判断是否在边界位置
+        if (row == 0 || row == size - 1 ||  // 顶部或底部边界
+            col == 0 || col == size - 1)    // 左侧或右侧边界
+        {
+            Console.Write("*");
+        }
+        else
+        {
+            Console.Write(" ");  // 内部填充空格
+        }
+    }
+    Console.WriteLine();  // 换行
+}
+```
