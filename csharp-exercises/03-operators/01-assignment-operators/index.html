@@ -898,6 +898,51 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      题目：机票打折
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目2：分钱游戏
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目3：细胞分裂
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目4：浮点数向零舍入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目5：计算浮点数相除的余数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
       交换变量值（临时变量）
     </span>
   </a>
@@ -948,7 +993,7 @@
   
   
   <span class="md-ellipsis">
-    关系运算符
+    关系运算符(16道)
     
   </span>
   
@@ -971,7 +1016,76 @@
   
   
   <span class="md-ellipsis">
-    逻辑运算符
+    逻辑运算符(18道)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-ternary-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三目运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-special-operators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    特殊运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-operator-precedence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    运算符优先级
     
   </span>
   
@@ -1015,7 +1129,7 @@
   
   
   
-    <a href="../../04-statements/01-conditional-statements/" class="md-nav__link">
+    <a href="../../04-statements/01-if/" class="md-nav__link">
       
   
   
@@ -1118,6 +1232,51 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      题目：机票打折
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目2：分钱游戏
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目3：细胞分裂
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目4：浮点数向零舍入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      题目5：计算浮点数相除的余数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
       交换变量值（临时变量）
     </span>
   </a>
@@ -1142,20 +1301,85 @@
 
   <h1>赋值运算符</h1>
 
-<h2 id="_1">交换变量值（临时变量）</h2>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
+<h3 id="_1">题目：机票打折</h3>
+<p>【题目描述】</p>
+<p>输入机票原价（3 到 4 位的正整数，单位：元），再输入机票打折率（小数点后最多一位数字）。编程计算打折后机票的实际价格（单位：元。计算结果要将个位数四舍五入到十位数“元”）。</p>
+<p>【输入】</p>
+<p>一行两个数 x,z (100≤x≤104,1.0≤z≤9.9 )，x 为整数，表示机票原价。z为小数后含有一位数字的实数，表示打折率。</p>
+<p>【输出】</p>
+<p>一个正整数，表示打折后的机票价格。</p>
+<p>【输入样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>888 7.7
+</span></code></pre></div>
+<p>【输出样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>680
+</span></code></pre></div>
+<h3 id="2">题目2：分钱游戏</h3>
+<p>【题目描述】</p>
+<p>甲、乙、丙三人共有xx元钱，先由甲分钱给乙、丙两人，所分给的数与各人已有数相同；接着由乙分给甲、丙，分法同前；再由丙分钱给甲、乙，分法亦同前。经上述三次分钱之后，每个人的钱数恰好一样多。 求原先各人的钱数分别是多少?</p>
+<p>【输入】</p>
+<p>三个人的总钱数。（0≤x≤109）</p>
+<p>【输出】</p>
+<p>甲乙丙三人原有的钱数，用空格隔开。</p>
+<p>【输入样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>24
+</span></code></pre></div>
+<p>【输出样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>13 7 4 
+</span></code></pre></div>
+<h3 id="3">题目3：细胞分裂</h3>
+<p>【题目描述】</p>
+<p>细胞学说认为生物是细胞构成的，细胞是生命的结构单位，细胞只能由细胞分裂而来。1个细胞，第1次分裂成2个，第2次分裂成4个……试编一程序，算一算第5次分裂成几个？</p>
+<p>【输入】</p>
+<p>无</p>
+<p>【输出】</p>
+<p>输出第五次分裂的个数。</p>
+<p>【输入样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>无
+</span></code></pre></div>
+<p>【输出样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>32 
+</span></code></pre></div>
+<h3 id="4">题目4：浮点数向零舍入</h3>
+<p>【题目描述】</p>
+<p>输入一个浮点数，将其向零舍入到整数。说明：向零舍入的含义是，正数向下舍入，负数向上舍入。</p>
+<p>【输入】</p>
+<p>一个浮点数。</p>
+<p>【输出】</p>
+<p>一个整数，即向零舍入到整数的结果。</p>
+<p>【输入样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>2.3
+</span></code></pre></div>
+<p>【输出样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>2
+</span></code></pre></div>
+<h3 id="5">题目5：计算浮点数相除的余数</h3>
+<p>【题目描述】</p>
+<p>计算两个双精度浮点数a和b的相除的余数，a和b都是双精度浮点数。这里余数（r）的定义是：a=k×b+r，其中kk是整数，0≤r&lt;b。</p>
+<p>【输入】</p>
+<p>输入仅一行，包括两个双精度浮点数a和b。</p>
+<p>【输出】</p>
+<p>输出也仅一行，a÷b的余数。</p>
+<p>【输入样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>73.263 0.9973
+</span></code></pre></div>
+<p>【输出样例】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>0.4601
+</span></code></pre></div>
+<h2 id="_2">交换变量值（临时变量）</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>
 </span></code></pre></div>
 <p>4.x 的最终值是多少？</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">    </span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">    </span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span>
 </span></code></pre></div>
 <p>1.答案</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a=15</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// b=5</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a=10</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a=15</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// b=5</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// a=10</span>
 </span></code></pre></div>
 
 
