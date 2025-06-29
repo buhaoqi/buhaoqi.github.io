@@ -103,6 +103,12 @@ nav:
       - INT方法: csharp/05-methods/02-int-methods.md
       - FLOAT方法: csharp/05-methods/03-float-methods.md
       - 数组方法: csharp/05-methods/04-array-methods.md
+    - 类:
+      - 类与对象: csharp/06-classes/01-class-and-object.md
+      - 属性与方法: csharp/06-classes/02-property-and-method.md
+      - 继承: csharp/06-classes/03-inheritance.md
+      - 多态: csharp/06-classes/04-polymorphism.md
+      - 抽象类与接口: csharp/06-classes/05-abstract-class-and-interface.md
   - MySQL文档:
     - 考试大纲: mysql/index.md
     - MySQL的基本概念: mysql/01-basic-concept.md
@@ -205,6 +211,8 @@ nav:
     - 6月26日:练习(41道): exercises/csharp/0626.md
     - 6月27日:练习(16道): exercises/csharp/0627.md
     - 6月28日:练习(18道): exercises/csharp/0628.md
+    - 6月29日:IF练习(40道): exercises/csharp/0629.md
+    - 6月30日:SWITCH练习(10道): exercises/csharp/0630.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
