@@ -99,8 +99,9 @@ nav:
       - while循环: csharp/04-statements/03-while-loop-statement.md
       - do-while循环语句: csharp/04-statements/04-do-while-loop-statement.md
     - 方法:
-      - 字符串方法: csharp/05-methods/01-string-methods.md
-      - INT方法: csharp/05-methods/02-int-methods.md
+      - 方法基础: csharp/05-methods/00-method-basics.md
+      - INT方法: csharp/05-methods/01-int-methods.md
+      - 字符串方法: csharp/05-methods/02-string-methods.md
       - FLOAT方法: csharp/05-methods/03-float-methods.md
       - 数组方法: csharp/05-methods/04-array-methods.md
     - 类:
@@ -214,6 +215,7 @@ nav:
     - 6月29日:IF练习(40道): exercises/csharp/0629.md
     - 6月30日:SWITCH练习(10道): exercises/csharp/0630.md
     - 7月01日:三目运算符练习(10道): exercises/csharp/0701.md
+    - 7月02日:读书笔记: exercises/csharp/0702.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
@@ -247,8 +249,8 @@ nav:
       - do-while循环语句: csharp-exercises/04-statements/05-do-while-loop-statement.md
       - 嵌套分支语句: csharp-exercises/04-statements/06-nested-branching-statements.md
     - 方法:
-      - 字符串方法: csharp-exercises/05-methods/01-string-methods.md
-      - INT方法: csharp-exercises/05-methods/02-int-methods.md
+      - INT方法: csharp-exercises/05-methods/01-int-methods.md
+      - 字符串方法: csharp-exercises/05-methods/02-string-methods.md
       - FLOAT方法: csharp-exercises/05-methods/03-float-methods.md
       - 数组方法: csharp-exercises/05-methods/04-array-methods.md
       - 数组方法: csharp-exercises/05-methods/04-array-methods.md
