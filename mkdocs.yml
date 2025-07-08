@@ -79,6 +79,8 @@ nav:
       - Hello World: csharp/01-get-started/03-hello-world.md
       - 变量与常量: csharp/01-get-started/05-variable-constant.md
       - 输入输出: csharp/01-get-started/06-input-and-output.md
+      - 命名空间: csharp/01-get-started/07-namespace.md
+      - Solution: csharp/01-get-started/08-solution-project.md
     - 数据类型:
       - 数据类型: csharp/02-data-type/01-data-type.md
       - 整数类型: csharp/02-data-type/02-integer.md
@@ -219,12 +221,12 @@ nav:
     - 7月03日:读书笔记2: exercises/csharp/0703.md
     - 7月04日:读书笔记3: exercises/csharp/0704.md
     - 7月05日:读书笔记4: exercises/csharp/0705.md
-    - 7月06日:读书笔记5: exercises/csharp/0706.md
-    - 7月07日:读书笔记6: exercises/csharp/0707.md
-    - 7月08日:读书笔记7: exercises/csharp/0708.md
-    - 7月09日:读书笔记8: exercises/csharp/0709.md
-    - 7月10日:读书笔记9: exercises/csharp/0710.md
-    - 7月11日:读书笔记10: exercises/csharp/0711.md
+    - 7月06日:第5章类的基本概念: exercises/csharp/0706.md
+    - 7月07日:类练习题: exercises/csharp/0707.md
+    - 7月08日:类练习: exercises/csharp/0708.md
+    # - 7月09日:第6章练习题: exercises/csharp/0709.md
+    # - 7月10日:第7章深入理解类: exercises/csharp/0710.md
+    # - 7月11日:第7章练习题: exercises/csharp/0711.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
@@ -233,6 +235,7 @@ nav:
       - Hello World(2道): csharp-exercises/01-get-started/03-hello-world.md
       - 变量与常量(14道): csharp-exercises/01-get-started/05-variable-constant.md
       - 输入输出: csharp-exercises/01-get-started/06-input-and-output.md
+      - 命名空间: csharp-exercises/01-get-started/07-namespace.md
     - 数据类型:
       - 数据类型(33道): csharp-exercises/02-data-type/01-data-type.md
       - 整数类型(40道): csharp-exercises/02-data-type/02-integer.md
