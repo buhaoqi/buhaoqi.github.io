@@ -1,0 +1,1749 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="2026年河北省中职对口升学考试计算机类专业考试学习交流。">
+      
+      
+        <meta name="author" content="村长">
+      
+      
+        <link rel="canonical" href="https://buhaoqi.github.io/csharp-exercises/01-get-started/02-what-csharp-is/">
+      
+      
+        <link rel="prev" href="../01-environment-setup/">
+      
+      
+        <link rel="next" href="../03-hello-world/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>认识C# - 高二九班(对口计算机)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-header__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            高二九班(对口计算机)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              认识C#
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp/" class="md-tabs__link">
+          
+  
+  
+  C#教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../mysql/" class="md-tabs__link">
+          
+  
+  
+  MySQL文档
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../excel/" class="md-tabs__link">
+          
+  
+  
+  Excel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../computer-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exercises/csharp/0621/" class="md-tabs__link">
+          
+  
+  
+  暑期作业
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  C#练习题
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-nav__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    高二九班(对口计算机)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#教程
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../mysql/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MySQL文档
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../excel/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Excel
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../computer-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机基础
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../exercises/csharp/0621/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    暑期作业
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    C#练习题
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            C#练习题
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    起步
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            起步
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-environment-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    环境搭建
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    认识C#
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    认识C#
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C#语言是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# 的核心特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单代码示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# 常见的应用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      .NET Framework是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      框架是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clr" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLR是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnet-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      C#与.Net Framework的关系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二者是如何协作的？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ccc" class="md-nav__link">
+    <span class="md-ellipsis">
+      C语言、C++和C#对比
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-hello-world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World(2道)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-variable-constant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    变量与常量(14道)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-input-and-output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    输入输出
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-namespace.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    命名空间
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../02-data-type/01-data-type/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    数据类型
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../03-operators/01-assignment-operators/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    运算符
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../04-statements/01-if/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    语句
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../05-methods/01-int-methods/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    方法
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      C#语言是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# 的核心特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简单代码示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      C# 常见的应用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      .NET Framework是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      框架是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clr" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLR是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnet-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      C#与.Net Framework的关系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      二者是如何协作的？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ccc" class="md-nav__link">
+    <span class="md-ellipsis">
+      C语言、C++和C#对比
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>认识C#</h1>
+
+<h2 id="c">C#语言是什么</h2>
+<p><strong>C# 是一种现代的、功能强大的、面向对象的、强类型的编程语言。</strong>由微软（Microsoft）开发，最初在 2000 年随 .NET 框架发布。它结合了 C/C++ 的强大功能和 Java 的简洁性，广泛用于开发桌面应用、Web应用、移动应用、游戏和企业级软件。</p>
+<hr />
+<h2 id="c_1">C# 的核心特点</h2>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>面向对象</strong></td>
+<td>支持封装、继承、多态等 OOP 概念</td>
+</tr>
+<tr>
+<td><strong>强类型静态语言</strong></td>
+<td>编译时检查类型，错误少，可靠性高</td>
+</tr>
+<tr>
+<td><strong>托管语言</strong></td>
+<td>运行在 .NET（现在常用 .NET Core/.NET 6+）平台上，由 CLR 管理内存和执行</td>
+</tr>
+<tr>
+<td><strong>现代语法</strong></td>
+<td>支持 Lambda 表达式、LINQ、异步编程（async/await）、属性模式匹配等</td>
+</tr>
+<tr>
+<td><strong>跨平台</strong></td>
+<td>借助 .NET Core 和 MAUI，可在 Windows、Linux、macOS、Android、iOS 上运行</td>
+</tr>
+<tr>
+<td><strong>集成性强</strong></td>
+<td>与 Visual Studio IDE 无缝集成，开发效率高</td>
+</tr>
+<tr>
+<td><strong>广泛应用</strong></td>
+<td>应用于 Web（ASP.NET）、桌面（WPF/WinForms）、移动（Xamarin/MAUI）、游戏（Unity）等领域</td>
+</tr>
+</tbody>
+</table>
+<p>总结</p>
+<p>✅ 简洁现代
+✅ 功能强大
+✅ 应用广泛
+✅ 社区活跃 + 微软支持
+✅ 适合从入门到大型项目开发</p>
+<hr />
+<h2 id="_1">简单代码示例</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello, C#!&quot;</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="c_2">C# 常见的应用场景</h2>
+<ul>
+<li><strong>Web开发</strong>：使用 ASP.NET Core 构建高性能网站和 API</li>
+<li><strong>桌面应用</strong>：使用 WPF 或 WinForms</li>
+<li><strong>游戏开发</strong>：Unity 引擎的主要编程语言就是 C#</li>
+<li><strong>移动开发</strong>：Xamarin / .NET MAUI 支持 Android 和 iOS</li>
+<li><strong>企业软件</strong>：ERP、CRM 系统等</li>
+</ul>
+<hr />
+<h2 id="net-framework">.NET Framework是什么</h2>
+<ul>
+<li>是一个软件开发框架 (创建APP的class库)</li>
+<li>也是一个运行时环境（CLR：COMMON LANGUAGE RUNTIME）</li>
+<li>是微软开发并维护的</li>
+<li>主要用于在windows平台上开发软件。</li>
+</ul>
+<p>.NET Framework 支持多种语言，比如：</p>
+<ul>
+<li>C#</li>
+<li>VB.NET</li>
+<li>F#</li>
+<li>C++/CLI</li>
+</ul>
+<p>它们都可以编译成 IL，并运行在 .NET Framework 上。</p>
+<h2 id="_2">框架是什么</h2>
+<blockquote>
+<p>听到“框架”这个词觉得特别高大上又难以捉摸。
+“明明用基础语言就能写代码，为什么还要学框架”。
+避开技术黑话，用生活化比喻来解释。</p>
+</blockquote>
+<ul>
+<li>预先建造的代码库</li>
+<li>框架为程序员提供了一套结构和一套标准。</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>省时省力：不用从零打地基、砌每一块砖。框架帮你处理了大量基础、重复、通用的工作。</li>
+<li>更可靠：地基、主梁、预制件都经过验证，出错概率低，房子更稳固（程序更健壮，更少Bug）。</li>
+<li>标准化：大家都用同一个框架，代码结构、开发方式类似，团队协作和后期维护更容易。</li>
+<li>专注于核心：你可以把精力集中在房子独特的设计和装修上（你业务的核心逻辑），而不是纠结怎么砌墙更牢。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>学习成本：你需要先花时间学习这套“房屋建造系统”的规则和用法。</li>
+<li>灵活性受限：你必须在这个框架的结构和规则内工作。如果你想盖一个形状极其怪异的房子（非常特殊的需求），可能会觉得框架碍手碍脚。</li>
+</ul>
+<h2 id="clr">CLR是什么</h2>
+<ul>
+<li>CLR(Common Language Runtime) ,即：“公共语言运行时”。</li>
+<li>CLR是 .NET Framework的核心执行引擎，负责运行C#代码。</li>
+<li>CIL(Common Intermediate Language)，即：“中间语言”。</li>
+<li>CIL是 CLR 的“通用语言”。所有使用.NET 语言编写的代码都会被首先编译成CIL，再编译成特定 CPU 的机器码。</li>
+</ul>
+<h2 id="cnet-framework">C#与.Net Framework的关系</h2>
+<p>一句话总结：</p>
+<blockquote>
+<p><strong>C# 是一种编程语言，.NET Framework 是一个运行平台（或开发框架）。你用 C# 写程序，让 .NET Framework 来运行它。</strong></p>
+</blockquote>
+<hr />
+<p>更具体地说：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>C#</th>
+<th>.NET Framework</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>类型</td>
+<td>编程语言</td>
+<td>平台/框架</td>
+</tr>
+<tr>
+<td>作用</td>
+<td>写代码的语言</td>
+<td>执行和支持代码运行的系统</td>
+</tr>
+<tr>
+<td>类似于</td>
+<td>Java</td>
+<td>Java 虚拟机（JVM） + 标准库</td>
+</tr>
+<tr>
+<td>开发者</td>
+<td>微软</td>
+<td>微软</td>
+</tr>
+<tr>
+<td>使用关系</td>
+<td>C# 编写的程序通常运行在 .NET Framework 或 .NET 平台上</td>
+<td>支持多种语言（不仅仅是 C#）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_3">二者是如何协作的？</h2>
+<ol>
+<li>你用 <strong>C# 编写程序</strong></li>
+<li>C# 源码会被编译成 <strong>IL（中间语言）代码</strong></li>
+<li>
+<p>程序运行时，<strong>.NET Framework 的 CLR（公共语言运行时）</strong> 负责：</p>
+<ul>
+<li>加载并执行 IL 代码</li>
+<li>管理内存（GC）</li>
+<li>提供基础类库（比如 <code>System.IO</code>, <code>System.Net</code>, <code>System.Linq</code>）</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="ccc">C语言、C++和C#对比</h2>
+<ul>
+<li><strong>C 语言：</strong> 像一把<strong>精密的瑞士军刀</strong>或<strong>手动挡跑车</strong>。它小巧、高效、直接操作硬件，但需要你手动管理一切细节（尤其是内存），自由度极高但风险也高。</li>
+<li><strong>C++ 语言：</strong> 像一辆<strong>功能强大的工程车</strong>或<strong>高性能赛车（带部分自动功能）</strong>。它在 C 的基础上增加了“面向对象”这个强大的工具箱和更丰富的功能，让你能建造更大更复杂的系统，但同时也继承了 C 的复杂性（尤其是内存管理）和自由度高带来的风险。它既能像 C 一样贴近硬件，又能构建大型抽象系统。</li>
+<li><strong>C# 语言：</strong> 像一辆<strong>现代智能电动汽车</strong>或一个<strong>高级集成开发环境</strong>。它由微软设计，运行在强大的 <code>.NET</code> 平台上。它吸收了 C/C++ 的语法优点，但大大简化了开发（尤其是内存管理自动化），安全性更高，专注于快速构建健壮、现代的应用程序（尤其是企业应用、Web、游戏脚本）。它牺牲了一些底层控制力，换来了更高的开发效率和安全性。</li>
+</ul>
+<p><strong>详细区别对比：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">特性</th>
+<th style="text-align: left;">C 语言</th>
+<th style="text-align: left;">C++ 语言</th>
+<th style="text-align: left;">C# 语言 (.NET)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>诞生年代</strong></td>
+<td style="text-align: left;">1972 年 (古老而基础)</td>
+<td style="text-align: left;">1983 年 (作为 C 的超集发展而来)</td>
+<td style="text-align: left;">2000 年 (现代语言)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>设计目标</strong></td>
+<td style="text-align: left;">系统编程，接近硬件，高效</td>
+<td style="text-align: left;">扩展 C，增加面向对象，支持更大规模复杂程序</td>
+<td style="text-align: left;">现代、简单、安全、面向对象、组件化开发</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>编程范式</strong></td>
+<td style="text-align: left;">纯<strong>过程式</strong> (函数驱动)</td>
+<td style="text-align: left;"><strong>多范式</strong>：过程式 + <strong>面向对象</strong> + 泛型 + 模板元编程等</td>
+<td style="text-align: left;"><strong>面向对象</strong>为主 + 泛型 + 函数式特性 (LINQ, Lambda) + 组件化</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>内存管理</strong></td>
+<td style="text-align: left;"><strong>手动管理</strong> (<code>malloc</code>, <code>free</code>)。极易出错（内存泄漏、野指针）。</td>
+<td style="text-align: left;"><strong>主要手动管理</strong> (也支持智能指针等机制辅助，但核心仍需程序员负责)。复杂度高，风险大。</td>
+<td style="text-align: left;"><strong>自动垃圾回收</strong>。CLR 运行时自动回收不再使用的内存。大大简化开发，提高安全性，牺牲一点实时性和底层控制。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>运行方式</strong></td>
+<td style="text-align: left;">直接编译成<strong>机器码</strong>，由操作系统直接执行。</td>
+<td style="text-align: left;">直接编译成<strong>机器码</strong>，由操作系统直接执行。</td>
+<td style="text-align: left;">编译成 <strong>CIL</strong>，由 <strong>.NET CLR</strong> 运行时即时编译执行。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>平台依赖性</strong></td>
+<td style="text-align: left;">高度依赖平台和编译器。需为不同平台编译。</td>
+<td style="text-align: left;">高度依赖平台和编译器。需为不同平台编译。</td>
+<td style="text-align: left;"><strong>跨平台</strong> (现代 .NET 5/6/7/8+)。一次编译，可在 Windows, Linux, macOS 等支持 .NET 的平台上运行 (需对应运行时)。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>性能</strong></td>
+<td style="text-align: left;"><strong>最高</strong>，最接近硬件，无运行时开销。</td>
+<td style="text-align: left;"><strong>非常高</strong>，与 C 相当或略低（因特性复杂性）。</td>
+<td style="text-align: left;"><strong>高</strong>，但通常略低于 C/C++ (因垃圾回收和运行时开销)。现代 .NET 性能优化非常好，差距缩小。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>复杂性/学习曲线</strong></td>
+<td style="text-align: left;"><strong>中等</strong>：核心概念相对较少，但指针和内存管理是难点。</td>
+<td style="text-align: left;"><strong>很高</strong>：包含 C 的所有复杂性，加上面向对象、模板、多重继承等高级复杂特性。</td>
+<td style="text-align: left;"><strong>相对较低</strong>：语法清晰，自动内存管理，丰富的类库，强大的 IDE 支持。面向对象设计更纯粹。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>安全性</strong></td>
+<td style="text-align: left;"><strong>低</strong>：指针操作、手动内存管理易导致崩溃、安全漏洞。</td>
+<td style="text-align: left;"><strong>中等偏低</strong>：继承了 C 的风险，虽然有机制改进但仍需谨慎。</td>
+<td style="text-align: left;"><strong>高</strong>：类型安全，自动内存管理，运行时检查，沙箱机制（部分场景），大大减少低级错误。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>主要应用领域</strong></td>
+<td style="text-align: left;">操作系统内核、嵌入式系统、驱动程序、基础库、对性能要求极高的场景。</td>
+<td style="text-align: left;">游戏引擎/游戏开发、高性能应用、图形/图像处理、大型桌面软件、数据库系统、操作系统组件、需要兼顾性能与复杂性的系统。</td>
+<td style="text-align: left;">企业级 Web 应用 (ASP.NET Core)、桌面应用 (WinForms, WPF)、移动应用 (Xamarin/.NET MAUI)、游戏脚本 (Unity3D)、云服务、后台服务、API 开发。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>标准库/生态</strong></td>
+<td style="text-align: left;">标准库较小，主要提供基础功能。</td>
+<td style="text-align: left;">标准库比 C 丰富 (STL)，但相对 C#/.NET 仍较小。强大但复杂的生态。</td>
+<td style="text-align: left;"><strong>庞大的 .NET 基类库</strong>，涵盖网络、数据库、XML、加密、图形等几乎所有领域。<strong>NuGet</strong> 包管理器提供海量开源库。<strong>强大且现代的生态系统</strong>。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>开发效率</strong></td>
+<td style="text-align: left;"><strong>较低</strong>：需处理大量底层细节。</td>
+<td style="text-align: left;"><strong>中等</strong>：构建复杂系统能力强，但细节管理耗时。</td>
+<td style="text-align: left;"><strong>高</strong>：自动内存管理、丰富类库、强大 IDE (Visual Studio)、现代语言特性显著提升开发速度。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>代表项目</strong></td>
+<td style="text-align: left;">Linux 内核, Windows 内核部分, Python 解释器</td>
+<td style="text-align: left;">Unreal/Unity 引擎(部分), Chrome 浏览器, Adobe 套件, 大型游戏</td>
+<td style="text-align: left;">Unity 游戏脚本, Azure 云服务, Stack Overflow, 众多企业后台系统</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../01-environment-setup/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 环境搭建">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                环境搭建
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-hello-world/" class="md-footer__link md-footer__link--next" aria-label="下一页: Hello World(2道)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Hello World(2道)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 村长 <a href="https://beian.mps.gov.cn/#/query/webSearch?code=13040202001048" target="_blank">冀公网安备13040202001048号</a><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+      
+      
+    
+    <a href="https://fosstodon.org/@squidfunk" target="_blank" rel="noopener me" title="fosstodon.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.5 102.5 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5m-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.prune", "navigation.top", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
