@@ -266,3 +266,5 @@ nav:
       - FLOAT方法: csharp-exercises/05-methods/03-float-methods.md
       - 数组方法: csharp-exercises/05-methods/04-array-methods.md
       - 数组方法: csharp-exercises/05-methods/04-array-methods.md
+  - 编程英语:
+      - 单词: english/index.md 
