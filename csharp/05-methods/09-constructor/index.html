@@ -1,0 +1,3040 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="2026年河北省中职对口升学考试计算机类专业考试学习交流。">
+      
+      
+        <meta name="author" content="村长">
+      
+      
+        <link rel="canonical" href="https://buhaoqi.github.io/csharp/05-methods/09-constructor/">
+      
+      
+        <link rel="prev" href="../05-method-modifier-static/">
+      
+      
+        <link rel="next" href="../10-int-methods/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>构造函数 - 高二九班(对口计算机)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-header__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            高二九班(对口计算机)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              构造函数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  C#教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../windows-form/" class="md-tabs__link">
+          
+  
+  
+  Windows Forms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../mysql/" class="md-tabs__link">
+          
+  
+  
+  MySQL文档
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../excel/" class="md-tabs__link">
+          
+  
+  
+  Excel
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../computer-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exercises/csharp/0621/" class="md-tabs__link">
+          
+  
+  
+  暑期作业
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp-exercises/" class="md-tabs__link">
+          
+  
+  
+  C#练习题
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../english/" class="md-tabs__link">
+          
+  
+  
+  编程英语
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-nav__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    高二九班(对口计算机)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    C#教程
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            C#教程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    考试大纲
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    问题汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../01-get-started/01-environment-setup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    起步
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../02-data-type/01-data-type/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    数据类型
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../03-operators/01-assignment-operators/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    运算符
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../04-statements/01-conditional-statements/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    语句
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    方法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            方法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-method-basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    方法基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-method-modifier-public/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    public关键词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-method-modifier-private/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    private关键词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-method-modifier-internal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    internal关键词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-method-modifier-static/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    static关键词
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    构造函数
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    构造函数
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、什么是构造函数？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 举个类比（比喻）：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例代码：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 示例代码：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行顺序是：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、构造函数的语法格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、构造函数的特点总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、构造函数的类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ C# 类的典型创建方式示例（共8种）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ C# 类的典型创建方式示例（共8种）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 1：最简类（不包含任何成员）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 2：只有字段的类（无构造函数）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 3：只包含构造函数的类（无字段）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 4：包含字段 + 无参构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 5：包含字段 + 有参构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 6：包含字段 + 属性 + 构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 7：只包含属性的类（自动属性）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 8：包含静态字段 + 静态构造函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 总结表：类的组合特征一览
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 总结表：类的组合特征一览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.无参构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.有参构造函数（重载）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.构造函数重载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.静态构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、构造函数的访问修饰符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、构造函数 vs 方法的区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、使用构造函数的常见场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、构造函数最佳实践
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      九、练习题推荐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      十、一句口诀记忆构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      十一、构造函数和普通方法的区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      十二、一句话理解区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      十三、示例代码对比：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三、示例代码对比：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造函数：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      普通方法：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      十四、构造函数的特殊点：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      十五、方法的通用特性：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      十六、小测试题（可选自测）：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-int-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    INT方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-string-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    字符串方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-float-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FLOAT方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-array-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数组方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../06-classes/01-class-and-object/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    类
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../07-algorithms/01-sorting-algorithms.md" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    算法
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../windows-form/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Windows Forms
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../mysql/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MySQL文档
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../excel/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Excel
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../computer-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机基础
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../exercises/csharp/0621/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    暑期作业
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp-exercises/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#练习题
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../english/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    编程英语
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、什么是构造函数？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 举个类比（比喻）：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例代码：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 示例代码：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行顺序是：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、构造函数的语法格式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、构造函数的特点总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、构造函数的类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ C# 类的典型创建方式示例（共8种）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ C# 类的典型创建方式示例（共8种）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 1：最简类（不包含任何成员）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 2：只有字段的类（无构造函数）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 3：只包含构造函数的类（无字段）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 4：包含字段 + 无参构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 5：包含字段 + 有参构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 6：包含字段 + 属性 + 构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 7：只包含属性的类（自动属性）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 8：包含静态字段 + 静态构造函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 总结表：类的组合特征一览
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 总结表：类的组合特征一览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.无参构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.有参构造函数（重载）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.构造函数重载
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.静态构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、构造函数的访问修饰符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、构造函数 vs 方法的区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      七、使用构造函数的常见场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      八、构造函数最佳实践
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      九、练习题推荐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      十、一句口诀记忆构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      十一、构造函数和普通方法的区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      十二、一句话理解区别
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      十三、示例代码对比：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="十三、示例代码对比：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造函数：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      普通方法：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      十四、构造函数的特殊点：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      十五、方法的通用特性：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      十六、小测试题（可选自测）：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<hr />
+<h2 id="_1">一、什么是构造函数？</h2>
+<p>构造函数是一个 <strong>特殊的方法</strong>，在你 <strong>使用 <code>new</code> 创建对象时自动执行</strong>，用于初始化对象的状态（如字段、属性等）。</p>
+<blockquote>
+<p>📌 构造函数的英文是：<strong>constructor</strong></p>
+</blockquote>
+<p>当你写：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">new</span><span class="w"> </span><span class="nf">Person</span><span class="p">();</span>
+</span></code></pre></div>
+<p>你是在<strong>创建一个 Person 类的对象</strong>，<strong>调用的是 Person 类的构造函数</strong>来初始化这个对象。</p>
+<p><code>new Person();</code> 的完整含义如下：</p>
+<ol>
+<li>
+<p><strong><code>new</code> 关键词：</strong></p>
+<ul>
+<li>触发“创建新对象”的操作。</li>
+<li>在内存中为对象分配空间。</li>
+</ul>
+</li>
+<li>
+<p><strong><code>Person()</code>：</strong></p>
+<ul>
+<li>是 <strong>构造函数的调用</strong>。</li>
+<li>在分配完空间后，<strong>调用该类的构造函数对新对象进行初始化</strong>（比如给字段赋值）。</li>
+</ul>
+</li>
+<li>
+<p><strong>整个 <code>new Person()</code> 表达式返回的就是一个新建好的 <code>Person</code> 类型对象</strong>。</p>
+</li>
+</ol>
+<hr />
+<h2 id="_2">🧩 举个类比（比喻）：</h2>
+<p>假设：</p>
+<ul>
+<li><code>Person</code> 类是“房子的蓝图”；</li>
+<li><code>new</code> 是“盖房子的动作”；</li>
+<li><code>构造函数</code> 是“装修流程”（比如贴瓷砖、刷墙）；</li>
+<li><code>new Person()</code> 就是“用蓝图盖了一套房子并完成初始装修”。</li>
+</ul>
+<hr />
+<h2 id="_3">✅ 示例代码：</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Person</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">// 构造函数</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;未命名&quot;</span><span class="p">;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;构造函数被调用&quot;</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">();</span><span class="w">  </span><span class="c1">// 输出：构造函数被调用</span>
+</span></code></pre></div>
+<h3 id="_4">执行顺序是：</h3>
+<ol>
+<li><code>new</code> 分配对象内存；</li>
+<li>调用 <code>Person()</code> 构造函数 → 输出“构造函数被调用”；</li>
+<li>构造完毕后，变量 <code>p</code> 引用这个新建的 <code>Person</code> 对象。</li>
+</ol>
+<hr />
+<h2 id="_5">二、构造函数的语法格式</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="na">[访问修饰符]</span><span class="w"> </span><span class="err">类名</span><span class="p">(</span><span class="err">参数列表</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">// 初始化代码</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<blockquote>
+<p>🚫 没有返回类型，连 <code>void</code> 也不能写。</p>
+</blockquote>
+<hr />
+<p>示例：无参构造函数</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Person</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="c1">// 构造函数</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;未命名&quot;</span><span class="p">;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Person 对象已创建&quot;</span><span class="p">);</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用方式：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">();</span><span class="w">  </span><span class="c1">// 自动执行构造函数</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_6">三、构造函数的特点总结</h2>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称必须与类名相同</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>没有返回类型</td>
+<td>✅（连 <code>void</code> 都不能写）</td>
+</tr>
+<tr>
+<td>自动调用</td>
+<td>创建对象时由 <code>new</code> 触发</td>
+</tr>
+<tr>
+<td>可以重载（多个版本）</td>
+<td>✅ 支持带参数的构造函数</td>
+</tr>
+<tr>
+<td>可以是 <code>public</code>、<code>private</code>、<code>protected</code></td>
+<td>控制访问权限</td>
+</tr>
+<tr>
+<td>可以定义静态构造函数</td>
+<td>✅（仅执行一次）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_7">四、构造函数的类型</h2>
+<h1 id="c-8">✅ C# 类的典型创建方式示例（共8种）</h1>
+<hr />
+<h3 id="1">✅ 示例 1：最简类（不包含任何成员）</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EmptyClass</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">{</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>没有字段、属性、方法、构造函数；</li>
+<li>系统自动提供一个默认构造函数；</li>
+<li>可以 <code>new EmptyClass()</code> 创建对象。</li>
+</ul>
+<hr />
+<h3 id="2">✅ 示例 2：只有字段的类（无构造函数）</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OnlyFields</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>没有构造函数；</li>
+<li>系统自动提供一个无参构造函数；</li>
+<li>字段只能手动赋值或初始化。</li>
+</ul>
+<hr />
+<h3 id="3">✅ 示例 3：只包含构造函数的类（无字段）</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OnlyConstructor</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">OnlyConstructor</span><span class="p">()</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;对象已创建&quot;</span><span class="p">);</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>没有字段；</li>
+<li>构造函数仅用于提示创建对象；</li>
+<li>实际上不存储任何数据。</li>
+</ul>
+<hr />
+<h3 id="4">✅ 示例 4：包含字段 + 无参构造函数</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Student</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Age</span><span class="p">;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">()</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;未命名&quot;</span><span class="p">;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>构造函数初始化字段；</li>
+<li>可以直接通过 <code>new Student()</code> 创建对象并自动设置默认值。</li>
+</ul>
+<hr />
+<h3 id="5">✅ 示例 5：包含字段 + 有参构造函数</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Person</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Age</span><span class="p">;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>没有默认构造函数；</li>
+<li>必须传参才能创建对象。</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Tom&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w"> </span><span class="c1">// ✅</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">Person</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">();</span><span class="w">         </span><span class="c1">// ❌ 编译错误</span>
+</span></code></pre></div>
+<hr />
+<h3 id="6">✅ 示例 6：包含字段 + 属性 + 构造函数</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Car</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">_brand</span><span class="p">;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="c1">// 属性：封装字段</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Brand</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">_brand</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="k">set</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Car</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">brand</span><span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">        </span><span class="n">_brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">brand</span><span class="p">;</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>使用属性代替字段的直接访问；</li>
+<li>构造函数初始化字段；</li>
+<li>推荐封装方式。</li>
+</ul>
+<hr />
+<h3 id="7">✅ 示例 7：只包含属性的类（自动属性）</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Book</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">Price</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>使用<strong>自动属性</strong>；</li>
+<li>系统自动生成隐藏字段；</li>
+<li>可以直接用 <code>new Book()</code> + 对象初始化器赋值：</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">Book</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;C#入门&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">39.9</span><span class="w"> </span><span class="p">};</span>
+</span></code></pre></div>
+<hr />
+<h3 id="8">✅ 示例 8：包含静态字段 + 静态构造函数</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Config</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">{</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">AppName</span><span class="p">;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nf">Config</span><span class="p">()</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">        </span><span class="n">AppName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MyApp&quot;</span><span class="p">;</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;配置已加载&quot;</span><span class="p">);</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>📌 <strong>特点</strong>：</p>
+<ul>
+<li>静态构造函数只在第一次使用类时执行一次；</li>
+<li>用于初始化静态数据。</li>
+</ul>
+<hr />
+<h1 id="_8">✅ 总结表：类的组合特征一览</h1>
+<table>
+<thead>
+<tr>
+<th>示例</th>
+<th>字段</th>
+<th>构造函数</th>
+<th>参数</th>
+<th>属性</th>
+<th>静态成员</th>
+<th>是否必须传参</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>示例 1</td>
+<td>❌</td>
+<td>❌ (系统提供)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>示例 2</td>
+<td>✅</td>
+<td>❌ (系统提供)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>示例 3</td>
+<td>❌</td>
+<td>✅ 无参</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>示例 4</td>
+<td>✅</td>
+<td>✅ 无参</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>示例 5</td>
+<td>✅</td>
+<td>✅ 有参</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>示例 6</td>
+<td>✅</td>
+<td>✅ 有参</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>示例 7</td>
+<td>❌</td>
+<td>❌ (系统提供)</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>示例 8</td>
+<td>❌</td>
+<td>✅ 静态</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="1_1">1.无参构造函数</h3>
+<p>默认构造函数</p>
+<p>系统自动提供一个，如果你没有定义任何构造函数。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Dog</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Dog</span><span class="p">()</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;一只狗出生了&quot;</span><span class="p">);</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h3 id="2_1">2.有参构造函数（重载）</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Book</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="p">{</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Title</span><span class="p">;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Book</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">title</span><span class="p">)</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">        </span><span class="n">Title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">Book</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Book</span><span class="p">(</span><span class="s">&quot;C# 编程&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="3_1">3.构造函数重载</h3>
+<p>（多个构造函数）</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Student</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="p">{</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Age</span><span class="p">;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="c1">// 无参构造函数</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">()</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;未知&quot;</span><span class="p">;</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">        </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">    </span><span class="c1">// 有参构造函数</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="w">        </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">Student</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">();</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">Student</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&quot;Tom&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="4_1">4.静态构造函数</h3>
+<p>static constructor</p>
+<ul>
+<li>用于初始化静态字段</li>
+<li>没有参数</li>
+<li>不能手动调用，只执行一次</li>
+</ul>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Config</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">{</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">AppName</span><span class="p">;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="nf">Config</span><span class="p">()</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">        </span><span class="n">AppName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MyApp&quot;</span><span class="p">;</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;静态构造函数已执行&quot;</span><span class="p">);</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">Config</span><span class="p">.</span><span class="n">AppName</span><span class="p">);</span><span class="w">  </span><span class="c1">// 自动触发 static 构造函数</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_9">五、构造函数的访问修饰符</h2>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>常用，允许外部创建对象</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>限制实例化，用于单例模式</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>只允许继承类调用</td>
+</tr>
+<tr>
+<td><code>internal</code></td>
+<td>仅限同一程序集使用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vs">六、构造函数 vs 方法的区别</h2>
+<p>（速查表）</p>
+<table>
+<thead>
+<tr>
+<th>比较项</th>
+<th>构造函数</th>
+<th>普通方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否返回值</td>
+<td>❌ 没有</td>
+<td>✅ 有</td>
+</tr>
+<tr>
+<td>是否必须与类名相同</td>
+<td>✅ 是</td>
+<td>❌ 否</td>
+</tr>
+<tr>
+<td>是否自动调用</td>
+<td>✅ 创建对象时</td>
+<td>❌ 手动调用</td>
+</tr>
+<tr>
+<td>是否能被多次调用</td>
+<td>❌ 一次</td>
+<td>✅ 任意次</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">七、使用构造函数的常见场景</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对象创建时设置初始值</td>
+<td>设置字段、属性</td>
+</tr>
+<tr>
+<td>初始化只读字段</td>
+<td>在构造函数中赋值</td>
+</tr>
+<tr>
+<td>控制对象数量</td>
+<td>用 static 构造函数或计数器</td>
+</tr>
+<tr>
+<td>创建对象时传参</td>
+<td>用带参数构造函数简化初始化逻辑</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_11">八、构造函数最佳实践</h2>
+<ol>
+<li>✅ 为类提供清晰的构造函数（可带默认值）</li>
+<li>❌ 避免在构造函数中执行复杂逻辑或访问外部资源</li>
+<li>✅ 使用构造函数初始化只读字段（<code>readonly</code>）</li>
+<li>✅ 保持构造函数短小、明确</li>
+</ol>
+<hr />
+<h2 id="_12">九、练习题推荐</h2>
+<p>如果你想测试是否掌握，我可以提供这些：</p>
+<ul>
+<li>✅ 选择题：识别构造函数的合法写法</li>
+<li>✅ 编程题：重载多个构造函数、创建对象传参</li>
+<li>✅ 判断题：构造函数能否返回值/手动调用等</li>
+</ul>
+<hr />
+<h2 id="_13">十、一句口诀记忆构造函数</h2>
+<blockquote>
+<p>🔹 名字跟类走，不能加 <code>void</code>；
+🔹 创建自动跑，初始化最好；
+🔹 有参无参都能来，重载别忘带；
+🔹 静态构造不能传，系统只跑一回完！</p>
+</blockquote>
+<hr />
+<h2 id="_14">十一、构造函数和普通方法的区别</h2>
+<p>构造函数（Constructor）和 普通方法（Method）的核心区别</p>
+<table>
+<thead>
+<tr>
+<th>比较点</th>
+<th>构造函数（Constructor）</th>
+<th>方法（Method）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>作用</strong></td>
+<td>创建对象时执行，用于初始化</td>
+<td>对象创建后调用，执行某些功能</td>
+</tr>
+<tr>
+<td><strong>名称</strong></td>
+<td>必须与类名相同</td>
+<td>自定义名称</td>
+</tr>
+<tr>
+<td><strong>返回类型</strong></td>
+<td>❌ 没有返回类型（不能写 <code>void</code> 或其它）</td>
+<td>✅ 必须有返回类型（可以是 <code>void</code>）</td>
+</tr>
+<tr>
+<td><strong>是否手动调用</strong></td>
+<td>❌ 不需要，<code>new</code> 对象时自动调用</td>
+<td>✅ 需要显式调用，例如 <code>obj.Print()</code></td>
+</tr>
+<tr>
+<td><strong>调用时机</strong></td>
+<td>创建对象时自动运行一次</td>
+<td>可多次调用</td>
+</tr>
+<tr>
+<td><strong>是否可以有参数</strong></td>
+<td>✅ 可以重载构造函数带参数</td>
+<td>✅ 方法也可以有参数</td>
+</tr>
+<tr>
+<td><strong>是否可以是 static</strong></td>
+<td>✅ 可以定义静态构造函数（无参数）</td>
+<td>✅ 可以是 static，也可以是实例方法</td>
+</tr>
+<tr>
+<td><strong>用途举例</strong></td>
+<td>初始化字段、计数、资源连接等</td>
+<td>执行逻辑运算、打印信息等</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_15">十二、一句话理解区别</h2>
+<blockquote>
+<p>✅ <strong>构造函数是“出生时执行一次”</strong>，
+✅ <strong>方法是“出生之后随时可以调用”</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="_16">十三、示例代码对比：</h2>
+<h3 id="_17">构造函数：</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Person</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="p">{</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="c1">// 构造函数（和类名相同，无返回类型）</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">        </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;构造函数已执行！&quot;</span><span class="p">);</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用方式：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Tom&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// 自动调用构造函数</span>
+</span></code></pre></div>
+<hr />
+<h3 id="_18">普通方法：</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Person</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="p">{</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SayHello</span><span class="p">()</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello!&quot;</span><span class="p">);</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>调用方式：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">Person</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">();</span><span class="w"> </span><span class="c1">// 创建对象</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">p</span><span class="p">.</span><span class="n">SayHello</span><span class="p">();</span><span class="w">            </span><span class="c1">// 调用方法</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_19">十四、构造函数的特殊点：</h2>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❌ 没有 return 类型（连 void 都不能写）</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 名称必须与类名完全一致</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 自动调用，不用手动执行</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 可以重载（多个构造函数）</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 可以定义静态构造函数（只执行一次）</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_20">十五、方法的通用特性：</h2>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ 有返回类型，常见如 <code>void</code>、<code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 名称自定义</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 调用次数不限</td>
+<td></td>
+</tr>
+<tr>
+<td>✅ 可为 <code>static</code> 或 实例方法</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_21">十六、小测试题（可选自测）：</h2>
+<p>下面的代码中哪个是构造函数？哪个是方法？为什么？</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Car</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="p">{</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Car</span><span class="p">()</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;构造函数&quot;</span><span class="p">);</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Drive</span><span class="p">()</span>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;正在驾驶...&quot;</span><span class="p">);</span>
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>✅ 答案：</p>
+<ul>
+<li><code>Car()</code> 是构造函数（名称与类相同，无返回类型）；</li>
+<li><code>Drive()</code> 是普通方法（有返回类型 <code>void</code>，可以多次调用）。</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../05-method-modifier-static/" class="md-footer__link md-footer__link--prev" aria-label="上一页: static关键词">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                static关键词
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../10-int-methods/" class="md-footer__link md-footer__link--next" aria-label="下一页: INT方法">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                INT方法
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 村长 <a href="https://beian.mps.gov.cn/#/query/webSearch?code=13040202001048" target="_blank">冀公网安备13040202001048号</a><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+      
+      
+    
+    <a href="https://fosstodon.org/@squidfunk" target="_blank" rel="noopener me" title="fosstodon.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.5 102.5 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5m-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.prune", "navigation.top", "navigation.footer", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
