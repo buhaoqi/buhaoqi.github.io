@@ -76,7 +76,8 @@ nav:
     - 起步:
       - 环境搭建: csharp/01-get-started/01-environment-setup.md
       - 认识C#: csharp/01-get-started/02-what-csharp-is.md
-      - Hello World: csharp/01-get-started/03-hello-world.md
+      - 组织文件: csharp/01-get-started/03-solution.md
+      - 文件模版: csharp/01-get-started/04-file-template.md
       - 变量与常量: csharp/01-get-started/05-variable-constant.md
       - 输入输出: csharp/01-get-started/06-input-and-output.md
       - 命名空间: csharp/01-get-started/07-namespace.md
@@ -89,6 +90,10 @@ nav:
       - 字符串类型: csharp/02-data-type/05-string.md
       - 布尔类型: csharp/02-data-type/06-boolean.md
       - 数组: csharp/02-data-type/07-array.md
+      - struct: csharp/02-data-type/08-struct.md
+      - enum: csharp/02-data-type/09-enum.md
+      - delegate: csharp/02-data-type/10-delegate.md
+      - interface: csharp/02-data-type/11-interface.md
       - 数据类型转换(20道): csharp/02-data-type/15-convert-data-type.md
     - 运算符:
       - 赋值运算符: csharp/03-operators/01-assignment-operators.md
@@ -101,17 +106,37 @@ nav:
       - while循环: csharp/04-statements/03-while-loop-statement.md
       - do-while循环语句: csharp/04-statements/04-do-while-loop-statement.md
     - 方法:
-      - 方法基础: csharp/05-methods/00-method-basics.md
-      - INT方法: csharp/05-methods/01-int-methods.md
-      - 字符串方法: csharp/05-methods/02-string-methods.md
-      - FLOAT方法: csharp/05-methods/03-float-methods.md
-      - 数组方法: csharp/05-methods/04-array-methods.md
+      - 方法基础: csharp/05-methods/01-method-basics.md
+      - public关键词: csharp/05-methods/02-method-modifier-public.md
+      - private关键词: csharp/05-methods/03-method-modifier-private.md
+      - internal关键词: csharp/05-methods/04-method-modifier-internal.md
+      - static关键词: csharp/05-methods/05-method-modifier-static.md
+      - 构造函数: csharp/05-methods/09-constructor.md
+      - INT方法: csharp/05-methods/10-int-methods.md
+      - 字符串方法: csharp/05-methods/11-string-methods.md
+      - FLOAT方法: csharp/05-methods/12-float-methods.md
+      - 数组方法: csharp/05-methods/13-array-methods.md
     - 类:
       - 类与对象: csharp/06-classes/01-class-and-object.md
       - 属性与方法: csharp/06-classes/02-property-and-method.md
       - 继承: csharp/06-classes/03-inheritance.md
       - 多态: csharp/06-classes/04-polymorphism.md
       - 抽象类与接口: csharp/06-classes/05-abstract-class-and-interface.md
+    - 算法:
+      - 排序算法: csharp/07-algorithms/01-sorting-algorithms.md
+      - 查找算法: csharp/07-algorithms/02-searching-algorithms.md
+      - 递归算法: csharp/07-algorithms/03-recursion.md
+      - 分治算法: csharp/07-algorithms/04-divide-and-conquer.md
+      - 贪心算法: csharp/07-algorithms/05-greedy-algorithm.md
+      - 动态规划: csharp/07-algorithms/06-dynamic-programming.md
+  - Windows Forms:
+    - 考试大纲: windows-form/index.md
+    - 起步: windows-form/02-get-started.md
+    - 窗体与控件: windows-form/index.md
+    - 事件处理: windows-form/index.md
+    - 数据绑定: windows-form/index.md
+    - 菜单与工具栏: windows-form/index.md
+    - 对话框: windows-form/index.md
   - MySQL文档:
     - 考试大纲: mysql/index.md
     - MySQL的基本概念: mysql/01-basic-concept.md
@@ -227,6 +252,9 @@ nav:
     # - 7月09日:第6章练习题: exercises/csharp/0709.md
     # - 7月10日:第7章深入理解类: exercises/csharp/0710.md
     # - 7月11日:第7章练习题: exercises/csharp/0711.md
+    - 7月15日:计算机基础知识1: exercises/csharp/0715.md
+    - 7月15日:计算机基础知识2: exercises/csharp/0716.md
+    - 7月16日:《计算机基础知识》练习: exercises/csharp/0717.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
@@ -261,6 +289,10 @@ nav:
       - do-while循环语句: csharp-exercises/04-statements/05-do-while-loop-statement.md
       - 嵌套分支语句: csharp-exercises/04-statements/06-nested-branching-statements.md
     - 方法:
+      - 基础练习: csharp-exercises/05-methods/01-method-basics.md
+      - public练习: csharp-exercises/05-methods/02-method-modifier-public.md
+      - static练习: csharp-exercises/05-methods/03-method-modifier-static.md
+      - 构造函数练习: csharp-exercises/05-methods/09-constructor.md
       - INT方法: csharp-exercises/05-methods/01-int-methods.md
       - 字符串方法: csharp-exercises/05-methods/02-string-methods.md
       - FLOAT方法: csharp-exercises/05-methods/03-float-methods.md

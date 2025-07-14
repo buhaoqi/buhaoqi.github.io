@@ -1,8 +1,9 @@
 ---
-noteId: "19dc9dd03eca11f081f2eb75db5e372e"
+noteId: "795b03605fc111f0a138bb2f2278db69"
 tags: []
 
 ---
+
 
 ## 编写Hello World程序
 
@@ -128,3 +129,140 @@ Console.WriteLine("Hello World!");
 
 1. Hello World程序写三遍；
 2. 讲出Hello World程序的每一行代码的含义
+
+
+
+```csharp
+// 示例项目：StudentManagerApp（控制台版本）
+// 项目结构（单项目，分文件夹）：
+// - Models/Student.cs
+// - Services/StudentService.cs
+// - Data/StudentRepository.cs
+// - Utils/InputHelper.cs
+// - Program.cs（入口）
+
+// 文件：Models/Student.cs
+namespace StudentManagerApp.Models
+{
+    public class Student
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
+}
+
+// 文件：Services/StudentService.cs
+using StudentManagerApp.Models;
+using StudentManagerApp.Data;
+
+namespace StudentManagerApp.Services
+{
+    public class StudentService
+    {
+        private readonly StudentRepository _repository = new();
+
+        public void AddStudent(Student student)
+        {
+            _repository.Add(student);
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            return _repository.GetAll();
+        }
+    }
+}
+
+// 文件：Data/StudentRepository.cs
+using StudentManagerApp.Models;
+
+namespace StudentManagerApp.Data
+{
+    public class StudentRepository
+    {
+        private readonly List<Student> _students = new();
+
+        public void Add(Student student)
+        {
+            _students.Add(student);
+        }
+
+        public List<Student> GetAll()
+        {
+            return _students;
+        }
+    }
+}
+
+// 文件：Utils/InputHelper.cs
+namespace StudentManagerApp.Utils
+{
+    public static class InputHelper
+    {
+        public static int ReadInt(string prompt)
+        {
+            Console.Write(prompt);
+            while (!int.TryParse(Console.ReadLine(), out int result))
+            {
+                Console.Write("请输入有效的整数：");
+            }
+            return result;
+        }
+
+        public static string ReadString(string prompt)
+        {
+            Console.Write(prompt);
+            return Console.ReadLine() ?? "";
+        }
+    }
+}
+
+// 文件：Program.cs
+using StudentManagerApp.Models;
+using StudentManagerApp.Services;
+using StudentManagerApp.Utils;
+
+namespace StudentManagerApp
+{
+    class Program
+    {
+        static void Main()
+        {
+            var service = new StudentService();
+            while (true)
+            {
+                Console.WriteLine("\n--- 学生管理系统 ---");
+                Console.WriteLine("1. 添加学生");
+                Console.WriteLine("2. 查看所有学生");
+                Console.WriteLine("0. 退出");
+
+                string choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case "1":
+                        string name = InputHelper.ReadString("请输入学生姓名：");
+                        int age = InputHelper.ReadInt("请输入学生年龄：");
+                        var student = new Student { Id = Guid.NewGuid().GetHashCode(), Name = name, Age = age };
+                        service.AddStudent(student);
+                        Console.WriteLine("学生添加成功。");
+                        break;
+                    case "2":
+                        var students = service.GetAllStudents();
+                        Console.WriteLine("\n学生列表：");
+                        foreach (var s in students)
+                        {
+                            Console.WriteLine($"ID: {s.Id}, 姓名: {s.Name}, 年龄: {s.Age}");
+                        }
+                        break;
+                    case "0":
+                        return;
+                    default:
+                        Console.WriteLine("无效的选择，请重试。");
+                        break;
+                }
+            }
+        }
+    }
+}
+```

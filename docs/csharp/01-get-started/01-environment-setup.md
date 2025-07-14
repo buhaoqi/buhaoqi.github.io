@@ -8,7 +8,7 @@ tags: []
 
 ---
 
-## ✅ 一、开发环境搭建的目标
+## 一、搭建开发环境的目标
 
 为了开始学习和编写 C# 程序，你需要配置以下基本环境：
 
@@ -18,7 +18,9 @@ tags: []
 
 ---
 
-## ✅ 二、安装 .NET SDK（Windows / macOS 通用）
+## 二、安装 .NET SDK
+
+> 注意：如果你在安装 Visual Studio 时勾选了“.NET 桌面开发”或“.NET Web 开发”等相关工作负载，通常会自动安装所需的 .NET 8 SDK 和 Runtime，不需要你手动安装。
 
 ### ✅ 1. 访问官网
 
@@ -44,11 +46,98 @@ dotnet --version
 
 ---
 
-## ✅ 三、安装开发工具（IDE）
+## 三、.NET SDK VS .NET Runtime
 
-### 选项 1：Visual Studio（功能强大，适合全面开发）
+`.NET 9 SDK` 和 `.NET 9 Runtime` 虽然名称相近，但用途和组成是不同的。下面是详细区别说明：
 
-#### ✅ 安装步骤（Windows / macOS）：
+一句话区分
+
+| 名称                 | 作用                      |
+| ------------------ | ----------------------- |
+| **.NET 9 SDK**     | 开发工具包（包含编译器、模板、Runtime） |
+| **.NET 9 Runtime** | 仅用于**运行**已编译好的 .NET 程序  |
+
+
+举个例子：
+
+| 场景                 | 安装哪个？                                         |
+| ------------------ | --------------------------------------------- |
+| 你是开发者，要写 C# 程序     | 安装 `.NET 9 SDK` ✅                             |
+| 你只运行别人写的 .NET 9 应用 | 安装 `.NET 9 Runtime` ✅                         |
+| 你要部署 ASP.NET 网站    | 安装 `.ASP.NET Core Runtime`（包含 .NET Runtime） ✅ |
+
+### .NET 9 SDK（开发工具包）
+
+* 全称：`.NET 9 Software Development Kit`
+* 用途：**开发** .NET 应用程序所需的工具
+* 包含内容：
+
+    * 编译器（如 `csc`、Roslyn）
+    * 项目模板（如 `dotnet new console`）
+    * 命令行工具（`dotnet` CLI）
+    * 调试支持
+    * .NET 9 Runtime（开发时也要运行）
+
+✅ **开发者需要安装 SDK**
+
+---
+
+### .NET 9 Runtime(运行时环境)
+
+* 全称：`.NET 9 Runtime`
+* 用途：**运行** 用 SDK 编译好的 .NET 程序
+* 包含内容：
+
+    * .NET CLR（公共语言运行时）
+    * 基础类库（如 `System.*`）
+    * 没有编译器或模板
+
+✅ **最终用户只需要安装 Runtime**
+
+图示：
+
+```
+             .NET 9 SDK
+         ┌────────────────┐
+         │ 编译器（csc）    │
+         │ 模板（dotnet new）│
+         │ CLI 工具        │
+         │ .NET 9 Runtime │ ← 用于开发时运行
+         └────────────────┘
+
+             .NET 9 Runtime
+         ┌────────────────┐
+         │ CLR + 类库      │
+         │ 仅运行程序      │
+         └────────────────┘
+```
+
+如需下载推荐：
+
+* [✅ SDK 下载地址](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+* [✅ Runtime 下载地址](https://dotnet.microsoft.com/en-us/download/dotnet/9.0/runtime)
+
+---
+
+## 四、查看.NET版本
+
+
+| 想查看的版本类型            | 方法                                       |
+| ------------------- | ---------------------------------------- |
+| .NET 5/6/7/8（现代版）   | `dotnet --list-sdks` 和 `--list-runtimes` |
+| .NET Framework（老版本） | 查看注册表或使用 Visual Studio                   |
+| 当前默认版本              | `dotnet --version`                       |
+
+命令对比：
+
+```bash
+dotnet --list-sdks      # 显示已安装的 SDK
+dotnet --list-runtimes  # 显示已安装的 Runtime
+```
+
+---
+
+## 五、安装Visual Studio（IDE）
 
 1. 下载地址：[https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/)
 
@@ -61,35 +150,21 @@ dotnet --version
 
 4. 安装完成后，打开 Visual Studio → 新建项目 → 选择 `控制台应用程序`（Console App） → 编写你的第一个程序。
 
----
 
-### 选项 2：Visual Studio Code（轻量级，跨平台）
+| 你的需求                   | 建议操作                                  |
+| ---------------------- | ------------------------------------- |
+| 只写控制台 / 桌面 WinForms 程序 | 安装 VS 时勾选“`.NET 桌面开发`”                |
+| 想做网站（ASP.NET）          | 勾选“`ASP.NET 和 Web 开发`”                |
+| 想开发多平台（手机/桌面）应用        | 勾选“.NET MAUI”                         |
+| 已装好 VS，但没有 .NET 8      | 运行 `dotnet --list-sdks` 检查，如无则手动装 SDK |
 
-#### ✅ 安装步骤：
-
-1. 下载地址：[https://code.visualstudio.com/](https://code.visualstudio.com/)
-
-2. 安装后打开 VS Code，进入扩展（Extensions）：
-
-   * 搜索并安装：`C# Dev Kit`（或 Microsoft 出品的 C# 插件）
-
-3. 配置终端支持：
-
-   * 打开终端，输入 `dotnet --version`，确保 .NET SDK 已安装
-
-4. 创建你的第一个项目：
-
-```bash
-dotnet new console -o MyFirstApp
-cd MyFirstApp
-code .
-```
-
-5. 然后在 `Program.cs` 中写代码，按 `F5` 或点击 `Run` 运行程序。
 
 ---
 
-## ✅ 四、创建并运行第一个 C# 程序
+
+## 六、验证环境是否配置成功
+
+创建并运行第一个 C# 程序
 
 在命令行执行：
 
@@ -109,32 +184,11 @@ Hello, World!
 
 ---
 
-## ✅ 五、开发环境结构简介
+开发环境结构简介
 
 ```
 HelloWorld/         <-- 项目目录
 ├── Program.cs      <-- 主程序入口
 ├── HelloWorld.csproj <-- 项目配置文件
 ```
-
----
-
-## ✅ 六、常见问题
-
-| 问题                  | 解决办法                        |
-| ------------------- | --------------------------- |
-| dotnet 命令未找到        | 需重启系统，或检查环境变量是否包含 .NET 安装路径 |
-| VS Code 中运行报错       | 确保安装了 `.NET SDK` 和 C# 插件    |
-| 安装 Visual Studio 太慢 | 可以选择 VS Code + CLI 工具，启动更快  |
-
----
-
-## ✅ 七、推荐学习路线（附带环境支持）
-
-| 学习内容            | 所需环境                    |
-| --------------- | ----------------------- |
-| 控制台应用开发         | VS / VS Code + .NET SDK |
-| 窗体应用（WinForms）  | Visual Studio           |
-| Web 开发（ASP.NET） | Visual Studio / VS Code |
-| 跨平台工具           | Visual Studio Code      |
 

@@ -104,51 +104,7 @@ tags: []
 
 >ToBoolean、ToChar、ToDateTime、ToDecimal、ToDouble、ToSingle、ToString。
 
-## （六） Windows应用程序设计
 
-1．掌握窗体及控件的概念、属性、方法、事件；
-
-2．掌握窗体的属性：Name、Height、Width、Visible、WindowState、Dock、Font、BackColor、ForeColor、Icon、Size；
-
-3．掌握窗体的常用方法：Activate、Close、Refresh、Show、Hide；
-
-4．掌握窗体的事件：FormClosed、FormClosing、KeyDown、KeyPress、KeyUp、 Load、MouseClick、MouseDoubleClick、MouseDown、MouseMove、MouseUp、Resize、GiveFeedback
-
-5．掌握C#窗体的创建和使用方法；
-
-6．掌握标签(Label)属性：AutoSize、Text、Focused、Font、Height、Size、Visible、Width、Text Align、Name、Image、Anchor、BorderStyle、CanFocus；
-
-7．掌握文本框(TextBox)的属性：Text、TextLength、MaxLength、Multiline、PasswordChar、SelectedText、ReadOnly、TabIndex；
-
-8．掌握文本框(TextBox)的事件：TextChanged；
-
-9．掌握按钮（Button）的属性：Name、Enabled、Text、TabIndex；
-
-10．掌握按钮（Button）的事件：Click、Enter、MouseUp、TextChanged；
-
-11．掌握组合框(ComboBox)的属性：DroppedDown、Items、SelectedIndex、SelectedItem、SelectedText、Sorted、Text；
-
-12．掌握列表框(ListBox)的属性：Items、MultiColumn、SelectedItems、Sorted、Text；
-
-13．掌握单选按钮(RadioButton)的属性：Checked、Text；
-
-14．掌握复选框(CheckBox)的属性：Checked、CheckState、Text；
-
-15．掌握滚动条(HScrollBar、VScrollBar)的属性：Value、SmallChange、LargeChange；
-
-16．掌握时钟控件(Timer)的属性：Interval；
-
-17．掌握时钟控件的Tick事件；
-
-18．了解分组框(GroupBox)的属性：Text、Visible；
-
-19．了解选项卡(TabControl)的属性：SelectedTab、TabPages、Multiline；
-
-20．了解多文档界面窗体；
-
-21．了解多窗体间的调用的功能实现方法；
-
-22．了解菜单(MainMenu)控件、ToolTip控件、对话框控件、消息框。
 
 ## （七） C#的文件访问
 1．掌握文件、文件流FileStream的概念；

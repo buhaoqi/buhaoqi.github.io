@@ -4,18 +4,41 @@ tags: []
 
 ---
 
-无论是JetBrains Rider还是Visual Studio，解决方案(Solution)是一个组织管理多项目(Projects)开发工作的概念。
+无论是Visual Studio还是JetBrains Rider，解决方案(Solution)是一个组织管理多项目(Projects)开发的概念。
 
 ---
+
 ## 一、Solution是什么？
 
-定义：
+- `solution`翻译为"解决方案"；
+- 一个`solution`相当于一个逻辑容器，可以包含多个项目，统一管理项目的构建顺序、依赖关系、配置等。
+- 当你创建一个新的解决方案（`solution`）时，IDE会生成一个 `.sln` 文件，也就是解决方案配置文件。
 
-* `.sln` 文件代表一个 **解决方案（Solution）**。
-* 是一个 **顶层容器**，可以包含一个或多个 **项目（Project）**。
-* **统一管理**：构建顺序、依赖关系、配置等。
+解决方案(Solution)与项目(Project)的文件结构示意图
 
-一个solution方案相当于一个逻辑容器，可以包含多个项目，如：类库.csproj、控制台应用、WebAPI、测试项目等。
+```bash
+LearnCSharp/                # 解决方案根目录
+├── LearnCSharp.sln           # 解决方案配置文件
+└── ConsoleApp1/              # 项目1目录
+└── ConsoleApp2/              # 项目2目录  
+└── ConsoleApp3/              # 项目3目录  
+```
+
+Solution的类型：
+
+* 控制台应用程序
+* 类库项目
+* Web 项目（ASP.NET Core）
+* 测试项目（xUnit、NUnit）
+* 工具项目等
+
+## 二、解决方案配置文件(.sln)
+解决方案配置文件（`.sln` ）是IDE窗口中最顶层节点，它记录了：
+
+- 解决方案包含哪些项目
+- 项目的路径和版本
+- 构建配置
+- 项目之间的引用关系
 
 示例：一个电商系统解决方案可能包含：
 
@@ -24,30 +47,212 @@ tags: []
 - Ecommerce.Data (数据库访问层类库)
 - Ecommerce.Tests (单元测试项目)
 
-当你创建一个新的解决方案（Solution）时，Rider 确实会生成一个 .sln 文件（解决方案配置文件）。该文件是IDE窗口中最顶层节点，记录了：
+注意(针对MacOS系统上的Rider IDE)
 
-- 包含哪些项目
-- 项目的路径和版本
-- 构建配置
-- 项目之间的引用关系
+在Rider的“解决方案资源管理器”中
 
+- 默认情况下，Rider 默认使用 "Solution View"（逻辑视图），不显示 .sln 文件
+- 如果需要显示，请切换到 "File System View"（物理视图）
 
+## 三、Project是什么
+在 C# 开发中，**Project（项目）** 是代码组织的基本单元，是构建应用程序的基石。
 
+- 当创建`solution`的时候，至少会创建一个`Project`。
+- Project(项目)是一个目录。
+- Project(项目)是组织代码的基本单元。
+- 每个 Project(项目) 专注一个功能领域
+- 命名规范：`Acme.ECommerce.Web.csproj`  
+- 通常，每个Project(项目)下的命名空间应当与Project目录名称一致；
 
+**Project 的本质**
 
-但是，在 Rider 的左侧项目工具窗口（通常称为“解决方案资源管理器”或“项目视图”）中，默认情况下可能不会显示 .sln 文件
+一个 C# Project 是：
 
-## 🧠 用比喻理解：学校与班级
+1. **编译单元**：可独立编译成程序集（`.exe` 可执行文件或 `.dll` 类库）
+2. **代码容器**：包含相关功能的源代码、资源文件和配置
+3. **配置实体**：定义编译规则、依赖关系和框架目标
 
-| 概念                 | 类比 | 说明                               |
-| ------------------ | -- | -------------------------------- |
-| **Solution**（解决方案） | 学校 | 包含多个班级（项目），统一管理                  |
-| **Project**（项目）    | 班级 | 每个班级（项目）独立上课（编译、运行），但也可能互相合作（引用） |
+## 四、Project目录结构解析
+```bash
+LearnCSharp/                # 解决方案根目录
+├── LearnCSharp.sln           # 解决方案配置文件
+└── ConsoleApp1/              # 项目目录
+    ├── bin/                    # 编译输出 → 🚫 勿提交版本控制
+    ├── obj/                    # 中间文件 → 🚫 勿提交版本控制
+    ├── Program.cs              # 主程序代码 → ✅ 核心逻辑
+    ├── ConsoleApp1.csproj      # 项目配置 → ✅ 定义构建规则
+    └── appsettings.json        # 可选配置文件
+```
+
+### 1.`bin`目录
+
+**作用**
+
+构建输出目录(存放编译生成的可执行文件和运行依赖项)
+
+**内容结构**
+
+```bash
+bin/
+├── Debug/                  # 调试模式构建结果
+│   ├── net8.0/             # 针对.NET 8.0框架的输出
+│   │   ├── SolutionApp1.exe    # 可执行文件
+│   │   ├── SolutionApp1.dll    # 主程序集
+│   │   ├── SolutionApp1.pdb    # 调试符号文件
+│   │   └── appsettings.json    # 配置文件（如有）
+│   └── Debug/net7.0/       # 多目标框架时会有其他版本
+└── Release/                # 发布模式构建结果（优化后的版本）
+    └── net8.0/
+        ├── SolutionApp1.exe
+        └── ...  
+```
+
+**关键文件**
+
+- `.exe`：Windows 可执行文件（控制台应用）
+- `.dll`：程序集文件（跨平台）
+- `.pdb`：调试数据库（映射源代码与编译代码）
+
+### 2.`obj`目录
+**作用**
+
+中间编译目录（存储编译过程中生成的临时文件）
+
+**内容结构**
+
+```bash
+obj/
+├── Debug/
+│   └── net8.0/
+│       ├── SolutionApp1.AssemblyInfo.cs  # 自动生成的程序集信息
+│       ├── SolutionApp1.csproj.CoreCompileInputs.cache # 编译依赖缓存
+│       ├── SolutionApp1.dll               # 临时程序集
+│       └── ref/                           # 引用程序集
+└── Release/
+    └── ...
+```
+**核心功能**
+
+- 支持**增量编译**（仅重新编译修改过的文件）
+- 存储编译器生成的**中间代码**
+- 包含**程序集元数据**
+
+**注意**
+
+此目录可随时删除，执行 `dotnet build` 或 Rider 构建时会自动重建
 
 ---
 
+### **3. `Program.cs`:文件**
+**作用**
 
-### **3. 解决方案 vs 项目（Project）**
+主程序文件，包含**应用程序入口点**（`Main` 方法）
+
+**默认内容**
+
+```csharp linenums="1"
+// ConsoleApp1/Program.cs
+Console.WriteLine("Hello, World!"); // 默认生成的代码
+```
+
+**关键特性**：
+
+- `static void Main(string[] args)`：程序启动入口
+- 负责**控制流逻辑**（如用户输入、数据处理）
+- 在控制台应用中直接包含业务逻辑
+
+---
+
+### **4. `.csproj`文件**
+创建Project后，会自动创建一个XML格式的工程文件(.csproj)，每个 Project 对应一个 **XML 格式的工程文件**（如 `MyApp.csproj`），它定义了：
+
+- 可执行文件的类型
+- 编译使用的.net的框架版本
+- 项目引用库文件
+
+**作用**
+
+XML 格式的**项目配置文件**，定义所有构建规则。
+
+**典型的 `.csproj`文件内容**
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>         <!-- 生成可执行文件 -->
+    <TargetFramework>net8.0</TargetFramework> <!-- 目标框架 -->
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" /> <!-- NuGet 包 -->
+    <ProjectReference Include="..\MyLib\MyLib.csproj" /> <!-- 项目引用 -->
+  </ItemGroup>
+</Project>
+```
+**核心配置项**
+
+| **元素**|**作用**|**示例值**|
+|-------|------------------|-------------|
+|`<OutputType>`|输出类型|`Exe`（控制台应用）|
+|`<TargetFramework>`|目标.NET版本|`net8.0`,`net7.0`|
+|`<ImplicitUsings>`|自动添加常用命名空间|`enable`（简化代码）|
+|`<PackageReference>`|NuGet包依赖|`<Include="Newtonsoft.Json">`|
+|`<ProjectReference>`|引用其他项目| `<Include="../Lib.csproj">` |
+
+---
+## **五、各组件协作流程**
+
+1. **编码**：在 `Program.cs` 编写代码
+2. **构建**：
+      - Rider 读取 `.csproj` 配置
+      - 编译器使用 `obj/` 存储中间文件
+      - 最终输出到 `bin/`
+3. **运行**：
+      - 执行 `bin/Debug/net8.0/ConsoleApp1.exe`
+      - CLR 加载程序集并执行 `Main()` 方法
+---
+
+## **六、Project 的主要类型**
+1. **可执行项目**：
+      - 生成 `.exe` 文件
+      - 包含程序入口点（`Main()` 方法）
+      - 类型：控制台应用、WPF、WinForms、ASP.NET Core
+
+2. **类库项目**：
+      - 生成 `.dll` 文件
+      - 提供可复用的功能模块
+      - 示例：数据访问层、工具库
+
+3. **测试项目**：
+      - 使用测试框架（xUnit/NUnit/MSTest）
+      - 引用被测试项目
+      - 命名约定：`MyApp.Tests`
+
+---
+
+## **七、Project 与 Solution 的关系**
+```mermaid
+graph LR
+    A[Solution.sln] --> B[Web Project.csproj]
+    A --> C[Class Library.csproj]
+    A --> D[Test Project.csproj]
+    C --> E[NuGet Packages]
+    B --> C  <!-- 项目引用 -->
+```
+
+- **Solution** 是容器：协调多个 Projects 的构建
+- **Project** 是执行单元：每个 Project 独立编译
+- **依赖关系**：Project 可引用其他 Projects 或 NuGet 包
+
+用比喻理解：学校与班级
+
+| 概念                 | 类比 | 说明                               |
+| ------------------ | -- | -------------------------------- |
+| **Solution**（解决方案） | 学校 | 包含多个班级（项目），统一管理  |
+| **Project**（项目）    | 班级 | 每个班级（项目）独立上课（编译、运行），但也可能互相合作（引用） |
+
+**解决方案 vs 项目（Project）**
+
 | **解决方案 (Solution)**         | **项目 (Project)**                     |
 |-------------------------------|---------------------------------------|
 | 逻辑容器，用于**组织多个项目**     | 代码编译的**基本单元**（生成 DLL 或 EXE） |
@@ -55,74 +260,6 @@ tags: []
 | 管理项目间的**依赖和构建顺序**    | 包含源代码、资源文件、NuGet 包引用等     |
 | **不直接生成可执行文件**         | **直接编译生成程序集**（如 DLL/EXE）     |
 
----
-
-
-### 🧰 功能：
-
-* 打开/关闭整个项目组。
-* 一次构建所有项目。
-* 定义项目之间的依赖关系。
-
----
-
-## 📦 二、什么是 Project？
-
-### ✅ 定义：
-
-* 每个 `.csproj` 文件就是一个 **项目（Project）**。
-* 是编译的最小单元（比如生成一个 `.exe` 或 `.dll`）。
-* 包含代码、资源、引用、依赖项等。
-
-### 🧰 类型：
-
-* 控制台应用程序
-* 类库项目
-* Web 项目（ASP.NET Core）
-* 测试项目（xUnit、NUnit）
-* 工具项目等
-
----
-
-## 🔗 三、Solution 与 Projects 的关系图示
-
-```
-MySolution.sln  ← Solution 文件
-│
-├── MyApp.csproj          ← 主应用程序项目（可运行）
-│
-├── MyApp.Models.csproj   ← 模型项目（类库）
-│
-└── MyApp.Tests.csproj    ← 单元测试项目
-```
-
-在 Rider 中，它们会被展示在 **Solution Explorer**（解决方案资源管理器）中，层次清晰。
-
----
-
-## 🔄 四、项目之间可以引用
-
-例如：
-
-* `MyApp.csproj` 可以引用 `MyApp.Models.csproj`。
-* `MyApp.Tests.csproj` 可以同时引用 `MyApp` 和 `MyApp.Models`，用于测试。
-
-这就像数学班的学生可以去物理班借书一样，只要允许“访问”。
-
----
-
-## ✅ 五、Rider 中使用技巧
-
-| 操作     | 说明                                       |
-| ------ | ---------------------------------------- |
-| 创建新项目  | 右键 Solution → Add → New Project          |
-| 添加已有项目 | 右键 Solution → Add → Add Existing Project |
-| 设置启动项目 | 右键 Project → Set as Startup Project      |
-| 构建解决方案 | 快捷键 `Ctrl + Shift + B`                   |
-
----
-
-## 📌 小结
 
 | 项目结构元素   | 对应文件      | 含义                 |
 | -------- | --------- | ------------------ |
@@ -131,366 +268,6 @@ MySolution.sln  ← Solution 文件
 
 ---
 
-太好了！我来为你整理一个**标准的多项目 Solution 示例结构**，并教你如何在 JetBrains Rider 中**添加类库项目并建立引用**。这对你构建**模块化、可维护的 C# 项目架构**非常重要。
 
----
 
-## 🏗️ 一、标准多项目 Solution 示例结构
 
-我们以一个项目叫做 `MyApp` 为例，它包含：
-
-* 一个控制台主程序项目
-* 一个类库项目（业务逻辑或数据模型）
-* 一个单元测试项目
-
-### 📁 文件结构：
-
-```
-MyAppSolution/                  ← 解决方案根目录（MyAppSolution.sln）
-│
-├── MyApp/                      ← 控制台应用项目
-│   ├── Program.cs
-│   └── MyApp.csproj
-│
-├── MyApp.Core/                 ← 类库项目（业务逻辑/模型）
-│   ├── User.cs
-│   └── MyApp.Core.csproj
-│
-├── MyApp.Tests/                ← 测试项目
-│   ├── UserTests.cs
-│   └── MyApp.Tests.csproj
-│
-└── MyAppSolution.sln           ← 解决方案文件
-```
-
----
-
-## 🔧 二、在 JetBrains Rider 中创建这个结构
-
-### 步骤 1：创建解决方案
-
-1. 打开 Rider，选择 **New Solution**
-2. 选择 **Console Application (.NET Core / .NET 6/7/8)**
-3. 项目名称输入：`MyApp`
-4. 创建后，Rider 会生成一个包含 `MyApp.csproj` 的解决方案。
-
-### 步骤 2：添加类库项目
-
-1. 右键解决方案 → `Add` → `New Project`
-2. 选择 **Class Library (.NET)**，命名为：`MyApp.Core`
-3. 创建成功后，在 Solution 中你会看到新项目出现。
-
-### 步骤 3：添加测试项目（可选）
-
-1. 同上，选择：**xUnit Test Project**
-2. 命名为：`MyApp.Tests`
-3. 勾选目标框架和测试框架后完成创建。
-
----
-
-## 🔗 三、建立项目之间的引用关系
-
-1. 右键 `MyApp` 项目 → `Add` → `Project Reference`
-
-2. 勾选：`MyApp.Core`，点击 OK
-   ✅ 表示主程序可以使用类库中的类
-
-3. 同理，右键 `MyApp.Tests`，添加对 `MyApp` 和 `MyApp.Core` 的引用，以便测试它们的功能。
-
----
-
-## ✅ 四、使用类库中的类（示例）
-
-```csharp
-// 文件：MyApp.Core/User.cs
-namespace MyApp.Core;
-
-public class User
-{
-    public string Name { get; set; }
-}
-```
-
-```csharp
-// 文件：MyApp/Program.cs
-using MyApp.Core;
-
-class Program
-{
-    static void Main()
-    {
-        var user = new User { Name = "张三" };
-        Console.WriteLine($"用户姓名：{user.Name}");
-    }
-}
-```
-
----
-
-## 📌 五、命名空间建议
-
-* 每个项目使用独立命名空间，推荐结构如下：
-
-| 项目          | 命名空间前缀        |
-| ----------- | ------------- |
-| MyApp       | `MyApp`       |
-| MyApp.Core  | `MyApp.Core`  |
-| MyApp.Tests | `MyApp.Tests` |
-
----
-
-## 🧪 六、运行与调试
-
-* 在 Rider 中，**右键 `MyApp` 项目 → Set as Startup Project**
-* 点击绿色三角形 ▶️ 启动主程序
-
----
-
-## 📂 七、最终效果（Rider 界面结构）
-
-```
-📦 Solution: MyAppSolution
-├── 📄 MyApp.csproj (Startup Project)
-│   └── Program.cs
-├── 📄 MyApp.Core.csproj
-│   └── User.cs
-└── 📄 MyApp.Tests.csproj
-    └── UserTests.cs
-```
-
----
-好的！以下是一个完整的 **多项目 C# 解决方案模板**，包括：
-
-1. `.sln` 文件结构说明
-2. 每个项目的 `.csproj` 文件内容
-3. 示例代码：类库、主程序、单元测试
-4. ✅ 你可以复制这些内容直接在本地 Rider 中还原项目结构
-
----
-
-## 🗂️ 目录结构（推荐）
-
-```
-MyAppSolution/
-├── MyAppSolution.sln             ← 解决方案文件
-├── MyApp/                        ← 控制台项目
-│   ├── MyApp.csproj
-│   └── Program.cs
-├── MyApp.Core/                   ← 类库项目
-│   ├── MyApp.Core.csproj
-│   └── User.cs
-└── MyApp.Tests/                  ← 单元测试项目
-    ├── MyApp.Tests.csproj
-    └── UserTests.cs
-```
-
----
-
-## 1️⃣ MyApp.csproj（控制台项目）
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MyApp.Core\MyApp.Core.csproj" />
-  </ItemGroup>
-
-</Project>
-```
-
----
-
-## 2️⃣ MyApp.Core.csproj（类库项目）
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-</Project>
-```
-
----
-
-## 3️⃣ MyApp.Tests.csproj（测试项目）
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="xunit" Version="2.5.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MyApp\MyApp.csproj" />
-    <ProjectReference Include="..\MyApp.Core\MyApp.Core.csproj" />
-  </ItemGroup>
-
-</Project>
-```
-
----
-
-## ✅ 示例代码
-
-### 📄 MyApp/Program.cs
-
-```csharp
-using MyApp.Core;
-
-Console.WriteLine("控制台主程序启动...");
-var user = new User { Name = "张三" };
-Console.WriteLine($"用户名称：{user.Name}");
-```
-
----
-
-### 📄 MyApp.Core/User.cs
-
-```csharp
-namespace MyApp.Core;
-
-public class User
-{
-    public string Name { get; set; } = string.Empty;
-}
-```
-
----
-
-### 📄 MyApp.Tests/UserTests.cs
-
-```csharp
-using MyApp.Core;
-using Xunit;
-
-namespace MyApp.Tests;
-
-public class UserTests
-{
-    [Fact]
-    public void User_Name_ShouldBeSetCorrectly()
-    {
-        var user = new User { Name = "李四" };
-        Assert.Equal("李四", user.Name);
-    }
-}
-```
-
----
-
-## 🧰 最后一步：创建 `.sln` 文件
-
-在命令行中进入 `MyAppSolution/` 目录：
-
-```bash
-dotnet new sln -n MyAppSolution
-dotnet sln add MyApp/MyApp.csproj
-dotnet sln add MyApp.Core/MyApp.Core.csproj
-dotnet sln add MyApp.Tests/MyApp.Tests.csproj
-```
-
-然后在 Rider 中打开 `MyAppSolution.sln`，设置 `MyApp` 为启动项目即可。
-
----
-
-✅ 已为你生成完整的多项目 C# 解决方案模板。
-
-你可以点击下面链接下载 `.zip` 文件并在 JetBrains Rider 中打开使用：
-
-👉 [点击下载 MyAppSolution.zip](sandbox:/mnt/data/MyAppSolution.zip)
-
-解压后，你将看到：
-
-* 控制台项目 `MyApp`
-* 类库项目 `MyApp.Core`
-* 测试项目 `MyApp.Tests`
-* 已配置好的 `.sln` 和项目引用
-
-
-
-
-在 JetBrains Rider（以及微软的 Visual Studio）中，**解决方案（Solution）** 是一个核心的组织概念，用于管理和协调多个相关项目（Projects）的开发工作。你可以将它理解为一个**逻辑容器**或**工作区**。
-
-以下是关于解决方案（Solution）的关键点：
-
----
-
-### **1. 解决方案的核心作用**
-* **多项目管理**：  
-  一个解决方案可以包含**多个项目**（如类库 `.csproj`、控制台应用、Web API、测试项目等）。  
-  *例如*：一个电商系统解决方案可能包含：  
-  * `Ecommerce.Web` (ASP.NET Core MVC 项目)  
-  * `Ecommerce.Services` (业务逻辑类库)  
-  * `Ecommerce.Data` (数据库访问层类库)  
-  * `Ecommerce.Tests` (单元测试项目)
-
-* **统一构建与依赖管理**：  
-  在解决方案级别执行**构建（Build）** 或**调试（Debug）** 时，Rider 会自动处理项目间的编译顺序和依赖关系。
-
-* **统一配置**：  
-  解决方案配置文件（`.sln`）记录了：  
-  * 包含哪些项目  
-  * 项目的路径和版本  
-  * 构建配置（如 Debug/Release）  
-  * 项目之间的引用关系  
-
----
-
-### **2. 解决方案在 Rider 中的体现**
-* **物理文件**：  
-  解决方案对应一个 **`.sln` 文件**（如 `MyApp.sln`）。该文件是文本文件，描述了解决方案的结构。
-
-* **IDE 视图**：  
-  在 Rider 左侧的 **Solution Tool Window** 中：  
-  * 最顶层节点是解决方案（默认显示解决方案名称）  
-  * 下方列出所有包含的项目（Projects）  
-  * 每个项目展开后显示其代码文件、引用、依赖项等  
-  ![Rider Solution 视图示例](https://resources.jetbrains.com/help/rider/2023.3/solution_tool_window.png)
-
----
-
-
-
-### **4. 为什么需要解决方案？**
-* **模块化开发**：将大型系统拆分为多个独立项目（如分层架构），便于团队协作和代码复用。  
-* **集中调试**：启动调试时，可自动运行多个关联项目（如同时启动 Web API 和前端项目）。  
-* **统一版本控制**：将整个解决方案（含所有项目）纳入 Git 仓库，确保一致性。  
-* **高效构建**：只需构建解决方案一次，即可按依赖顺序编译所有项目。
-
----
-
-### **5. Rider 中的操作场景**
-* **创建新解决方案**：  
-  `File → New → Solution` → 选择模板（如 `.NET Console App`）→ Rider 会自动生成 `.sln` 和第一个 `.csproj`。
-
-* **添加项目到解决方案**：  
-  右键解决方案 → `Add → New Project` 或 `Add → Existing Project`。
-
-* **设置启动项目**：  
-  右键需启动的项目 → `Set as Startup Project`（调试时默认运行该项目）。
-
----
-
-### **总结**
-> ✅ **解决方案（Solution）** 是 JetBrains Rider 中管理复杂应用的**核心工作单元**，它通过 `.sln` 文件记录项目结构和依赖关系。  
-> ✅ 你在 Rider 左侧看到的最顶层节点就是解决方案，它隐藏了物理文件的复杂性，提供了逻辑视图。  
-> ✅ 若需操作 `.sln` 文件本身，请切换到 **File System View**（如[上一篇回答](message://)所述）。

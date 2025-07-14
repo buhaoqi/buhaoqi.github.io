@@ -8,7 +8,6 @@ tags: []
 
 ## 一、类是什么？
 
-
 - 类是一种引用类型(数据结构、数据存储方式、数据操作方式)。
 - 类是一种用户定义的数据类型。（由开发者根据需求创建的自定义类型。）
 - 类用来组织数据和功能。
@@ -24,18 +23,44 @@ tags: []
     - **多态性**：允许不同对象对相同消息做出不同响应
 - 提供对象的**初始化机制**（构造函数）
 
-## 三、声明类的语法
-基本语法
+## 三、类的语法结构
+在 C# 中，一个完整的类可以包含：
+
+| 元素                | 用途         |
+| ----------------- | ---------- |
+| 字段（Field）         | 定义数据,字段命名：帕斯卡|
+| 属性（Property）      | 封装字段的读写    |
+| 方法（Method）        | 基于字段进行操作，提供类的功能行为   |
+| 构造函数（Constructor） | 创建对象时用于初始化字段，构造函数不是方法的替代，而是对象“出生”时的专用启动代码 |
+| 析构函数（Destructor）  | 对象销毁前自动调用  |
+| 事件、索引器等（进阶）       | 特定情境下使用    |
+| 参数       | 命名小写，驼峰式  |
+
+基本的模板语法
 
 ```csharp
-[访问修饰符] class 类名 [：基类] [，接口列表]
+// 定义类
+[访问修饰符] class 类名
 {
-    // 类成员（字段、属性、方法、事件等）
+    // 字段
+    [访问修饰符] 数据类型 字段名;
+
+    // 构造函数（可重载）
+    public 类名(参数列表)
+    {
+        // 初始化字段
+    }
+
+    // 方法
+    [访问修饰符] 返回类型 方法名(参数列表)
+    {
+        // 执行功能逻辑
+    }
 }
 ```
 说明
 
-1. **[访问修饰符]**：控制类的可见性
+1. **[访问修饰符]**：控制类、字段、构造函数、方法的可见性
       - `public`：无访问限制。如果省略public，C#编译器会根据类的声明位置应用默认规则`internal`或`private`。
       - `internal`：同一程序集内可访问（默认）
       - `abstract`：抽象类，不能实例化
@@ -45,6 +70,254 @@ tags: []
 3. **类名**：遵循 PascalCase 命名规范（首字母大写）
 4. **[基类]**：通过 `:` 指定继承的父类（可选）
 5. **[接口列表]**：通过 `,` 分隔实现的接口（可选）
+
+## 四、典型创建类的方式
+
+### 示例1：不包含任何成员的类
+
+```csharp
+public class EmptyClass
+{
+}
+```
+
+📌 **特点**：
+
+* 没有字段、属性、方法、构造函数；
+* 系统自动提供一个默认构造函数；
+* 可以 `new EmptyClass()` 创建对象。
+
+---
+### 示例2：只有字段的类
+
+```csharp
+public class OnlyFields
+{
+    public string name;
+    private int age;
+}
+```
+
+📌 **特点**：
+
+* 没有构造函数；
+* 系统自动提供一个无参构造函数；
+* 字段只能手动赋值或初始化。
+
+---
+
+### 示例3: 只包含构造函数的类
+
+```csharp
+public class OnlyConstructor
+{
+    public OnlyConstructor()
+    {
+        Console.WriteLine("对象已创建");
+    }
+}
+```
+
+📌 **特点**：
+
+* 没有字段；
+* 构造函数仅用于提示创建对象；
+* 实际上不存储任何数据。
+
+---
+
+### 示例4:包含字段+无参构造函数
+
+```csharp
+public class Student
+{
+    public string Name;
+    public int Age;
+
+    public Student()
+    {
+        Name = "未命名";
+        Age = 0;
+    }
+}
+```
+
+📌 **特点**：
+
+* 构造函数初始化字段；
+* 可以直接通过 `new Student()` 创建对象并自动设置默认值。
+
+---
+
+### 示例5：包含字段+有参构造函数
+
+```csharp
+public class Person
+{
+    public string Name;
+    public int Age;
+
+    public Person(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+}
+```
+
+📌 **特点**：
+
+* 没有默认构造函数；
+* 必须传参才能创建对象。
+
+```csharp
+Person p = new Person("Tom", 20); // ✅
+Person p2 = new Person();         // ❌ 编译错误
+```
+
+---
+
+### ✅ 示例 6：包含字段 + 属性 + 构造函数
+
+```csharp
+public class Car
+{
+    private string _brand;
+
+    // 属性：封装字段
+    public string Brand
+    {
+        get { return _brand; }
+        set { _brand = value; }
+    }
+
+    public Car(string brand)
+    {
+        _brand = brand;
+    }
+}
+```
+
+📌 **特点**：
+
+* 使用属性代替字段的直接访问；
+* 构造函数初始化字段；
+* 推荐封装方式。
+
+---
+
+### ✅ 示例 7：只包含属性的类（自动属性）
+
+```csharp
+public class Book
+{
+    public string Title { get; set; }
+    public double Price { get; set; }
+}
+```
+
+📌 **特点**：
+
+* 使用**自动属性**；
+* 系统自动生成隐藏字段；
+* 可以直接用 `new Book()` + 对象初始化器赋值：
+
+```csharp
+Book b = new Book { Title = "C#入门", Price = 39.9 };
+```
+
+---
+
+### ✅ 示例 8：包含静态字段 + 静态构造函数
+
+```csharp
+public class Config
+{
+    public static string AppName;
+
+    static Config()
+    {
+        AppName = "MyApp";
+        Console.WriteLine("配置已加载");
+    }
+}
+```
+
+📌 **特点**：
+
+* 静态构造函数只在第一次使用类时执行一次；
+* 用于初始化静态数据。
+
+---
+
+## 四、包含所有基本成员的类
+
+```csharp
+public class Person
+{
+    // 字段：用于存储数据
+    public string name;
+    private int age;
+
+    // 构造函数：初始化对象
+    public Person(string n, int a)
+    {
+        name = n;
+        age = a;
+    }
+
+    // 方法：对象的功能行为
+    public void SayHello()
+    {
+        Console.WriteLine($"你好，我叫 {name}，我 {age} 岁。");
+    }
+}
+```
+
+
+## 四、示例：创建类
+
+```c# linenums="1"
+using System;
+
+namespace ConsoleApp1
+{
+    class DefaultClass
+    {
+        public void Show()
+        {
+            Console.WriteLine("internal");
+        }
+    }
+
+    public class PublicClass
+    {
+        public void Show()
+        {
+            Console.WriteLine("public");
+        }
+    }
+
+    // 添加程序入口点
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== 使用 PublicClass ===");
+            var publicInstance = new PublicClass();
+            publicInstance.Show();
+            
+            Console.WriteLine("\n=== 使用 DefaultClass ===");
+            var defaultInstance = new DefaultClass();
+            defaultInstance.Show();
+            
+            Console.WriteLine("\n按任意键退出...");
+            Console.ReadKey();
+        }
+    }
+}
+```
+
 
 ## 三、声明类示例
 
