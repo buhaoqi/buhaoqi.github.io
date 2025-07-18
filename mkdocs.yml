@@ -316,13 +316,15 @@ nav:
   - Windows操作系统:
     - 考试大纲: windows10/index.md
     - 操作系统基础: windows10/01.md
-    - Windows 10基础: windows10/02.md
-    - Windows 10的文件管理: windows10/03.md
-    - Windows 10的控制面板: windows10/04.md
-    - Windows 10的任务管理器: windows10/05.md
-    - Windows 10的实用工具: windows10/06.md
-    - Windows 10的磁盘管理: windows10/07.md
-    - 中文输入: windows10/08.md
+    - Windows10基础: windows10/02.md
+    - Windows10个性化设置: windows10/03.md
+    - Windows10文件和文件夹管理: windows10/04.md
+    - Windows10控制面板: windows10/05.md
+    - Windows10任务管理器: windows10/06.md
+    - Windows10实用工具: windows10/07.md
+    - Windows10磁盘管理: windows10/08.md
+    - Windows10中文输入: windows10/09.md
+    - Windows10练习题: windows10/10.md
   - 暑期作业:
     - 6月21日:For循环笔记: exercises/csharp/0621.md
     - 6月22日:For循环练习: exercises/csharp/0622.md
@@ -350,6 +352,12 @@ nav:
     - 7月17日:计算机基础知识3: exercises/csharp/0717.md
     - 7月18日:操作系统概述: exercises/csharp/0718.md
     - 7月19日:Win10基础: exercises/csharp/0719.md
+    - 7月20日:个性化设置: exercises/csharp/0720.md
+    - 7月21日:文件和文件夹管理: exercises/csharp/0721.md
+    - 7月22日控制面板: exercises/csharp/0722.md
+    - 7月23日任务管理器实用工具: exercises/csharp/0723.md
+    - 7月24日磁盘管理中文输入: exercises/csharp/0724.md
+    - 7月25日练习题: exercises/csharp/0725.md
   - C#练习题:
     - 首页: csharp-exercises/index.md
     - 起步:
