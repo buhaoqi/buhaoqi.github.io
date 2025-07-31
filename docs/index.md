@@ -1,20 +1,24 @@
+# AI工具导航
 
-# 河北省中职对口升学考试计算机类专业考试大纲
+- Microsoft Copilot: [https://copilot.microsoft.com/](https://copilot.microsoft.com/)
+- GitHub Copilot: [https://github.com/features/copilot](https://github.com/features/copilot)
+- Google Gemini: [https://gemini.google.com](https://gemini.google.com)
+- claude.ai:[https://claude.ai](https://claude.ai)
+---
 
-
-
+# 河北省中职对口升学考试计算机类专业考试简介
 ## 一、考试范围
 
 考试范围以教育部中等职业学校专业教学标准为依据，以中等职业学校本专业类国家规划教材为主要参考教材，包括计算机类专业开设的：
 
-- 计算机基础知识
-- 中文Windows操作系统
-- 中文Word 字处理软件
-- 中文Excel电子表格软件
-- 中文PowerPoint演示文稿软件
-- 数据库原理与应用技术
-- 算法与程序设计
-- 计算机网络基础
+1. 计算机基础知识
+2. 中文Windows操作系统
+3. 中文Word 字处理软件
+4. 中文Excel电子表格软件
+5. 中文PowerPoint演示文稿软件
+6. 数据库原理与应用技术
+7. 算法与程序设计
+8. 计算机网络基础
 
 等八门专业核心课程，主要测试计算机类专业考生基础知识、基本技能的掌握程度，综合运用知识、理论和方法解决实际问题的能力。
 
