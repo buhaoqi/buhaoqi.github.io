@@ -75,26 +75,28 @@ nav:
     - 首页: csharp-tutorial/index.md
     - VS快捷键: csharp-tutorial/vs-shortcuts.md
     - 新人起步:
-      - 01-安装Visual Studio: csharp-tutorial/01-get-started/01.md
-      - 02-创建解决方案: csharp-tutorial/01-get-started/02.md
-      - 03-手写Hello World: csharp-tutorial/01-get-started/03.md
-      - 04-数据类型入门: csharp-tutorial/01-get-started/04.md
-      - 05-算数运算符: csharp-tutorial/02-operators/01-arithmetic-operators.md
-      - 06-字面量变量与常量: csharp-tutorial/01-get-started/05.md
-      - 07-变量的命名规范: csharp-tutorial/01-get-started/06-naming-conventions-for-variables.md
-      - 08-数据的输入与输出: csharp-tutorial/01-get-started/07-output-input.md
-      - 09-字符类型与字符集: csharp-tutorial/04-data-types/04-char-and-charset.md
-      - 10-整数类型: csharp-tutorial/04-data-types/01-integer.md
-      - 11-浮点数类型: csharp-tutorial/04-data-types/02-floating-point.md
-      - 12-布尔类型: csharp-tutorial/04-data-types/03-boolean.md
-      - 13-数据类型转换: csharp-tutorial/04-data-types/00-type-conversion.md
+      - 1-安装Visual Studio: csharp-tutorial/01-get-started/01-installation.md
+      - 2-创建第一个程序: csharp-tutorial/01-get-started/02-create-first-project.md
+      - 3-手写Hello World: csharp-tutorial/01-get-started/03-hello-world.md
+      - 4-数据类型入门: csharp-tutorial/01-get-started/04-data-type-basics.md
+      - 5-字面量变量与常量: csharp-tutorial/01-get-started/05-literal-variable-const.md
+      - 6-变量的命名规范: csharp-tutorial/01-get-started/06-naming-conventions-for-variables.md
+      - 7-数据的输入与输出: csharp-tutorial/01-get-started/07-output-input.md
+    - 控制语句(渐入佳境):
+      - 8-if条件语句: csharp-tutorial/03-statements/01-conditional-statements.md
     - 运算符:
+      - 05-算数运算符: csharp-tutorial/02-operators/01-arithmetic-operators.md
       - 14-比较运算符: csharp-tutorial/02-operators/02-comparison-operators.md
-      - 15-if条件语句: csharp-tutorial/03-statements/01-conditional-statements.md
       - 16-逻辑运算符: csharp-tutorial/02-operators/03-logical-operators.md
       - 17-赋值运算符: csharp-tutorial/02-operators/04-assignment-operators.md
       - 18-自增自减运算符: csharp-tutorial/02-operators/05-auto-increment-decrement-operators.md
       - 19-三目运算符: csharp-tutorial/02-operators/06-ternary-operators.md
+    - 待定:
+      - 8-字符类型与字符集: csharp-tutorial/04-data-types/04-char-and-charset.md
+      - 9-整数类型: csharp-tutorial/04-data-types/01-integer.md
+      - 10-浮点数类型: csharp-tutorial/04-data-types/02-floating-point.md
+      - 11-布尔类型: csharp-tutorial/04-data-types/03-boolean.md
+      - 12-数据类型转换: csharp-tutorial/04-data-types/00-type-conversion.md
     - 控制语句:
       - 20-switch条件语句: csharp-tutorial/03-statements/02-switch-statement.md
       - 21-for循环语句: csharp-tutorial/03-statements/03-for-loop-statement.md

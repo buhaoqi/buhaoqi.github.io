@@ -89,7 +89,7 @@ namespace WinFormsApp1
     // static: 表示该类不可实例化，只包含静态成员
     internal static class Program
     {
-        // STAThread 特性标记
+        // STAThread：Single-Threaded Apartment Thread 
         // 表示该线程使用单线程单元模型
         // WinForms 应用程序必需此特性，确保与COM组件的正确交互
         [STAThread]
@@ -98,7 +98,7 @@ namespace WinFormsApp1
         // static: 表示方法属于类而非实例
         // void: 表示方法无返回值
         // Main: 应用程序入口点（.NET约定）
-        static void Main()
+        static void Main(string[] args)
         {
             // 初始化应用程序配置
             // 在.NET 5/6+中替代以下传统代码：
@@ -159,30 +159,8 @@ Application.Run(new Form1());
 | `Form1.resx` | 窗体特定资源文件 |
 
 ### **Form1.cs**：
+
 ```csharp
-public partial class Form1 : Form
-{
-    public Form1()
-    {
-        InitializeComponent(); // 调用设计器生成的代码
-    }
-    
-    private void button1_Click(object sender, EventArgs e)
-    {
-        // 自定义逻辑
-    }
-}
-```
-
-- object sender：`sender`:提供对引发事件的对象的引用
-- System.EventArgs e：`e`:传递一个特定于正在处理的事件的对象。
-
-- 主窗体文件（包含 <Form1>.cs 和 Form1.Designer.cs）
-- 用户编写的业务逻辑代码（如事件处理方法）。  
-
-文件代码
-
-```c#
 namespace WinFormsApp1
 {
     //定义一个公共子类Form1：继承System.Windows.Froms.Form
@@ -198,19 +176,56 @@ namespace WinFormsApp1
 }
 ```
 
+- object sender：`sender`:提供对引发事件的对象的引用
+- System.EventArgs e：`e`:传递一个特定于正在处理的事件的对象。
+
+- 主窗体文件（包含 <Form1>.cs 和 Form1.Designer.cs）
+- 用户编写的业务逻辑代码（如事件处理方法）。  
+
+
+
 ### **Form1.Designer.cs**：
 ```csharp
-partial class Form1
+namespace WinFormsApp1
 {
-    private Button button1;
-    
-    private void InitializeComponent()
+    partial class Form1
     {
-        this.button1 = new Button();
-        this.button1.Text = "Click Me";
-        this.Controls.Add(this.button1);
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form1";
+        }
+
+        #endregion
     }
 }
+
 ```
 
 **关键特点**：
