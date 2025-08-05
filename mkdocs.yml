@@ -77,15 +77,16 @@ nav:
     - 新人起步:
       - 1.安装Visual Studio: csharp-tutorial/01-get-started/01-installation.md
       - 2.创建第一个程序: csharp-tutorial/01-get-started/02-create-first-project.md
-      - 3.手写Hello World: csharp-tutorial/01-get-started/03-hello-world.md
-      - 4.数据类型入门: csharp-tutorial/01-get-started/04-data-type-basics.md
-      - 5.字面量变量与常量: csharp-tutorial/01-get-started/05-literal-variable-const.md
-      - 6.变量的命名规范: csharp-tutorial/01-get-started/06-naming-conventions-for-variables.md
-      - 7.整数类型: csharp-tutorial/01-get-started/07-integer-type.md
-      - 8.浮点数类型: csharp-tutorial/01-get-started/08-floating-point-type.md
-      - 9.字符类型: csharp-tutorial/01-get-started/09-text-type.md
-      - 10.字符串转数值: csharp-tutorial/01-get-started/10-string-to-number.md
-      - 11.数据的输入与输出: csharp-tutorial/01-get-started/11-output-input.md
+      - 3.类与对象: csharp-tutorial/01-get-started/03-class-object.md
+      - 4.手写Hello World: csharp-tutorial/01-get-started/04-hello-world.md
+      - 5.数据类型入门: csharp-tutorial/01-get-started/05-data-type-basics.md
+      - 6.字面量变量与常量: csharp-tutorial/01-get-started/06-literal-variable-const.md
+      - 7.变量的命名规范: csharp-tutorial/01-get-started/07-naming-conventions-for-variables.md
+      - 8.整数类型: csharp-tutorial/01-get-started/08-integer-type.md
+      - 9.浮点数类型: csharp-tutorial/01-get-started/09-floating-point-type.md
+      - 10.字符类型: csharp-tutorial/01-get-started/10-text-type.md
+      - 11.字符串转数值: csharp-tutorial/01-get-started/11-string-to-number.md
+      - 12.数据的输入与输出: csharp-tutorial/01-get-started/12-output-input.md
     - 控制语句(渐入佳境):
       - 8-if条件语句: csharp-tutorial/03-statements/01-conditional-statements.md
       - 9-switch条件语句: csharp-tutorial/03-statements/02-switch-statement.md
