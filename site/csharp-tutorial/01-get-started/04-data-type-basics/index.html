@@ -12,13 +12,13 @@
         <meta name="author" content="村长">
       
       
-        <link rel="canonical" href="https://buhaoqi.github.io/csharp-tutorial/01-get-started/05/">
+        <link rel="canonical" href="https://buhaoqi.github.io/csharp-tutorial/01-get-started/04-data-type-basics/">
       
       
-        <link rel="prev" href="../../02-operators/01-arithmetic-operators/">
+        <link rel="prev" href="../03-hello-world/">
       
       
-        <link rel="next" href="../06-naming-conventions-for-variables/">
+        <link rel="next" href="../05-literal-variable-const/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>06-字面量变量与常量 - 高二九班(对口计算机)</title>
+        <title>4-数据类型入门 - 高二九班(对口计算机)</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              06-字面量变量与常量
+              4-数据类型入门
             
           </span>
         </div>
@@ -683,12 +683,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../01/" class="md-nav__link">
+      <a href="../01-installation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    01-安装Visual Studio
+    1-安装Visual Studio
     
   </span>
   
@@ -706,12 +706,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../02/" class="md-nav__link">
+      <a href="../02-create-first-project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    02-创建解决方案
+    2-创建第一个程序
     
   </span>
   
@@ -729,58 +729,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../03/" class="md-nav__link">
+      <a href="../03-hello-world/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    03-手写Hello World
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    04-数据类型入门
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../02-operators/01-arithmetic-operators/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    05-算数运算符
+    3-手写Hello World
     
   </span>
   
@@ -810,7 +764,7 @@
   
   
   <span class="md-ellipsis">
-    06-字面量变量与常量
+    4-数据类型入门
     
   </span>
   
@@ -823,7 +777,7 @@
   
   
   <span class="md-ellipsis">
-    06-字面量变量与常量
+    4-数据类型入门
     
   </span>
   
@@ -855,7 +809,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      量是什么
+      数值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串（string）
     </span>
   </a>
   
@@ -864,7 +827,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      字面量是什么
+      字符类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      布尔（bool）
     </span>
   </a>
   
@@ -873,7 +845,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      变量是什么
+      总结
     </span>
   </a>
   
@@ -882,60 +854,6 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      声明一个变量
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明多个变量
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      先声明变量，再赋值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      变量的命名规则
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      常量
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ 总结
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
       结束语
     </span>
   </a>
@@ -943,7 +861,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       练习
     </span>
@@ -953,27 +871,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      选择题
+      1.判断题
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#2oh-my-ish" class="md-nav__link">
     <span class="md-ellipsis">
-      简答题
+      2.oh my ish
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#3bu-hao-qi" class="md-nav__link">
     <span class="md-ellipsis">
-      实战题（代码练习题）
+      3.bu hao qi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Cat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5kid" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.kid
     </span>
   </a>
   
@@ -1000,12 +936,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../05-literal-variable-const/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5-字面量变量与常量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../06-naming-conventions-for-variables/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    07-变量的命名规范
+    6-变量的命名规范
     
   </span>
   
@@ -1028,122 +987,7 @@
   
   
   <span class="md-ellipsis">
-    08-数据的输入与输出
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-data-types/04-char-and-charset/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    09-字符类型与字符集
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-data-types/01-integer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    10-整数类型
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-data-types/02-floating-point.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    11-浮点数类型
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-data-types/03-boolean/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    12-布尔类型
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../04-data-types/00-type-conversion/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    13-数据类型转换
+    7-数据的输入与输出
     
   </span>
   
@@ -1197,7 +1041,7 @@
   
   
   <span class="md-ellipsis">
-    运算符
+    控制语句(渐入佳境)
     
   </span>
   
@@ -1207,6 +1051,87 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            控制语句(渐入佳境)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-statements/01-conditional-statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8-if条件语句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    运算符
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             运算符
           </label>
@@ -1219,12 +1144,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-operators/02-comparison-operators/" class="md-nav__link">
+      <a href="../../02-operators/01-arithmetic-operators/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    14-比较运算符
+    05-算数运算符
     
   </span>
   
@@ -1242,12 +1167,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-statements/01-conditional-statements/" class="md-nav__link">
+      <a href="../../02-operators/02-comparison-operators/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    15-if条件语句
+    14-比较运算符
     
   </span>
   
@@ -1385,10 +1310,183 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    待定
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            待定
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-data-types/04-char-and-charset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8-字符类型与字符集
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-data-types/01-integer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9-整数类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-data-types/02-floating-point.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10-浮点数类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-data-types/03-boolean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11-布尔类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-data-types/00-type-conversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12-数据类型转换
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
             
   
   
@@ -1401,8 +1499,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             控制语句
           </label>
@@ -1604,10 +1702,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
             
   
   
@@ -1620,8 +1718,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             数据类型
           </label>
@@ -1892,10 +1990,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
         
           
-          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
             
   
   
@@ -1908,8 +2006,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
             <span class="md-nav__icon md-icon"></span>
             类
           </label>
@@ -2387,10 +2485,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
         
           
-          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="">
             
   
   
@@ -2403,8 +2501,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             数据类型进阶
           </label>
@@ -2583,10 +2681,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
         
           
-          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="">
             
   
   
@@ -2599,8 +2697,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
             <span class="md-nav__icon md-icon"></span>
             方法
           </label>
@@ -3055,10 +3153,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
         
           
-          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="">
             
   
   
@@ -3071,8 +3169,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             封装
           </label>
@@ -3205,10 +3303,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_11" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
         
           
-          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
             
   
   
@@ -3221,8 +3319,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
             <span class="md-nav__icon md-icon"></span>
             继承
           </label>
@@ -3378,10 +3476,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_12" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_14" >
         
           
-          <label class="md-nav__link" for="__nav_2_12" id="__nav_2_12_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_14" id="__nav_2_14_label" tabindex="">
             
   
   
@@ -3394,8 +3492,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_14">
             <span class="md-nav__icon md-icon"></span>
             多态
           </label>
@@ -3643,10 +3741,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_13" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_15" >
         
           
-          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="">
             
   
   
@@ -3659,8 +3757,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_13">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
             <span class="md-nav__icon md-icon"></span>
             DOTNET相关知识
           </label>
@@ -4496,7 +4594,16 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      量是什么
+      数值
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串（string）
     </span>
   </a>
   
@@ -4505,7 +4612,16 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      字面量是什么
+      字符类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      布尔（bool）
     </span>
   </a>
   
@@ -4514,7 +4630,7 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      变量是什么
+      总结
     </span>
   </a>
   
@@ -4523,60 +4639,6 @@
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      声明一个变量
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      声明多个变量
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      先声明变量，再赋值
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      变量的命名规则
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      常量
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ 总结
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
       结束语
     </span>
   </a>
@@ -4584,7 +4646,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       练习
     </span>
@@ -4594,27 +4656,45 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      选择题
+      1.判断题
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#2oh-my-ish" class="md-nav__link">
     <span class="md-ellipsis">
-      简答题
+      2.oh my ish
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#3bu-hao-qi" class="md-nav__link">
     <span class="md-ellipsis">
-      实战题（代码练习题）
+      3.bu hao qi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Cat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5kid" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.kid
     </span>
   </a>
   
@@ -4641,262 +4721,196 @@
 
 
 
-  <h1>06-字面量变量与常量</h1>
+  <h1>4-数据类型入门</h1>
 
 <h2 id="_1"><strong>开场</strong></h2>
 <blockquote>
-<p>🎙️ “大家好！欢迎来到《C#初学者实例教程》第5课《字面量、变量与常量》</p>
-<p>上一节课，我们认识了字符串、数值和布尔值三种基本数据类型，它们就像编程世界里的“原料”。</p>
-<p>今天我们要聊聊使用“原料”的三种方式，即：字面量、变量与常量。</p>
+<p>🎙️ “大家好！欢迎观看《C#初学者实例教程》的第4课《数据类型入门》。</p>
+<p>在上一节课，我们手写了一个‘Hello World’程序，总算是踏上了编程之路。</p>
+<p>上路之后，首先要做的事情就是：“理解数据”。</p>
+<p>数据就是信息，信息又分为：文本、数字等等。数据是程序运行过程中操作的对象。程序的运行离不开数据。程序运行的核心任务就是：获取数据、处理数据、输出数据。</p>
+<p>“数据”本身具有不同的特点，比如：数字可以用来计算，文本可以用来描述事物。一盏灯有亮与不亮两种状态等等。</p>
+<p>针对不同特点的数据，程序采用了不同的存储方式和处理方式，这就是数据类型。</p>
+<p>今天这节课，我们就来<strong>认识C#程序里的五种基本数据类型：整数、浮点数、字符串、字符和布尔值。</strong></p>
+<p>它们是C#里最常用、最基础的数据类型，学会它们就能处理大部分日常编程需求”</p>
 </blockquote>
 <hr />
-<h2 id="_2">量是什么</h2>
-<p>字面量、变量与常量这三个术语中的“量”本质上都指：可量化的“数据值”。</p>
+<h2 id="_2">数值</h2>
+<p>数值就是用来计算的数字。</p>
+<p>数值可以直接书写，不需要用引号包裹。你可以试着在你的代码里写几个整数和浮点数（比如你的年龄、身高），看看IDE会不会报错。</p>
+<p>数值大体上可以分为两种类型：整数类型和浮点数类型。</p>
+<p>✅ <strong>整数类型（int）</strong>——最容易理解，就是没有小数点的数字，这些数字非常直截了当。比如：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">//比如：可以记录年份，今年是2025年</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="mi">2025</span><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">//可以记录一个人的年纪:小明今年18岁</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mi">18</span><span class="w"> </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">//也可以记录今天走了多少步：爷爷今天走了8千步</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="mi">8000</span><span class="w"> </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="mi">100</span><span class="c1">//收获了100个赞</span>
+</span></code></pre></div>
+<p>✅ <strong>浮点型（double）</strong>——就是带有小数点的数字，小数的特点，是精打细算。比如：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">//初中时学过的圆周率π</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="mf">3.1415926</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">//超市里的商品价格</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="mf">19.99</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">//考试的平均分，等等这些全靠小数撑场面</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="mf">85.59</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">//即使是整数，加上小数点也被视为浮点数</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="mf">5.0</span>
+</span></code></pre></div>
+<p>✅ 数值加法</p>
+<blockquote>
+<p>🎙️“你可能会问：数值能不能拿来‘加一加’？当然可以！
+C#中的加号运算符(<code>+</code>) 和数学中的加号运算符是一样的，都是一个十字。当它用在数字之间时，就表示数学上的加法。比如：</p>
+</blockquote>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">//点击运行，结果是5</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="mf">0.1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span><span class="w"> </span><span class="c1">//点击运行，结果是0.3，但是要注意的是，浮点数的计算可能会有微小误差，比如你运行 0.1 + 0.2 可能不等于0.3，这不是你的错，而是计算机的‘精度限制’，我们以后会详细揭晓这个秘密。</span>
+</span></code></pre></div>
+<p>两个数值相加，得到的仍然是一个数值，非常符合我们的日常习惯。</p>
+<hr />
+<h2 id="string">字符串（string）</h2>
+<p>字符串，顾名思义，就是一串字符。但是要注意的是：字符串必须使用英文双引号包裹。只要你用上英文双引号，编译器就知道你在说‘字符串’。忘了引号？对不起，编译器可不听你解释，直接报错。”比如：</p>
+<p><div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//使用双引号包裹的Hello World就是一个合法的字符串</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="s">&quot;Hello World&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">//如果忘记双引号，编译器立刻用红色波浪线提示你：这里有语法错误</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">Hello</span><span class="w"> </span><span class="n">World</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">//你也不能使用单引号包裹，单引号在C#中不能包裹字符串，会报错。</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="err">&#39;</span><span class="n">Hello</span><span class="w"> </span><span class="n">World</span><span class="err">&#39;</span>
+</span></code></pre></div>
+即使是数字，如果你包裹了引号，它就变成字符串了。它长得像数字，但性格完全不同。</p>
+<p><div class="language-c# highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="s">&quot;1234567&quot;</span>
+</span></code></pre></div>
+字符串中的字符可以是任意字符，比如：字母、数字、汉字、空格、标点符号等等。比如
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">//可以是中文</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="s">&quot;我是一条字符串。&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">//也可以是空格</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="s">&quot;      Hello C#&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">//只要使用引号包裹，哪怕包裹的内容为空也是合法的。这叫做‘空字符串’。就像我打开冰箱，里面什么都没有——但这台冰箱依然存在。”</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s">&quot;&quot;</span>
+</span></code></pre></div></p>
+<p>字符串拼接</p>
+<p>数值可以用加号做加法运算。那字符串之间能不能‘加一加’呢？答案是：可以！</p>
+<p>当 <code>+</code> 运算符用于两个字符串时，它的含义就变成了‘拼接字符串’，而不能说“加法运算”。比如</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">//&quot;Hello&quot;和”World&quot;用加号连接，运行后就变成了一个连着的单词HelloWorld，中加没有空格</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">);</span><span class="c1">// HelloWorld</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">//如果你想加空格，可以这样写：</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">);</span><span class="c1">// 这样就拼接了空格。</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">);</span><span class="c1">//也可以在Hello后面添加一个空格，这样写更简洁。</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">//需要注意的是：如果一个字符串Hello 加上 一个数值100，结果会是什么呢？运行看一下</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w"> </span><span class="c1">//结果是一个字符串“Hello100”。</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1">// 也就是说，一个字符串 加 一个数值，结果还是字符串。</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">//数值100会被自动转为字符串100。</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">//一个符号，两个用途，看场合行事。</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_3">字符类型</h2>
+<p>在C#中，字符类型就是使用单引号包裹的单个字符，比如 'A'</p>
+<p><div class="language-c# highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="sc">&#39;A&#39;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="sc">&#39;1&#39;</span><span class="w"> </span><span class="c1">// 或数字1</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="sc">&#39;%&#39;</span><span class="w"> </span><span class="c1">// 或者一个百分号</span>
+</span></code></pre></div>
+注意：字符必须用单引号包裹，而不是双引号。</p>
+<h2 id="bool">布尔（bool）</h2>
+<p>在程序语言中，有一种特别简单又特别重要的数据类型，叫做：布尔值（Boolean，简称 Bool）。</p>
+<p>布尔值用于表示“真”或“假”。它的值只有两个</p>
+<p><div class="language-c# highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">true</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">false</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">//都必须小写。</span>
+</span></code></pre></div>
+这两个值常常出现在比较表达式的运算结果中，比如
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="c1">//点及运行，结果是true，表示10&gt;5是成立的。</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">//点击运行，结果是false，表示10&lt; 5是不成立的。</span>
+</span></code></pre></div>
+别小看这两个小小的值，</p>
+<p>它们可是程序的“方向盘”，true 和 false——一个说‘是’，一个说‘否’，掌控着代码的走向与命运。</p>
 <ul>
-<li>字面量就是直接出现在程序运行过程中的数据值;</li>
-<li>变量就是在程序运行过程中可以变化的数据值;</li>
-<li>常量就是在程序运行过程中固定不变的数据值;</li>
+<li>手机是否有电？</li>
+<li>今天有没有下雨？</li>
+<li>登录密码是否正确？</li>
+<li>商品是否有库存？</li>
 </ul>
-<p>接下来，请听我一一解释。</p>
-<h2 id="_3">字面量是什么</h2>
-<p>字面量就是直接出现在程序中的具体值，它强调的是不以变量形式出现。比如：</p>
-<p>向控制台输出”张三",张三就是一个字面量。
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="c1">// 10就是一个字面量，表示自身大小是10。</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">true</span><span class="p">);</span><span class="w"> </span><span class="c1">//true是一个字面量，表示自身的值是true。</span>
-</span></code></pre></div>
-在程序中，使用字面量的最大好处就是可读性强：直接了当表达意图，决不拐弯抹角玩抽象，决不让你猜。</p>
-<p>字面量妥妥一个钢铁直男。</p>
-<p>什么时候使用“字面量”？字面量更适合用于”一次性消费“的场景。比如：</p>
-<p><div class="language-c# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;操作成功&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-”操作成功“四个字传递的是一种状态提示，通常不会改变。</p>
-<p>如果反复出现，就不适合了。比如：
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;张三&quot;</span><span class="p">);</span><span class="w"> </span>
-</span></code></pre></div>
-字面量”张三“反复出现在程序中，一旦后续需要修改，就只能逐个修改，会变得非常麻烦。</p>
-<h2 id="_4">变量是什么</h2>
-<p>变量是数据的别名。相当于给数据起了一个外号；比如：</p>
-<p>使用变量向控制台输出张三</p>
-<div class="language-c# highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;张三&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//通过string关键词给张三起了一个名字叫name</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="c1">//向控制台输出变量名name，结果是张三</span>
-</span></code></pre></div></td></tr></table></div>
-<h2 id="_5">声明一个变量</h2>
-<p>C# 是强类型语言,<strong>每一个变量在声明时必须指定类型</strong>，它的语法如下：</p>
-<div class="language-c# highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="err">数据类型</span><span class="w"> </span><span class="err">变量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">初始值</span><span class="p">;</span>
-</span></code></pre></div></td></tr></table></div>
-<p>示例：声明一个变量age，初始值是25，向控制台输出age;</p>
-<div class="language-c# highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">age</span><span class="p">);</span>
-</span></code></pre></div></td></tr></table></div>
+<p>就这么简单，却足以构建出智能的逻辑、条件的抉择。</p>
+<p><strong>一句话：有它，程序才懂“对”与“错”；有它，程序才明白是“继续”还是“终止”。</strong></p>
+<h2 id="_4">总结</h2>
+<p>“到目前为止，我们已经认识了三种最常见的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>说明</th>
+<th>举例</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整数</td>
+<td>没有小数点的整数</td>
+<td><code>100</code>、<code>0</code>、<code>-5</code></td>
+<td>计数、整数计算</td>
+</tr>
+<tr>
+<td>浮点数</td>
+<td>有小数点的数字</td>
+<td><code>3.14</code>、<code>-2.5</code></td>
+<td>精确计算、测量值</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td>双引号里的字符</td>
+<td><code>"Hello"</code>、<code>"abc"</code>、<code>"2025年"</code></td>
+<td>存储文本、消息</td>
+</tr>
+<tr>
+<td>字符</td>
+<td>单引号里的字符</td>
+<td><code>'H'</code>、<code>'1'</code>、<code>'%'</code></td>
+<td>存储单个字符</td>
+</tr>
+<tr>
+<td>布尔值</td>
+<td>true或false</td>
+<td><code>true</code>、<code>false</code></td>
+<td>条件判断</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">结束语</h2>
+<p>本节课就到这里，这里是不好奇编程，我是张杰。你的支持是我更新最大的动力！我们下节课见！</p>
+<p>下节预告：揭开《字面量、变量与常量》的神秘面纱</p>
+<p>慢慢学，一点点进步就很好！</p>
+<hr />
+<h2 id="_6">练习</h2>
+<h3 id="1">1.判断题</h3>
 <ul>
-<li>因为25是整数，所以我们使用<code>int</code>指定变量的数据类型为整数类型；</li>
-<li>空格，后面跟变量名<code>age</code>，</li>
-<li>空格，然后使用等号为变量分配一个初始值，我们称之为”初始化“。</li>
-<li>在等号右边输入25；</li>
-<li>最后记得在末尾加一个分号；分号表示一条语句的结束。</li>
+<li>"" 表示字符串不存在 (❌)</li>
+<li>-10 是合法的整型数据 (✅)</li>
+<li>true 和 false 可写成全大写 (❌)</li>
+<li>3.0 和 3 在C#中是相同类型 (❌)</li>
+<li>"2025" 可以进行数学计算 (❌)</li>
 </ul>
-<h2 id="_6">声明多个变量</h2>
-<p>我们也可以一次声明多个同类型变量，并赋值，请看示例：</p>
-<p>示例：声明三个变量a,b,c，初始值分别是:"张三","李四","王五"，输出a,b,c到控制台;</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;张三&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;李四&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;王五&quot;</span><span class="p">;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<h3 id="2oh-my-ish">2.oh my ish</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>        __                                     __   
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  ____  / /_     ____ ___  __  __   ____  _____/ /_  
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a> / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \ 
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>/ /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / / 
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>\____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/  
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>                        /____/                       
 </span></code></pre></div>
-<h2 id="_7">先声明变量，再赋值</h2>
-<p>示例：声明三个变量chinese,math,english，初始值分别是:75.5,85.5,95.5，输出三门成绩到控制台;</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">chinese</span><span class="p">,</span><span class="w"> </span><span class="n">math</span><span class="p">,</span><span class="w"> </span><span class="n">english</span><span class="p">;</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">chinese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">75.5</span><span class="p">;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">math</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">85.5</span><span class="p">;</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">english</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">95.5</span><span class="p">;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">chinese</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">math</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">english</span><span class="p">);</span>
+<h3 id="3bu-hao-qi">3.bu hao qi</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>
 </span></code></pre></div>
-<h2 id="_8">变量的命名规则</h2>
-<p>变量名不能乱起，需要遵循以下规则：</p>
-<p>强制性规则：</p>
-<ul>
-<li>变量名必须是字母、数字、下划线，不能以数字开头</li>
-<li>变量名不能使用C#关键词（如 <code>int</code>、<code>class</code>）因为关键词是被C#语法占用的单词。</li>
-</ul>
-<p>建议性规则：</p>
-<p>推荐使用使用小驼峰命名法，即：</p>
-<ul>
-<li>首字母小写</li>
-<li>后续每个单词首字母大写</li>
-<li>只能使用字符和数字</li>
-</ul>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">❌</span><span class="w"> </span><span class="mi">1</span><span class="n">age</span><span class="w">      </span><span class="c1">// 不能以数字开头</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="err">❌</span><span class="w"> </span><span class="kt">int</span><span class="w">       </span><span class="c1">// 是关键字，不能作为变量名</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="err">❌</span><span class="w"> </span><span class="n">user</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="c1">// 不能有破折号</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kt">string</span><span class="w"> </span><span class="n">userName</span><span class="p">;</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">studentAge</span><span class="p">;</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isValid</span><span class="p">;</span>
+<h3 id="4cat">4.Cat</h3>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w"> </span><span class="o">/</span><span class="err">\</span><span class="n">_</span><span class="o">/</span>\
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">(</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">o</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="o">&lt;</span>
 </span></code></pre></div>
-<h2 id="_9">常量</h2>
-<p>常量指值不可变的变量。常量好比上了锁的变量，一旦创建，它的值就不能再变。</p>
-<p>声明常量的语法和声明变量的语法非常类似，只是多了一个<code>const</code>关键词。</p>
-<p><div class="language-c# highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">const</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="err">常量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">字面量值</span><span class="p">;</span>
-</span></code></pre></div>
-const关键词就像一把锁，把常量值固定下来，不能修改。</p>
-<p>示例</p>
-<p><div class="language-c# highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416</span><span class="p">;</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"> </span><span class="c1">// ❌ 如果你尝试修改，编译器会报错</span>
-</span></code></pre></div>
-使用常量的最大有点是保证关键数据不被修改，同时明确传达这是一个固定值。</p>
-<h2 id="_10">✅ 总结</h2>
-<ul>
-<li>字面量：字面量是程序中直接出现的固定值，例如 100、"hello"、true。</li>
-<li>变量：变量是数据的别名，它的值可以在程序运行过程中改变。</li>
-<li>常量：常量是值被锁定的变量，一旦赋值后就不能再修改。</li>
-</ul>
-<p>随着学习的深入，很快你会体会到：使用变量和常量存储数据，会让程序变的更灵活。</p>
-<h2 id="_11">结束语</h2>
-<p>本节课就到这里，这里是不好奇编程，我是张杰。感谢你的认真学习，我们下节课见！</p>
-<p>下节预告：《数据的输入与输出》——迈出与用户‘对话’的第一步</p>
-<p>慢慢学，一点点进步就很好！
-你的支持是我更新最大的动力！</p>
-<h2 id="_12">练习</h2>
-<h3 id="_13">选择题</h3>
-<p><strong>1. 下列哪个属于字面量？</strong></p>
-<p>A. name
-B. "张三"
-C. string name = "张三";
-D. Console.WriteLine(name);</p>
-<p>✅正确答案：B</p>
-<hr />
-<p><strong>2. C#中，声明变量必须指定数据类型。</strong>（判断题）</p>
-<p>✅正确答案：✅ 正确</p>
-<hr />
-<p><strong>3. 下列哪个变量命名是合法的？</strong></p>
-<p>A. 1score
-B. class
-C. student_age
-D. -name</p>
-<p>✅正确答案：C</p>
-<hr />
-<p><strong>4. 常量一旦声明，其值</strong></p>
-<p>A. 可以改变
-B. 不能改变
-C. 只能改变一次
-D. 会自动改变</p>
-<p>✅正确答案：B</p>
-<hr />
-<p><strong>5. 下列语句中，正确声明常量的是？</strong></p>
-<p>A. const int age;
-B. const int age = 25;
-C. int const age = 25;
-D. constant int age = 25;</p>
-<p>✅正确答案：B</p>
-<hr />
-<h3 id="_14">简答题</h3>
-<p><strong>6. 请写出以下变量声明语句中，等号左右两部分的含义：</strong></p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-</span></code></pre></div>
-<p>✅参考答案：</p>
-<ul>
-<li><code>int age</code>：声明一个名为 age 的整数变量；</li>
-<li><code>= 18</code>：将字面量 18 赋值给变量 age。</li>
-</ul>
-<hr />
-<p><strong>7. 请写出一条向控制台输出“登录成功”的语句，要求使用字面量。</strong></p>
-<p>✅参考答案：</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;登录成功&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<p><strong>8. 请写出一条向控制台输出“张三”的语句，要求使用变量。</strong></p>
-<p>✅参考答案：</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;张三&quot;</span><span class="p">;</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<p><strong>9. 请写出一条声明常量PI值为3.14的语句。</strong></p>
-<p>✅参考答案：</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span>
-</span></code></pre></div>
-<hr />
-<p><strong>10. 判断下列代码能否编译通过？如果不能，请说明原因。</strong></p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="p">;</span>
-</span></code></pre></div>
-<p>✅参考答案：
-不能通过编译。因为常量一旦赋值，不能再修改。</p>
-<hr />
-<h3 id="_15">实战题（代码练习题）</h3>
-<p><strong>11. 声明3个变量，分别代表语文、数学、英语成绩，并计算总分，输出结果。</strong></p>
-<p>✅参考答案：</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">chinese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">90.5</span><span class="p">,</span><span class="w"> </span><span class="n">math</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w"> </span><span class="n">english</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">94</span><span class="p">;</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chinese</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">math</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">english</span><span class="p">;</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;总分：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<p><strong>12. 将下列重复的字面量改为使用变量优化：</strong></p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;欢迎使用系统&quot;</span><span class="p">);</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;欢迎使用系统&quot;</span><span class="p">);</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;欢迎使用系统&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-<p>✅参考答案：</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;欢迎使用系统&quot;</span><span class="p">;</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<p><strong>13. 以下代码中的变量命名是否合规？如不合规，请修改：</strong></p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">string</span><span class="w"> </span><span class="mi">1</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;李雷&quot;</span><span class="p">;</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="o">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-</span></code></pre></div>
-<p>✅参考答案：</p>
-<ul>
-<li><code>1name</code> 不合法，不能以数字开头；应改为 <code>name1</code></li>
-<li><code>age!</code> 不合法，不能包含特殊符号；应改为 <code>age</code></li>
-</ul>
-<hr />
-<p><strong>14. 编写一个程序，输出你的姓名、年龄和性别（使用变量实现）。</strong></p>
-<p>✅示例答案：</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;张杰&quot;</span><span class="p">;</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kt">string</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;男&quot;</span><span class="p">;</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;姓名：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;年龄：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;性别：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">gender</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<p><strong>15. 请说出变量和常量的两个主要区别。</strong></p>
-<p>✅参考答案：</p>
-<ol>
-<li>变量的值在程序运行过程中可以修改；常量的值不能修改。</li>
-<li>常量使用 <code>const</code> 关键字声明，变量不需要。</li>
-</ol>
-<hr />
-<p>16.输出a+b的结果</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;结果是：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
-</span></code></pre></div>
-<p>运行后输出：</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>结果是：30
-</span></code></pre></div>
-<p>说明变量 <code>a</code> 和 <code>b</code> 存储了数据，可以参与运算，结果赋值给了 <code>sum</code>，最后输出。</p>
-<hr />
-<p>17.输出成绩</p>
-<p>你可以自己试试，写一个小程序，声明三个变量：</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;小明&quot;</span><span class="p">;</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kt">bool</span><span class="w"> </span><span class="n">hasPassed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
-</span></code></pre></div>
-<p>然后输出这些变量：</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;姓名：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;年龄：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;是否通过考试：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hasPassed</span><span class="p">);</span>
+<h3 id="5kid">5.kid</h3>
+<div class="language-c# highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;  .--.&quot;</span><span class="p">);</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot; (o_o )&quot;</span><span class="p">);</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot; /)__)&quot;</span><span class="p">);</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot; -\&quot;--\&quot;-&quot;</span><span class="p">);</span>
 </span></code></pre></div>
 
 
@@ -4936,7 +4950,7 @@ D. constant int age = 25;</p>
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../02-operators/01-arithmetic-operators/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 05-算数运算符">
+          <a href="../03-hello-world/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 3-手写Hello World">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4946,20 +4960,20 @@ D. constant int age = 25;</p>
                 上一页
               </span>
               <div class="md-ellipsis">
-                05-算数运算符
+                3-手写Hello World
               </div>
             </div>
           </a>
         
         
           
-          <a href="../06-naming-conventions-for-variables/" class="md-footer__link md-footer__link--next" aria-label="下一页: 07-变量的命名规范">
+          <a href="../05-literal-variable-const/" class="md-footer__link md-footer__link--next" aria-label="下一页: 5-字面量变量与常量">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                07-变量的命名规范
+                5-字面量变量与常量
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -75,15 +75,23 @@ nav:
     - 首页: csharp-tutorial/index.md
     - VS快捷键: csharp-tutorial/vs-shortcuts.md
     - 新人起步:
-      - 1-安装Visual Studio: csharp-tutorial/01-get-started/01-installation.md
-      - 2-创建第一个程序: csharp-tutorial/01-get-started/02-create-first-project.md
-      - 3-手写Hello World: csharp-tutorial/01-get-started/03-hello-world.md
-      - 4-数据类型入门: csharp-tutorial/01-get-started/04-data-type-basics.md
-      - 5-字面量变量与常量: csharp-tutorial/01-get-started/05-literal-variable-const.md
-      - 6-变量的命名规范: csharp-tutorial/01-get-started/06-naming-conventions-for-variables.md
-      - 7-数据的输入与输出: csharp-tutorial/01-get-started/07-output-input.md
+      - 1.安装Visual Studio: csharp-tutorial/01-get-started/01-installation.md
+      - 2.创建第一个程序: csharp-tutorial/01-get-started/02-create-first-project.md
+      - 3.手写Hello World: csharp-tutorial/01-get-started/03-hello-world.md
+      - 4.数据类型入门: csharp-tutorial/01-get-started/04-data-type-basics.md
+      - 5.字面量变量与常量: csharp-tutorial/01-get-started/05-literal-variable-const.md
+      - 6.变量的命名规范: csharp-tutorial/01-get-started/06-naming-conventions-for-variables.md
+      - 7.整数类型: csharp-tutorial/01-get-started/07-integer-type.md
+      - 8.浮点数类型: csharp-tutorial/01-get-started/08-floating-point-type.md
+      - 9.字符类型: csharp-tutorial/01-get-started/09-text-type.md
+      - 10.字符串转数值: csharp-tutorial/01-get-started/10-string-to-number.md
+      - 11.数据的输入与输出: csharp-tutorial/01-get-started/11-output-input.md
     - 控制语句(渐入佳境):
       - 8-if条件语句: csharp-tutorial/03-statements/01-conditional-statements.md
+      - 9-switch条件语句: csharp-tutorial/03-statements/02-switch-statement.md
+      - 10-for循环语句: csharp-tutorial/03-statements/03-for-loop-statement.md
+      - 11-while循环语: csharp-tutorial/03-statements/04-while-loop-statement.md
+      - 12-do while循环语句: csharp-tutorial/03-statements/05-do-while-loop-statement.md
     - 运算符:
       - 05-算数运算符: csharp-tutorial/02-operators/01-arithmetic-operators.md
       - 14-比较运算符: csharp-tutorial/02-operators/02-comparison-operators.md
@@ -98,10 +106,7 @@ nav:
       - 11-布尔类型: csharp-tutorial/04-data-types/03-boolean.md
       - 12-数据类型转换: csharp-tutorial/04-data-types/00-type-conversion.md
     - 控制语句:
-      - 20-switch条件语句: csharp-tutorial/03-statements/02-switch-statement.md
-      - 21-for循环语句: csharp-tutorial/03-statements/03-for-loop-statement.md
-      - 22-while循环语: csharp-tutorial/03-statements/04-while-loop-statement.md
-      - 23-do while循环语句: csharp-tutorial/03-statements/05-do-while-loop-statement.md
+      
       - 24-foreach循环语句: csharp-tutorial/03-statements/06-foreach-loop-statement.md
       - 25-break与continue语句: csharp-tutorial/03-statements/07-break-continue-statements.md
       - 26-跳转语句: csharp-tutorial/03-statements/08-jump-statements.md

@@ -2185,7 +2185,7 @@
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="c1">// static: 表示该类不可实例化，只包含静态成员</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="c1">// STAThread 特性标记</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="c1">// STAThread：Single-Threaded Apartment Thread </span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="c1">// 表示该线程使用单线程单元模型</span>
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="c1">// WinForms 应用程序必需此特性，确保与COM组件的正确交互</span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="na">[STAThread]</span>
@@ -2194,7 +2194,7 @@
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="c1">// static: 表示方法属于类而非实例</span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">        </span><span class="c1">// void: 表示方法无返回值</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">        </span><span class="c1">// Main: 应用程序入口点（.NET约定）</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 </span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="p">{</span>
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">            </span><span class="c1">// 初始化应用程序配置</span>
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">            </span><span class="c1">// 在.NET 5/6+中替代以下传统代码：</span>
@@ -2278,18 +2278,19 @@
 </tbody>
 </table>
 <h3 id="form1cs"><strong>Form1.cs</strong>：</h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Form1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Form</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">WinFormsApp1</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">Form1</span><span class="p">()</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="n">InitializeComponent</span><span class="p">();</span><span class="w"> </span><span class="c1">// 调用设计器生成的代码</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="c1">// 自定义逻辑</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">}</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="c1">//定义一个公共子类Form1：继承System.Windows.Froms.Form</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Form1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Form</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="c1">//定义Form1类的构造函数：用于初始化对象</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Form1</span><span class="p">()</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">            </span><span class="c1">//初始化窗体上的控件（窗体设计器自动生成 ）</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">}</span>
 </span></code></pre></div>
 <ul>
 <li>object sender：<code>sender</code>:提供对引发事件的对象的引用</li>
@@ -2301,33 +2302,46 @@
 </li>
 <li>用户编写的业务逻辑代码（如事件处理方法）。  </li>
 </ul>
-<p>文件代码</p>
-<div class="language-c# highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">WinFormsApp1</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="c1">//定义一个公共子类Form1：继承System.Windows.Froms.Form</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Form1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Form</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="c1">//定义Form1类的构造函数：用于初始化对象</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">Form1</span><span class="p">()</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">            </span><span class="c1">//初始化窗体上的控件（窗体设计器自动生成 ）</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">            </span><span class="n">InitializeComponent</span><span class="p">();</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">}</span>
-</span></code></pre></div>
 <h3 id="form1designercs"><strong>Form1.Designer.cs</strong>：</h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Form1</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">{</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">button1</span><span class="p">;</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">InitializeComponent</span><span class="p">()</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">button1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Button</span><span class="p">();</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">button1</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Click Me&quot;</span><span class="p">;</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">Controls</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">button1</span><span class="p">);</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="p">}</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">WinFormsApp1</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Form1</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="c1">///  Required designer variable.</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">        </span><span class="c1">/// &lt;/summary&gt;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">ComponentModel</span><span class="p">.</span><span class="n">IContainer</span><span class="w"> </span><span class="n">components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span><span class="c1">///  Clean up any resources being used.</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span><span class="c1">/// &lt;/summary&gt;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">        </span><span class="c1">/// &lt;param name=&quot;disposing&quot;&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Dispose</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">disposing</span><span class="p">)</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">disposing</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">components</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">))</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">                </span><span class="n">components</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">            </span><span class="k">base</span><span class="p">.</span><span class="n">Dispose</span><span class="p">(</span><span class="n">disposing</span><span class="p">);</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">        </span><span class="cp">#region Windows Form Designer generated code</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">        </span><span class="c1">/// &lt;summary&gt;</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">        </span><span class="c1">///  Required method for Designer support - do not modify</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">        </span><span class="c1">///  the contents of this method with the code editor.</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">        </span><span class="c1">/// &lt;/summary&gt;</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">InitializeComponent</span><span class="p">()</span>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">components</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">ComponentModel</span><span class="p">.</span><span class="n">Container</span><span class="p">();</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">AutoScaleMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Windows</span><span class="p">.</span><span class="n">Forms</span><span class="p">.</span><span class="n">AutoScaleMode</span><span class="p">.</span><span class="n">Font</span><span class="p">;</span>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">ClientSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">Size</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">);</span>
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Form1&quot;</span><span class="p">;</span>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="w">        </span><span class="cp">#endregion</span>
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="p">}</span>
 </span></code></pre></div>
 <p><strong>关键特点</strong>：</p>
 <ul>
@@ -2366,14 +2380,14 @@
 <hr />
 <h2 id="bin"><strong>bin 目录</strong></h2>
 <p>编译生成的输出目录：
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">bin</span><span class="o">/</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Debug</span><span class="o">/</span><span class="w">    </span><span class="o">#</span><span class="w"> </span><span class="err">调试版本</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">exe</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">可执行文件</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">pdb</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">程序数据库文件（调试信息）</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">dll</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">编译的程序集</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="err">└──</span><span class="w"> </span><span class="nv">Release</span><span class="o">/</span><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">发布版本</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="err">├──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">exe</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">优化后的可执行文件</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">dll</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">优化后的程序集</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">bin</span><span class="o">/</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Debug</span><span class="o">/</span><span class="w">    </span><span class="o">#</span><span class="w"> </span><span class="err">调试版本</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">exe</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">可执行文件</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">pdb</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">程序数据库文件（调试信息）</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">dll</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">编译的程序集</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="err">└──</span><span class="w"> </span><span class="nv">Release</span><span class="o">/</span><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">发布版本</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="err">├──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">exe</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">优化后的可执行文件</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">dll</span><span class="w">      </span><span class="o">#</span><span class="w"> </span><span class="err">优化后的程序集</span>
 </span></code></pre></div></p>
 <ul>
 <li><strong>Debug 模式</strong>：包含调试信息，未优化，便于调试</li>
@@ -2383,12 +2397,12 @@
 <hr />
 <h2 id="obj"><strong>obj 目录</strong></h2>
 <p>编译中间文件目录：
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">obj</span><span class="o">/</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Debug</span><span class="o">/</span><span class="w">    </span><span class="o">#</span><span class="w"> </span><span class="err">调试版本的中间文件</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">TempPE</span><span class="o">/</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">DesignTimeResolveAssemblyReferences</span><span class="p">.</span><span class="py">cache</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">csproj</span><span class="p">.</span><span class="py">FileListAbsolute</span><span class="p">.</span><span class="py">txt</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="err">└──</span><span class="w"> </span><span class="nv">Release</span><span class="o">/</span><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">发布版本的中间文件</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">obj</span><span class="o">/</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Debug</span><span class="o">/</span><span class="w">    </span><span class="o">#</span><span class="w"> </span><span class="err">调试版本的中间文件</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">TempPE</span><span class="o">/</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">DesignTimeResolveAssemblyReferences</span><span class="p">.</span><span class="py">cache</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">MyWinFormsApp</span><span class="p">.</span><span class="py">csproj</span><span class="p">.</span><span class="py">FileListAbsolute</span><span class="p">.</span><span class="py">txt</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="err">└──</span><span class="w"> </span><span class="nv">Release</span><span class="o">/</span><span class="w">  </span><span class="o">#</span><span class="w"> </span><span class="err">发布版本的中间文件</span>
 </span></code></pre></div></p>
 <ul>
 <li>存储编译过程中生成的临时文件</li>
@@ -2430,21 +2444,21 @@
 </tbody>
 </table>
 <p>示例 <code>AssemblyInfo.cs</code> 内容：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="na">[assembly: AssemblyTitle(&quot;MyWinFormsApp&quot;)]</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="na">[assembly: AssemblyVersion(&quot;1.0.0.0&quot;)]</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="na">[assembly: AssemblyCompany(&quot;My Company&quot;)]</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="na">[assembly: AssemblyTitle(&quot;MyWinFormsApp&quot;)]</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="na">[assembly: AssemblyVersion(&quot;1.0.0.0&quot;)]</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="na">[assembly: AssemblyCompany(&quot;My Company&quot;)]</span>
 </span></code></pre></div></p>
 <hr />
 <h2 id="_2">启动流程</h2>
 <ol>
 <li>
 <p><strong>Main() 方法</strong><br />
-   <div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="na">[STAThread]</span><span class="w"> </span><span class="c1">// 单线程单元模型（COM 组件必需）</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">Application</span><span class="p">.</span><span class="n">EnableVisualStyles</span><span class="p">();</span><span class="w"> </span><span class="c1">// 启用 XP 风格控件</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">Application</span><span class="p">.</span><span class="n">SetCompatibleTextRenderingDefault</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MainForm</span><span class="p">());</span><span class="w"> </span><span class="c1">// 启动主消息循环</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
+   <div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="na">[STAThread]</span><span class="w"> </span><span class="c1">// 单线程单元模型（COM 组件必需）</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">Application</span><span class="p">.</span><span class="n">EnableVisualStyles</span><span class="p">();</span><span class="w"> </span><span class="c1">// 启用 XP 风格控件</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">Application</span><span class="p">.</span><span class="n">SetCompatibleTextRenderingDefault</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="n">Application</span><span class="p">.</span><span class="n">Run</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MainForm</span><span class="p">());</span><span class="w"> </span><span class="c1">// 启动主消息循环</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">}</span>
 </span></code></pre></div></p>
 </li>
 <li>
@@ -2471,17 +2485,17 @@
 </li>
 <li>
 <p><strong>资源层次结构</strong>
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>graph TD
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  A[应用程序资源] --&gt; Properties/Resources.resx
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  B[窗体特定资源] --&gt; Form1.resx
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  C[控件图像等] --&gt; 嵌入在.resx中
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>graph TD
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  A[应用程序资源] --&gt; Properties/Resources.resx
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  B[窗体特定资源] --&gt; Form1.resx
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  C[控件图像等] --&gt; 嵌入在.resx中
 </span></code></pre></div></p>
 </li>
 <li>
 <p><strong>编译流程</strong>
-   <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>源代码(.cs) 
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>→ 编译中间文件(.obj) → obj目录
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>→ 链接 → 最终程序集 → bin目录
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>源代码(.cs) 
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>→ 编译中间文件(.obj) → obj目录
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>→ 链接 → 最终程序集 → bin目录
 </span></code></pre></div></p>
 </li>
 <li>
@@ -2496,8 +2510,8 @@
 <p><strong>配置初始化</strong></p>
 <ul>
 <li>在.NET 6之前需要显式调用：
-    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">Application</span><span class="p">.</span><span class="n">EnableVisualStyles</span><span class="p">();</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">Application</span><span class="p">.</span><span class="n">SetCompatibleTextRenderingDefault</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">Application</span><span class="p">.</span><span class="n">EnableVisualStyles</span><span class="p">();</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">Application</span><span class="p">.</span><span class="n">SetCompatibleTextRenderingDefault</span><span class="p">(</span><span class="k">false</span><span class="p">);</span>
 </span></code></pre></div></li>
 <li>.NET 6+ 使用<code>ApplicationConfiguration.Initialize()</code>更简洁</li>
 </ul>
@@ -2547,15 +2561,15 @@
 </li>
 <li>
 <p><strong>多窗体项目结构</strong>
-   <div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">Project</span><span class="o">/</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Views</span><span class="o">/</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">MainForm</span><span class="p">.</span><span class="py">cs</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">SettingsForm</span><span class="p">.</span><span class="py">cs</span>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Controls</span><span class="o">/</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">CustomButton</span><span class="p">.</span><span class="py">cs</span>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Services</span><span class="o">/</span>
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">DataService</span><span class="p">.</span><span class="py">cs</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="err">└──</span><span class="w"> </span><span class="nv">Program</span><span class="p">.</span><span class="py">cs</span>
+   <div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nv">Project</span><span class="o">/</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Views</span><span class="o">/</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">MainForm</span><span class="p">.</span><span class="py">cs</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nv">SettingsForm</span><span class="p">.</span><span class="py">cs</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Controls</span><span class="o">/</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">CustomButton</span><span class="p">.</span><span class="py">cs</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="err">├──</span><span class="w"> </span><span class="nv">Services</span><span class="o">/</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nv">DataService</span><span class="p">.</span><span class="py">cs</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="err">└──</span><span class="w"> </span><span class="nv">Program</span><span class="p">.</span><span class="py">cs</span>
 </span></code></pre></div></p>
 </li>
 </ol>
@@ -2594,14 +2608,14 @@
 <li>
 <p><strong>事件订阅</strong><br />
    在 <code>InitializeComponent()</code> 中自动生成或通过代码绑定：
-   <div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">this</span><span class="p">.</span><span class="n">button1</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">button1_Click</span><span class="p">);</span>
+   <div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">this</span><span class="p">.</span><span class="n">button1</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EventHandler</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">button1_Click</span><span class="p">);</span>
 </span></code></pre></div></p>
 </li>
 <li>
 <p><strong>事件处理</strong><br />
-   <div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Hello!&quot;</span><span class="p">);</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">}</span>
+   <div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">button1_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">EventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="s">&quot;Hello!&quot;</span><span class="p">);</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">}</span>
 </span></code></pre></div></p>
 </li>
 <li>
@@ -2614,9 +2628,9 @@
 <h2 id="partial-class">扩展：部分类（Partial Class）的作用</h2>
 <ul>
 <li><code>MainForm</code> 被拆分为 <code>MainForm.cs</code> 和 <code>MainForm.Designer.cs</code>，通过 <code>partial</code> 关键字实现：
-  <div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainForm</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Form</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="c1">// 业务逻辑</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">}</span>
+  <div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainForm</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Form</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="c1">// 业务逻辑</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">}</span>
 </span></code></pre></div>
   设计器代码与用户代码分离，避免手动修改设计器生成文件。</li>
 </ul>
@@ -2629,21 +2643,21 @@
 <hr />
 <p>通过以上结构，WinForms 将 UI 与逻辑解耦（通过部分类和事件模型），同时提供直观的可视化设计支持。对于复杂应用，可进一步引入 <strong>MVP（Model-View-Presenter）</strong> 模式分离关注点。</p>
 <h2 id="_8">应用程序生命周期：</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>启动
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>↓
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Main() 方法执行
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>↓
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>ApplicationConfiguration.Initialize() // 初始化配置
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>↓
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>Application.Run(new Form1())         // 创建主窗体+消息循环
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>↓
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>[消息循环运行中...处理用户输入]
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>↓
-</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>主窗体关闭 → 消息循环结束
-</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>↓
-</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>Main() 方法退出
-</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>↓
-</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>应用程序终止
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>启动
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>↓
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Main() 方法执行
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>↓
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>ApplicationConfiguration.Initialize() // 初始化配置
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>↓
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>Application.Run(new Form1())         // 创建主窗体+消息循环
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>↓
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>[消息循环运行中...处理用户输入]
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>↓
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>主窗体关闭 → 消息循环结束
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>↓
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>Main() 方法退出
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>↓
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>应用程序终止
 </span></code></pre></div>
 
 
