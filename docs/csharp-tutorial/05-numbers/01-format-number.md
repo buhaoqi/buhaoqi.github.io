@@ -4,3 +4,7 @@ tags: []
 
 ---
 
+- int.TryParse()
+- string.Format()
+- xxx.ToString()
+- Convert.ToInt32()

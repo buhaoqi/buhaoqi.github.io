@@ -72,7 +72,7 @@ nav:
   - 首页: 
     - 考试大纲: ./index.md
   - C#教程:
-    - 首页: csharp-tutorial/index.md
+    - 考试大纲: csharp-tutorial/index.md
     - VS快捷键: csharp-tutorial/vs-shortcuts.md
     - 新人起步:
       - 1.安装Visual Studio: csharp-tutorial/01-get-started/01-installation.md
@@ -123,14 +123,14 @@ nav:
     - 数据类型进阶:
       - 39-类型转换运算符: csharp-tutorial/03-operators/08-typeof.md
       - 40-运算符优先级: csharp-tutorial/03-operators/09-youxianji.md
-      - 41-数据类型转换: csharp-tutorial/08-data-type-intermediate/01-type-conversion.md
-      - 42-struct类型: csharp-tutorial/08-data-type-intermediate/02-struct.md
-      - 43-enum类型: csharp-tutorial/08-data-type-intermediate/03-enum.md
-      - 44-delegate类型: csharp-tutorial/08-data-type-intermediate/04-delegate.md
-      - 45-dynamic类型: csharp-tutorial/08-data-type-intermediate/05-dynamic.md
-      - 46-Lists: csharp-tutorial/08-data-type-intermediate/06-lists.md
-      - 47-Dictionary: csharp-tutorial/08-data-type-intermediate/07-dictionary.md
-      - 48-interface类型: csharp-tutorial/08-data-type-intermediate/08-interface.md
+      - 41-数据类型转换: csharp-tutorial/08-data-types-intermediate/01-type-conversion.md
+      - 42-struct类型: csharp-tutorial/08-data-types-intermediate/02-struct.md
+      - 43-enum类型: csharp-tutorial/08-data-types-intermediate/03-enum.md
+      - 44-delegate类型: csharp-tutorial/08-data-types-intermediate/04-delegate.md
+      - 45-dynamic类型: csharp-tutorial/08-data-types-intermediate/05-dynamic.md
+      - 46-List类型: csharp-tutorial/08-data-types-intermediate/06-lists.md
+      - 47-Dictionary类型: csharp-tutorial/08-data-types-intermediate/07-dictionary.md
+      - 48-interface类型: csharp-tutorial/08-data-types-intermediate/08-interface.md
     - 方法:
       - 1-方法是什么: csharp-tutorial/05-methods/01-what-is-method.md
       - 2-方法的基础操作: csharp-tutorial/05-methods/02-method-operation.md
@@ -163,19 +163,19 @@ nav:
       - 继承: csharp-tutorial/08-inheritance/01-what-is-inheritance.md
       - 多态: csharp-tutorial/09-polymorphism/01-what-is-polymorphism.md
     - 附:DOTNET相关知识:
-      - 01-DOTNET简介: csharp-tutorial/10-dotnet/01-introduction.md
-      - 02-DOTNET的安装: csharp-tutorial/10-dotnet/02-installation.md
-      - 03-DOTNET的运行时: csharp-tutorial/10-dotnet/03-runtime.md   
-      - 04-DOTNET的SDK: csharp-tutorial/10-dotnet/04-sdk.md
-      - 05-DOTNET的命令行工具: csharp-tutorial/10-dotnet/05-cli.md
-      - 06-DOTNET的项目结构: csharp-tutorial/10-dotnet/06-project-structure.md
-      - 06-System: csharp-tutorial/10-dotnet/06-system.md
-      - 06-System.Int32: csharp-tutorial/10-dotnet/06-system-int32.md
-      - 06-System.Int32元数据: csharp-tutorial/10-dotnet/06-system-int32-meta.md
-      - 06-System.Type: csharp-tutorial/10-dotnet/06-system-type.md
-      - 06-System.Enum: csharp-tutorial/10-dotnet/06-system-enum.md
-      - 06-System.Enum.GetValues(): csharp-tutorial/10-dotnet/06-system-enum-getvalues.md
-      - 07-DOTNET的包管理系统: csharp-tutorial/10-dotnet/07-package-management.md
+      - 01-DOTNET简介: csharp-tutorial/11-dotnet/01-introduction.md
+      - 02-DOTNET的安装: csharp-tutorial/11-dotnet/02-installation.md
+      - 03-DOTNET的运行时: csharp-tutorial/11-dotnet/03-runtime.md   
+      - 04-DOTNET的SDK: csharp-tutorial/11-dotnet/04-sdk.md
+      - 05-DOTNET的命令行工具: csharp-tutorial/11-dotnet/05-cli.md
+      - 06-DOTNET的项目结构: csharp-tutorial/11-dotnet/06-project-structure.md
+      - 06-System: csharp-tutorial/11-dotnet/06-system.md
+      - 06-System.Int32: csharp-tutorial/11-dotnet/06-system-int32.md
+      - 06-System.Int32元数据: csharp-tutorial/11-dotnet/06-system-int32-meta.md
+      - 06-System.Type: csharp-tutorial/11-dotnet/06-system-type.md
+      - 06-System.Enum: csharp-tutorial/11-dotnet/06-system-enum.md
+      - 06-System.Enum.GetValues(): csharp-tutorial/11-dotnet/06-system-enum-getvalues.md
+      - 07-DOTNET的包管理系统: csharp-tutorial/11-dotnet/07-package-management.md
   - Algorithm:
     - 考试大纲: csharp-algorithm/index.md
     - 算法概述: csharp-algorithm/01-overview.md
@@ -233,17 +233,21 @@ nav:
     - 20.多文件界面窗体: csharp-winform/20-mdi-forms.md
     - 21.多窗体的调用: csharp-winform/21-multiple-forms.md
     - 22.常见控件用法: csharp-winform/22-common-controls.md
-  - MySQL文档:
+  - MySQL教程:
     - 考试大纲: mysql/index.md
-    - MySQL的基本概念: mysql/01-basic-concept.md
-    - MySQL的安装与配置: mysql/02-install-config.md
-    - 登录与退出MySQL: mysql/03-login-logout.md
+    - 相关术语: mysql/terms.md
+    - 新人起步:
+      - MySQL简介: mysql/01-overview.md
+      - 安装MySQL与管理: mysql/02-installation.md
+      - 登录与退出MySQL: mysql/03-login-logout.md
+      - 创建用户: mysql/04-create-user.md
+      - 大小写敏感性: mysql/05-case-sensitivity.md
     - 操作数据库结构:
-      - 创建数据库:  mysql/04-create-database.md
-      - 删除数据库: mysql/05-drop-database.md
-      - 修改数据库名: mysql/06-alter-database.md
-      - 查询数据库: mysql/07-show-database.md
-      - 选择数据库: mysql/08-use-database.md
+      - 创建数据库:  mysql/06-create-database.md
+      - 删除数据库: mysql/07-drop-database.md
+      - 修改数据库名: mysql/08-alter-database.md
+      - 查询数据库: mysql/09-show-database.md
+      - 选择数据库: mysql/09-use-database.md
     - 操作表结构: 
       - 创建表结构: mysql/09-create-table.md
       - 复制表结构: mysql/09-copy-table.md
@@ -391,6 +395,7 @@ nav:
     - 7月24日任务管理器实用工具: exercises/windows/0724.md
     - 7月25日磁盘管理中文输入: exercises/windows/0725.md
     - 7月26日练习题: exercises/windows/0726.md
+    - 8月7日练习题: exercises/mysql/0807.md
   - 编程英语:
       - 首页: english/index.md
       - A: english/a.md
