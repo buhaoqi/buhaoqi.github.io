@@ -218,3 +218,41 @@ SHOW COLUMNS FROM student;
 -- 删除表student
 DROP TABLE student;
 ```
+
+
+
+## 增：数据（INSERT）
+
+```sql
+# 语法
+INSERT INTO 表名 (字段1, 字段2) VALUES 
+('值1', '值2'), 
+('值3', '值4');
+```
+
+## 增：数据结构（CREATE）
+
+```sql
+-- 创建数据库
+CREATE DATABASE 数据库名;
+
+-- 创建表语法
+CREATE TABLE 表名 (
+	  列名1 数据类型 [约束条件],
+    列名2 数据类型 [约束条件],
+    列名3 数据类型 [约束条件]
+);
+
+-- 设置默认值
+CREATE TABLE 表名 (
+    列名 数据类型 DEFAULT 默认值,
+    ...
+);
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL DEFAULT 'guest',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+

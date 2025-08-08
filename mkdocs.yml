@@ -255,15 +255,30 @@ nav:
       - 修改表结构: mysql/operate-table/04-alter-table.md
       - 查询表结构: mysql/operate-table/05-show-table.md
       - 重命名表: mysql/operate-table/06-rename-table.md
+    - 运算符:
+      - 运算符是什么: mysql/operators/01-what-is-operator.md
+      - 算术运算符: mysql/operators/02-arithmetic.md
+      - 关系运算符: mysql/operators/03-relational.md
+      - 逻辑运算符: mysql/operators/04-logical.md
     - 操作数据:
       - 添加数据: mysql/operate-data/01-insert-data.md
       - 删除数据: mysql/operate-data/02-delete-data.md
       - 修改数据: mysql/operate-data/03-update-data.md
-      - 查询数据: mysql/operate-data/04-select-data.md
-      - 查询数据排序: mysql/operate-data/05-order-by.md
+    - 单表查询: 
+      - 查询语法: mysql/operate-data/single-table-query/04-select-grammer.md
+      - 基础查询: mysql/operate-data/single-table-query/05-select-basics.md
+      - WHERE查询: mysql/operate-data/single-table-query/10-select-where.md
+      - 群组查询: mysql/operate-data/single-table-query/13-select-group-by.md
+      - 聚合查询: mysql/operate-data/single-table-query/14-select-aggregate.md
+      - 子查询: mysql/operate-data/single-table-query/15-select-subquery.md
+    - 多表查询:
+      - 连接查询: mysql/operate-data/16-select-join.md
+    - 分类汇总:
+      - 联合查询: mysql/operate-data/17-select-union.md
+      - 视图查询: mysql/operate-data/18-select-view.md
       - 项目-查询学生成绩表: mysql/operate-data/project1.md
       - 项目-查询产品信息表: mysql/operate-data/project2.md
-      - 项目-查询员工信息表: mysql/operate-data/project2.md
+      - 项目-查询员工信息表: mysql/operate-data/project3.md
     - 数据类型: mysql/18-data-type.md
     - 数据完整性约束: mysql/19-constraint.md
     - 索引: mysql/20-index.md
@@ -401,6 +416,7 @@ nav:
     - 7月26日练习题: exercises/windows/0726.md
     - 8月7日MySQL建表: exercises/mysql/0807.md
     - 8月8日MySQL查询: exercises/mysql/0808.md
+    - 8月9日ALTER TABLE: exercises/mysql/0809.md
   - 编程英语:
       - 首页: english/index.md
       - A: english/a.md

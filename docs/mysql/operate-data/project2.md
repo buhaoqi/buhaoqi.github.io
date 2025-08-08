@@ -135,3 +135,42 @@ ORDER BY 排序字段;
 ```sql
 
 ```
+
+## 练习2:分页查询
+
+```sql
+1. 查询公司工资最高的人；
+2. select * from employees order by salary  desc limit 1;
+3. 查询公司年龄最大的人；
+4. select * from employees order by age  desc limit 1;
+5. 查询公司入职最早的人；
+6. select * from employees order by created_at  desc limit 1;
+```
+
+## 练习3:排序查询
+
+```sql
+# 根据年龄对公司的员工进行升序排序
+select * from newtable order by age;
+# 根据入职时间, 对员工进行降序排序
+select * from newtable order by entrydate desc;
+# 根据年龄对公司的员工进行升序排序 , 年龄相同 , 再按照入职时间进行降序排序
+select * from newtable order by age asc ,entrydate desc ;
+```
+
+## 练习4:群组查询
+
+```sql
+1. 使用群组查询公司中的部门（去重）
+2. select department from employees group by department;
+3. 统计男性员工 和 女性员工的数量 
+4. select gender,avg(age) from employees group by gender;
+5. 根据性别分组，统计男性员工 和 女性员工的平均年龄
+6. select gender,avg(age) from employees group by gender
+7. 统计每个部门的员工数量。
+8. select department, count(*)  from employees group by department;
+9. 统计来自不同省份的员工数量
+10. select province,count(*) from employees group by province;
+11. 统计不同学历的员工数量
+12. select education,count(*) from employees group by education;
+```

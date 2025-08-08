@@ -16,3 +16,9 @@ SHOW DATABASES;
 
 - show:查看
 - databases: 数据库
+
+
+
+-- 查询当前数据库名
+SELECT DATABASE();
+```
