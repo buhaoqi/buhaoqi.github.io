@@ -1,31 +1,11 @@
 ---
-noteId: "fe90fcf0482511f0a6929b02b627d898"
+noteId: "ff279570740811f0ac7f012540a4f7e6"
 tags: []
 
 ---
 
+## 查询排序(ORDER BY)
 
-```sql
-# 语法
-SELECT [DISTINCT] 列1, 列2, ...
-FROM 表名
-[WHERE 条件]
-[ORDER BY 列 [ASC|DESC]]
-[LIMIT 行数];
-
--- 查询所有字段
-SELECT * FROM 表名;
-
--- 查询指定字段
-SELECT 字段1, 字段2 FROM 表名;
-
--- 条件查询
-SELECT * FROM 表名 WHERE 条件; 
--- 查询年龄大于21岁的学生（比较运算符）
-SELECT name, age FROM students WHERE age > 21;  
--- 查询部门为'Sales'且薪资≥5000的员工（逻辑运算符）
-SELECT * FROM employees 
-WHERE department = 'Sales' AND salary >= 5000;
 
 -- 查询排序（ASC升序/DESC降序）
 SELECT * FROM 表名 ORDER BY 字段1 DESC;
@@ -46,6 +26,7 @@ SELECT first_name AS '姓名', salary * 12 AS '年薪' FROM employees;
 - **说明**：为列名或计算字段指定别名，增强可读性。
 
 ---
+
 
 ### **2. 条件过滤（WHERE）**
 ```sql

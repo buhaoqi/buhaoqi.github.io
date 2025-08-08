@@ -237,29 +237,33 @@ nav:
     - 考试大纲: mysql/index.md
     - 相关术语: mysql/terms.md
     - 新人起步:
-      - MySQL简介: mysql/01-overview.md
-      - 安装MySQL与管理: mysql/02-installation.md
-      - 登录与退出MySQL: mysql/03-login-logout.md
-      - 创建用户: mysql/04-create-user.md
-      - 大小写敏感性: mysql/05-case-sensitivity.md
+      - 数据库简介: mysql/get-started/01-what-is-database.md
+      - MySQL简介: mysql/get-started/02-what-is-mysql.md
+      - 安装与启动MySQL: mysql/get-started/03-installation.md
+      - 登录与退出MySQL: mysql/get-started/04-login-logout.md
+      - 大小写敏感性: mysql/get-started/05-case-sensitivity.md
     - 操作数据库结构:
-      - 创建数据库:  mysql/06-create-database.md
-      - 删除数据库: mysql/07-drop-database.md
-      - 修改数据库名: mysql/08-alter-database.md
-      - 查询数据库: mysql/09-show-database.md
-      - 选择数据库: mysql/09-use-database.md
-    - 操作表结构: 
-      - 创建表结构: mysql/09-create-table.md
-      - 复制表结构: mysql/09-copy-table.md
-      - 删除表结构: mysql/10-drop-table.md
-      - 修改表结构: mysql/11-alter-table.md
-      - 查询表结构: mysql/12-show-table.md
-      - 重命名表: mysql/13-rename-table.md
-    - 操作数据: 
-      - 添加数据: mysql/14-insert-data.md
-      - 删除数据: mysql/15-delete-data.md
-      - 修改数据: mysql/16-update-data.md
-      - 查询数据: mysql/17-select-data.md
+      - 查看数据库: mysql/operate-database/01-show-databases.md
+      - 创建数据库:  mysql/operate-database/02-create-database.md
+      - 删除数据库: mysql/operate-database/03-drop-database.md
+      - 使用数据库: mysql/operate-database/04-use-database.md
+      - 修改数据库名: mysql/operate-database/05-alter-database.md
+    - 操作表结构:
+      - 创建表结构: mysql/operate-table/01-create-table.md
+      - 复制表结构: mysql/operate-table/02-copy-table.md
+      - 删除表结构: mysql/operate-table/03-drop-table.md
+      - 修改表结构: mysql/operate-table/04-alter-table.md
+      - 查询表结构: mysql/operate-table/05-show-table.md
+      - 重命名表: mysql/operate-table/06-rename-table.md
+    - 操作数据:
+      - 添加数据: mysql/operate-data/01-insert-data.md
+      - 删除数据: mysql/operate-data/02-delete-data.md
+      - 修改数据: mysql/operate-data/03-update-data.md
+      - 查询数据: mysql/operate-data/04-select-data.md
+      - 查询数据排序: mysql/operate-data/05-order-by.md
+      - 项目-查询学生成绩表: mysql/operate-data/project1.md
+      - 项目-查询产品信息表: mysql/operate-data/project2.md
+      - 项目-查询员工信息表: mysql/operate-data/project2.md
     - 数据类型: mysql/18-data-type.md
     - 数据完整性约束: mysql/19-constraint.md
     - 索引: mysql/20-index.md
@@ -363,7 +367,7 @@ nav:
     - Windows10中文输入: windows10/10.md
     - Windows10练习题: windows10/11.md
   - 计算机网络:
-    - 考试大纲: computer-network/index.md
+    - 考试大纲: computer-network-basics/index.md
   - 暑期作业:
     - 6月21日:For循环笔记: exercises/csharp-summer/0621.md
     - 6月22日:For循环练习: exercises/csharp-summer/0622.md
@@ -395,7 +399,8 @@ nav:
     - 7月24日任务管理器实用工具: exercises/windows/0724.md
     - 7月25日磁盘管理中文输入: exercises/windows/0725.md
     - 7月26日练习题: exercises/windows/0726.md
-    - 8月7日练习题: exercises/mysql/0807.md
+    - 8月7日MySQL建表: exercises/mysql/0807.md
+    - 8月8日MySQL查询: exercises/mysql/0808.md
   - 编程英语:
       - 首页: english/index.md
       - A: english/a.md

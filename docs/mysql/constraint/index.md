@@ -1,8 +1,224 @@
 ---
-noteId: "37589b00482c11f0a6929b02b627d898"
+noteId: "8d1536b073e811f0ac7f012540a4f7e6"
 tags: []
 
 ---
+
+约束条件
+
+在MySQL中，定义列的约束条件是确保数据完整性和一致性的重要手段。以下是常见约束条件的详细说明及用法示例：
+
+## 1.主键约束（PRIMARY KEY）
+
+用途
+
+用于唯一标识表中的每一行数据。
+
+条件
+
+必要条件：主键必须是任意非空且唯一的字段。
+
+- 唯一性：
+  - 主键列的值必须在列中唯一，不允许重复。
+
+  - 每个表只能定义一个主键，但主键可以由多个列组成（称为**复合主键**）。
+
+- 非空性：主键列的值不能为 `NULL`，必须明确指定。
+
+建议条件：
+
+- 简洁性：整数类型存储和索引效率高。
+
+- 稳定性：一旦生成，通常不随用户信息修改而变动。
+
+  
+
+| user_id | user_name | email           | gender | age  |
+| ------- | --------- | --------------- | ------ | ---- |
+| 1       | zhangsan  | zhangsan@qq.com | 男     | 17   |
+| 2       | lisi      | lisi@qq.com     | 女     | 16   |
+| 3       | wangwu    | wangwu@qq.com   | 男     | 17   |
+
+创建主键的方式
+
+方式1: 单列主键
+
+```sql
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,  -- 单列主键
+    username VARCHAR(50)
+);
+```
+
+方式2: **复合主键**（多个列组合成唯一标识）：复合主键由多个列组成，其唯一性体现在 **所有列的组合值** 上，而非单个列的值。例如：
+
+```sql
+CREATE TABLE order_details (
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    PRIMARY KEY (order_id, product_id)  -- 复合主键
+);
+```
+
+
+## **2.非空约束（NOT NULL）**
+
+- **作用**：确保列值不能为NULL。
+
+- **用法**：
+
+  ```sql
+  CREATE TABLE users (
+      user_id INT PRIMARY KEY,
+      username VARCHAR(50) NOT NULL  -- 用户名必填
+  );
+  ```
+
+## **3.唯一约束（UNIQUE）**
+
+- **作用**：确保列值唯一，允许NULL值。
+
+- **用法**：
+
+  ```sql
+  CREATE TABLE users (
+      user_id INT PRIMARY KEY,
+      email VARCHAR(100) UNIQUE  -- 邮箱唯一
+  );
+  
+  CREATE TABLE employees (
+      employee_id INT PRIMARY KEY,
+      department VARCHAR(50),
+      position VARCHAR(50),
+      UNIQUE (department, position)  -- 联合唯一约束
+  );
+  ```
+
+## **4.默认约束（DEFAULT）**
+
+用途
+
+为列提供默认值，当插入数据未指定值时自动填充。
+
+语法
+
+```sql
+CREATE TABLE 表名 (
+    列名 数据类型 DEFAULT 默认值,
+    ...
+);
+```
+
+示例
+
+```sql
+CREATE TABLE student2 (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL DEFAULT '神秘人',
+    gender ENUM('男','女'),
+  	age INT DEFAULT 18,
+  	the_date DATE DEFAULT '2024-09-01'
+);
+```
+
+示例
+
+```sql
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- 默认当前时间
+);
+```
+
+
+
+## **5.检测约束（CHECK）**
+
+- **作用**：检测列值必须满足指定条件。
+
+- 语法
+
+  ```sql
+  -- 列级约束（直接写在列定义后）
+  CREATE TABLE 表名 (
+      列名 数据类型 CHECK (条件),
+    
+    							CHECK(age >= 7)
+    算术运算符: + - * /
+    比较运算符：> = < >= <=
+      ...
+  );
+  
+  -- 表级约束（写在所有列定义后）
+  CREATE TABLE 表名 (
+      列1 数据类型,
+      列2 数据类型,
+      CHECK (条件)
+  );
+  
+  -- 通过 ALTER TABLE 添加约束
+  ALTER TABLE 表名
+  ADD CONSTRAINT 约束名 CHECK (条件);
+  ```
+
+  ## CHECK检测约束的分类
+
+  ```sql
+  -- 列级检测
+  列名 数据类型 check(检测条件表达式)
+  
+  -- 表级检测
+  定义列，
+  定义列,
+  check(检测条件表达式)
+  ```
+
+  ## 
+
+- **用法**：
+
+  ```sql
+  CREATE TABLE users (
+      user_id INT PRIMARY KEY,
+      age INT CHECK (age >= 18)  -- 年龄必须≥18
+  );
+  ```
+
+---
+
+## **6.自动递增(AUTO_INCREMENT)**
+
+- **作用**：自动生成唯一递增值，常用于主键。
+
+- **用法**：
+
+  ```sql
+  CREATE TABLE users (
+      user_id INT PRIMARY KEY AUTO_INCREMENT,  -- 自增主键
+      username VARCHAR(50)
+  );
+  ```
+
+一句话：auto_increment是定义列时的约束条件。
+
+auto_increment表示该字段的值会自动增长。无需再添加数据时，手动添加值。
+
+## 练习1：主键判断
+
+1. **主键列允许存储 `NULL` 值。**
+2. **复合主键的列允许其中一列为 `NULL`。**
+3. **主键必须定义为 `AUTO_INCREMENT` 自增字段。**
+4. **主键列的值可以重复。**
+5. **主键的唯一性由数据库自动保证，无需人工干预。**
+6. **一个表可以定义多个主键。**
+7. **主键列只能是整数类型（如 `INT` 或 `BIGINT`）。**
+8. **删除主键约束后，表中可以插入重复值。**
+9. **主键会自动创建索引以提高查询效率。**
+10. **主键列可以使用 `DEFAULT` 关键字设置默认值。**
+
+
+
 
 # MySQL 中的数据完整性约束详解
 

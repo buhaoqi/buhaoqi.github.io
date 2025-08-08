@@ -197,3 +197,24 @@ CREATE TABLE employees (
 ) 
 ```
 
+第二组：建表删表（敲三遍）
+
+```sql
+-- 创建数据库student_db
+CREATE DATABASE student_db;
+-- 使用数据库student_db
+use student_db; 
+-- 创建表student
+CREATE TABLE student(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL,
+    gender ENUM('男','女'),
+    the_date DATE
+    );
+-- 查看表名
+SHOW TABLES;
+-- 查看表结构
+SHOW COLUMNS FROM student;
+-- 删除表student
+DROP TABLE student;
+```
