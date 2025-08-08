@@ -1017,6 +1017,10 @@
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/exercises/mysql/0809/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/exercises/windows/0718/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
@@ -1301,15 +1305,19 @@
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/operate-data/04-select-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/16-select-join/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/operate-data/05-order-by/</loc>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/17-select-union/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/operate-data/18-data-type/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/18-select-view/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
@@ -1322,6 +1330,30 @@
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/operate-data/project3/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/single-table-query/04-select-grammer/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/single-table-query/05-select-basics/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/single-table-query/10-select-where/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/single-table-query/13-select-group-by/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/single-table-query/14-select-aggregate/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operate-data/single-table-query/15-select-subquery/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
@@ -1369,11 +1401,27 @@
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/operators/</loc>
+         <loc>https://buhaoqi.github.io/mysql/operate-table/update/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/operators/01-arithmetic-operators/</loc>
+         <loc>https://buhaoqi.github.io/mysql/operators/01-what-is-operator/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operators/02-arithmetic/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operators/03-relational/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/operators/04-logical/</loc>
+         <lastmod>2025-08-08</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/string/1/</loc>
          <lastmod>2025-08-08</lastmod>
     </url>
     <url>

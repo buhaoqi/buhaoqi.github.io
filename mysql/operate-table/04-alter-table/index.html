@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4alter-table" class="md-skip">
+        <a href="#alter" class="md-skip">
           跳转至
         </a>
       
@@ -1336,6 +1336,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#alter" class="md-nav__link">
+    <span class="md-ellipsis">
+      改：数据结构（ALTER）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#4alter-table" class="md-nav__link">
     <span class="md-ellipsis">
       4.ALTER TABLE
@@ -1386,6 +1395,162 @@
       练习3：修改学生表 - 列排序
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-mysql-alter-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 10 道 MySQL ALTER TABLE 语句练习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 10 道 MySQL ALTER TABLE 语句练习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 练习目标
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 练习题（附表结构）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 练习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 练习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-salary-decimal102" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 添加一个新字段：salary，类型为 DECIMAL(10,2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-department-varchar100-age" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 添加一个字段：department，类型为 VARCHAR(100)，放在 age 字段后面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hire_date-date-2023-01-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 添加一个字段：hire_date，类型为 DATE，默认值为 '2023-01-01'
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-name-varchar100" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 将字段 name 的类型修改为 VARCHAR(100)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-age-employee_age" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 将字段 age 的名称修改为 employee_age，类型不变
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-hire_date" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 删除字段：hire_date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-department" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 删除字段：department
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 为字段 id 添加主键约束
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-employees" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 删除表 employees 的主键约束
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-employees-staff_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 将表名 employees 修改为 staff_info
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 拓展练习（可选，挑战自己）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alter-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 总结：ALTER TABLE 常用操作速查
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1487,7 +1652,7 @@
   
   
   <span class="md-ellipsis">
-    操作数据
+    运算符
     
   </span>
   
@@ -1497,6 +1662,156 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            运算符
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operators/01-what-is-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    运算符是什么
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operators/02-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    算术运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operators/03-relational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关系运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operators/04-logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    逻辑运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    操作数据
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
             <span class="md-nav__icon md-icon"></span>
             操作数据
           </label>
@@ -1571,6 +1886,64 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    单表查询
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            单表查询
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -1578,12 +1951,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operate-data/04-select-data/" class="md-nav__link">
+      <a href="../../operate-data/single-table-query/04-select-grammer/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    查询数据
+    查询语法
     
   </span>
   
@@ -1601,12 +1974,289 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operate-data/05-order-by/" class="md-nav__link">
+      <a href="../../operate-data/single-table-query/05-select-basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    查询数据排序
+    基础查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/single-table-query/10-select-where/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WHERE查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/single-table-query/13-select-group-by/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    群组查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/single-table-query/14-select-aggregate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    聚合查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/single-table-query/15-select-subquery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    子查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    多表查询
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            多表查询
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/16-select-join/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    连接查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    分类汇总
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            分类汇总
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/17-select-union/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    联合查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operate-data/18-select-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    视图查询
     
   </span>
   
@@ -1670,12 +2320,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operate-data/project2/" class="md-nav__link">
+      <a href="../../operate-data/project3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    项目-查询产品信息表
+    项目-查询员工信息表
     
   </span>
   
@@ -1882,10 +2532,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_14" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_18" >
         
           
-          <label class="md-nav__link" for="__nav_6_14" id="__nav_6_14_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_18" id="__nav_6_18_label" tabindex="">
             
   
   
@@ -1898,8 +2548,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_14">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_18">
             <span class="md-nav__icon md-icon"></span>
             字符串函数
           </label>
@@ -2193,10 +2843,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_15" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_19" >
         
           
-          <label class="md-nav__link" for="__nav_6_15" id="__nav_6_15_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_19" id="__nav_6_19_label" tabindex="">
             
   
   
@@ -2209,8 +2859,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_15">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_19">
             <span class="md-nav__icon md-icon"></span>
             数学函数
           </label>
@@ -2504,10 +3154,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_17" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_21" >
         
           
-          <label class="md-nav__link" for="__nav_6_17" id="__nav_6_17_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_21" id="__nav_6_21_label" tabindex="">
             
   
   
@@ -2520,8 +3170,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_17">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_21">
             <span class="md-nav__icon md-icon"></span>
             日期函数
           </label>
@@ -2815,10 +3465,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_18" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_22" >
         
           
-          <label class="md-nav__link" for="__nav_6_18" id="__nav_6_18_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6_22" id="__nav_6_22_label" tabindex="">
             
   
   
@@ -2831,8 +3481,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_18">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_22">
             <span class="md-nav__icon md-icon"></span>
             其他函数
           </label>
@@ -3281,6 +3931,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#alter" class="md-nav__link">
+    <span class="md-ellipsis">
+      改：数据结构（ALTER）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#4alter-table" class="md-nav__link">
     <span class="md-ellipsis">
       4.ALTER TABLE
@@ -3334,6 +3993,162 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#10-mysql-alter-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 10 道 MySQL ALTER TABLE 语句练习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 10 道 MySQL ALTER TABLE 语句练习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 练习目标
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 练习题（附表结构）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 练习题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 练习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-salary-decimal102" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 添加一个新字段：salary，类型为 DECIMAL(10,2)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-department-varchar100-age" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 添加一个字段：department，类型为 VARCHAR(100)，放在 age 字段后面
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hire_date-date-2023-01-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 添加一个字段：hire_date，类型为 DATE，默认值为 '2023-01-01'
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-name-varchar100" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 将字段 name 的类型修改为 VARCHAR(100)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-age-employee_age" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 将字段 age 的名称修改为 employee_age，类型不变
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-hire_date" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 删除字段：hire_date
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-department" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 删除字段：department
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 为字段 id 添加主键约束
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-employees" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 删除表 employees 的主键约束
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-employees-staff_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 将表名 employees 修改为 staff_info
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 拓展练习（可选，挑战自己）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alter-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 总结：ALTER TABLE 常用操作速查
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3350,8 +4165,7 @@
 
 
 
-  <h1>修改表结构</h1>
-
+<h2 id="alter">改：数据结构（ALTER）</h2>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- 修改表名</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">旧表名</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="err">新表名</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -3436,13 +4250,97 @@
 </span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span>
 </span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">phone</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="p">;</span>
 </span></code></pre></div>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- 修改表名</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">旧表名</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="err">新表名</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">-- 修改列名</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">旧列名</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="err">新表名</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">-- 添加列</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">1</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">FIRST</span><span class="o">|</span><span class="k">AFTER</span><span class="w"> </span><span class="err">已存在列</span><span class="p">],</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">2</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">FIRST</span><span class="o">|</span><span class="k">AFTER</span><span class="w"> </span><span class="err">已存在列</span><span class="p">];</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1">-- 添加唯一约束</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="err">约束名</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="err">列名</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">unique_email</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">email</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">-- 删除列</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1">-- 删除主键约束</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="c1">-- 删除外键约束</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="err">外键名</span><span class="p">;</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="c1">-- 删除唯一约束</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="err">索引名</span><span class="p">;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">unique_email</span><span class="p">;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="c1">-- 调整列序</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">1</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="err">目标列</span><span class="p">,</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">2</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="err">目标列</span><span class="p">;</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="c1">-- 调整列到首位</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列</span><span class="mi">1</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">FIRST</span><span class="p">;</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="c1">-- 修改列定义（表名除外）</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">新数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">];</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="c1">-- 修改列定义</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="n">CHANGE</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">旧列名</span><span class="w"> </span><span class="err">新列名</span><span class="w"> </span><span class="err">新数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">];</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="c1">-- 添加非空约束</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="c1">-- 将非空约束改为允许空值</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="c1">-- 删除非空约束</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="c1">-- 添加自增主键约束</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="k">MODIFY</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span>
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="k">MODIFY</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="c1">-- 修改默认值</span>
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span>
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="k">MODIFY</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="err">默认值</span><span class="p">;</span>
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="c1">-- 示例</span>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="w"> </span>
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="k">MODIFY</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span><span class="p">;</span>
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="c1">-- 添加或修改默认值</span>
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表</span><span class="w"> </span>
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="err">默认值</span><span class="p">;</span>
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="c1">-- 示例</span>
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="w"> </span>
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;active&#39;</span><span class="p">;</span>
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="c1">-- 删除默认值</span>
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span>
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="p">;</span>
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="c1">-- 示例</span>
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span>
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">phone</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">DEFAULT</span><span class="p">;</span>
+</span></code></pre></div>
 <h2 id="4alter-table">4.ALTER TABLE</h2>
 <p>ALTER TABLE是修改表结构的<strong>语句（Statement）</strong>。它是修改表结构的所有操作的核心指令。</p>
 <p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="err">位置参数</span><span class="p">];</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">AFTER</span><span class="w"> </span><span class="err">目标列</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">FIRST</span><span class="p">];</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">;</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">位置参数</span><span class="p">]</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="err">位置参数</span><span class="p">];</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">约束条件</span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="k">AFTER</span><span class="w"> </span><span class="err">目标列</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">FIRST</span><span class="p">];</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">表名</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="p">[</span><span class="err">位置参数</span><span class="p">]</span>
 </span></code></pre></div>
 <ul>
 <li>ALTER TABLE 是<strong>主句</strong>，是修改表结构的所有操作的核心指令。</li>
@@ -3453,7 +4351,7 @@
 <h2 id="5">5.添加列到指定位置</h2>
 <p>在添加列的同时，可以通过AFTER和FIRST关键词指定新列的位置。AFTER和FIRST不属于约束条件</p>
 <p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="w"> </span><span class="p">[</span><span class="err">位置</span><span class="p">];</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="w"> </span><span class="p">[</span><span class="err">位置</span><span class="p">];</span>
 </span></code></pre></div>
 <ul>
 <li>
@@ -3465,29 +4363,29 @@
 </ul>
 <h2 id="6">6.调整列序</h2>
 <p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="err">目标列名</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="err">目标列名</span><span class="p">;</span>
 </span></code></pre></div>
 <p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">FIRST</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="w"> </span><span class="err">数据类型</span><span class="w"> </span><span class="k">FIRST</span><span class="p">;</span>
 </span></code></pre></div>
 <h2 id="1-">练习1：修改学生表 - 增删列</h2>
 <p>要求：先为student表添加四个新列chinese、math、english、computer，然后再把他们删掉</p>
 <p>步骤1：添加一个新列chinese</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">;</span>
 </span></code></pre></div>
 <p>步骤2: 添加三个新列 math、english、computer</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">,</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">,</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列定义</span><span class="p">;</span>
 </span></code></pre></div>
 <p>步骤3: 删除四个新列：chinese、math、english、computer</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">,</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">,</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">,</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">;</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="err">列名</span><span class="p">;</span>
 </span></code></pre></div>
 <h2 id="2-">练习2：修改学生表 - 指定列序</h2>
 <p>要求：在student表中添加四个新列chinese、math、english、computer，注意新列的位置</p>
@@ -3498,6 +4396,217 @@
 <h2 id="3-">练习3：修改学生表 - 列排序</h2>
 <p>要求：在student表中</p>
 <p>把chinese math english computer 改为 computer  english math chinese</p>
+<h1 id="10-mysql-alter-table">✅ 10 道 MySQL ALTER TABLE 语句练习题</h1>
+<p><code>ALTER TABLE</code> 是 MySQL 中用于 <strong>修改已有表结构</strong> 的 DDL（数据定义语言）语句，使用频率高，功能强大。</p>
+<p>它可以用来：</p>
+<ul>
+<li>添加列（字段）</li>
+<li>删除列</li>
+<li>修改列的数据类型或属性</li>
+<li>添加约束（如主键、唯一、外键等）</li>
+<li>删除约束</li>
+<li>重命名表</li>
+<li>重命名列</li>
+<li>修改表的存储引擎等</li>
+</ul>
+<hr />
+<h2 id="_1">🎯 练习目标</h2>
+<p>通过以下 <strong>10 道练习题</strong>，帮助你熟练掌握 <code>ALTER TABLE</code> 的常见用法，包括：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1~3</td>
+<td><strong>添加字段（列）</strong></td>
+</tr>
+<tr>
+<td>4~5</td>
+<td><strong>修改字段（列）</strong>：数据类型、名称、约束等</td>
+</tr>
+<tr>
+<td>6~7</td>
+<td><strong>删除字段（列）</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>添加约束（如主键、唯一键）</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>删除约束（如主键）</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>重命名表或字段</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_2">🧩 练习题（附表结构）</h2>
+<blockquote>
+<p>🎲 <strong>基础表：<code>employees</code></strong></p>
+</blockquote>
+<p>假设你已经创建了如下表（你可以先运行以下 SQL 创建表，再做练习）：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">);</span>
+</span></code></pre></div>
+<p>表中目前已有的字段为：<code>id</code>, <code>name</code>, <code>age</code></p>
+<hr />
+<h2 id="_3">✅ 练习题</h2>
+<hr />
+<h3 id="1-salary-decimal102"><strong>1. 添加一个新字段：<code>salary</code>，类型为 DECIMAL(10,2)</strong></h3>
+<blockquote>
+<p>目的：为员工表添加工资字段</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="2-department-varchar100-age"><strong>2. 添加一个字段：<code>department</code>，类型为 VARCHAR(100)，放在 <code>age</code> 字段后面</strong></h3>
+<blockquote>
+<p>目的：添加部门字段，并控制字段顺序</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>⚠️ MySQL 支持使用 <code>AFTER 列名</code> 或 <code>FIRST</code> 控制字段顺序，但不是所有数据库都支持。</p>
+</blockquote>
+<hr />
+<h3 id="3-hire_date-date-2023-01-01"><strong>3. 添加一个字段：<code>hire_date</code>，类型为 DATE，默认值为 '2023-01-01'</strong></h3>
+<blockquote>
+<p>目的：添加入职日期字段，并设置默认值</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">hire_date</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="4-name-varchar100"><strong>4. 将字段 <code>name</code> 的类型修改为 VARCHAR(100)</strong></h3>
+<blockquote>
+<p>目的：扩大 name 字段的存储空间</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="5-age-employee_age"><strong>5. 将字段 <code>age</code> 的名称修改为 <code>employee_age</code>，类型不变</strong></h3>
+<blockquote>
+<p>目的：重命名字段</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">CHANGE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">employee_age</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>⚠️ 注意：<code>CHANGE</code> 语法需要写 <strong>旧字段名和新字段名</strong>，还要重新写字段类型！</p>
+</blockquote>
+<p>如果你只想改名而 <strong>不改变类型</strong>，也必须把原类型写上。</p>
+<hr />
+<h3 id="6-hire_date"><strong>6. 删除字段：<code>hire_date</code></strong></h3>
+<blockquote>
+<p>目的：移除不需要的字段</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">hire_date</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="7-department"><strong>7. 删除字段：<code>department</code></strong></h3>
+<blockquote>
+<p>目的：删除部门字段</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="8-id"><strong>8. 为字段 <code>id</code> 添加主键约束</strong></h3>
+<blockquote>
+<p>目的：将 id 设为主键，保证唯一标识</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h3 id="9-employees"><strong>9. 删除表 <code>employees</code> 的主键约束</strong></h3>
+<blockquote>
+<p>目的：移除主键（比如重新设计表结构前）</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>⚠️ 注意：如果主键字段有 <code>AUTO_INCREMENT</code>，可能需要先去掉该属性。</p>
+</blockquote>
+<hr />
+<h3 id="10-employees-staff_info"><strong>10. 将表名 <code>employees</code> 修改为 <code>staff_info</code></strong></h3>
+<blockquote>
+<p>目的：重命名表</p>
+</blockquote>
+<p>🔧 答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">staff_info</span><span class="p">;</span>
+</span></code></pre></div>
+<p>或者（MySQL 也支持这种写法）：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">staff_info</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_4">📝 拓展练习（可选，挑战自己）</h2>
+<p>如果你已经完成了以上 10 题，可以尝试以下 <strong>进阶练习</strong>：</p>
+<ol>
+<li><strong>为 <code>id</code> 字段添加自增属性：<code>AUTO_INCREMENT</code></strong></li>
+<li><strong>为 <code>email</code> 字段添加唯一约束：<code>UNIQUE</code></strong></li>
+<li><strong>添加一个字段 <code>manager_id</code> INT，并设置为外键（需有对应主表）</strong></li>
+<li><strong>修改表引擎为 InnoDB：<code>ENGINE=InnoDB</code></strong></li>
+<li><strong>添加注释到某个字段，如：<code>COMMENT '员工年龄'</code></strong></li>
+</ol>
+<hr />
+<h2 id="alter-table">✅ 总结：ALTER TABLE 常用操作速查</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>语法示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>添加列</td>
+<td><code>ALTER TABLE 表名 ADD 列名 类型 [约束] [AFTER 列名]</code></td>
+</tr>
+<tr>
+<td>修改列类型/属性</td>
+<td><code>ALTER TABLE 表名 MODIFY 列名 新类型 [约束]</code></td>
+</tr>
+<tr>
+<td>修改列名称和类型</td>
+<td><code>ALTER TABLE 表名 CHANGE 旧列名 新列名 新类型 [约束]</code></td>
+</tr>
+<tr>
+<td>删除列</td>
+<td><code>ALTER TABLE 表名 DROP COLUMN 列名</code></td>
+</tr>
+<tr>
+<td>添加主键</td>
+<td><code>ALTER TABLE 表名 ADD PRIMARY KEY (列名)</code></td>
+</tr>
+<tr>
+<td>删除主键</td>
+<td><code>ALTER TABLE 表名 DROP PRIMARY KEY</code></td>
+</tr>
+<tr>
+<td>重命名表</td>
+<td><code>ALTER TABLE 旧表名 RENAME TO 新表名</code> 或 <code>RENAME TABLE 旧表名 TO 新表名</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>🙋 <strong>如果你想查看每道题的表结构变化，或者想要我提供每个练习的“执行前/后表结构对比”，或者想生成对应的 SQL 文件 / 练习环境，欢迎继续提问！</strong></p>
+<p>😊 <strong>掌握 ALTER TABLE，你就能灵活地设计、优化和迭代数据库结构！</strong></p>
 
 
 
