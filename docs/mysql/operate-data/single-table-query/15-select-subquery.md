@@ -324,3 +324,730 @@ WHERE avg_salary > 7000;
 ```
 
 ---
+
+
+# ✅ MySQL 嵌套查询（子查询）练习题
+
+嵌套查询（Subquery），也叫 **子查询**，是 MySQL 中非常强大且常用的功能，它允许你**在一个查询中嵌入另一个 SELECT 查询**，从而实现更灵活、更复杂的数据检索。
+
+---
+
+## 🎯 练习目标
+
+通过以下 **10 道基础练习题 + 5 道进阶练习题**，帮助你熟练掌握：
+
+| 类型 | 嵌套查询应用场景 |
+|------|------------------|
+| **基础** | WHERE 子句中的标量子查询、IN 子查询、比较子查询等 |
+| **进阶** | EXISTS / NOT EXISTS、派生表（FROM 中的子查询）、多层嵌套、结合聚合函数等 |
+
+---
+
+# ✅ 一、基础练习题（10道）
+
+> 🧩 **假设我们有如下两张表：**
+
+### 1. `students`（学生表）
+
+| id | name   | age | gender | score |
+|----|--------|-----|--------|-------|
+| 1  | 小明   | 18  | 男     | 88.5  |
+| 2  | 小红   | 19  | 女     | 92.0  |
+| 3  | 小刚   | 18  | 男     | 76.5  |
+| 4  | 小丽   | 20  | 女     | 85.0  |
+| 5  | 小华   | 19  | 男     | 90.0  |
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    gender VARCHAR(10),
+    score DECIMAL(5,2)
+);
+
+INSERT INTO students VALUES
+(1, '小明', 18, '男', 88.5),
+(2, '小红', 19, '女', 92.0),
+(3, '小刚', 18, '男', 76.5),
+(4, '小丽', 20, '女', 85.0),
+(5, '小华', 19, '男', 90.0);
+```
+
+---
+
+### 2. `classes`（班级表，可选，用于进阶练习）
+
+| class_id | class_name |
+|----------|------------|
+| 1        | 一班       |
+| 2        | 二班       |
+| 3        | 三班       |
+
+---
+
+## 🔹 基础练习题
+
+---
+
+### **1. 【标量子查询】查找分数高于小丽（id=4）的学生**
+
+> 提示：先查小丽的分数，再查 > 该分数的学生
+
+```sql
+SELECT name, score
+FROM students
+WHERE score > (SELECT score FROM students WHERE id = 4);
+```
+
+---
+
+### **2. 【IN 子查询】查找年龄是 18 或 19 的学生**
+
+> 提示：先查有哪些年龄，再用 IN
+
+```sql
+SELECT name, age
+FROM students
+WHERE age IN (18, 19);
+```
+
+或者用子查询形式（假设你动态获取这些年龄）：
+
+```sql
+SELECT name, age
+FROM students
+WHERE age IN (SELECT age FROM students WHERE age BETWEEN 18 AND 19);
+```
+
+---
+
+### **3. 【比较子查询】查找分数高于平均分的学生**
+
+> 提示：先查平均分，再查 > 平均分的学生
+
+```sql
+SELECT name, score
+FROM students
+WHERE score > (SELECT AVG(score) FROM students);
+```
+
+---
+
+### **4. 【WHERE + 子查询】查找班级中成绩最高的学生（假设每个学生属于某个班级，简化：找出最高分的学生）**
+
+```sql
+SELECT name, score
+FROM students
+WHERE score = (SELECT MAX(score) FROM students);
+```
+
+---
+
+### **5. 【EXISTS 子查询】查找存在成绩记录的学生（其实都有，这里只是演示 EXISTS 的用法）**
+
+```sql
+SELECT name
+FROM students s
+WHERE EXISTS (SELECT 1 FROM students WHERE id = s.id);
+```
+
+> ✅ 说明：EXISTS 用于判断子查询是否返回了任何行，常用于关联子查询
+
+---
+
+## 🔹 基础练习题（续）
+
+---
+
+### **6. 【查找分数低于 80 分的学生】使用子查询方式（虽然可以直接筛选，但用子查询方式）**
+
+```sql
+SELECT name, score
+FROM students
+WHERE score < (SELECT 80);  -- 当然这很假，但可以改成从某个固定表或值获取
+```
+
+更实际的例子：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score < (SELECT AVG(score) - 10 FROM students);
+```
+
+---
+
+### **7. 【查找所有女生的姓名和分数】用 IN 子查询方式（假设你只知道性别是女）**
+
+```sql
+SELECT name, score
+FROM students
+WHERE gender = '女';
+```
+
+或者用子查询：
+
+```sql
+SELECT name, score
+FROM students
+WHERE gender IN (SELECT gender FROM students WHERE gender = '女');
+```
+
+> 不太实用，但用于理解 IN 的思想
+
+---
+
+### **8. 【查找年龄等于某个值（如 18）的学生，用子查询方式】
+
+```sql
+SELECT name, age
+FROM students
+WHERE age = (SELECT 18); -- 无意义，仅演示
+```
+
+更合理的是：
+
+```sql
+SELECT name, age
+FROM students
+WHERE age = (SELECT age FROM students WHERE name = '小明');
+```
+
+---
+
+### **9. 【查找分数等于最高分的学生姓名】
+
+```sql
+SELECT name, score
+FROM students
+WHERE score = (SELECT MAX(score) FROM students);
+```
+
+---
+
+### **10. 【查找所有学生的姓名，以及全班平均分（用子查询显示一个固定值）】**
+
+```sql
+SELECT 
+    name, 
+    score,
+    (SELECT AVG(score) FROM students) AS class_avg
+FROM 
+    students;
+```
+
+> ✅ 这是标量子查询在 SELECT 中的用法，返回一个值，给每一行都展示
+
+---
+
+# ✅ 二、进阶练习题（5道）
+
+> 🧠 适合已经掌握基础嵌套查询后，进一步挑战
+
+---
+
+### **1. 【EXISTS 进阶】查找有学生成绩高于 90 的班级（假设有班级表 classes 和学生班级关联表 student_class）**
+
+> 假设有如下表：
+
+```sql
+CREATE TABLE classes (
+    class_id INT PRIMARY KEY,
+    class_name VARCHAR(50)
+);
+
+CREATE TABLE student_class (
+    student_id INT,
+    class_id INT,
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (class_id) REFERENCES classes(class_id)
+);
+```
+
+> 练习：查找 **至少有一个学生成绩 > 90 的班级名称**
+
+```sql
+SELECT c.class_name
+FROM classes c
+WHERE EXISTS (
+    SELECT 1
+    FROM student_class sc
+    JOIN students s ON sc.student_id = s.id
+    WHERE sc.class_id = c.class_id AND s.score > 90
+);
+```
+
+---
+
+### **2. 【派生表 / FROM 子查询】查找每个学生的成绩，并显示全班平均分（使用派生表）**
+
+```sql
+SELECT 
+    s.name, 
+    s.score,
+    avg_table.avg_score
+FROM 
+    students s,
+    (SELECT AVG(score) AS avg_score FROM students) AS avg_table;
+```
+
+---
+
+### **3. 【多层嵌套】查找分数高于 平均分 的学生，且年龄小于 20**
+
+```sql
+SELECT name, score, age
+FROM students
+WHERE score > (SELECT AVG(score) FROM students)
+  AND age < 20;
+```
+
+---
+
+### **4. 【结合聚合函数】查找每个班级中成绩最高的学生（假设有 student_class 表）**
+
+> 简化版：查找成绩最高的学生姓名与分数
+
+```sql
+SELECT name, score
+FROM students
+WHERE score = (SELECT MAX(score) FROM students);
+```
+
+进阶：按班级分组找最高分（需有班级关联表，暂略）
+
+---
+
+### **5. 【IN + 子查询】查找所有成绩在 80~90 分之间的学生姓名**
+
+```sql
+SELECT name, score
+FROM students
+WHERE score BETWEEN 80 AND 90;
+```
+
+或者用子查询方式：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score IN (85.0, 88.5, 90.0); -- 假定你已知这些分数
+```
+
+更动态的方式：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score IN (SELECT score FROM students WHERE score BETWEEN 80 AND 90);
+```
+
+---
+
+# ✅ 总结：嵌套查询类型速查
+
+| 类型 | 说明 | 常见关键词 |
+|------|------|-------------|
+| **标量子查询** | 返回单个值，常用于 =、>、< 比较 | `WHERE score > (子查询)` |
+| **IN 子查询** | 返回多个值，用于 IN (...) 判断 | `WHERE 列 IN (子查询)` |
+| **EXISTS / NOT EXISTS** | 判断子查询是否有返回行 | `WHERE EXISTS (子查询)` |
+| **派生表（FROM 子查询）** | 子查询结果作为临时表使用 | `FROM (子查询) AS 别名` |
+| **比较运算符 + 子查询** | 如 > ALL、< ANY 等 | `WHERE score > ALL (子查询)` |
+
+---
+
+
+---
+
+**掌握嵌套查询，是成为 SQL 高手的重要一步！💪**
+
+
+# ✅ MySQL 嵌套查询（子查询）练习题答案与解析
+
+下面是前面提供的 **10 道基础练习题 + 5 道进阶练习题** 的 **详细答案与解析**，帮助你深入理解每道题的 **目的、思路、语法与执行逻辑**。
+
+---
+
+# 🎯 一、基础练习题（10道）及答案解析
+
+> 📌 **基础表：students**
+
+| id | name   | age | gender | score |
+|----|--------|-----|--------|-------|
+| 1  | 小明   | 18  | 男     | 88.5  |
+| 2  | 小红   | 19  | 女     | 92.0  |
+| 3  | 小刚   | 18  | 男     | 76.5  |
+| 4  | 小丽   | 20  | 女     | 85.0  |
+| 5  | 小华   | 19  | 男     | 90.0  |
+
+---
+
+## 🔹 题目 1
+
+### 📝 题目：查找分数高于小丽（id=4）的学生
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score > (SELECT score FROM students WHERE id = 4);
+```
+
+### 🔍 解析：
+
+- 子查询：`(SELECT score FROM students WHERE id = 4)` → 返回 **小丽的分数：85.0**
+- 外层查询：查找 `score > 85.0` 的学生
+- 结果：小明(88.5)、小红(92.0)、小华(90.0)
+
+> 🎯 目的：通过子查询先获取某个特定值（小丽的分数），再基于该值做比较筛选
+
+---
+
+## 🔹 题目 2
+
+### 📝 题目：查找年龄是 18 或 19 的学生
+
+### ✅ 答案（普通写法）：
+
+```sql
+SELECT name, age
+FROM students
+WHERE age IN (18, 19);
+```
+
+### ✅ 答案（子查询方式，演示用）：
+
+```sql
+SELECT name, age
+FROM students
+WHERE age IN (SELECT age FROM students WHERE age BETWEEN 18 AND 19);
+```
+
+### 🔍 解析：
+
+- 子查询返回年龄为 18 或 19 的值：`(18, 18, 19, 19)`
+- 外层 `IN` 匹配这些年龄，返回对应学生
+- 目的：演示 IN 子查询的基本用法，虽然这个例子可以直接写 `WHERE age IN (18,19)`
+
+---
+
+## 🔹 题目 3
+
+### 📝 题目：查找分数高于平均分的学生
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score > (SELECT AVG(score) FROM students);
+```
+
+### 🔍 解析：
+
+- 子查询：`(SELECT AVG(score) FROM students)` → 计算所有学生的平均分，约为 **86.4**
+- 外层查询筛选出 `score > 86.4` 的学生
+- 结果：小红(92.0)、小华(90.0)、小明(88.5)
+
+> 🎯 目的：通过子查询先计算聚合值（平均数），再做比较
+
+---
+
+## 🔹 题目 4
+
+### 📝 题目：查找分数最高的学生
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score = (SELECT MAX(score) FROM students);
+```
+
+### 🔍 解析：
+
+- 子查询：`(SELECT MAX(score) FROM students)` → 返回最高分：**92.0**
+- 外层查询：找出分数等于 92.0 的学生
+- 结果：小红（92.0）
+
+> 🎯 目的：查找极值（最大值/最小值）是子查询常见用法
+
+---
+
+## 🔹 题目 5
+
+### 📝 题目：查找存在成绩记录的学生（演示 EXISTS 的用法）
+
+### ✅ 答案：
+
+```sql
+SELECT name
+FROM students s
+WHERE EXISTS (SELECT 1 FROM students WHERE id = s.id);
+```
+
+### 🔍 解析：
+
+- `EXISTS` 用于判断子查询是否返回了 **任意一行**
+- 这里子查询对每个学生都返回 1 行 → 所有学生都满足
+- 常用于更复杂的关联场景，比如“存在匹配的订单”、“存在关联的用户”等
+
+> 🎯 EXISTS 不关心返回的具体内容，只关心有没有结果
+
+---
+
+## 🔹 题目 6
+
+### 📝 题目：查找分数低于 80 分的学生（用子查询方式）
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score < (SELECT 80);
+```
+
+> ❌ 无意义，仅作语法示意
+
+### ✅ 更实用的写法（结合计算）：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score < (SELECT AVG(score) - 10 FROM students);
+```
+
+- 假设平均分是 86.4，则 86.4 - 10 ≈ 76.4
+- 查找分数 < 76.4 的学生 → 小刚（76.5 几乎不满足，视实际计算而定）
+
+> 🎯 目的：演示如何从子查询获取“动态阈值”来进行比较
+
+---
+
+## 🔹 题目 7
+
+### 📝 题目：查找所有女生的姓名和分数（用 IN 方式，仅演示）
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE gender = '女';
+```
+
+或者（不实用，仅演示 IN）：
+
+```sql
+SELECT name, score
+FROM students
+WHERE gender IN (SELECT gender FROM students WHERE gender = '女');
+```
+
+> 🎯 目的：理解 IN 的基本语法，虽然这个例子可以直接用 `WHERE gender = '女'`
+
+---
+
+## 🔹 题目 8
+
+### 📝 题目：查找年龄等于某个值（如 18）的学生（用子查询方式）
+
+### ✅ 答案：
+
+```sql
+SELECT name, age
+FROM students
+WHERE age = (SELECT age FROM students WHERE name = '小明');
+```
+
+- 子查询返回小明的年龄：18
+- 外层查询找出 age = 18 的学生 → 小明、小刚
+
+> 🎯 目的：通过子查询获取某个值，再做等值比较
+
+---
+
+## 🔹 题目 9
+
+### 📝 题目：查找分数等于最高分的学生姓名
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score = (SELECT MAX(score) FROM students);
+```
+
+- 和第 4 题一样，查找最高分对应的学生 → 小红
+
+---
+
+## 🔹 题目 10
+
+### 📝 题目：查找所有学生的姓名和分数，以及全班平均分
+
+### ✅ 答案：
+
+```sql
+SELECT 
+    name, 
+    score,
+    (SELECT AVG(score) FROM students) AS class_avg
+FROM 
+    students;
+```
+
+- `(SELECT AVG(score) FROM students)` → 返回一个值（比如 86.4）
+- 对 **每一行学生数据**，都显示该平均分
+- 常用于报表中展示“个体 + 整体统计”
+
+> 🎯 目的：标量子查询用在 SELECT 中，为每行附加一个聚合信息
+
+---
+
+# 🚀 二、进阶练习题（5道）及答案解析
+
+---
+
+## 🔸 题目 1
+
+### 📝 题目：查找有学生成绩高于 90 的班级名称（假设有 classes 和 student_class 表）
+
+### ✅ 答案：
+
+```sql
+SELECT c.class_name
+FROM classes c
+WHERE EXISTS (
+    SELECT 1
+    FROM student_class sc
+    JOIN students s ON sc.student_id = s.id
+    WHERE sc.class_id = c.class_id AND s.score > 90
+);
+```
+
+### 🔍 解析：
+
+- 使用 `EXISTS` 判断：**是否存在某个班级，其中有学生成绩 > 90**
+- 关联了班级表、学生班级关联表、学生表
+- 是实际项目中非常典型的 **关联子查询 + EXISTS 的用法**
+
+> 🎯 目的：掌握 EXISTS 在多表关联查询中的实战应用
+
+---
+
+## 🔸 题目 2
+
+### 📝 题目：查找每个学生的成绩，并显示全班平均分（派生表方式）
+
+### ✅ 答案：
+
+```sql
+SELECT 
+    s.name, 
+    s.score,
+    avg_table.avg_score
+FROM 
+    students s,
+    (SELECT AVG(score) AS avg_score FROM students) AS avg_table;
+```
+
+### 🔍 解析：
+
+- 派生表 `(SELECT AVG(score)...) AS avg_table` → 计算出一个平均分
+- 然后将其与学生表进行笛卡尔积（简单展示），为每个学生都显示该平均分
+- 是 **子查询作为临时表（FROM 中的子查询）** 的典型用法
+
+> 🎯 目的：学习如何在 FROM 中使用子查询作为派生表/临时表
+
+---
+
+## 🔸 题目 3
+
+### 📝 题目：查找分数高于平均分且年龄小于 20 的学生
+
+### ✅ 答案：
+
+```sql
+SELECT name, score, age
+FROM students
+WHERE score > (SELECT AVG(score) FROM students)
+  AND age < 20;
+```
+
+### 🔍 解析：
+
+- 嵌套了一个子查询获取平均分
+- 再结合普通条件 `age < 20`
+- 是 **组合条件 + 嵌套查询** 的常见写法
+
+---
+
+## 🔸 题目 4
+
+### 📝 题目：查找成绩最高的学生姓名（简化聚合查询）
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score = (SELECT MAX(score) FROM students);
+```
+
+> 🎯 目的：查找极值并显示对应记录，是典型单值嵌套查询
+
+---
+
+## 🔸 题目 5
+
+### 📝 题目：查找所有分数在 80~90 之间的学生（用子查询方式）
+
+### ✅ 答案：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score IN (85.0, 88.5, 90.0);
+```
+
+或者动态一点：
+
+```sql
+SELECT name, score
+FROM students
+WHERE score IN (SELECT score FROM students WHERE score BETWEEN 80 AND 90);
+```
+
+> 🎯 目的：演示 IN 子查询与范围查询的结合
+
+---
+
+# ✅ 总结
+
+| 练习类型 | 常见语法 | 用途 |
+|----------|----------|------|
+| **标量子查询** | `(SELECT ...)` 用于比较或显示单值 | 比较、展示聚合信息 |
+| **IN 子查询** | `WHERE 列 IN (子查询)` | 匹配多个可能值 |
+| **EXISTS** | `WHERE EXISTS (子查询)` | 判断是否有匹配记录 |
+| **派生表** | `FROM (子查询) AS 别名` | 把子查询结果当表用 |
+| **多层/组合嵌套** | 多个子查询组合条件 | 实现复杂业务逻辑 |
+
+---
+
+🙋 **如果你想要：**
+
+- 每道题的 **表创建脚本 + 数据插入语句完整版**
+- 每题的 **执行结果示例**
+- 或者打包成 **SQL 文件 / 在线练习环境**
+
+欢迎继续提问！我可以帮你生成 👍
+
+---
+
+**掌握嵌套查询，是成为 SQL 高手的关键一步！💡**

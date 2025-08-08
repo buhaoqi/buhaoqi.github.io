@@ -18,7 +18,7 @@
         <link rel="prev" href="../0807/">
       
       
-        <link rel="next" href="../../../english/">
+        <link rel="next" href="../0809/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -1924,6 +1924,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0809/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8月9日ALTER TABLE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2161,13 +2184,15 @@
 
 <p>今日作业(数据查询)</p>
 <p>一、复习SELECT语句和子句的用法(自己总结)</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="k">DISTINCT</span><span class="p">]</span><span class="w"> </span><span class="err">列名</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">列名</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">]</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">[</span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">分组列</span><span class="p">]</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">[</span><span class="k">HAVING</span><span class="w"> </span><span class="err">分组条件</span><span class="p">]</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">[</span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">排序列</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">]]</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">[</span><span class="k">LIMIT</span><span class="w"> </span><span class="p">[</span><span class="err">偏移量</span><span class="p">,]</span><span class="w"> </span><span class="err">行数</span><span class="p">];</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="k">ALL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">DISTINCT</span><span class="p">]</span><span class="w"> </span><span class="err">输出列表达式</span><span class="mi">1</span><span class="p">,</span><span class="err">输出列表达式</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">[</span><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span><span class="p">]</span><span class="w">                          </span><span class="cm">/*FROM子句*/</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">]</span><span class="w">                         </span><span class="cm">/*WHERE子句*/</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">[</span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">列名</span><span class="p">]</span><span class="w">                      </span><span class="cm">/*GROUP BY子句*/</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="p">[</span><span class="k">ASC</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">DESC</span><span class="p">]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">[</span><span class="k">HAVING</span><span class="w"> </span><span class="err">群组后条件</span><span class="p">]</span><span class="w">                   </span><span class="cm">/*HAVING子句*/</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">[</span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">列名</span><span class="o">|</span><span class="err">表达式｜列编号</span><span class="w"> </span><span class="p">]</span><span class="w">        </span><span class="cm">/*ORDER BY子句*/</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">[</span><span class="k">LIMIT</span><span class="w"> </span><span class="err">偏移量</span><span class="w"> </span><span class="err">行</span><span class="p">];</span><span class="w">  </span><span class="cm">/*LIMIT子句*/</span>
 </span></code></pre></div>
 <p>二、实操题：查询学生信息表</p>
 <p>三、达标标准：不看笔记，熟练敲出来。不出现各种常见错误，如：标点、括号等</p>
@@ -2456,13 +2481,13 @@
         
         
           
-          <a href="../../../english/" class="md-footer__link md-footer__link--next" aria-label="下一页: 首页">
+          <a href="../0809/" class="md-footer__link md-footer__link--next" aria-label="下一页: 8月9日ALTER TABLE">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                首页
+                8月9日ALTER TABLE
               </div>
             </div>
             <div class="md-footer__button md-icon">

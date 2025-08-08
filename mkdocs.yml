@@ -270,7 +270,7 @@ nav:
       - WHERE查询: mysql/operate-data/single-table-query/10-select-where.md
       - 群组查询: mysql/operate-data/single-table-query/13-select-group-by.md
       - 聚合查询: mysql/operate-data/single-table-query/14-select-aggregate.md
-      - 子查询: mysql/operate-data/single-table-query/15-select-subquery.md
+      - 嵌套查询: mysql/operate-data/single-table-query/15-select-subquery.md
     - 多表查询:
       - 连接查询: mysql/operate-data/16-select-join.md
     - 分类汇总:
@@ -417,6 +417,7 @@ nav:
     - 8月7日MySQL建表: exercises/mysql/0807.md
     - 8月8日MySQL查询: exercises/mysql/0808.md
     - 8月9日ALTER TABLE: exercises/mysql/0809.md
+    - 8月10日嵌套查询: exercises/mysql/0810.md
   - 编程英语:
       - 首页: english/index.md
       - A: english/a.md
