@@ -12,13 +12,13 @@
         <meta name="author" content="村长">
       
       
-        <link rel="canonical" href="https://buhaoqi.github.io/exercises/mysql/0809/">
+        <link rel="canonical" href="https://buhaoqi.github.io/exercises/mysql/0810/">
       
       
-        <link rel="prev" href="../0808/">
+        <link rel="prev" href="../0809/">
       
       
-        <link rel="next" href="../0810/">
+        <link rel="next" href="../../../english/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>8月9日ALTER TABLE - 高二九班(对口计算机)</title>
+        <title>8月10日嵌套查询 - 高二九班(对口计算机)</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#alter-table" class="md-skip">
+        <a href="#mysql" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8月9日ALTER TABLE
+              8月10日嵌套查询
             
           </span>
         </div>
@@ -1752,6 +1752,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../0809/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8月9日ALTER TABLE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1767,7 +1790,7 @@
   
   
   <span class="md-ellipsis">
-    8月9日ALTER TABLE
+    8月10日嵌套查询
     
   </span>
   
@@ -1780,7 +1803,7 @@
   
   
   <span class="md-ellipsis">
-    8月9日ALTER TABLE
+    8月10日嵌套查询
     
   </span>
   
@@ -1801,9 +1824,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alter-table" class="md-nav__link">
+  <a href="#mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      ALTER TABLE
+      关于MySQL 嵌套查询（子查询）
     </span>
   </a>
   
@@ -1819,109 +1842,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#employees" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      基础表：employees
+      题目
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10" class="md-nav__link">
-    <span class="md-ellipsis">
-      基础练习（10道）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="基础练习（10道）">
+    <nav class="md-nav" aria-label="题目">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-salary-decimal102" class="md-nav__link">
+  <a href="#1-students" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 添加一个新字段：salary，类型为 DECIMAL(10,2)
+      1. students（学生表）
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-department-varchar100-age" class="md-nav__link">
+  <a href="#2-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 添加一个字段：department，类型为 VARCHAR(100)，放在 age 字段后面
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hire_date-date-2023-01-01" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 添加一个字段：hire_date，类型为 DATE，默认值为 '2023-01-01'
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-name-varchar100" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 将字段 name 的类型修改为 VARCHAR(100)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-age-employee_age" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 将字段 age 的名称修改为 employee_age，类型不变
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-hire_date" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 删除字段：hire_date
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-department" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 删除字段：department
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 为字段 id 添加主键约束
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-employees" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. 删除表 employees 的主键约束
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-employees-staff_info" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. 将表名 employees 修改为 staff_info
+      2. classes（班级表，可选，用于进阶练习）
     </span>
   </a>
   
@@ -1933,118 +1875,214 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#10" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 拓展练习（可选，挑战自己）
+      基础练习题（10道）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础练习题（10道）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-id4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 【标量子查询】查找分数高于小丽（id=4）的学生
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#alter-table_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-in-18-19" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ 总结：ALTER TABLE 常用操作速查
+      2. 【IN 子查询】查找年龄是 18 或 19 的学生
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 【比较子查询】查找分数高于平均分的学生
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 【WHERE + 子查询】查找班级中成绩最高的学生（假设每个学生属于某个班级，简化：找出最高分的学生）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exists-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 【EXISTS 子查询】查找存在成绩记录的学生（其实都有，这里只是演示 EXISTS 的用法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-80" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 【查找分数低于 80 分的学生】使用子查询方式（虽然可以直接筛选，但用子查询方式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 【查找所有女生的姓名和分数】用 IN 子查询方式（假设你只知道性别是女）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 【查找年龄等于某个值（如 18）的学生，用子查询方式】
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 【查找分数等于最高分的学生姓名】
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 【查找所有学生的姓名，以及全班平均分（用子查询显示一个固定值）】
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      答案（基础练习）
+      总结：嵌套查询类型速查
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="答案（基础练习）">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      答案解析（基础练习题）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="答案解析（基础练习题）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-salary-decimal102_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 添加一个新字段：salary，类型为 DECIMAL(10,2)
+      题目 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-department-varchar100-age_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 添加一个字段：department，类型为 VARCHAR(100)，放在 age 字段后面
+      题目 2
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-hire_date-date-2023-01-01_1" class="md-nav__link">
+  <a href="#3_1" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 添加一个字段：hire_date，类型为 DATE，默认值为 '2023-01-01'
+      题目 3
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-name-varchar100_1" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 将字段 name 的类型修改为 VARCHAR(100)
+      题目 4
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-age-employee_age_1" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 将字段 age 的名称修改为 employee_age，类型不变
+      题目 5
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-hire_date_1" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
-      6. 删除字段：hire_date
+      题目 6
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-department_1" class="md-nav__link">
+  <a href="#7" class="md-nav__link">
     <span class="md-ellipsis">
-      7. 删除字段：department
+      题目 7
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-id_1" class="md-nav__link">
+  <a href="#8" class="md-nav__link">
     <span class="md-ellipsis">
-      8. 为字段 id 添加主键约束
+      题目 8
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#9-employees_1" class="md-nav__link">
+  <a href="#9_1" class="md-nav__link">
     <span class="md-ellipsis">
-      9. 删除表 employees 的主键约束
+      题目 9
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#10-employees-staff_info_1" class="md-nav__link">
+  <a href="#10_2" class="md-nav__link">
     <span class="md-ellipsis">
-      10. 将表名 employees 修改为 staff_info
+      题目 10
     </span>
   </a>
   
@@ -2059,29 +2097,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../0810/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    8月10日嵌套查询
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2167,9 +2182,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#alter-table" class="md-nav__link">
+  <a href="#mysql" class="md-nav__link">
     <span class="md-ellipsis">
-      ALTER TABLE
+      关于MySQL 嵌套查询（子查询）
     </span>
   </a>
   
@@ -2185,109 +2200,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#employees" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      基础表：employees
+      题目
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10" class="md-nav__link">
-    <span class="md-ellipsis">
-      基础练习（10道）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="基础练习（10道）">
+    <nav class="md-nav" aria-label="题目">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-salary-decimal102" class="md-nav__link">
+  <a href="#1-students" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 添加一个新字段：salary，类型为 DECIMAL(10,2)
+      1. students（学生表）
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-department-varchar100-age" class="md-nav__link">
+  <a href="#2-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 添加一个字段：department，类型为 VARCHAR(100)，放在 age 字段后面
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hire_date-date-2023-01-01" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 添加一个字段：hire_date，类型为 DATE，默认值为 '2023-01-01'
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-name-varchar100" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 将字段 name 的类型修改为 VARCHAR(100)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-age-employee_age" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. 将字段 age 的名称修改为 employee_age，类型不变
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-hire_date" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 删除字段：hire_date
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-department" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 删除字段：department
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 为字段 id 添加主键约束
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-employees" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. 删除表 employees 的主键约束
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-employees-staff_info" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. 将表名 employees 修改为 staff_info
+      2. classes（班级表，可选，用于进阶练习）
     </span>
   </a>
   
@@ -2299,118 +2233,214 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#10" class="md-nav__link">
     <span class="md-ellipsis">
-      📝 拓展练习（可选，挑战自己）
+      基础练习题（10道）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础练习题（10道）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-id4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 【标量子查询】查找分数高于小丽（id=4）的学生
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#alter-table_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-in-18-19" class="md-nav__link">
     <span class="md-ellipsis">
-      ✅ 总结：ALTER TABLE 常用操作速查
+      2. 【IN 子查询】查找年龄是 18 或 19 的学生
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 【比较子查询】查找分数高于平均分的学生
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 【WHERE + 子查询】查找班级中成绩最高的学生（假设每个学生属于某个班级，简化：找出最高分的学生）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-exists-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 【EXISTS 子查询】查找存在成绩记录的学生（其实都有，这里只是演示 EXISTS 的用法）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-80" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 【查找分数低于 80 分的学生】使用子查询方式（虽然可以直接筛选，但用子查询方式）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 【查找所有女生的姓名和分数】用 IN 子查询方式（假设你只知道性别是女）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 【查找年龄等于某个值（如 18）的学生，用子查询方式】
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 【查找分数等于最高分的学生姓名】
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 【查找所有学生的姓名，以及全班平均分（用子查询显示一个固定值）】
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      答案（基础练习）
+      总结：嵌套查询类型速查
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="答案（基础练习）">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      答案解析（基础练习题）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="答案解析（基础练习题）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-salary-decimal102_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 添加一个新字段：salary，类型为 DECIMAL(10,2)
+      题目 1
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-department-varchar100-age_1" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 添加一个字段：department，类型为 VARCHAR(100)，放在 age 字段后面
+      题目 2
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-hire_date-date-2023-01-01_1" class="md-nav__link">
+  <a href="#3_1" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 添加一个字段：hire_date，类型为 DATE，默认值为 '2023-01-01'
+      题目 3
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-name-varchar100_1" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      4. 将字段 name 的类型修改为 VARCHAR(100)
+      题目 4
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-age-employee_age_1" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 将字段 age 的名称修改为 employee_age，类型不变
+      题目 5
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-hire_date_1" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
-      6. 删除字段：hire_date
+      题目 6
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-department_1" class="md-nav__link">
+  <a href="#7" class="md-nav__link">
     <span class="md-ellipsis">
-      7. 删除字段：department
+      题目 7
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-id_1" class="md-nav__link">
+  <a href="#8" class="md-nav__link">
     <span class="md-ellipsis">
-      8. 为字段 id 添加主键约束
+      题目 8
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#9-employees_1" class="md-nav__link">
+  <a href="#9_1" class="md-nav__link">
     <span class="md-ellipsis">
-      9. 删除表 employees 的主键约束
+      题目 9
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#10-employees-staff_info_1" class="md-nav__link">
+  <a href="#10_2" class="md-nav__link">
     <span class="md-ellipsis">
-      10. 将表名 employees 修改为 staff_info
+      题目 10
     </span>
   </a>
   
@@ -2437,267 +2467,412 @@
 
 
 
-  <h1>8月9日ALTER TABLE</h1>
+  <h1>8月10日嵌套查询</h1>
 
-<p>今日作业(修改数据表结构)</p>
-<p>一、复习ALTER Table语句的用法</p>
+<p>今日作业(嵌套查询)</p>
+<p>一、复习嵌套查询的用法</p>
 <p>二、十道基础题 + 5道进阶题</p>
-<h2 id="alter-table">ALTER TABLE</h2>
-<p><code>ALTER TABLE</code> 是 MySQL 中用于 <strong>修改已有表结构</strong> 的 DDL（数据定义语言）语句，使用频率高，功能强大。</p>
-<p>它可以用来：</p>
-<ul>
-<li>添加列（字段）</li>
-<li>删除列</li>
-<li>修改列的数据类型或属性</li>
-<li>添加约束（如主键、唯一、外键等）</li>
-<li>删除约束</li>
-<li>重命名表</li>
-<li>重命名列</li>
-<li>修改表的存储引擎等</li>
-</ul>
+<h2 id="mysql">关于MySQL 嵌套查询（子查询）</h2>
+<p>嵌套查询（Subquery），也叫 <strong>子查询</strong>，是 MySQL 中非常强大且常用的功能，它允许你<strong>在一个查询中嵌入另一个 SELECT 查询</strong>，从而实现更灵活、更复杂的数据检索。</p>
 <hr />
 <h2 id="_1">🎯 练习目标</h2>
-<p>通过以下 <strong>10 道练习题</strong>，帮助你熟练掌握 <code>ALTER TABLE</code> 的常见用法，包括：</p>
+<p>通过以下 <strong>10 道基础练习题 + 5 道进阶练习题</strong>，帮助你熟练掌握：</p>
 <table>
 <thead>
 <tr>
-<th>功能</th>
-<th>说明</th>
+<th>类型</th>
+<th>嵌套查询应用场景</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1~3</td>
-<td><strong>添加字段（列）</strong></td>
+<td><strong>基础</strong></td>
+<td>WHERE 子句中的标量子查询、IN 子查询、比较子查询等</td>
 </tr>
 <tr>
-<td>4~5</td>
-<td><strong>修改字段（列）</strong>：数据类型、名称、约束等</td>
-</tr>
-<tr>
-<td>6~7</td>
-<td><strong>删除字段（列）</strong></td>
-</tr>
-<tr>
-<td>8</td>
-<td><strong>添加约束（如主键、唯一键）</strong></td>
-</tr>
-<tr>
-<td>9</td>
-<td><strong>删除约束（如主键）</strong></td>
-</tr>
-<tr>
-<td>10</td>
-<td><strong>重命名表或字段</strong></td>
+<td><strong>进阶</strong></td>
+<td>EXISTS / NOT EXISTS、派生表（FROM 中的子查询）、多层嵌套、结合聚合函数等</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="employees"><strong>基础表：<code>employees</code></strong></h2>
-<p>假设你已经创建了如下表（你可以先运行以下 SQL 创建表，再做练习）：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<h2 id="_2">题目</h2>
+<blockquote>
+<p>🧩 <strong>假设我们有如下两张表：</strong></p>
+</blockquote>
+<h3 id="1-students">1. <code>students</code>（学生表）</h3>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>gender</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>小明</td>
+<td>18</td>
+<td>男</td>
+<td>88.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>小红</td>
+<td>19</td>
+<td>女</td>
+<td>92.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>小刚</td>
+<td>18</td>
+<td>男</td>
+<td>76.5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>小丽</td>
+<td>20</td>
+<td>女</td>
+<td>85.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>小华</td>
+<td>19</td>
+<td>男</td>
+<td>90.0</td>
+</tr>
+</tbody>
+</table>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">score</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">VALUES</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小明&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">.</span><span class="mi">5</span><span class="p">),</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小红&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">.</span><span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小刚&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">76</span><span class="p">.</span><span class="mi">5</span><span class="p">),</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小丽&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">.</span><span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小华&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span>
 </span></code></pre></div>
-<p>表中目前已有的字段为：<code>id</code>, <code>name</code>, <code>age</code></p>
 <hr />
-<h2 id="10">基础练习（10道）</h2>
-<hr />
-<h3 id="1-salary-decimal102"><strong>1. 添加一个新字段：<code>salary</code>，类型为 DECIMAL(10,2)</strong></h3>
-<blockquote>
-<p>目的：为员工表添加工资字段</p>
-</blockquote>
-<hr />
-<h3 id="2-department-varchar100-age"><strong>2. 添加一个字段：<code>department</code>，类型为 VARCHAR(100)，放在 <code>age</code> 字段后面</strong></h3>
-<blockquote>
-<p>目的：添加部门字段，并控制字段顺序</p>
-</blockquote>
-<hr />
-<h3 id="3-hire_date-date-2023-01-01"><strong>3. 添加一个字段：<code>hire_date</code>，类型为 DATE，默认值为 '2023-01-01'</strong></h3>
-<blockquote>
-<p>目的：添加入职日期字段，并设置默认值</p>
-</blockquote>
-<hr />
-<h3 id="4-name-varchar100"><strong>4. 将字段 <code>name</code> 的类型修改为 VARCHAR(100)</strong></h3>
-<blockquote>
-<p>目的：扩大 name 字段的存储空间</p>
-</blockquote>
-<hr />
-<h3 id="5-age-employee_age"><strong>5. 将字段 <code>age</code> 的名称修改为 <code>employee_age</code>，类型不变</strong></h3>
-<blockquote>
-<p>目的：重命名字段</p>
-</blockquote>
-<hr />
-<h3 id="6-hire_date"><strong>6. 删除字段：<code>hire_date</code></strong></h3>
-<blockquote>
-<p>目的：移除不需要的字段</p>
-</blockquote>
-<hr />
-<h3 id="7-department"><strong>7. 删除字段：<code>department</code></strong></h3>
-<blockquote>
-<p>目的：删除部门字段</p>
-</blockquote>
-<hr />
-<h3 id="8-id"><strong>8. 为字段 <code>id</code> 添加主键约束</strong></h3>
-<blockquote>
-<p>目的：将 id 设为主键，保证唯一标识</p>
-</blockquote>
-<hr />
-<h3 id="9-employees"><strong>9. 删除表 <code>employees</code> 的主键约束</strong></h3>
-<blockquote>
-<p>目的：移除主键（比如重新设计表结构前）</p>
-</blockquote>
-<hr />
-<h3 id="10-employees-staff_info"><strong>10. 将表名 <code>employees</code> 修改为 <code>staff_info</code></strong></h3>
-<blockquote>
-<p>目的：重命名表</p>
-</blockquote>
-<hr />
-<h2 id="_2">📝 拓展练习（可选，挑战自己）</h2>
-<p>如果你已经完成了以上 10 题，可以尝试以下 <strong>进阶练习</strong>：</p>
-<ol>
-<li><strong>为 <code>id</code> 字段添加自增属性：<code>AUTO_INCREMENT</code></strong></li>
-<li><strong>为 <code>email</code> 字段添加唯一约束：<code>UNIQUE</code></strong></li>
-<li><strong>添加一个字段 <code>manager_id</code> INT，并设置为外键（需有对应主表）</strong></li>
-<li><strong>修改表引擎为 InnoDB：<code>ENGINE=InnoDB</code></strong></li>
-<li><strong>添加注释到某个字段，如：<code>COMMENT '员工年龄'</code></strong></li>
-</ol>
-<hr />
-<h2 id="alter-table_1">✅ 总结：ALTER TABLE 常用操作速查</h2>
+<h3 id="2-classes">2. <code>classes</code>（班级表，可选，用于进阶练习）</h3>
 <table>
 <thead>
 <tr>
-<th>功能</th>
-<th>语法示例</th>
+<th>class_id</th>
+<th>class_name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>添加列</td>
-<td><code>ALTER TABLE 表名 ADD 列名 类型 [约束] [AFTER 列名]</code></td>
+<td>1</td>
+<td>一班</td>
 </tr>
 <tr>
-<td>修改列类型/属性</td>
-<td><code>ALTER TABLE 表名 MODIFY 列名 新类型 [约束]</code></td>
+<td>2</td>
+<td>二班</td>
 </tr>
 <tr>
-<td>修改列名称和类型</td>
-<td><code>ALTER TABLE 表名 CHANGE 旧列名 新列名 新类型 [约束]</code></td>
-</tr>
-<tr>
-<td>删除列</td>
-<td><code>ALTER TABLE 表名 DROP COLUMN 列名</code></td>
-</tr>
-<tr>
-<td>添加主键</td>
-<td><code>ALTER TABLE 表名 ADD PRIMARY KEY (列名)</code></td>
-</tr>
-<tr>
-<td>删除主键</td>
-<td><code>ALTER TABLE 表名 DROP PRIMARY KEY</code></td>
-</tr>
-<tr>
-<td>重命名表</td>
-<td><code>ALTER TABLE 旧表名 RENAME TO 新表名</code> 或 <code>RENAME TABLE 旧表名 TO 新表名</code></td>
+<td>3</td>
+<td>三班</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="_3">答案（基础练习）</h2>
-<h3 id="1-salary-decimal102_1"><strong>1. 添加一个新字段：<code>salary</code>，类型为 DECIMAL(10,2)</strong></h3>
+<h2 id="10">基础练习题（10道）</h2>
+<h3 id="1-id4"><strong>1. 【标量子查询】查找分数高于小丽（id=4）的学生</strong></h3>
 <blockquote>
-<p>目的：为员工表添加工资字段</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<h3 id="2-department-varchar100-age_1"><strong>2. 添加一个字段：<code>department</code>，类型为 VARCHAR(100)，放在 <code>age</code> 字段后面</strong></h3>
-<blockquote>
-<p>目的：添加部门字段，并控制字段顺序</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-</span></code></pre></div>
-<blockquote>
-<p>⚠️ MySQL 支持使用 <code>AFTER 列名</code> 或 <code>FIRST</code> 控制字段顺序，但不是所有数据库都支持。</p>
+<p>提示：先查小丽的分数，再查 &gt; 该分数的学生</p>
 </blockquote>
 <hr />
-<h3 id="3-hire_date-date-2023-01-01_1"><strong>3. 添加一个字段：<code>hire_date</code>，类型为 DATE，默认值为 '2023-01-01'</strong></h3>
+<h3 id="2-in-18-19"><strong>2. 【IN 子查询】查找年龄是 18 或 19 的学生</strong></h3>
 <blockquote>
-<p>目的：添加入职日期字段，并设置默认值</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">hire_date</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;2023-01-01&#39;</span><span class="p">;</span>
-</span></code></pre></div>
-<hr />
-<h3 id="4-name-varchar100_1"><strong>4. 将字段 <code>name</code> 的类型修改为 VARCHAR(100)</strong></h3>
-<blockquote>
-<p>目的：扩大 name 字段的存储空间</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">MODIFY</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<h3 id="5-age-employee_age_1"><strong>5. 将字段 <code>age</code> 的名称修改为 <code>employee_age</code>，类型不变</strong></h3>
-<blockquote>
-<p>目的：重命名字段</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">CHANGE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="n">employee_age</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
-</span></code></pre></div>
-<blockquote>
-<p>⚠️ 注意：<code>CHANGE</code> 语法需要写 <strong>旧字段名和新字段名</strong>，还要重新写字段类型！</p>
-</blockquote>
-<p>如果你只想改名而 <strong>不改变类型</strong>，也必须把原类型写上。</p>
-<hr />
-<h3 id="6-hire_date_1"><strong>6. 删除字段：<code>hire_date</code></strong></h3>
-<blockquote>
-<p>目的：移除不需要的字段</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">hire_date</span><span class="p">;</span>
-</span></code></pre></div>
-<hr />
-<h3 id="7-department_1"><strong>7. 删除字段：<code>department</code></strong></h3>
-<blockquote>
-<p>目的：删除部门字段</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
-</span></code></pre></div>
-<hr />
-<h3 id="8-id_1"><strong>8. 为字段 <code>id</code> 添加主键约束</strong></h3>
-<blockquote>
-<p>目的：将 id 设为主键，保证唯一标识</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
-</span></code></pre></div>
-<hr />
-<h3 id="9-employees_1"><strong>9. 删除表 <code>employees</code> 的主键约束</strong></h3>
-<blockquote>
-<p>目的：移除主键（比如重新设计表结构前）</p>
-</blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">DROP</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">;</span>
-</span></code></pre></div>
-<blockquote>
-<p>⚠️ 注意：如果主键字段有 <code>AUTO_INCREMENT</code>，可能需要先去掉该属性。</p>
+<p>提示：先查有哪些年龄，再用 IN</p>
 </blockquote>
 <hr />
-<h3 id="10-employees-staff_info_1"><strong>10. 将表名 <code>employees</code> 修改为 <code>staff_info</code></strong></h3>
+<h3 id="3"><strong>3. 【比较子查询】查找分数高于平均分的学生</strong></h3>
 <blockquote>
-<p>目的：重命名表</p>
+<p>提示：先查平均分，再查 &gt; 平均分的学生</p>
 </blockquote>
-<p>🔧 答案：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">staff_info</span><span class="p">;</span>
+<hr />
+<h3 id="4-where"><strong>4. 【WHERE + 子查询】查找班级中成绩最高的学生（假设每个学生属于某个班级，简化：找出最高分的学生）</strong></h3>
+<hr />
+<h3 id="5-exists-exists"><strong>5. 【EXISTS 子查询】查找存在成绩记录的学生（其实都有，这里只是演示 EXISTS 的用法）</strong></h3>
+<hr />
+<h3 id="6-80"><strong>6. 【查找分数低于 80 分的学生】使用子查询方式（虽然可以直接筛选，但用子查询方式）</strong></h3>
+<hr />
+<h3 id="7-in"><strong>7. 【查找所有女生的姓名和分数】用 IN 子查询方式（假设你只知道性别是女）</strong></h3>
+<hr />
+<h3 id="8-18"><strong>8. 【查找年龄等于某个值（如 18）的学生，用子查询方式】</strong></h3>
+<hr />
+<h3 id="9"><strong>9. 【查找分数等于最高分的学生姓名】</strong></h3>
+<hr />
+<h3 id="10_1"><strong>10. 【查找所有学生的姓名，以及全班平均分（用子查询显示一个固定值）】</strong></h3>
+<hr />
+<h2 id="_3">总结：嵌套查询类型速查</h2>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+<th>常见关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>标量子查询</strong></td>
+<td>返回单个值，常用于 =、&gt;、&lt; 比较</td>
+<td><code>WHERE score &gt; (子查询)</code></td>
+</tr>
+<tr>
+<td><strong>IN 子查询</strong></td>
+<td>返回多个值，用于 IN (...) 判断</td>
+<td><code>WHERE 列 IN (子查询)</code></td>
+</tr>
+<tr>
+<td><strong>EXISTS / NOT EXISTS</strong></td>
+<td>判断子查询是否有返回行</td>
+<td><code>WHERE EXISTS (子查询)</code></td>
+</tr>
+<tr>
+<td><strong>派生表（FROM 子查询）</strong></td>
+<td>子查询结果作为临时表使用</td>
+<td><code>FROM (子查询) AS 别名</code></td>
+</tr>
+<tr>
+<td><strong>比较运算符 + 子查询</strong></td>
+<td>如 &gt; ALL、&lt; ANY 等</td>
+<td><code>WHERE score &gt; ALL (子查询)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">答案解析（基础练习题）</h2>
+<blockquote>
+<p>📌 <strong>基础表：students</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>gender</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>小明</td>
+<td>18</td>
+<td>男</td>
+<td>88.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>小红</td>
+<td>19</td>
+<td>女</td>
+<td>92.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>小刚</td>
+<td>18</td>
+<td>男</td>
+<td>76.5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>小丽</td>
+<td>20</td>
+<td>女</td>
+<td>85.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>小华</td>
+<td>19</td>
+<td>男</td>
+<td>90.0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="1">题目 1</h3>
+<p>题目：查找分数高于小丽（id=4）的学生</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
 </span></code></pre></div>
-<p>或者（MySQL 也支持这种写法）：</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">staff_info</span><span class="p">;</span>
+<p>解析：</p>
+<ul>
+<li>子查询：<code>(SELECT score FROM students WHERE id = 4)</code> → 返回 <strong>小丽的分数：85.0</strong></li>
+<li>外层查询：查找 <code>score &gt; 85.0</code> 的学生</li>
+<li>结果：小明(88.5)、小红(92.0)、小华(90.0)</li>
+</ul>
+<blockquote>
+<p>🎯 目的：通过子查询先获取某个特定值（小丽的分数），再基于该值做比较筛选</p>
+</blockquote>
+<hr />
+<h3 id="2">题目 2</h3>
+<p>题目：查找年龄是 18 或 19 的学生</p>
+<p>普通写法：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">);</span>
 </span></code></pre></div>
+<p>子查询方式，演示用：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">19</span><span class="p">);</span>
+</span></code></pre></div>
+<p>解析：</p>
+<ul>
+<li>子查询返回年龄为 18 或 19 的值：<code>(18, 18, 19, 19)</code></li>
+<li>外层 <code>IN</code> 匹配这些年龄，返回对应学生</li>
+<li>目的：演示 IN 子查询的基本用法，虽然这个例子可以直接写 <code>WHERE age IN (18,19)</code></li>
+</ul>
+<hr />
+<h3 id="3_1">题目 3</h3>
+<p>题目：查找分数高于平均分的学生</p>
+<p>答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">);</span>
+</span></code></pre></div>
+<p>解析：</p>
+<ul>
+<li>子查询：<code>(SELECT AVG(score) FROM students)</code> → 计算所有学生的平均分，约为 <strong>86.4</strong></li>
+<li>外层查询筛选出 <code>score &gt; 86.4</code> 的学生</li>
+<li>结果：小红(92.0)、小华(90.0)、小明(88.5)</li>
+</ul>
+<blockquote>
+<p>🎯 目的：通过子查询先计算聚合值（平均数），再做比较</p>
+</blockquote>
+<hr />
+<h3 id="4">题目 4</h3>
+<p>题目：查找分数最高的学生</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">);</span>
+</span></code></pre></div>
+<p>解析：</p>
+<ul>
+<li>子查询：<code>(SELECT MAX(score) FROM students)</code> → 返回最高分：<strong>92.0</strong></li>
+<li>外层查询：找出分数等于 92.0 的学生</li>
+<li>结果：小红（92.0）</li>
+</ul>
+<blockquote>
+<p>🎯 目的：查找极值（最大值/最小值）是子查询常见用法</p>
+</blockquote>
+<hr />
+<h3 id="5">题目 5</h3>
+<p>题目：查找存在成绩记录的学生（演示 EXISTS 的用法）</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="n">s</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
+</span></code></pre></div>
+<p>解析：</p>
+<ul>
+<li><code>EXISTS</code> 用于判断子查询是否返回了 <strong>任意一行</strong></li>
+<li>这里子查询对每个学生都返回 1 行 → 所有学生都满足</li>
+<li>常用于更复杂的关联场景，比如“存在匹配的订单”、“存在关联的用户”等</li>
+</ul>
+<blockquote>
+<p>🎯 EXISTS 不关心返回的具体内容，只关心有没有结果</p>
+</blockquote>
+<hr />
+<h3 id="6">题目 6</h3>
+<p>题目：查找分数低于 80 分的学生（用子查询方式）</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="mi">80</span><span class="p">);</span>
+</span></code></pre></div>
+<blockquote>
+<p>❌ 无意义，仅作语法示意</p>
+</blockquote>
+<p>更实用的写法（结合计算）：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>假设平均分是 86.4，则 86.4 - 10 ≈ 76.4</li>
+<li>查找分数 &lt; 76.4 的学生 → 小刚（76.5 几乎不满足，视实际计算而定）</li>
+</ul>
+<blockquote>
+<p>🎯 目的：演示如何从子查询获取“动态阈值”来进行比较</p>
+</blockquote>
+<hr />
+<h3 id="7">题目 7</h3>
+<p>题目：查找所有女生的姓名和分数（用 IN 方式，仅演示）</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>或者（不实用，仅演示 IN）：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+<blockquote>
+<p>🎯 目的：理解 IN 的基本语法，虽然这个例子可以直接用 <code>WHERE gender = '女'</code></p>
+</blockquote>
+<hr />
+<h3 id="8">题目 8</h3>
+<p>题目：查找年龄等于某个值（如 18）的学生（用子查询方式）</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;小明&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>子查询返回小明的年龄：18</li>
+<li>外层查询找出 age = 18 的学生 → 小明、小刚</li>
+</ul>
+<blockquote>
+<p>🎯 目的：通过子查询获取某个值，再做等值比较</p>
+</blockquote>
+<hr />
+<h3 id="9_1">题目 9</h3>
+<p>题目：查找分数等于最高分的学生姓名</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>和第 4 题一样，查找最高分对应的学生 → 小红</li>
+</ul>
+<hr />
+<h3 id="10_2">题目 10</h3>
+<p>题目：查找所有学生的姓名和分数，以及全班平均分</p>
+<p>答案：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">name</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">score</span><span class="p">,</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">class_avg</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li><code>(SELECT AVG(score) FROM students)</code> → 返回一个值（比如 86.4）</li>
+<li>对 <strong>每一行学生数据</strong>，都显示该平均分</li>
+<li>常用于报表中展示“个体 + 整体统计”</li>
+</ul>
+<blockquote>
+<p>🎯 目的：标量子查询用在 SELECT 中，为每行附加一个聚合信息</p>
+</blockquote>
 <hr />
 
 
@@ -2737,7 +2912,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../0808/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 8月8日MySQL查询">
+          <a href="../0809/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 8月9日ALTER TABLE">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2747,20 +2922,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                8月8日MySQL查询
+                8月9日ALTER TABLE
               </div>
             </div>
           </a>
         
         
           
-          <a href="../0810/" class="md-footer__link md-footer__link--next" aria-label="下一页: 8月10日嵌套查询">
+          <a href="../../../english/" class="md-footer__link md-footer__link--next" aria-label="下一页: 首页">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                8月10日嵌套查询
+                首页
               </div>
             </div>
             <div class="md-footer__button md-icon">
