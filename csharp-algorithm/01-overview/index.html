@@ -1,0 +1,2907 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="2026年河北省中职对口升学考试计算机类专业考试学习交流。">
+      
+      
+        <meta name="author" content="村长">
+      
+      
+        <link rel="canonical" href="https://buhaoqi.github.io/csharp-algorithm/01-overview/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../math/sum-and-product/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>算法概述 - 高二九班(对口计算机)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="高二九班(对口计算机)" class="md-header__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            高二九班(对口计算机)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              算法概述
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../csharp-tutorial/" class="md-tabs__link">
+          
+  
+  
+  C#教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Algorithm
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../csharp-graphics/" class="md-tabs__link">
+          
+  
+  
+  C# Graphics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../csharp-winform/" class="md-tabs__link">
+          
+  
+  
+  Windows Forms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mysql/" class="md-tabs__link">
+          
+  
+  
+  MySQL教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../office/" class="md-tabs__link">
+          
+  
+  
+  Office软件
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../computer-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../windows10/" class="md-tabs__link">
+          
+  
+  
+  Windows操作系统
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../computer-network-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机网络
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exercises/csharp-summer/0621/" class="md-tabs__link">
+          
+  
+  
+  暑期作业
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../english/" class="md-tabs__link">
+          
+  
+  
+  编程英语
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="高二九班(对口计算机)" class="md-nav__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    高二九班(对口计算机)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../csharp-tutorial/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#教程
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    考试大纲
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    算法概述
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    算法概述
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、算法的概念(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、理解算法描述方法(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理解算法的设计步骤(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、算法性能评价的方法(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、算法与程序的关系（考点）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、典型算法示例（考点16种）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、典型算法示例（考点16种）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段1：基础数学算法（建立问题分解思维）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段2：查找算法（理解效率重要性）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段3：排序算法（强化循环与嵌套）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段4：递归算法（提升抽象思维）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段5：字符串与加密算法（综合应用）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习路径图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      高效学习策略
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      好算法的特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法常见应用场景
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚基础数学算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            📚基础数学算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/sum-and-product/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1.累加与累乘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/min-max-and-average/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2.最值与均值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/gcd-and-prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3.公约数与素数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/factorial-and-fibonacci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4.阶乘与斐波那契数列
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚查找算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            📚查找算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/sequential-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5.顺序查找
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/binary-search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6.二分查找
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚排序算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            📚排序算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sort/bubble-sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7.冒泡排序
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sort/selection-sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8.选择排序
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sort/insertion-sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9.插入排序
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚递归算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            📚递归算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursion/factorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10.阶乘
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursion/fibonacci-sequence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11.斐波那契数列
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursion/tower-of-hanoi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12.汉诺塔
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search/binary-search-recursion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13.二分查找递归版
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    📚字符串与加密算法
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            📚字符串与加密算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string/palindrome-check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14.回文数判断
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../string/string-encryption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15.字符串加密
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../csharp-graphics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C# Graphics
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../csharp-winform/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Windows Forms
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../mysql/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MySQL教程
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../office/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Office软件
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../computer-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机基础
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../windows10/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Windows操作系统
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../computer-network-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机网络
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exercises/csharp-summer/0621/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    暑期作业
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../english/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    编程英语
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、算法的概念(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、理解算法描述方法(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、理解算法的设计步骤(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、算法性能评价的方法(考点)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、算法与程序的关系（考点）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      六、典型算法示例（考点16种）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、典型算法示例（考点16种）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段1：基础数学算法（建立问题分解思维）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段2：查找算法（理解效率重要性）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段3：排序算法（强化循环与嵌套）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段4：递归算法（提升抽象思维）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      阶段5：字符串与加密算法（综合应用）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习路径图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      高效学习策略
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      好算法的特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法常见应用场景
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>算法概述</h1>
+
+<h2 id="_1">一、算法的概念(考点)</h2>
+<p>在编程中，<strong>算法（Algorithm）</strong>是指解决某个问题的一系列<strong>明确的、有限的步骤或规则</strong>。</p>
+<p>简单来说：</p>
+<blockquote>
+<p><strong>算法 = 解决问题的步骤 + 明确的执行顺序</strong></p>
+</blockquote>
+<hr />
+<p>生活中的算法例子</p>
+<p><strong>问题</strong>：泡一杯奶茶
+<strong>算法</strong>可能是：</p>
+<ol>
+<li>烧一壶水</li>
+<li>取一个杯子</li>
+<li>加入奶茶粉</li>
+<li>倒入热水</li>
+<li>搅拌均匀</li>
+<li>完成</li>
+</ol>
+<p>这就是一个“泡奶茶的算法”。</p>
+<hr />
+<p>编程中的算法例子</p>
+<p><strong>问题</strong>：找出一组数字中最大的一个
+<strong>算法</strong>可能是：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>这个过程的每一步都清晰、有限，最终得到一个结果，这就是一个“求最大值”的算法。</p>
+<p>编程中的算法是<strong>解决问题的明确、可执行的步骤序列</strong>，是计算机程序的逻辑核心。它定义了如何将输入数据转化为期望的输出结果，如同“菜谱”指导计算机一步步完成任务。</p>
+<p>关键特征：</p>
+<ol>
+<li>
+<p><strong>明确性（无歧义）</strong>  </p>
+<ul>
+<li>每一步操作必须清晰、精确，无二义性。  </li>
+<li><em>例：</em> “将数组第一个元素与后续元素比较”而非“找最小的数”。</li>
+</ul>
+</li>
+<li>
+<p><strong>有限步骤（可终止）</strong>  </p>
+<ul>
+<li>必须在有限时间内结束，避免无限循环。  </li>
+<li><em>例：</em> 二分查找在数组范围内逐步缩小搜索区域直至找到目标。</li>
+</ul>
+</li>
+<li>
+<p><strong>输入与输出</strong>  </p>
+<ul>
+<li>接受输入数据（如待排序的数组），产生确定输出（如排序后的数组）。  </li>
+<li><em>例：</em> 输入 <code>[3,1,2]</code> → 冒泡排序 → 输出 <code>[1,2,3]</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>可行性（用基础操作实现）</strong>  </p>
+<ul>
+<li>步骤必须能由编程语言的基本指令（赋值、比较、循环等）组合实现。  </li>
+<li><em>例：</em> 用 <code>for</code> 循环 + <code>if</code> 比较实现选择排序。</li>
+</ul>
+</li>
+<li>
+<p><strong>有效性（解决问题）</strong>  </p>
+<ul>
+<li>必须正确解决目标问题（如排序后数组有序）。</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="_2">二、理解算法描述方法(考点)</h2>
+<p>“理解算法描述方法”这个说法，其实是指：</p>
+<blockquote>
+<p><strong>我们要学会如何准确地阅读、表达和书写一个算法的过程。</strong></p>
+</blockquote>
+<p>通俗说，就是你不但要能看懂别人写的算法，还要能自己清晰地写出算法，用人或计算机都能理解的形式。</p>
+<h2 id="_3"><img alt="算法描述方法" src="../images/algorithm-describe.png" /></h2>
+<p>常见的算法描述方法</p>
+<table>
+<thead>
+<tr>
+<th>描述方式</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自然语言描述</td>
+<td>用人类语言描述算法步骤，简单直观</td>
+<td>“从第一项开始，依次比较所有数字，找到最大的那一个”</td>
+</tr>
+<tr>
+<td>伪代码（Pseudo-code）</td>
+<td>介于自然语言和代码之间，更接近编程语言</td>
+<td><code>if a &gt; b then max = a else max = b</code></td>
+</tr>
+<tr>
+<td>程序代码</td>
+<td>用某种具体的编程语言书写的算法</td>
+<td><code>if (a &gt; b) max = a; else max = b;</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>举个例子：找出两个数中较大的数</p>
+<p>1.自然语言描述：</p>
+<blockquote>
+<p>输入两个数a和b，比较它们的大小，如果a大，就输出a；否则输出b。</p>
+</blockquote>
+<p>2.伪代码描述：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>输入：a, b
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>如果 a &gt; b
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    输出 a
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>否则
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    输出 b
+</span></code></pre></div>
+<p>3.C#代码实现：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">else</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">max</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<p>为什么要学会“理解算法描述方法”？</p>
+<ul>
+<li>阅读时：能看懂书本、老师或面试题中用各种方式写的算法</li>
+<li>交流时：能准确讲出算法逻辑，团队沟通更顺畅</li>
+<li>写程序时：能把思路转换为代码，避免逻辑错误</li>
+</ul>
+<hr />
+<p>初学者建议：</p>
+<ol>
+<li><strong>多练习从自然语言 → 伪代码 → 真代码</strong>的转换过程</li>
+<li><strong>反复理解算法逻辑，而不是死记硬背</strong></li>
+<li><strong>画流程图</strong>也是很好的描述方法，能帮助你理清思路</li>
+</ol>
+<hr />
+<h2 id="_4">三、理解算法的设计步骤(考点)</h2>
+<p>“理解算法的设计步骤”意味着我们要掌握<strong>设计一个好算法的完整过程</strong>，不仅仅是照搬代码，而是从<strong>分析问题 → 拆解逻辑 → 逐步构建解决方案</strong>。</p>
+<p>理解“算法的设计步骤”，就是掌握一套能<strong>独立思考并构造解法的流程</strong>，避免“看得懂但写不出”的尴尬。</p>
+<hr />
+<p>算法设计的 5 个常见步骤：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>明确问题</strong></td>
+<td>弄清楚要解决什么问题，有哪些输入、输出、目标是什么</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>分析需求与约束</strong></td>
+<td>输入数据范围大不大？是否有重复？要不要考虑效率？</td>
+</tr>
+<tr>
+<td>③</td>
+<td><strong>设计算法思路</strong></td>
+<td>选择合适的策略：遍历、排序、递归、贪心、分治、动态规划等</td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>描述算法过程</strong></td>
+<td>用自然语言、伪代码或流程图把算法步骤清晰写出来</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><strong>验证与优化</strong></td>
+<td>检查是否正确、是否高效，必要时优化算法结构</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>示例：<strong>找出数组中最大值</strong></p>
+<p>① 明确问题：</p>
+<ul>
+<li>输入：一个整数数组 <code>nums</code></li>
+<li>输出：最大值，比如 <code>[2, 9, 4]</code> → 输出 <code>9</code></li>
+</ul>
+<p>② 分析需求与约束：</p>
+<ul>
+<li>数组长度未知，可能有负数</li>
+<li>只需要找一个最大值，遍历一遍就够了</li>
+</ul>
+<p>③ 设计算法思路：</p>
+<ul>
+<li>初始化 <code>max = nums[0]</code></li>
+<li>遍历每个元素，与 <code>max</code> 比较，大就更新它</li>
+</ul>
+<p>④ 描述算法过程：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1. 设 max 为数组第一个元素
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2. 对数组中每个元素：
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   如果它比 max 大，就更新 max
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>3. 返回 max
+</span></code></pre></div>
+<p>⑤ 验证与优化：</p>
+<ul>
+<li>对空数组要做额外判断</li>
+<li>时间复杂度是 O(n)，最优解，无需优化</li>
+</ul>
+<hr />
+<p>常见的算法设计策略（常用在第③步）：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>适用场景举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>暴力枚举</td>
+<td>所有可能都尝试一遍</td>
+</tr>
+<tr>
+<td>分治法</td>
+<td>快速排序、归并排序</td>
+</tr>
+<tr>
+<td>贪心算法</td>
+<td>找零钱问题</td>
+</tr>
+<tr>
+<td>动态规划</td>
+<td>最短路径、背包问题</td>
+</tr>
+<tr>
+<td>回溯算法</td>
+<td>八皇后、排列组合</td>
+</tr>
+<tr>
+<td>递归</td>
+<td>斐波那契、汉诺塔</td>
+</tr>
+<tr>
+<td>哈希思想</td>
+<td>查找是否出现过重复元素</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">四、算法性能评价的方法(考点)</h2>
+<p>算法性能评价的基本方法，主要是从两个维度进行分析：<strong>时间复杂度</strong> 和 <strong>空间复杂度</strong>，也就是：</p>
+<blockquote>
+<p>这个算法<strong>有多快？</strong>（执行时间）
+这个算法<strong>占多大地方？</strong>（内存空间）</p>
+</blockquote>
+<p><img alt="算法性能评价" src="../images/algorithm-remark.png" /></p>
+<p>下面是详细解释：</p>
+<hr />
+<p><strong>（一)时间复杂度</strong></p>
+<p>时间复杂度（Time Complexity）用于估算<strong>算法执行所需的基本操作次数</strong>，不看具体运行时间，只看增长趋势。</p>
+<p>常见时间复杂度等级（从快到慢）：</p>
+<table>
+<thead>
+<tr>
+<th>时间复杂度</th>
+<th>名称</th>
+<th>示例说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>常数级</td>
+<td>不管输入多大，都只执行一次</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>对数级</td>
+<td>二分查找</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>线性级</td>
+<td>遍历一个数组</td>
+</tr>
+<tr>
+<td>O(n log n)</td>
+<td>线性对数级</td>
+<td>快速排序、归并排序</td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>平方级</td>
+<td>冒泡排序、选择排序</td>
+</tr>
+<tr>
+<td>O(2ⁿ)</td>
+<td>指数级</td>
+<td>斐波那契递归、穷举型回溯问题</td>
+</tr>
+<tr>
+<td>O(n!)</td>
+<td>阶乘级</td>
+<td>排列组合问题（如八皇后）</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<p>遍历一个长度为 <code>n</code> 的数组找最大值，时间复杂度是 <code>O(n)</code>
+因为每个元素都要比较一次。</p>
+<hr />
+<p><strong>（二）空间复杂度</strong></p>
+<p>空间复杂度（Space Complexity）是指：<strong>算法在执行过程中额外占用的内存空间大小</strong>。</p>
+<p>常见空间复杂度：</p>
+<table>
+<thead>
+<tr>
+<th>空间复杂度</th>
+<th>示例说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>只使用少量变量</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>需要一个和输入一样大的数组</td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>创建二维矩阵，如邻接矩阵</td>
+</tr>
+</tbody>
+</table>
+<p>例如，递归函数调用会占用额外的调用栈空间，这也算进空间复杂度。</p>
+<hr />
+<p><strong>(三)实际运行测试（Benchmark）</strong></p>
+<p>除了理论分析，有时我们还会<strong>用真实数据测试算法的运行时间</strong>，例如：</p>
+<ul>
+<li>用秒表测执行时间</li>
+<li>用 <code>System.Diagnostics.Stopwatch</code>（C#）测性能</li>
+<li>用大数据跑多个算法做对比实验</li>
+</ul>
+<p>虽然受硬件、编译器等影响，但能验证理论结果是否符合实际。</p>
+<hr />
+<p>(四)<strong>小结</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间复杂度</td>
+<td>看算法<strong>有多快</strong>，衡量执行步骤数</td>
+</tr>
+<tr>
+<td>空间复杂度</td>
+<td>看算法<strong>占多大空间</strong>，衡量内存占用</td>
+</tr>
+<tr>
+<td>实际运行时间</td>
+<td>用真实测试数据跑出实际耗时</td>
+</tr>
+<tr>
+<td>最好/最坏/平均情况分析</td>
+<td>针对不同输入场景下分析算法性能</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_6">五、算法与程序的关系（考点）</h2>
+<table>
+<thead>
+<tr>
+<th><strong>算法</strong></th>
+<th><strong>程序</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>解决问题的<strong>逻辑思路</strong></td>
+<td>算法的<strong>具体代码实现</strong></td>
+</tr>
+<tr>
+<td>与编程语言无关（可用伪代码描述）</td>
+<td>依赖特定语言（如Python/C++）</td>
+</tr>
+<tr>
+<td><em>例：</em> 快速排序的分治思想</td>
+<td><em>例：</em> Python 的 <code>def quicksort(arr):</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关键结论</strong>：算法是程序的“灵魂”，程序是算法的“载体”。</p>
+</blockquote>
+<hr />
+<h2 id="16">六、典型算法示例（考点16种）</h2>
+<table>
+<thead>
+<tr>
+<th><strong>类型</strong></th>
+<th><strong>算法</strong></th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>排序算法</strong></td>
+<td>冒泡排序、选择排序</td>
+<td>对数组/列表升序或降序排列</td>
+</tr>
+<tr>
+<td><strong>查找算法</strong></td>
+<td>顺序查找、二分查找</td>
+<td>在数据集中定位特定元素</td>
+</tr>
+<tr>
+<td><strong>数学算法</strong></td>
+<td>欧几里得算法</td>
+<td>计算两数的最大公约数（GCD）</td>
+</tr>
+<tr>
+<td></td>
+<td>埃拉托斯特尼筛法</td>
+<td>高效筛选素数</td>
+</tr>
+<tr>
+<td></td>
+<td>斐波那契数列</td>
+<td>递归或动态规划的经典案例</td>
+</tr>
+<tr>
+<td><strong>字符串算法</strong></td>
+<td>凯撒加密</td>
+<td>字符移位实现基础文本加密</td>
+</tr>
+<tr>
+<td><strong>递归算法</strong></td>
+<td>阶乘计算</td>
+<td><code>n! = n × (n-1)!</code> 的递归实现</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>针对初学者，我推荐以下<strong>循序渐进的学习顺序</strong>，从易到难、由具体到抽象，兼顾理解深度与考试实用性：</p>
+<hr />
+<h3 id="1"><strong>阶段1：基础数学算法（建立问题分解思维）</strong></h3>
+<p><em>目标：掌握基础编程结构（循环、条件判断）与简单计算逻辑</em></p>
+<ol>
+<li><strong>累加与累乘</strong>  <ul>
+<li>用循环实现 <code>1+2+...+n</code> 和 <code>1×2×...×n</code>  </li>
+<li><em>核心训练</em>：<code>for</code>/<code>while</code>循环、变量累加器</li>
+</ul>
+</li>
+<li><strong>最值与均值</strong>  <ul>
+<li>求数组最大值/最小值 → 理解遍历与比较  </li>
+<li>计算数组平均值 → 结合累加与除法</li>
+</ul>
+</li>
+<li><strong>公约数与素数</strong>  <ul>
+<li>暴力法求最大公约数（GCD）→ 训练循环与<code>%</code>运算  </li>
+<li>判断素数（试除法）→ 理解循环边界优化（如只需判到√n）</li>
+</ul>
+</li>
+<li><strong>阶乘与斐波那契数列</strong>  <ul>
+<li>阶乘的循环实现 → 为递归做铺垫  </li>
+<li>斐波那契循环版（非递归）→ 避免初学递归的困惑</li>
+</ul>
+</li>
+</ol>
+<p>✅ <strong>为何先学这些？</strong>  </p>
+<blockquote>
+<ul>
+<li>代码逻辑简单（20行内）  </li>
+<li>强化<strong>循环</strong>与<strong>分支</strong>两大核心结构  </li>
+<li>直接解决具体数学问题，成就感强</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="2"><strong>阶段2：查找算法（理解效率重要性）</strong></h3>
+<p><em>目标：引入算法效率概念，对比不同策略的优劣</em></p>
+<ol>
+<li><strong>顺序查找</strong>  <ul>
+<li>遍历数组找目标值 → 时间复杂度<code>O(n)</code>  </li>
+<li><em>重点</em>：理解“最坏情况”概念</li>
+</ul>
+</li>
+<li><strong>二分查找</strong>  <ul>
+<li>要求<strong>数组有序</strong> → 自然引出排序需求  </li>
+<li>递归/循环双实现 → 为递归算法预热  </li>
+<li><em>重点</em>：画图理解<code>分治思想</code>，分析<code>O(log n)</code>高效性</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>✅ <strong>关键过渡</strong>：<br />
+二分查找需有序数组 → 顺理成章引出排序算法学习</p>
+</blockquote>
+<hr />
+<h3 id="3"><strong>阶段3：排序算法（强化循环与嵌套）</strong></h3>
+<p><em>目标：掌握经典排序思想，理解时间复杂度的实际影响</em></p>
+<ol>
+<li><strong>冒泡排序</strong>  <ul>
+<li>相邻元素比较交换 → 直观易理解  </li>
+<li><em>重点</em>：可视化“元素像气泡上浮”的过程</li>
+</ul>
+</li>
+<li><strong>选择排序</strong>  <ul>
+<li>每轮选最小元素放前列 → 理解“选择”思想  </li>
+<li><em>对比冒泡</em>：减少交换次数，但仍是<code>O(n²)</code></li>
+</ul>
+</li>
+<li><strong>插入排序</strong>  <ul>
+<li>模拟扑克牌插入 → 理解“有序区扩张”  </li>
+<li><em>进阶点</em>：对小规模数据效率优于冒泡/选择</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>✅ <strong>学习技巧</strong>：<br />
+用纸笔模拟每轮排序过程（如数组<code>[5,3,8,1]</code>），彻底理解循环边界</p>
+</blockquote>
+<hr />
+<h3 id="4"><strong>阶段4：递归算法（提升抽象思维）</strong></h3>
+<p><em>目标：掌握递归三要素（终止条件+递归调用+问题分解）</em></p>
+<ol>
+<li><strong>阶乘递归版</strong>  <ul>
+<li><code>n! = n * (n-1)!</code> → 最简递归案例</li>
+</ul>
+</li>
+<li><strong>斐波那契递归版</strong>  <ul>
+<li><code>fib(n) = fib(n-1) + fib(n-2)</code>  </li>
+<li><em>重点</em>：分析递归树，理解重复计算缺陷</li>
+</ul>
+</li>
+<li><strong>汉诺塔问题</strong>  <ul>
+<li>经典递归思想训练 → 理解“分而治之”</li>
+</ul>
+</li>
+<li><strong>二分查找递归版</strong>  <ul>
+<li>将循环转化为递归调用 → 巩固阶段2知识</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>避坑提示</strong>：<br />
+先确保理解循环版斐波那契，再学递归版，避免陷入递归调用栈的困惑</p>
+</blockquote>
+<hr />
+<h3 id="5"><strong>阶段5：字符串与加密算法（综合应用）</strong></h3>
+<p><em>目标：融合数组操作、循环、数学运算解决实际问题</em></p>
+<ol>
+<li><strong>回文数判断</strong>  <ul>
+<li>数字反转比较（如121 vs 123）→ 结合<code>%</code>和<code>//</code>运算  </li>
+</ul>
+</li>
+<li><strong>字符串加密</strong>  <ul>
+<li>实现凯撒密码（字符偏移）→ 练习ASCII码操作  </li>
+<li><em>例</em>：<code>A→D, B→E</code>（偏移量=3）</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="_7"><strong>学习路径图</strong></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>graph LR
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>A[数学算法] --&gt; B[查找算法]
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>B --&gt; C[排序算法]
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>C --&gt; D[递归算法]
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>D --&gt; E[字符串/加密算法]
+</span></code></pre></div>
+<hr />
+<h2 id="_8"><strong>高效学习策略</strong></h2>
+<ol>
+<li><strong>先理解伪代码，再写真实代码</strong>  </li>
+<li>用中文步骤描述算法（如：“1. 从第一个元素遍历到最后一个”）</li>
+<li><strong>可视化工具辅助</strong>  </li>
+<li>使用 <a href="https://visualgo.net/">Visualgo</a> 动态观察排序/查找过程</li>
+<li><strong>对比同类算法</strong>  </li>
+<li>如：对比冒泡/选择/插入的交换次数与代码逻辑</li>
+<li><strong>复杂度分析三问</strong>  </li>
+<li>问1：有几层循环？  </li>
+<li>问2：每层循环次数与n的关系？  </li>
+<li>问3：是否有递归？递归深度是多少？</li>
+<li><strong>真题驱动练习</strong>  </li>
+<li>用考试真题（如“用冒泡排序对[4,2,5,1]升序排列，写出第2轮结果”）检验理解</li>
+</ol>
+<blockquote>
+<p>按照此顺序学习，可逐步构建算法思维，避免“递归劝退”“排序混乱”等常见困境，精准覆盖考试要求！</p>
+</blockquote>
+<h2 id="_9">好算法的特点</h2>
+<table>
+<thead>
+<tr>
+<th>特点</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>有限性</td>
+<td>步骤数是有限的</td>
+</tr>
+<tr>
+<td>明确性</td>
+<td>每一步都清楚，不含糊</td>
+</tr>
+<tr>
+<td>输入</td>
+<td>可以有零个或多个输入</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>至少有一个输出（结果）</td>
+</tr>
+<tr>
+<td>有效性</td>
+<td>每一步都可以通过计算机来执行</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_10">算法常见应用场景</h2>
+<ul>
+<li>排序（如冒泡排序、快速排序）</li>
+<li>查找（如二分查找）</li>
+<li>路径规划（如地图导航）</li>
+<li>数据分析（如统计平均值、最大值）</li>
+<li>图像处理、人工智能、密码学等也大量使用算法</li>
+</ul>
+<hr />
+<p>如果你是初学者，可以先从这些<strong>经典算法</strong>入手学习：</p>
+<ul>
+<li>冒泡排序（Bubble Sort）</li>
+<li>选择排序（Selection Sort）</li>
+<li>二分查找（Binary Search）</li>
+<li>递归（Recursion）</li>
+<li>斐波那契数列（Fibonacci Sequence）</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 考试大纲">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                考试大纲
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../math/sum-and-product/" class="md-footer__link md-footer__link--next" aria-label="下一页: 1.累加与累乘">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                1.累加与累乘
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 村长 <a href="https://beian.mps.gov.cn/#/query/webSearch?code=13040202001048" target="_blank">冀公网安备13040202001048号</a><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+      
+      
+    
+    <a href="https://fosstodon.org/@squidfunk" target="_blank" rel="noopener me" title="fosstodon.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54-.6-4.6-.9-9.3-.9-13.9 85.6 20.9 158.7 9.1 178.7 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6V190.1c0-49.7-64-51.6-64 6.9v62.5H201V197c0-58.5-64-56.6-64-6.9v114.2H90.3c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.prune", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
