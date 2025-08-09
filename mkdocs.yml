@@ -236,98 +236,75 @@ nav:
   - MySQL教程:
     - 考试大纲: mysql/index.md
     - 相关术语: mysql/terms.md
-    - 新人起步:
-      - 数据库简介: mysql/get-started/01-what-is-database.md
-      - MySQL简介: mysql/get-started/02-what-is-mysql.md
-      - 安装与启动MySQL: mysql/get-started/03-installation.md
-      - 登录与退出MySQL: mysql/get-started/04-login-logout.md
-      - 大小写敏感性: mysql/get-started/05-case-sensitivity.md
-    - 操作数据库结构:
-      - 查看数据库: mysql/operate-database/01-show-databases.md
-      - 创建数据库:  mysql/operate-database/02-create-database.md
-      - 删除数据库: mysql/operate-database/03-drop-database.md
-      - 使用数据库: mysql/operate-database/04-use-database.md
-      - 修改数据库名: mysql/operate-database/05-alter-database.md
-    - 操作表结构:
-      - 创建表结构: mysql/operate-table/01-create-table.md
-      - 复制表结构: mysql/operate-table/02-copy-table.md
-      - 删除表结构: mysql/operate-table/03-drop-table.md
-      - 修改表结构: mysql/operate-table/04-alter-table.md
-      - 查询表结构: mysql/operate-table/05-show-table.md
-      - 重命名表: mysql/operate-table/06-rename-table.md
-    - 运算符:
+    - ===新人起步===:
+      - 数据库简介: mysql/0-get-started/01-what-is-database.md
+      - MySQL简介: mysql/0-get-started/02-what-is-mysql.md
+      - MySQL语言组成: mysql/0-get-started/03-what-is-mysql-language.md
+      - 安装与启动MySQL: mysql/0-get-started/04-installation.md
+      - 登录与退出MySQL: mysql/0-get-started/05-login-logout.md
+      - 大小写敏感性: mysql/0-get-started/06-case-sensitivity.md
+      - 注释: mysql/0-get-started/07-comments.md
+      - 标识符: mysql/0-get-started/08-identifiers.md
+    - ===数据定义语言(DDL)===:
+      - DDL简介: mysql/1-ddl/00-introduction.md
+      - 查看数据库: mysql/1-ddl/01-show-databases.md
+      - 创建数据库: mysql/1-ddl/02-create-database.md
+      - 删除数据库: mysql/1-ddl/03-drop-database.md
+      - 使用数据库: mysql/1-ddl/04-use-database.md
+      - 修改数据库: mysql/1-ddl/05-alter-database.md
+      - 创建表: mysql/1-ddl/01-create-table.md
+      - 查看表: mysql/1-ddl/02-show-table.md
+      - 复制表: mysql/1-ddl/03-copy-table.md
+      - 删除表: mysql/1-ddl/04-drop-table.md
+      - 修改表: mysql/1-ddl/05-alter-table.md
+      - 索引: mysql/1-ddl/06-index.md
+      - 视图: mysql/1-ddl/07-view.md
+      - 约束条件: mysql/1-ddl/constraints.md
+    - ===数据操作语言(DML)===:
+      - DML简介: mysql/2-dml/00-introduction.md
+      - 插入数据: mysql/2-dml/01-insert-data.md
+      - 删除数据: mysql/2-dml/02-delete-data.md
+      - 更新数据: mysql/2-dml/03-update-data.md
+    - ===数据查询语言(DQL)===:
+      - DQL简介: mysql/3-dql/00-introduction.md
+      - SELECT子句: mysql/3-dql/select.md
+      - FROM子句: mysql/3-dql/from.md
+      - WHERE子句: mysql/3-dql/where.md
+      - GROUP BY子句: mysql/3-dql/group-by.md
+      - HAVING子句: mysql/3-dql/having.md
+      - ORDER BY子句: mysql/3-dql/order-by.md
+      - LIMIT子句: mysql/3-dql/limit.md
+      - 高级:多表连接查询: mysql/3-dql/join.md
+      - 高级:子查询: mysql/3-dql/subquery.md
+      - 高级:联合查询: mysql/3-dql/union.md
+    - ===数据类型===:
+      - 数据类型概述: mysql/data-types/0-what-is-datatype.md
+      - 整数类型: mysql/data-types/1-integer.md
+      - 小数类型: mysql/data-types/2-decimal.md
+      - 字符串类型: mysql/data-types/3-string.md
+      - 布尔类型: mysql/data-types/4-boolean.md
+      - 日期和时间类型: mysql/data-types/5-datetime.md
+    - ===运算符===:
       - 运算符是什么: mysql/operators/01-what-is-operator.md
       - 算术运算符: mysql/operators/02-arithmetic.md
       - 关系运算符: mysql/operators/03-relational.md
       - 逻辑运算符: mysql/operators/04-logical.md
-    - 操作数据:
-      - 添加数据: mysql/operate-data/01-insert-data.md
-      - 删除数据: mysql/operate-data/02-delete-data.md
-      - 修改数据: mysql/operate-data/03-update-data.md
-    - 单表查询: 
-      - 查询语法: mysql/operate-data/single-table-query/04-select-grammer.md
-      - 基础查询: mysql/operate-data/single-table-query/05-select-basics.md
-      - WHERE查询: mysql/operate-data/single-table-query/10-select-where.md
-      - 群组查询: mysql/operate-data/single-table-query/13-select-group-by.md
-      - 聚合查询: mysql/operate-data/single-table-query/14-select-aggregate.md
-      - 嵌套查询: mysql/operate-data/single-table-query/15-select-subquery.md
-    - 多表查询:
-      - 连接查询: mysql/operate-data/16-select-join.md
-    - 分类汇总:
-      - 联合查询: mysql/operate-data/17-select-union.md
-      - 视图查询: mysql/operate-data/18-select-view.md
-      - 项目-查询学生成绩表: mysql/operate-data/project1.md
-      - 项目-查询产品信息表: mysql/operate-data/project2.md
-      - 项目-查询员工信息表: mysql/operate-data/project3.md
-    - 数据类型: mysql/18-data-type.md
-    - 数据完整性约束: mysql/19-constraint.md
-    - 索引: mysql/20-index.md
-    - 视图: mysql/21-view.md
-    - 数据库设计: mysql/22-database-design.md
-    - 数据库安全性: mysql/23-database-security.md
-    - 数据库的备份与恢复: mysql/24-database-backup-recovery.md
-    - 字符串函数:
-      - Length()函数: mysql/function/string-length.md
-      - Upper()函数: mysql/function/string-upper.md
-      - Lower()函数: mysql/function/string-lower.md
-      - Left()函数: mysql/function/string-left.md
-      - Right()函数: mysql/function/string-right.md
-      - Rtrim()函数: mysql/function/string-rtrim.md
-      - Substring()函数: mysql/function/string-substring.md
-      - Locate()函数: mysql/function/string-locate.md
-      - Position()函数: mysql/function/string-position.md
-      - Reverse()函数: mysql/function/string-reverse.md
-      - concat()函数: mysql/function/string-concat.md
-    - 数学函数: 
-      - abs(): mysql/function/math-abs.md
-      - rand(): mysql/function/math-rand.md
-      - ceil(): mysql/function/math-ceil.md
-      - floor(): mysql/function/math-floor.md
-      - round(): mysql/function/math-round.md
-      - truncate(): mysql/function/math-truncate.md
-      - pow(): mysql/function/math-pow.md
-      - sqrt(): mysql/function/math-sqrt.md
-      - mod(): mysql/function/math-mod.md
-      - PI(): mysql/function/math-pi.md
-    - 聚合函数: mysql/function/aggregate-function.md
-    - 日期函数:
-      - now(): mysql/function/date-now.md
-      - curdate(): mysql/function/date-curdate.md
-      - curtime(): mysql/function/date-curtime.md
-      - date_format(): mysql/function/date-date-format.md
-      - year(): mysql/function/date-year.md
-      - month(): mysql/function/date-month.md
-      - day(): mysql/function/date-day.md
-      - hour(): mysql/function/date-hour.md
-      - minute(): mysql/function/date-minute.md
-      - second(): mysql/function/date-second.md
-      - format: mysql/function/date-format.md
-    - 其他函数:
-      - if(): mysql/function/others-if.md
-      - IFNULL(): mysql/function/others-ifnull.md
-      - version(): mysql/function/others-version.md
-      - version(): mysql/function/other-field.md
-      - version(): mysql/function/other-format.md
+    - ===函数库===:
+      - 字符串函数: mysql/function/string.md
+      - 数学函数: mysql/function/math.md
+      - 聚合函数: mysql/function/aggregate.md
+      - 日期函数: mysql/function/date.md
+      - 其他函数: mysql/function/others.md
+    - ===控制结构===:
+      - IF语句: mysql/control-structures/if.md
+      - CASE语句: mysql/control-structures/case.md
+      - 循环结构: mysql/control-structures/loop.md
+    - ===其他===:
+      - 数据库备份: mysql/others/backup.md
+      - 创建用户: mysql/others/create-user.md
+    - 项目-查询学生成绩表: mysql/operate-data/project1.md
+    - 项目-查询产品信息表: mysql/operate-data/project2.md
+    - 项目-查询员工信息表: mysql/operate-data/project3.md
   - Office软件:
     - 考试大纲: office/index.md
     - Word:
