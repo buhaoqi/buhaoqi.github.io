@@ -2255,70 +2255,86 @@
 <hr />
 <h2 id="1">题目 1：商品价格与折扣计算</h2>
 <p>题目描述：</p>
-<p>创建一个名为 <code>products</code> 的表，包含以下字段：
-- <code>id</code>：商品编号（INT，主键）
-- <code>name</code>：商品名称（VARCHAR(100)）
-- <code>price</code>：商品原价（DECIMAL(10,2)）
-- <code>discount</code>：折扣率（DECIMAL(3,2)，如 0.1 表示 10% 折扣）</p>
+<p>创建一个名为 <code>products</code> 的表，包含以下字段：</p>
+<ul>
+<li><code>id</code>：商品编号（INT，主键）</li>
+<li><code>name</code>：商品名称（VARCHAR(100)）</li>
+<li><code>price</code>：商品原价（DECIMAL(10,2)）</li>
+<li><code>discount</code>：折扣率（DECIMAL(3,2)，如 0.1 表示 10% 折扣）</li>
+</ul>
 <p>插入至少 3 条商品数据。</p>
 <p><strong>查询要求：</strong><br />
 查询所有商品信息，并计算<strong>折后价格（原价 * (1 - 折扣)）</strong>，显示商品名称、原价、折扣率、折后价格。</p>
 <hr />
 <h2 id="2">题目 2：员工加班工资计算</h2>
 <p>题目描述：</p>
-<p>创建一个名为 <code>employees</code> 的表，包含以下字段：
-- <code>id</code>：员工编号（INT，主键）
-- <code>name</code>：员工姓名（VARCHAR(50)）
-- <code>hourly_wage</code>：每小时工资（DECIMAL(8,2)）
-- <code>hours_worked</code>：本月工作小时数（INT）
-- <code>overtime_hours</code>：加班小时数（INT）</p>
+<p>创建一个名为 <code>employees</code> 的表，包含以下字段：</p>
+<ul>
+<li><code>id</code>：员工编号（INT，主键）</li>
+<li><code>name</code>：员工姓名（VARCHAR(50)）</li>
+<li><code>hourly_wage</code>：每小时工资（DECIMAL(8,2)）</li>
+<li><code>hours_worked</code>：本月工作小时数（INT）</li>
+<li><code>overtime_hours</code>：加班小时数（INT）</li>
+</ul>
 <p>插入至少 3 条员工数据。</p>
 <p><strong>查询要求：</strong><br />
-查询所有员工信息，并计算：
-- 正常工资 = <code>hourly_wage * hours_worked</code>
-- 加班工资 = <code>overtime_hours * hourly_wage * 1.5</code> （加班费按 1.5 倍计算）
-- 总工资 = 正常工资 + 加班工资</p>
+查询所有员工信息，并计算：</p>
+<ul>
+<li>正常工资 = <code>hourly_wage * hours_worked</code></li>
+<li>加班工资 = <code>overtime_hours * hourly_wage * 1.5</code> （加班费按 1.5 倍计算）</li>
+<li>总工资 = 正常工资 + 加班工资</li>
+</ul>
 <p>显示员工姓名、正常工资、加班工资、总工资。</p>
 <hr />
 <h2 id="3">题目 3：学生成绩与总分计算</h2>
 <p>题目描述：</p>
-<p>创建一个名为 <code>students</code> 的表，包含以下字段：
-- <code>id</code>：学生编号（INT，主键）
-- <code>name</code>：学生姓名（VARCHAR(50)）
-- <code>chinese</code>：语文成绩（INT）
-- <code>math</code>：数学成绩（INT）
-- <code>english</code>：英语成绩（INT）</p>
+<p>创建一个名为 <code>students</code> 的表，包含以下字段：</p>
+<ul>
+<li><code>id</code>：学生编号（INT，主键）</li>
+<li><code>name</code>：学生姓名（VARCHAR(50)）</li>
+<li><code>chinese</code>：语文成绩（INT）</li>
+<li><code>math</code>：数学成绩（INT）</li>
+<li><code>english</code>：英语成绩（INT）</li>
+</ul>
 <p>插入至少 3 条学生数据。</p>
 <p><strong>查询要求：</strong><br />
 查询所有学生信息，并计算<strong>总分（三科之和）</strong>和<strong>平均分（总分 / 3，保留两位小数）</strong>。</p>
 <hr />
 <h2 id="4">题目 4：商品库存与补货计算</h2>
-<p>题目描述：
-创建一个名为 <code>inventory</code> 的表，包含以下字段：
-- <code>id</code>：商品ID（INT，主键）
-- <code>product_name</code>：商品名称（VARCHAR(100)）
-- <code>current_stock</code>：当前库存数量（INT）
-- <code>min_stock</code>：最低库存要求（INT）
-- <code>unit_price</code>：单价（DECIMAL(10,2)）</p>
+<p>题目描述：</p>
+<p>创建一个名为 <code>inventory</code> 的表，包含以下字段：</p>
+<ul>
+<li><code>id</code>：商品ID（INT，主键）</li>
+<li><code>product_name</code>：商品名称（VARCHAR(100)）</li>
+<li><code>current_stock</code>：当前库存数量（INT）</li>
+<li><code>min_stock</code>：最低库存要求（INT）</li>
+<li><code>unit_price</code>：单价（DECIMAL(10,2)）</li>
+</ul>
 <p>插入至少 3 条商品数据。</p>
-<p><strong>查询要求：</strong><br />
-查询所有商品，并计算：
-- 库存缺口 = <code>max(0, min_stock - current_stock)</code> （如果当前库存够则不补货）
-- 补货金额 = 库存缺口 × 单价</p>
+<p><strong>查询要求：</strong>  </p>
+<p>查询所有商品，并计算：</p>
+<ul>
+<li>库存缺口 = <code>max(0, min_stock - current_stock)</code> （如果当前库存够则不补货）</li>
+<li>补货金额 = 库存缺口 × 单价</li>
+</ul>
 <p>显示商品名称、当前库存、最低库存、库存缺口、补货金额。</p>
 <hr />
 <h2 id="5">题目 5：银行账户利息计算</h2>
 <p>题目描述：</p>
-<p>创建一个名为 <code>accounts</code> 的表，包含以下字段：
-- <code>id</code>：账户ID（INT，主键）
-- <code>account_name</code>：账户名（VARCHAR(50)）
-- <code>balance</code>：账户余额（DECIMAL(12,2)）
-- <code>interest_rate</code>：年利率（DECIMAL(5,2)，如 0.02 表示 2%）</p>
+<p>创建一个名为 <code>accounts</code> 的表，包含以下字段：</p>
+<ul>
+<li><code>id</code>：账户ID（INT，主键）</li>
+<li><code>account_name</code>：账户名（VARCHAR(50)）</li>
+<li><code>balance</code>：账户余额（DECIMAL(12,2)）</li>
+<li><code>interest_rate</code>：年利率（DECIMAL(5,2)，如 0.02 表示 2%）</li>
+</ul>
 <p>插入至少 3 条账户数据。</p>
 <p><strong>查询要求：</strong><br />
-查询所有账户信息，并计算：
-- 年利息 = <code>balance * interest_rate</code>
-- 月利息 = 年利息 / 12</p>
+查询所有账户信息，并计算：</p>
+<ul>
+<li>年利息 = <code>balance * interest_rate</code></li>
+<li>月利息 = 年利息 / 12</li>
+</ul>
 <p>显示账户名、余额、年利率、年利息、月利息。</p>
 <hr />
 <p>总结</p>
