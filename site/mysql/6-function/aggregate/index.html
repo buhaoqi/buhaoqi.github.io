@@ -1612,6 +1612,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/04-duplicate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    复制数据
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2744,6 +2767,357 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mysql-aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ MySQL 聚合查询详解（Aggregate Functions）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ MySQL 聚合查询详解（Aggregate Functions）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 一、什么是聚合查询？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见聚合函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 二、MySQL 常见的聚合函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 三、聚合查询的基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 三、聚合查询的基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ 基本聚合（不分组，统计全表）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ 分组聚合（GROUP BY）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎮 四、实例详解（附表 + 详细解析）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎮 四、实例详解（附表 + 详细解析）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#students" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 示例表：students（学生表）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 1：统计学生总人数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 1：统计学生总人数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：表里一共有多少学生？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 2：统计所有学生的平均分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 2：统计所有学生的平均分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：所有学生的平均成绩是多少？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 3：统计最高分和最低分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 3：统计最高分和最低分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：最高分和最低分分别是多少？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 4：统计每个班级的学生人数（分组聚合）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 4：统计每个班级的学生人数（分组聚合）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：每个班级有多少学生？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 5：统计每个班级的平均分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 5：统计每个班级的平均分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：每个班级的平均成绩是多少？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 6：统计每个班级的人数、最高分、最低分、平均分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 6：统计每个班级的人数、最高分、最低分、平均分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 综合查询：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 7：统计每个性别的学生人数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 8：查询每个班级中分数最高的学生（进阶，结合子查询）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 五、聚合函数使用注意事项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ 常见错误示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❗ 常见错误示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 错误写法：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group_concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 六、扩展：GROUP_CONCAT() —— 聚合拼接字符串
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 六、扩展：GROUP_CONCAT() —— 聚合拼接字符串">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用：将每组中的多个值合并为一个字符串，常用于标签、明细展示等
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：查询每个班级有哪些学生姓名（拼接成一个字符串）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 七、总结：聚合查询核心要点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 七、总结：聚合查询核心要点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3684,6 +4058,357 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mysql-aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ MySQL 聚合查询详解（Aggregate Functions）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ MySQL 聚合查询详解（Aggregate Functions）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 一、什么是聚合查询？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见聚合函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 二、MySQL 常见的聚合函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 三、聚合查询的基本语法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 三、聚合查询的基本语法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ 基本聚合（不分组，统计全表）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ 分组聚合（GROUP BY）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎮 四、实例详解（附表 + 详细解析）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎮 四、实例详解（附表 + 详细解析）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#students" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 示例表：students（学生表）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 1：统计学生总人数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 1：统计学生总人数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：表里一共有多少学生？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 2：统计所有学生的平均分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 2：统计所有学生的平均分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：所有学生的平均成绩是多少？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 3：统计最高分和最低分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 3：统计最高分和最低分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：最高分和最低分分别是多少？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 4：统计每个班级的学生人数（分组聚合）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 4：统计每个班级的学生人数（分组聚合）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：每个班级有多少学生？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 5：统计每个班级的平均分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 5：统计每个班级的平均分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 查询：每个班级的平均成绩是多少？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 6：统计每个班级的人数、最高分、最低分、平均分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 练习 6：统计每个班级的人数、最高分、最低分、平均分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 综合查询：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 7：统计每个性别的学生人数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 练习 8：查询每个班级中分数最高的学生（进阶，结合子查询）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 五、聚合函数使用注意事项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ 常见错误示例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❗ 常见错误示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 错误写法：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group_concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 六、扩展：GROUP_CONCAT() —— 聚合拼接字符串
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 六、扩展：GROUP_CONCAT() —— 聚合拼接字符串">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用：将每组中的多个值合并为一个字符串，常用于标签、明细展示等
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例：查询每个班级有哪些学生姓名（拼接成一个字符串）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 七、总结：聚合查询核心要点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 七、总结：聚合查询核心要点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3699,8 +4424,6 @@
                   
 
 
-
-  <h1>聚合函数</h1>
 
 <p>在 MySQL 中，<strong>聚合函数（Aggregate Functions）</strong> 是一种对一组值执行计算并返回单一汇总值的函数。它们通常用于统计、分组和数据分析场景，帮助用户快速获取数据的整体特征（如总和、平均值、最大值等）。</p>
 <hr />
@@ -3990,6 +4713,492 @@
 - 根据需求选择 <code>COUNT(*)</code>、<code>COUNT(列名)</code> 或 <code>COUNT(DISTINCT)</code>。
 - 注意 <code>NULL</code> 值的处理逻辑。
 - 对大数据量场景需优化查询（索引、近似值、缓存）。</p>
+<h1 id="mysql-aggregate-functions">✅ MySQL 聚合查询详解（Aggregate Functions）</h1>
+<p>在 MySQL 中，<strong>聚合查询（Aggregate Query）</strong> 是指：</p>
+<blockquote>
+<p><strong>使用聚合函数（如 COUNT、SUM、AVG、MAX、MIN 等）对一组数据进行统计计算，并通常配合 <code>GROUP BY</code> 子句对数据进行分组统计的查询方式。</strong></p>
+</blockquote>
+<p>聚合查询是数据分析、报表统计、业务汇总等场景中最常用的功能之一。</p>
+<hr />
+<h2 id="_8">🎯 一、什么是聚合查询？</h2>
+<p><strong>聚合查询的核心是：对多行数据进行汇总、统计、计算，返回一个或多个汇总值。</strong></p>
+<p>比如：</p>
+<ul>
+<li>一个班级有多少学生？ → <code>COUNT</code></li>
+<li>全班的总分是多少？ → <code>SUM</code></li>
+<li>平均分是多少？ → <code>AVG</code></li>
+<li>最高分是多少？ → <code>MAX</code></li>
+<li>最低分是多少？ → <code>MIN</code></li>
+</ul>
+<p>这些操作，就是典型的 <strong>聚合操作（Aggregation）</strong>，在 SQL 中通过 <strong>聚合函数</strong> 来实现。</p>
+<p>在 MySQL 中，<strong>聚合函数（Aggregate Functions）</strong> 是一种对一组值执行计算并返回单一汇总值的函数。它们通常用于统计、分组和数据分析场景，帮助用户快速获取数据的整体特征（如总和、平均值、最大值等）。</p>
+<h2 id="_9"><strong>常见聚合函数</strong></h2>
+<p>以下是 MySQL 中最常用的聚合函数：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT()</code></td>
+<td>统计行数</td>
+<td><code>SELECT COUNT(*) FROM orders;</code></td>
+</tr>
+<tr>
+<td><code>SUM()</code></td>
+<td>计算数值列的总和</td>
+<td><code>SELECT SUM(amount) FROM sales;</code></td>
+</tr>
+<tr>
+<td><code>AVG()</code></td>
+<td>计算数值列的平均值</td>
+<td><code>SELECT AVG(salary) FROM staff;</code></td>
+</tr>
+<tr>
+<td><code>MAX()</code></td>
+<td>返回列中的最大值</td>
+<td><code>SELECT MAX(price) FROM products;</code></td>
+</tr>
+<tr>
+<td><code>MIN()</code></td>
+<td>返回列中的最小值</td>
+<td><code>SELECT MIN(age) FROM users;</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mysql">🧩 二、MySQL 常见的聚合函数</h2>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT()</code></td>
+<td>统计行数（记录数量）</td>
+<td><code>COUNT(*)</code>、<code>COUNT(列名)</code></td>
+</tr>
+<tr>
+<td><code>SUM()</code></td>
+<td>求某一列数值的总和</td>
+<td><code>SUM(score)</code></td>
+</tr>
+<tr>
+<td><code>AVG()</code></td>
+<td>求某一列数值的平均值</td>
+<td><code>AVG(score)</code></td>
+</tr>
+<tr>
+<td><code>MAX()</code></td>
+<td>求某一列的最大值</td>
+<td><code>MAX(score)</code></td>
+</tr>
+<tr>
+<td><code>MIN()</code></td>
+<td>求某一列的最小值</td>
+<td><code>MIN(score)</code></td>
+</tr>
+<tr>
+<td><code>GROUP_CONCAT()</code></td>
+<td>将分组中的多个值合并为一个字符串（常用于标签、明细拼接）</td>
+<td><code>GROUP_CONCAT(name)</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 这些函数通常与 <code>GROUP BY</code> 子句一起使用，用于<strong>按某个字段分组后，对每组数据进行聚合计算</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="_10">📦 三、聚合查询的基本语法</h2>
+<h3 id="1_1">1️⃣ 基本聚合（不分组，统计全表）</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">总行数</span><span class="p">,</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="err">列名</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">总和</span><span class="p">,</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="err">列名</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均值</span><span class="p">,</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="err">列名</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最大值</span><span class="p">,</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="err">列名</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最小值</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="2-group-by">2️⃣ 分组聚合（GROUP BY）</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="err">分组字段</span><span class="p">,</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">数量</span><span class="p">,</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="err">数值字段</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">总和</span><span class="p">,</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="err">数值字段</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="k">FROM</span><span class="w"> </span><span class="err">表名</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">分组字段</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>🎯 <strong>GROUP BY 的作用：将数据按照某个字段的不同值进行分组，然后对每组数据分别做聚合计算</strong></p>
+</blockquote>
+<hr />
+<p><strong>业务场景：</strong></p>
+<ul>
+<li>“统计每个部门的工资总和”</li>
+<li>“找出每个类别销量最高的商品”</li>
+<li>“统计每天的订单数与金额”</li>
+</ul>
+<h2 id="_11">🎮 四、实例详解（附表 + 详细解析）</h2>
+<hr />
+<h3 id="students">📌 示例表：students（学生表）</h3>
+<p>假设我们有如下表结构和数据：</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="n">score</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="n">class_id</span><span class="w"> </span><span class="nb">INT</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="p">);</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">VALUES</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小明&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小红&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小刚&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">76</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小丽&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小华&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小芳&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span></code></pre></div>
+<strong>示例</strong></p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;人数&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">&#39;平均薪资&#39;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span>
+</span></code></pre></div>
+- <strong>说明</strong>：按部门分组，筛选平均薪资超过5000的部门。
+- <strong>HAVING vs WHERE</strong>：
+  - <code>WHERE</code>：过滤原始数据（分组前）。
+  - <code>HAVING</code>：过滤分组后的数据（分组后）。</p>
+<hr />
+<h2 id="1_2">🔹 练习 1：统计学生总人数</h2>
+<h3 id="_12">✅ 查询：表里一共有多少学生？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">总人数</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>总人数
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>------
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>6
+</span></code></pre></div>
+<blockquote>
+<p><code>COUNT(*)</code> 统计所有行数，不管字段是否为 NULL。</p>
+</blockquote>
+<hr />
+<h2 id="2_3">🔹 练习 2：统计所有学生的平均分</h2>
+<h3 id="_13">✅ 查询：所有学生的平均成绩是多少？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均分</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能是：<code>86.58</code>（根据实际数据计算）</p>
+<blockquote>
+<p><code>AVG(score)</code> 只计算 <code>score</code> 列中 <strong>非 NULL 值</strong> 的平均值。</p>
+</blockquote>
+<hr />
+<h2 id="3_2">🔹 练习 3：统计最高分和最低分</h2>
+<h3 id="_14">✅ 查询：最高分和最低分分别是多少？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最高分</span><span class="p">,</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最低分</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>最高分   | 最低分
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>--------|-------
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>92.00   | 76.50
+</span></code></pre></div>
+<hr />
+<h2 id="4">🔹 练习 4：统计每个班级的学生人数（分组聚合）</h2>
+<h3 id="_15">✅ 查询：每个班级有多少学生？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">学生人数</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>学生人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 说明：
+- <code>GROUP BY class_id</code>：按班级 ID 分组
+- 每组（每个班级）都单独计算 <code>COUNT(*)</code></p>
+</blockquote>
+<hr />
+<h2 id="5">🔹 练习 5：统计每个班级的平均分</h2>
+<h3 id="_16">✅ 查询：每个班级的平均成绩是多少？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">班级平均分</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果类似：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>班级平均分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>85.67</td>
+</tr>
+<tr>
+<td>2</td>
+<td>87.67</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>每个班级的 score 平均值被单独计算</p>
+</blockquote>
+<hr />
+<h2 id="6_1">🔹 练习 6：统计每个班级的人数、最高分、最低分、平均分</h2>
+<h3 id="_17">✅ 综合查询：</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">人数</span><span class="p">,</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最高分</span><span class="p">,</span>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最低分</span><span class="p">,</span>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均分</span>
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 输出示例：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>人数</th>
+<th>最高分</th>
+<th>最低分</th>
+<th>平均分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>92.00</td>
+<td>76.50</td>
+<td>85.67</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>90.00</td>
+<td>85.00</td>
+<td>87.67</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 这就是典型的 <strong>分组聚合统计报表</strong>，在业务系统中非常常见！</p>
+</blockquote>
+<hr />
+<h2 id="7_1">🔹 练习 7：统计每个性别的学生人数</h2>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span><span class="n">gender</span><span class="p">,</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">人数</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<table>
+<thead>
+<tr>
+<th>gender</th>
+<th>人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>男</td>
+<td>3</td>
+</tr>
+<tr>
+<td>女</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8_1">🔹 练习 8：查询每个班级中分数最高的学生（进阶，结合子查询）</h2>
+<blockquote>
+<p>这是聚合 + 子查询的综合应用，稍后会讲解如何实现“每组中的最大值对应明细”。</p>
+</blockquote>
+<hr />
+<h2 id="_18">🧠 五、聚合函数使用注意事项</h2>
+<table>
+<thead>
+<tr>
+<th>注意事项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT(*)</code></td>
+<td>统计所有行，包括字段为 NULL 的行</td>
+</tr>
+<tr>
+<td><code>COUNT(列名)</code></td>
+<td>只统计该列 <strong>非 NULL</strong> 的行数</td>
+</tr>
+<tr>
+<td><code>AVG()</code>, <code>SUM()</code>, <code>MAX()</code>, <code>MIN()</code></td>
+<td>只作用于 <strong>数值类型字段</strong>，忽略 NULL 值</td>
+</tr>
+<tr>
+<td><code>GROUP BY</code></td>
+<td>用于分组，<strong>SELECT 中的非聚合列，必须出现在 GROUP BY 中</strong></td>
+</tr>
+<tr>
+<td><strong>聚合与普通列搭配</strong></td>
+<td>如果 SELECT 中有非聚合字段，必须用 GROUP BY 指定它的分组依据</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_19">❗ 常见错误示例</h2>
+<h3 id="_20">❌ 错误写法：</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">class_id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔴 问题：<code>name</code> 不是聚合列，也没有在 <code>GROUP BY</code> 中，MySQL 会报错（严格模式下）或返回不可预期的结果。</p>
+<p>✅ 正确做法：要么去掉 <code>name</code>，要么按 <code>class_id, name</code> 分组，或者用子查询找出每组的某个学生。</p>
+<hr />
+<h2 id="group_concat">🎨 六、扩展：GROUP_CONCAT() —— 聚合拼接字符串</h2>
+<h3 id="_21">作用：将每组中的多个值合并为一个字符串，常用于标签、明细展示等</h3>
+<h3 id="_22">示例：查询每个班级有哪些学生姓名（拼接成一个字符串）</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span><span class="n">GROUP_CONCAT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">学生名单</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>学生名单</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>小明,小红,小刚</td>
+</tr>
+<tr>
+<td>2</td>
+<td>小丽,小华,小芳</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>可通过 <code>SEPARATOR</code> 指定分隔符，如：<code>GROUP_CONCAT(name SEPARATOR '|')</code></p>
+</blockquote>
+<hr />
+<h1 id="_23">✅ 七、总结：聚合查询核心要点</h1>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>常用聚合函数</strong></td>
+<td>COUNT, SUM, AVG, MAX, MIN, GROUP_CONCAT</td>
+</tr>
+<tr>
+<td><strong>作用</strong></td>
+<td>对多行数据进行统计、求和、求平均、找最值等</td>
+</tr>
+<tr>
+<td><strong>通常搭配</strong></td>
+<td><code>GROUP BY</code> 进行分组统计</td>
+</tr>
+<tr>
+<td><strong>注意</strong></td>
+<td>SELECT 中非聚合列一般要出现在 GROUP BY 中</td>
+</tr>
+<tr>
+<td><strong>应用场景</strong></td>
+<td>数据报表、业务统计、分组汇总、数据分析等</td>
+</tr>
+</tbody>
+</table>
+<p>聚合函数配合 SELECT 使用</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT(*)</code></td>
+<td>统计行数</td>
+<td><code>SELECT COUNT(*) FROM students;</code></td>
+</tr>
+<tr>
+<td><code>AVG(score)</code></td>
+<td>平均分</td>
+<td><code>SELECT AVG(score) FROM students;</code></td>
+</tr>
+<tr>
+<td><code>SUM(score)</code></td>
+<td>总分</td>
+<td><code>SELECT SUM(score) FROM students;</code></td>
+</tr>
+<tr>
+<td><code>MAX(score)</code></td>
+<td>最高分</td>
+<td><code>SELECT MAX(score) FROM students;</code></td>
+</tr>
+<tr>
+<td><code>MIN(score)</code></td>
+<td>最低分</td>
+<td><code>SELECT MIN(score) FROM students;</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>😊 <strong>聚合查询，让你的数据会“说话”！</strong></p>
+<h2 id="_24">练习</h2>
 
 
 

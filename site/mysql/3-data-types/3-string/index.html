@@ -1612,6 +1612,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/04-duplicate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    复制数据
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1752,8 +1775,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    字符串类型
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1766,6 +1800,131 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、MySQL 常见字符串类型总览
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHAR（定长字符串）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      VARCHAR（变长字符串）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinytext" class="md-nav__link">
+    <span class="md-ellipsis">
+      TINYTEXT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXT（普通长文本）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mediumtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      MEDIUMTEXT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#longtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      LONGTEXT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENUM（枚举类型）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      SET（多选集合）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、字符串类型的选择建议
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、其他注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3103,8 +3262,122 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、MySQL 常见字符串类型总览
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#char" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHAR（定长字符串）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#varchar" class="md-nav__link">
+    <span class="md-ellipsis">
+      VARCHAR（变长字符串）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tinytext" class="md-nav__link">
+    <span class="md-ellipsis">
+      TINYTEXT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEXT（普通长文本）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mediumtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      MEDIUMTEXT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#longtext" class="md-nav__link">
+    <span class="md-ellipsis">
+      LONGTEXT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENUM（枚举类型）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    <span class="md-ellipsis">
+      SET（多选集合）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、字符串类型的选择建议
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、其他注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3120,11 +3393,12 @@
 
 
 
-<h1 id="mysql">MySQL 中字符串类型的用法详解</h1>
-<p>在 MySQL 中，<strong>字符串类型（String Types）</strong> 是用于存储文本数据（字符序列）的数据类型，是最常用的数据类型之一。无论是存储用户名、地址、描述、JSON 文本、HTML 内容，还是日志信息，都离不开字符串类型。</p>
-<p>MySQL 提供了多种字符串类型，适用于不同的场景，包括<strong>定长字符串、变长字符串、长文本、二进制字符串</strong>等。</p>
+  <h1>字符串类型</h1>
+
+<p>在 MySQL 中，<strong>字符串类型（String Types）</strong> 用于存储文本数据（字符序列）的数据类型。无论是存储用户名、地址、描述、JSON 文本、HTML 内容，还是日志信息，都离不开字符串类型。</p>
+<p>MySQL 提供了多种字符串类型，适用于不同的场景。</p>
 <hr />
-<h1 id="mysql_1">一、MySQL 常见字符串类型总览</h1>
+<h2 id="mysql">一、MySQL 常见字符串类型总览</h2>
 <table>
 <thead>
 <tr>
@@ -3185,28 +3459,29 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>🎯 <strong>注意：</strong>
-- <code>CHAR</code> 和 <code>VARCHAR</code> 是<strong>字符类型</strong>，存储的是<strong>文本字符</strong>；
-- <code>TINYTEXT</code>、<code>TEXT</code>、<code>MEDIUMTEXT</code>、<code>LONGTEXT</code> 是<strong>长文本类型</strong>，适合存储大段文字；
-- <code>ENUM</code> 和 <code>SET</code> 是特殊的字符串类型，用于表示<strong>一组固定选项中的值（单选/多选）</strong>；
-- 还有 <code>BINARY</code>、<code>VARBINARY</code>、<code>BLOB</code> 等<strong>二进制字符串类型</strong>，用于存储二进制数据（如图片、文件），本文主要聚焦于<strong>普通文本字符串类型</strong>。</p>
-</blockquote>
+<p>🎯 <strong>注意：</strong></p>
+<ul>
+<li><code>CHAR</code> 和 <code>VARCHAR</code> 是<strong>字符类型</strong>，存储的是<strong>文本字符</strong>；</li>
+<li><code>TINYTEXT</code>、<code>TEXT</code>、<code>MEDIUMTEXT</code>、<code>LONGTEXT</code> 是<strong>长文本类型</strong>，适合存储大段文字；</li>
+<li><code>ENUM</code> 和 <code>SET</code> 是特殊的字符串类型，用于表示<strong>一组固定选项中的值（单选/多选）</strong>；</li>
+<li>还有 <code>BINARY</code>、<code>VARBINARY</code>、<code>BLOB</code> 等<strong>二进制字符串类型</strong>，用于存储二进制数据（如图片、文件），本文主要聚焦于<strong>普通文本字符串类型</strong>。</li>
+</ul>
 <hr />
-<h1 id="_1">二、常用字符串类型详解</h1>
-<h2 id="1-char">1️⃣ CHAR（定长字符串）</h2>
-<h3 id="_2">语法：</h3>
+<h2 id="char">CHAR（定长字符串）</h2>
+<p>语法：</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">CHAR</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
 </span></code></pre></div>
 <ul>
 <li><strong>M 表示字符个数（不是字节数）</strong>，范围是 0 ~ 255</li>
 <li>如果存入的字符数小于 M，则<strong>自动用空格填充</strong>到 M 个字符，<strong>取出时会自动去掉尾部空格</strong></li>
-<li>适合存储<strong>长度固定</strong>的数据，比如：</li>
+<li>适合存储<strong>长度固定</strong>的数据，比如：<ul>
 <li>性别（'M' / 'F'）</li>
 <li>国家/地区代码（如 'CN', 'US'）</li>
 <li>状态码（如 'Y', 'N'）</li>
 </ul>
-<h3 id="_3">示例：</h3>
+</li>
+</ul>
+<p>示例：</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w">       </span><span class="c1">-- 存 &#39;M&#39; 或 &#39;F&#39;</span>
@@ -3214,19 +3489,21 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">);</span>
 </span></code></pre></div>
 <hr />
-<h2 id="2-varchar">2️⃣ VARCHAR（变长字符串）</h2>
-<h3 id="_4">语法：</h3>
+<h2 id="varchar">VARCHAR（变长字符串）</h2>
+<p>语法：
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">VARCHAR</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
-</span></code></pre></div>
+</span></code></pre></div></p>
 <ul>
 <li><strong>M 表示最大字符数</strong>，范围是 <strong>0 ~ 65,535 字节（实际受行大小和字符集影响，通常建议不超过几千字符）</strong></li>
 <li><strong>变长存储，只占用实际需要的空间 + 1~2个字节记录长度</strong></li>
-<li>适合存储<strong>长度不固定</strong>的文本，比如：</li>
+<li>适合存储<strong>长度不固定</strong>的文本，比如：<ul>
 <li>用户名</li>
 <li>商品名称</li>
 <li>标题、摘要、描述等</li>
 </ul>
-<h3 id="_5">示例：</h3>
+</li>
+</ul>
+<p><strong>示例</strong></p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span><span class="w">        </span><span class="c1">-- 商品名称</span>
@@ -3236,82 +3513,197 @@
 <blockquote>
 <p>⚠️ 注意：<code>VARCHAR(M)</code> 中的 M 是<strong>字符数，不是字节数</strong>，但实际存储时会受<strong>字符集影响</strong>（如 utf8mb4 下一个中文占 4 字节）</p>
 </blockquote>
+<p>用途：<code>VARCHAR()</code>用于表示长度变化的字符串。</p>
+<p>语法</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">VARCHAR</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></code></pre></div>
+<p>参数：n表示一个整数，用于规定字符串的最大长度。</p>
+<p>示例</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">user_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">);</span>
+</span></code></pre></div>
+<p>应用场景：适合存储长度变化的字符串，比如: 用户名、电子邮箱地址等</p>
+<ol>
+<li>短字符串</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>最大长度</th>
+<th>存储方式</th>
+<th>特点</th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CHAR(N)</code></td>
+<td>255字符</td>
+<td>固定长度</td>
+<td>尾部空格自动去除</td>
+<td>固定长度数据（如MD5）</td>
+</tr>
+<tr>
+<td><code>VARCHAR(N)</code></td>
+<td>65535字节</td>
+<td>变长 + 长度前缀</td>
+<td>节省空间，但更新可能碎片化</td>
+<td>用户名、地址等变长数据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>性能对比</strong>：</p>
+<ul>
+<li><code>CHAR(10)</code> vs <code>VARCHAR(10)</code> 存储"abc"：</li>
+<li>CHAR占用10字节（补空格）</li>
+<li>VARCHAR占用3字节 + 1字节长度前缀</li>
+</ul>
 <hr />
-<h2 id="3-tinytext">3️⃣ TINYTEXT</h2>
-<h3 id="_6">语法：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">TINYTEXT</span>
+<h2 id="tinytext">TINYTEXT</h2>
+<p><strong>语法</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">TINYTEXT</span>
 </span></code></pre></div>
 <ul>
 <li>最大 <strong>255 字节</strong></li>
 <li>适合存储非常短的文本内容，如状态说明、简短备注等</li>
 <li>比 VARCHAR 更节省空间，但不支持默认值，也不适合频繁查询/索引</li>
 </ul>
-<h3 id="_7">示例：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">action</span><span class="w"> </span><span class="n">TINYTEXT</span><span class="w">  </span><span class="c1">-- 如 &#39;login&#39;, &#39;logout&#39;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">);</span>
+<p><strong>示例</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">action</span><span class="w"> </span><span class="n">TINYTEXT</span><span class="w">  </span><span class="c1">-- 如 &#39;login&#39;, &#39;logout&#39;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">);</span>
 </span></code></pre></div>
 <hr />
-<h2 id="4-text">4️⃣ TEXT（普通长文本）</h2>
-<h3 id="_8">语法：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">TEXT</span>
+<h2 id="text">TEXT（普通长文本）</h2>
+<p><strong>语法</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">TEXT</span>
 </span></code></pre></div>
 <ul>
 <li>最大 <strong>65,535 字节 (~64KB)</strong></li>
-<li>适合存储：</li>
+<li>适合存储：<ul>
 <li>文章内容</li>
 <li>用户评论</li>
 <li>较长的描述、说明</li>
 </ul>
-<h3 id="_9">示例：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w">  </span><span class="c1">-- 文章正文</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">);</span>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="nb">TEXT</span><span class="w">  </span><span class="c1">-- 文章正文</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">);</span>
 </span></code></pre></div>
 <hr />
-<h2 id="5-mediumtext">5️⃣ MEDIUMTEXT</h2>
-<h3 id="_10">语法：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">MEDIUMTEXT</span>
+<h2 id="mediumtext">MEDIUMTEXT</h2>
+<p><strong>语法</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">MEDIUMTEXT</span>
 </span></code></pre></div>
 <ul>
 <li>最大 <strong>16,777,215 字节 (~16MB)</strong></li>
-<li>适合存储：</li>
+<li>适合存储：<ul>
 <li>长文章</li>
 <li>日志内容</li>
 <li>较大的 JSON / XML 内容</li>
 </ul>
-<h3 id="_11">示例：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">details</span><span class="w"> </span><span class="n">MEDIUMTEXT</span><span class="w">  </span><span class="c1">-- 存储较长的日志详情</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">);</span>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">details</span><span class="w"> </span><span class="n">MEDIUMTEXT</span><span class="w">  </span><span class="c1">-- 存储较长的日志详情</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">);</span>
 </span></code></pre></div>
 <hr />
-<h2 id="6-longtext">6️⃣ LONGTEXT</h2>
-<h3 id="_12">语法：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">LONGTEXT</span>
+<h2 id="longtext">LONGTEXT</h2>
+<p><strong>语法</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">LONGTEXT</span>
 </span></code></pre></div>
 <ul>
 <li>最大 <strong>4,294,967,295 字节 (~4GB)</strong></li>
-<li>适合存储：</li>
+<li>适合存储：<ul>
 <li>非常大的文本内容</li>
 <li>电子书、整本小说</li>
 <li>大型 JSON / XML 数据</li>
 </ul>
-<h3 id="_13">示例：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ebooks</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="n">LONGTEXT</span><span class="w">  </span><span class="c1">-- 存储整本书内容</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">);</span>
+</li>
+</ul>
+<p><strong>示例</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">ebooks</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">title</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">200</span><span class="p">),</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">content</span><span class="w"> </span><span class="n">LONGTEXT</span><span class="w">  </span><span class="c1">-- 存储整本书内容</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">);</span>
 </span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>最大长度</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TEXT</code></td>
+<td>64KB (L+2字节)</td>
+<td>纯文本，字符集相关</td>
+</tr>
+<tr>
+<td><code>MEDIUMTEXT</code></td>
+<td>16MB</td>
+<td>长文章、JSON字符串（MySQL 5.7前）</td>
+</tr>
+<tr>
+<td><code>LONGTEXT</code></td>
+<td>4GB</td>
+<td>超长文本</td>
+</tr>
+<tr>
+<td><code>BLOB</code></td>
+<td>同TEXT系列</td>
+<td>存储二进制数据（如图片、文件）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意事项</strong>：</p>
+<ul>
+<li>TEXT/BLOB字段会使用外部存储，避免<code>SELECT *</code>全量读取</li>
+<li>大字段建议拆分到独立表（优化查询性能）</li>
+</ul>
 <hr />
-<h2 id="7-enum">7️⃣ ENUM（枚举类型）</h2>
-<h3 id="_14">语法：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;值1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值3&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+<h2 id="enum">ENUM（枚举类型）</h2>
+<p>用途：<code>ENUM ()</code>用于表示字符串值列表。它允许你从预定义的值列表中选择一个值。</p>
+<p>语法</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;值1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值3&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+</span></code></pre></div>
+<p>参数：值是一个字符串，必须用引号包裹。</p>
+<p>示例</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;男&quot;</span><span class="p">,</span><span class="ss">&quot;女&quot;</span><span class="p">),</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">week</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;星期一&quot;</span><span class="p">,</span><span class="ss">&quot;星期二&quot;</span><span class="p">,</span><span class="ss">&quot;星期三&quot;</span><span class="p">),</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="n">cup</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;大杯&quot;</span><span class="p">,</span><span class="ss">&quot;中杯&quot;</span><span class="p">,</span><span class="ss">&quot;小杯&quot;</span><span class="p">),</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">order</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;待支付&quot;</span><span class="p">,</span><span class="ss">&quot;支付完成&quot;</span><span class="p">,</span><span class="ss">&quot;待收货&quot;</span><span class="p">,</span><span class="ss">&quot;已完成&quot;</span><span class="p">)</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">);</span>
+</span></code></pre></div>
+<p>应用场景：适合存储长度变化的字符串，比如: 用户名、电子邮箱地址等</p>
+<blockquote>
+<p>ENUM() 创建字符串数据类型（字符串值列表）</p>
+<ol>
+<li>enumurate 翻译为”枚举“。</li>
+<li>”举"就是列举</li>
+<li>”枚“的本意是“树干”</li>
+<li>”枚“作量词的意思是：”个”</li>
+<li>”枚“作副词的意思是：“逐个”</li>
+<li>“枚举”的意思是：逐个列举，但是每次只能取一个。简单说就是：多选一</li>
+</ol>
+</blockquote>
+<p><strong>语法</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;值1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值3&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 </span></code></pre></div>
 <ul>
 <li>只能从预定义的一组字符串值中选择一个</li>
@@ -3319,21 +3711,21 @@
 <li>最多支持 <strong>65,535 个不同的值</strong></li>
 <li>适合存储<strong>固定选项</strong>，如性别、状态、类型等</li>
 </ul>
-<h3 id="_15">示例：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;O&#39;</span><span class="p">),</span><span class="w">  </span><span class="c1">-- M:男, F:女, O:其他</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;inactive&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pending&#39;</span><span class="p">)</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="p">);</span>
+<p><strong>示例</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;O&#39;</span><span class="p">),</span><span class="w">  </span><span class="c1">-- M:男, F:女, O:其他</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;inactive&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pending&#39;</span><span class="p">)</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">);</span>
 </span></code></pre></div>
 <blockquote>
 <p>✅ 优点：节省空间、提高数据一致性<br />
 ❌ 缺点：不够灵活，新增选项需修改表结构</p>
 </blockquote>
 <hr />
-<h2 id="8-set">8️⃣ SET（多选集合）</h2>
-<h3 id="_16">语法：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SET</span><span class="p">(</span><span class="s1">&#39;值1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值3&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+<h2 id="set">SET（多选集合）</h2>
+<p><strong>语法</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SET</span><span class="p">(</span><span class="s1">&#39;值1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值3&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
 </span></code></pre></div>
 <ul>
 <li>可存储一组预定义值中的<strong>一个或多个值</strong></li>
@@ -3341,18 +3733,18 @@
 <li>实际存储也是整数（位掩码），但表现为字符串集合</li>
 <li>适合存储<strong>标签、爱好、权限组合</strong>等</li>
 </ul>
-<h3 id="_17">示例：</h3>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="n">interests</span><span class="w"> </span><span class="k">SET</span><span class="p">(</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sports&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;reading&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;travel&#39;</span><span class="p">)</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">);</span>
+<p><strong>示例</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">interests</span><span class="w"> </span><span class="k">SET</span><span class="p">(</span><span class="s1">&#39;music&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sports&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;reading&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;travel&#39;</span><span class="p">)</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">);</span>
 </span></code></pre></div>
 <blockquote>
 <p>✅ 适合存储多选项，比如用户的兴趣爱好<br />
 ❌ 不适合频繁更新的场景，且选项不能太多</p>
 </blockquote>
 <hr />
-<h1 id="_18">三、字符串类型的选择建议</h1>
+<h2 id="_1">三、字符串类型的选择建议</h2>
 <table>
 <thead>
 <tr>
@@ -3396,32 +3788,40 @@
 </tbody>
 </table>
 <hr />
-<h1 id="_19">四、其他注意事项</h1>
-<h3 id="1">1. <strong>字符集影响存储大小</strong></h3>
-<ul>
+<h2 id="_2">四、其他注意事项</h2>
+<ol>
+<li><strong>字符集影响存储大小</strong></li>
 <li><code>VARCHAR(100)</code> 在 <code>utf8mb4</code> 字符集下，一个中文或 emoji 占 <strong>4 字节</strong>，所以最多能存约 25 个中文</li>
-<li>建议根据实际语言选择字符集，比如：</li>
+<li>
+<p>建议根据实际语言选择字符集，比如：</p>
+<ul>
 <li><code>utf8mb4</code>：支持中文、emoji（推荐）</li>
 <li><code>latin1</code>：单字节，仅支持西文</li>
 <li><code>utf8</code>：MySQL 中的旧 UTF-8（最多 3 字节，不支持某些 emoji）</li>
 </ul>
-<h3 id="2-varchar_1">2. <strong>VARCHAR 的最大长度限制</strong></h3>
-<ul>
+</li>
+<li>
+<p><strong>VARCHAR 的最大长度限制</strong></p>
+</li>
 <li>虽然语法上 <code>VARCHAR(M)</code> 最大是 65,535 <strong>字符</strong>，但实际受<strong>行最大字节数（约 65,535 字节）和字符集影响</strong></li>
-<li>通常单个 <code>VARCHAR</code> 不建议超过几千字符</li>
-</ul>
-<h3 id="3-text-mysql-57">3. <strong>TEXT 类型不能有默认值（MySQL 5.7 及之前）</strong></h3>
-<ul>
-<li>在 MySQL 8.0 开始，<code>TEXT</code> 和 <code>VARCHAR</code> 都<strong>可以设置默认值了</strong></li>
-</ul>
-<h3 id="4">4. <strong>排序、索引与性能</strong></h3>
-<ul>
+<li>
+<p>通常单个 <code>VARCHAR</code> 不建议超过几千字符</p>
+</li>
+<li>
+<p><strong>TEXT 类型不能有默认值（MySQL 5.7 及之前）</strong></p>
+</li>
+<li>
+<p>在 MySQL 8.0 开始，<code>TEXT</code> 和 <code>VARCHAR</code> 都<strong>可以设置默认值了</strong></p>
+</li>
+<li>
+<p><strong>排序、索引与性能</strong></p>
+</li>
 <li><code>CHAR</code> 和 <code>VARCHAR</code> 支持索引、排序、分组等操作，性能较好</li>
 <li><code>TEXT</code> 类型也可以建索引（但通常是前缀索引），但<strong>不建议用于频繁查询/排序的字段</strong></li>
 <li><code>ENUM</code> 和 <code>SET</code> 是特殊类型，查询效率高，但修改选项需改表结构</li>
-</ul>
+</ol>
 <hr />
-<h1 id="_20">五、总结</h1>
+<h2 id="_3">五、总结</h2>
 <table>
 <thead>
 <tr>
@@ -3491,424 +3891,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<hr />
-<p>字符串(ENUM)</p>
-<p>用途：<code>ENUM ()</code>用于表示字符串值列表。它允许你从预定义的值列表中选择一个值。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">ENUM</span><span class="p">(</span><span class="s1">&#39;值1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;值3&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
-</span></code></pre></div>
-<p>参数：值是一个字符串，必须用引号包裹。</p>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;男&quot;</span><span class="p">,</span><span class="ss">&quot;女&quot;</span><span class="p">),</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="n">week</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;星期一&quot;</span><span class="p">,</span><span class="ss">&quot;星期二&quot;</span><span class="p">,</span><span class="ss">&quot;星期三&quot;</span><span class="p">),</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="n">cup</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;大杯&quot;</span><span class="p">,</span><span class="ss">&quot;中杯&quot;</span><span class="p">,</span><span class="ss">&quot;小杯&quot;</span><span class="p">),</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="k">order</span><span class="w"> </span><span class="n">ENUM</span><span class="p">(</span><span class="ss">&quot;待支付&quot;</span><span class="p">,</span><span class="ss">&quot;支付完成&quot;</span><span class="p">,</span><span class="ss">&quot;待收货&quot;</span><span class="p">,</span><span class="ss">&quot;已完成&quot;</span><span class="p">)</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">);</span>
-</span></code></pre></div>
-<p>应用场景：适合存储长度变化的字符串，比如: 用户名、电子邮箱地址等</p>
-<blockquote>
-<p>ENUM() 创建字符串数据类型（字符串值列表）</p>
-<ol>
-<li>enumurate 翻译为”枚举“。</li>
-<li>”举"就是列举</li>
-<li>”枚“的本意是“树干”</li>
-<li>”枚“作量词的意思是：”个”</li>
-<li>”枚“作副词的意思是：“逐个”</li>
-<li>“枚举”的意思是：逐个列举，但是每次只能取一个。简单说就是：多选一
-字符串(VARCHAR)</li>
-</ol>
-</blockquote>
-<p>用途：<code>VARCHAR()</code>用于表示长度变化的字符串。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">VARCHAR</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数：n表示一个整数，用于规定字符串的最大长度。</p>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">user_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">);</span>
-</span></code></pre></div>
-<p>应用场景：适合存储长度变化的字符串，比如: 用户名、电子邮箱地址等</p>
-<ol>
-<li>短字符串</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>最大长度</th>
-<th>存储方式</th>
-<th>特点</th>
-<th>应用场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>CHAR(N)</code></td>
-<td>255字符</td>
-<td>固定长度</td>
-<td>尾部空格自动去除</td>
-<td>固定长度数据（如MD5）</td>
-</tr>
-<tr>
-<td><code>VARCHAR(N)</code></td>
-<td>65535字节</td>
-<td>变长 + 长度前缀</td>
-<td>节省空间，但更新可能碎片化</td>
-<td>用户名、地址等变长数据</td>
-</tr>
-</tbody>
-</table>
-<p><strong>性能对比</strong>：</p>
-<ul>
-<li><code>CHAR(10)</code> vs <code>VARCHAR(10)</code> 存储"abc"：</li>
-<li>CHAR占用10字节（补空格）</li>
-<li>VARCHAR占用3字节 + 1字节长度前缀</li>
-</ul>
-<hr />
-<ol>
-<li>长文本与二进制</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>最大长度</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>TEXT</code></td>
-<td>64KB (L+2字节)</td>
-<td>纯文本，字符集相关</td>
-</tr>
-<tr>
-<td><code>MEDIUMTEXT</code></td>
-<td>16MB</td>
-<td>长文章、JSON字符串（MySQL 5.7前）</td>
-</tr>
-<tr>
-<td><code>LONGTEXT</code></td>
-<td>4GB</td>
-<td>超长文本</td>
-</tr>
-<tr>
-<td><code>BLOB</code></td>
-<td>同TEXT系列</td>
-<td>存储二进制数据（如图片、文件）</td>
-</tr>
-</tbody>
-</table>
-<p><strong>注意事项</strong>：</p>
-<ul>
-<li>TEXT/BLOB字段会使用外部存储，避免<code>SELECT *</code>全量读取</li>
-<li>大字段建议拆分到独立表（优化查询性能）</li>
-</ul>
-<h2 id="1_1">1.查询字节长度</h2>
-<p>length()</p>
-<p>用途：查询字符的字节长度。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">LENGTH</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>string：必需。字符串</li>
-</ul>
-<p>返回值：整数或NUll</p>
-<ul>
-<li>整数：表示字符串的长度</li>
-<li>0：查询失败</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">LENGTH</span><span class="p">(</span><span class="ss">&quot;SQL Tutorial&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">LengthOfString</span><span class="p">;</span>
-</span></code></pre></div>
-<p>字符集</p>
-<ul>
-<li>gbk：使用2个字节存储一个汉字</li>
-<li>unicode：使用3个字节存储一个汉字</li>
-</ul>
-<h2 id="2">2.大小写转换</h2>
-<p>upper()</p>
-<p>用途：将英文字符串转为全大写</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">UPPER</span><span class="p">(</span><span class="err">英文文本</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>英文文本：必需</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 &#39;HELLO&#39;</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">UCASE</span><span class="p">(</span><span class="s1">&#39;mysql&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 &#39;MYSQL&#39;</span>
-</span></code></pre></div>
-<p>LOWER()
-用途：将英文字符串转为全小写。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">lower</span><span class="p">(</span><span class="err">英文文本</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>英文文本：必须</li>
-</ul>
-<p>示例  </p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="s1">&#39;Hello WORLD&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">-- 输出：hello world</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="s1">&#39;ÄÖÜ&#39;</span><span class="p">);</span><span class="w">         </span><span class="c1">-- 输出：äöü（支持多语言字符）</span>
-</span></code></pre></div>
-<p>使用场景</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1">-- 插入数据时统一存储小写</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">username</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">LOWER</span><span class="p">(</span><span class="s1">&#39;Admin123&#39;</span><span class="p">));</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
-</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="c1">-- 查找忽略大小写的用户名</span>
-</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">username</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">);</span>
-</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
-</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="c1">-- 将标题转为小写格式</span>
-</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">title</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">lowercase_title</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">articles</span><span class="p">;</span>
-</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>
-</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="c1">-- 批量更新邮箱为小写</span>
-</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span>
-</span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="k">SET</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">email</span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="n">REGEXP</span><span class="w"> </span><span class="s1">&#39;[A-Z]&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">-- 仅处理含大写字母的记录</span>
-</span></code></pre></div>
-<h2 id="3">3.删除空格</h2>
-<p>rtrim()</p>
-<p>用途：删除字符串尾随空格。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">RTRIM</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>string：必须，要删除空格的字符串</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">RTRIM</span><span class="p">(</span><span class="ss">&quot;SQL Tutorial     &quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">RightTrimmedString</span><span class="p">;</span>
-</span></code></pre></div>
-<h2 id="4_1">4.反转字符</h2>
-<p>reverse()</p>
-<p>用途：反转字符串字符顺序。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">REVERSE</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>string：必须，要反转顺序的字符串</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">REVERSE</span><span class="p">(</span><span class="ss">&quot;SQL Tutorial&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-<h2 id="5">5.自定义排序</h2>
-<p>field()</p>
-<p>用途：返回值列表中值的索引位置。</p>
-<p>注意：如果在值列表中找不到指定的值，则此函数将返回0。如果值为null，则此函数将返回0。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">FIELD</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">val1</span><span class="p">,</span><span class="w"> </span><span class="n">val2</span><span class="p">,</span><span class="w"> </span><span class="n">val3</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>value：必须，要查的值</li>
-<li>val1：值列表</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">FIELD</span><span class="p">(</span><span class="ss">&quot;q&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;q&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;l&quot;</span><span class="p">);</span><span class="c1">-- 输出 2</span>
-</span></code></pre></div>
-<h2 id="6">6.提取字符串</h2>
-<p>left()</p>
-<p>用途：从左起截取-指定长度字符</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">LEFT</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="k">length</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>str：必需，指定提取的字符串</li>
-<li>length：必需。要提取的字符数。如果此参数大于字符串中的字符数，则此功能将返回全部字符串</li>
-</ul>
-<p>示例：  </p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">LEFT</span><span class="p">(</span><span class="s1">&#39;ABCDE&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 &#39;ABC&#39;</span>
-</span></code></pre></div>
-<p>right()</p>
-<p>substring()
-用途：从指定位置截取字符串</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">SUBSTRING</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">length</span><span class="p">])</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>str：必需，要截取的字符串。</li>
-<li>start ：必需的。开始位置。可以是正数或负数。如果是正数，则此函数从字符串的开头提取。如果是负数，则此函数从字符串的末端提取</li>
-<li>[length]：可选。要提取的字符数。如果省略，将返回整个字符串（从开始位置）</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SUBSTRING</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span><span class="w">    </span><span class="c1">-- 输出 &#39;World&#39;</span>
-</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SUBSTRING</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 &#39;Wor&#39;</span>
-</span></code></pre></div>
-<h2 id="7">7.查询字符位置</h2>
-<p>locate()
-用途：返回子字符串首次出现的位置（可指定起始点）。如果在原始字符串中找不到子字符串，则此功能返回0。大小写不敏感。</p>
-<p>注意：如果在值列表中找不到指定的值，则此函数将返回0。如果值为null，则此函数将返回0。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">LOCATE</span><span class="p">(</span><span class="err">子字符串</span><span class="p">,</span><span class="w"> </span><span class="err">主字符串</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">start</span><span class="p">])</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>
-<p>substring：必需的。子字符串</p>
-</li>
-<li>
-<p>string：必需的。主字符串</p>
-</li>
-<li></li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="ss">&quot;3&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;W3Schools.com&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MatchPosition</span><span class="p">;</span>
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="ss">&quot;com&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;W3Schools.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MatchPosition</span><span class="p">;</span>
-</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;lo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 4（从第1位开始找）</span>
-</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 5</span>
-</span></code></pre></div>
-<ol>
-<li>默认从第1个字符开始搜索</li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello World! Welcome to MySQL.&#39;</span><span class="p">);</span>
-</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="c1">-- 结果：5（第一个 &#39;o&#39; 的位置）</span>
-</span></code></pre></div>
-<ol>
-<li>指定从第6个字符开始搜索</li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello World! Welcome to MySQL.&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
-</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="c1">-- 结果：8（从第6个字符开始后的第一个 &#39;o&#39; 的位置）</span>
-</span></code></pre></div>
-<ol>
-<li>子字符串不存在时返回0</li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello World! Welcome to MySQL.&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="c1">-- 结果：0（未找到）</span>
-</span></code></pre></div>
-<ol>
-<li>指定起始位置超过字符串长度</li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello World! Welcome to MySQL.&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">);</span>
-</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="c1">-- 结果：0（字符串总长度小于30）</span>
-</span></code></pre></div>
-<hr />
-<p><strong>关键特性</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>场景</strong></th>
-<th><strong>结果</strong></th>
-<th><strong>说明</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>start</code> 是正整数且有效</td>
-<td>位置值</td>
-<td>返回从 <code>start</code> 位置后的首次匹配位置</td>
-</tr>
-<tr>
-<td><code>start</code> 是0或负数</td>
-<td>0</td>
-<td>无效参数，直接返回0</td>
-</tr>
-<tr>
-<td><code>start</code> 超出字符串长度</td>
-<td>0</td>
-<td>搜索范围超出实际内容</td>
-</tr>
-<tr>
-<td>子字符串为空字符串 (<code>''</code>)</td>
-<td>1</td>
-<td>空字符串在任何位置都被认为存在</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>position()</p>
-<p>用途：返回字符串中第一次出现的位置。如果在原始字符串中找不到子字符串，则此功能返回0。</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">POSITION</span><span class="p">(</span><span class="err">子字符串</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="err">主字符串</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>substring：必需的。在字符串中搜索的子字符串</li>
-<li>string：必需的。将要搜索的原始字符串</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">POSITION</span><span class="p">(</span><span class="ss">&quot;3&quot;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="ss">&quot;W3Schools.com&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">MatchPosition</span><span class="p">;</span>
-</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;user@example.com&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 5</span>
-</span></code></pre></div>
-<p>instr() 
-用途：instr（）函数返回另一个字符串中首次出现字符串的位置。不区分大小写</p>
-<p>语法</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="n">INSTR</span><span class="p">(</span><span class="err">主字符串</span><span class="p">,</span><span class="w"> </span><span class="err">子字符串</span><span class="p">)</span>
-</span></code></pre></div>
-<p>参数</p>
-<ul>
-<li>stinrg1：必需的。主字符串</li>
-<li>sting2：必需的。子字符串。如果找不到字符串2，此功能返回0</li>
-</ul>
-<p>示例</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">INSTR</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;el&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 输出 2</span>
-</span></code></pre></div>
-<h2 id="8">8.<strong>关键区别与适用场景</strong></h2>
-<table>
-<thead>
-<tr>
-<th><strong>函数</strong></th>
-<th><strong>特点</strong></th>
-<th><strong>典型应用场景</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>UPPER/UCASE</code></td>
-<td>统一数据格式</td>
-<td>用户输入标准化、不区分大小写查询</td>
-</tr>
-<tr>
-<td><code>LEFT/SUBSTRING</code></td>
-<td>精准提取部分数据</td>
-<td>截取编码、日期、关键词</td>
-</tr>
-<tr>
-<td><code>REVERSE</code></td>
-<td>反转字符顺序</td>
-<td>生成镜像文本、特殊加密逻辑</td>
-</tr>
-<tr>
-<td><code>FIELD</code></td>
-<td>自定义排序优先级</td>
-<td>业务规则排序（如状态顺序）</td>
-</tr>
-<tr>
-<td><code>LOCATE/INSTR</code></td>
-<td>子串位置查找（参数顺序不同）</td>
-<td>解析邮箱、URL、关键词定位</td>
-</tr>
-</tbody>
-</table>
-<h2 id="9">9.<strong>常见应用</strong></h2>
-<ol>
-<li><strong>组合使用</strong>：  </li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1">-- 提取邮箱用户名（@前的部分）</span>
-</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SUBSTRING</span><span class="p">(</span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">LOCATE</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
-</span></code></pre></div>
-<ol>
-<li><strong>处理空值</strong>：  </li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="c1">-- 安全截取（避免空值报错）</span>
-</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SUBSTRING</span><span class="p">(</span><span class="k">COALESCE</span><span class="p">(</span><span class="k">column</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table</span><span class="p">;</span>
-</span></code></pre></div>
-<ol>
-<li><strong>动态排序</strong>：  </li>
-</ol>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1">-- 按自定义部门顺序排序</span>
-</span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
-</span><span id="__span-49-3"><a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">FIELD</span><span class="p">(</span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;开发部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">);</span>
-</span></code></pre></div>
 
 
 
