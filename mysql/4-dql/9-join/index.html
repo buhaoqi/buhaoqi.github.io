@@ -1612,6 +1612,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/04-duplicate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    复制数据
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2345,6 +2368,45 @@
       📌 下一步建议
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="📌 下一步建议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 多表连接（JOIN）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 多表连接（JOIN）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      连接类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3580,6 +3642,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="📌 下一步建议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 多表连接（JOIN）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 多表连接（JOIN）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      连接类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -4008,6 +4109,41 @@
 <li>✅ 或者 JOIN 与 <strong>子查询、聚合函数、GROUP BY</strong> 联合使用的实战技巧</li>
 </ul>
 <p>欢迎继续提问！我可以为你提供详细的 SQL 实战代码与讲解。</p>
+<h3 id="6-join"><strong>6. 多表连接（JOIN）</strong></h3>
+<h4 id="_7"><strong>连接类型</strong></h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INNER JOIN</code></td>
+<td>返回两个表匹配的行（交集）</td>
+</tr>
+<tr>
+<td><code>LEFT JOIN</code></td>
+<td>返回左表所有行 + 右表匹配的行</td>
+</tr>
+<tr>
+<td><code>RIGHT JOIN</code></td>
+<td>返回右表所有行 + 左表匹配的行</td>
+</tr>
+<tr>
+<td><code>FULL OUTER JOIN</code></td>
+<td>返回所有行（MySQL需用<code>UNION</code>模拟）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_8"><strong>示例</strong></h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">department_name</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">e</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span><span class="w"> </span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">department_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
 
 
 
