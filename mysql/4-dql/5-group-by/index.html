@@ -1,0 +1,4785 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="2026年河北省中职对口升学考试计算机类专业考试学习交流。">
+      
+      
+        <meta name="author" content="村长">
+      
+      
+        <link rel="canonical" href="https://buhaoqi.github.io/mysql/4-dql/5-group-by/">
+      
+      
+        <link rel="prev" href="../4-where/">
+      
+      
+        <link rel="next" href="../6-having/">
+      
+      
+      <link rel="icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>GROUP BY子句 - 高二九班(对口计算机)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mysql-dql-group-by" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-header__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            高二九班(对口计算机)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GROUP BY子句
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp-tutorial/" class="md-tabs__link">
+          
+  
+  
+  C#教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp-algorithm/" class="md-tabs__link">
+          
+  
+  
+  算法
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp-graphics/" class="md-tabs__link">
+          
+  
+  
+  C#图形
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp-winform/" class="md-tabs__link">
+          
+  
+  
+  WinForms
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  MySQL
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../office/" class="md-tabs__link">
+          
+  
+  
+  Office
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../computer-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../windows10/" class="md-tabs__link">
+          
+  
+  
+  Windows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../computer-network-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机网络
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exercises/csharp-summer/0621/" class="md-tabs__link">
+          
+  
+  
+  暑期作业
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exercises/mysql/level1/" class="md-tabs__link">
+          
+  
+  
+  作业库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../english/" class="md-tabs__link">
+          
+  
+  
+  编程英语
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-nav__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    高二九班(对口计算机)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp-tutorial/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#教程
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp-algorithm/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    算法
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp-graphics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#图形
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp-winform/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    WinForms
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    MySQL
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            MySQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    考试大纲
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    相关术语
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===新人起步===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            ===新人起步===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/01-what-is-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据库简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/02-what-is-mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MySQL简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/03-what-is-mysql-language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MySQL语言组成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/04-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    安装与启动MySQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/05-login-logout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    登录与退出MySQL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/06-case-sensitivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大小写敏感性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/07-comments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    注释
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0-get-started/08-identifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    标识符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===数据定义语言(DDL)===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            ===数据定义语言(DDL)===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/00-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DDL简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/01-show-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    查看数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/02-create-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    创建数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/03-drop-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    删除数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/04-use-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    使用数据库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/05-alter-database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    修改数据库名
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/01-create-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    创建表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/02-show-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    查看表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/03-copy-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    复制表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/04-drop-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    删除表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/05-alter-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    修改表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/06-index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    索引
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/07-view/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    视图
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-ddl/constraints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    约束条件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===数据操作语言(DML)===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            ===数据操作语言(DML)===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/00-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DML简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/01-insert-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    插入数据
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/02-delete-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    删除数据
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-dml/03-update-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    更新数据
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===数据类型===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            ===数据类型===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-data-types/0-what-is-datatype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据类型概述
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-data-types/1-integer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    整数类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-data-types/2-decimal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小数类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-data-types/3-string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    字符串类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-data-types/4-boolean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    布尔类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-data-types/5-datetime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    日期和时间类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===数据查询语言(DQL)===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            ===数据查询语言(DQL)===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DQL简介
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-select-statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SELECT语句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-select/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SELECT子句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-from/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FROM子句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-where/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WHERE子句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    GROUP BY子句
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    GROUP BY子句
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dql-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、什么是 DQL 和 GROUP BY 子句？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、什么是 DQL 和 GROUP BY 子句？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dqldata-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 DQL（Data Query Language）：数据查询语言
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 GROUP BY 子句的作用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、GROUP BY 子句的基本语法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、GROUP BY 的核心功能与用法详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、GROUP BY 的核心功能与用法详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ 基础用法：按单列分组并统计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ 基础用法：按单列分组并统计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 场景：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：统计每个部门的员工数量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ 按多列分组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ 按多列分组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：按部门 AND 职位分组，统计人数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ 配合聚合函数使用（重点）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ 配合聚合函数使用（重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 1：查询每个部门的最高工资
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 2：查询每个分类下的商品总销量和平均价格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-having" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ HAVING 子句：对分组结果进行过滤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ HAVING 子句：对分组结果进行过滤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 语法：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：查询员工数超过 5 人的部门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-group-by-order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ GROUP BY 与 ORDER BY 结合：分组后排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ GROUP BY 与 ORDER BY 结合：分组后排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：查询每个部门的平均工资，并按工资降序排列
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、GROUP BY 使用注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 总结：GROUP BY 子句核心要点速查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 下一步建议
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-having/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HAVING子句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-order-by/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ORDER BY子句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8-limit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LIMIT子句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-join/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高级:多表连接查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-subquery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高级:子查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-union/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高级:联合查询
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===运算符===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            ===运算符===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-operators/01-what-is-operator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    运算符是什么
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-operators/02-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    算术运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-operators/03-relational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关系运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-operators/04-logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    逻辑运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-operators/05-bitwise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    位运算符
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===函数库===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            ===函数库===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-function/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    字符串函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-function/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数学函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-function/aggregate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    聚合函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-function/date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    日期函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-function/others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    其他函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===控制结构===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            ===控制结构===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7-control-structures/if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IF语句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7-control-structures/case/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CASE语句
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7-control-structures/loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    循环结构
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ===其他===
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            ===其他===
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-others/backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据库备份
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-others/create-user/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    创建用户
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../office/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Office
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../computer-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机基础
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../windows10/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Windows
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../computer-network-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机网络
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../exercises/csharp-summer/0621/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    暑期作业
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../exercises/mysql/level1/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    作业库
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../english/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    编程英语
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dql-group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、什么是 DQL 和 GROUP BY 子句？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、什么是 DQL 和 GROUP BY 子句？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dqldata-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 DQL（Data Query Language）：数据查询语言
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 GROUP BY 子句的作用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、GROUP BY 子句的基本语法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、GROUP BY 的核心功能与用法详解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、GROUP BY 的核心功能与用法详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ 基础用法：按单列分组并统计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ 基础用法：按单列分组并统计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 场景：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：统计每个部门的员工数量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ 按多列分组
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ 按多列分组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#and" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：按部门 AND 职位分组，统计人数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ 配合聚合函数使用（重点）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ 配合聚合函数使用（重点）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 1：查询每个部门的最高工资
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例 2：查询每个分类下的商品总销量和平均价格
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-having" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ HAVING 子句：对分组结果进行过滤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ HAVING 子句：对分组结果进行过滤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 语法：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：查询员工数超过 5 人的部门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-group-by-order-by" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ GROUP BY 与 ORDER BY 结合：分组后排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5️⃣ GROUP BY 与 ORDER BY 结合：分组后排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 示例：查询每个部门的平均工资，并按工资降序排列
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、GROUP BY 使用注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-by_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 总结：GROUP BY 子句核心要点速查
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 下一步建议
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mysql-dql-group-by">MySQL 中 DQL 的 GROUP BY 子句详解</h1>
+<p>在 MySQL 中，<strong>DQL（Data Query Language，数据查询语言）</strong> 是用于从数据库中<strong>查询和检索数据</strong>的核心语言，而 <strong><code>GROUP BY</code> 子句</strong> 是 DQL 中用于<strong>数据分组与聚合统计</strong>的重要子句。</p>
+<hr />
+<h2 id="dql-group-by">一、什么是 DQL 和 GROUP BY 子句？</h2>
+<h3 id="dqldata-query-language">🔍 DQL（Data Query Language）：数据查询语言</h3>
+<p>DQL 是 SQL 的四大子语言之一（其他为 DML、DDL、DCL），它专注于<strong>查询数据</strong>，不修改数据。其最常见的形式是：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">...</span>
+</span></code></pre></div>
+<p>当我们需要对查询结果进行<strong>分组统计、汇总计算</strong>时，就会用到：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">...</span>
+</span></code></pre></div>
+<hr />
+<h3 id="group-by">🎯 GROUP BY 子句的作用</h3>
+<blockquote>
+<p><strong><code>GROUP BY</code> 用于将查询结果按照一个或多个列的值进行分组，通常与聚合函数一起使用，对每组数据进行统计计算。</strong></p>
+</blockquote>
+<p>简单来说：</p>
+<ul>
+<li><strong>GROUP BY 就是把数据按某个字段（或字段组合）进行“分类”</strong></li>
+<li><strong>然后可以对每一类数据进行汇总、计数、求平均等操作</strong></li>
+</ul>
+<hr />
+<h2 id="group-by_1">二、GROUP BY 子句的基本语法</h2>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">aggregate_function</span><span class="p">(</span><span class="n">column2</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">table_name</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">column1</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">[</span><span class="k">HAVING</span><span class="w"> </span><span class="n">group_condition</span><span class="p">]</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">[</span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">...]</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">[</span><span class="k">LIMIT</span><span class="w"> </span><span class="p">...];</span>
+</span></code></pre></div>
+<blockquote>
+<p>✅ 说明：
+- <code>GROUP BY column1</code>：表示按照 <code>column1</code> 的值进行分组，<strong>相同值的行会被分为一组</strong>
+- 通常与 <strong>聚合函数</strong> 如 <code>COUNT()</code>, <code>SUM()</code>, <code>AVG()</code>, <code>MAX()</code>, <code>MIN()</code> 等一起使用
+- <code>HAVING</code> 是对分组后的结果进行过滤（类似 WHERE，但是作用于分组后）</p>
+</blockquote>
+<hr />
+<h2 id="group-by_2">三、GROUP BY 的核心功能与用法详解</h2>
+<hr />
+<h3 id="1">1️⃣ 基础用法：按单列分组并统计</h3>
+<h4 id="_1">🎯 场景：</h4>
+<p>统计每个部门的员工人数。</p>
+<p>假设有一个员工表 <code>employees</code>：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">department</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">salary</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">);</span>
+</span></code></pre></div>
+<h4 id="_2">✅ 示例：统计每个部门的员工数量</h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">employee_count</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">employees</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧾 结果示例：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>employee_count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT</td>
+<td>5</td>
+</tr>
+<tr>
+<td>HR</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 说明：
+- 按 <code>department</code> 字段分组
+- 每组（每个部门）统计一次 <code>COUNT(*)</code>，即该部门有多少条记录（员工数）</p>
+</blockquote>
+<hr />
+<h3 id="2">2️⃣ 按多列分组</h3>
+<p>你可以按照<strong>多个字段的组合</strong>进行分组，只有当 <strong>所有分组字段的值都相同</strong> 时，才会被视为同一组。</p>
+<h4 id="and">✅ 示例：按部门 AND 职位分组，统计人数</h4>
+<p>假设表中有 <code>position</code> 字段：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">position</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">count</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">employees</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">position</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>✅ 说明：先按部门分组，再在每个部门内按职位分组，统计每类组合的人数</p>
+</blockquote>
+<hr />
+<h3 id="3">3️⃣ 配合聚合函数使用（重点）</h3>
+<p><code>GROUP BY</code> <strong>通常与聚合函数一起使用</strong>，用于对每一组数据进行计算，比如：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT()</code></td>
+<td>统计行数 / 记录数</td>
+<td><code>COUNT(*)</code>, <code>COUNT(column)</code></td>
+</tr>
+<tr>
+<td><code>SUM()</code></td>
+<td>求和</td>
+<td><code>SUM(salary)</code></td>
+</tr>
+<tr>
+<td><code>AVG()</code></td>
+<td>平均值</td>
+<td><code>AVG(price)</code></td>
+</tr>
+<tr>
+<td><code>MAX()</code></td>
+<td>最大值</td>
+<td><code>MAX(age)</code></td>
+</tr>
+<tr>
+<td><code>MIN()</code></td>
+<td>最小值</td>
+<td><code>MIN(score)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="1_1">✅ 示例 1：查询每个部门的最高工资</h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_salary</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">employees</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<h4 id="2_1">✅ 示例 2：查询每个分类下的商品总销量和平均价格</h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">category</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">quantity</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_sold</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">price</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_price</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="n">products</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">category</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h3 id="4-having">4️⃣ HAVING 子句：对分组结果进行过滤</h3>
+<blockquote>
+<p><strong><code>HAVING</code> 用于对 <code>GROUP BY</code> 分组后的结果进行条件筛选，类似于 <code>WHERE</code>，但是 WHERE 是针对原始行，HAVING 是针对分组后的统计结果。</strong></p>
+</blockquote>
+<h4 id="_3">✅ 语法：</h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">column</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">HAVING</span><span class="w"> </span><span class="n">group_condition</span>
+</span></code></pre></div>
+<h4 id="5">✅ 示例：查询员工数超过 5 人的部门</h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">employee_count</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">employees</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">department</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">HAVING</span><span class="w"> </span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span></code></pre></div>
+<blockquote>
+<p>✅ 说明：
+- <code>WHERE</code> 不能用于过滤聚合结果（比如 <code>COUNT(*) &gt; 5</code> 是无效的）
+- 必须使用 <code>HAVING</code> 来筛选分组后的数据</p>
+</blockquote>
+<hr />
+<h3 id="5-group-by-order-by">5️⃣ GROUP BY 与 ORDER BY 结合：分组后排序</h3>
+<p>你可以对分组统计后的结果进行排序，比如按总销量降序、按平均分数排序等。</p>
+<h4 id="_4">✅ 示例：查询每个部门的平均工资，并按工资降序排列</h4>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">employees</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="n">department</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="n">avg_salary</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div>
+<hr />
+<h2 id="group-by_3">四、GROUP BY 使用注意事项</h2>
+<table>
+<thead>
+<tr>
+<th>注意事项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GROUP BY 的字段必须出现在 SELECT 中（除非是聚合函数）</strong></td>
+<td>如果你 <code>GROUP BY department</code>，那么 <code>SELECT</code> 中的字段要么是 <code>department</code>，要么是聚合函数如 <code>COUNT()</code>, <code>AVG()</code> 等</td>
+</tr>
+<tr>
+<td><strong>WHERE 用于行级过滤，HAVING 用于组级过滤</strong></td>
+<td>WHERE 在分组前过滤行，HAVING 在分组后过滤组</td>
+</tr>
+<tr>
+<td><strong>聚合函数不能用在 WHERE 子句中</strong></td>
+<td>比如 <code>WHERE COUNT(*) &gt; 5</code> 是错误的，应该用 <code>HAVING</code></td>
+</tr>
+<tr>
+<td><strong>可以按单列或多列分组</strong></td>
+<td>多列分组时，只有所有列值都相同的行才属于同一组</td>
+</tr>
+<tr>
+<td><strong>GROUP BY 通常与聚合函数配合使用才有意义</strong></td>
+<td>单独使用 <code>GROUP BY</code> 而无聚合函数，通常没有实际意义</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="group-by_4">✅ 总结：GROUP BY 子句核心要点速查</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>分组统计</strong></td>
+<td>按某个字段或多个字段进行分组</td>
+<td><code>GROUP BY department</code></td>
+</tr>
+<tr>
+<td><strong>聚合计算</strong></td>
+<td>配合 <code>COUNT()</code>, <code>SUM()</code>, <code>AVG()</code>, <code>MAX()</code>, <code>MIN()</code> 等使用</td>
+<td><code>COUNT(*)</code>, <code>SUM(salary)</code></td>
+</tr>
+<tr>
+<td><strong>多列分组</strong></td>
+<td>按多个字段组合分组</td>
+<td><code>GROUP BY department, position</code></td>
+</tr>
+<tr>
+<td><strong>分组过滤</strong></td>
+<td>使用 <code>HAVING</code> 对分组后的结果筛选</td>
+<td><code>HAVING COUNT(*) &gt; 5</code></td>
+</tr>
+<tr>
+<td><strong>排序结果</strong></td>
+<td>结合 <code>ORDER BY</code> 对分组统计结果排序</td>
+<td><code>ORDER BY avg_salary DESC</code></td>
+</tr>
+<tr>
+<td><strong>与 WHERE 的区别</strong></td>
+<td>WHERE 是对原始数据行过滤，HAVING 是对分组后的统计结果过滤</td>
+<td><code>WHERE age &gt; 18</code> vs <code>HAVING COUNT(*) &gt; 5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_5">📌 下一步建议</h2>
+<p>你可以继续尝试以下练习来巩固 <code>GROUP BY</code> 的使用：</p>
+<ol>
+<li>✅ 查询每个分类下的商品数量与平均价格</li>
+<li>✅ 统计每个部门的员工人数，并筛选出人数大于 3 的部门</li>
+<li>✅ 按月份分组统计订单数量和总金额</li>
+<li>✅ 使用多列分组（如部门 + 职位）统计平均薪资</li>
+<li>✅ 结合 <code>ORDER BY</code> 将分组结果按某个统计值排序</li>
+</ol>
+<hr />
+<p>如你希望获取：</p>
+<ul>
+<li>✅ 带有 <strong>实际建表 + 数据 + 复杂 GROUP BY 查询</strong> 的完整示例</li>
+<li>✅ 如何在 <strong>报表统计、数据看板、BI分析</strong> 中使用 GROUP BY</li>
+<li>✅ 或者 <code>GROUP BY</code> 与 <strong>窗口函数、子查询、JOIN</strong> 结合的高级用法</li>
+</ul>
+<p>欢迎继续提问！我可以为你提供详细的实战 SQL 代码与讲解。</p>
+<h1 id="mysql-group-by">✅ MySQL 中 GROUP BY 语句的典型用法详解</h1>
+<p>在 MySQL 中，<strong><code>GROUP BY</code></strong> 是一个非常重要且强大的 SQL 子句，它用于：</p>
+<blockquote>
+<p><strong>将查询结果按照一个或多个字段进行分组，通常与聚合函数（如 COUNT、SUM、AVG、MAX、MIN 等）一起使用，对每组数据进行汇总计算。</strong></p>
+</blockquote>
+<hr />
+<h2 id="group-by_5">🎯 一、GROUP BY 是什么？</h2>
+<p>简单来说：</p>
+<blockquote>
+<p><strong>GROUP BY 的作用就是“分组”，它把数据按照你指定的字段值进行归类，然后你可以对每一组数据进行统计、求和、求平均等操作。</strong></p>
+</blockquote>
+<hr />
+<h2 id="group-by_6">🧠 二、为什么需要 GROUP BY？</h2>
+<p>在实际业务中，我们经常需要：</p>
+<ul>
+<li>统计每个班级的学生人数</li>
+<li>计算每个性别的平均年龄</li>
+<li>汇总每个部门的工资总额</li>
+<li>找出每个产品的总销量</li>
+<li>分析每天的订单数量</li>
+</ul>
+<p>这些需求都涉及到：<strong>按某个字段的不同值，对数据进行分组，再对每组进行聚合计算</strong>。</p>
+<p>这时候，就需要用到 <code>GROUP BY</code>。</p>
+<hr />
+<h2 id="group-by_7">📦 三、GROUP BY 的基本语法</h2>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="err">分组字段</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">分组字段</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="w">  </span><span class="c1">-- 用于分组的字段</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="err">聚合函数</span><span class="p">(</span><span class="err">字段</span><span class="p">)</span><span class="w">               </span><span class="c1">-- 如 COUNT(), SUM(), AVG() 等</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">FROM</span><span class="w"> </span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="err">表名</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="err">条件</span><span class="p">]</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="err">分组字段</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="err">分组字段</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">...;</span>
+</span></code></pre></div>
+<blockquote>
+<p>✅ <strong>要点：</strong></p>
+<ul>
+<li><code>GROUP BY</code> 后面跟的是你想要<strong>按照哪些字段来分组</strong></li>
+<li>SELECT 中的<strong>非聚合列，一般要出现在 GROUP BY 中</strong></li>
+<li>通常与 <strong>COUNT、SUM、AVG、MAX、MIN</strong> 等聚合函数一起使用</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="group-by_8">🎮 四、GROUP BY 的典型用法与实例详解</h2>
+<hr />
+<h3 id="students">📌 示例表：students（学生表）</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">gender</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="n">score</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="n">class_id</span><span class="w"> </span><span class="nb">INT</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">);</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">VALUES</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小明&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小红&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">92</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小刚&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">76</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小丽&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">85</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小华&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;小芳&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span></code></pre></div>
+<hr />
+<h2 id="1_2">🔹 用法 1：单字段分组 —— 按班级统计学生人数</h2>
+<h3 id="_6">✅ 查询：每个班级有多少学生？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">学生人数</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>学生人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🎯 说明：
+- 按 <code>class_id</code> 分组，每组（每个班级）统计一次
+- <code>COUNT(*)</code> 计算每组的行数，即学生人数</p>
+</blockquote>
+<hr />
+<h2 id="2_2">🔹 用法 2：单字段分组 —— 按性别统计平均年龄</h2>
+<h3 id="_7">✅ 查询：每个性别的平均年龄是多少？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="n">gender</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均年龄</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<table>
+<thead>
+<tr>
+<th>gender</th>
+<th>平均年龄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>男</td>
+<td>18.3</td>
+</tr>
+<tr>
+<td>女</td>
+<td>19.0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 按性别分组后，分别计算每组的平均年龄</p>
+</blockquote>
+<hr />
+<h2 id="3_1">🔹 用法 3：单字段分组 —— 按班级统计平均分</h2>
+<h3 id="_8">✅ 查询：每个班级的平均成绩是多少？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">班级平均分</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>班级平均分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>85.67</td>
+</tr>
+<tr>
+<td>2</td>
+<td>87.67</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">🔹 用法 4：多字段分组 —— 按班级和性别分组统计人数</h2>
+<h3 id="_9">✅ 查询：每个班级中，每个性别有多少人？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="n">gender</span><span class="p">,</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">人数</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">,</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果可能为：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>gender</th>
+<th>人数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>男</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>女</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>男</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>女</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 按 <strong>两个字段组合（class_id + gender）</strong> 进行分组，统计每组人数</p>
+</blockquote>
+<hr />
+<h2 id="5-where">🔹 用法 5：结合 WHERE 条件过滤后再分组</h2>
+<h3 id="18">✅ 查询：年龄大于 18 岁的每个班级有多少学生？</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">学生人数</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 先筛选 <code>age &gt; 18</code> 的学生，再按班级分组统计</p>
+<hr />
+<h2 id="6">🔹 用法 6：结合聚合函数统计多个指标</h2>
+<h3 id="_10">✅ 查询：每个班级的学生人数、最高分、最低分、平均分</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">人数</span><span class="p">,</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最高分</span><span class="p">,</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">最低分</span><span class="p">,</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均分</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 输出示例：</p>
+<table>
+<thead>
+<tr>
+<th>class_id</th>
+<th>人数</th>
+<th>最高分</th>
+<th>最低分</th>
+<th>平均分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>92.00</td>
+<td>76.50</td>
+<td>85.67</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>90.00</td>
+<td>85.00</td>
+<td>87.67</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ 这是典型的 <strong>多指标分组统计报表</strong>，在数据分析中非常常见！</p>
+</blockquote>
+<hr />
+<h2 id="7group-by-order-by">🔹 用法 7：GROUP BY 与 ORDER BY 结合 —— 按平均分排序</h2>
+<h3 id="_11">✅ 查询：每个班级的平均分是多少，并按平均分从高到低排序</h3>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">class_id</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">平均分</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">class_id</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">平均分</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div>
+<p>🔍 结果按平均分降序显示，便于找出成绩最好的班级</p>
+<hr />
+<h2 id="group-by_9">❗ 八、GROUP BY 使用注意事项</h2>
+<table>
+<thead>
+<tr>
+<th>注意事项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SELECT 中的非聚合列</strong></td>
+<td>通常要出现在 <code>GROUP BY</code> 中，否则 MySQL 可能报错（严格 SQL 模式下）或返回不可预期的结果</td>
+</tr>
+<tr>
+<td><strong>聚合函数</strong></td>
+<td>如 COUNT(), SUM(), AVG(), MAX(), MIN() 等，用于对每组数据进行计算</td>
+</tr>
+<tr>
+<td><strong>WHERE 与 GROUP BY 的顺序</strong></td>
+<td><strong>先 WHERE 过滤行，再 GROUP BY 分组</strong></td>
+</tr>
+<tr>
+<td><strong>HAVING 子句</strong></td>
+<td>用于对分组后的结果进行筛选（类似 WHERE，但是作用于分组后，后面会详解）</td>
+</tr>
+<tr>
+<td><strong>GROUP BY 可以多字段</strong></td>
+<td>按多个字段的组合值进行分组，如 <code>GROUP BY class_id, gender</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="group-by_10">✅ 九、总结：GROUP BY 典型用法一览</h2>
+<table>
+<thead>
+<tr>
+<th>应用场景</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>单字段分组统计</strong></td>
+<td>按班级统计人数：<code>GROUP BY class_id</code></td>
+<td>每个班级为一组</td>
+</tr>
+<tr>
+<td><strong>多字段组合分组</strong></td>
+<td>按班级和性别分组：<code>GROUP BY class_id, gender</code></td>
+<td>多个字段值组合为一组</td>
+</tr>
+<tr>
+<td><strong>聚合计算</strong></td>
+<td><code>COUNT(*)</code>, <code>AVG(score)</code>, <code>MAX(score)</code> 等</td>
+<td>对每组数据进行汇总</td>
+</tr>
+<tr>
+<td><strong>结合 WHERE 过滤</strong></td>
+<td>先筛选再分组</td>
+<td>如：<code>WHERE age &gt; 18 GROUP BY class_id</code></td>
+</tr>
+<tr>
+<td><strong>结合排序</strong></td>
+<td>按平均分排序：<code>ORDER BY AVG(score) DESC</code></td>
+<td>对分组统计结果排序</td>
+</tr>
+<tr>
+<td><strong>综合报表</strong></td>
+<td>每组人数、最高/最低/平均分</td>
+<td>典型业务分析场景</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_12">🎓 十、一句话总结</h2>
+<blockquote>
+<p><strong>GROUP BY 的作用就是“分组”，它让你能够按照某个或某些字段的值，把数据分成多个组，然后对每组数据进行统计、求和、求平均等操作，是数据分析与统计查询的核心工具。</strong></p>
+</blockquote>
+<hr />
+<p>🙋 <strong>如果你有具体的业务需求，比如：</strong></p>
+<ul>
+<li>“统计每个部门的员工数和平均工资”</li>
+<li>“找出每个商品类别的销量冠军”</li>
+<li>“分析每天的订单数量和金额”</li>
+</ul>
+<h2 id="mysql-group-by_1"><strong>MySQL 中 <code>GROUP BY</code> 群组的用法详解</strong></h2>
+<p><code>GROUP BY</code> 是 SQL 中用于对查询结果按指定列群组的核心语句，通常与聚合函数（如 <code>COUNT</code>、<code>SUM</code>、<code>AVG</code> 等）结合使用，实现数据的群组统计和分析。以下是其用法详解：</p>
+<p>核心作用</p>
+<ol>
+<li><strong>数据群组</strong><br />
+   将表中数据按指定列的值群组，相同值的行归为一组。</li>
+<li><strong>群组统计</strong><br />
+   对每组数据应用聚合函数，计算汇总值（如总和、平均值、最大值等）。</li>
+</ol>
+<hr />
+<h2 id="_13">典型应用场景</h2>
+<h3 id="1_3"><strong>1. 单列群组</strong></h3>
+<p>统计每个部门的员工数量：</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">employee_count</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>employee_count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>财务部</td>
+<td>8</td>
+</tr>
+<tr>
+<td>开发部</td>
+<td>12</td>
+</tr>
+<tr>
+<td>市场部</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_3"><strong>2. 多列群组</strong></h3>
+<p>统计每个部门中不同职位的员工数量：</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">count</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">job</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>job</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发部</td>
+<td>Java开发</td>
+<td>5</td>
+</tr>
+<tr>
+<td>开发部</td>
+<td>前端开发</td>
+<td>3</td>
+</tr>
+<tr>
+<td>市场部</td>
+<td>市场策划</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="3_2"><strong>3. 结合聚合函数</strong></h3>
+<p>计算每个部门的平均薪资和最高薪资：</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="n">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_salary</span><span class="p">,</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_salary</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>avg_salary</th>
+<th>max_salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>财务部</td>
+<td>8500.00</td>
+<td>12000.00</td>
+</tr>
+<tr>
+<td>开发部</td>
+<td>14500.00</td>
+<td>20000.00</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="4-having_1"><strong>4. 群组后过滤（HAVING）</strong></h3>
+<p>筛选员工数量超过 5 人的部门：</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">count</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发部</td>
+<td>12</td>
+</tr>
+<tr>
+<td>市场部</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_14"><strong>四、关键注意事项</strong></h2>
+<ol>
+<li><strong><code>SELECT</code> 列的合法性</strong>  </li>
+<li><code>SELECT</code> 中的列必须是聚合函数或包含在 <code>GROUP BY</code> 子句中。  </li>
+<li>
+<p><strong>错误示例</strong>：<code>SELECT name, department FROM employees GROUP BY department;</code>（<code>name</code> 未聚合或群组）。</p>
+</li>
+<li>
+<p><strong><code>WHERE</code> vs <code>HAVING</code></strong>  </p>
+</li>
+<li><code>WHERE</code>：在群组前过滤数据，作用于原始数据行。  </li>
+<li><code>HAVING</code>：在群组后过滤数据，作用于群组结果。</li>
+</ol>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1">-- 查询财务部中平均薪资超过 10000 的职位</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">job</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="k">HAVING</span><span class="w"> </span><span class="n">avg_salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
+</span></code></pre></div>
+<ol>
+<li><strong>群组顺序与性能</strong>  </li>
+<li>群组的字段顺序会影响结果，但不影响统计值（如 <code>GROUP BY A, B</code> 和 <code>GROUP BY B, A</code> 结果不同）。  </li>
+<li>
+<p>为群组字段添加索引可提升性能（如 <code>CREATE INDEX idx_department ON employees(department)</code>）。</p>
+</li>
+<li>
+<p><strong><code>WITH ROLLUP</code> 小计功能</strong><br />
+   生成群组汇总的小计行（需 MySQL 8.0+ 支持）：</p>
+</li>
+</ol>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">count</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">ROLLUP</span><span class="p">;</span>
+</span></code></pre></div>
+   <strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>财务部</td>
+<td>8</td>
+</tr>
+<tr>
+<td>开发部</td>
+<td>12</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_15"><strong>五、常见错误及解决方案</strong></h2>
+<h3 id="1-group-by"><strong>错误 1：非聚合字段未包含在 GROUP BY 中</strong></h3>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1">-- 错误：name 未群组或聚合</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>修复</strong>：<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div></p>
+<h3 id="2_4"><strong>错误 2：群组字段与聚合字段混淆</strong></h3>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="c1">-- 错误：salary 未聚合，但未群组</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+<strong>修复</strong>：<br />
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="_16"><strong>六、性能优化建议</strong></h2>
+<ol>
+<li><strong>索引优化</strong>  </li>
+<li>
+<p>为群组字段（如 <code>department</code>）和过滤字段（如 <code>hiredate</code>）添加复合索引：<br />
+     <div class="language-sql highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_department_hiredate</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">(</span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">hiredate</span><span class="p">);</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>减少群组字段数量</strong><br />
+   群组字段越多，性能开销越大，需按业务需求精简。</p>
+</li>
+<li>
+<p><strong>使用覆盖索引</strong><br />
+   若查询只需索引字段和聚合结果，可避免回表：<br />
+   <div class="language-sql highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1">-- 假设存在索引 (department, salary)</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="_17"><strong>总结</strong></h2>
+<ul>
+<li><strong>核心作用</strong>：按列群组并统计汇总数据。</li>
+<li><strong>常用组合</strong>：<code>GROUP BY</code> + 聚合函数（<code>COUNT</code>、<code>SUM</code>、<code>AVG</code> 等）。</li>
+<li><strong>过滤时机</strong>：<code>WHERE</code> 群组前过滤，<code>HAVING</code> 群组后过滤。</li>
+<li><strong>优化关键</strong>：索引设计、减少群组字段、避免不必要计算。</li>
+</ul>
+<hr />
+<h2 id="_18">练习</h2>
+<h3 id="_19">查询员工信息</h3>
+<p>创建员工信息表</p>
+<p>表(yuangong | employees )结构要求：</p>
+<ul>
+<li>id </li>
+<li>员工编号（empno）: 格式：D001，唯一</li>
+<li>姓名（ename）</li>
+<li>性别（gender）</li>
+<li>年龄（age） 22-60</li>
+<li>学历（education） :'大专','本科','研究生'</li>
+<li>身份证号（d_card）:唯一  18位</li>
+<li>省份（province） </li>
+<li>城市（city）</li>
+<li>电邮（email）</li>
+<li>薪水（salary）</li>
+<li>职位（job）</li>
+<li>部门（department）:'财务部','人力部','设计部','开发部','市场部','行政部','后勤部'</li>
+<li>入职日期（hiredate）</li>
+</ul>
+<p>插入数据</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="p">(</span><span class="n">e_id</span><span class="p">,</span><span class="w"> </span><span class="n">e_name</span><span class="p">,</span><span class="w"> </span><span class="n">e_gender</span><span class="p">,</span><span class="w"> </span><span class="n">e_age</span><span class="p">,</span><span class="w"> </span><span class="n">e_education</span><span class="p">,</span><span class="w"> </span><span class="n">e_id_card</span><span class="p">,</span><span class="w"> </span><span class="n">e_province</span><span class="p">,</span><span class="w"> </span><span class="n">e_city</span><span class="p">,</span><span class="w"> </span><span class="n">e_email</span><span class="p">,</span><span class="w"> </span><span class="n">e_salary</span><span class="p">,</span><span class="w"> </span><span class="n">e_job</span><span class="p">,</span><span class="w"> </span><span class="n">e_department</span><span class="p">,</span><span class="w"> </span><span class="n">e_hiredate</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="p">(</span><span class="s1">&#39;D001&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;张伟&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130402198803124512&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zhangwei@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-06-15&#39;</span><span class="p">),</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="p">(</span><span class="s1">&#39;D002&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;王芳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410105199504237894&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wangfang@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;HR&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-09-22&#39;</span><span class="p">),</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">(</span><span class="s1">&#39;D003&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;李强&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370103198101018976&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;liqiang@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;电工&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2015-11-30&#39;</span><span class="p">),</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">(</span><span class="s1">&#39;D004&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;赵敏&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;14010619920131456X&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zhaomin@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;会计&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-03-18&#39;</span><span class="p">),</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="p">(</span><span class="s1">&#39;D005&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;陈勇&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130403198511209871&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邢台&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;chenyong@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">11000</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-08-09&#39;</span><span class="p">),</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="p">(</span><span class="s1">&#39;D006&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;杨丽&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410185199604157893&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;安阳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;yangli@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;设计师&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-02-14&#39;</span><span class="p">),</span>
+</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="p">(</span><span class="s1">&#39;D007&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;黄建国&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370202197802287895&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;huangjg@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">6800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;保安&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2016-05-25&#39;</span><span class="p">),</span>
+</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="p">(</span><span class="s1">&#39;D008&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;周晓梅&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140107199304198762&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zhouxm@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政主管&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-07-11&#39;</span><span class="p">),</span>
+</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="p">(</span><span class="s1">&#39;D009&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;吴斌&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130404198910231234&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wubin@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;程序员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-11-05&#39;</span><span class="p">),</span>
+</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="p">(</span><span class="s1">&#39;D010&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;徐丽华&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410102198705129876&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xulihua@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-04-27&#39;</span><span class="p">),</span>
+</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="p">(</span><span class="s1">&#39;D011&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;孙志强&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370104198212045678&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sunzq@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤主任&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-12-01&#39;</span><span class="p">),</span>
+</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="p">(</span><span class="s1">&#39;D012&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;朱婷婷&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140108199702098765&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zhutt@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">6500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;办公文员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2022-08-19&#39;</span><span class="p">),</span>
+</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="p">(</span><span class="s1">&#39;D013&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;马军&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130405198608174321&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邢台&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;majun@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">11500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;销售员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2016-09-12&#39;</span><span class="p">),</span>
+</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="p">(</span><span class="s1">&#39;D014&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;何静&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410103199011239874&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;安阳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;hejing@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-07-25&#39;</span><span class="p">),</span>
+</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a><span class="p">(</span><span class="s1">&#39;D015&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;高伟&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370105197912318976&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gaowei@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7000</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;电工&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-10-30&#39;</span><span class="p">),</span>
+</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="p">(</span><span class="s1">&#39;D016&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;林雪&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140109199304217896&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;linxue@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;HR&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-04-15&#39;</span><span class="p">),</span>
+</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a><span class="p">(</span><span class="s1">&#39;D017&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑强&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130406198408129876&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zhengq@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-03-22&#39;</span><span class="p">),</span>
+</span><span id="__span-32-19"><a id="__codelineno-32-19" name="__codelineno-32-19" href="#__codelineno-32-19"></a><span class="p">(</span><span class="s1">&#39;D018&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;王秀兰&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410104198907058765&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wangxl@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;设计师&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-01-07&#39;</span><span class="p">),</span>
+</span><span id="__span-32-20"><a id="__codelineno-32-20" name="__codelineno-32-20" href="#__codelineno-32-20"></a><span class="p">(</span><span class="s1">&#39;D019&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;冯刚&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370106198102237894&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fenggang@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;保安&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-06-18&#39;</span><span class="p">),</span>
+</span><span id="__span-32-21"><a id="__codelineno-32-21" name="__codelineno-32-21" href="#__codelineno-32-21"></a><span class="p">(</span><span class="s1">&#39;D020&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;曾敏&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140110199502128763&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zengmin@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;程序员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2022-02-28&#39;</span><span class="p">),</span>
+</span><span id="__span-32-22"><a id="__codelineno-32-22" name="__codelineno-32-22" href="#__codelineno-32-22"></a><span class="p">(</span><span class="s1">&#39;D021&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;程建国&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">46</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130407197708049875&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邢台&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;chengjg@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">6800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤主任&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2015-12-14&#39;</span><span class="p">),</span>
+</span><span id="__span-32-23"><a id="__codelineno-32-23" name="__codelineno-32-23" href="#__codelineno-32-23"></a><span class="p">(</span><span class="s1">&#39;D022&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;蔡晓丽&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410105199211157896&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;安阳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;caixl@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-11-09&#39;</span><span class="p">),</span>
+</span><span id="__span-32-24"><a id="__codelineno-32-24" name="__codelineno-32-24" href="#__codelineno-32-24"></a><span class="p">(</span><span class="s1">&#39;D023&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;彭伟&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370107198803214567&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pengwei@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政主管&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-07-03&#39;</span><span class="p">),</span>
+</span><span id="__span-32-25"><a id="__codelineno-32-25" name="__codelineno-32-25" href="#__codelineno-32-25"></a><span class="p">(</span><span class="s1">&#39;D024&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;苏婷婷&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140111199402038762&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sutt@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;会计&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-09-17&#39;</span><span class="p">),</span>
+</span><span id="__span-32-26"><a id="__codelineno-32-26" name="__codelineno-32-26" href="#__codelineno-32-26"></a><span class="p">(</span><span class="s1">&#39;D025&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;蒋军&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130408198509127894&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;jiangjun@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">11800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;销售员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-04-05&#39;</span><span class="p">),</span>
+</span><span id="__span-32-27"><a id="__codelineno-32-27" name="__codelineno-32-27" href="#__codelineno-32-27"></a><span class="p">(</span><span class="s1">&#39;D026&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;叶静&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410106198812319875&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;yejing@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-08-21&#39;</span><span class="p">),</span>
+</span><span id="__span-32-28"><a id="__codelineno-32-28" name="__codelineno-32-28" href="#__codelineno-32-28"></a><span class="p">(</span><span class="s1">&#39;D027&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;崔志强&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370108198001018976&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cuizq@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7000</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;电工&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2016-10-12&#39;</span><span class="p">),</span>
+</span><span id="__span-32-29"><a id="__codelineno-32-29" name="__codelineno-32-29" href="#__codelineno-32-29"></a><span class="p">(</span><span class="s1">&#39;D028&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邹雪梅&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140112199602098764&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zouxm@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;办公文员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2022-03-25&#39;</span><span class="p">),</span>
+</span><span id="__span-32-30"><a id="__codelineno-32-30" name="__codelineno-32-30" href="#__codelineno-32-30"></a><span class="p">(</span><span class="s1">&#39;D029&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;白勇&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130409198708237895&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邢台&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;baiyong@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-11-14&#39;</span><span class="p">),</span>
+</span><span id="__span-32-31"><a id="__codelineno-32-31" name="__codelineno-32-31" href="#__codelineno-32-31"></a><span class="p">(</span><span class="s1">&#39;D030&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;石丽华&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410107198911049876&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;安阳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;shilh@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;设计师&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-06-07&#39;</span><span class="p">),</span>
+</span><span id="__span-32-32"><a id="__codelineno-32-32" name="__codelineno-32-32" href="#__codelineno-32-32"></a><span class="p">(</span><span class="s1">&#39;D031&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;丁斌&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370109198208159874&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;dingbin@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;程序员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-12-19&#39;</span><span class="p">),</span>
+</span><span id="__span-32-33"><a id="__codelineno-32-33" name="__codelineno-32-33" href="#__codelineno-32-33"></a><span class="p">(</span><span class="s1">&#39;D032&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;杜晓梅&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140113199304128765&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;duxiaomei@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">11500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-04-30&#39;</span><span class="p">),</span>
+</span><span id="__span-32-34"><a id="__codelineno-32-34" name="__codelineno-32-34" href="#__codelineno-32-34"></a><span class="p">(</span><span class="s1">&#39;D033&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;夏刚&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130410197912318976&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xiagang@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;保安&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-02-11&#39;</span><span class="p">),</span>
+</span><span id="__span-32-35"><a id="__codelineno-32-35" name="__codelineno-32-35" href="#__codelineno-32-35"></a><span class="p">(</span><span class="s1">&#39;D034&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;钟秀兰&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410108199105239875&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zhongxl@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-05-26&#39;</span><span class="p">),</span>
+</span><span id="__span-32-36"><a id="__codelineno-32-36" name="__codelineno-32-36" href="#__codelineno-32-36"></a><span class="p">(</span><span class="s1">&#39;D035&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;汪伟&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370110198510127894&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wangwei@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政主管&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-10-09&#39;</span><span class="p">),</span>
+</span><span id="__span-32-37"><a id="__codelineno-32-37" name="__codelineno-32-37" href="#__codelineno-32-37"></a><span class="p">(</span><span class="s1">&#39;D036&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;田敏&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140114199602178763&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tianmin@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;HR&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2022-01-23&#39;</span><span class="p">),</span>
+</span><span id="__span-32-38"><a id="__codelineno-32-38" name="__codelineno-32-38" href="#__codelineno-32-38"></a><span class="p">(</span><span class="s1">&#39;D037&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;任建国&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130411198002287895&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邢台&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;rengjg@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">6800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤主任&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2016-07-15&#39;</span><span class="p">),</span>
+</span><span id="__span-32-39"><a id="__codelineno-32-39" name="__codelineno-32-39" href="#__codelineno-32-39"></a><span class="p">(</span><span class="s1">&#39;D038&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;孟静&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410109199011158976&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;安阳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;mengjing@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-08-04&#39;</span><span class="p">),</span>
+</span><span id="__span-32-40"><a id="__codelineno-32-40" name="__codelineno-32-40" href="#__codelineno-32-40"></a><span class="p">(</span><span class="s1">&#39;D039&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;康军&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370111198312049875&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;kangjun@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;销售员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-10-17&#39;</span><span class="p">),</span>
+</span><span id="__span-32-41"><a id="__codelineno-32-41" name="__codelineno-32-41" href="#__codelineno-32-41"></a><span class="p">(</span><span class="s1">&#39;D040&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;侯婷婷&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140115199403028764&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;houtt@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;会计&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2022-05-12&#39;</span><span class="p">),</span>
+</span><span id="__span-32-42"><a id="__codelineno-32-42" name="__codelineno-32-42" href="#__codelineno-32-42"></a><span class="p">(</span><span class="s1">&#39;D041&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;龙强&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130412198509217896&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;longqiang@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">11800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;程序员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-09-28&#39;</span><span class="p">),</span>
+</span><span id="__span-32-43"><a id="__codelineno-32-43" name="__codelineno-32-43" href="#__codelineno-32-43"></a><span class="p">(</span><span class="s1">&#39;D042&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;龚雪&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410110198810319874&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gongxue@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;人力部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-12-05&#39;</span><span class="p">),</span>
+</span><span id="__span-32-44"><a id="__codelineno-32-44" name="__codelineno-32-44" href="#__codelineno-32-44"></a><span class="p">(</span><span class="s1">&#39;D043&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;文志强&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370112198101108976&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wenzq@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;电工&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-04-19&#39;</span><span class="p">),</span>
+</span><span id="__span-32-45"><a id="__codelineno-32-45" name="__codelineno-32-45" href="#__codelineno-32-45"></a><span class="p">(</span><span class="s1">&#39;D044&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;包晓丽&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140116199402238765&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;baoxiaoli@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;办公文员&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-07-14&#39;</span><span class="p">),</span>
+</span><span id="__span-32-46"><a id="__codelineno-32-46" name="__codelineno-32-46" href="#__codelineno-32-46"></a><span class="p">(</span><span class="s1">&#39;D045&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;左勇&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130413198408129875&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邢台&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zuoyong@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13800</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;设计师&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2019-01-29&#39;</span><span class="p">),</span>
+</span><span id="__span-32-47"><a id="__codelineno-32-47" name="__codelineno-32-47" href="#__codelineno-32-47"></a><span class="p">(</span><span class="s1">&#39;D046&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;江丽华&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410111198705049876&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;安阳&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;jianglh@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;市场部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2017-06-22&#39;</span><span class="p">),</span>
+</span><span id="__span-32-48"><a id="__codelineno-32-48" name="__codelineno-32-48" href="#__codelineno-32-48"></a><span class="p">(</span><span class="s1">&#39;D047&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;段斌&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;大专&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;370113198002237895&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山东&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;济南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;duanbin@126.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">7000</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;保安&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;后勤部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2016-08-11&#39;</span><span class="p">),</span>
+</span><span id="__span-32-49"><a id="__codelineno-32-49" name="__codelineno-32-49" href="#__codelineno-32-49"></a><span class="p">(</span><span class="s1">&#39;D048&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;刘秀梅&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;140117199301158764&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;山西&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;太原&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;liuxiumei@sohu.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9200</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政主管&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;行政部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2020-03-07&#39;</span><span class="p">),</span>
+</span><span id="__span-32-50"><a id="__codelineno-32-50" name="__codelineno-32-50" href="#__codelineno-32-50"></a><span class="p">(</span><span class="s1">&#39;D049&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;陆伟&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;男&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;本科&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;130414198210319874&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河北&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;邯郸&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;luwei@163.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;技术部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2018-10-16&#39;</span><span class="p">),</span>
+</span><span id="__span-32-51"><a id="__codelineno-32-51" name="__codelineno-32-51" href="#__codelineno-32-51"></a><span class="p">(</span><span class="s1">&#39;D050&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;黎静&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;女&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;研究生&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;410112198806128975&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;河南&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;郑州&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lijing@qq.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">13500</span><span class="p">.</span><span class="mi">00</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务总监&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;财务部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2021-11-27&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>查询员工信息表</p>
+<ol>
+<li>查询年龄小于 30 的员工信息。</li>
+<li>查询年龄大于等于 50 的员工信息</li>
+<li>查询年龄等于 30 的员工信息</li>
+<li>查询年龄不等于 30 的员工信息</li>
+<li>查询没有身份证号的员工信息</li>
+<li>查询有身份证号的员工信息</li>
+<li>查询年龄在25岁(包含) 到 35岁(包含)之间的员工信息</li>
+<li>查询性别为 女 且年龄小于 30岁的员工信息</li>
+<li>查询年龄等于 30 或 40 或 50 的员工信息</li>
+<li>查询姓名为两个字的员工信息</li>
+<li>查询身份证号最后一位是X的员工信息</li>
+<li>根据年龄对公司的员工进行升序排序</li>
+<li>根据入职时间, 对员工进行降序排序</li>
+<li>根据年龄对公司的员工进行升序排序 , 年龄相同 , 再按照入职时间进行降序排序</li>
+<li>去重查询部门名称</li>
+</ol>
+<h3 id="_20">统计平均薪资</h3>
+<p>统计 2020 年后入职的员工中，各部门不同学历的平均薪资（仅显示平均薪资 &gt; 10000 的组）：
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w">    </span><span class="n">department</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">    </span><span class="n">education</span><span class="p">,</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">    </span><span class="n">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">hiredate</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;2020-01-01&#39;</span>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">education</span>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="k">HAVING</span><span class="w"> </span><span class="n">avg_salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10000</span>
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>department</th>
+<th>education</th>
+<th>avg_salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>开发部</td>
+<td>研究生</td>
+<td>15000.00</td>
+</tr>
+<tr>
+<td>市场部</td>
+<td>本科</td>
+<td>12000.00</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_21">综合示例</h2>
+<p>查询年龄大于 18 岁的学生，显示姓名、年龄、分数，按分数降序，只看前 3 名：</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">score</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">DESC</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../4-where/" class="md-footer__link md-footer__link--prev" aria-label="上一页: WHERE子句">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                WHERE子句
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../6-having/" class="md-footer__link md-footer__link--next" aria-label="下一页: HAVING子句">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                HAVING子句
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 村长 <a href="https://beian.mps.gov.cn/#/query/webSearch?code=13040202001048" target="_blank">冀公网安备13040202001048号</a><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+      
+      
+    
+    <a href="https://fosstodon.org/@squidfunk" target="_blank" rel="noopener me" title="fosstodon.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.5 102.5 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5m-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.prune", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
