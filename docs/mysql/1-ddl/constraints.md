@@ -4,34 +4,29 @@ tags: []
 
 ---
 
-约束条件
-
 在MySQL中，定义列的约束条件是确保数据完整性和一致性的重要手段。以下是常见约束条件的详细说明及用法示例：
 
-## 1.主键约束（PRIMARY KEY）
+- 实体完整性约束
+- 域完整性约束
+- 参照完整性约束
+- 用户定义完整性约束
 
-用途
+## 一、实体完整性约束
 
-用于唯一标识表中的每一行数据。
+### 1. 主键约束 (PRIMARY KEY)
 
-条件
+用途： 用于唯一标识表中的每一行记录。
 
-必要条件：主键必须是任意非空且唯一的字段。
+成为主键的必要条件：
 
-- 唯一性：
-  - 主键列的值必须在列中唯一，不允许重复。
+- 不允许 NULL 值，必须明确指定。
+- 不允许重复值，主键列的值必须在列中唯一，不允许重复。
+- 一个表只能有一个主键，但主键可以由多个列组成（称为**复合主键**）。
 
-  - 每个表只能定义一个主键，但主键可以由多个列组成（称为**复合主键**）。
-
-- 非空性：主键列的值不能为 `NULL`，必须明确指定。
-
-建议条件：
+成为主键的建议条件：
 
 - 简洁性：整数类型存储和索引效率高。
-
 - 稳定性：一旦生成，通常不随用户信息修改而变动。
-
-  
 
 | user_id | user_name | email           | gender | age  |
 | ------- | --------- | --------------- | ------ | ---- |
@@ -39,9 +34,8 @@ tags: []
 | 2       | lisi      | lisi@qq.com     | 女     | 16   |
 | 3       | wangwu    | wangwu@qq.com   | 男     | 17   |
 
-创建主键的方式
 
-方式1: 单列主键
+创建单列主键
 
 ```sql
 CREATE TABLE users (
@@ -50,7 +44,9 @@ CREATE TABLE users (
 );
 ```
 
-方式2: **复合主键**（多个列组合成唯一标识）：复合主键由多个列组成，其唯一性体现在 **所有列的组合值** 上，而非单个列的值。例如：
+创建复合主键
+
+复合主键即：多个列组合成唯一标识。复合主键由多个列组成，其唯一性体现在 **所有列的组合值** 上，而非单个列的值。例如：
 
 ```sql
 CREATE TABLE order_details (
@@ -62,7 +58,39 @@ CREATE TABLE order_details (
 ```
 
 
-## **2.非空约束（NOT NULL）**
+### 2. 唯一约束 (UNIQUE)
+- 确保某列或列组合的值唯一
+- 特点：
+    - 允许 NULL 值（但只能有一个 NULL）
+    - 一个表可以有多个 UNIQUE 约束
+- 语法：
+  ```sql
+  CREATE TABLE users (
+      id INT PRIMARY KEY,
+      username VARCHAR(50) UNIQUE,
+      email VARCHAR(100) UNIQUE
+  );
+  ```
+### 3. 自动增长
+- **作用**：自动生成唯一递增值，常用于主键。
+
+- **用法**：
+
+  ```sql
+  CREATE TABLE users (
+      user_id INT PRIMARY KEY AUTO_INCREMENT,  -- 自增主键
+      username VARCHAR(50)
+  );
+  ```
+
+一句话：auto_increment是定义列时的约束条件。
+
+auto_increment表示该字段的值会自动增长。无需再添加数据时，手动添加值。
+
+
+## 二、域完整性约束
+
+### 1. 非空约束 (NOT NULL)
 
 - **作用**：确保列值不能为NULL。
 
@@ -75,27 +103,7 @@ CREATE TABLE order_details (
   );
   ```
 
-## **3.唯一约束（UNIQUE）**
-
-- **作用**：确保列值唯一，允许NULL值。
-
-- **用法**：
-
-  ```sql
-  CREATE TABLE users (
-      user_id INT PRIMARY KEY,
-      email VARCHAR(100) UNIQUE  -- 邮箱唯一
-  );
-  
-  CREATE TABLE employees (
-      employee_id INT PRIMARY KEY,
-      department VARCHAR(50),
-      position VARCHAR(50),
-      UNIQUE (department, position)  -- 联合唯一约束
-  );
-  ```
-
-## **4.默认约束（DEFAULT）**
+### 2. 默认值约束 (DEFAULT)
 
 用途
 
@@ -130,12 +138,9 @@ CREATE TABLE users (
     registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- 默认当前时间
 );
 ```
+### 3. 检查约束 (CHECK) 
 
-
-
-## **5.检测约束（CHECK）**
-
-- **作用**：检测列值必须满足指定条件。
+- **作用**：检测列值必须满足指定条件。限制列值的范围或条件。
 
 - 语法
 
@@ -162,168 +167,154 @@ CREATE TABLE users (
   ADD CONSTRAINT 约束名 CHECK (条件);
   ```
 
-  ## CHECK检测约束的分类
+**CHECK检测约束的分类**
 
-  ```sql
-  -- 列级检测
-  列名 数据类型 check(检测条件表达式)
-  
-  -- 表级检测
-  定义列，
-  定义列,
-  check(检测条件表达式)
-  ```
+```sql
+-- 列级检测
+列名 数据类型 check(检测条件表达式)
 
-  ## 
-
-- **用法**：
-
-  ```sql
-  CREATE TABLE users (
-      user_id INT PRIMARY KEY,
-      age INT CHECK (age >= 18)  -- 年龄必须≥18
-  );
-  ```
-
----
-
-## **6.自动递增(AUTO_INCREMENT)**
-
-- **作用**：自动生成唯一递增值，常用于主键。
-
-- **用法**：
-
-  ```sql
-  CREATE TABLE users (
-      user_id INT PRIMARY KEY AUTO_INCREMENT,  -- 自增主键
-      username VARCHAR(50)
-  );
-  ```
-
-一句话：auto_increment是定义列时的约束条件。
-
-auto_increment表示该字段的值会自动增长。无需再添加数据时，手动添加值。
-
-## 练习1：主键判断
-
-1. **主键列允许存储 `NULL` 值。**
-2. **复合主键的列允许其中一列为 `NULL`。**
-3. **主键必须定义为 `AUTO_INCREMENT` 自增字段。**
-4. **主键列的值可以重复。**
-5. **主键的唯一性由数据库自动保证，无需人工干预。**
-6. **一个表可以定义多个主键。**
-7. **主键列只能是整数类型（如 `INT` 或 `BIGINT`）。**
-8. **删除主键约束后，表中可以插入重复值。**
-9. **主键会自动创建索引以提高查询效率。**
-10. **主键列可以使用 `DEFAULT` 关键字设置默认值。**
-
-
-
-
-# MySQL 中的数据完整性约束详解
-
-数据完整性约束是保证数据库中数据准确性和一致性的重要机制。MySQL 提供了多种完整性约束类型，可分为以下几类：
-
-## 一、实体完整性约束
-
-### 1. 主键约束 (PRIMARY KEY)
-- 唯一标识表中的每一行记录
-- 特点：
-  - 不允许 NULL 值
-  - 不允许重复值
-  - 一个表只能有一个主键
-- 语法：
-  ```sql
-  CREATE TABLE students (
-      id INT PRIMARY KEY,
-      name VARCHAR(50)
-  );
-  
-  -- 复合主键
-  CREATE TABLE orders (
-      order_id INT,
-      product_id INT,
-      PRIMARY KEY (order_id, product_id)
-  );
-  ```
-
-### 2. 唯一约束 (UNIQUE)
-- 确保某列或列组合的值唯一
-- 特点：
-  - 允许 NULL 值（但只能有一个 NULL）
-  - 一个表可以有多个 UNIQUE 约束
-- 语法：
-  ```sql
-  CREATE TABLE users (
-      id INT PRIMARY KEY,
-      username VARCHAR(50) UNIQUE,
-      email VARCHAR(100) UNIQUE
-  );
-  ```
-
-## 二、域完整性约束
-
-### 1. 非空约束 (NOT NULL)
-- 确保列不能包含 NULL 值
-- 语法：
-  ```sql
-  CREATE TABLE employees (
-      id INT PRIMARY KEY,
-      name VARCHAR(50) NOT NULL,
-      hire_date DATE NOT NULL
-  );
-  ```
-
-### 2. 默认值约束 (DEFAULT)
-- 为列指定默认值
-- 语法：
-  ```sql
-  CREATE TABLE products (
-      id INT PRIMARY KEY,
-      name VARCHAR(100) NOT NULL,
-      price DECIMAL(10,2) DEFAULT 0.00,
-      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  );
-  ```
-
-### 3. 检查约束 (CHECK) - MySQL 8.0.16+ 支持
-- 限制列值的范围或条件
-- 语法：
-  ```sql
-  CREATE TABLE employees (
-      id INT PRIMARY KEY,
-      name VARCHAR(50) NOT NULL,
-      age INT CHECK (age >= 18),
-      salary DECIMAL(10,2) CHECK (salary > 0)
-  );
-  ```
-
+-- 表级检测
+定义列，
+定义列,
+check(检测条件表达式)
+```
 ## 三、参照完整性约束
 
-### 外键约束 (FOREIGN KEY)
-- 维护表之间的关系
-- 特点：
-  - 确保引用另一个表的主键或唯一键
-  - 可定义级联操作
-- 语法：
-  ```sql
-  CREATE TABLE orders (
-      order_id INT PRIMARY KEY,
-      customer_id INT,
-      order_date DATE,
-      FOREIGN KEY (customer_id) REFERENCES customers(id)
-  );
-  
-  -- 带级联操作的外键
-  CREATE TABLE order_items (
-      item_id INT PRIMARY KEY,
-      order_id INT,
-      product_id INT,
-      FOREIGN KEY (order_id) REFERENCES orders(order_id)
-          ON DELETE CASCADE
-          ON UPDATE CASCADE
-  );
-  ```
+### 1.外键约束 (FOREIGN KEY)
+
+**外键是什么**
+
+- 键是一个字段。
+- 外键就是外部的字段。
+
+你创建一个字段，然后让这个字段引用外部表中的字段，这就是外键。
+
+**外键的用途**
+
+外键用于建立表之间的关联关系。 一旦创建了外键，你就关联了两个表中的数据。
+
+当主表记录更新或删除时，子表记录可以自动同步变更。这就是“级联操作”。
+
+父表：外表，被引用的表。
+
+子表：本表
+
+**语法**: 创建外键
+```sql
+CREATE TABLE 子表 (
+    列名1 数据类型 PRIMARY KEY,
+    列名2 数据类型,
+    外键列名 数据类型,
+    FOREIGN KEY (外键列名)     -- 指定本表（子表）的外键字段
+        REFERENCES 外表名(外表列名)  -- 父表列必须是主键或唯一索引
+        [ON 规则]        -- 定义处理规则 
+);
+```
+
+- FOREIGN KEY  指定本表的外键字段
+- REFERENCES  外键关联的父表和字段 父表列必须是主键或唯一索引
+- ON: 定义级联操作规则（当父表数据被删除或更新时，子表数据如何变化）
+
+语法：
+
+```sql
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+-- 带级联操作的外键
+CREATE TABLE order_items (
+    item_id INT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+```
+### 2.候选键
+
+基本概念
+
+候选键(Candidate Key)是关系数据库中能够唯一标识表中每一行记录的一个或一组列。候选键具有以下特性：
+
+- **唯一性**：不能有两条记录在候选键上具有相同的值
+- **最小性**：候选键不能包含多余的列(即去掉任何一列都会破坏唯一性)
+- **非空性**：候选键的列不能包含NULL值(但MySQL中允许NULL值，这是特殊情况)
+
+候选键与主键的关系
+
+- 一个表可以有多个候选键
+- 从候选键中选择一个作为**主键**(Primary Key)
+- 未被选为主键的其他候选键称为**替代键**(Alternate Key)
+
+**使用UNIQUE约束创建候选键**
+
+```sql
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE,  -- 候选键
+    phone VARCHAR(20) UNIQUE,   -- 候选键
+    name VARCHAR(50)
+);
+```
+
+**复合候选键**
+
+```sql
+CREATE TABLE course_registrations (
+    student_id INT,
+    course_id INT,
+    semester VARCHAR(10),
+    PRIMARY KEY (student_id, course_id, semester),
+    UNIQUE (student_id, course_id)  -- 候选键
+);
+```
+
+**候选键的实际应用场景**
+
+1. **用户表**：除了主键ID外，用户名、邮箱、手机号都可作为候选键
+2. **订单表**：订单号(主键)和支付流水号(候选键)
+3. **学生表**：学号(主键)和身份证号(候选键)
+
+**候选键与索引的关系**
+
+- MySQL会自动为候选键创建唯一索引
+- 这些索引可以加速查询性能
+- 可以通过`SHOW INDEX FROM 表名`查看候选键对应的索引
+
+**候选键的修改**
+
+**添加候选键**
+
+```sql
+ALTER TABLE students ADD UNIQUE (email);
+```
+
+**删除候选键**
+
+```sql
+ALTER TABLE students DROP INDEX email;
+```
+
+**注意事项**
+
+1. 候选键允许NULL值(除非显式指定NOT NULL)
+2. 候选键和主键一样，都会自动创建唯一索引
+3. 过多的候选键会影响插入和更新性能
+4. 在设计时应仔细考虑哪些列组合适合作为候选键
+
+**候选键与业务逻辑**
+
+候选键的选择应基于业务需求：
+- 自然键：如身份证号、ISBN号等自然存在的唯一标识
+- 代理键：如自增ID等人工创建的唯一标识
+- 组合键：多个列组合形成的唯一标识
+
+正确选择候选键可以提高数据完整性和查询效率。
 
 ## 四、用户定义完整性约束
 
@@ -401,84 +392,16 @@ WHERE TABLE_NAME = 'orders';
 通过合理使用这些完整性约束，可以确保MySQL数据库中的数据准确、一致和可靠。
 
 
-# MySQL 中的候选键详解
 
-## 1. 候选键的基本概念
 
-候选键(Candidate Key)是关系数据库中能够唯一标识表中每一行记录的一个或一组列。候选键具有以下特性：
-- **唯一性**：不能有两条记录在候选键上具有相同的值
-- **最小性**：候选键不能包含多余的列(即去掉任何一列都会破坏唯一性)
-- **非空性**：候选键的列不能包含NULL值(但MySQL中允许NULL值，这是特殊情况)
 
-## 2. 候选键与主键的关系
 
-- 一个表可以有多个候选键
-- 从候选键中选择一个作为**主键**(Primary Key)
-- 未被选为主键的其他候选键称为**替代键**(Alternate Key)
 
-## 3. MySQL中实现候选键
 
-### 3.1 使用UNIQUE约束创建候选键
 
-```sql
-CREATE TABLE students (
-    student_id INT PRIMARY KEY,
-    email VARCHAR(100) UNIQUE,  -- 候选键
-    phone VARCHAR(20) UNIQUE,   -- 候选键
-    name VARCHAR(50)
-);
-```
 
-### 3.2 复合候选键
 
-```sql
-CREATE TABLE course_registrations (
-    student_id INT,
-    course_id INT,
-    semester VARCHAR(10),
-    PRIMARY KEY (student_id, course_id, semester),
-    UNIQUE (student_id, course_id)  -- 候选键
-);
-```
 
-## 4. 候选键的实际应用场景
 
-1. **用户表**：除了主键ID外，用户名、邮箱、手机号都可作为候选键
-2. **订单表**：订单号(主键)和支付流水号(候选键)
-3. **学生表**：学号(主键)和身份证号(候选键)
 
-## 5. 候选键与索引的关系
 
-- MySQL会自动为候选键创建唯一索引
-- 这些索引可以加速查询性能
-- 可以通过`SHOW INDEX FROM 表名`查看候选键对应的索引
-
-## 6. 候选键的修改
-
-### 6.1 添加候选键
-
-```sql
-ALTER TABLE students ADD UNIQUE (email);
-```
-
-### 6.2 删除候选键
-
-```sql
-ALTER TABLE students DROP INDEX email;
-```
-
-## 7. 注意事项
-
-1. 候选键允许NULL值(除非显式指定NOT NULL)
-2. 候选键和主键一样，都会自动创建唯一索引
-3. 过多的候选键会影响插入和更新性能
-4. 在设计时应仔细考虑哪些列组合适合作为候选键
-
-## 8. 候选键与业务逻辑
-
-候选键的选择应基于业务需求：
-- 自然键：如身份证号、ISBN号等自然存在的唯一标识
-- 代理键：如自增ID等人工创建的唯一标识
-- 组合键：多个列组合形成的唯一标识
-
-正确选择候选键可以提高数据完整性和查询效率。

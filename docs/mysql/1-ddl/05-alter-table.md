@@ -4,544 +4,181 @@ tags: []
 
 ---
 
+在 MySQL 的数据定义语言(DDL)中，修改数据表(ALTER TABLE)主要包括对数据表的**结构**进行各种变更。主要包括：
 
-# MySQL 重命名表的语法
+1. 修改列
+2. 修改约束条件
+3. 修改索引
+4. 修改表选项
+5. 修改注释
 
-在 MySQL 中重命名表有以下几种方法：
+## 一、修改表结构的主要操作类型
 
-## 1. 基本 RENAME TABLE 语法
-
+### 1. 添加列（字段）
+向现有表中添加新的列/字段
 ```sql
-RENAME TABLE old_table_name TO new_table_name;
+ALTER TABLE 表名 ADD [COLUMN] 列名 数据类型 [约束条件] [FIRST|AFTER 现有列名];
 ```
 
-## 2. 重命名多个表
-
+### 2. 修改列（字段）
+更改现有列的数据类型、名称或约束
 ```sql
-RENAME TABLE 
-    old_table1 TO new_table1,
-    old_table2 TO new_table2,
-    old_table3 TO new_table3;
+-- 修改列的数据类型和属性
+ALTER TABLE 表名 MODIFY [COLUMN] 列名 新数据类型 [约束条件];
+
+-- 修改列名和数据类型
+ALTER TABLE 表名 CHANGE [COLUMN] 原列名 新列名 新数据类型 [约束条件];
 ```
 
-## 3. 使用 ALTER TABLE 语法
-
+### 3. 删除列（字段）
+从表中移除不再需要的列
 ```sql
-ALTER TABLE old_table_name RENAME TO new_table_name;
+ALTER TABLE 表名 DROP [COLUMN] 列名;
 ```
 
-## 4. 跨数据库重命名表
-
+### 4. 修改表名
+重命名表
 ```sql
-RENAME TABLE 
-    current_db.old_table_name TO new_db.new_table_name;
+ALTER TABLE 原表名 RENAME [TO|AS] 新表名;
+-- 或者
+RENAME TABLE 原表名 TO 新表名;
 ```
 
-## 注意事项
+## 二、修改表约束
 
-1. 需要具有原表的 ALTER 和 DROP 权限，以及新表的 CREATE 和 INSERT 权限
-2. 重命名表会自动更新与该表相关的视图、存储过程、触发器等的引用
-3. 如果表有外键约束，重命名操作可能会失败或需要特殊处理
-4. 重命名操作是原子性的，要么全部成功，要么全部失败
-5. 在事务中可以使用 RENAME TABLE 命令
-
-## 示例
-
+### 1. 添加主键
 ```sql
--- 单个表重命名
-RENAME TABLE employees TO staff;
-
--- 多个表重命名
-RENAME TABLE
-    temp_users TO users,
-    temp_orders TO orders;
-
--- 使用ALTER TABLE
-ALTER TABLE products RENAME TO items;
-
--- 跨数据库移动并重命名
-RENAME TABLE 
-    old_db.customers TO new_db.clients;
+ALTER TABLE 表名 ADD PRIMARY KEY (列名);
 ```
 
-## 与复制表的区别
-
-重命名表是直接更改表的名称而不创建新表，而复制表会创建一个新表并保留原表。
-
-## 改：数据结构（ALTER）
-
+### 2. 删除主键
 ```sql
--- 修改表名
-ALTER TABLE 旧表名 RENAME TO 新表名;
-
--- 修改列名
-ALTER TABLE 表名 RENAME COLUMN 旧列名 TO 新表名; 
-
--- 添加列
-ALTER TABLE 表名
-  ADD COLUMN 列1 数据类型 [约束条件] [FIRST|AFTER 已存在列],
-  ADD COLUMN 列2 数据类型 [约束条件] [FIRST|AFTER 已存在列];
-
--- 添加唯一约束
-ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (列名);
-ALTER TABLE users ADD CONSTRAINT unique_email UNIQUE (email);  
-
--- 删除列
-ALTER TABLE 表名 
-  DROP COLUMN 列1, 
-  DROP COLUMN 列2;
-  
--- 删除主键约束
 ALTER TABLE 表名 DROP PRIMARY KEY;
-
--- 删除外键约束
-ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
-
--- 删除唯一约束
-ALTER TABLE 表名 DROP INDEX 索引名;
-ALTER TABLE users DROP INDEX unique_email;
-
--- 调整列序
-ALTER TABLE 表名
-	MODIFY COLUMN 列1 数据类型 AFTER 目标列,
-	MODIFY COLUMN 列2 数据类型 AFTER 目标列;
-
--- 调整列到首位
-ALTER TABLE 表名
-	MODIFY COLUMN 列1 数据类型 FIRST;
-
--- 修改列定义（表名除外）
-ALTER TABLE 表名 MODIFY COLUMN 列名 新数据类型 [约束条件];
-
--- 修改列定义
-ALTER TABLE 表名 CHANGE COLUMN 旧列名 新列名 新数据类型 [约束条件];
-
--- 添加非空约束
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 NOT NULL;
-ALTER TABLE users MODIFY email VARCHAR(255) NOT NULL;
-
--- 将非空约束改为允许空值
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 NULL;
-ALTER TABLE users MODIFY email VARCHAR(255) NULL;
-
--- 删除非空约束
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 NULL;
-ALTER TABLE users MODIFY email VARCHAR(255) NULL; 
-
--- 添加自增主键约束
-ALTER TABLE 表名 
-MODIFY 列名 数据类型 AUTO_INCREMENT PRIMARY KEY;
-ALTER TABLE users 
-MODIFY id INT AUTO_INCREMENT PRIMARY KEY;
-
--- 修改默认值
-ALTER TABLE 表名 
-MODIFY 列名 数据类型 DEFAULT 默认值;
--- 示例
-ALTER TABLE products 
-MODIFY price DECIMAL(10,2) DEFAULT 0.00;
-
--- 添加或修改默认值
-ALTER TABLE 表 
-ALTER COLUMN 列名 SET DEFAULT 默认值;
--- 示例
-ALTER TABLE orders 
-ALTER COLUMN status SET DEFAULT 'active';
-
--- 删除默认值
-ALTER TABLE 表名 
-ALTER COLUMN 列名 DROP DEFAULT;
--- 示例
-ALTER TABLE users 
-ALTER COLUMN phone DROP DEFAULT;
 ```
 
-
-
+### 3. 添加唯一约束
 ```sql
--- 修改表名
-ALTER TABLE 旧表名 RENAME TO 新表名;
-
--- 修改列名
-ALTER TABLE 表名 RENAME COLUMN 旧列名 TO 新表名; 
-
--- 添加列
-ALTER TABLE 表名
-  ADD COLUMN 列1 数据类型 [约束条件] [FIRST|AFTER 已存在列],
-  ADD COLUMN 列2 数据类型 [约束条件] [FIRST|AFTER 已存在列];
-
--- 添加唯一约束
+ALTER TABLE 表名 ADD UNIQUE (列名);
+-- 或者带约束名称
 ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE (列名);
-ALTER TABLE users ADD CONSTRAINT unique_email UNIQUE (email);  
+```
 
--- 删除列
-ALTER TABLE 表名 
-  DROP COLUMN 列1, 
-  DROP COLUMN 列2;
-  
--- 删除主键约束
-ALTER TABLE 表名 DROP PRIMARY KEY;
+### 4. 删除唯一约束
+```sql
+ALTER TABLE 表名 DROP INDEX 约束名;
+```
 
--- 删除外键约束
-ALTER TABLE 表名 DROP FOREIGN KEY 外键名;
+### 5. 添加外键
+```sql
+ALTER TABLE 子表名 ADD FOREIGN KEY (子表列名) REFERENCES 父表名(父表列名);
+```
 
--- 删除唯一约束
+### 6. 删除外键
+```sql
+ALTER TABLE 表名 DROP FOREIGN KEY 外键约束名;
+```
+
+### 7. 添加/删除检查约束
+
+注意：MySQL 8.0.16+
+
+```sql
+-- 添加检查约束
+ALTER TABLE 表名 ADD CONSTRAINT 约束名 CHECK (条件表达式);
+
+-- 删除检查约束
+ALTER TABLE 表名 DROP CONSTRAINT 约束名;
+```
+
+## 三、修改索引
+
+### 1. 添加普通索引
+```sql
+ALTER TABLE 表名 ADD INDEX 索引名 (列名);
+-- 或简写为
+ALTER TABLE 表名 ADD INDEX (列名);
+```
+
+### 2. 添加唯一索引
+```sql
+ALTER TABLE 表名 ADD UNIQUE INDEX 索引名 (列名);
+-- 或简写为
+ALTER TABLE 表名 ADD UNIQUE (列名);
+```
+
+### 3. 添加全文索引
+
+注意：MySQL 5.6+的InnoDB支持
+
+```sql
+ALTER TABLE 表名 ADD FULLTEXT INDEX 索引名 (列名);
+```
+
+### 4. 删除索引
+```sql
 ALTER TABLE 表名 DROP INDEX 索引名;
-ALTER TABLE users DROP INDEX unique_email;
-
--- 调整列序
-ALTER TABLE 表名
-	MODIFY COLUMN 列1 数据类型 AFTER 目标列,
-	MODIFY COLUMN 列2 数据类型 AFTER 目标列;
-
--- 调整列到首位
-ALTER TABLE 表名
-	MODIFY COLUMN 列1 数据类型 FIRST;
-
--- 修改列定义（表名除外）
-ALTER TABLE 表名 MODIFY COLUMN 列名 新数据类型 [约束条件];
-
--- 修改列定义
-ALTER TABLE 表名 CHANGE COLUMN 旧列名 新列名 新数据类型 [约束条件];
-
--- 添加非空约束
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 NOT NULL;
-ALTER TABLE users MODIFY email VARCHAR(255) NOT NULL;
-
--- 将非空约束改为允许空值
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 NULL;
-ALTER TABLE users MODIFY email VARCHAR(255) NULL;
-
--- 删除非空约束
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 NULL;
-ALTER TABLE users MODIFY email VARCHAR(255) NULL; 
-
--- 添加自增主键约束
-ALTER TABLE 表名 
-MODIFY 列名 数据类型 AUTO_INCREMENT PRIMARY KEY;
-ALTER TABLE users 
-MODIFY id INT AUTO_INCREMENT PRIMARY KEY;
-
--- 修改默认值
-ALTER TABLE 表名 
-MODIFY 列名 数据类型 DEFAULT 默认值;
--- 示例
-ALTER TABLE products 
-MODIFY price DECIMAL(10,2) DEFAULT 0.00;
-
--- 添加或修改默认值
-ALTER TABLE 表 
-ALTER COLUMN 列名 SET DEFAULT 默认值;
--- 示例
-ALTER TABLE orders 
-ALTER COLUMN status SET DEFAULT 'active';
-
--- 删除默认值
-ALTER TABLE 表名 
-ALTER COLUMN 列名 DROP DEFAULT;
--- 示例
-ALTER TABLE users 
-ALTER COLUMN phone DROP DEFAULT;
-
 ```
 
+## 四、修改表选项
 
-## 4.ALTER TABLE
-
-ALTER TABLE是修改表结构的**语句（Statement）**。它是修改表结构的所有操作的核心指令。
-
-语法
-
+可以修改表的存储引擎、字符集等属性
 ```sql
-ALTER TABLE 表名 ADD COLUMN 列名 数据类型 [约束条件] [位置参数];
-ALTER TABLE 表名 ADD COLUMN 列名 数据类型 [约束条件] [AFTER 目标列 | FIRST];
-ALTER TABLE 表名 DROP COLUMN 列名;
-ALTER TABLE 表名 MODIFY COLUMN 列名 数据类型 [位置参数]
+ALTER TABLE 表名 ENGINE = 存储引擎类型;  -- 如 InnoDB, MyISAM
+ALTER TABLE 表名 DEFAULT CHARSET = 字符集;  -- 如 utf8mb4
+ALTER TABLE 表名 COLLATE = 排序规则;  -- 如 utf8mb4_unicode_ci
+ALTER TABLE 表名 AUTO_INCREMENT = 值;  -- 修改自增起始值
 ```
 
-- ALTER TABLE 是**主句**，是修改表结构的所有操作的核心指令。
-- ADD COLUMN是**子句**，指定操作是添加列。
-- DROP COLUMN是**子句**，指定操作是删除列。
-- MODIFY COLUMN是**子句**，指定操作是修改列定义（表名除外）。
+## 五、修改表注释和列注释
 
-## 5.添加列到指定位置
-
-在添加列的同时，可以通过AFTER和FIRST关键词指定新列的位置。AFTER和FIRST不属于约束条件
-
-语法
-
+### 1. 修改表注释
 ```sql
-ALTER TABLE student ADD COLUMN 列定义 [位置];
+ALTER TABLE 表名 COMMENT '表注释内容';
 ```
 
-- `AFTER  目标列`：把新列添加到目标列的后面
-
-- `FIRST`：把新列添加到首位 
-
-## 6.调整列序
-
-语法
-
+### 2. 修改列注释
 ```sql
-ALTER TABLE student MODIFY COLUMN 列名 数据类型 AFTER 目标列名;
+ALTER TABLE 表名 MODIFY [COLUMN] 列名 数据类型 COMMENT '列注释内容';
 ```
 
-语法
+## 六、其他修改操作
 
+### 1. 修改列的默认值
 ```sql
-ALTER TABLE student MODIFY COLUMN 列名 数据类型 FIRST;
+ALTER TABLE 表名 ALTER [COLUMN] 列名 SET DEFAULT 默认值;
+-- 或者
+ALTER TABLE 表名 MODIFY [COLUMN] 列名 数据类型 DEFAULT 默认值;
 ```
 
-## 练习1：修改学生表 - 增删列
-
-要求：先为student表添加四个新列chinese、math、english、computer，然后再把他们删掉
-
-步骤1：添加一个新列chinese
-
+### 2. 删除列的默认值
 ```sql
-ALTER TABLE student
-  ADD COLUMN 列定义;
+ALTER TABLE 表名 ALTER [COLUMN] 列名 DROP DEFAULT;
 ```
 
-步骤2: 添加三个新列 math、english、computer
-
+### 3. 修改列的位置
 ```sql
-ALTER TABLE student
-  ADD COLUMN 列定义,
-  ADD COLUMN 列定义,
-  ADD COLUMN 列定义;
+ALTER TABLE 表名 MODIFY [COLUMN] 列名 数据类型 FIRST;
+ALTER TABLE 表名 MODIFY [COLUMN] 列名 数据类型 AFTER 其他列名;
 ```
 
-步骤3: 删除四个新列：chinese、math、english、computer
-
-```sql
-ALTER TABLE student
-  DROP COLUMN 列名,
-  DROP COLUMN 列名,
-  DROP COLUMN 列名,
-  DROP COLUMN 列名;
-```
-
-## 练习2：修改学生表 - 指定列序
-
-要求：在student表中添加四个新列chinese、math、english、computer，注意新列的位置
-
-1: 把chinese列添加到id前
-
-2: 把math列添加到id后
-
-3: 把english列添加到age前
-
-4: 把computer添加到age后
-
-## 练习3：修改学生表 - 列排序
-
-要求：在student表中
-
-把chinese math english computer 改为 computer  english math chinese
-
-
-# ✅ 10 道 MySQL ALTER TABLE 语句练习题
-
-`ALTER TABLE` 是 MySQL 中用于 **修改已有表结构** 的 DDL（数据定义语言）语句，使用频率高，功能强大。
-
-它可以用来：
-
-- 添加列（字段）
-- 删除列
-- 修改列的数据类型或属性
-- 添加约束（如主键、唯一、外键等）
-- 删除约束
-- 重命名表
-- 重命名列
-- 修改表的存储引擎等
-
----
-
-## 🎯 练习目标
-
-通过以下 **10 道练习题**，帮助你熟练掌握 `ALTER TABLE` 的常见用法，包括：
-
-| 功能 | 说明 |
-|------|------|
-| 1~3 | **添加字段（列）** |
-| 4~5 | **修改字段（列）**：数据类型、名称、约束等 |
-| 6~7 | **删除字段（列）** |
-| 8 | **添加约束（如主键、唯一键）** |
-| 9 | **删除约束（如主键）** |
-| 10 | **重命名表或字段** |
-
----
-
-## 🧩 练习题（附表结构）
-
-> 🎲 **基础表：`employees`**
-
-假设你已经创建了如下表（你可以先运行以下 SQL 创建表，再做练习）：
-
-```sql
-CREATE TABLE employees (
-    id INT,
-    name VARCHAR(50),
-    age INT
-);
-```
-
-表中目前已有的字段为：`id`, `name`, `age`
-
----
-
-## ✅ 练习题
-
----
-
-### **1. 添加一个新字段：`salary`，类型为 DECIMAL(10,2)**
-
-> 目的：为员工表添加工资字段
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees ADD salary DECIMAL(10,2);
-```
-
----
-
-### **2. 添加一个字段：`department`，类型为 VARCHAR(100)，放在 `age` 字段后面**
-
-> 目的：添加部门字段，并控制字段顺序
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees ADD department VARCHAR(100) AFTER age;
-```
-
-> ⚠️ MySQL 支持使用 `AFTER 列名` 或 `FIRST` 控制字段顺序，但不是所有数据库都支持。
-
----
-
-### **3. 添加一个字段：`hire_date`，类型为 DATE，默认值为 '2023-01-01'**
-
-> 目的：添加入职日期字段，并设置默认值
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees ADD hire_date DATE DEFAULT '2023-01-01';
-```
-
----
-
-### **4. 将字段 `name` 的类型修改为 VARCHAR(100)**
-
-> 目的：扩大 name 字段的存储空间
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees MODIFY name VARCHAR(100);
-```
-
----
-
-### **5. 将字段 `age` 的名称修改为 `employee_age`，类型不变**
-
-> 目的：重命名字段
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees CHANGE age employee_age INT;
-```
-
-> ⚠️ 注意：`CHANGE` 语法需要写 **旧字段名和新字段名**，还要重新写字段类型！
-
-如果你只想改名而 **不改变类型**，也必须把原类型写上。
-
----
-
-### **6. 删除字段：`hire_date`**
-
-> 目的：移除不需要的字段
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees DROP COLUMN hire_date;
-```
-
----
-
-### **7. 删除字段：`department`**
-
-> 目的：删除部门字段
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees DROP COLUMN department;
-```
-
----
-
-### **8. 为字段 `id` 添加主键约束**
-
-> 目的：将 id 设为主键，保证唯一标识
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees ADD PRIMARY KEY (id);
-```
-
----
-
-### **9. 删除表 `employees` 的主键约束**
-
-> 目的：移除主键（比如重新设计表结构前）
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees DROP PRIMARY KEY;
-```
-
-> ⚠️ 注意：如果主键字段有 `AUTO_INCREMENT`，可能需要先去掉该属性。
-
----
-
-### **10. 将表名 `employees` 修改为 `staff_info`**
-
-> 目的：重命名表
-
-🔧 答案：
-
-```sql
-ALTER TABLE employees RENAME TO staff_info;
-```
-
-或者（MySQL 也支持这种写法）：
-
-```sql
-RENAME TABLE employees TO staff_info;
-```
-
----
-
-## 📝 拓展练习（可选，挑战自己）
-
-如果你已经完成了以上 10 题，可以尝试以下 **进阶练习**：
-
-1. **为 `id` 字段添加自增属性：`AUTO_INCREMENT`**
-2. **为 `email` 字段添加唯一约束：`UNIQUE`**
-3. **添加一个字段 `manager_id` INT，并设置为外键（需有对应主表）**
-4. **修改表引擎为 InnoDB：`ENGINE=InnoDB`**
-5. **添加注释到某个字段，如：`COMMENT '员工年龄'`**
-
----
-
-## ✅ 总结：ALTER TABLE 常用操作速查
+## 七、注意事项
+
+1. **数据兼容性**：修改列的数据类型可能导致现有数据不兼容，需谨慎操作
+2. **性能影响**：在大表上执行ALTER TABLE操作可能会锁表，影响生产环境
+3. **外键约束**：修改有外键关联的表结构需要特别小心
+4. **备份建议**：在执行重大表结构修改前，建议先备份数据
+5. **在线DDL**：MySQL 5.6+支持部分在线DDL操作，减少锁表时间
+
+## 总结
+
+MySQL 的 ALTER TABLE 语句提供了强大的表结构修改能力，主要包括：
+- **列操作**：添加、修改、删除列，修改列的数据类型和约束
+- **约束操作**：管理主键、唯一键、外键和检查约束
+- **索引操作**：添加和删除各种类型的索引
+- **表属性**：修改存储引擎、字符集、自增值等表选项
+- **注释**：修改表和列的注释信息
+
+## ALTER TABLE常用操作速查
 
 | 功能 | 语法示例 |
 |------|----------|
@@ -554,7 +191,3 @@ RENAME TABLE employees TO staff_info;
 | 重命名表 | `ALTER TABLE 旧表名 RENAME TO 新表名` 或 `RENAME TABLE 旧表名 TO 新表名` |
 
 ---
-
-🙋 **如果你想查看每道题的表结构变化，或者想要我提供每个练习的“执行前/后表结构对比”，或者想生成对应的 SQL 文件 / 练习环境，欢迎继续提问！**
-
-😊 **掌握 ALTER TABLE，你就能灵活地设计、优化和迭代数据库结构！**

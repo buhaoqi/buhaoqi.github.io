@@ -176,7 +176,7 @@ nav:
       - 06-System.Enum: csharp-tutorial/11-dotnet/06-system-enum.md
       - 06-System.Enum.GetValues(): csharp-tutorial/11-dotnet/06-system-enum-getvalues.md
       - 07-DOTNET的包管理系统: csharp-tutorial/11-dotnet/07-package-management.md
-  - Algorithm:
+  - 算法:
     - 考试大纲: csharp-algorithm/index.md
     - 算法概述: csharp-algorithm/01-overview.md
     - 📚基础数学算法:
@@ -199,7 +199,7 @@ nav:
     - 📚字符串与加密算法:
       - 14.回文数判断: csharp-algorithm/string/palindrome-check.md
       - 15.字符串加密: csharp-algorithm/string/string-encryption.md
-  - C# Graphics:
+  - C#图形:
     - 考试大纲: csharp-graphics/index.md
     - 图形编程概述: csharp-graphics/01-overview.md
     - Drawing类介绍: csharp-graphics/02-drawing.md
@@ -207,7 +207,7 @@ nav:
     - 绘制文本: csharp-graphics/04-drawing-text.md
     - 处理图像: csharp-graphics/05-image-processing.md
     - 事件与交互: csharp-graphics/06-events-and-interaction.md
-  - Windows Forms:
+  - WinForms:
     - 考试大纲: csharp-winform/index.md
     - 项目文件: csharp-winform/projects.md
     - WinForms简介: csharp-winform/00-overview.md
@@ -233,7 +233,7 @@ nav:
     - 20.多文件界面窗体: csharp-winform/20-mdi-forms.md
     - 21.多窗体的调用: csharp-winform/21-multiple-forms.md
     - 22.常见控件用法: csharp-winform/22-common-controls.md
-  - MySQL教程:
+  - MySQL:
     - 考试大纲: mysql/index.md
     - 相关术语: mysql/terms.md
     - ===新人起步===:
@@ -251,7 +251,7 @@ nav:
       - 创建数据库: mysql/1-ddl/02-create-database.md
       - 删除数据库: mysql/1-ddl/03-drop-database.md
       - 使用数据库: mysql/1-ddl/04-use-database.md
-      - 修改数据库: mysql/1-ddl/05-alter-database.md
+      - 修改数据库名: mysql/1-ddl/05-alter-database.md
       - 创建表: mysql/1-ddl/01-create-table.md
       - 查看表: mysql/1-ddl/02-show-table.md
       - 复制表: mysql/1-ddl/03-copy-table.md
@@ -265,47 +265,46 @@ nav:
       - 插入数据: mysql/2-dml/01-insert-data.md
       - 删除数据: mysql/2-dml/02-delete-data.md
       - 更新数据: mysql/2-dml/03-update-data.md
-    - ===数据查询语言(DQL)===:
-      - DQL简介: mysql/3-dql/00-introduction.md
-      - SELECT子句: mysql/3-dql/select.md
-      - FROM子句: mysql/3-dql/from.md
-      - WHERE子句: mysql/3-dql/where.md
-      - GROUP BY子句: mysql/3-dql/group-by.md
-      - HAVING子句: mysql/3-dql/having.md
-      - ORDER BY子句: mysql/3-dql/order-by.md
-      - LIMIT子句: mysql/3-dql/limit.md
-      - 高级:多表连接查询: mysql/3-dql/join.md
-      - 高级:子查询: mysql/3-dql/subquery.md
-      - 高级:联合查询: mysql/3-dql/union.md
     - ===数据类型===:
-      - 数据类型概述: mysql/data-types/0-what-is-datatype.md
-      - 整数类型: mysql/data-types/1-integer.md
-      - 小数类型: mysql/data-types/2-decimal.md
-      - 字符串类型: mysql/data-types/3-string.md
-      - 布尔类型: mysql/data-types/4-boolean.md
-      - 日期和时间类型: mysql/data-types/5-datetime.md
+      - 数据类型概述: mysql/3-data-types/0-what-is-datatype.md
+      - 整数类型: mysql/3-data-types/1-integer.md
+      - 小数类型: mysql/3-data-types/2-decimal.md
+      - 字符串类型: mysql/3-data-types/3-string.md
+      - 布尔类型: mysql/3-data-types/4-boolean.md
+      - 日期和时间类型: mysql/3-data-types/5-datetime.md
+    - ===数据查询语言(DQL)===:
+      - DQL简介: mysql/4-dql/00-introduction.md
+      - SELECT语句: mysql/4-dql/1-select-statement.md
+      - SELECT子句: mysql/4-dql/2-select.md
+      - FROM子句: mysql/4-dql/3-from.md
+      - WHERE子句: mysql/4-dql/4-where.md
+      - GROUP BY子句: mysql/4-dql/5-group-by.md
+      - HAVING子句: mysql/4-dql/6-having.md
+      - ORDER BY子句: mysql/4-dql/7-order-by.md
+      - LIMIT子句: mysql/4-dql/8-limit.md
+      - 高级:多表连接查询: mysql/4-dql/9-join.md
+      - 高级:子查询: mysql/4-dql/10-subquery.md
+      - 高级:联合查询: mysql/4-dql/11-union.md
     - ===运算符===:
-      - 运算符是什么: mysql/operators/01-what-is-operator.md
-      - 算术运算符: mysql/operators/02-arithmetic.md
-      - 关系运算符: mysql/operators/03-relational.md
-      - 逻辑运算符: mysql/operators/04-logical.md
+      - 运算符是什么: mysql/5-operators/01-what-is-operator.md
+      - 算术运算符: mysql/5-operators/02-arithmetic.md
+      - 关系运算符: mysql/5-operators/03-relational.md
+      - 逻辑运算符: mysql/5-operators/04-logical.md
+      - 位运算符: mysql/5-operators/05-bitwise.md
     - ===函数库===:
-      - 字符串函数: mysql/function/string.md
-      - 数学函数: mysql/function/math.md
-      - 聚合函数: mysql/function/aggregate.md
-      - 日期函数: mysql/function/date.md
-      - 其他函数: mysql/function/others.md
+      - 字符串函数: mysql/6-function/string.md
+      - 数学函数: mysql/6-function/math.md
+      - 聚合函数: mysql/6-function/aggregate.md
+      - 日期函数: mysql/6-function/date.md
+      - 其他函数: mysql/6-function/others.md
     - ===控制结构===:
-      - IF语句: mysql/control-structures/if.md
-      - CASE语句: mysql/control-structures/case.md
-      - 循环结构: mysql/control-structures/loop.md
+      - IF语句: mysql/7-control-structures/if.md
+      - CASE语句: mysql/7-control-structures/case.md
+      - 循环结构: mysql/7-control-structures/loop.md
     - ===其他===:
-      - 数据库备份: mysql/others/backup.md
-      - 创建用户: mysql/others/create-user.md
-    - 项目-查询学生成绩表: mysql/operate-data/project1.md
-    - 项目-查询产品信息表: mysql/operate-data/project2.md
-    - 项目-查询员工信息表: mysql/operate-data/project3.md
-  - Office软件:
+      - 数据库备份: mysql/10-others/backup.md
+      - 创建用户: mysql/10-others/create-user.md
+  - Office:
     - 考试大纲: office/index.md
     - Word:
       - 题库: office/word/exercises.md
@@ -345,7 +344,7 @@ nav:
     - 网络基础: computer-basics/06-network-basics.md
     - 网络协议: computer-basics/07-network-protocols.md
     - 网络设备: computer-basics/08-network-devices.md
-  - Windows操作系统:
+  - Windows:
     - 考试大纲: windows10/index.md
     - 操作系统基础: windows10/01.md
     - Windows10基础: windows10/02.md
@@ -395,6 +394,15 @@ nav:
     - 8月8日MySQL查询: exercises/mysql/0808.md
     - 8月9日ALTER TABLE: exercises/mysql/0809.md
     - 8月10日嵌套查询: exercises/mysql/0810.md
+  - 作业库:
+    - ===MySQL===:
+      - 第一周建表: exercises/mysql/level1.md
+      - 第二周查询: exercises/mysql/level2.md
+      - 项目-查询学生成绩表: exercises/mysql/project1.md
+      - 项目-查询产品信息表: exercises/mysql/project2.md
+      - 项目-查询员工信息表: exercises/mysql/project3.md
+      - 项目-查询随机信息表: exercises/mysql/project1-rand.md
+      - 项目-查询打折价格表: exercises/mysql/project2-discount.md
   - 编程英语:
       - 首页: english/index.md
       - A: english/a.md
