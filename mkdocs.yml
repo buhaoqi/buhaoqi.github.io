@@ -265,6 +265,7 @@ nav:
       - 插入数据: mysql/2-dml/01-insert-data.md
       - 删除数据: mysql/2-dml/02-delete-data.md
       - 更新数据: mysql/2-dml/03-update-data.md
+      - 复制数据: mysql/2-dml/04-duplicate.md
     - ===数据类型===:
       - 数据类型概述: mysql/3-data-types/0-what-is-datatype.md
       - 整数类型: mysql/3-data-types/1-integer.md
@@ -327,13 +328,13 @@ nav:
       - 页面设置与打印: office/excel/08.md
     - PowerPoint:
       - 题库: office/powerpoint/exercises.md
-      - PowerPoint的基本概念: office/powerpoint/01.md
-      - 幻灯片的基本操作: office/powerpoint/02.md
-      - 幻灯片的编辑与格式设置: office/powerpoint/03.md
-      - 幻灯片的动画与切换: office/powerpoint/04.md
-      - 幻灯片的放映与打印: office/powerpoint/05.md
-      - 幻灯片的设计与布局: office/powerpoint/06.md
-      - 幻灯片的多媒体与超链接: office/powerpoint/07.md
+      - PowerPoint的基本概念: office/powerpoint/1.md
+      - 幻灯片的基本操作: office/powerpoint/2.md
+      - 幻灯片的编辑与格式设置: office/powerpoint/3.md
+      - 幻灯片的动画与切换: office/powerpoint/4.md
+      - 幻灯片的放映与打印: office/powerpoint/5.md
+      - 幻灯片的设计与布局: office/powerpoint/6.md
+      - 幻灯片的多媒体与超链接: office/powerpoint/7.md
   - 计算机基础:
     - 考试大纲: computer-basics/index.md
     - 计算机进制: computer-basics/number-system.md
@@ -394,6 +395,7 @@ nav:
     - 8月8日MySQL查询: exercises/mysql/0808.md
     - 8月9日ALTER TABLE: exercises/mysql/0809.md
     - 8月10日嵌套查询: exercises/mysql/0810.md
+    - 8月11日算数运算符查询: exercises/mysql/0811.md
   - 作业库:
     - ===MySQL===:
       - 第一周建表: exercises/mysql/level1.md

@@ -271,3 +271,23 @@ INNER JOIN products ON orders.product_id = products.id;
 - ✅ 或者 JOIN 与 **子查询、聚合函数、GROUP BY** 联合使用的实战技巧
 
 欢迎继续提问！我可以为你提供详细的 SQL 实战代码与讲解。
+
+
+### **6. 多表连接（JOIN）**
+#### **连接类型**
+| 类型                | 说明                                     |
+|---------------------|------------------------------------------|
+| `INNER JOIN`        | 返回两个表匹配的行（交集）               |
+| `LEFT JOIN`         | 返回左表所有行 + 右表匹配的行            |
+| `RIGHT JOIN`        | 返回右表所有行 + 左表匹配的行            |
+| `FULL OUTER JOIN`   | 返回所有行（MySQL需用`UNION`模拟）       |
+
+#### **示例**
+```sql
+SELECT e.name, d.department_name
+FROM employees e
+INNER JOIN departments d 
+    ON e.department_id = d.id;
+```
+
+---
