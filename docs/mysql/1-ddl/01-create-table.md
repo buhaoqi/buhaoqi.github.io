@@ -84,6 +84,25 @@ CREATE TABLE student(
 2. 所有的SQL语句建议大写。
 3. 所有标点符号必须是英文输入法下的符号。如：圆括号`()`、逗号`,`、分号`;`
 
+## **MySQL 定义表的基本语法**
+
+```sql
+CREATE TABLE [IF NOT EXISTS] 表名 (
+    -- 列定义
+    列1 数据类型 [列约束],
+    列2 数据类型 [列约束],
+    
+    -- 表级约束
+    [PRIMARY KEY (列名)],
+    [FOREIGN KEY (外键列) REFERENCES 父表(父表列)],
+    [UNIQUE (列名)],
+    [CHECK (条件表达式)]
+)
+[ENGINE=存储引擎]
+[DEFAULT CHARSET=字符集]
+[COMMENT='表注释']
+[其他表选项];
+```
 ## 创建表的完整过程
 
 ```sql

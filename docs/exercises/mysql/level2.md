@@ -1195,7 +1195,7 @@ FROM
 
 ---
 
-## Day3：修改表结构
+## Day4：修改表结构
 
 ### 基础题(13道)
 > **练习1：修改学生表 - 增删列**
@@ -1411,7 +1411,7 @@ RENAME TABLE employees TO staff_info;
 
 ---
 
-## Day4:约束条件
+## Day5:约束条件
 
 ### 主键判断题
 
@@ -1426,3 +1426,311 @@ RENAME TABLE employees TO staff_info;
 9. **主键会自动创建索引以提高查询效率。**
 10. **主键列可以使用 `DEFAULT` 关键字设置默认值。**
 
+## D6: 随机数函数
+
+1. 生成 0~5 的随机整数(包含 0 和 5)
+1. 生成 **1~8** 的随机整数(包含 1 和 8)
+1. 生成 **10~20** 的随机整数
+1. 掷骰子（1~6）
+1. 随机抽奖（100~999）
+1. 随机布尔值（0/1）
+1. 生成两位小数的随机数（含 0 和 1）
+1. 生成四位小数的随机数（含 0 和 1）
+
+答案:随机数函数
+
+1. 生成 **0~5** 的随机整数
+
+```sql
+FLOOR(RAND() * (5 + 1))  -- 包含 0 和 N
+```
+
+2. 生成 **1~8** 的随机整数
+
+```sql
+FLOOR(1 + RAND() * 8)    -- 包含 1 和 N
+```
+
+3. 生成 10~20 的随机整数
+
+```sql
+FLOOR(10 + RAND() * (20 - 10 + 1))  -- 包含 A 和 B
+```
+
+4.*掷骰子（1~6）**  
+
+```sql
+SELECT FLOOR(1 + RAND() * 6) AS dice;
+```
+
+5. 随机抽奖（100~999）**  
+
+```sql
+SELECT FLOOR(100 + RAND() * 900) AS lucky_number;
+```
+
+6.随机布尔值（0/1）**  
+
+```sql
+SELECT FLOOR(RAND() * 2) AS coin_flip;
+```
+
+7. 生成两位小数的随机数（含 0 和 1）
+
+```sql
+SELECT FLOOR(RAND() * 101) / 100;  -- 结果如 0.00, 0.25, ..., 1.00
+```
+
+8.生成四位小数的随机数（含 0 和 1）
+
+```sql
+SELECT FLOOR(RAND() * 10001) / 10000;  -- 结果如 0.0000, 0.1234, ..., 1.0000
+```
+
+## D7练习:数学函数  
+
+1. 计算-25的绝对值  
+2. 生成一个 0 到 1 之间的随机小数  
+3. 将数字 4.2 向上取整  
+4. 将数字 4.9 向下取整  
+5. 将数字 3.14159 保留两位小数并四舍五入  
+6. 将数字 3.14159 截断为两位小数  
+7. 计算 2 的 5 次方  
+8. 计算 81 的平方根  
+9. 求 17 除以 5 的余数  
+10. 查询圆周率 PI 的值  
+11. 随机生成一个 1 到 100 之间的整数  
+12. 将 -8.7 四舍五入为整数  
+
+D7答案:数学函数
+
+1. **计算-25的绝对值**
+
+   ```sql
+   SELECT ABS(-25);
+   ```
+
+2. **生成一个 0 到 1 之间的随机小数：**
+
+   ```sql
+   SELECT RAND();
+   ```
+
+3. **将数字 4.2 向上取整：**
+
+   ```sql
+   SELECT CEIL(4.2);
+   ```
+
+4. **将数字 4.9 向下取整：**
+
+   ```sql
+   SELECT FLOOR(4.9);
+   ```
+
+5. **将数字 3.14159 保留两位小数并四舍五入：**
+
+   ```sql
+   SELECT ROUND(3.14159, 2);
+   ```
+
+6. **将数字 3.14159 截断为两位小数：**
+
+   ```sql
+   SELECT TRUNCATE(3.14159, 2);
+   ```
+
+7. **计算 2 的 5 次方：**
+
+   ```sql
+   SELECT POW(2, 5);
+   ```
+
+8. **计算 81 的平方根：**
+
+   ```sql
+   SELECT SQRT(81);
+   ```
+
+9. **求 17 除以 5 的余数：**
+
+   ```sql
+   SELECT MOD(17, 5);
+   ```
+
+10. **查询圆周率 PI 的值：**
+
+```sql
+SELECT PI();
+```
+
+11. **随机生成一个 1 到 100 之间的整数：**
+
+```sql
+SELECT FLOOR(1 + RAND() * 100);
+```
+
+12. **将 -8.7 四舍五入为整数：**
+
+```sql
+SELECT ROUND(-8.7);
+```
+
+------
+
+D8练习:数学函数中级题  
+
+1. 查询所有记录的绝对值  
+2. 按 value 值向上取整，命名为 ceil_value  
+3. 查询 value 字段保留 1 位小数后的结果（使用 ROUND）  
+4. 按 value 值平方并显示结果  
+5. 找出所有平方根为整数的记录  
+6. 显示 value 截断为 2 位小数后的结果  
+7. 按 value 排序，优先显示绝对值最大者  
+8. 求 value 除以 3 的余数（MOD）  
+9. 筛选 value 为负数，且其绝对值大于 10 的记录  
+10. 每条记录生成一个随机分数（0~100）  
+
+D8练习:答案数学函数中级题  
+
+假设有一个表 `numbers`，结构如下：
+
+```sql
+CREATE TABLE numbers (
+  id INT PRIMARY KEY,
+  value DECIMAL(10,4)
+);
+```
+
+1. **查询所有记录的绝对值：**
+
+```sql
+SELECT id, value, ABS(value) AS abs_value FROM numbers;
+```
+
+2. **按 value 值向上取整，命名为 ceil_value：**
+
+```sql
+SELECT id, value, CEIL(value) AS ceil_value FROM numbers;
+```
+
+3. **查询 value 字段保留 1 位小数后的结果（使用 ROUND）：**
+
+```sql
+SELECT id, ROUND(value, 1) AS rounded_value FROM numbers;
+```
+
+4. **按 value 值平方并显示结果：**
+
+```sql
+SELECT id, value, POW(value, 2) AS square FROM numbers;
+```
+
+5. **找出所有平方根为整数的记录：**
+
+```sql
+SELECT id, value FROM numbers
+WHERE SQRT(value) = FLOOR(SQRT(value));
+```
+
+6. **显示 value 截断为 2 位小数后的结果：**
+
+```sql
+SELECT id, TRUNCATE(value, 2) AS truncated FROM numbers;
+```
+
+7. **按 value 排序，优先显示绝对值最大者：**
+
+```sql
+SELECT id, value FROM numbers ORDER BY ABS(value) DESC;
+```
+
+8. **求 value 除以 3 的余数（MOD）：**
+
+```sql
+SELECT id, value, MOD(value, 3) AS remainder FROM numbers;
+```
+
+9. **筛选 value 为负数，且其绝对值大于 10 的记录：**
+
+```sql
+SELECT id, value FROM numbers
+WHERE value < 0 AND ABS(value) > 10;
+```
+
+10. **每条记录生成一个随机分数（0~100）：**
+
+```sql
+SELECT id, FLOOR(RAND() * 101) AS random_score FROM numbers;
+```
+
+------
+
+## D9数学函数练习:进阶题  
+
+1. 将 value 截断为 2 位小数，再求平方  
+2. 求每条记录的 value 四舍五入为整数后与原值的差值  
+3. 按 value 的平方根排序（大到小）  
+4. 对表中的 value 字段保留两位小数并乘以圆周率  
+5. 选出 value 平方后小于 100 的所有记录  
+6. 模拟掷骰子 1~6 的点数（使用 RAND）  
+7. 显示 value 的整数部分与小数部分  
+8. 找出所有 value 经过四舍五入后仍为偶数的记录
+
+## D9数学函数练习:进阶题答案  
+
+1. **将 value 截断为 2 位小数，再求平方：**
+
+```sql
+SELECT id, value, POW(TRUNCATE(value, 2), 2) AS truncated_square FROM numbers;
+```
+
+2. **求每条记录的 value 四舍五入为整数后与原值的差值：**
+
+```sql
+SELECT id, value, ROUND(value) - value AS round_diff FROM numbers;
+```
+
+3. **按 value 的平方根排序（大到小）：**
+
+```sql
+SELECT id, value FROM numbers
+ORDER BY SQRT(ABS(value)) DESC;
+```
+
+4. **对表中的 value 字段保留两位小数并乘以圆周率：**
+
+```sql
+SELECT id, ROUND(value, 2) * PI() AS multiplied_pi FROM numbers;
+```
+
+5. **选出 value 平方后小于 100 的所有记录：**
+
+```sql
+SELECT id, value FROM numbers
+WHERE POW(value, 2) < 100;
+```
+
+6. **模拟掷骰子 1~6 的点数（使用 RAND）：**
+
+```sql
+SELECT FLOOR(1 + RAND() * 6) AS dice_roll;
+```
+
+7. **显示 value 的整数部分与小数部分：**
+
+```sql
+SELECT id, value,
+FLOOR(value) AS int_part,
+value - FLOOR(value) AS decimal_part
+FROM numbers;
+```
+
+8. **找出所有 value 经过四舍五入后仍为偶数的记录：**
+
+```sql
+SELECT id, value FROM numbers
+WHERE MOD(ROUND(value), 2) = 0;
+```
+
+------

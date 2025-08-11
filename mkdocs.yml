@@ -244,7 +244,8 @@ nav:
       - 登录与退出MySQL: mysql/0-get-started/05-login-logout.md
       - 大小写敏感性: mysql/0-get-started/06-case-sensitivity.md
       - 注释: mysql/0-get-started/07-comments.md
-      - 标识符: mysql/0-get-started/08-identifiers.md
+      - 标识符: mysql/0-get-startstarted/08-identifiers.md
+      - 关键词: mysql/0-get-started/09-keywords.md
     - ===数据定义语言(DDL)===:
       - DDL简介: mysql/1-ddl/00-introduction.md
       - 查看数据库: mysql/1-ddl/01-show-databases.md
@@ -405,6 +406,8 @@ nav:
       - 项目-查询员工信息表: exercises/mysql/project3.md
       - 项目-查询随机信息表: exercises/mysql/project1-rand.md
       - 项目-查询打折价格表: exercises/mysql/project2-discount.md
+      - 项目-农产品信息查询: exercises/mysql/project6-agriculture-product-price.md
+      - 数据: exercises/mysql/data.md
   - 编程英语:
       - 首页: english/index.md
       - A: english/a.md
