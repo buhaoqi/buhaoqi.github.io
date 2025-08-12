@@ -235,9 +235,9 @@ nav:
     - 22.常见控件用法: csharp-winform/22-common-controls.md
   - MySQL:
     - 考试大纲: mysql/index.md
+    - 教材目录: mysql/0-overview/cover.md
     - 相关术语: mysql/terms.md
     - ===数据库系统概述===:
-      - 教材目录: mysql/0-overview/cover.md
       - 数据库的基本概念: mysql/0-overview/01-what-is-database-system.md
       - 数据管理技术的产生与发展: mysql/0-overview/02-history-of-database-management.md
       - 数据库系统的特点: mysql/0-overview/03-characteristics-of-database-systems.md
