@@ -236,6 +236,23 @@ nav:
   - MySQL:
     - 考试大纲: mysql/index.md
     - 相关术语: mysql/terms.md
+    - ===数据库系统概述===:
+      - 教材目录: mysql/0-overview/cover.md
+      - 数据库的基本概念: mysql/0-overview/01-what-is-database-system.md
+      - 数据管理技术的产生与发展: mysql/0-overview/02-history-of-database-management.md
+      - 数据库系统的特点: mysql/0-overview/03-characteristics-of-database-systems.md
+    - ===数据模型===:
+      - 数据模型的组成: mysql/0-overview/04-data-model-composition.md
+      - 概念模型: mysql/0-overview/05-conceptual-model.md
+      - 逻辑模型: mysql/0-overview/06-logical-model.md
+      - 物理模型: mysql/0-overview/07-physical-model.md
+      - 层次模型: mysql/0-overview/08-hierarchical-model.md
+      - 网状模型: mysql/0-overview/09-network-model.md
+      - 关系模型: mysql/0-overview/10-relational-model.md
+    - ===数据库系统结构===:
+      - 数据库系统模式: mysql/0-overview/11-database-system-architecture.md
+      - 数据库系统的三级模式: mysql/0-overview/12-three-level-architecture.md
+      - 映像功能与数据独立性: mysql/0-overview/13-data-independence.md
     - ===新人起步===:
       - 数据库简介: mysql/0-get-started/01-what-is-database.md
       - MySQL简介: mysql/0-get-started/02-what-is-mysql.md
@@ -397,6 +414,7 @@ nav:
     - 8月9日ALTER TABLE: exercises/mysql/0809.md
     - 8月10日嵌套查询: exercises/mysql/0810.md
     - 8月11日算数运算符查询: exercises/mysql/0811.md
+    - 8月12日数据库系统概述: exercises/mysql/0812.md
   - 作业库:
     - ===MySQL===:
       - 第一周建表: exercises/mysql/level1.md
