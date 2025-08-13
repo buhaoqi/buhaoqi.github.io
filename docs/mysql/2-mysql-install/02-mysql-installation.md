@@ -4,7 +4,6 @@ tags: []
 
 ---
 
-## 教材
 ![MySQL的安装与配置](../images/ebooks/023.jpeg)
 ![MySQL的安装与配置](../images/ebooks/024.jpeg)
 ![MySQL的安装与配置](../images/ebooks/025.jpeg)
@@ -19,10 +18,23 @@ tags: []
 ![MySQL的安装与配置](../images/ebooks/034.jpeg)
 ![MySQL的安装与配置](../images/ebooks/035.jpeg)
 
-## 内容大纲
+## 简答题
+1. MySQL三种安装包的区别是什么
+2. 简述安装MySQL的过程
+3. 在安装MySQL的过程中，主要需要进行哪些配置？
+4. 如何配置MySQL环境变量
+5. 安装成功后，开始菜单下MySQL的三个工具的用途是什么
 
-## MySQL的安装与配置
-## 安装MySQL(Windows系统)
+
+## MySQL三种安装包的区别是什么
+
+mysql-5.7.36-winx64.zip
+
+mysql-5.7.36-winx64.msi
+
+mysql-installer-community-5.7.36.1.msi
+
+## 简述MySQL的安装与配置过程
 1. **下载安装包**  
       - 访问 [MySQL官网下载页面](https://dev.mysql.com/downloads/installer/)。
       - 选择 **MySQL Installer for Windows**（推荐下载完整版）。
@@ -37,80 +49,45 @@ tags: []
       - 将MySQL的`bin`目录（如 `C:\Program Files\MySQL\MySQL Server 8.0\bin`）添加到系统`PATH`。
 
 ---
+## 在安装MySQL的过程中，主要需要进行哪些配置？
 
-## MySQL客户端管理工具
+
+## 如何配置MySQL环境变量
+
+```mysql
+# 第一步：进入bin目录
+cd C:\Program Files\MySQL\MySQL Server 8.4\bin
+```
+
+
+## 安装成功后，开始菜单下MySQL的三个工具的用途是什么
+
+
+## 补充知识：MySQL客户端管理工具有哪些
 
 - MySQL客户端（官方命令行管理工具）
 - CMD：windows7命令行工具
 - PowerSheel：windows10命令行工具
 - **MySQL Workbench**（官方界面管理工具）
 
-## 如何打开命令行窗口
+> 补充知识：如何打开命令行窗口
 
-- 通过"运行"对话框打开
-  - Win + R > 输入cmd > 回车
-- 通过“开始”菜单打开
-  - 右键单击开始菜单
-  - 找到“命令行工具”
-- 通过“目标文件夹” 打开
-  - 进入目标文件夹
-  - Shift + 右键单击空白
-  - 选择“在此处打开命令行工具”
+- 方式1：通过"运行"对话框打开
+    - Win + R > 输入cmd > 回车
+- 方式2：通过“开始”菜单打开
+    - 右键单击开始菜单
+    - 找到“命令行工具”
+- 方式3：通过“目标文件夹” 打开(推荐)
+    - 进入目标文件夹
+    - 按住Shift + 右键单击窗口空白处
+    - 选择“在此处打开命令行工具”
 
-## Command-Line Client是什么
+> 补充知识：Command-Line Client是什么
 
 - 是MySQL官方的命令行工具。
 - 是MySQL官方的数据库管理工具。
 - 是一个交互界面，用户可直接与MySQL服务器交互。
 
-## MySQL的启动(windows)
-方法一：**通过服务管理器**：
 
-- 按 `Win + R`，输入 `services.msc` 回车。
-- 找到 **MySQL** 服务，右键选择 **启动**。
-
-方法二：**命令行启动**：
-
-```cmd
-net start mysql
-```
-
-**查看 MySQL 状态**
-```cmd
-sc query mysql
-```
-如果显示 `STATE : 4 RUNNING`，表示 MySQL 正在运行。
-
-重启MySQL服务
-
-```bash
-# Windows
-通过“服务”管理工具重启 MySQL 服务。
-
-# Linux/macOS
-sudo systemctl restart mysql   # 或 sudo service mysql restart
-
-```
-
----
-## MySQL的关闭(windows)
-方法一：**服务管理器**：
-   
-- 进入 `services.msc`，找到 MySQL 服务，右键 **停止**。
-
-方法二：**命令行关闭**：
-```cmd
-net stop mysql
-```
-**总结**
-
-| **操作**       | **Linux/macOS**                     | **Windows**                  |
-|----------------|------------------------------------|-----------------------------|
-| **启动 MySQL** | `sudo systemctl start mysql`       | `net start mysql`           |
-| **关闭 MySQL** | `sudo systemctl stop mysql`        | `net stop mysql`            |
-| **重启 MySQL** | `sudo systemctl restart mysql`     | `net stop mysql && net start mysql` |
-| **查看状态**   | `sudo systemctl status mysql`      | `sc query mysql`            |
-
-如果 MySQL 无法启动，建议检查日志文件（`/var/log/mysql/error.log`）排查问题。
-
----
+## 练习
+### 单选题

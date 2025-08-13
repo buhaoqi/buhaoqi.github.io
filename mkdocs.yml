@@ -237,35 +237,35 @@ nav:
     - 考试大纲: mysql/index.md
     - 教材目录: mysql/cover.md
     - 相关术语: mysql/terms.md
-    - ===数据库基础知识===:
+    - ===1.绪论===:
       - 数据库系统概述: mysql/1-database-basics/01-overview.md
       - 数据模型: mysql/1-database-basics/02-data-model.md
       - 数据库系统的结构: mysql/1-database-basics/03-database-system-architecture.md
-    - ===MySQL工具使用===:
+    - ===2.MySQL工具使用===:
       - MySQL概述: mysql/2-mysql-install/01-what-is-mysql.md
       - MySQL的安装与配置: mysql/2-mysql-install/02-mysql-installation.md
-      - MySQL服务启动停止: mysql/2-mysql-install/03-mysql-service-management.md
+      - MySQL服务的启动与停止: mysql/2-mysql-install/03-mysql-service-management.md
       - MySQL服务器的登录: mysql/2-mysql-install/04-login-logout.md
-    - ===MySQL基础知识===:
-      - 结构化查询语言: mysql/3-mysql-basics/1-what-is-sql.md
+    - ===3.MySQL基础知识===:
+      - 结构化查询语言(SQL): mysql/3-mysql-basics/1-what-is-sql.md
       - 大小写敏感性: mysql/3-mysql-basics/2-case-sensitivity.md
       - 注释: mysql/3-mysql-basics/3-comments.md
       - 标识符: mysql/3-mysql-basics/4-identifiers.md
       - 关键词: mysql/3-mysql-basics/5-keywords.md
-    - ===数据类型===:
+    - ===3.MySQL数据类型===:
       - 数据类型概述: mysql/6-data-types/0-what-is-datatype.md
       - 整数类型: mysql/6-data-types/1-integer.md
       - 小数类型: mysql/6-data-types/2-decimal.md
       - 日期时间类型: mysql/6-data-types/3-datetime.md
       - 字符串类型: mysql/6-data-types/4-string.md
       - 布尔类型: mysql/6-data-types/5-boolean.md
-    - ===运算符===:
+    - ===3.MySQL运算符===:
       - 运算符是什么: mysql/8-operators/01-what-is-operator.md
       - 算术运算符: mysql/8-operators/02-arithmetic.md
       - 关系运算符: mysql/8-operators/03-relational.md
       - 逻辑运算符: mysql/8-operators/04-logical.md
       - 位运算符: mysql/8-operators/05-bitwise.md
-    - ===函数库===:
+    - ===3.MySQL函数===:
       - 函数库概述: mysql/9-function/1-overview.md
       - 聚合函数: mysql/9-function/2-aggregate.md
       - 数学函数: mysql/9-function/3-math.md
@@ -273,14 +273,14 @@ nav:
       - 日期函数: mysql/9-function/5-date.md
       - 系统信息函数: mysql/9-function/6-system-info.md
       - 其他函数: mysql/9-function/7-others.md
-    - ===数据库管理===:
+    - ===4.MySQL数据库管理===:
       - DDL简介: mysql/4-ddl/00-introduction.md
       - 创建数据库: mysql/4-ddl/02-create-database.md
       - 查看数据库: mysql/4-ddl/01-show-databases.md
       - 使用数据库: mysql/4-ddl/04-use-database.md
       - 修改数据库: mysql/4-ddl/05-alter-database.md
       - 删除数据库: mysql/4-ddl/03-drop-database.md
-    - ===数据表管理===:
+    - ===5.MySQL数据表管理===:
       - 创建表: mysql/4-ddl/01-create-table.md
       - 查看表: mysql/4-ddl/02-show-table.md
       - 修改表: mysql/4-ddl/05-alter-table.md
@@ -288,15 +288,18 @@ nav:
       - 删除表: mysql/4-ddl/04-drop-table.md
       - 索引: mysql/4-ddl/06-index.md
       - 视图: mysql/4-ddl/07-view.md
-    - ===数据完整性===:
-      - 约束条件: mysql/4-ddl/constraints.md
-    - ===数据管理===:
+    - ===6.MySQL数据完整性===:
+      - 实体完整性: mysql/4-ddl/constraints.md
+      - 参照完整性: mysql/4-ddl/referential-integrity.md
+      - 用户定义完整性: mysql/4-ddl/user-defined-integrity.md
+      - 完整性约束命名子句: mysql/4-ddl/integrity-constraints-naming.md
+    - ===7.数据管理===:
       - DML简介: mysql/5-dml/00-introduction.md
       - 插入数据: mysql/5-dml/01-insert-data.md
       - 删除数据: mysql/5-dml/02-delete-data.md
       - 更新数据: mysql/5-dml/03-update-data.md
       - 复制数据: mysql/5-dml/04-duplicate.md
-    - ===数据查询语言(DQL)===:
+    - ===7.数据查询与更新(DQL)===:
       - DQL简介: mysql/7-dql/00-introduction.md
       - SELECT语句: mysql/7-dql/1-select-statement.md
       - SELECT子句: mysql/7-dql/2-select.md
@@ -309,22 +312,32 @@ nav:
       - 高级:多表连接查询: mysql/7-dql/9-join.md
       - 高级:子查询: mysql/7-dql/10-subquery.md
       - 高级:联合查询: mysql/7-dql/11-union.md
-    - ===数据库编程===:
+    - ===8.MySQL索引与视图===:
+      - 索引: mysql/8-index-and-view/01-overview.md
+      - 视图: mysql/8-index-and-view/05-overview.md
+    - ===9.MySQL数据库编程===:
       - 数据库编程简介: mysql/10-database-programming/01-introduction.md
       - 使用Python连接MySQL: mysql/10-database-programming/02-python-connection.md
       - 使用Java连接MySQL: mysql/10-database-programming/03-java-connection.md
-    - ===数据库设计===:
+    - ===10.数据库设计===:
       - 需求分析: mysql/11-database-design/01-requirements-analysis.md
-    - ===数据库安全===:
+      - 概念结构设计: mysql/11-database-design/02-conceptual-design.md
+      - 逻辑结构设计: mysql/11-database-design/03-logical-design.md
+      - 物理结构设计: mysql/11-database-design/04-physical-design.md
+    - ===11.数据库安全===:
       - 数据库安全概述: mysql/12-database-security/01-overview.md
-    - ===数据库备份和恢复===:
+      - 用户管理: mysql/12-database-security/02-user-management.md
+      - 权限管理: mysql/12-database-security/03-privilege-management.md
+      - 角色管理: mysql/12-database-security/04-role-management.md
+    - ===12.数据库备份和恢复===:
       - 数据库备份概述: mysql/12-database-backup/01-overview.md
-    - ===其他===:
-      - 数据库备份: mysql/11-others/backup.md
-      - 创建用户: mysql/11-others/create-user.md
-      - IF语句: mysql/control-structures/if.md
-      - CASE语句: mysql/control-structures/case.md
-      - 循环结构: mysql/control-structures/loop.md
+      - 使用MySQLDUMP进行备份: mysql/12-database-backup/02-mysqldump.md
+      - MySQL数据恢复: mysql/12-database-backup/03-data-recovery.md
+    - ===题库===:
+      - 模拟试卷(一): exercises/mysql/01.md
+      - 模拟试卷(二): exercises/mysql/02.md
+      - 模拟试卷(三): exercises/mysql/03.md
+      - 模拟试卷(四): exercises/mysql/04.md
   - Office:
     - 考试大纲: office/index.md
     - Word:
@@ -419,6 +432,10 @@ nav:
     - 8月12日数据库系统概述: exercises/mysql/0812.md
     - 8月13日数据模型: exercises/mysql/0813.md
     - 8月14日数据库系统的结构: exercises/mysql/0814.md
+    - 8月15日MySQL概述: exercises/mysql/0815.md
+    - 8月16日MySQL的安装与配置: exercises/mysql/0816.md
+    - 8月17日MySQL服务的启动与停止: exercises/mysql/0817.md
+    - 8月18日MySQL服务器的登录: exercises/mysql/0818.md
   - 作业库:
     - ===MySQL===:
       - 第一周建表: exercises/mysql/level1.md

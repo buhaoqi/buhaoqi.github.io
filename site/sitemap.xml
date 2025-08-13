@@ -1033,6 +1033,14 @@
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/exercises/mysql/0813/</loc>
+         <lastmod>2025-08-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/exercises/mysql/0814/</loc>
+         <lastmod>2025-08-12</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/exercises/mysql/data/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
@@ -1109,307 +1117,283 @@
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/mysql/cover/</loc>
+         <lastmod>2025-08-12</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/mysql/terms/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/01-what-is-database/</loc>
+         <loc>https://buhaoqi.github.io/mysql/what-is-mysql-language/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/02-what-is-mysql/</loc>
+         <loc>https://buhaoqi.github.io/mysql/what-is-mysql/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/03-what-is-mysql-language/</loc>
+         <loc>https://buhaoqi.github.io/mysql/1-database-basics/01-overview/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/04-installation/</loc>
+         <loc>https://buhaoqi.github.io/mysql/1-database-basics/02-data-model/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/05-login-logout/</loc>
+         <loc>https://buhaoqi.github.io/mysql/1-database-basics/03-database-system-architecture/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/06-case-sensitivity/</loc>
+         <loc>https://buhaoqi.github.io/mysql/11-others/backup/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/07-comments/</loc>
+         <loc>https://buhaoqi.github.io/mysql/11-others/create-user/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/08-identifiers/</loc>
+         <loc>https://buhaoqi.github.io/mysql/2-mysql-install/01-what-is-mysql/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-get-started/09-keywords/</loc>
+         <loc>https://buhaoqi.github.io/mysql/2-mysql-install/02-mysql-installation/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/01-what-is-database-system/</loc>
+         <loc>https://buhaoqi.github.io/mysql/2-mysql-install/03-mysql-service-management/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/02-history-of-database-management/</loc>
+         <loc>https://buhaoqi.github.io/mysql/2-mysql-install/04-login-logout/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/03-characteristics-of-database-systems/</loc>
+         <loc>https://buhaoqi.github.io/mysql/3-mysql-basics/1-what-is-sql/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/04-data-model-composition/</loc>
+         <loc>https://buhaoqi.github.io/mysql/3-mysql-basics/2-case-sensitivity/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/05-conceptual-model/</loc>
+         <loc>https://buhaoqi.github.io/mysql/3-mysql-basics/3-comments/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/06-logical-model/</loc>
+         <loc>https://buhaoqi.github.io/mysql/3-mysql-basics/4-identifiers/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/07-physical-model/</loc>
+         <loc>https://buhaoqi.github.io/mysql/3-mysql-basics/5-keywords/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/08-hierarchical-model/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/00-introduction/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/09-network-model/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/01-create-table/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/10-relational-model/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/01-show-databases/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/11-database-system-architecture/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/02-create-database/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/12-three-level-architecture/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/02-show-table/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/13-data-independence/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/03-copy-table/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/0-overview/cover/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/03-drop-database/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/00-introduction/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/04-drop-table/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/01-create-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/04-use-database/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/01-show-databases/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/05-alter-database/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/02-create-database/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/05-alter-table/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/02-show-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/06-index/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/03-copy-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/07-view/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/03-drop-database/</loc>
+         <loc>https://buhaoqi.github.io/mysql/4-ddl/constraints/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/04-drop-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/5-dml/00-introduction/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/04-use-database/</loc>
+         <loc>https://buhaoqi.github.io/mysql/5-dml/01-insert-data/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/05-alter-database/</loc>
+         <loc>https://buhaoqi.github.io/mysql/5-dml/02-delete-data/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/05-alter-table/</loc>
+         <loc>https://buhaoqi.github.io/mysql/5-dml/03-update-data/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/06-index/</loc>
+         <loc>https://buhaoqi.github.io/mysql/5-dml/04-duplicate/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/07-view/</loc>
+         <loc>https://buhaoqi.github.io/mysql/6-data-types/0-what-is-datatype/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/1-ddl/constraints/</loc>
+         <loc>https://buhaoqi.github.io/mysql/6-data-types/1-integer/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/10-others/backup/</loc>
+         <loc>https://buhaoqi.github.io/mysql/6-data-types/2-decimal/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/10-others/create-user/</loc>
+         <loc>https://buhaoqi.github.io/mysql/6-data-types/3-datetime/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/2-dml/00-introduction/</loc>
+         <loc>https://buhaoqi.github.io/mysql/6-data-types/4-string/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/2-dml/01-insert-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/6-data-types/5-boolean/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/2-dml/02-delete-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/00-introduction/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/2-dml/03-update-data/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/1-select-statement/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/2-dml/04-duplicate/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/10-subquery/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/3-data-types/0-what-is-datatype/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/11-union/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/3-data-types/1-integer/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/2-select/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/3-data-types/2-decimal/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/3-from/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/3-data-types/3-string/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/4-where/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/3-data-types/4-boolean/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/5-group-by/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/3-data-types/5-datetime/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/6-having/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/00-introduction/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/7-order-by/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/1-select-statement/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/8-limit/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/10-subquery/</loc>
+         <loc>https://buhaoqi.github.io/mysql/7-dql/9-join/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/11-union/</loc>
+         <loc>https://buhaoqi.github.io/mysql/8-operators/01-what-is-operator/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/2-select/</loc>
+         <loc>https://buhaoqi.github.io/mysql/8-operators/02-arithmetic/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/3-from/</loc>
+         <loc>https://buhaoqi.github.io/mysql/8-operators/03-relational/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/4-where/</loc>
+         <loc>https://buhaoqi.github.io/mysql/8-operators/04-logical/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/5-group-by/</loc>
+         <loc>https://buhaoqi.github.io/mysql/8-operators/05-bitwise/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/6-having/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/1-overview/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/7-order-by/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/2-aggregate/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/8-limit/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/3-math/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/4-dql/9-join/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/4-string/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/5-operators/01-what-is-operator/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/5-date/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/5-operators/02-arithmetic/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/6-system-info/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/5-operators/03-relational/</loc>
+         <loc>https://buhaoqi.github.io/mysql/9-function/7-others/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/5-operators/04-logical/</loc>
+         <loc>https://buhaoqi.github.io/mysql/control-structures/case/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/5-operators/05-bitwise/</loc>
+         <loc>https://buhaoqi.github.io/mysql/control-structures/if/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/6-function/aggregate/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/6-function/date/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/6-function/math/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/6-function/others/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/6-function/string/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/7-control-structures/case/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/7-control-structures/if/</loc>
-         <lastmod>2025-08-12</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/mysql/7-control-structures/loop/</loc>
+         <loc>https://buhaoqi.github.io/mysql/control-structures/loop/</loc>
          <lastmod>2025-08-12</lastmod>
     </url>
     <url>

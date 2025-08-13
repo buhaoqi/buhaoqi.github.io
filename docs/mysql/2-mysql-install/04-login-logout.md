@@ -4,7 +4,6 @@ tags: []
 
 ---
 
-## 教材
 ![MySQL服务器的登录](../images/ebooks/039.jpeg)
 ![MySQL服务器的登录](../images/ebooks/040.jpeg)
 ![MySQL服务器的登录](../images/ebooks/041.jpeg)
@@ -16,19 +15,24 @@ tags: []
 ![MySQL服务器的登录](../images/ebooks/047.jpeg)
 ![MySQL服务器的登录](../images/ebooks/048.jpeg)
 
-## 内容大纲
+## 简答题
+1. 登录MySQL数据库的两种方式是什么
+2. 如何通过MySQL客户端登录MySQL数据库？
+3. 如何退出MySQL数据库？
+4. 常见的命令行工具有哪些？
+5. 如何打开CMD命令行工具
+6. 如何通过命令行工具登录MySQL数据库？
+7. Navicat Preminum是什么？
+8. 常见的MySQL图形化工具有哪些？
+9. 实操：自己尝试安装Navicat Preminum工具。
 
-## MySQL服务器的登录
 
-## 方法1: 使用MySQL自带的命令行工具
-
-打开后直接输入密码即可登录
-
-语法
-
-```mysql
-mysql -u root -p123456
-```
+## 登录MySQL数据库的两种方式是什么
+- MySQL客户端工具
+- 命令行工具
+## 如何使用MySQL客户端登录MySQL数据库？
+- 第一步：打开MySQL客户端
+- 第二步：在窗口内输入密码123456即可登录
 
 提示：当你看到
 ```
@@ -36,30 +40,26 @@ Welcome to the MySQL monitor
 ```
 的时候，就表示登录成功。
 
-## 方法2：使用cmd命令行工具登录
-
-```mysql
-# 第一步：进入bin目录
-cd C:\Program Files\MySQL\MySQL Server 8.4\bin
-# 第二步：输入登录指令
-mysql -u root -p123456
-```
-
-
-
-## 退出MySQL
-语法
-
-```sql
+## 如何退出MySQL数据库？
+```bash
 exit
 ```
-
 或
-```mql
+```bash
 quit
 ```
+## 常见的命令行工具有哪些？
+## 如何打开CMD命令行工具
+## 如何通过命令行工具登录MySQL数据库？
+## Navicat Preminum是什么？
+## 常见的MySQL图形化工具有哪些？
 
-## 练习1:登录退出
+## 练习
+### 单选题
+
+
+### 实操题
+练习1:登录退出
 
 要求：
 
@@ -67,9 +67,3 @@ quit
 2. 登录成功后，再退出mysql
 3. 反复操作三次。
 
-参考答案
-
-```sql
-cd C:\Program Files\MySQL\MySQL Server 8.4\bin
-mysql -u root -p123456
-```
