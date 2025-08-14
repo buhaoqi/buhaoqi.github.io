@@ -162,81 +162,108 @@ nav:
       - 封装: csharp-tutorial/07-encapsulation/01-what-is-encapsulation.md
       - 继承: csharp-tutorial/08-inheritance/01-what-is-inheritance.md
       - 多态: csharp-tutorial/09-polymorphism/01-what-is-polymorphism.md
+    - WinForms:
+      - WinForms简介: csharp-tutorial/12-winform/01-overview.md
+      - WinForms控件: csharp-tutorial/12-winform/02-controls.md
+      - WinForms事件: csharp-tutorial/12-winform/03-events.md
     - 附:DOTNET相关知识:
-      - 01-DOTNET简介: csharp-tutorial/11-dotnet/01-introduction.md
-      - 02-DOTNET的安装: csharp-tutorial/11-dotnet/02-installation.md
-      - 03-DOTNET的运行时: csharp-tutorial/11-dotnet/03-runtime.md   
-      - 04-DOTNET的SDK: csharp-tutorial/11-dotnet/04-sdk.md
-      - 05-DOTNET的命令行工具: csharp-tutorial/11-dotnet/05-cli.md
-      - 06-DOTNET的项目结构: csharp-tutorial/11-dotnet/06-project-structure.md
-      - 06-System: csharp-tutorial/11-dotnet/06-system.md
-      - 06-System.Int32: csharp-tutorial/11-dotnet/06-system-int32.md
-      - 06-System.Int32元数据: csharp-tutorial/11-dotnet/06-system-int32-meta.md
-      - 06-System.Type: csharp-tutorial/11-dotnet/06-system-type.md
-      - 06-System.Enum: csharp-tutorial/11-dotnet/06-system-enum.md
-      - 06-System.Enum.GetValues(): csharp-tutorial/11-dotnet/06-system-enum-getvalues.md
-      - 07-DOTNET的包管理系统: csharp-tutorial/11-dotnet/07-package-management.md
-  - 算法:
-    - 考试大纲: csharp-algorithm/index.md
-    - 算法概述: csharp-algorithm/01-overview.md
-    - 📚基础数学算法:
-      - 1.累加与累乘: csharp-algorithm/math/sum-and-product.md
-      - 2.最值与均值: csharp-algorithm/math/min-max-and-average.md
-      - 3.公约数与素数: csharp-algorithm/math/gcd-and-prime.md
-      - 4.阶乘与斐波那契数列: csharp-algorithm/math/factorial-and-fibonacci.md
-    - 📚查找算法:
-      - 5.顺序查找: csharp-algorithm/search/sequential-search.md
-      - 6.二分查找: csharp-algorithm/search/binary-search.md
-    - 📚排序算法:
-      - 7.冒泡排序: csharp-algorithm/sort/bubble-sort.md
-      - 8.选择排序: csharp-algorithm/sort/selection-sort.md
-      - 9.插入排序: csharp-algorithm/sort/insertion-sort.md
-    - 📚递归算法:
-      - 10.阶乘: csharp-algorithm/recursion/factorial.md
-      - 11.斐波那契数列: csharp-algorithm/recursion/fibonacci-sequence.md
-      - 12.汉诺塔: csharp-algorithm/recursion/tower-of-hanoi.md
-      - 13.二分查找递归版: csharp-algorithm/search/binary-search-recursion.md
-    - 📚字符串与加密算法:
-      - 14.回文数判断: csharp-algorithm/string/palindrome-check.md
-      - 15.字符串加密: csharp-algorithm/string/string-encryption.md
-  - C#图形:
-    - 考试大纲: csharp-graphics/index.md
-    - 图形编程概述: csharp-graphics/01-overview.md
-    - Drawing类介绍: csharp-graphics/02-drawing.md
-    - 绘制基本图形: csharp-graphics/03-drawing-basic-shapes.md
-    - 绘制文本: csharp-graphics/04-drawing-text.md
-    - 处理图像: csharp-graphics/05-image-processing.md
-    - 事件与交互: csharp-graphics/06-events-and-interaction.md
-  - WinForms:
-    - 考试大纲: csharp-winform/index.md
-    - 项目文件: csharp-winform/projects.md
-    - WinForms简介: csharp-winform/00-overview.md
-    - 01.窗体与控件: csharp-winform/01-forms-controls.md
-    - 02.窗体的属性: csharp-winform/02-form-properties.md
-    - 03.窗体的方法: csharp-winform/03-form-methods.md
-    - 04.窗体的事件: csharp-winform/04-form-events.md
-    - 05.窗体的创建和使用: csharp-winform/05-form-creation-and-usage.md
-    - 06.标签属性: csharp-winform/06-labels.md
-    - 07.文本框属性: csharp-winform/07-textboxes.md
-    - 08.文本框事件: csharp-winform/08-textbox-events.md
-    - 09.按钮属性: csharp-winform/09-buttons.md
-    - 10.按钮事件: csharp-winform/10-button-events.md
-    - 11.组合框属性: csharp-winform/11-comboboxes.md
-    - 12.列表框属性: csharp-winform/12-listboxes.md
-    - 13.单选按钮属性: csharp-winform/13-radiobuttons.md
-    - 14.复选框属性: csharp-winform/14-checkboxes.md
-    - 15.滚动条属性: csharp-winform/15-scrollbars.md
-    - 16.时钟控件属性: csharp-winform/16-clocks.md
-    - 17.时钟控件tick事件: csharp-winform/17-clock-events.md
-    - 18.分组框属性: csharp-winform/18-groupboxes.md
-    - 19.选项卡属性: csharp-winform/19-tabcontrols.md
-    - 20.多文件界面窗体: csharp-winform/20-mdi-forms.md
-    - 21.多窗体的调用: csharp-winform/21-multiple-forms.md
-    - 22.常见控件用法: csharp-winform/22-common-controls.md
-  - MySQL:
+      - 01-DOTNET简介: csharp-tutorial/20-dotnet/01-introduction.md
+      - 02-DOTNET的安装: csharp-tutorial/20-dotnet/02-installation.md
+      - 03-DOTNET的运行时: csharp-tutorial/20-dotnet/03-runtime.md   
+      - 04-DOTNET的SDK: csharp-tutorial/20-dotnet/04-sdk.md
+      - 05-DOTNET的命令行工具: csharp-tutorial/20-dotnet/05-cli.md
+      - 06-DOTNET的项目结构: csharp-tutorial/20-dotnet/06-project-structure.md
+      - 06-System: csharp-tutorial/20-dotnet/06-system.md
+      - 06-System.Int32: csharp-tutorial/20-dotnet/06-system-int32.md
+      - 06-System.Int32元数据: csharp-tutorial/20-dotnet/06-system-int32-meta.md
+      - 06-System.Type: csharp-tutorial/20-dotnet/06-system-type.md
+      - 06-System.Enum: csharp-tutorial/20-dotnet/06-system-enum.md
+      - 06-System.Enum.GetValues(): csharp-tutorial/20-dotnet/06-system-enum-getvalues.md
+      - 07-DOTNET的包管理系统: csharp-tutorial/20-dotnet/07-package-management.md
+  # - 算法:
+  #   - 考试大纲: csharp-algorithm/index.md
+  #   - 算法概述: csharp-algorithm/01-overview.md
+  #   - 📚基础数学算法:
+  #     - 1.累加与累乘: csharp-algorithm/math/sum-and-product.md
+  #     - 2.最值与均值: csharp-algorithm/math/min-max-and-average.md
+  #     - 3.公约数与素数: csharp-algorithm/math/gcd-and-prime.md
+  #     - 4.阶乘与斐波那契数列: csharp-algorithm/math/factorial-and-fibonacci.md
+  #   - 📚查找算法:
+  #     - 5.顺序查找: csharp-algorithm/search/sequential-search.md
+  #     - 6.二分查找: csharp-algorithm/search/binary-search.md
+  #   - 📚排序算法:
+  #     - 7.冒泡排序: csharp-algorithm/sort/bubble-sort.md
+  #     - 8.选择排序: csharp-algorithm/sort/selection-sort.md
+  #     - 9.插入排序: csharp-algorithm/sort/insertion-sort.md
+  #   - 📚递归算法:
+  #     - 10.阶乘: csharp-algorithm/recursion/factorial.md
+  #     - 11.斐波那契数列: csharp-algorithm/recursion/fibonacci-sequence.md
+  #     - 12.汉诺塔: csharp-algorithm/recursion/tower-of-hanoi.md
+  #     - 13.二分查找递归版: csharp-algorithm/search/binary-search-recursion.md
+  #   - 📚字符串与加密算法:
+  #     - 14.回文数判断: csharp-algorithm/string/palindrome-check.md
+  #     - 15.字符串加密: csharp-algorithm/string/string-encryption.md
+  - C#教材:
+    - 考试大纲: csharp-textbook/index.md
+    - 教材目录: csharp-textbook/cover.md
+    - ===1.算法与程序基础===: 
+      - 算法的定义及特性: csharp-textbook/1/algorithm-definition-and-characteristics.md
+      - 算法描述与设计: csharp-textbook/1/algorithm-description-and-design.md
+      - 算法分析和评价: csharp-textbook/1/algorithm-analysis-and-evaluation.md
+      - 算法与程序的关系: csharp-textbook/1/algorithm-and-program-relationship.md
+      - 典型算法举例: csharp-textbook/1/typical-algorithm-examples.md
+    - ===2.C#概述===: 
+      - C#语言简介: csharp-textbook/2/csharp-overview.md
+      - Visual Studio开发环境: csharp-textbook/2/visual-studio.md
+      - 简单C#程序实例: csharp-textbook/2/simple-csharp-program.md
+    - ===3.C#语言基础===: 
+      - 数据类型: csharp-textbook/3/data-types.md
+      - 常量与变量: csharp-textbook/3/constants-and-variables.md
+      - 运算符与表达式: csharp-textbook/3/operators-and-expressions.md
+    - ===4.C#控制结构===: 
+      - 顺序结构语句: csharp-textbook/4/flow-control.md
+      - 分支结构语句: csharp-textbook/4/branching.md
+      - 循环结构语句: csharp-textbook/4/looping.md
+      - 跳转语句: csharp-textbook/4/jumping.md
+    - ===5.Windows应用程序开发===: 
+      - 窗体设计: csharp-textbook/5/1-windows-application-design.md
+      - 常用控件: csharp-textbook/5/2-common-controls.md
+      - 对话框: csharp-textbook/5/3-dialogs.md
+      - 文档程序设计: csharp-textbook/5/4-document-program-design.md
+    - ===6.数组===: 
+      - 一维数组: csharp-textbook/6/1-dimensional-arrays.md
+      - 多维数组: csharp-textbook/6/2-multi-dimensional-arrays.md
+      - 数组的遍历: csharp-textbook/6/3-array-traversal.md
+      - 数组的排序和查找: csharp-textbook/6/4-array-sorting-and-searching.md
+    - ===7.C#面向对象基础===: 
+      - 类: csharp-textbook/7/class.md
+      - 方法: csharp-textbook/7/methods.md
+    - ===8.C#面向对象编程===: 
+      - 类的封装与继承: csharp-textbook/8/class-encapsulation-and-inheritance.md
+      - 多态: csharp-textbook/8/polymorphism.md
+      - 接口: csharp-textbook/8/interfaces.md
+      - 委托: csharp-textbook/8/delegates.md
+    - ===9.C#常用类的属性方法===: 
+      - Math类: csharp-textbook/9/math-class.md
+      - String类: csharp-textbook/9/string-class.md
+      - DateTime类: csharp-textbook/9/datetime-class.md
+      - Random类: csharp-textbook/9/random-class.md
+      - Convert类: csharp-textbook/9/convert-class.md
+    - ===10.C#文件操作===: 
+      - 文件的种类: csharp-textbook/10/file-types.md
+      - 创建文件: csharp-textbook/10/create-file.md
+      - 读写文件: csharp-textbook/10/read-write-file.md
+    - ===11.C#图形操作===: 
+      - 图形设计基础: csharp-textbook/11/graphics-design-basics.md
+      - 绘图工具及使用: csharp-textbook/11/graphics-tools-and-usage.md
+      - 字体和图像处理: csharp-textbook/11/font-and-image-processing.md
+    - ===12.数据库应用===: 
+      - Connection连接字符串: csharp-database/12/connection-strings.md
+      - 使用connection对象: csharp-database/12/using-connection.md
+      - 连接的测试: csharp-database/12/connection-testing.md
+  - MySQL教材:
     - 考试大纲: mysql/index.md
     - 教材目录: mysql/cover.md
-    - 相关术语: mysql/terms.md
     - ===1.绪论===:
       - 数据库系统概述: mysql/1-database-basics/01-overview.md
       - 数据模型: mysql/1-database-basics/02-data-model.md
@@ -338,6 +365,27 @@ nav:
       - 模拟试卷(二): exercises/mysql/02.md
       - 模拟试卷(三): exercises/mysql/03.md
       - 模拟试卷(四): exercises/mysql/04.md
+  - 计算机网络基础教材:
+    - 考试大纲: network-basics/index.md
+    - 教材目录: network-basics/contents.md
+    - ===1.计算机网络概述===:
+      - 计算机网络的发展: network-basics/1/01-development.md
+      - 计算机网络的基本概念: network-basics/1/02-basics.md
+      - 计算机网络的分类: network-basics/1/03-classification.md
+      - 计算机网络的组成: network-basics/1/04-architecture.md
+      - 计算机网络拓扑结构: network-basics/1/05-topology.md
+      - 计算机网络的功能和应用: network-basics/1/06-functions-and-applications.md
+      - 计算机网络传输介质: network-basics/1/07-transmission-media.md
+      - 网络技术的新发展: network-basics/1/08-new-developments.md
+    - ===2.数据通信基础===:
+      - 数据通信系统概述: network-basics/2/01-overview.md
+      - 通信的基本方式: network-basics/2/02-methods.md
+      - 通信中的编码技术: network-basics/2/03-encoding.md
+      - 同步技术与多路复用: network-basics/2/04-synchronization-and-multiplexing.md
+      - 数据交换技术: network-basics/2/05-exchange.md
+      - 差错控制技术: network-basics/2/06-error-control.md
+    - ===3.OSI参考模型体系===:
+      - 网络标准化组织: network-basics/3/01-standards-organization.md
   - Office:
     - 考试大纲: office/index.md
     - Word:
@@ -391,8 +439,6 @@ nav:
     - Windows10磁盘管理: windows10/09.md
     - Windows10中文输入: windows10/10.md
     - Windows10练习题: windows10/11.md
-  - 计算机网络:
-    - 考试大纲: computer-network-basics/index.md
   - 暑期作业:
     - 6月21日:For循环笔记: exercises/csharp-summer/0621.md
     - 6月22日:For循环练习: exercises/csharp-summer/0622.md
