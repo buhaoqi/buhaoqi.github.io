@@ -1,10 +1,20 @@
-# AI工具导航
+## AI工具导航
 
-- Microsoft Copilot: [https://copilot.microsoft.com/](https://copilot.microsoft.com/)
-- GitHub Copilot: [https://github.com/features/copilot](https://github.com/features/copilot)
+
+- AI代码编辑器: [https://cursor.com/en](https://cursor.com/en)
 - Google Gemini: [https://gemini.google.com](https://gemini.google.com)
 - claude.ai:[https://claude.ai](https://claude.ai)
+- 动画设计：[https://hera.video/](https://hera.video/)
+- Microsoft Copilot: [https://copilot.microsoft.com/](https://copilot.microsoft.com/)
+- GitHub Copilot: [https://github.com/features/copilot](https://github.com/features/copilot)
+- Get Visuals from your text: [https://www.napkin.ai/](https://www.napkin.ai/)
+- Free Real Time Voice Changer[https://voice.ai/](https://voice.ai/)
+- 免费AI声音克隆: [https://nicevoice.org](https://nicevoice.org)
 ---
+
+## 其他APP
+
+- Clean Shot录屏工具:[https://cleanshot.com/](https://cleanshot.com/) (付费)
 
 # 河北省中职对口升学考试计算机类专业考试简介
 ## 一、考试范围

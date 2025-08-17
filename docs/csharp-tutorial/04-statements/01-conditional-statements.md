@@ -267,3 +267,25 @@ else
 
 
 
+
+
+## 五、实战练习：简单登录验证系统
+
+```csharp
+Console.WriteLine("请输入用户名：");
+string username = Console.ReadLine();
+
+Console.WriteLine("请输入密码：");
+string password = Console.ReadLine();
+
+if (username == "admin" && password == "123456")
+{
+    Console.WriteLine("登录成功！");
+}
+else
+{
+    Console.WriteLine("用户名或密码错误！");
+}
+```
+
+---
