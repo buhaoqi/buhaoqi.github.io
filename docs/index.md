@@ -14,6 +14,8 @@
 
 ## 其他APP
 
+- [https://runwayml.com/](https://runwayml.com/)
+- [https://monica.im/en/ai-models/runway](https://monica.im/en/ai-models/runway)
 - Clean Shot录屏工具:[https://cleanshot.com/](https://cleanshot.com/) (付费)
 
 # 河北省中职对口升学考试计算机类专业考试简介
