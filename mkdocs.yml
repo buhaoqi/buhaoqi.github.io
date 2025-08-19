@@ -75,8 +75,8 @@ nav:
     - VS快捷键: csharp-tutorial/index.md
     - ===1.新人起步===:
       - 1.安装Visual Studio: csharp-tutorial/1-get-started/01-installation.md
-      - 2.创建第一个程序: csharp-tutorial/1-get-started/02-create-first-project.md
-      - 3.类与对象: csharp-tutorial/1-get-started/03-class-object.md
+      - 2.类与对象: csharp-tutorial/1-get-started/02-class-object.md
+      - 3.创建第一个程序: csharp-tutorial/1-get-started/03-create-first-project.md
       - 4.手写Hello World: csharp-tutorial/1-get-started/04-hello-world.md
       - 5.分号与注释: csharp-tutorial/1-get-started/05-semicolon-and-comments.md
       - 6.数据类型入门: csharp-tutorial/1-get-started/06-data-type-basics.md
