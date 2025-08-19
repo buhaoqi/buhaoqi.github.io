@@ -1,0 +1,2295 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="2026年河北省中职对口升学考试计算机类专业考试学习交流。">
+      
+      
+        <meta name="author" content="村长">
+      
+      
+        <link rel="canonical" href="https://buhaoqi.github.io/csharp-tutorial/19-methods/5-internal-modifier/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>5 internal modifier - 高二九班(对口计算机)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#internal" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-header__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            高二九班(对口计算机)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5 internal modifier
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  C#教程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../csharp-textbook/" class="md-tabs__link">
+          
+  
+  
+  C#教材
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../mysql/1-database-basics/01-overview/" class="md-tabs__link">
+          
+  
+  
+  MySQL教程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../mysql-textbook/" class="md-tabs__link">
+          
+  
+  
+  MySQL教材
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../network-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机网络基础教材
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../office/" class="md-tabs__link">
+          
+  
+  
+  Office
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../computer-basics/" class="md-tabs__link">
+          
+  
+  
+  计算机基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../windows10/" class="md-tabs__link">
+          
+  
+  
+  Windows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exercises/csharp-summer/0621/" class="md-tabs__link">
+          
+  
+  
+  暑期作业
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../exercises/mysql/level1/" class="md-tabs__link">
+          
+  
+  
+  作业库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../english/" class="md-tabs__link">
+          
+  
+  
+  编程英语
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="高二九班(对口计算机)" class="md-nav__button md-logo" aria-label="高二九班(对口计算机)" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    高二九班(对口计算机)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#教程
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../csharp-textbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    C#教材
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../mysql/1-database-basics/01-overview/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MySQL教程
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../mysql-textbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MySQL教材
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../network-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机网络基础教材
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../office/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Office
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../computer-basics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    计算机基础
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../windows10/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Windows
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../exercises/csharp-summer/0621/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    暑期作业
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../exercises/mysql/level1/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    作业库
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../english/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    编程英语
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 一、什么是 internal？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 二、internal 的语法位置
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 三、internal 的使用场景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 三、internal 的使用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 1. 限制跨项目访问
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 2. 项目内部使用的工具类、方法、配置类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 3. 默认类访问级别就是 internal（在非嵌套类中）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 四、与其他访问修饰符的对比
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 五、示例：internal 修饰类和方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 五、示例：internal 修饰类和方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ 另一个项目引用时：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internal-internalsvisibleto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 六、internal 和 InternalsVisibleTo（进阶）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 七、口诀记忆
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 八、总结一句话
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 是否需要练习题？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-internal-vs-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ C# internal vs public 判断题（含答案）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ C# internal vs public 判断题（含答案）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      **1. 使用 public 修饰的类可以被任何项目中的代码访问。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      **2. 使用 internal 修饰的类或方法只能在同一个项目中访问，其他项目无法访问。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-c-private" class="md-nav__link">
+    <span class="md-ellipsis">
+      **3. 如果不写访问修饰符，C# 默认类的访问权限是 private。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-internal-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      **4. 被 internal 修饰的方法可以被其他项目的类调用，只要通过引用了 DLL。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      **5. 一个程序集中的 internal 类可以被该程序集的任何类访问。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-public-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      **6. public 成员可以访问 internal 成员，只要它们在同一个类中。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      **7. 使用 public 修饰的字段或方法可以被任意类（包括其他命名空间）访问。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      **8. 你不能用 internal 修饰嵌套类（类中类）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      **9. 如果你想让一个类库的某些工具方法只在内部使用，应使用 internal 修饰。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-public-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      **10. public 的访问权限更严格，internal 更开放。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 自测评分标准
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 是否需要这些拓展？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ C# internal 类与方法 编程练习题（基础版）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ C# internal 类与方法 编程练习题（基础版）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-internal-helper-internal-sayhi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 定义一个 internal 类 Helper，在其中编写一个 internal 方法 SayHi()，输出“你好，内部调用！”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-internal-mathtool-internal-int-addint-a-int-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 在同一项目中创建两个类文件：一个 internal 工具类 MathTool 提供一个 internal int Add(int a, int b) 方法；在另一个类中调用它并打印结果。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-internal-logger-internal-writestring-msg" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 创建一个 internal 类 Logger，内部有 internal 方法 Write(string msg)，只能在当前项目使用，尝试在另一个项目中访问，并记录错误。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-internal-device-internal-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 定义一个 internal 类 Device，包含 internal 字段 id，在同项目的其他类中修改它。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-internal-getrandom-110-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 创建一个 internal 方法 GetRandom()，返回一个 1\~10 的随机数，并在 Main 方法中调用它。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-configmanager-internal-static-string-loadconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 定义一个类 ConfigManager，包含一个 internal static string LoadConfig() 方法，返回字符串 “配置读取成功”。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-internal-customer-internal-showinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 创建 internal 类 Customer，包含一个 internal 方法 ShowInfo()，在项目中创建多个对象调用此方法。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-internal-securedata-new-securedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 编写一个 internal 构造函数的类 SecureData，只允许项目内部通过 new SecureData() 创建实例。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-internal-temperatureconverter-tofahrenheitdouble-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 使用 internal 类 TemperatureConverter，提供方法 ToFahrenheit(double c) 将摄氏转华氏，供项目内部调用。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-internal-innerhelper-outer-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 创建一个 internal 嵌套类 InnerHelper 在外部类 Outer 中，调用嵌套类的 internal 方法并输出一句话。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 练习目标一览
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 后续推荐
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 1. internal 类 + 方法：输出问候
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-internal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 2. internal 方法在不同类中访问
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-internal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 3. 跨项目访问 internal 方法（不可行）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 4. internal 字段在同项目中访问
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-internal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 5. internal 静态方法：随机数生成器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-internal-static" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 6. internal static 方法：返回配置信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-internal-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 7. internal 类：多个对象调用 internal 方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-internal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 8. internal 构造函数：外部项目无法实例化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-internal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 9. internal 工具类：摄氏度转华氏度
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 10. internal 嵌套类与方法调用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 练习总结
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 下一步建议
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>好的！下面是对 <strong>C# 中 <code>internal</code> 关键字的详解</strong>，包含定义、使用场景、与其他修饰符对比、实际示例和注意事项，适合从初学者到进阶理解。</p>
+<hr />
+<h2 id="internal">✅ 一、什么是 <code>internal</code>？</h2>
+<p>在 C# 中，<code>internal</code> 是一种<strong>访问修饰符</strong>，用于控制成员或类型的访问范围。</p>
+<blockquote>
+<p><strong>定义：</strong>
+被 <code>internal</code> 修饰的类、方法、属性、字段等，<strong>只能在同一个程序集中访问（同一项目）</strong>，<strong>不能被其他程序集（项目）访问</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="internal_1">✅ 二、<code>internal</code> 的语法位置</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><code>internal</code> 可用于：类、接口、字段、属性、方法、构造函数、枚举等。</li>
+<li>不能用于局部变量。</li>
+</ul>
+<hr />
+<h2 id="internal_2">✅ 三、<code>internal</code> 的使用场景</h2>
+<h3 id="1">📌 1. 限制跨项目访问</h3>
+<p>如果你创建了一个类库（DLL），你不希望某些类或方法暴露给外部使用，就可以将它们标为 <code>internal</code>。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// 在项目A中：</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Helper</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">DoSomething</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// 在项目B中引用项目A</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">Helper</span><span class="p">.</span><span class="n">DoSomething</span><span class="p">();</span><span class="w">  </span><span class="c1">// ❌ 错误：因为它是 internal</span>
+</span></code></pre></div>
+<hr />
+<h3 id="2">📌 2. 项目内部使用的工具类、方法、配置类</h3>
+<p>这类代码不需要暴露给项目外部使用，但又不希望设为 <code>private</code>（只能本类使用）。</p>
+<hr />
+<h3 id="3-internal">📌 3. 默认类访问级别就是 internal（在非嵌套类中）</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// 实际上等价于 internal class MyClass</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注意：顶级类在不写访问修饰符时，默认就是 <code>internal</code>。</p>
+</blockquote>
+<hr />
+<h2 id="_1">✅ 四、与其他访问修饰符的对比</h2>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>本类</th>
+<th>同程序集</th>
+<th>派生类</th>
+<th>其他程序集</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>internal</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅（同程序集）</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>protected internal</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅（继承可见）</td>
+</tr>
+<tr>
+<td><code>private protected</code></td>
+<td>✅</td>
+<td>❌</td>
+<td>✅（同程序集）</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="internal_3">✅ 五、示例：internal 修饰类和方法</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// 文件1：Utilities.cs</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">MyApp.Utilities</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Logger</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">internal</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Log</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;[LOG]: {message}&quot;</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1">// 文件2：Program.cs，同项目内</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="k">using</span><span class="w"> </span><span class="nn">MyApp.Utilities</span><span class="p">;</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">{</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">        </span><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Logger</span><span class="p">();</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="n">logger</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;程序已启动&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ 正常访问</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="_2">❌ 另一个项目引用时：</h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">MyApp.Utilities</span><span class="p">;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Logger</span><span class="p">();</span><span class="w">  </span><span class="c1">// ❌ 错误：Logger 是 internal 类型</span>
+</span></code></pre></div>
+<hr />
+<h2 id="internal-internalsvisibleto">✅ 六、<code>internal</code> 和 <code>InternalsVisibleTo</code>（进阶）</h2>
+<p>有时我们希望在<strong>另一个特定项目中访问 internal 成员</strong>，比如为单元测试项目开放。</p>
+<p>可以使用：</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="na">[assembly: InternalsVisibleTo(&quot;MyTestProject&quot;)]</span>
+</span></code></pre></div>
+<p>放在 AssemblyInfo.cs 中（或项目属性中）。
+⚠️ 要在 <code>using System.Runtime.CompilerServices;</code> 引用下使用。</p>
+<hr />
+<h2 id="_3">✅ 七、口诀记忆</h2>
+<blockquote>
+<p><strong>internal 本项目专属用，项目之外你别动；</strong>
+<strong>library 不想外泄码，加个 internal 就不差；</strong></p>
+</blockquote>
+<hr />
+<h2 id="_4">✅ 八、总结一句话</h2>
+<blockquote>
+<p><code>internal</code> = 只在当前项目内可见，项目外不可访问，是控制“程序集级别访问”的关键修饰符。</p>
+</blockquote>
+<hr />
+<h2 id="_5">✅ 是否需要练习题？</h2>
+<p>我可以为你继续提供：</p>
+<ul>
+<li>✅ 10 道 <code>internal</code> vs <code>public</code> 判断题</li>
+<li>✅ 基础编程练习题：internal 类、internal 方法</li>
+<li>✅ 项目结构图例，展示 internal 如何隔离项目</li>
+<li>✅ Word/PDF 总结卡片导出</li>
+</ul>
+<p>你希望下一步做什么？📘</p>
+<p>以下是专为你设计的 <strong>10 道关于 C# 中 <code>internal</code> vs <code>public</code> 的判断题</strong>，帮助你清晰掌握这两个访问修饰符的区别。每题都附带标准答案和简要解析，适合初学者和有基础的开发者进行巩固练习。</p>
+<hr />
+<h2 id="c-internal-vs-public">✅ C# <code>internal</code> vs <code>public</code> 判断题（含答案）</h2>
+<hr />
+<h3 id="1-public">**1. 使用 <code>public</code> 修饰的类可以被任何项目中的代码访问。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>✅ <strong>正确</strong></p>
+<p>🧠 <strong>解析</strong>：<code>public</code> 表示完全公开，不论是否跨项目、跨程序集，所有代码都可以访问。</p>
+<hr />
+<h3 id="2-internal">**2. 使用 <code>internal</code> 修饰的类或方法只能在同一个项目中访问，其他项目无法访问。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>✅ <strong>正确</strong></p>
+<p>🧠 <strong>解析</strong>：<code>internal</code> 的含义就是“在本程序集中可见”，项目外不允许访问。</p>
+<hr />
+<h3 id="3-c-private">**3. 如果不写访问修饰符，C# 默认类的访问权限是 <code>private</code>。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>❌ <strong>错误</strong></p>
+<p>🧠 <strong>解析</strong>：类的默认访问权限是 <code>internal</code>，字段和方法默认是 <code>private</code>。</p>
+<hr />
+<h3 id="4-internal-dll">**4. 被 <code>internal</code> 修饰的方法可以被其他项目的类调用，只要通过引用了 DLL。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>❌ <strong>错误</strong></p>
+<p>🧠 <strong>解析</strong>：即使你添加引用，<code>internal</code> 成员仍然不可见，除非使用 <code>InternalsVisibleTo</code>。</p>
+<hr />
+<h3 id="5-internal">**5. 一个程序集中的 <code>internal</code> 类可以被该程序集的任何类访问。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>✅ <strong>正确</strong></p>
+<p>🧠 <strong>解析</strong>：<code>internal</code> 作用范围是整个程序集内，也就是整个项目。</p>
+<hr />
+<h3 id="6-public-internal">**6. <code>public</code> 成员可以访问 <code>internal</code> 成员，只要它们在同一个类中。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>✅ <strong>正确</strong></p>
+<p>🧠 <strong>解析</strong>：访问权限是针对谁来访问的；类的内部可以访问本类的任何成员。</p>
+<hr />
+<h3 id="7-public">**7. 使用 <code>public</code> 修饰的字段或方法可以被任意类（包括其他命名空间）访问。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>✅ <strong>正确</strong></p>
+<p>🧠 <strong>解析</strong>：<code>public</code> 成员无访问限制。</p>
+<hr />
+<h3 id="8-internal">**8. 你不能用 <code>internal</code> 修饰嵌套类（类中类）。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>❌ <strong>错误</strong></p>
+<p>🧠 <strong>解析</strong>：<code>internal</code> 可以用于嵌套类，控制嵌套类的可访问性。</p>
+<hr />
+<h3 id="9-internal">**9. 如果你想让一个类库的某些工具方法只在内部使用，应使用 <code>internal</code> 修饰。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>✅ <strong>正确</strong></p>
+<p>🧠 <strong>解析</strong>：这是 <code>internal</code> 最典型的用途：隐藏实现细节，仅供本库使用。</p>
+<hr />
+<h3 id="10-public-internal">**10. <code>public</code> 的访问权限更严格，<code>internal</code> 更开放。</h3>
+<p>✅ 正确 / ❌ 错误**</p>
+<p>❌ <strong>错误</strong></p>
+<p>🧠 <strong>解析</strong>：相反，<code>public</code> 是最开放的，<code>internal</code> 是项目内开放，项目外隐藏。</p>
+<hr />
+<h2 id="_6">✅ 自测评分标准</h2>
+<table>
+<thead>
+<tr>
+<th>得分范围</th>
+<th>等级</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90–100</td>
+<td>🌟 精通</td>
+<td>可以挑战 <code>protected/internal</code> 对比题</td>
+</tr>
+<tr>
+<td>70–80</td>
+<td>✅ 熟练</td>
+<td>建议做一些编程题加深理解</td>
+</tr>
+<tr>
+<td>50–60</td>
+<td>🔁 需加强</td>
+<td>建议配合代码示例学习</td>
+</tr>
+<tr>
+<td>&lt; 50</td>
+<td>📘 初学</td>
+<td>建议通读一遍 <code>internal/public</code> 总结</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_7">✅ 是否需要这些拓展？</h2>
+<ul>
+<li>📘 编程题：internal 类、方法实际运用</li>
+<li>🧠 internal + <code>InternalsVisibleTo</code> 场景题</li>
+<li>📄 Word/PDF 自测题卡</li>
+<li>🧪 internal/public/protected 综合测试卷</li>
+</ul>
+<p>你想继续哪一项？我可以立即为你准备 ✅</p>
+<p>好的！以下是为你精心准备的 <strong>10 道关于 C# 中 <code>internal</code> 类与 <code>internal</code> 方法的基础编程练习题</strong>，每题都适合练习项目内部访问控制，帮助你掌握 <code>internal</code> 的用法、限制范围和实际运用。</p>
+<hr />
+<h1 id="c-internal">✅ C# <code>internal</code> 类与方法 编程练习题（基础版）</h1>
+<hr />
+<h3 id="1-internal-helper-internal-sayhi"><strong>1. 定义一个 <code>internal</code> 类 <code>Helper</code>，在其中编写一个 <code>internal</code> 方法 <code>SayHi()</code>，输出“你好，内部调用！”</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// ➤ 要求：类和方法都使用 internal 修饰</span>
+</span></code></pre></div>
+<hr />
+<h3 id="2-internal-mathtool-internal-int-addint-a-int-b"><strong>2. 在同一项目中创建两个类文件：一个 <code>internal</code> 工具类 <code>MathTool</code> 提供一个 <code>internal int Add(int a, int b)</code> 方法；在另一个类中调用它并打印结果。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// ➤ 要求：跨类访问 internal 成员，测试是否可用</span>
+</span></code></pre></div>
+<hr />
+<h3 id="3-internal-logger-internal-writestring-msg"><strong>3. 创建一个 <code>internal</code> 类 <code>Logger</code>，内部有 <code>internal</code> 方法 <code>Write(string msg)</code>，只能在当前项目使用，尝试在另一个项目中访问，并记录错误。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// ➤ 要求：尝试跨项目调用 internal 方法，验证不可见</span>
+</span></code></pre></div>
+<hr />
+<h3 id="4-internal-device-internal-id"><strong>4. 定义一个 <code>internal</code> 类 <code>Device</code>，包含 <code>internal</code> 字段 <code>id</code>，在同项目的其他类中修改它。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// ➤ 要求：internal 字段的访问练习</span>
+</span></code></pre></div>
+<hr />
+<h3 id="5-internal-getrandom-110-main"><strong>5. 创建一个 <code>internal</code> 方法 <code>GetRandom()</code>，返回一个 1\~10 的随机数，并在 <code>Main</code> 方法中调用它。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// ➤ 要求：internal 静态方法 + 调用练习</span>
+</span></code></pre></div>
+<hr />
+<h3 id="6-configmanager-internal-static-string-loadconfig"><strong>6. 定义一个类 <code>ConfigManager</code>，包含一个 <code>internal static string LoadConfig()</code> 方法，返回字符串 “配置读取成功”。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// ➤ 要求：internal + static 的组合练习</span>
+</span></code></pre></div>
+<hr />
+<h3 id="7-internal-customer-internal-showinfo"><strong>7. 创建 <code>internal</code> 类 <code>Customer</code>，包含一个 <code>internal</code> 方法 <code>ShowInfo()</code>，在项目中创建多个对象调用此方法。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// ➤ 要求：使用对象数组或 List&lt; Customer &gt; 测试调用</span>
+</span></code></pre></div>
+<hr />
+<h3 id="8-internal-securedata-new-securedata"><strong>8. 编写一个 <code>internal</code> 构造函数的类 <code>SecureData</code>，只允许项目内部通过 <code>new SecureData()</code> 创建实例。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// ➤ 要求：构造函数加 internal，外部无法 new</span>
+</span></code></pre></div>
+<hr />
+<h3 id="9-internal-temperatureconverter-tofahrenheitdouble-c"><strong>9. 使用 <code>internal</code> 类 <code>TemperatureConverter</code>，提供方法 <code>ToFahrenheit(double c)</code> 将摄氏转华氏，供项目内部调用。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// ➤ 要求：internal 实用工具类练习</span>
+</span></code></pre></div>
+<hr />
+<h3 id="10-internal-innerhelper-outer-internal"><strong>10. 创建一个 <code>internal</code> 嵌套类 <code>InnerHelper</code> 在外部类 <code>Outer</code> 中，调用嵌套类的 <code>internal</code> 方法并输出一句话。</strong></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">// ➤ 要求：internal 嵌套类和方法的组合使用</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_8">✅ 练习目标一览</h2>
+<table>
+<thead>
+<tr>
+<th>目标内容</th>
+<th>练习题编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>internal 类定义</td>
+<td>1, 2, 3, 4, 7, 9, 10</td>
+</tr>
+<tr>
+<td>internal 方法调用</td>
+<td>1, 2, 3, 5, 6, 7, 10</td>
+</tr>
+<tr>
+<td>internal 字段访问</td>
+<td>4</td>
+</tr>
+<tr>
+<td>internal 构造函数</td>
+<td>8</td>
+</tr>
+<tr>
+<td>internal 嵌套类</td>
+<td>10</td>
+</tr>
+<tr>
+<td>static + internal 结合</td>
+<td>5, 6</td>
+</tr>
+<tr>
+<td>验证跨项目访问失败场景</td>
+<td>3, 8</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">✅ 后续推荐</h2>
+<p>我可以为你：</p>
+<ul>
+<li>📄 生成标准答案 + 注释版</li>
+<li>📘 打包 Word / PDF 格式用于线下自测</li>
+<li>🎯 增加进阶题（internal + protected、internal + static class）</li>
+<li>🧪 创建单元测试题，配合 <code>InternalsVisibleTo</code> 实战练习</li>
+</ul>
+<p>需要标准答案 + 注释解析吗？或者你希望我导出 PDF 版自测题？✅</p>
+<p>以下是你请求的 ✅ <strong>10 道 <code>internal</code> 类与方法练习题的标准答案 + 注释解析版</strong>。每题都包括完整代码和注释，帮助你理解 <code>internal</code> 的使用场景、限制范围和项目结构中的作用。</p>
+<hr />
+<h2 id="1-internal">✅ 1. <code>internal</code> 类 + 方法：输出问候</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Helper</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">SayHi</span><span class="p">()</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;你好，内部调用！&quot;</span><span class="p">);</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">}</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1">// 测试代码（同项目中）</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">Helper</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Helper</span><span class="p">();</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">h</span><span class="p">.</span><span class="n">SayHi</span><span class="p">();</span><span class="w">  </span><span class="c1">// ✅ 正常访问</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：<code>internal</code> 表示 <code>Helper</code> 类和 <code>SayHi</code> 方法只能在当前项目中访问。</p>
+</blockquote>
+<hr />
+<h2 id="2-internal_1">✅ 2. <code>internal</code> 方法在不同类中访问</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">// MathTool.cs</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MathTool</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">{</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="p">}</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1">// Program.cs</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="n">MathTool</span><span class="w"> </span><span class="n">tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MathTool</span><span class="p">();</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tool</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ 可访问</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w">    </span><span class="c1">// 输出：8</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：两个类在同一项目中，所以可以访问 <code>internal</code> 成员。</p>
+</blockquote>
+<hr />
+<h2 id="3-internal_1">✅ 3. 跨项目访问 <code>internal</code> 方法（不可行）</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">// 在项目 A 中</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Logger</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">{</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Write</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;日志：{msg}&quot;</span><span class="p">);</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">}</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="c1">// 在项目 B（引用 A）中：</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="n">Logger</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Logger</span><span class="p">();</span><span class="w">   </span><span class="c1">// ❌ 编译错误：无法访问 internal 类</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="n">logger</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;失败&quot;</span><span class="p">);</span><span class="w">          </span><span class="c1">// ❌ 错误</span>
+</span></code></pre></div>
+<blockquote>
+<p>❌ 报错原因：<code>internal</code> 类和方法不能在其他项目中访问。</p>
+</blockquote>
+<hr />
+<h2 id="4-internal">✅ 4. internal 字段在同项目中访问</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Device</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="p">{</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">}</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="c1">// 同项目类中访问</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">Device</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Device</span><span class="p">();</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="n">d</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">456</span><span class="p">;</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">id</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ 输出：456</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：<code>internal</code> 字段允许在项目中直接访问（不推荐公开字段做法）。</p>
+</blockquote>
+<hr />
+<h2 id="5-internal_1">✅ 5. internal 静态方法：随机数生成器</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">RandomHelper</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="p">{</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">GetRandom</span><span class="p">()</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">        </span><span class="n">Random</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">();</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">Next</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">);</span><span class="w">  </span><span class="c1">// 1~10</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="p">}</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="c1">// 调用</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">RandomHelper</span><span class="p">.</span><span class="n">GetRandom</span><span class="p">());</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：<code>internal static</code> 允许无需实例即可调用方法，但仅限项目内。</p>
+</blockquote>
+<hr />
+<h2 id="6-internal-static">✅ 6. internal static 方法：返回配置信息</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ConfigManager</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">{</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">LoadConfig</span><span class="p">()</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;配置读取成功&quot;</span><span class="p">;</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">}</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="c1">// 调用</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ConfigManager</span><span class="p">.</span><span class="n">LoadConfig</span><span class="p">());</span><span class="w">  </span><span class="c1">// ✅ 输出：配置读取成功</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：常用于封装系统配置、初始化等方法，不对外暴露。</p>
+</blockquote>
+<hr />
+<h2 id="7-internal-internal">✅ 7. internal 类：多个对象调用 internal 方法</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Customer</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="p">{</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span><span class="p">;</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ShowInfo</span><span class="p">()</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;客户名：{Name}&quot;</span><span class="p">);</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">}</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="c1">// 测试</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Customer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Customer</span><span class="o">&gt;</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="p">{</span>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Customer</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;张三&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Customer</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;李四&quot;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="p">};</span>
+</span><span id="__span-22-17"><a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>
+</span><span id="__span-22-18"><a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+</span><span id="__span-22-19"><a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="p">{</span>
+</span><span id="__span-22-20"><a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">ShowInfo</span><span class="p">();</span><span class="w">  </span><span class="c1">// ✅ 输出名字</span>
+</span><span id="__span-22-21"><a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：<code>internal</code> 不影响类内正常创建对象和调用方法。</p>
+</blockquote>
+<hr />
+<h2 id="8-internal_1">✅ 8. internal 构造函数：外部项目无法实例化</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SecureData</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="p">{</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="nf">SecureData</span><span class="p">()</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;内部构造函数&quot;</span><span class="p">);</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">}</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="c1">// 同项目可用：</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="n">SecureData</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SecureData</span><span class="p">();</span><span class="w">  </span><span class="c1">// ✅</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="c1">// 跨项目使用 new SecureData(); ❌ 编译错误</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：常用于库设计时控制对象创建方式。</p>
+</blockquote>
+<hr />
+<h2 id="9-internal_1">✅ 9. internal 工具类：摄氏度转华氏度</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TemperatureConverter</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="p">{</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">ToFahrenheit</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">celsius</span><span class="p">)</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">celsius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="p">}</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="c1">// 调用</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">TemperatureConverter</span><span class="p">.</span><span class="n">ToFahrenheit</span><span class="p">(</span><span class="mi">25</span><span class="p">));</span><span class="w">  </span><span class="c1">// 输出：77</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：utility 工具类可定义为 internal，仅供项目内转换计算等。</p>
+</blockquote>
+<hr />
+<h2 id="10-internal">✅ 10. internal 嵌套类与方法调用</h2>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Outer</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="p">{</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="k">internal</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">InnerHelper</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">        </span><span class="k">internal</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Show</span><span class="p">()</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;嵌套类中的内部方法&quot;</span><span class="p">);</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">UseInner</span><span class="p">()</span>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a><span class="w">        </span><span class="n">InnerHelper</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InnerHelper</span><span class="p">();</span>
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a><span class="w">        </span><span class="n">h</span><span class="p">.</span><span class="n">Show</span><span class="p">();</span><span class="w">  </span><span class="c1">// ✅ 调用内部类的方法</span>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-25-16"><a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="p">}</span>
+</span><span id="__span-25-17"><a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>
+</span><span id="__span-25-18"><a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a><span class="c1">// 调用方式</span>
+</span><span id="__span-25-19"><a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a><span class="n">Outer</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Outer</span><span class="p">();</span>
+</span><span id="__span-25-20"><a id="__codelineno-25-20" name="__codelineno-25-20" href="#__codelineno-25-20"></a><span class="n">o</span><span class="p">.</span><span class="n">UseInner</span><span class="p">();</span>
+</span></code></pre></div>
+<blockquote>
+<p>🧠 注释：嵌套类可以使用 <code>internal</code> 限制访问范围，外部仅能通过公共接口间接使用。</p>
+</blockquote>
+<hr />
+<h2 id="_10">✅ 练习总结</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>关键点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>internal 类与方法基本使用</td>
+</tr>
+<tr>
+<td>2</td>
+<td>同项目中跨类访问</td>
+</tr>
+<tr>
+<td>3</td>
+<td>跨项目访问失败验证</td>
+</tr>
+<tr>
+<td>4</td>
+<td>internal 字段访问</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td>static + internal 结合</td>
+</tr>
+<tr>
+<td>7</td>
+<td>对象集合操作</td>
+</tr>
+<tr>
+<td>8</td>
+<td>internal 构造函数</td>
+</tr>
+<tr>
+<td>9</td>
+<td>实用工具 internal 类</td>
+</tr>
+<tr>
+<td>10</td>
+<td>嵌套类和方法</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_11">✅ 下一步建议</h2>
+<p>我可以继续为你：</p>
+<ul>
+<li>📘 打包成 PDF / Word 可下载练习册</li>
+<li>📄 提供带空白答案区版本（打印练习用）</li>
+<li>💡 增加 internal + <code>InternalsVisibleTo</code> 应用题</li>
+<li>🎯 出一套 internal/protected/public 比较测试题</li>
+</ul>
+<p>你想要哪个？或者需要我导出这些答案为 Word / PDF 吗？✅</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - 2025 村长 <a href="https://beian.mps.gov.cn/#/query/webSearch?code=13040202001048" target="_blank">冀公网安备13040202001048号</a><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+    
+    
+    
+      
+      
+    
+    <a href="https://fosstodon.org/@squidfunk" target="_blank" rel="noopener me" title="fosstodon.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.5 102.5 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5m-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.prune", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
