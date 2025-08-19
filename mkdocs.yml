@@ -74,128 +74,129 @@ nav:
   - C#教程:
     - VS快捷键: csharp-tutorial/index.md
     - ===1.新人起步===:
-      - 1.安装Visual Studio: csharp-tutorial/01-get-started/01-installation.md
-      - 2.创建第一个程序: csharp-tutorial/01-get-started/02-create-first-project.md
-      - 3.类与对象: csharp-tutorial/01-get-started/03-class-object.md
-      - 4.手写Hello World: csharp-tutorial/01-get-started/04-hello-world.md
-      - 5.分号与注释: csharp-tutorial/01-get-started/05-semicolon-and-comments.md
-      - 6.数据类型入门: csharp-tutorial/01-get-started/06-data-type-basics.md
-      - 7.字面量变量与常量: csharp-tutorial/01-get-started/07-literal-variable-const.md
-      - 8.变量的命名规范: csharp-tutorial/01-get-started/08-naming-conventions-for-variables.md
-      - 9.Visual Studio提示: csharp-tutorial/01-get-started/09-visual-studio-tips.md
+      - 1.安装Visual Studio: csharp-tutorial/1-get-started/01-installation.md
+      - 2.创建第一个程序: csharp-tutorial/1-get-started/02-create-first-project.md
+      - 3.类与对象: csharp-tutorial/1-get-started/03-class-object.md
+      - 4.手写Hello World: csharp-tutorial/1-get-started/04-hello-world.md
+      - 5.分号与注释: csharp-tutorial/1-get-started/05-semicolon-and-comments.md
+      - 6.数据类型入门: csharp-tutorial/1-get-started/06-data-type-basics.md
+      - 7.字面量变量与常量: csharp-tutorial/1-get-started/07-literal-variable-const.md
+      - 8.变量的命名规范: csharp-tutorial/1-get-started/08-naming-conventions-for-variables.md
+      - 9.Visual Studio提示: csharp-tutorial/1-get-started/09-visual-studio-tips.md
     - ===2.数据类型基础===:
-      - 10.整数类型: csharp-tutorial/02-data-types/01-integer-type.md
-      - 11.浮点数类型: csharp-tutorial/02-data-types/02-float-type.md
-      - 12.整型和浮点型常量: csharp-tutorial/02-data-types/03-max-min-value.md
-      - 13.var关键字: csharp-tutorial/02-data-types/04-var-keyword.md
-      - 14.字符类型: csharp-tutorial/02-data-types/05-char-type.md
-      - 15.字符串类型: csharp-tutorial/02-data-types/06-string-type.md
-      - 16.隐式转换: csharp-tutorial/02-data-types/07-implicit-conversion.md
-      - 17.显式转换: csharp-tutorial/02-data-types/08-explicit-conversion.md
-      - 18.字符串转数值: csharp-tutorial/02-data-types/09-string-to-number.md
-      - 19.数据的输入与输出: csharp-tutorial/02-data-types/10-output-input.md
+      - 10.整数类型: csharp-tutorial/2-data-types/01-integer-type.md
+      - 11.浮点数类型: csharp-tutorial/2-data-types/02-float-type.md
+      - 12.整型和浮点型常量: csharp-tutorial/2-data-types/03-max-min-value.md
+      - 13.var关键字: csharp-tutorial/2-data-types/04-var-keyword.md
+      - 14.字符类型: csharp-tutorial/2-data-types/05-char-type.md
+      - 15.字符串类型: csharp-tutorial/2-data-types/06-string-type.md
+      - 16.隐式转换: csharp-tutorial/2-data-types/07-implicit-conversion.md
+      - 17.显式转换: csharp-tutorial/2-data-types/08-explicit-conversion.md
+      - 18.字符串转数值: csharp-tutorial/2-data-types/09-string-to-number.md
+      - 19.数据的输入与输出: csharp-tutorial/2-data-types/10-output-input.md
     - ===3.运算符基础===:
-      - 20-算数运算符: csharp-tutorial/03-operators/01-arithmetic-operators.md
-      - 21-比较运算符: csharp-tutorial/03-operators/02-comparison-operators.md
-      - 22-字符集: csharp-tutorial/03-operators/03-charset.md
-      - 23-逻辑运算符: csharp-tutorial/03-operators/04-logical-operators.md
-      - 24-赋值运算符: csharp-tutorial/03-operators/05-assignment-operators.md
-      - 25-自增自减运算符: csharp-tutorial/03-operators/06-auto-increment-decrement-operators.md
-      - 26-运算符优先级: csharp-tutorial/03-operators/09-youxianji.md
+      - 20-算数运算符: csharp-tutorial/3-operators/01-arithmetic-operators.md
+      - 21-比较运算符: csharp-tutorial/3-operators/02-comparison-operators.md
+      - 22-字符集: csharp-tutorial/3-operators/03-charset.md
+      - 23-逻辑运算符: csharp-tutorial/3-operators/04-logical-operators.md
+      - 24-赋值运算符: csharp-tutorial/3-operators/05-assignment-operators.md
+      - 25-自增自减运算符: csharp-tutorial/3-operators/06-auto-increment-decrement-operators.md
+      - 26-运算符优先级: csharp-tutorial/3-operators/09-youxianji.md
     - ===4.流程控制语句===:
-      - 27-if条件语句: csharp-tutorial/04-statements/01-conditional-statements.md
-      - 28-switch条件语句: csharp-tutorial/04-statements/02-switch-statement.md
-      - 29-for循环语句: csharp-tutorial/04-statements/03-for-loop-statement.md
-      - 30-while循环语: csharp-tutorial/04-statements/04-while-loop-statement.md
-      - 31-条件运算符: csharp-tutorial/03-operators/07-conditional-operators.md
-      - 32-break语句: csharp-tutorial/04-statements/05-break.md
-      - 33-continue语句: csharp-tutorial/04-statements/06-continue.md
-      - 34-return语句: csharp-tutorial/04-statements/07-return.md
-      - 35-goto语句: csharp-tutorial/04-statements/08-goto.md
-      - 36-try catch语句: csharp-tutorial/04-statements/09-try-catch.md
-      - 37-throw语句: csharp-tutorial/04-statements/10-throw.md
+      - 27-顺序结构语句: csharp-tutorial/4-statements/1-sequence-statements.md
+      - 28-if条件语句: csharp-tutorial/4-statements/2-conditional-statements.md
+      - 29-switch条件语句: csharp-tutorial/4-statements/3-switch-statement.md
+      - 30-for循环语句: csharp-tutorial/4-statements/4-for-loop-statement.md
+      - 31-while循环语: csharp-tutorial/4-statements/5-while-loop-statement.md
+      - 32-条件运算符: csharp-tutorial/03-operators/07-conditional-operators.md
+      - 33-break语句: csharp-tutorial/4-statements/6-break.md
+      - 34-continue语句: csharp-tutorial/4-statements/7-continue.md
+      - 35-return语句: csharp-tutorial/4-statements/8-return.md
     - ===5.格式化输出===: 
-      - 38-WriteLine()格式化输出: csharp-tutorial/05-output-format/1-writeline.md
-      - 39-字符串插值: csharp-tutorial/05-output-format/2-interpolation.md
-      - 40-String.Format(): csharp-tutorial/05-output-format/3-string-format.md
-      - 41-toString(): csharp-tutorial/05-output-format/4-tostring.md
-    - ===6.操作字符串===:
-      - 42-字符串的遍历: csharp-tutorial/06-string/1-string-iteration.md
-      - 43-string.Concat(): csharp-tutorial/06-string/2-string-concat.md
-      - 44-str.Substring(): csharp-tutorial/06-string/3-string-substring.md
-      - 45-string.indexOf(): csharp-tutorial/06-string/4-indexof.md
-      - 46-string.Contains(): csharp-tutorial/06-string/5-contains.md
-      - 47-string.Replace(): csharp-tutorial/06-string/6-replace.md
-      - 48-其他操作: csharp-tutorial/06-string/6-other-methods.md
-    - ===7.数组===:
-      - 49-创建数组: csharp-tutorial/07-array/1-what-is-array.md
-      - 50-遍历数组: csharp-tutorial/07-array/2-array-iteration.md
-      - 51-array.Sort(): csharp-tutorial/07-array/3-array-sort.md
-      - 52-array.exists(): csharp-tutorial/07-array/4-array-exists.md
-      - 53-array.find(): csharp-tutorial/07-array/5-array-find.md
-      - 54-array.indexOf(): csharp-tutorial/07-array/6-array-indexof.md
-      - 55-array.Copy(): csharp-tutorial/07-array/7-array-copy.md
-      - 56-array.Reverse(): csharp-tutorial/07-array/8-array-reverse.md
-      - 57-array.TrueForAll(): csharp-tutorial/07-array/9-array-trueforall.md
-      - 58-多维数组1: csharp-tutorial/07-array/10-multidimensional-array.md
-      - 59-多维数组2: csharp-tutorial/07-array/11-multidimensional-array2.md
-    - ===8.方法===:
-      - 60-方法是什么: csharp-tutorial/8-methods/1-what-is-method.md
-      - 61-方法的基础操作: csharp-tutorial/8-methods/2-method-operation.md
-      - 62-public修饰符: csharp-tutorial/8-methods/3-public-modifier.md
-      - 63-private修饰符: csharp-tutorial/8-methods/4-private-modifier.md
-      - 64-internal修饰符: csharp-tutorial/8-methods/5-internal-modifier.md
-      - 65-static修饰符: csharp-tutorial/8-methods/6-static-modifier.md
-      - 66-方法参数: csharp-tutorial/8-methods/7-parameters.md
-      - 67-方法返回值: csharp-tutorial/8-methods/8-return-value.md
-      - 68-方法重载: csharp-tutorial/8-methods/9-overloading.md
-      - 69-静态方法与实例方法: csharp-tutorial/8-methods/10-static-instance-methods.md
-      - 70-方法的命名: csharp-tutorial/8-methods/11-method-naming.md
-      - 71-构造函数: csharp-tutorial/8-methods/12-constructor.md
-      - 72-参数传递: csharp-tutorial/8-methods/13-pass-parameters.md
-      - 73-ref|out|in: csharp-tutorial/8-methods/14-ref-out-in.md
-    - ===9.数学方法===:
-      - 60-random: csharp-tutorial/08-data-types-intermediate/09-random.md
-    - ===10.日期时间===:
-      - 61-DateTime类型: csharp-tutorial/08-data-types-intermediate/01-datetime.md
-      - 62-DateTime的常用方法: csharp-tutorial/08-data-types-intermediate/02-datetime-methods.md
-    - ===11.数据类型进阶===:
-      - 60-List类型: csharp-tutorial/08-data-types-intermediate/01-lists.md
-      - 61-struct类型: csharp-tutorial/08-data-types-intermediate/02-struct.md
-      - 62-类型转换运算符: csharp-tutorial/03-operators/03-typeof.md
-      - 63-enum类型: csharp-tutorial/08-data-types-intermediate/04-enum.md
-      - 64-delegate类型: csharp-tutorial/08-data-types-intermediate/05-delegate.md
-      - 65-dynamic类型: csharp-tutorial/08-data-types-intermediate/06-dynamic.md
-      - 66-Dictionary类型: csharp-tutorial/08-data-types-intermediate/07-dictionary.md
-      - 67-interface类型: csharp-tutorial/08-data-types-intermediate/08-interface.md
-    - ===12.类===:
-      - 66-面向对象编程: csharp-tutorial/06-class/01-oop.md
-      - 67-初识类与对象: csharp-tutorial/06-class/02-what-class-is.md
-      - 68-类与字段: csharp-tutorial/06-class/03-class-fields.md
-      - 69-类的属性: csharp-tutorial/06-class/04-class-properties.md
-      - 70-类与方法: csharp-tutorial/06-class/05-class-methods.md
-      - 71-类与构造函数: csharp-tutorial/06-class/06-class-constructor.md
-      - 72-类的访问修饰符: csharp-tutorial/06-class/07-class-access-modifiers.md
-      - 73-类的析构函数: csharp-tutorial/06-class/08-class-destructor.md
-      - 74-类的静态成员: csharp-tutorial/06-class/09-class-static-members.md
-      - 75-类的静态方法: csharp-tutorial/06-class/10-class-static-methods.md
-      - 76-类的静态属性: csharp-tutorial/06-class/11-class-static-properties.md
-      - 77-抽象类与接口: csharp-tutorial/06-class/12-abstract-interface.md
-      - 78-类的构造函数: csharp-tutorial/06-class/08-class-constructor.md
-      - 79-类的析构函数: csharp-tutorial/06-class/09-class-destructor.md
-      - 80-类的静态成员: csharp-tutorial/06-class/10-class-static-members.md
-      - 81-类的静态方法: csharp-tutorial/06-class/11-class-static-methods.md
-      - 82-类的静态属性: csharp-tutorial/06-class/12-class-static-properties.md
-      - 83-DateTime类型: csharp-tutorial/06-class/01-datetime.md
-      - 84-Random类型: csharp-tutorial/06-class/02-random.md
-    - ===13.三大特性===:
-      - 封装: csharp-tutorial/07-encapsulation/01-what-is-encapsulation.md
-      - 继承: csharp-tutorial/08-inheritance/01-what-is-inheritance.md
-      - 多态: csharp-tutorial/09-polymorphism/01-what-is-polymorphism.md
-    - ===14.WinForms===:
-      - WinForms简介: csharp-tutorial/12-winform/01-overview.md
-      - WinForms控件: csharp-tutorial/12-winform/02-controls.md
-      - WinForms事件: csharp-tutorial/12-winform/03-events.md
+      - 36-WriteLine()格式化输出: csharp-tutorial/5-output-format/1-writeline.md
+      - 37-字符串插值: csharp-tutorial/5-output-format/2-interpolation.md
+      - 38-String.Format(): csharp-tutorial/5-output-format/3-string-format.md
+      - 39-toString(): csharp-tutorial/5-output-format/4-tostring.md
+    - ===6.数组===:
+      - 40-创建数组: csharp-tutorial/6-array/1-what-is-array.md
+      - 41-操作数组: csharp-tutorial/6-array/2-array-manipulation.md
+      - 42-遍历数组: csharp-tutorial/6-array/3-array-iteration.md
+      - 43-二维数组: csharp-tutorial/6-array/4-dimensional-array.md
+      - 44-数组的排序: csharp-tutorial/6-array/5-array-sort.md
+      - 45-数组的查找: csharp-tutorial/6-array/6-array-query.md
+      - 46-其他方法: csharp-tutorial/6-array/7-array-other-methods.md
+    - ===7.类===:
+      - 47-认识类与对象: csharp-tutorial/7-class/01-oop.md
+      - 48-类与字段: csharp-tutorial/7-class/02-class-with-fields.md
+      - 49-类与属性访问器: csharp-tutorial/7-class/03-class-with-properties.md
+      - 50-属性访问器进阶: csharp-tutorial/7-class/04-property-accessor-advanced.md
+      - 51-类与方法: csharp-tutorial/7-class/05-class-with-methods.md
+      - 52-方法分类: csharp-tutorial/7-class/06-class-categories.md
+      - 53-方法的参数: csharp-tutorial/7-class/07-method-parameters.md
+      - 54-方法重载: csharp-tutorial/7-class/08-method-overloading.md
+      - 55-this: csharp-tutorial/7-class/09-this.md
+      - 56-类与构造函数: csharp-tutorial/7-class/10-class-with-constructor.md
+      - 57-static: csharp-tutorial/7-class/11-static.md
+      - 58-类的访问修饰符: csharp-tutorial/7-class/12-class-access-modifiers.md
+      - 59-封装: csharp-tutorial/7-class/13-encapsulation.md
+      - 60-继承: csharp-tutorial/7-class/14-inheritance.md
+      - 61-多态: csharp-tutorial/7-class/15-polymorphism.md
+    - ===8.数据类型进阶===:
+      - 62-struct类型: csharp-tutorial/8-data-types-intermediate/1-struct.md
+      - 63-enum类型: csharp-tutorial/8-data-types-intermediate/2-enum.md
+      - 64-interface类型: csharp-tutorial/8-data-types-intermediate/3-interface.md
+      - 65-委托类型: csharp-tutorial/8-data-types-intermediate/4-delegate.md
+    - ===9.String类===:
+      - 66-字符串的遍历: csharp-tutorial/9-string/1-string-iteration.md
+      - 67-string.Concat(): csharp-tutorial/9-string/2-string-concat.md
+      - 68-str.Substring(): csharp-tutorial/9-string/3-string-substring.md
+      - 69-string.indexOf(): csharp-tutorial/9-string/4-indexof.md
+      - 70-string.Contains(): csharp-tutorial/9-string/5-contains.md
+      - 71-string.Replace(): csharp-tutorial/9-string/6-replace.md
+      - 72-其他操作: csharp-tutorial/9-string/6-other-methods.md
+    - ===10.Math类===:
+      - 73-Math类: csharp-tutorial/10-math/1-math.md
+      - 74-Math类: csharp-tutorial/10-math/2-math.md
+    - ===11.DateTime类===:
+      - 75-DateTime类型1: csharp-tutorial/11-datetime/01-datetime.md
+      - 76-DateTime方法: csharp-tutorial/11-datetime/02-datetime.md
+    - ===12.Random类===:
+      - 77-random: csharp-tutorial/12-random/1-random.md
+    - ===13.Convert类===:
+      - 78-Convert类: csharp-tutorial/13-convert/1-convert.md
+    - ===14.File类===:
+      - 79-File类: csharp-tutorial/14-file/1-file.md
+      - 80-FileInfo类: csharp-tutorial/14-file/2-fileinfo.md
+    - ===15.WinForms===:
+      - WinForms简介: csharp-tutorial/15-winform/01-overview.md
+      - WinForms控件: csharp-tutorial/15-winform/02-controls.md
+      - WinForms事件: csharp-tutorial/15-winform/03-events.md
+    - ===16.图形===:
+      - 60-图形类: csharp-tutorial/16-graphics/01-graphics.md
+      - 61-图形绘制: csharp-tutorial/16-graphics/02-drawing.md
+    - ===17.数据库操作===:
+      - MySQL连接: csharp-tutorial/17-mysql/01-connection.md
+    - 算法概述: csharp-algorithm/01-overview.md
+    - 📚基础数学算法:
+      - 1.累加与累乘: csharp-algorithm/math/sum-and-product.md
+      - 2.最值与均值: csharp-algorithm/math/min-max-and-average.md
+      - 3.公约数与素数: csharp-algorithm/math/gcd-and-prime.md
+      - 4.阶乘与斐波那契数列: csharp-algorithm/math/factorial-and-fibonacci.md
+    - 📚查找算法:
+      - 5.顺序查找: csharp-algorithm/search/sequential-search.md
+      - 6.二分查找: csharp-algorithm/search/binary-search.md
+    - 📚排序算法:
+      - 7.冒泡排序: csharp-algorithm/sort/bubble-sort.md
+      - 8.选择排序: csharp-algorithm/sort/selection-sort.md
+      - 9.插入排序: csharp-algorithm/sort/insertion-sort.md
+    - 📚递归算法:
+      - 10.阶乘: csharp-algorithm/recursion/factorial.md
+      - 11.斐波那契数列: csharp-algorithm/recursion/fibonacci-sequence.md
+      - 12.汉诺塔: csharp-algorithm/recursion/tower-of-hanoi.md
+      - 13.二分查找递归版: csharp-algorithm/search/binary-search-recursion.md
+    - 📚字符串与加密算法:
+      - 14.回文数判断: csharp-algorithm/string/palindrome-check.md
+      - 15.字符串加密: csharp-algorithm/string/string-encryption.md
     - ===附:DOTNET相关知识===:
       - 01-DOTNET简介: csharp-tutorial/20-dotnet/01-introduction.md
       - 02-DOTNET的安装: csharp-tutorial/20-dotnet/02-installation.md
@@ -210,84 +211,64 @@ nav:
       - 06-System.Enum: csharp-tutorial/20-dotnet/06-system-enum.md
       - 06-System.Enum.GetValues(): csharp-tutorial/20-dotnet/06-system-enum-getvalues.md
       - 07-DOTNET的包管理系统: csharp-tutorial/20-dotnet/07-package-management.md
-  # - 算法:
-  #   - 考试大纲: csharp-algorithm/index.md
-  #   - 算法概述: csharp-algorithm/01-overview.md
-  #   - 📚基础数学算法:
-  #     - 1.累加与累乘: csharp-algorithm/math/sum-and-product.md
-  #     - 2.最值与均值: csharp-algorithm/math/min-max-and-average.md
-  #     - 3.公约数与素数: csharp-algorithm/math/gcd-and-prime.md
-  #     - 4.阶乘与斐波那契数列: csharp-algorithm/math/factorial-and-fibonacci.md
-  #   - 📚查找算法:
-  #     - 5.顺序查找: csharp-algorithm/search/sequential-search.md
-  #     - 6.二分查找: csharp-algorithm/search/binary-search.md
-  #   - 📚排序算法:
-  #     - 7.冒泡排序: csharp-algorithm/sort/bubble-sort.md
-  #     - 8.选择排序: csharp-algorithm/sort/selection-sort.md
-  #     - 9.插入排序: csharp-algorithm/sort/insertion-sort.md
-  #   - 📚递归算法:
-  #     - 10.阶乘: csharp-algorithm/recursion/factorial.md
-  #     - 11.斐波那契数列: csharp-algorithm/recursion/fibonacci-sequence.md
-  #     - 12.汉诺塔: csharp-algorithm/recursion/tower-of-hanoi.md
-  #     - 13.二分查找递归版: csharp-algorithm/search/binary-search-recursion.md
-  #   - 📚字符串与加密算法:
-  #     - 14.回文数判断: csharp-algorithm/string/palindrome-check.md
-  #     - 15.字符串加密: csharp-algorithm/string/string-encryption.md
   - C#教材:
     - 考试大纲: csharp-textbook/index.md
     - 教材目录: csharp-textbook/cover.md
-    - ===1.算法与程序基础===: 
+    - ===第1章.算法与程序基础===: 
       - 算法的定义及特性: csharp-textbook/1/algorithm-definition-and-characteristics.md
       - 算法描述与设计: csharp-textbook/1/algorithm-description-and-design.md
       - 算法分析和评价: csharp-textbook/1/algorithm-analysis-and-evaluation.md
       - 算法与程序的关系: csharp-textbook/1/algorithm-and-program-relationship.md
       - 典型算法举例: csharp-textbook/1/typical-algorithm-examples.md
-    - ===2.C#概述===: 
+    - ===第2章.C#概述===: 
       - C#语言简介: csharp-textbook/2/csharp-overview.md
       - Visual Studio开发环境: csharp-textbook/2/visual-studio.md
       - 简单C#程序实例: csharp-textbook/2/simple-csharp-program.md
-    - ===3.C#语言基础===: 
+      - 试卷2-1: csharp-textbook/2/exam-paper-1.md
+      # - 试卷2-2: csharp-textbook/2/exam-paper-2.md
+      # - 试卷2-3: csharp-textbook/2/exam-paper-3.md
+    - ===第3章.C#语言基础===: 
       - 数据类型: csharp-textbook/3/data-types.md
       - 常量与变量: csharp-textbook/3/constants-and-variables.md
       - 运算符与表达式: csharp-textbook/3/operators-and-expressions.md
-    - ===4.C#控制结构===: 
+    - ===第4章.C#控制结构===: 
       - 顺序结构语句: csharp-textbook/4/flow-control.md
       - 分支结构语句: csharp-textbook/4/branching.md
       - 循环结构语句: csharp-textbook/4/looping.md
       - 跳转语句: csharp-textbook/4/jumping.md
-    - ===5.Windows应用程序开发===: 
+    - ===第5章.Win应用程序开发===: 
       - 窗体设计: csharp-textbook/5/1-windows-application-design.md
       - 常用控件: csharp-textbook/5/2-common-controls.md
       - 对话框: csharp-textbook/5/3-dialogs.md
       - 文档程序设计: csharp-textbook/5/4-document-program-design.md
-    - ===6.数组===: 
+    - ===第6章.数组===: 
       - 一维数组: csharp-textbook/6/1-dimensional-arrays.md
       - 多维数组: csharp-textbook/6/2-multi-dimensional-arrays.md
       - 数组的遍历: csharp-textbook/6/3-array-traversal.md
       - 数组的排序和查找: csharp-textbook/6/4-array-sorting-and-searching.md
-    - ===7.C#面向对象基础===: 
+    - ===第7章.C#面向对象基础===: 
       - 类: csharp-textbook/7/class.md
       - 方法: csharp-textbook/7/methods.md
-    - ===8.C#面向对象编程===: 
+    - ===第8章.C#面向对象编程===: 
       - 类的封装与继承: csharp-textbook/8/class-encapsulation-and-inheritance.md
       - 多态: csharp-textbook/8/polymorphism.md
       - 接口: csharp-textbook/8/interfaces.md
       - 委托: csharp-textbook/8/delegates.md
-    - ===9.C#常用类的属性方法===: 
+    - ===第9章.C#常用类===: 
       - Math类: csharp-textbook/9/math-class.md
       - String类: csharp-textbook/9/string-class.md
       - DateTime类: csharp-textbook/9/datetime-class.md
       - Random类: csharp-textbook/9/random-class.md
       - Convert类: csharp-textbook/9/convert-class.md
-    - ===10.C#文件操作===: 
+    - ===第10章.C#文件操作===: 
       - 文件的种类: csharp-textbook/10/file-types.md
       - 创建文件: csharp-textbook/10/create-file.md
       - 读写文件: csharp-textbook/10/read-write-file.md
-    - ===11.C#图形操作===: 
+    - ===第11章.C#图形操作===: 
       - 图形设计基础: csharp-textbook/11/graphics-design-basics.md
       - 绘图工具及使用: csharp-textbook/11/graphics-tools-and-usage.md
       - 字体和图像处理: csharp-textbook/11/font-and-image-processing.md
-    - ===12.数据库应用===: 
+    - ===第12章.数据库应用===: 
       - Connection连接字符串: csharp-database/12/connection-strings.md
       - 使用connection对象: csharp-database/12/using-connection.md
       - 连接的测试: csharp-database/12/connection-testing.md
