@@ -9,10 +9,6 @@ tags: []
 ---
 
 
-![整数类型](../images/ebooks/055.jpeg) 
-![整数类型](../images/ebooks/056.jpeg) 
-![整数类型](../images/ebooks/057.jpeg) 
-
 
 
 

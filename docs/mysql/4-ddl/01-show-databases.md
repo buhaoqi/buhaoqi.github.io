@@ -7,10 +7,6 @@ tags: []
 在 MySQL 中，`SHOW DATABASES;` 是一个非常基础但非常重要的 **管理类 SQL 语句**，它用于**查看当前 MySQL 数据库服务器上所有可用的数据库列表**。
 
 ---
-![查看数据库](../images/ebooks/119.jpeg) 
-![查看数据库](../images/ebooks/120.jpeg) 
-![查看数据库](../images/ebooks/121.jpeg) 
-![查看数据库](../images/ebooks/122.jpeg) 
 
 ## 一、一句话总结
 

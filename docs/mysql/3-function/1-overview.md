@@ -5,4 +5,3 @@ tags: [MySQL函数]
 ---
 
 ## MySQL函数
-![MySQL函数](../images/ebooks/082.jpeg) 

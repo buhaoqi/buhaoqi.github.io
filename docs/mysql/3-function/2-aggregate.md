@@ -7,9 +7,6 @@ tags: []
 在 MySQL 中，**聚合函数（Aggregate Functions）** 是一种对一组值执行计算并返回单一汇总值的函数。它们通常用于统计、分组和数据分析场景，帮助用户快速获取数据的整体特征（如总和、平均值、最大值等）。
 
 ---
-![MySQL函数](../images/ebooks/082.jpeg) 
-![MySQL函数](../images/ebooks/083.jpeg) 
-![MySQL函数](../images/ebooks/084.jpeg) 
 
 ## **常见聚合函数**
 以下是 MySQL 中最常用的聚合函数：

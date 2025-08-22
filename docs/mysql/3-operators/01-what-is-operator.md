@@ -18,20 +18,6 @@ tags: []
 
 
 ## MySQL运算符
-![运算符](../images/ebooks/068.jpeg) 
-![运算符](../images/ebooks/069.jpeg) 
-![运算符](../images/ebooks/070.jpeg) 
-![运算符](../images/ebooks/071.jpeg) 
-![运算符](../images/ebooks/072.jpeg) 
-![运算符](../images/ebooks/073.jpeg) 
-![运算符](../images/ebooks/074.jpeg) 
-![运算符](../images/ebooks/075.jpeg) 
-![运算符](../images/ebooks/076.jpeg) 
-![运算符](../images/ebooks/077.jpeg) 
-![运算符](../images/ebooks/078.jpeg) 
-![运算符](../images/ebooks/079.jpeg) 
-![运算符](../images/ebooks/080.jpeg) 
-![运算符](../images/ebooks/081.jpeg) 
 
 
 # 一、MySQL 运算符分类总览

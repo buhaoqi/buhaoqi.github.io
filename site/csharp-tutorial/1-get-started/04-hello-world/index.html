@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://buhaoqi.github.io/csharp-tutorial/1-get-started/04-hello-world/">
       
       
-        <link rel="prev" href="../03-class-object/">
+        <link rel="prev" href="../03-create-first-project/">
       
       
         <link rel="next" href="../05-semicolon-and-comments/">
@@ -703,12 +703,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-create-first-project/" class="md-nav__link">
+      <a href="../02-class-object/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    2.创建第一个程序
+    2.类与对象
     
   </span>
   
@@ -726,12 +726,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-class-object/" class="md-nav__link">
+      <a href="../03-create-first-project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    3.类与对象
+    3.创建第一个程序
     
   </span>
   
@@ -806,7 +806,7 @@
         <li class="md-nav__item">
   <a href="#net" class="md-nav__link">
     <span class="md-ellipsis">
-      .NET类库
+      使用.NET类库写代码
     </span>
   </a>
   
@@ -5247,7 +5247,7 @@
         <li class="md-nav__item">
   <a href="#net" class="md-nav__link">
     <span class="md-ellipsis">
-      .NET类库
+      使用.NET类库写代码
     </span>
   </a>
   
@@ -5327,13 +5327,13 @@
 
 <h2 id="_1"><strong>开场</strong></h2>
 <p>🎙️ “大家好！欢迎观看《C#初学者实例教程》的第3课《手写Hello World程序》。</p>
-<p>上节课我们已经成功运行了Hello World程序（闪回画面），今天我们要亲手拆解它每一行的含义！</p>
+<p>上节课我们已经成功运行了Hello World程序，今天我们要逐行解剖Hello World程序的每行代码！</p>
 <p>Hello World程序实现的功能非常简单：就是从程序内部向外部控制台输出一句：Hello World。</p>
 <p>这段程序也几乎是每个C#初学者编写的第一个程序。</p>
-<p>虽然功能简单，但它是检测开发环境是否正常的试金石，更是理解C#语法结构的最佳起点。</p>
+<p>虽然功能简单，但它是检测开发环境工作是否正常的试金石，更是理解C#语法结构的最佳起点。</p>
 <p>接下来，我们进入讲解。</p>
 <hr />
-<h2 id="net">.NET类库</h2>
+<h2 id="net">使用.NET类库写代码</h2>
 <p>在电脑中安装Visual Studio的时候，我们安装的并不仅仅是一个代码编辑器，同时还安装了.NET类库。</p>
 <p>初学者一定要理解.NET类库。</p>
 <p>因为写程序从来不是从零写起。</p>
@@ -5371,21 +5371,25 @@
 <p>在这里：一个Lesson2的命名空间内，存储了一个Program类，类就是一个代码单元。</p>
 <p>注意：命名空间的名字建议与项目名称保持一致。</p>
 <h2 id="_3">类</h2>
-<p>第二层容器是“类”，在这里，通过class关键词创建了一个叫Program的类。</p>
-<p>类里可以放属性和方法，现在我们重点关注方法</p>
-<p>方法就好比厨房里的能热饭的微波炉，是动词，具有某种功能的代码。</p>
-<p>在这里：带有小括号的Main()就是一个方法。方法的最大特征之一就是“带有小括号”，以后只要你看到像 SayHi()、PrintScore() 这样的形式，恭喜你——你看到的是一个方法！</p>
+<p>第二层容器是“类”，为什么？因为这里有个"class"，class是创建类的关键词。</p>
+<p>通过class关键词创建了一个叫Program的类。</p>
+<p>类里可以放属性和方法，现在我们重点关注方法；</p>
+<p>方法是动词，具有某种功能的代码。</p>
+<p>在这里：Main()就是一个方法。</p>
+<p>方法的最大特征之一就是“带有小括号”，以后只要你看到像 SayHi()、PrintScore() 这样的形式，恭喜你——你看到的是一个方法！</p>
 <p>internal是访问修饰符，我们暂时不需要它，可以把它删掉。</p>
 <h2 id="main">Main()方法</h2>
 <p>第三层容器是Main()方法。</p>
-<p>Main 方法是一个特殊的方法，特殊在于它总是程序执行的入口，程序运行时，操作系统会自动调用 Main 方法。同时，你必须把Main的首字母大写。</p>
+<p>Main 方法是一个特殊的方法，特殊在于它总是程序执行的入口，程序运行时，CLR会自动调用 Main 方法。同时，你必须把Main的首字母大写。</p>
 <p>Main方法的内部，是我们写具体“指令”的地方，一条条指令控制程序运行。</p>
 <p>告诉程序“去做一件事”。就好比指挥洗衣机洗衣服，你需要写下：进水、浸泡、洗涤、甩干等这些指令。</p>
 <p>在这里，我们做的事情非常简单，就是从程序内部向外部控制台输出一句话：Hello World。</p>
-<p>static：用于定义Main是一个静态方法。</p>
-<p>void：表示Main()方法不需要返回值</p>
-<p>args：表示参数，可以不写，虽然当前没用，但它在接收命令行参数时会派上用场。</p>
-<p>以上三项，暂时不理解也没关系，照抄就可以了。以后再学。</p>
+<ul>
+<li>static：用于定义Main是一个静态方法。</li>
+<li>void：表示Main()方法不需要返回值</li>
+<li>args：表示参数，可以不写，虽然当前没用，但它在接收命令行参数时会派上用场。</li>
+</ul>
+<p>以上三项，照抄就可以了，暂时不理解也没关系，。以后再学。</p>
 <h2 id="hello-world">手写Hello World</h2>
 <p>接下来，我们清空全部代码，手写一遍：</p>
 <p><div class="language-c# highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w">   </span>
@@ -5408,6 +5412,7 @@
 <li>添加自动补全提示："输入Con时按Tab键，让IDE帮你补全Console！"</li>
 </ul>
 <h2 id="_4">总结</h2>
+<p>看懂这11行代码，恭喜你！你就迈出了C#编程的第一步！后面我们会在Main()方法里慢慢加代码，让程序一步步动起来！编程刚开始可能会觉得难，但只要跟着步骤多练习，你一定能越来越熟练！</p>
 <ul>
 <li>命名空间像房子的门牌号（定位项目）</li>
 <li>类像房间（装功能）</li>
@@ -5415,9 +5420,8 @@
 </ul>
 <p>——这三样组合起来，就是一个能跑的C#程序”。</p>
 <h2 id="_5">结束语</h2>
-<p>看懂这11行代码，恭喜你！你就迈出了C#编程的第一步！后面我们会在Main()方法里慢慢加代码，让程序一步步动起来！编程刚开始可能会觉得难，但只要跟着步骤多练习，你一定能越来越熟练！</p>
-<p>本节课就到这里，这里是不好奇编程，我是张杰。我们下节课见！</p>
-<p>下节预告：《数据类型入门》</p>
+<p>本节课就到这里，这里是不好奇编程，我是张杰。</p>
+<p>如果这个视频对你有帮助，别忘了点赞、收藏、关注，感谢观看，我们下期再见！</p>
 <p>慢慢学，一点点进步就很好！</p>
 
 
@@ -5457,7 +5461,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../03-class-object/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 3.类与对象">
+          <a href="../03-create-first-project/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 3.创建第一个程序">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5467,7 +5471,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                3.类与对象
+                3.创建第一个程序
               </div>
             </div>
           </a>

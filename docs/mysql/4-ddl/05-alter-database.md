@@ -4,14 +4,6 @@ tags: []
 
 ---
 
-![修改数据库](../images/ebooks/125.jpeg) 
-![修改数据库](../images/ebooks/126.jpeg) 
-![修改数据库](../images/ebooks/127.jpeg) 
-![修改数据库](../images/ebooks/128.jpeg) 
-![修改数据库](../images/ebooks/129.jpeg) 
-![修改数据库](../images/ebooks/130.jpeg) 
-
-
 
 抱歉！MySQL 没有提供修改数据库名的语句。如果你坚持要修改数据库名，可以尝试以下两种方法：
 

@@ -12,14 +12,6 @@ tags: []
 4. 修改表选项
 5. 修改注释
 
-
-![创建数据表](../images/ebooks/143.jpeg) 
-![创建数据表](../images/ebooks/144.jpeg) 
-![创建数据表](../images/ebooks/145.jpeg) 
-![创建数据表](../images/ebooks/146.jpeg) 
-![创建数据表](../images/ebooks/147.jpeg) 
-
-
 ## 一、修改表结构的主要操作类型
 
 ### 1. 添加列（字段）

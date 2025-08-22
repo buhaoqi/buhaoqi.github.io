@@ -18,10 +18,6 @@ tags: []
 MySQL 提供了多种专门的日期时间类型，以满足不同精度和场景的需求。
 
 ---
-![日期和时间](../images/ebooks/060.jpeg) 
-![日期和时间](../images/ebooks/061.jpeg) 
-![日期和时间](../images/ebooks/062.jpeg) 
-![日期和时间](../images/ebooks/063.jpeg) 
 
 # 一、MySQL 支持的日期时间类型总览
 

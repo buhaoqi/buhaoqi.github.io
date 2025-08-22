@@ -4,9 +4,6 @@ tags: []
 
 ---
 
-![复制数据表](../images/ebooks/147.jpeg) 
-![复制数据表](../images/ebooks/148.jpeg) 
-
 在MySQL中，有几种方法可以只复制表的结构而不复制表中的数据。以下是主要的几种方法：
 
 ## 方法1：CREATE TABLE LIKE(推荐)

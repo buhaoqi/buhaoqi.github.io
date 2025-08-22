@@ -5,18 +5,10 @@ tags: []
 ---
 
 ## 结构化查询语言
-![结构化查询语言](../images/ebooks/049.jpeg)
-![结构化查询语言](../images/ebooks/050.jpeg) 
-![结构化查询语言](../images/ebooks/051.jpeg) 
-![结构化查询语言](../images/ebooks/052.jpeg) 
-![结构化查询语言](../images/ebooks/053.jpeg) 
- 
-
 
 
 ## 创建数据库
 
-![](../images/ebooks/110.jpeg)
 
 
 

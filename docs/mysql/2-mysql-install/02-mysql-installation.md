@@ -4,19 +4,6 @@ tags: []
 
 ---
 
-![MySQL的安装与配置](../images/ebooks/023.jpeg)
-![MySQL的安装与配置](../images/ebooks/024.jpeg)
-![MySQL的安装与配置](../images/ebooks/025.jpeg)
-![MySQL的安装与配置](../images/ebooks/026.jpeg)
-![MySQL的安装与配置](../images/ebooks/027.jpeg)
-![MySQL的安装与配置](../images/ebooks/028.jpeg)
-![MySQL的安装与配置](../images/ebooks/029.jpeg)
-![MySQL的安装与配置](../images/ebooks/030.jpeg)
-![MySQL的安装与配置](../images/ebooks/031.jpeg)
-![MySQL的安装与配置](../images/ebooks/032.jpeg)
-![MySQL的安装与配置](../images/ebooks/033.jpeg)
-![MySQL的安装与配置](../images/ebooks/034.jpeg)
-![MySQL的安装与配置](../images/ebooks/035.jpeg)
 
 ## 简答题
 1. MySQL三种安装包的区别是什么

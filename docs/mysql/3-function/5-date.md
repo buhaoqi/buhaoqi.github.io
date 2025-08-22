@@ -4,13 +4,6 @@ tags: []
 
 ---
 
-![MySQL函数](../images/ebooks/099.jpeg) 
-![MySQL函数](../images/ebooks/100.jpeg) 
-![MySQL函数](../images/ebooks/101.jpeg) 
-![MySQL函数](../images/ebooks/102.jpeg) 
-![MySQL函数](../images/ebooks/103.jpeg) 
-![MySQL函数](../images/ebooks/104.jpeg) 
-![MySQL函数](../images/ebooks/105.jpeg)
 ### **MySQL中的DATE_FORMAT()函数详解**
 
 `DATE_FORMAT()` 是 MySQL 中用于将日期或时间值按指定格式转换为字符串的核心函数，广泛应用于数据展示、报表生成等场景。以下是其详细用法和示例：

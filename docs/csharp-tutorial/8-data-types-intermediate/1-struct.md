@@ -3,89 +3,139 @@ noteId: "e3b4d5a0674c11f0b0d6278e683d20b1"
 tags: []
 
 ---
-# 🎬 第16课：struct 数据类型
 
-### 🎙️【开场白】
+## **开场**  
+“大家好！欢迎观看《C#初学者入门教程》的第61课《struct类型》。
 
-大家好！欢迎回到《C#初学者实例教程》。
-我是你的编程小伙伴 Jojo。
+本期视频的知识点有四个：
 
-在前面的课程中，我们学过了变量、常量、字符串、方法等基础知识。
-今天，我们将迎来一个非常有意思的新主题 —— `struct` 结构体。
-
-你可能会问：**“struct 是什么？和 class 有什么不同？”**
-别急，这节课，我们就一起来揭开它的神秘面纱！
+- 为什么需要结构类型？
+- struct类型是什么
+- struct类型的典型成员有哪些
+- 声明struct类型的语法是什么
 
 ---
 
-## struct是什么
+## 一、结构类型的由来
 
+1. 数据类型不同：在实际编程中，一组数据往往具有不同的数据类型。
+2. 不方便处理：这些不同类型的数据类型比较分散，无法体现数据之间的内在联系。
+
+所以，C#提供了struct类型。
+
+## 二、struct类型是什么
+
+- struct类型是一种值类型。
+- struct类型用于封装一组相关的变量(字段)。
+- struct类型可以存储多个不同类型的数据。
+- struct类型是一种自定义类型。
 - `struct` 是一种数据类型。
 - `struct`属于值类型。
 - `struct`用于封装一组相关的数据成员。
 - `struct`结构体允许将多个不同类型的数据成员组合在一起，形成一个逻辑上的“小型数据集合”。
 - `struct`结构体非常适合描述一些轻量级的数据，比如：点（Point）、坐标（Coordinate）、颜色（Color）等。
 
-## struct语法结构
+## 三、struct类型的典型成员
+
+一个典型的struct类型的成员通常有以下四个：
+
+- 字段：数据成员
+- 属性
+- 方法
+- 构造函数
+
+## 四、声明struct类型的语法
+
+语法:定义只包含字段的struct
+
 ```c# linenums="1"
-[访问修饰符] struct 结构体名称
+struct 结构类型名称
 {
-    // 字段（数据成员）
-    [访问修饰符] 数据类型 字段名1;
-    [访问修饰符] 数据类型 字段名2;
-    
-    // 方法（可选）
-    [访问修饰符] 返回值类型 方法名(参数列表)
+    [修饰符] 数据类型 字段1;
+    [修饰符] 数据类型 字段2;
+}
+```
+
+- struct: 声明结构类型的关键字
+- 结构类型名称：结构类型的变量名
+- 修饰符: 控制字段的可访问性，通常设为私有
+    - public
+    - private(默认值)
+
+## 五、示例
+
+### 示例1:定义结构类型Student
+
+要求：
+
+> 声明一个 ​​结构体类型 Student​​，该结构体包含以下字段：
+
+> - id（Id）
+> - 姓名（Name）
+> - 学号（StudentNumber 或 No）
+> - 年龄（Age）
+> - 性别（Gender）
+> - 成绩（Score）
+
+
+参考答案：如何 ​​声明、赋值和使用这个 Student 结构体变量​​：
+
+```c# linenums="1"
+using System;
+
+class Program
+{
+    // 定义一个结构体，表示学生信息
+    struct Student
     {
-        // 方法实现
+        public string Name;
+        public string Id; // 可以是学号、身份证号等，根据需求
+        public string StudentNumber;
+        public int Age;
+        public string Gender;
+        public double Score;
     }
-    
-    // 属性（可选）
-    [访问修饰符] 数据类型 属性名 { get; set; }
-    
-    // 构造函数（可选，必须有参数）
-    [访问修饰符] 结构体名称(参数列表)
+
+    static void Main()
     {
-        // 必须初始化所有字段
-        字段名1 = 值1;
-        字段名2 = 值2;
+        // ✅ 声明一个 Student 类型的变量
+        Student stu1;
+
+        // ✅ 为该学生的各个字段赋值
+        stu1.Name = "张三";
+        stu1.Id = "S20240001";
+        stu1.StudentNumber = "20240001";
+        stu1.Age = 20;
+        stu1.Gender = "男";
+        stu1.Score = 92.5;
+
+        // ✅ 打印学生信息
+        Console.WriteLine("学生信息如下：");
+        Console.WriteLine($"姓名: {stu1.Name}");
+        Console.WriteLine($"ID: {stu1.Id}");
+        Console.WriteLine($"学号: {stu1.StudentNumber}");
+        Console.WriteLine($"年龄: {stu1.Age}");
+        Console.WriteLine($"性别: {stu1.Gender}");
+        Console.WriteLine($"成绩: {stu1.Score}");
+
+        // ✅ 再声明一个学生，看看值类型的特性
+        Student stu2 = stu1;  // 值拷贝
+        stu2.Name = "李四";   // 修改的是副本
+
+        Console.WriteLine("\n修改后：");
+        Console.WriteLine($"stu1 的姓名还是：{stu1.Name}（未被改变）");
+        Console.WriteLine($"stu2 的姓名是：{stu2.Name}（已改为李四）");
     }
 }
 ```
 
-示例
+说明
 
-```csharp
-struct Point
-{
-    public int X;
-    public int Y;
-}
-```
+> 这是一个​​最基础的 struct，只包含公共字段（public fields）​​，没有方法、属性、构造函数等。
+> 字段使用了 public修饰符以便于直接访问（适合示例/学习）。实际项目中建议使用​​私有字段 + 公共属性（Property）​​，以提高封装性。
 
-上面这个结构体，就定义了一个“点”，它有两个字段：X 和 Y。
 
----
-
-## struct VS class
-
-你可能还记得，我们之前学习过 `class` 类。
-那么问题来了：**struct 和 class 有什么区别？**
-
-我们从三个方面来对比一下：
-
-| 特性    | struct  | class  |
-| ----- | ------- | ------ |
-| 类型    | 值类型     | 引用类型   |
-| 存储位置  | 栈       | 堆      |
-| 是否可继承 | ❌ 不支持继承 | ✅ 支持继承 |
-
-总结一句话：
-**struct 更轻量、更高效，但功能上没有 class 灵活。**
-
----
-
-## struct 的用法
+### 示例2：定义struct类型Person
 
 让我们来写一个完整的例子：
 
@@ -119,7 +169,53 @@ class Program
 
 ---
 
-## 使用 struct 的注意事项
+## 六、struct完整语法结构
+```c# linenums="1"
+[访问修饰符] struct 结构体名称
+{
+    // 字段（数据成员）
+    [访问修饰符] 数据类型 字段名1;
+    [访问修饰符] 数据类型 字段名2;
+    
+    // 方法（可选）
+    [访问修饰符] 返回值类型 方法名(参数列表)
+    {
+        // 方法实现
+    }
+    
+    // 属性（可选）
+    [访问修饰符] 数据类型 属性名 { get; set; }
+    
+    // 构造函数（可选，必须有参数）
+    [访问修饰符] 结构体名称(参数列表)
+    {
+        // 必须初始化所有字段
+        字段名1 = 值1;
+        字段名2 = 值2;
+    }
+}
+```
+
+
+## 七、struct VS class
+
+你可能还记得，我们之前学习过 `class` 类。
+那么问题来了：**struct 和 class 有什么区别？**
+
+我们从三个方面来对比一下：
+
+| 特性    | struct  | class  |
+| ----- | ------- | ------ |
+| 类型    | 值类型     | 引用类型   |
+| 存储位置  | 栈       | 堆      |
+| 是否可继承 | ❌ 不支持继承 | ✅ 支持继承 |
+
+总结一句话：
+**struct 更轻量、更高效，但功能上没有 class 灵活。**
+
+---
+
+## 八、注意事项
 
 1. **适合表示小型数据对象**，比如二维坐标、矩形、颜色等；
 2. **不要用于包含大量数据或需要继承的场景**；
@@ -127,7 +223,7 @@ class Program
 
 ---
 
-## 总结
+## 九、总结
 
 今天，我们认识了 C# 中的 `struct` 结构体：
 ✅ 它是一种值类型；
@@ -138,7 +234,7 @@ class Program
 
 ---
 
-## 结尾彩蛋
+## 十、结尾彩蛋
 
 在 .NET 中，有很多常用类型其实就是 struct，
 比如：`int`、`double`、`DateTime` …… 没错，它们通通是结构体！
@@ -149,23 +245,297 @@ class Program
 
 ## 结束语
 
-下一课，我们将正式进入 **“面向对象编程”** 的大门，
-学习 class 和对象的实战用法。精彩不容错过！
+本节课就到这里，这里是不好奇编程，我是张杰。
+
+如果这个视频对你有帮助，别忘了点赞、收藏、关注，感谢观看，我们下期再见！
+
+慢慢学，一点点进步就很好！
 
 ---
 
 ## 练习
 
+
+### 1.声明结构类型Student
+
+要求：
+
+> 声明一个 ​​结构体类型 Student​​，该结构体包含以下字段：
+
+> - id（Id）
+> - 姓名（Name）
+> - 学号（StudentNumber 或 No）
+> - 年龄（Age）
+> - 性别（Gender）
+> - 成绩（Score）
+
+
+参考答案：如何 ​​声明、赋值和使用这个 Student 结构体变量​​：
+
+```c# linenums="1"
+using System;
+
+class Program
+{
+    // 定义一个结构体，表示学生信息
+    struct Student
+    {
+        public string Name;
+        public string Id; // 可以是学号、身份证号等，根据需求
+        public string StudentNumber;
+        public int Age;
+        public string Gender;
+        public double Score;
+    }
+
+    static void Main()
+    {
+        // ✅ 声明一个 Student 类型的变量
+        Student stu1;
+
+        // ✅ 为该学生的各个字段赋值
+        stu1.Name = "张三";
+        stu1.Id = "S20240001";
+        stu1.StudentNumber = "20240001";
+        stu1.Age = 20;
+        stu1.Gender = "男";
+        stu1.Score = 92.5;
+
+        // ✅ 打印学生信息
+        Console.WriteLine("学生信息如下：");
+        Console.WriteLine($"姓名: {stu1.Name}");
+        Console.WriteLine($"ID: {stu1.Id}");
+        Console.WriteLine($"学号: {stu1.StudentNumber}");
+        Console.WriteLine($"年龄: {stu1.Age}");
+        Console.WriteLine($"性别: {stu1.Gender}");
+        Console.WriteLine($"成绩: {stu1.Score}");
+
+        // ✅ 再声明一个学生，看看值类型的特性
+        Student stu2 = stu1;  // 值拷贝
+        stu2.Name = "李四";   // 修改的是副本
+
+        Console.WriteLine("\n修改后：");
+        Console.WriteLine($"stu1 的姓名还是：{stu1.Name}（未被改变）");
+        Console.WriteLine($"stu2 的姓名是：{stu2.Name}（已改为李四）");
+    }
+}
+```
+
+说明
+
+> 这是一个​​最基础的 struct，只包含公共字段（public fields）​​，没有方法、属性、构造函数等。
+> 字段使用了 public修饰符以便于直接访问（适合示例/学习）。实际项目中建议使用​​私有字段 + 公共属性（Property）​​，以提高封装性。
+
+
+完整代码实现
+
+
+```c# linenums="1"
+
+using System;
+
+namespace StudentStructExample
+{
+    // 定义Student结构体
+    public struct Student
+    {
+        // 私有字段
+        private string _name;
+        private string _studentNumber;
+        private int _id;
+        private int _age;
+        private char _gender; // 'M' 男, 'F' 女
+        private double _score;
+
+        // 公共属性，用于安全访问私有字段
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("姓名不能为空");
+                _name = value;
+            }
+        }
+
+        public string StudentNumber
+        {
+            get { return _studentNumber; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("学号不能为空");
+                _studentNumber = value;
+            }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+            set
+            {
+                if (value <= 0)
+                    throw new ArgumentException("ID必须大于0");
+                _id = value;
+            }
+        }
+
+        public int Age
+        {
+            get { return _age; }
+            set
+            {
+                if (value < 0 || value > 150)
+                    throw new ArgumentException("年龄必须在0-150之间");
+                _age = value;
+            }
+        }
+
+        public char Gender
+        {
+            get { return _gender; }
+            set
+            {
+                if (value != 'M' && value != 'F' && value != '男' && value != '女')
+                    throw new ArgumentException("性别必须是'M'(男)或'F'(女)");
+                _gender = value;
+            }
+        }
+
+        public double Score
+        {
+            get { return _score; }
+            set
+            {
+                if (value < 0 || value > 100)
+                    throw new ArgumentException("成绩必须在0-100之间");
+                _score = value;
+            }
+        }
+
+        // 带参数的构造函数
+        public Student(string name, string studentNumber, int id, int age, char gender, double score)
+        {
+            // 先初始化所有字段（C#要求所有字段必须在构造函数中初始化）
+            _name = "";
+            _studentNumber = "";
+            _id = 0;
+            _age = 0;
+            _gender = '\0';
+            _score = 0;
+
+            // 使用属性进行赋值以触发验证
+            Name = name;
+            StudentNumber = studentNumber;
+            Id = id;
+            Age = age;
+            Gender = gender;
+            Score = score;
+        }
+
+        // 方法：获取学生信息字符串
+        public string GetStudentInfo()
+        {
+            string genderText = _gender == 'M' || _gender == '男' ? "男" : "女";
+            return $"学号: {StudentNumber}, 姓名: {Name}, ID: {Id}, 年龄: {Age}, 性别: {genderText}, 成绩: {Score:F1}";
+        }
+
+        // 方法：获取成绩等级
+        public string GetGradeLevel()
+        {
+            if (_score >= 90) return "优秀";
+            else if (_score >= 80) return "良好";
+            else if (_score >= 70) return "中等";
+            else if (_score >= 60) return "及格";
+            else return "不及格";
+        }
+
+        // 方法：判断是否及格
+        public bool IsPassed()
+        {
+            return _score >= 60;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== Student 结构体示例 ===");
+
+            try
+            {
+                // 使用构造函数创建Student实例
+                Student student1 = new Student("张三", "2023001", 1, 20, '男', 85.5);
+                Console.WriteLine("学生1信息: " + student1.GetStudentInfo());
+                Console.WriteLine("成绩等级: " + student1.GetGradeLevel());
+                Console.WriteLine("是否及格: " + (student1.IsPassed() ? "是" : "否"));
+
+                Console.WriteLine();
+
+                // 使用默认构造函数创建实例
+                Student student2 = new Student();
+                // 通过属性赋值
+                student2.Name = "李四";
+                student2.StudentNumber = "2023002";
+                student2.Id = 2;
+                student2.Age = 19;
+                student2.Gender = 'F';
+                student2.Score = 92.0;
+
+                Console.WriteLine("学生2信息: " + student2.GetStudentInfo());
+                Console.WriteLine("成绩等级: " + student2.GetGradeLevel());
+
+                Console.WriteLine();
+
+                // 演示值类型特性
+                Student student3 = student1; // 值复制
+                student3.Name = "王五";      // 修改副本
+                student3.StudentNumber = "2023003";
+
+                Console.WriteLine("修改student3后:");
+                Console.WriteLine("student1: " + student1.GetStudentInfo());
+                Console.WriteLine("student3: " + student3.GetStudentInfo());
+                Console.WriteLine("两个对象是否相同: " + (student1.Name == student3.Name ? "是" : "否"));
+
+                // 测试异常情况（取消注释测试）
+                // student1.Score = 150; // 会抛出异常
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("错误: " + ex.Message);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+关键特性说明
+
+1. **字段封装**：所有字段都是私有的，通过公共属性进行访问
+2. **数据验证**：在属性的set访问器中添加了数据验证逻辑
+3. **构造函数**：包含完整的参数构造函数，确保所有字段都被正确初始化
+4. **业务方法**：提供了获取信息、成绩等级判断等实用方法
+5. **值类型特性**：通过`student3 = student1`演示了结构体的值复制行为
+
+验证规则
+
+- **姓名/学号**：不能为空或空白字符
+- **ID**：必须大于0
+- **年龄**：必须在0-150之间
+- **性别**：只接受'M'、'F'、'男'、'女'
+- **成绩**：必须在0-100之间
+
+### 定义结构体Book
+
 试着定义一个结构体 `Book`，包含字段：书名（Title）、作者（Author）、价格（Price），
 并写一个方法，输出这本书的信息。
 
 
-
-
-
-以下是10道针对C#结构体(struct)的语法练习题，涵盖核心概念和实际应用场景，难度逐步提升：
-
----
 
 ### **练习题 1：基础结构体定义**
 ```csharp

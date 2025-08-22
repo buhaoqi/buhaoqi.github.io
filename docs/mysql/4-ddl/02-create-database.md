@@ -7,16 +7,6 @@ tags: []
 **在 MySQL 中，使用 `CREATE DATABASE` 语句来创建一个新的数据库，它可以指定数据库名称，还可以选择性地设置字符集和排序规则，是数据库开发与管理的第一步。**
 
 ---
-![创建数据库](../images/ebooks/110.jpeg) 
-![创建数据库](../images/ebooks/111.jpeg) 
-![创建数据库](../images/ebooks/112.jpeg) 
-![创建数据库](../images/ebooks/113.jpeg) 
-![创建数据库](../images/ebooks/114.jpeg) 
-![创建数据库](../images/ebooks/115.jpeg) 
-![创建数据库](../images/ebooks/116.jpeg) 
-![创建数据库](../images/ebooks/117.jpeg) 
-![创建数据库](../images/ebooks/118.jpeg) 
-![创建数据库](../images/ebooks/119.jpeg) 
 
 ## 一、创建数据库基本语法
 

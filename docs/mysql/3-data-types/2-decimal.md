@@ -10,9 +10,6 @@ MySQL 提供了两种主要的小数类型类别：
 
 ---
 
-![小数类型](../images/ebooks/057.jpeg) 
-![小数类型](../images/ebooks/058.jpeg) 
-![小数类型](../images/ebooks/059.jpeg) 
 
 ## 一、MySQL小数类型总览
 

@@ -5,12 +5,6 @@ tags: []
 ---
 
 
-![使用数据库](../images/ebooks/122.jpeg) 
-![使用数据库](../images/ebooks/123.jpeg) 
-![使用数据库](../images/ebooks/124.jpeg) 
-![使用数据库](../images/ebooks/125.jpeg) 
-
-
 `USE 数据库名;` 是MySQL中用于选择当前工作数据库的SQL语句。在创建好数据库之后，我们需要指定使用哪个数据库。是数据库操作中非常基础但重要的命令。
 
 ## 基本语法

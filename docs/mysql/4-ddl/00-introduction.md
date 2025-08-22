@@ -8,8 +8,6 @@ tags: []
 
 ## 创建数据库
 
-![](../images/ebooks/110.jpeg)
-
 # MySQL 中的 DDL（数据定义语言）详解
 
 DDL（Data Definition Language，数据定义语言）是 SQL 的一个子集，用于定义和管理数据库对象（如表、索引、视图等）的结构。以下是 MySQL 中 DDL 的全面介绍：
