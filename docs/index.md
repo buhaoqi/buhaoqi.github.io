@@ -1,5 +1,17 @@
-## AI工具导航
+---
+noteId: "6ca323c0816b11f0b1ec41d314e3c9ea"
+tags: []
 
+---
+
+## 对口信息
+- 河北科技师范学院:[https://zhaosheng.hevttc.edu.cn](https://zhaosheng.hevttc.edu.cn/index/tzgg.htm)
+- 河北省教育考试院：[http://www.hebeea.edu.cn](http://www.hebeea.edu.cn/html/ptgk/index.html)
+- 河北省教育厅：[http://jyt.hebei.gov.cn](http://jyt.hebei.gov.cn/col/1410097726928/index.html)
+- 河北工程大学： [https://jiaowu.hebeu.edu.cn](https://jiaowu.hebeu.edu.cn/tzgg.htm)
+
+
+## AI工具导航
 
 - AI代码编辑器: [https://cursor.com/en](https://cursor.com/en)
 - Google Gemini: [https://gemini.google.com](https://gemini.google.com)

@@ -1,0 +1,249 @@
+---
+noteId: "57318b9079bd11f096197f4ef3b2c3fb"
+tags: []
+
+---
+
+## **开场**  
+“大家好！欢迎观看《C#初学者入门教程》的第11课《整数常量》。
+
+本期视频的知识点有四个：
+
+1. 认识整数类型
+2. 整数类型变量
+
+---
+
+## ✅ **`int.MaxValue` 和 `int.MinValue`**
+
+它们是 C# 中 `int` 类型（即 32 位有符号整数，`System.Int32`）的两个**静态只读字段（常量）**，用于表示：
+
+- **`int.MaxValue`** → `int` 类型能存储的**最大值**
+- **`int.MinValue`** → `int` 类型能存储的**最小值**
+
+---
+
+## 一、🔢 基本定义与值
+
+| 常量 | 所属类型 | 值（十进制） | 说明 |
+|------|-----------|---------------|------|
+| **`int.MaxValue`** | `int`（即 `System.Int32`） | **2,147,483,647**（即 2³¹ - 1） | `int` 能表示的**最大正整数** |
+| **`int.MinValue`** | `int`（即 `System.Int32`） | **-2,147,483,648**（即 -2³¹） | `int` 能表示的**最小负整数** |
+
+> ⚠️ 注意：
+> - `int` 是有符号的 32 位整数，范围为：**-2,147,483,648 ～ 2,147,483,647**
+> - 它们是 **静态字段（不是方法）**，所以**没有括号**，正确写法是 `int.MaxValue`，不是 `int.MaxValue()`
+
+---
+
+## 二、📌 为什么需要 `int.MaxValue` 和 `int.MinValue`？
+
+在实际编程中，我们经常需要：
+
+1. **了解数据类型的边界**，防止数值溢出（Overflow）
+2. **初始化最大值/最小值变量**，比如在找数组的最大/最小元素时
+3. **做输入校验**，确保用户输入的数字在合理范围内
+4. **进行数值比较、范围限制、安全计算**
+
+---
+
+## 三、查看整型范围
+
+刚刚我们创建的数据类型都是正数，同样可以创建负数，只需在数值的前面添加一个负号就可以了。Ctrl + F5运行，可以看到，负数同样可以打印出来。
+
+```c#
+int age = 18;
+Console.WriteLine(age);
+
+int bigNum = 999999999;
+COnsole.WriteLine(bigNum);
+```
+
+使用`int.MaxValue`和`int.MinValue`可以查看整型的取值范围：
+
+```c#
+int age = 18;
+Console.WriteLine(age);
+Console.WriteLine(int.MinValue);//int.MinValue用于查看整型的最小值
+Console.WriteLine(int.MaxValue);//int.MaxValue用于查看整型的最大值
+
+int bigNum = 999999999;
+Console.WriteLine(bigNum);
+//用相同的方式查看长整型，把Int改为Long，点击运行，可以看到长整型的最大最小值是一个非常非常大的数。 因为它是64位的整型，势必会占用更多内存空间。
+Console.WriteLine(long.MinValue);
+Console.WriteLine(long.MaxValue);
+```
+
+## 四、🔍 常量详解与用法
+
+---
+
+### ✅ 1. **访问方式**
+
+它们是 `int` 类型的静态字段，直接通过类型名访问：
+
+```csharp
+Console.WriteLine("int 最大值: " + int.MaxValue);   // 输出：2147483647
+Console.WriteLine("int 最小值: " + int.MinValue);   // 输出：-2147483648
+```
+
+> ❌ 错误写法：`int.MaxValue()` → 编译报错，因为它们不是方法！
+
+---
+
+### ✅ 2. **典型使用场景与示例代码**
+
+---
+
+#### 🎯 场景 1：防止数值溢出（Overflow）
+
+当进行数学运算时，比如累加、乘法，结果可能会超出 `int` 的范围，导致**数据溢出**，结果可能回绕（变成负数或其他错误值）。
+
+✅ 使用 `int.MaxValue` 和 `int.MinValue` 可以提前判断，避免溢出风险。
+
+##### 🧪 示例：检测加法是否可能溢出
+
+```csharp
+int a = 2147483640;
+int b = 10;
+
+if (a > int.MaxValue - b)
+{
+    Console.WriteLine("错误：加法运算会导致溢出！");
+}
+else
+{
+    int sum = a + b;
+    Console.WriteLine("和为：" + sum); // 安全时才计算
+}
+```
+
+> 🎯 解释：如果 `a + b > int.MaxValue`，就会溢出。我们通过 `int.MaxValue - b` 提前判断。
+
+---
+
+#### 🎯 场景 2：初始化最大值和最小值（比如找最值）
+
+在遍历数组或集合，查找 **最大值 或 最小值** 时，通常会这样初始化：
+
+```csharp
+int[] numbers = { 10, 5, 20, 15, 30 };
+
+// 初始化最大值为 int 类型最小可能值
+int max = int.MinValue;
+
+// 初始化最小值为 int 类型最大可能值
+int min = int.MaxValue;
+
+foreach (int num in numbers)
+{
+    if (num > max)
+        max = num;
+
+    if (num < min)
+        min = num;
+}
+
+Console.WriteLine("最大值: " + max); // 30
+Console.WriteLine("最小值: " + min); // 5
+```
+
+> ✅ 这是一种非常常见且安全的初始化方式！
+
+---
+
+#### 🎯 场景 3：用户输入校验（范围限制）
+
+假设你希望用户输入一个年龄，合理的范围是 0～120，你也可以和 `int` 的范围做对比（虽然极少需要直接和 `int.MaxValue` 比较，但逻辑类似）。
+
+```csharp
+Console.WriteLine("请输入年龄：");
+if (int.TryParse(Console.ReadLine(), out int age))
+{
+    if (age >= 0 && age <= 120)
+    {
+        Console.WriteLine("年龄合法：" + age);
+    }
+    else
+    {
+        Console.WriteLine("年龄必须在 0 到 120 之间");
+    }
+}
+else
+{
+    Console.WriteLine("请输入有效的数字");
+}
+```
+
+> 🧠 虽然年龄不会接近 `int.MaxValue`，但类似地，你可以用这些常量来限定输入范围，或在处理更大数字（如订单 ID、交易量）时做保护。
+
+---
+
+#### 🎯 场景 4：文档说明 / 常量定义参考
+
+在定义自己的常量时（比如最大用户数、最大页码、缓冲区大小等），可以参考 `int.MaxValue` 作为理论上限。
+
+```csharp
+// 假设我们定义最大允许的用户数量
+const int MaxUsers = 1000000; // 自己定义的上限，通常远小于 int.MaxValue
+```
+
+> ✅ 虽然实际中我们很少直接用 `int.MaxValue` 做业务限制，但它是一个重要的参考值。
+
+---
+
+### ✅ 3. **相关常量拓展**
+
+除了 `int`，其他整数类型也有自己的 `MaxValue` 和 `MinValue`：
+
+| 类型 | 最大值字段 | 最小值字段 | 范围 |
+|------|-------------|-------------|------|
+| **int** | `int.MaxValue` | `int.MinValue` | -2,147,483,648 ～ 2,147,483,647 |
+| **long** | `long.MaxValue` | `long.MinValue` | -9,223,372,036,854,775,808 ～ 9,223,372,036,854,775,807 |
+| **short** | `short.MaxValue` | `short.MinValue` | -32,768 ～ 32,767 |
+| **byte** | `byte.MaxValue` | `byte.MinValue` | 0 ～ 255 |
+| **uint** | `uint.MaxValue` | `uint.MinValue` | 0 ～ 4,294,967,295 |
+| **ulong** | `ulong.MaxValue` | `ulong.MinValue` | 0 ～ 18,446,744,073,709,551,615 |
+
+> 🧠 它们的访问方式一样：`long.MaxValue`、`byte.MinValue` 等
+
+---
+
+## 四、🔒 注意事项
+
+| 注意点 | 说明 |
+|--------|------|
+| ❌ **不是方法** | `int.MaxValue` 是字段，不是函数，**不能加括号**，如 `int.MaxValue()` 是错误的！ |
+| ✅ **全局有效** | 这些常量在任何 C# 程序中都可以直接使用，属于 `System` 基础类型的一部分 |
+| ✅ **编译期常量** | 它们的值在编译时确定，性能高，安全可靠 |
+| ⚠️ **溢出风险** | 超出 `int` 范围的运算不会自动报错，而是产生错误结果（除非用 `checked`） |
+| ✅ **安全编程必备** | 在处理用户输入、累加计算、数组索引、数值比较时，推荐参考这些边界值 |
+
+---
+
+## 六、✅ 总结：`int.MaxValue` 和 `int.MinValue` 的用途速查
+
+| 用途 | 说明 | 示例 |
+|------|------|------|
+| **了解数据范围** | 知道 `int` 能存多大 / 多小的数 | `int.MaxValue` → 2147483647 |
+| **防止溢出** | 判断加减乘除是否超出范围 | `if (a > int.MaxValue - b)` |
+| **初始化极值** | 找最大/最小值时初始化变量 | `int max = int.MinValue;` |
+| **输入校验** | 限制数字范围，避免无效输入 | 比如年龄不能小于 0 或大于 120 |
+| **编写健壮代码** | 提升程序的容错能力与安全性 | 对边界值做判断，避免异常行为 |
+
+---
+
+## ✅ 一句话总结：
+
+> **`int.MaxValue`（2147483647）和 `int.MinValue`（-2147483648）是 C# 中表示 `int` 类型能存储的最大和最小整数值的两个静态常量（字段），它们是进行数值范围判断、防止溢出、初始化最值、安全编程的重要工具，在实际开发中广泛使用，使用时注意它们是字段不是方法，正确写法为 `int.MaxValue`，不要加括号。**
+
+---
+
+如你希望我进一步讲解：
+
+- 如何用 `checked` 关键字检测运算溢出
+- 如何安全解析用户输入的数字
+- 其他整数/浮点类型的 `MaxValue` / `MinValue`
+- 实战案例：统计最大值、累加求和防溢出等
+
+欢迎继续提问！我可以为你提供详细代码与最佳实践 😊。
