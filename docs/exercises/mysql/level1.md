@@ -69,6 +69,15 @@ DROP TABLE student2;
 - 性别(gender)：字符串，只能输⼊'男'或'⼥'
 - ⼊学⽇期(admission_date)：⽇期类型
 
+```sql
+CREATE TABLE students(
+id INT PRIMARY KEY AUTO_INCREMENT,
+s_name VARCHAR(20) NOT NULL,
+s_age INT,
+s_gender ENUM('男','⼥'),
+s_date DATE
+);
+```
 3:创建商品表(布尔)
 
 要求：创建⼀个商品表 products ，包含：

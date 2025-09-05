@@ -5,159 +5,216 @@ tags: []
 ---
 
 
-## 🔁 三、`switch` 语句（多分支选择）
+## 一、Switch语句是什么
 
-SWITCH语句：用于固定值的判断。
+switch语句​​是一种基于变量值匹配的​​多分支语句。
 
-### 📌 语法：
+## 二、为什么要用switch？
+
+想象一个场景：根据星期几的数字（1-7）来输出对应的中文名称。
+
+如果用`if-else`会写成这样：
+```csharp
+static void Main(string[] args)
+{
+    Console.WriteLine("查询星期几的英语单词");
+    bool toBeContinue = true;
+
+    while ( toBeContinue)
+    {
+        Console.Write("请输入1-7之间的一个数字:");
+        string num = Console.ReadLine();
+        string dayName;
+        
+        if (num == "1") Console.WriteLine("\"星期一\": Monday");
+        else if (num == "2") Console.WriteLine("\"星期二\": Tuesday");
+        else if (num == "3") Console.WriteLine("\"星期三\": Wednesday");
+        else if (num == "4") Console.WriteLine("\"星期四\": Thursday");
+        else if (num == "5") Console.WriteLine("\"星期五\": Friday");
+        else if (num == "6") Console.WriteLine("\"星期六\": Saturday");
+        else if (num == "7") Console.WriteLine("\"星期日\": Sunday");
+        else Console.WriteLine("非法输入");
+
+        Console.WriteLine("------------------------------");
+    }
+}
+```
+
+这样写虽然可以，但**重复、冗长、不易阅读**。
+
+而`switch`语句就是为这种**基于一个变量的多个确定值进行分支**的场景而生的，它能让代码**更清晰、更简洁**。
+
+---
+
+## 三、switch语句的语法结构
 
 ```csharp
-switch (表达式)
+switch (要判断的变量)
 {
     case 值1:
-        // 执行代码块1
-        break;
+        // 如果变量等于值1，执行这里的代码
+        break; // 必须用break跳出switch
+
     case 值2:
-        // 执行代码块2
+        // 如果变量等于值2，执行这里的代码
         break;
+
+    // ... 可以有任意多个case ...
+
     default:
-        // 所有 case 不匹配时执行
+        // 如果变量不等于任何case的值，执行这里的代码（可选）
         break;
 }
 ```
 
-### ✅ 示例：
+**⚠️ 注意：关键规则（初学者最容易出错的地方！）：**
+1.  **每个case块必须以跳转语句结束**，最常用的就是`break;`。
+2.  `default`是可选的，用于处理“其他所有情况”。
+3.  `case` 后必须是**常量**，不能是变量或表达式。
+4. 每个 `case` 一般要有 `break`，否则会**穿透执行**下一个 case（除非你想要 fall-through 行为）。
+5. C# 7.0+ 支持 `switch` 的模式匹配（比如 `case int n when n > 0:`）。
+
+---
+
+## 用法1：基础用法 - 计算器
+
+这是最经典的例子，完美展示了switch的用途。
 
 ```csharp
-int day = 3;
+Console.Write("请输入第一个数字: ");
+double num1 = Convert.ToDouble(Console.ReadLine());
 
-switch (day)
+Console.Write("请选择运算符 (+, -, *, /): ");
+string op = Console.ReadLine();
+
+Console.Write("请输入第二个数字: ");
+double num2 = Convert.ToDouble(Console.ReadLine());
+
+double result = 0;
+bool validOp = true;
+
+switch (op) // 要判断的变量是 op
 {
-    case 1:
-        Console.WriteLine("星期一");
+    case "+": // 如果 op == "+"
+        result = num1 + num2;
+        break; // 必须 break!
+
+    case "-":
+        result = num1 - num2;
         break;
-    case 2:
-        Console.WriteLine("星期二");
+
+    case "*":
+        result = num1 * num2;
         break;
-    case 3:
-        Console.WriteLine("星期三");
+
+    case "/":
+        if (num2 != 0)
+            result = num1 / num2;
+        else
+            Console.WriteLine("错误：除数不能为零！");
         break;
-    default:
-        Console.WriteLine("未知");
+
+    default: // 如果 op 不是 +, -, *, / 中的任何一个
+        Console.WriteLine("错误：无效的运算符！");
+        validOp = false;
         break;
 }
+
+if (validOp)
+    Console.WriteLine($"结果: {result}");
 ```
 
+## 用法2：Case合并 - 成绩等级评定
 
-### ⚠️ 注意：
-
-* `case` 后必须是**常量**，不能是变量或表达式。
-* 每个 `case` 一般要有 `break`，否则会**穿透执行**下一个 case（除非你想要 fall-through 行为）。
-* C# 7.0+ 支持 `switch` 的模式匹配（比如 `case int n when n > 0:`）。
-
-
-
-### ✅ IF语句 VS SWITCH语句
-
-| 对比点   | `if` 语句                              | `switch` 语句                          |
-| -------- | -------------------------------------- | -------------------------------------- |
-| 适用情况 | 条件是布尔表达式或复杂判断             | 条件是单个变量与固定值的匹配           |
-| 条件类型 | 可以是任何表达式（数值、范围、逻辑）   | 只能是可枚举的常量值                   |
-| 灵活性   | 高，支持逻辑运算、范围判断、函数调用等 | 低，只支持值匹配                       |
-| 可读性   | 判断多时会变复杂，可嵌套但难读         | 分支清晰、结构简洁，适合多个固定值匹配 |
-| 性能     | 对少量判断没差别，多分支时可能略慢     | 编译器可能优化为查找表，性能略优       |
-
----
-
-
-
-### ✅ IF语句 VS SWITCH语句
-
-| 对比点   | `if` 语句                              | `switch` 语句                          |
-| -------- | -------------------------------------- | -------------------------------------- |
-| 适用情况 | 条件是布尔表达式或复杂判断             | 条件是单个变量与固定值的匹配           |
-| 条件类型 | 可以是任何表达式（数值、范围、逻辑）   | 只能是可枚举的常量值                   |
-| 灵活性   | 高，支持逻辑运算、范围判断、函数调用等 | 低，只支持值匹配                       |
-| 可读性   | 判断多时会变复杂，可嵌套但难读         | 分支清晰、结构简洁，适合多个固定值匹配 |
-| 性能     | 对少量判断没差别，多分支时可能略慢     | 编译器可能优化为查找表，性能略优       |
-
----
-
-### 🔍 IF语句 VS SWITCH语法区别
-
-#### ▶ `if` 示例：可以进行范围、逻辑判断
+多个`case`可以共享同一段执行代码。
 
 ```csharp
-int score = 75;
+Console.Write("请输入成绩等级 (A, B, C, D, F): ");
+char grade = Char.ToUpper(Console.ReadKey().KeyChar); // 转换为大写
+Console.WriteLine(); // 换行
 
-if (score >= 90)
-    Console.WriteLine("优秀");
-else if (score >= 70)
-    Console.WriteLine("良好");
-else
-    Console.WriteLine("及格或不及格");
-```
-
-#### ▶ `switch` 示例：只能用于具体值匹配
-
-```csharp
-int day = 3;
-
-switch (day)
+switch (grade)
 {
-    case 1:
-        Console.WriteLine("星期一");
+    case 'A':
+        Console.WriteLine("优秀！");
         break;
-    case 2:
-        Console.WriteLine("星期二");
+
+    case 'B': // 注意：这里没有break，也没有代码
+    case 'C': // case 'B' 和 case 'C' 都会执行下一个case的代码
+        Console.WriteLine("良好。");
+        break; // 在这里统一break
+
+    case 'D':
+        Console.WriteLine("及格，需要努力。");
         break;
-    case 3:
-        Console.WriteLine("星期三");
+
+    case 'F':
+        Console.WriteLine("不及格。");
         break;
+
     default:
-        Console.WriteLine("未知");
+        Console.WriteLine("无效的等级！");
         break;
 }
+```
+**输出：**
+输入 `B` 或 `C`，都会输出 `"良好。"`。
+
+## 用法3：现代写法 - Switch表达式
+
+注意：不在考纲范围内，C# 8.0+支持
+
+对于非常简单的switch，可以用更简洁的**switch表达式**，它直接返回一个值。
+
+```csharp
+// 传统的switch语句
+string dayName;
+switch (dayNumber)
+{
+    case 1: dayName = "周一"; break;
+    case 2: dayName = "周二"; break;
+    // ... 其他
+    default: dayName = "无效"; break;
+}
+
+// 现代的switch表达式 (更简洁！)
+string dayName = dayNumber switch
+{
+    1 => "周一",
+    2 => "周二",
+    3 => "周三",
+    4 => "周四",
+    5 => "周五",
+    6 => "周六",
+    7 => "周日",
+    _ => "无效" // _ 代表 default
+};
+
+Console.WriteLine(dayName);
 ```
 
 ---
 
-### 🎯 支持的条件类型
+## 四、何时使用Switch vs If-Else？
 
-| 类型                  | `if`              | `switch`                           |      |      |
-| --------------------- | ----------------- | ---------------------------------- | ---- | ---- |
-| 比较运算（>、<、==）  | ✅ 支持            | ❌ 不支持                           |      |      |
-| 逻辑运算（&&、\|\| ） | ✅ 支持            | ❌ 不支持                           |      |      |
-| 范围判断              | ✅ 支持            | ❌ 不支持（但 C# 7.0+ 支持 `when`） |      |      |
-| 枚举、常量判断        | ✅ 支持            | ✅ 支持                             |      |      |
-| 字符串判断            | ✅ 支持            | ✅ 支持（C# 7.0+ 性能优化）         |      |      |
-| 模式匹配              | ⭕ 支持（C# 9 起） | ✅ 支持（C# 7 起）                  |      |      |
+这是一个重要的决策：
 
----
+| 场景 | 使用 | 例子 |
+| :--- | :--- | :--- |
+| **基于一个变量的多个==确切值**进行分支 | **`switch`** | 菜单选项、状态码、枚举值、字符、固定数字 |
+| **基于关系判断**进行分支 | **`if-else`** | `if (score > 90)`, `if (age >= 18 && age < 65)` |
+| **基于逻辑关系进行判断** | **`if-else`** | `if (isLoggedIn && hasPermission)` |
 
-### 🧠 四、实际应用建议
-
-| 情况                                       | 推荐语句             |
-| ------------------------------------------ | -------------------- |
-| 需要复杂判断（如范围、函数调用、逻辑运算） | `if`                 |
-| 多个固定值（如菜单选项、星期、月份）       | `switch`             |
-| 判断只有两个分支（是/否）                  | `if-else`            |
-| 性能要求高、分支很多                       | `switch`（性能更优） |
+**简单记：有明确的值，用switch；条件复杂多变，用if-else。**
 
 ---
 
-### 📌 五、简要总结
+## 五、给初学者的练习建议
 
-| 对比维度       | if                 | switch                             |
-| -------------- | ------------------ | ---------------------------------- |
-| 条件类型       | 任意布尔表达式     | 单个变量与常量匹配                 |
-| 判断能力       | 范围判断、逻辑运算 | 精确匹配（C# 7+ 可 pattern match） |
-| 表达能力       | 强，适合复杂逻辑   | 简洁，适合固定分支                 |
-| 性能（多分支） | 相对略慢           | 可能优化为跳转表，更快             |
+1.  **模仿**：先把计算器的例子自己敲一遍，确保能运行。
+2.  **修改**：尝试为计算器增加一个新的运算符，比如`%`（取余）或`^`（幂运算）。
+3.  **创造**：
+    *   写一个程序，根据输入的数字1-12，输出对应的月份英文单词。
+    *   写一个简单的命令行菜单（1.新建 2.打开 3.保存 4.退出），用switch来处理用户选择。
 
----
-
-### 🚀 小贴士
-
-如果你判断的是枚举类型、整数常量、字符串固定值，优先使用 `switch`；
-如果你要比较范围、多个条件组合、嵌套条件，使用 `if` 更合适。
+掌握了`switch`语句，你的代码在处理多分支选择时会变得非常清晰和专业！
