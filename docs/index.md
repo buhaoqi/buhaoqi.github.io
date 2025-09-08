@@ -4,31 +4,6 @@ tags: []
 
 ---
 
-## 对口信息
-- 河北科技师范学院:[https://zhaosheng.hevttc.edu.cn](https://zhaosheng.hevttc.edu.cn/index/tzgg.htm)
-- 河北省教育考试院：[http://www.hebeea.edu.cn](http://www.hebeea.edu.cn/html/ptgk/index.html)
-- 河北省教育厅：[http://jyt.hebei.gov.cn](http://jyt.hebei.gov.cn/col/1410097726928/index.html)
-- 河北工程大学： [https://jiaowu.hebeu.edu.cn](https://jiaowu.hebeu.edu.cn/tzgg.htm)
-
-
-## AI工具导航
-
-- AI代码编辑器: [https://cursor.com/en](https://cursor.com/en)
-- Google Gemini: [https://gemini.google.com](https://gemini.google.com)
-- claude.ai:[https://claude.ai](https://claude.ai)
-- 动画设计：[https://hera.video/](https://hera.video/)
-- Microsoft Copilot: [https://copilot.microsoft.com/](https://copilot.microsoft.com/)
-- GitHub Copilot: [https://github.com/features/copilot](https://github.com/features/copilot)
-- Get Visuals from your text: [https://www.napkin.ai/](https://www.napkin.ai/)
-- Free Real Time Voice Changer[https://voice.ai/](https://voice.ai/)
-- 免费AI声音克隆: [https://nicevoice.org](https://nicevoice.org)
----
-
-## 其他APP
-
-- [https://runwayml.com/](https://runwayml.com/)
-- [https://monica.im/en/ai-models/runway](https://monica.im/en/ai-models/runway)
-- Clean Shot录屏工具:[https://cleanshot.com/](https://cleanshot.com/) (付费)
 
 # 河北省中职对口升学考试计算机类专业考试简介
 ## 一、考试范围
