@@ -5,11 +5,11 @@ tags: []
 ---
 
 ## 结构化查询语言
-![结构化查询语言](../images/ebooks/049.jpeg)
-![结构化查询语言](../images/ebooks/050.jpeg) 
-![结构化查询语言](../images/ebooks/051.jpeg) 
-![结构化查询语言](../images/ebooks/052.jpeg) 
-![结构化查询语言](../images/ebooks/053.jpeg) 
+![结构化查询语言](../images/049.jpeg)
+![结构化查询语言](../images/050.jpeg) 
+![结构化查询语言](../images/051.jpeg) 
+![结构化查询语言](../images/052.jpeg) 
+![结构化查询语言](../images/053.jpeg) 
 
  
 

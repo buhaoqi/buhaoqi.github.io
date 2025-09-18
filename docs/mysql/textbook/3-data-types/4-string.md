@@ -11,11 +11,11 @@ MySQL 提供了多种字符串类型，适用于不同的场景。
 ---
 
 
-![字符串类型](../images/ebooks/063.jpeg) 
-![字符串类型](../images/ebooks/064.jpeg) 
-![字符串类型](../images/ebooks/065.jpeg) 
-![字符串类型](../images/ebooks/066.jpeg) 
-![字符串类型](../images/ebooks/067.jpeg)
+![字符串类型](../images/063.jpeg) 
+![字符串类型](../images/064.jpeg) 
+![字符串类型](../images/065.jpeg) 
+![字符串类型](../images/066.jpeg) 
+![字符串类型](../images/067.jpeg)
 
 ## 一、MySQL 常见字符串类型总览
 

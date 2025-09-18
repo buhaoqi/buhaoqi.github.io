@@ -6,9 +6,9 @@ tags: []
 
 
 
-![创建数据表](../images/ebooks/198.jpeg) 
-![创建数据表](../images/ebooks/199.jpeg) 
-![创建数据表](../images/ebooks/200.jpeg) 
+![创建数据表](../images/198.jpeg) 
+![创建数据表](../images/199.jpeg) 
+![创建数据表](../images/200.jpeg) 
 
 MySQL 索引用法典型案例讲解
 

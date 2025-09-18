@@ -3,11 +3,11 @@ noteId: "962ddeb047fa11f0a6929b02b627d898"
 tags: []
 
 ---
-![MySQL概述](../images/ebooks/019.jpeg)
-![MySQL概述](../images/ebooks/020.jpeg)
-![MySQL概述](../images/ebooks/021.jpeg)
-![MySQL概述](../images/ebooks/022.jpeg)
-![MySQL概述](../images/ebooks/023.jpeg)
+![MySQL概述](../images/019.jpeg)
+![MySQL概述](../images/020.jpeg)
+![MySQL概述](../images/021.jpeg)
+![MySQL概述](../images/022.jpeg)
+![MySQL概述](../images/023.jpeg)
 
 ## 简答题
 ### MySQL概述

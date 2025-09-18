@@ -4,11 +4,11 @@ tags: []
 
 ---
 
-![MySQL服务的启动与停止](../images/ebooks/035.jpeg)
-![MySQL服务的启动与停止](../images/ebooks/036.jpeg)
-![MySQL服务的启动与停止](../images/ebooks/037.jpeg)
-![MySQL服务的启动与停止](../images/ebooks/038.jpeg)
-![MySQL服务的启动与停止](../images/ebooks/039.jpeg)
+![MySQL服务的启动与停止](../images/035.jpeg)
+![MySQL服务的启动与停止](../images/036.jpeg)
+![MySQL服务的启动与停止](../images/037.jpeg)
+![MySQL服务的启动与停止](../images/038.jpeg)
+![MySQL服务的启动与停止](../images/039.jpeg)
 
 ## 简答题
 1. MySQL数据库分为哪两端？

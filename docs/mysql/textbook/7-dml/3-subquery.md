@@ -5,6 +5,6 @@ tags: []
 ---
 
  
-![创建数据表](../images/ebooks/187.jpeg) 
-![创建数据表](../images/ebooks/188.jpeg) 
-![创建数据表](../images/ebooks/189.jpeg) 
+![创建数据表](../images/187.jpeg) 
+![创建数据表](../images/188.jpeg) 
+![创建数据表](../images/189.jpeg) 

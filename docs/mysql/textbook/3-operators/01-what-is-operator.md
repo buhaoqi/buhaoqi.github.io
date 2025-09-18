@@ -18,7 +18,7 @@ tags: []
 
 
 ## MySQL运算符
-![运算符](../images/ebooks/068.jpeg)  
+![运算符](../images/068.jpeg)  
 
 
 # 一、MySQL 运算符分类总览

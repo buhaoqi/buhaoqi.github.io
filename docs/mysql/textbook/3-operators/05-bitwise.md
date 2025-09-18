@@ -5,9 +5,9 @@ tags: []
 ---
 
 
-![运算符](../images/ebooks/079.jpeg) 
-![运算符](../images/ebooks/080.jpeg) 
-![运算符](../images/ebooks/081.jpeg)
+![运算符](../images/079.jpeg) 
+![运算符](../images/080.jpeg) 
+![运算符](../images/081.jpeg)
 
 # MySQL 中位运算符的用法详解
 

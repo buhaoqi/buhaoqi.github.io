@@ -5,13 +5,13 @@ tags: []
 ---
 
 
-![数据库的基本概念](../images/ebooks/001.jpeg)
-![数据库的基本概念](../images/ebooks/002.jpeg)
-![数据库的基本概念](../images/ebooks/003.jpeg)
+![数据库的基本概念](../images/001.jpeg)
+![数据库的基本概念](../images/002.jpeg)
+![数据库的基本概念](../images/003.jpeg)
 
-![数据库的基本概念](../images/ebooks/004.jpeg)
+![数据库的基本概念](../images/004.jpeg)
 
-![数据库的基本概念](../images/ebooks/005.jpeg)
+![数据库的基本概念](../images/005.jpeg)
 
 ## 内容大纲
 ### 数据库的基本概念

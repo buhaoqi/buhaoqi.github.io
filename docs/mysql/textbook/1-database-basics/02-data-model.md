@@ -5,13 +5,13 @@ tags: []
 ---
 
 
-![数据模型的组成要素](../images/ebooks/006.jpeg)
-![概念模型](../images/ebooks/007.jpeg)
-![逻辑模型](../images/ebooks/008.jpeg)
-![层次模型](../images/ebooks/009.jpeg)
-![网状模型](../images/ebooks/010.jpeg)
-![关系模型](../images/ebooks/011.jpeg)
-![关系模型](../images/ebooks/012.jpeg)
+![数据模型的组成要素](../images/006.jpeg)
+![概念模型](../images/007.jpeg)
+![逻辑模型](../images/008.jpeg)
+![层次模型](../images/009.jpeg)
+![网状模型](../images/010.jpeg)
+![关系模型](../images/011.jpeg)
+![关系模型](../images/012.jpeg)
 
 ## 内容大纲
 ### 数据模型的组成要素

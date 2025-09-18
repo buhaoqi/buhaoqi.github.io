@@ -18,14 +18,14 @@ tags: []
 ---
 
 
-![MySQL函数](../images/ebooks/084.jpeg) 
-![MySQL函数](../images/ebooks/085.jpeg) 
-![MySQL函数](../images/ebooks/086.jpeg) 
-![MySQL函数](../images/ebooks/087.jpeg) 
-![MySQL函数](../images/ebooks/088.jpeg) 
-![MySQL函数](../images/ebooks/089.jpeg) 
-![MySQL函数](../images/ebooks/090.jpeg) 
-![MySQL函数](../images/ebooks/091.jpeg) 
+![MySQL函数](../images/084.jpeg) 
+![MySQL函数](../images/085.jpeg) 
+![MySQL函数](../images/086.jpeg) 
+![MySQL函数](../images/087.jpeg) 
+![MySQL函数](../images/088.jpeg) 
+![MySQL函数](../images/089.jpeg) 
+![MySQL函数](../images/090.jpeg) 
+![MySQL函数](../images/091.jpeg) 
 
 
 # 一、MySQL 常见数学函数分类与详解

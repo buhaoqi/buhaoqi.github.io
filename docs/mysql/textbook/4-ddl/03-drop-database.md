@@ -5,11 +5,11 @@ tags: []
 ---
 
  
-![删除数据库](../images/ebooks/130.jpeg) 
-![删除数据库](../images/ebooks/131.jpeg) 
-![删除数据库](../images/ebooks/132.jpeg) 
-![删除数据库](../images/ebooks/133.jpeg) 
-![删除数据库](../images/ebooks/134.jpeg) 
+![删除数据库](../images/130.jpeg) 
+![删除数据库](../images/131.jpeg) 
+![删除数据库](../images/132.jpeg) 
+![删除数据库](../images/133.jpeg) 
+![删除数据库](../images/134.jpeg) 
 
 
 `DROP DATABASE 数据库名;` 是MySQL中用于删除整个数据库的SQL语句。这个命令会永久删除指定的数据库及其所有包含的对象（如表、视图、存储过程等），操作不可逆，请谨慎使用。

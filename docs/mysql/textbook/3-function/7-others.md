@@ -5,9 +5,9 @@ tags: []
 ---
 
  
-![MySQL函数](../images/ebooks/107.jpeg) 
-![MySQL函数](../images/ebooks/108.jpeg) 
-![MySQL函数](../images/ebooks/109.jpeg)
+![MySQL函数](../images/107.jpeg) 
+![MySQL函数](../images/108.jpeg) 
+![MySQL函数](../images/109.jpeg)
 
 ## if函数
 

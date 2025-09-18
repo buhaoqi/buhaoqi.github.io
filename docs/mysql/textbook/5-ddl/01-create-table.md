@@ -4,13 +4,13 @@ tags: []
 
 ---
 
-![创建数据表](../images/ebooks/135.jpeg) 
-![创建数据表](../images/ebooks/136.jpeg) 
-![创建数据表](../images/ebooks/137.jpeg) 
-![创建数据表](../images/ebooks/138.jpeg) 
-![创建数据表](../images/ebooks/139.jpeg) 
-![创建数据表](../images/ebooks/140.jpeg) 
-![创建数据表](../images/ebooks/141.jpeg) 
+![创建数据表](../images/135.jpeg) 
+![创建数据表](../images/136.jpeg) 
+![创建数据表](../images/137.jpeg) 
+![创建数据表](../images/138.jpeg) 
+![创建数据表](../images/139.jpeg) 
+![创建数据表](../images/140.jpeg) 
+![创建数据表](../images/141.jpeg) 
 
 
 ## 数据库的构成

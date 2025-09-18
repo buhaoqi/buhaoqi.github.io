@@ -15,15 +15,15 @@ tags: []
 - 🔍 支持**模糊查询、字符串匹配、编码处理**
 
 ---
-![MySQL函数](../images/ebooks/091.jpeg) 
-![MySQL函数](../images/ebooks/092.jpeg) 
-![MySQL函数](../images/ebooks/093.jpeg) 
-![MySQL函数](../images/ebooks/094.jpeg) 
-![MySQL函数](../images/ebooks/095.jpeg) 
-![MySQL函数](../images/ebooks/096.jpeg) 
-![MySQL函数](../images/ebooks/097.jpeg) 
-![MySQL函数](../images/ebooks/098.jpeg) 
-![MySQL函数](../images/ebooks/099.jpeg) 
+![MySQL函数](../images/091.jpeg) 
+![MySQL函数](../images/092.jpeg) 
+![MySQL函数](../images/093.jpeg) 
+![MySQL函数](../images/094.jpeg) 
+![MySQL函数](../images/095.jpeg) 
+![MySQL函数](../images/096.jpeg) 
+![MySQL函数](../images/097.jpeg) 
+![MySQL函数](../images/098.jpeg) 
+![MySQL函数](../images/099.jpeg) 
 ## 🧩 一、字符串拼接类函数
 
 ### 1. `CONCAT(str1, str2, ...)` —— 拼接多个字符串

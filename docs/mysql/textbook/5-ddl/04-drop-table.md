@@ -5,9 +5,9 @@ tags: []
 ---
 
 
-![复制数据表](../images/ebooks/149.jpeg) 
-![复制数据表](../images/ebooks/150.jpeg) 
-![复制数据表](../images/ebooks/151.jpeg)  
+![复制数据表](../images/149.jpeg) 
+![复制数据表](../images/150.jpeg) 
+![复制数据表](../images/151.jpeg)  
 
 ## 语法
 

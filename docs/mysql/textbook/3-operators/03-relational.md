@@ -5,10 +5,10 @@ tags: []
 ---
 
 
-![运算符](../images/ebooks/072.jpeg) 
-![运算符](../images/ebooks/073.jpeg) 
-![运算符](../images/ebooks/074.jpeg) 
-![运算符](../images/ebooks/075.jpeg)
+![运算符](../images/072.jpeg) 
+![运算符](../images/073.jpeg) 
+![运算符](../images/074.jpeg) 
+![运算符](../images/075.jpeg)
 
 # MySQL 中关系运算符的用法详解
 

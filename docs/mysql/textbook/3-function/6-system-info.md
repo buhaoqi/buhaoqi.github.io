@@ -5,6 +5,6 @@ tags: []
 ---
 
  
-![MySQL函数](../images/ebooks/105.jpeg) 
-![MySQL函数](../images/ebooks/106.jpeg) 
-![MySQL函数](../images/ebooks/107.jpeg) 
+![MySQL函数](../images/105.jpeg) 
+![MySQL函数](../images/106.jpeg) 
+![MySQL函数](../images/107.jpeg) 

@@ -4,16 +4,16 @@ tags: []
 
 ---
 
-![MySQL服务器的登录](../images/ebooks/039.jpeg)
-![MySQL服务器的登录](../images/ebooks/040.jpeg)
-![MySQL服务器的登录](../images/ebooks/041.jpeg)
-![MySQL服务器的登录](../images/ebooks/042.jpeg)
-![MySQL服务器的登录](../images/ebooks/043.jpeg)
-![MySQL服务器的登录](../images/ebooks/044.jpeg)
-![MySQL服务器的登录](../images/ebooks/045.jpeg)
-![MySQL服务器的登录](../images/ebooks/046.jpeg)
-![MySQL服务器的登录](../images/ebooks/047.jpeg)
-![MySQL服务器的登录](../images/ebooks/048.jpeg)
+![MySQL服务器的登录](../images/039.jpeg)
+![MySQL服务器的登录](../images/040.jpeg)
+![MySQL服务器的登录](../images/041.jpeg)
+![MySQL服务器的登录](../images/042.jpeg)
+![MySQL服务器的登录](../images/043.jpeg)
+![MySQL服务器的登录](../images/044.jpeg)
+![MySQL服务器的登录](../images/045.jpeg)
+![MySQL服务器的登录](../images/046.jpeg)
+![MySQL服务器的登录](../images/047.jpeg)
+![MySQL服务器的登录](../images/048.jpeg)
 
 ## 简答题
 1. 登录MySQL数据库的两种方式是什么

@@ -5,12 +5,12 @@ tags: []
 ---
 
 
-![关系模型](../images/ebooks/012.jpeg)
-![关系模型](../images/ebooks/013.jpeg)
-![关系模型](../images/ebooks/014.jpeg)
-![关系模型](../images/ebooks/015.jpeg)
-![关系模型](../images/ebooks/016.jpeg)
-![关系模型](../images/ebooks/017.jpeg)
+![关系模型](../images/012.jpeg)
+![关系模型](../images/013.jpeg)
+![关系模型](../images/014.jpeg)
+![关系模型](../images/015.jpeg)
+![关系模型](../images/016.jpeg)
+![关系模型](../images/017.jpeg)
 
 ## 内容大纲
 ### 数据库系统模式

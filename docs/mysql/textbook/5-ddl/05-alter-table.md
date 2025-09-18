@@ -13,15 +13,15 @@ tags: []
 5. 修改注释
 
 
-![创建数据表](../images/ebooks/143.jpeg) 
-![创建数据表](../images/ebooks/144.jpeg) 
-![创建数据表](../images/ebooks/145.jpeg) 
-![创建数据表](../images/ebooks/146.jpeg) 
-![创建数据表](../images/ebooks/147.jpeg) 
-![创建数据表](../images/ebooks/148.jpeg) 
-![创建数据表](../images/ebooks/149.jpeg) 
-![创建数据表](../images/ebooks/150.jpeg) 
-![创建数据表](../images/ebooks/151.jpeg) 
+![创建数据表](../images/143.jpeg) 
+![创建数据表](../images/144.jpeg) 
+![创建数据表](../images/145.jpeg) 
+![创建数据表](../images/146.jpeg) 
+![创建数据表](../images/147.jpeg) 
+![创建数据表](../images/148.jpeg) 
+![创建数据表](../images/149.jpeg) 
+![创建数据表](../images/150.jpeg) 
+![创建数据表](../images/151.jpeg) 
 
 
 ## 一、修改表结构的主要操作类型

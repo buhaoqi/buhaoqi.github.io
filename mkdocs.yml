@@ -248,85 +248,89 @@ nav:
       - 学海领航答案: csharp/exams/leading/answer.md
       - 周测月考答案: csharp/exams/week-test/answer-unit.md
   - 数据库原理与应用技术:
-    - 考试大纲: mysql-textbook/index.md
-    - 教材目录: mysql-textbook/cover.md
+    - 考试大纲: mysql/textbook/index.md
+    - 教材目录: mysql/textbook/cover.md
     - ===1.绪论===:
-      - 数据库系统概述: mysql-textbook/1-database-basics/01-overview.md
-      - 数据模型: mysql-textbook/1-database-basics/02-data-model.md
-      - 数据库系统的结构: mysql-textbook/1-database-basics/03-database-system-architecture.md
+      - 数据库系统概述: mysql/textbook/1-database-basics/01-overview.md
+      - 数据模型: mysql/textbook/1-database-basics/02-data-model.md
+      - 数据库系统的结构: mysql/textbook/1-database-basics/03-database-system-architecture.md
     - ===2.MySQL工具使用===:
-      - MySQL概述: mysql-textbook/2-mysql-install/01-what-is-mysql.md
-      - MySQL的安装与配置: mysql-textbook/2-mysql-install/02-mysql-installation.md
-      - MySQL服务的启动与停止: mysql-textbook/2-mysql-install/03-mysql-service-management.md
-      - MySQL服务器的登录: mysql-textbook/2-mysql-install/04-login-logout.md
+      - MySQL概述: mysql/textbook/2-mysql-install/01-what-is-mysql.md
+      - MySQL的安装与配置: mysql/textbook/2-mysql-install/02-mysql-installation.md
+      - MySQL服务的启动与停止: mysql/textbook/2-mysql-install/03-mysql-service-management.md
+      - MySQL服务器的登录: mysql/textbook/2-mysql-install/04-login-logout.md
     - ===3.结构化查询语言(SQL)===:
-      - SQL概述: mysql-textbook/3-mysql-basics/1-what-is-sql.md
+      - SQL概述: mysql/textbook/3-mysql-basics/1-what-is-sql.md
+      - SQL产生与发展: mysql/textbook/3-mysql-basics/2-sql-history.md
+      - SQL的特点: mysql/textbook/3-mysql-basics/3-sql-features.md
     - ===3.MySQL数据类型===:
-      - 数据类型概述: mysql-textbook/3-data-types/0-what-is-datatype.md
-      - 整数类型: mysql-textbook/3-data-types/1-integer.md
-      - 小数类型: mysql-textbook/3-data-types/2-decimal.md
-      - 日期时间类型: mysql-textbook/3-data-types/3-datetime.md
-      - 字符串类型: mysql-textbook/3-data-types/4-string.md
+      - 数据类型简介: mysql/textbook/3-data-types/0-what-is-datatype.md
+      - 整数类型: mysql/textbook/3-data-types/1-integer.md
+      - 小数类型: mysql/textbook/3-data-types/2-decimal.md
+      - 日期时间类型: mysql/textbook/3-data-types/3-datetime.md
+      - 字符串类型: mysql/textbook/3-data-types/4-string.md
     - ===3.MySQL运算符===:
-      - 运算符是什么: mysql-textbook/3-operators/01-what-is-operator.md
-      - 算术运算符: mysql-textbook/3-operators/02-arithmetic.md
-      - 关系运算符: mysql-textbook/3-operators/03-relational.md
-      - 逻辑运算符: mysql-textbook/3-operators/04-logical.md
-      - 位运算符: mysql-textbook/3-operators/05-bitwise.md
+      - 算术运算符: mysql/textbook/3-operators/02-arithmetic.md
+      - 比较运算符: mysql/textbook/3-operators/03-relational.md
+      - 逻辑运算符: mysql/textbook/3-operators/04-logical.md
+      - 位运算符: mysql/textbook/3-operators/05-bitwise.md
+      - 运算符的优先级: mysql/textbook/3-operators/06-operator-precedence.md
     - ===3.MySQL函数===:
-      - 函数库概述: mysql-textbook/3-function/1-overview.md
-      - 聚合函数: mysql-textbook/3-function/2-aggregate.md
-      - 数学函数: mysql-textbook/3-function/3-math.md
-      - 字符串函数: mysql-textbook/3-function/4-string.md
-      - 日期函数: mysql-textbook/3-function/5-date.md
-      - 系统信息函数: mysql-textbook/3-function/6-system-info.md
-      - 其他函数: mysql-textbook/3-function/7-others.md
+      - 聚合函数: mysql/textbook/3-function/2-aggregate.md
+      - 数学函数: mysql/textbook/3-function/3-math.md
+      - 字符串函数: mysql/textbook/3-function/4-string.md
+      - 日期和时间函数: mysql/textbook/3-function/5-date.md
+      - 系统信息函数: mysql/textbook/3-function/6-system-info.md
+      - 其他函数: mysql/textbook/3-function/7-others.md
     - ===4.MySQL数据库管理===:
-      - DDL简介: mysql-textbook/4-ddl/00-introduction.md
-      - 创建数据库: mysql-textbook/4-ddl/02-create-database.md
-      - 查看数据库: mysql-textbook/4-ddl/01-show-databases.md
-      - 使用数据库: mysql-textbook/4-ddl/04-use-database.md
-      - 修改数据库: mysql-textbook/4-ddl/05-alter-database.md
-      - 删除数据库: mysql-textbook/4-ddl/03-drop-database.md
+      - 创建数据库: mysql/textbook/4-ddl/02-create-database.md
+      - 查看数据库: mysql/textbook/4-ddl/01-show-databases.md
+      - 使用数据库: mysql/textbook/4-ddl/04-use-database.md
+      - 修改数据库: mysql/textbook/4-ddl/05-alter-database.md
+      - 删除数据库: mysql/textbook/4-ddl/03-drop-database.md
     - ===5.MySQL数据表管理===:
-      - 创建表: mysql-textbook/5-ddl/01-create-table.md
-      - 查看表: mysql-textbook/5-ddl/02-show-table.md
-      - 修改表: mysql-textbook/5-ddl/05-alter-table.md
-      - 复制表: mysql-textbook/5-ddl/03-copy-table.md
-      - 删除表: mysql-textbook/5-ddl/04-drop-table.md
+      - 创建数据表: mysql/textbook/5-ddl/01-create-table.md
+      - 查看数据表结构: mysql/textbook/5-ddl/02-show-table.md
+      - 修改数据表结构: mysql/textbook/5-ddl/05-alter-table.md
+      - 重命名数据表: mysql/textbook/5-ddl/03-copy-table.md
+      - 复制数据表: mysql/textbook/5-ddl/04-drop-table.md
+      - 删除数据表: mysql/textbook/5-ddl/04-drop-table.md
     - ===6.MySQL数据完整性===:
-      - 实体完整性: mysql-textbook/6-ddl/constraints.md
-      - 参照完整性: mysql-textbook/6-ddl/referential-integrity.md
-      - 用户定义完整性: mysql-textbook/6-ddl/user-defined-integrity.md
-      - 完整性约束命名子句: mysql-textbook/6-ddl/integrity-constraints-naming.md
+      - 实体完整性: mysql/textbook/6-ddl/constraints.md
+      - 参照完整性: mysql/textbook/6-ddl/referential-integrity.md
+      - 用户定义完整性: mysql/textbook/6-ddl/user-defined-integrity.md
+      - 完整性约束命名子句: mysql/textbook/6-ddl/integrity-constraints-naming.md
     - ===7.MySQL数据查询与更新===:
-      - 表单查询: mysql-textbook/7-dml/1-form-query.md
-      - 连接查询: mysql-textbook/7-dml/2-join.md
-      - 嵌套查询: mysql-textbook/7-dml/3-subquery.md
-      - 插入数据: mysql-textbook/7-dml/4-insert.md
-      - 修改数据: mysql-textbook/7-dml/5-update.md
-      - 删除数据: mysql-textbook/7-dml/6-delete.md
+      - 表单查询: mysql/textbook/7-dml/1-form-query.md
+      - 连接查询: mysql/textbook/7-dml/2-join.md
+      - 嵌套查询: mysql/textbook/7-dml/3-subquery.md
+      - 插入数据: mysql/textbook/7-dml/4-insert.md
+      - 修改数据: mysql/textbook/7-dml/5-update.md
+      - 删除数据: mysql/textbook/7-dml/6-delete.md
     - ===8.MySQL索引与视图===:
-      - 索引: mysql-textbook/8-index-and-view/index.md
-      - 视图: mysql-textbook/8-index-and-view/view.md
+      - 索引: mysql/textbook/8-index-and-view/index.md
+      - 视图: mysql/textbook/8-index-and-view/view.md
     - ===9.MySQL数据库编程===:
-      - 数据库编程简介: mysql-textbook/9-database-programming/01-introduction.md
-      - 使用Python连接MySQL: mysql-textbook/9-database-programming/02-python-connection.md
-      - 使用Java连接MySQL: mysql-textbook/9-database-programming/03-java-connection.md
+      - 触发器: mysql/textbook/9-database-programming/02-python-connection.md
+      - 事件: mysql/textbook/9-database-programming/03-java-connection.md
+      - 存储过程: mysql/textbook/9-database-programming/03-java-connection.md
+      - 存储函数: mysql/textbook/9-database-programming/03-java-connection.md
     - ===10.数据库设计===:
-      - 需求分析: mysql-textbook/10-database-design/01-requirements-analysis.md
-      - 概念结构设计: mysql-textbook/10-database-design/02-conceptual-design.md
-      - 逻辑结构设计: mysql-textbook/10-database-design/03-logical-design.md
-      - 物理结构设计: mysql-textbook/10-database-design/04-physical-design.md
+      - 需求分析: mysql/textbook/10-database-design/01-requirements-analysis.md
+      - 概念结构设计: mysql/textbook/10-database-design/02-conceptual-design.md
+      - 逻辑结构设计: mysql/textbook/10-database-design/03-logical-design.md
+      - 物理结构设计: mysql/textbook/10-database-design/04-physical-design.md
+      - 数据库的实施和维护: mysql/textbook/10-database-design/04-physical-design.md
+      - 关系模式的规范化: mysql/textbook/10-database-design/04-physical-design.md
     - ===11.数据库安全===:
-      - 数据库安全概述: mysql-textbook/11-database-security/01-overview.md
-      - 用户管理: mysql-textbook/11-database-security/02-user-management.md
-      - 权限管理: mysql-textbook/11-database-security/03-privilege-management.md
-      - 角色管理: mysql-textbook/11-database-security/04-role-management.md
+      - 数据库安全概述: mysql/textbook/11-database-security/01-overview.md
+      - 用户管理: mysql/textbook/11-database-security/02-user-management.md
+      - 权限管理: mysql/textbook/11-database-security/03-privilege-management.md
+      - 角色管理: mysql/textbook/11-database-security/04-role-management.md
     - ===12.数据库备份和恢复===:
-      - 数据库备份概述: mysql-textbook/12-database-backup/01-overview.md
-      - 使用MySQLDUMP进行备份: mysql-textbook/12-database-backup/02-mysqldump.md
-      - MySQL数据恢复: mysql-textbook/12-database-backup/03-data-recovery.md
+      - 数据库备份概述: mysql/textbook/12-database-backup/01-overview.md
+      - 使用MySQLDUMP进行备份: mysql/textbook/12-database-backup/02-mysqldump.md
+      - MySQL数据恢复: mysql/textbook/12-database-backup/03-data-recovery.md
   - 计算机网络基础:
     - 考试大纲: network-basics/index.md
     - 教材目录: network-basics/contents.md

@@ -8,7 +8,7 @@ tags: []
 
 ## 创建数据库
 
-![](../images/ebooks/110.jpeg)
+![](../images/110.jpeg)
 
 # MySQL 中的 DDL（数据定义语言）详解
 

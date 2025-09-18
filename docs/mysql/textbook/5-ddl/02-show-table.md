@@ -5,8 +5,8 @@ tags: []
 ---
 
  
-![创建数据表](../images/ebooks/141.jpeg) 
-![创建数据表](../images/ebooks/142.jpeg) 
+![创建数据表](../images/141.jpeg) 
+![创建数据表](../images/142.jpeg) 
 
 
 创建表之后，如果想查看表名或表结构，可以这样操作：

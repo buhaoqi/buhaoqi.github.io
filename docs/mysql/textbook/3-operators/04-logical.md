@@ -5,11 +5,11 @@ tags: []
 ---
 
  
-![运算符](../images/ebooks/075.jpeg)
-![运算符](../images/ebooks/076.jpeg) 
-![运算符](../images/ebooks/077.jpeg) 
-![运算符](../images/ebooks/078.jpeg) 
-![运算符](../images/ebooks/079.jpeg) 
+![运算符](../images/075.jpeg)
+![运算符](../images/076.jpeg) 
+![运算符](../images/077.jpeg) 
+![运算符](../images/078.jpeg) 
+![运算符](../images/079.jpeg) 
 
 # MySQL 中逻辑运算符的用法详解
 

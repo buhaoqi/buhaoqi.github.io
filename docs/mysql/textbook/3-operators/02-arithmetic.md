@@ -4,9 +4,9 @@ tags: []
 
 ---
 
-![运算符](../images/ebooks/069.jpeg) 
-![运算符](../images/ebooks/070.jpeg) 
-![运算符](../images/ebooks/071.jpeg) 
+![运算符](../images/069.jpeg) 
+![运算符](../images/070.jpeg) 
+![运算符](../images/071.jpeg) 
 
 在 MySQL 中，**算术运算符（Arithmetic Operators）** 是用于执行**基本数学运算**的操作符，比如加法、减法、乘法、除法和取模（求余）。
 
