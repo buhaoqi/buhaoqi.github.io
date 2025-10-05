@@ -14,7 +14,7 @@ theme:
   name: material
   language: zh
   logo: assets/logo.png
-  favicon: images/favicon.ico
+  favicon: assets/favicon.ico
   features:
     - navigation.instant
     - navigation.instant.prefetch
