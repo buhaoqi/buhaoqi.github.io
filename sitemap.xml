@@ -5,94 +5,6 @@
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/ddd/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/02-computer-structure/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/03-operating-system/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/04-windows-os/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/05-linux-os/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/06-network-basics/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/07-network-protocols/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/08-network-devices/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/number-system/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/01/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/02/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/03/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/04/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/05/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/06/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/07/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/08/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/09/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/10/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/computer-basics/textbook/11/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
          <loc>https://buhaoqi.github.io/csharp/exams/leading/1/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
@@ -625,10 +537,6 @@
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/csharp/textbook/answers/xm2/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
          <loc>https://buhaoqi.github.io/csharp/textbook/answers/xm3/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
@@ -690,6 +598,14 @@
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/textbook/10-database-design/04-physical-design/</loc>
+         <lastmod>2025-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/textbook/10-database-design/05-implementation-and-maintenance/</loc>
+         <lastmod>2025-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/textbook/10-database-design/06-normalization/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
@@ -789,6 +705,14 @@
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/mysql/textbook/3-mysql-basics/2-sql-history/</loc>
+         <lastmod>2025-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/textbook/3-mysql-basics/3-sql-features/</loc>
+         <lastmod>2025-10-05</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/mysql/textbook/3-operators/01-what-is-operator/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
@@ -806,6 +730,10 @@
     </url>
     <url>
          <loc>https://buhaoqi.github.io/mysql/textbook/3-operators/05-bitwise/</loc>
+         <lastmod>2025-10-05</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/mysql/textbook/3-operators/06-operator-precedence/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
@@ -901,187 +829,19 @@
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/01-introduction/</loc>
+         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/01-trigger/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/02-python-connection/</loc>
+         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/02-event/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/03-java-connection/</loc>
+         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/03-stored-procedure/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/network/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/contents/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/01-development/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/02-basics/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/03-classification/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/04-architecture/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/05-topology/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/06-functions-and-applications/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/07-transmission-media/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/1/08-new-developments/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/2/01-overview/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/2/02-methods/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/2/03-encoding/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/2/04-synchronization-and-multiplexing/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/2/05-exchange/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/2/06-error-control/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/network/textbook/3/01-standards-organization/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/01/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/02/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/03/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/04/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/05/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/06/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/07/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/08/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/excel/exercises/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/1/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/2/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/3/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/4/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/5/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/6/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/7/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/powerpoint/exercises/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/01/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/02/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/03/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/04/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/05/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/06/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/07/</loc>
-         <lastmod>2025-10-05</lastmod>
-    </url>
-    <url>
-         <loc>https://buhaoqi.github.io/office/textbook/word/exercises/</loc>
+         <loc>https://buhaoqi.github.io/mysql/textbook/9-database-programming/04-stored-function/</loc>
          <lastmod>2025-10-05</lastmod>
     </url>
 </urlset>
