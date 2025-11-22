@@ -250,90 +250,69 @@ nav:
   - 数据库原理与应用技术:
     - 考试大纲: mysql/textbook/index.md
     - 教材目录: mysql/textbook/cover.md
-    - ==项目一 绪论:
-      - 数据库系统概述: mysql/textbook/1-database-basics/01-overview.md
-      - 数据模型: mysql/textbook/1-database-basics/02-data-model.md
-      - 数据库系统的结构: mysql/textbook/1-database-basics/03-database-system-architecture.md
-    - ==项目二 MySQL工具使用:
-      - MySQL概述: mysql/textbook/2-mysql-install/01-what-is-mysql.md
-      - MySQL的安装与配置: mysql/textbook/2-mysql-install/02-mysql-installation.md
-      - MySQL服务的启动与停止: mysql/textbook/2-mysql-install/03-mysql-service-management.md
-      - MySQL服务器的登录: mysql/textbook/2-mysql-install/04-login-logout.md
-    - ==项目三 1.结构化查询语言SQL:
-      - SQL概述: mysql/textbook/3-mysql-basics/1-what-is-sql.md
-      - SQL产生与发展: mysql/textbook/3-mysql-basics/2-sql-history.md
-      - SQL的特点: mysql/textbook/3-mysql-basics/3-sql-features.md
-    - ==项目三 2.MySQL数据类型:
-      - 数据类型简介: mysql/textbook/3-data-types/0-what-is-datatype.md
-      - 整数类型: mysql/textbook/3-data-types/1-integer.md
-      - 小数类型: mysql/textbook/3-data-types/2-decimal.md
-      - 日期时间类型: mysql/textbook/3-data-types/3-datetime.md
-      - 字符串类型: mysql/textbook/3-data-types/4-string.md
-    - ==项目三 3.MySQL运算符:
-      - 运算符概述: mysql/textbook/3-operators/01-what-is-operator.md
-      - 算术运算符: mysql/textbook/3-operators/02-arithmetic.md
-      - 比较运算符: mysql/textbook/3-operators/03-relational.md
-      - 逻辑运算符: mysql/textbook/3-operators/04-logical.md
-      - 位运算符: mysql/textbook/3-operators/05-bitwise.md
-      - 运算符的优先级: mysql/textbook/3-operators/06-operator-precedence.md
-    - ==项目三 4.MySQL函数:
-      - 函数概述: mysql/textbook/3-function/1-overview.md
-      - 聚合函数: mysql/textbook/3-function/2-aggregate.md
-      - 数学函数: mysql/textbook/3-function/3-math.md
-      - 字符串函数: mysql/textbook/3-function/4-string.md
-      - 日期和时间函数: mysql/textbook/3-function/5-date.md
-      - 系统信息函数: mysql/textbook/3-function/6-system-info.md
-      - 其他函数: mysql/textbook/3-function/7-others.md
-    - ==项目四 MySQL数据库管理:
-      - 概述: mysql/textbook/4-ddl/00-introduction.md
-      - 创建数据库: mysql/textbook/4-ddl/02-create-database.md
-      - 查看数据库: mysql/textbook/4-ddl/01-show-databases.md
-      - 使用数据库: mysql/textbook/4-ddl/04-use-database.md
-      - 修改数据库: mysql/textbook/4-ddl/05-alter-database.md
-      - 删除数据库: mysql/textbook/4-ddl/03-drop-database.md
-    - ==项目五 MySQL数据表管理:
-      - 创建数据表: mysql/textbook/5-ddl/01-create-table.md
-      - 查看数据表结构: mysql/textbook/5-ddl/02-show-table.md
-      - 修改数据表结构: mysql/textbook/5-ddl/05-alter-table.md
-      - 重命名数据表: mysql/textbook/5-ddl/03-copy-table.md
-      - 复制数据表: mysql/textbook/5-ddl/04-drop-table.md
-      - 删除数据表: mysql/textbook/5-ddl/04-drop-table.md
-    - ==项目六 MySQL数据库完整性:
-      - 实体完整性: mysql/textbook/6-ddl/constraints.md
-      - 参照完整性: mysql/textbook/6-ddl/referential-integrity.md
-      - 用户定义完整性: mysql/textbook/6-ddl/user-defined-integrity.md
-      - 完整性约束命名子句: mysql/textbook/6-ddl/integrity-constraints-naming.md
-    - ==项目七 MySQL数据查询与更新:
-      - 表单查询: mysql/textbook/7-dml/1-form-query.md
-      - 连接查询: mysql/textbook/7-dml/2-join.md
-      - 嵌套查询: mysql/textbook/7-dml/3-subquery.md
-      - 插入数据: mysql/textbook/7-dml/4-insert.md
-      - 修改数据: mysql/textbook/7-dml/5-update.md
-      - 删除数据: mysql/textbook/7-dml/6-delete.md
-    - ==项目八 MySQL索引与视图:
-      - 索引: mysql/textbook/8-index-and-view/index.md
-      - 视图: mysql/textbook/8-index-and-view/view.md
-    - ==项目九 MySQL数据库编程:
-      - 触发器: mysql/textbook/9-database-programming/01-trigger.md
-      - 事件: mysql/textbook/9-database-programming/02-event.md
-      - 存储过程: mysql/textbook/9-database-programming/03-stored-procedure.md
-      - 存储函数: mysql/textbook/9-database-programming/04-stored-function.md
-    - ==项目十 数据库设计:
-      - 需求分析: mysql/textbook/10-database-design/01-requirements-analysis.md
-      - 概念结构设计: mysql/textbook/10-database-design/02-conceptual-design.md
-      - 逻辑结构设计: mysql/textbook/10-database-design/03-logical-design.md
-      - 物理结构设计: mysql/textbook/10-database-design/04-physical-design.md
-      - 数据库的实施和维护: mysql/textbook/10-database-design/05-implementation-and-maintenance.md
-      - 关系模式的规范化: mysql/textbook/10-database-design/06-normalization.md
-    - ==项目十一 数据库安全==:
-      - 数据库安全概述: mysql/textbook/11-database-security/01-overview.md
-      - 用户管理: mysql/textbook/11-database-security/02-user-management.md
-      - 权限管理: mysql/textbook/11-database-security/03-privilege-management.md
-      - 角色管理: mysql/textbook/11-database-security/04-role-management.md
-    - ==项目十二 数据库备份和恢复==:
-      - 数据库备份概述: mysql/textbook/12-database-backup/01-overview.md
-      - 使用MySQLDUMP进行备份: mysql/textbook/12-database-backup/02-mysqldump.md
-      - MySQL数据恢复: mysql/textbook/12-database-backup/03-data-recovery.md
+    - 项目一 绪论:
+      - 任务一数据库系统概述: mysql/textbook/1-overview/overview.md
+      - 任务二数据模型: mysql/textbook/1-overview/data-models.md
+      - 任务三 数据库系统的结构: mysql/textbook/1-overview/database-system-structure.md
+    - 项目二 MySQL工具使用:
+      - 任务一 MySQL概述: mysql/textbook/2-mysql-tools/mysql-overview.md
+      - 任务二 MySQL的安装与配置: mysql/textbook/2-mysql-tools/mysql-installation-and-configuration.md
+      - 任务三 MySQL服务的启动与停止: mysql/textbook/2-mysql-tools/mysql-start-and-stop.md
+      - 任务四 MySQL服务器的登录: mysql/textbook/2-mysql-tools/mysql-server-login.md
+    - 项目三 MySQL基础知识:
+      - 任务一 结构化查询语言: mysql/textbook/3-mysql-basics/sql-language.md
+      - 任务二 MySQL数据类型: mysql/textbook/3-mysql-basics/mysql-data-types.md  
+      - 任务三 MySQL运算符: mysql/textbook/3-mysql-basics/mysql-operators.md
+      - 任务四 MySQL函数: mysql/textbook/3-mysql-basics/mysql-functions.md
+    - 项目四 MySQL数据库管理:
+      - 任务一 创建数据库:  mysql/textbook/4-mysql-database-management/create-database.md
+      - 任务二 查看数据库: mysql/textbook/4-mysql-database-management/view-database.md
+      - 任务三 选择当前数据库: mysql/textbook/4-mysql-database-management/select-database.md
+      - 任务四 修改数据库: mysql/textbook/4-mysql-database-management/modify-database.md
+      - 任务五 删除数据库: mysql/textbook/4-mysql-database-management/delete-database.md
+    - 项目五 MySQL数据表管理:
+      - 任务一 创建数据表: mysql/textbook/5-mysql-table-management/create-table.md
+      - 任务二 查看数据表结构: mysql/textbook/5-mysql-table-management/view-table-structure.md
+      - 任务三 修改数据表结构: mysql/textbook/5-mysql-table-management/modify-table-structure.md
+      - 任务四 重命名数据表: mysql/textbook/5-mysql-table-management/rename-table.md
+      - 任务五 复制数据表: mysql/textbook/5-mysql-table-management/copy-table.md
+      - 任务六 删除数据表: mysql/textbook/5-mysql-table-management/delete-table.md
+    - 项目六 MySQL数据库完整性:
+      - 任务一 实体完整性: mysql/textbook/6-mysql-database-integrity/entity-integrity.md
+      - 任务二 参照完整性: mysql/textbook/6-mysql-database-integrity/referential-integrity.md
+      - 任务三 用户定义的完整性: mysql/textbook/6-mysql-database-integrity/user-defined-integrity.md
+      - 任务四 完整性约束命名子句: mysql/textbook/6-mysql-database-integrity/integrity-constraint-naming-clause.md
+    - 项目七 MySQL数据查询与更新:
+      - 任务一 单表查询: mysql/textbook/7-mysql-data-query-and-update/single-table-query.md
+      - 任务二 连接查询: mysql/textbook/7-mysql-data-query-and-update/join-query.md
+      - 任务三 嵌套查询: mysql/textbook/7-mysql-data-query-and-update/nested-query.md
+      - 任务四 插入数据: mysql/textbook/7-mysql-data-query-and-update/insert-data.md
+      - 任务五 修改数据: mysql/textbook/7-mysql-data-query-and-update/update-data.md
+      - 任务六 删除数据: mysql/textbook/7-mysql-data-query-and-update/delete-data.md
+    - 项目八 MySQL索引与视图:
+      - 任务一 索引: mysql/textbook/8-mysql-index-and-view/indexes.md
+      - 任务二 视图: mysql/textbook/8-mysql-index-and-view/views.md
+    - 项目九 MySQL的数据库编程:
+      - 任务一 触发器: mysql/textbook/9-mysql-database-programming/triggers.md
+      - 任务二 事件: mysql/textbook/9-mysql-database-programming/events.md
+      - 任务三 存储过程: mysql/textbook/9-mysql-database-programming/stored-procedures.md
+      - 任务四 存储函数: mysql/textbook/9-mysql-database-programming/stored-functions.md
+    - 项目十 数据库设计:
+      - 任务一 需求分析: mysql/textbook/10-database-design/requirement-analysis.md
+      - 任务二 概念结构设计: mysql/textbook/10-database-design/conceptual-structure-design.md
+      - 任务三 逻辑结构设计: mysql/textbook/10-database-design/logical-structure-design.md
+      - 任务四 物理结构设计: mysql/textbook/10-database-design/physical-structure-design.md
+      - 任务五 数据库的实施和维护: mysql/textbook/10-database-design/database-implementation-and-maintenance.md
+      - 任务六 关系模式的规范化: mysql/textbook/10-database-design/relational-schema-normalization.md
+    - 项目十一 数据库安全:
+      - 任务一 数据库安全概述: mysql/textbook/11-database-security/database-security-overview.md
+      - 任务二 用户管理: mysql/textbook/11-database-security/user-management.md
+      - 任务三 权限管理: mysql/textbook/11-database-security/privilege-management.md
+      - 任务四 角色管理: mysql/textbook/11-database-security/role-management.md
+    - 项目十二 MySQL数据库的备份和恢复:
+      - 任务一 数据库备份概述: mysql/textbook/12-mysql-database-backup-and-recovery/database-backup-overview.md
+      - 任务二 使用MYSQLDUMP命令进行备份: mysql/textbook/12-mysql-database-backup-and-recovery/backup-using-mysqldump.md
+      - 任务三 MySQL数据恢复: mysql/textbook/12-mysql-database-backup-and-recovery/mysql-data-recovery.md
 
   
     
