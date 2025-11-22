@@ -1,8 +1,0 @@
-![周测月考](images/month3/yue1.png)
-![周测月考](images/month3/yue2.png)
-![周测月考](images/month3/yue3.png)
-![周测月考](images/month3/yue4.png)
-![周测月考](images/month3/yue5.png)
-![周测月考](images/month3/yue6.png)
-![周测月考](images/month3/yue7.png)
-![周测月考](images/month3/yue8.png)
