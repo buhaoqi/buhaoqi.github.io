@@ -135,6 +135,9 @@ nav:
       - 任务一 Connection连接字符串: csharp/textbook/12/connection-strings.md
       - 任务二 使用connection对象: csharp/textbook/12/using-connection.md
       - 任务三 连接的测试: csharp/textbook/12/connection-testing.md
+    - 参考答案:
+      - C#技能实训答案: csharp/exercises/answers/csharp-training.md
+      - C#技能实训项目: csharp/exercises/answers/winform-project-sims.md
   - 数据库原理与应用技术:
     - 考试大纲: mysql/textbook/index.md
     - 教材目录: mysql/textbook/cover.md
