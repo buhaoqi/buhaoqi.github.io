@@ -1598,26 +1598,26 @@ pad的电池是：5000毫安电池
 ## 第3部分：模拟试卷
 
 ###  基础模拟1
-![C#技能实训模拟试卷](answer3/233.jpg)
-![C#技能实训模拟试卷](answer3/234.jpg)
-![C#技能实训模拟试卷](answer3/235.jpg)
+![C#技能实训模拟试卷](images/233.jpg)
+![C#技能实训模拟试卷](images/234.jpg)
+![C#技能实训模拟试卷](images/235.jpg)
 ###  基础模拟2
-![C#技能实训模拟试卷](answer3/236.jpg)
-![C#技能实训模拟试卷](answer3/237.jpg)
-![C#技能实训模拟试卷](answer3/238.jpg)
-![C#技能实训模拟试卷](answer3/239.jpg)
+![C#技能实训模拟试卷](images/236.jpg)
+![C#技能实训模拟试卷](images/237.jpg)
+![C#技能实训模拟试卷](images/238.jpg)
+![C#技能实训模拟试卷](images/239.jpg)
 ###  进阶模拟1
-![C#技能实训模拟试卷](answer3/240.jpg)
-![C#技能实训模拟试卷](answer3/241.jpg)
-![C#技能实训模拟试卷](answer3/242.jpg)
+![C#技能实训模拟试卷](images/240.jpg)
+![C#技能实训模拟试卷](images/241.jpg)
+![C#技能实训模拟试卷](images/242.jpg)
 ###  进阶模拟2
-![C#技能实训模拟试卷](answer3/243.jpg)
-![C#技能实训模拟试卷](answer3/244.jpg)
-![C#技能实训模拟试卷](answer3/245.jpg)
+![C#技能实训模拟试卷](images/243.jpg)
+![C#技能实训模拟试卷](images/244.jpg)
+![C#技能实训模拟试卷](images/245.jpg)
 ###  进阶模拟3
-![C#技能实训模拟试卷](answer3/246.jpg)
-![C#技能实训模拟试卷](answer3/247.jpg)
-![C#技能实训模拟试卷](answer3/248.jpg)
-![C#技能实训模拟试卷](answer3/249.jpg)
-![C#技能实训模拟试卷](answer3/250.jpg)
+![C#技能实训模拟试卷](images/246.jpg)
+![C#技能实训模拟试卷](images/247.jpg)
+![C#技能实训模拟试卷](images/248.jpg)
+![C#技能实训模拟试卷](images/249.jpg)
+![C#技能实训模拟试卷](images/250.jpg)
 
