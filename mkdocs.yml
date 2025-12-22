@@ -109,6 +109,10 @@ nav:
       - 任务二 多维数组: csharp/textbook/6/2-multi-dimensional-arrays.md
       - 任务三 数组的遍历: csharp/textbook/6/3-array-traversal.md
       - 任务四 数组的排序和查找: csharp/textbook/6/4-array-sorting-and-searching.md
+      - 数组练习题:
+        - 数组基础练习: csharp/textbook/6/array-exercises1.md
+        - new关键字数组练习: csharp/textbook/6/array-exercises2.md
+        - 数组方法练习:  csharp/textbook/6/array-exercises3.md
     - 项目七 C#面向对象基础: 
       - 任务一 类: csharp/textbook/7/class.md
       - 任务二 方法: csharp/textbook/7/methods.md
@@ -123,6 +127,8 @@ nav:
       - 任务三 DateTime类: csharp/textbook/9/datetime-class.md
       - 任务四 Random类: csharp/textbook/9/random-class.md
       - 任务五 Convert类: csharp/textbook/9/convert-class.md
+      - 练习题:
+        - 字符串练习: csharp/textbook/9/string-exercises.md
     - 项目十 C#文件操作: 
       - 任务一 文件的种类: csharp/textbook/10/file-types.md
       - 任务二 创建文件: csharp/textbook/10/create-file.md
@@ -136,8 +142,22 @@ nav:
       - 任务二 使用connection对象: csharp/textbook/12/using-connection.md
       - 任务三 连接的测试: csharp/textbook/12/connection-testing.md
     - 参考答案:
-      - C#技能实训答案: csharp/exercises/answers/csharp-training.md
-      - C#技能实训项目: csharp/exercises/answers/winform-project-sims.md
+      - 同步训练答案: 
+        - 项目1-2: csharp/answers/synchronus-training/xm1.md
+        - 项目3: csharp/answers/synchronus-training/xm3.md
+        - 项目4: csharp/answers/synchronus-training/xm4.md
+        - 项目5: csharp/answers/synchronus-training/xm5.md
+        - 项目6: csharp/answers/synchronus-training/xm6.md
+        - 项目7: csharp/answers/synchronus-training/xm7.md
+        - 项目8: csharp/answers/synchronus-training/xm8.md
+        - 项目9: csharp/answers/synchronus-training/xm9.md
+        - 项目10: csharp/answers/synchronus-training/xm10.md
+        - 项目11: csharp/answers/synchronus-training/xm11.md
+        - 项目12: csharp/answers/synchronus-training/xm12.md
+      - 技能实训答案: csharp/answers/tech-training/csharp-training.md
+      - 技能实训项目答案: csharp/answers/tech-training/winform-project-sims.md
+      - 旧版周测月考答案: csharp/answers/week-month/week-month-answers.md
+      - 领海答案: csharp/answers/leading/answers.md
   - 数据库原理与应用技术:
     - 考试大纲: mysql/textbook/index.md
     - 教材目录: mysql/textbook/cover.md
@@ -205,42 +225,45 @@ nav:
       - 任务二 使用MYSQLDUMP命令进行备份: mysql/textbook/12-mysql-database-backup-and-recovery/backup-using-mysqldump.md
       - 任务三 MySQL数据恢复: mysql/textbook/12-mysql-database-backup-and-recovery/mysql-data-recovery.md
   - 中文版Office实用教程:
-    - 考试大纲: office/textbook/word2010/index.md
-    - 教材目录: office/textbook/word2010/cover.md
-    - 模块1 Word2010应用:
-      - 项目一 创建Word2010文档: 
-        - 任务一 启动Word2010: office/textbook/word2010/1/proj1-create-doc/task1-word2010-intro.md
-        - 任务二 认识Word2010工作界面: office/textbook/word2010/1/proj1-create-doc/task2-create-and-save-doc.md
-        - 任务三 打开与关闭文档: office/textbook/word2010/1/proj1-create-doc/task3-open-and-close-doc.md
-        - 任务四 文档视图切换: office/textbook/word2010/1/proj1-create-doc/task4-doc-view-switching.md
-        - 任务五 使用帮助: office/textbook/word2010/1/proj1-create-doc/task5-using-help.md
+    - 考试大纲: office/textbook/word/index.md
+    - 教材目录: office/textbook/word/cover.md
+    - 模块1 word应用:
+      - 项目一 创建word文档: 
+        - 任务一 启动word: office/textbook/word/1/proj1-create-doc/task1-word-intro.md
+        - 任务二 认识word工作界面: office/textbook/word/1/proj1-create-doc/task2-create-and-save-doc.md
+        - 任务三 打开与关闭文档: office/textbook/word/1/proj1-create-doc/task3-open-and-close-doc.md
+        - 任务四 文档视图切换: office/textbook/word/1/proj1-create-doc/task4-doc-view-switching.md
+        - 任务五 使用帮助: office/textbook/word/1/proj1-create-doc/task5-using-help.md
       - 项目二 编辑文本: 
-        - 任务一 选择文本: office/textbook/word2010/1/proj2-edit-text/task1-selecting-text.md
-        - 任务二 输入文本: office/textbook/word2010/1/proj2-edit-text/task2-inputting-text.md
-        - 任务三 删除文本: office/textbook/word2010/1/proj2-edit-text/task3-deleting-text.md
-        - 任务四 撤销与恢复操作: office/textbook/word2010/1/proj2-edit-text/task4-undo-and-redo.md
-        - 任务五 查找与替换文本: office/textbook/word2010/1/proj2-edit-text/task5-finding-and-replacing-text.md
+        - 任务一 选择文本: office/textbook/word/1/proj2-edit-text/task1-selecting-text.md
+        - 任务二 输入文本: office/textbook/word/1/proj2-edit-text/task2-inputting-text.md
+        - 任务三 删除文本: office/textbook/word/1/proj2-edit-text/task3-deleting-text.md
+        - 任务四 撤销与恢复操作: office/textbook/word/1/proj2-edit-text/task4-undo-and-redo.md
+        - 任务五 查找与替换文本: office/textbook/word/1/proj2-edit-text/task5-finding-and-replacing-text.md
       - 项目三 文档格式化: 
-        - 任务一 字体格式设置: office/textbook/word2010/1/proj3-doc-formatting/task1-font-formatting.md
-        - 任务二 段落格式设置: office/textbook/word2010/1/proj3-doc-formatting/task2-paragraph-formatting.md
-        - 任务三 页面格式设置: office/textbook/word2010/1/proj3-doc-formatting
+        - 任务一 字体格式设置: office/textbook/word/1/proj3-doc-formatting/task1-font-formatting.md
+        - 任务二 段落格式设置: office/textbook/word/1/proj3-doc-formatting/task2-paragraph-formatting.md
+        - 任务三 页面格式设置: office/textbook/word/1/proj3-doc-formatting
       - 项目四 设置页眉与打印输出: 
-        - 任务一 页眉与页脚设置: office/textbook/word2010/1/proj4-header-and-footer/task1-header-and-footer-setup.md
-        - 任务二 页码设置: office/textbook/word2010/1/proj4-header-and-footer/task2-page-number-setup.md
-        - 任务三 打印预览: office/textbook/word2010/1/proj4-header-and-footer/task3-print-preview.md
-        - 任务四 打印文档: office/textbook/word2010/1/proj4-header-and-footer/task4-printing-documents.md
-      - 项目五 Word2010表格应用: 
-        - 任务一 创建表格: office/textbook/word2010/1/proj5-word-tables/task1-creating-tables.md
-        - 任务二 表格数据输入与编辑: office/textbook/word2010/1/proj5-word-tables/task2-inputting-and-editing-table-data.md
-        - 任务三 表格格式设置: office/textbook/word2010/1/proj5-word-tables/task3-table-formatting.md
+        - 任务一 页眉与页脚设置: office/textbook/word/1/proj4-header-and-footer/task1-header-and-footer-setup.md
+        - 任务二 页码设置: office/textbook/word/1/proj4-header-and-footer/task2-page-number-setup.md
+        - 任务三 打印预览: office/textbook/word/1/proj4-header-and-footer/task3-print-preview.md
+        - 任务四 打印文档: office/textbook/word/1/proj4-header-and-footer/task4-printing-documents.md
+      - 项目五 word表格应用: 
+        - 任务一 创建表格: office/textbook/word/1/proj5-word-tables/task1-creating-tables.md
+        - 任务二 表格数据输入与编辑: office/textbook/word/1/proj5-word-tables/task2-inputting-and-editing-table-data.md
+        - 任务三 表格格式设置: office/textbook/word/1/proj5-word-tables/task3-table-formatting.md
       - 项目六 图文混排: 
-        - 任务一 插入图片: office/textbook/word2010/1/proj6-mixed-text-and-images/task1-inserting-pictures.md
-        - 任务二 图片格式设置: office/textbook/word2010/1/proj6-mixed-text-and-images/task2-picture-formatting.md
-        - 任务三 插入艺术字: office/textbook/word2010/1/proj6-mixed-text-and-images/task3-inserting-wordart.md
-      - 项目七 Word2010高级应用: 
-        - 任务一 插入页码: office/textbook/word2010/1/proj7-advanced-applications/task1-inserting-page-numbers.md
-        - 任务二 插入符号与特殊字符: office/textbook/word2010/1/proj7-advanced-applications/task2-inserting-symbols-and-special-characters.md
-        - 任务三 使用查找与替换功能: office/textbook/word2010/1/proj7-advanced-applications/task3-using-find-and-replace.md
+        - 任务一 插入图片: office/textbook/word/1/proj6-mixed-text-and-images/task1-inserting-pictures.md
+        - 任务二 图片格式设置: office/textbook/word/1/proj6-mixed-text-and-images/task2-picture-formatting.md
+        - 任务三 插入艺术字: office/textbook/word/1/proj6-mixed-text-and-images/task3-inserting-wordart.md
+      - 项目七 word高级应用: 
+        - 任务一 插入页码: office/textbook/word/1/proj7-advanced-applications/task1-inserting-page-numbers.md
+        - 任务二 插入符号与特殊字符: office/textbook/word/1/proj7-advanced-applications/task2-inserting-symbols-and-special-characters.md
+        - 任务三 使用查找与替换功能: office/textbook/word/1/proj7-advanced-applications/task3-using-find-and-replace.md
+      - 教材同步训练答案: office/answers/word/sychronous-training-answers.md
+      - 育仁单元测试答案: office/answers/word/unit-quiz-answers.md
+      - 育仁周测月考答案: office/answers/word/week-month-answers.md
     # (更多内容待添加)
   - 不好奇课堂: https://buhaoqi.com
   
