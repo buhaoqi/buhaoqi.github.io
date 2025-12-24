@@ -4,6 +4,162 @@ tags: []
 
 ---
 
+# C# 数组元素交换练习题（适合初学者）
+
+以下是3道专门为初学者设计的数组元素交换练习题，重点练习临时变量的使用方法：
+
+## 题目1：交换数组的首尾元素
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 创建一个包含5个整数的数组
+        int[] numbers = { 10, 20, 30, 40, 50 };
+        
+        Console.WriteLine("交换前的数组：");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+        
+        // 使用临时变量交换数组的第一个元素和最后一个元素
+        // 这里使用临时变量temp来暂存第一个元素的值
+        int temp = numbers[0];      // 步骤1：保存第一个元素的值到temp
+        numbers[0] = numbers[4];    // 步骤2：将最后一个元素的值赋给第一个元素
+        numbers[4] = temp;          // 步骤3：将temp中保存的值赋给最后一个元素
+        
+        Console.WriteLine("\n\n交换后的数组：");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+}
+```
+
+## 题目2：交换数组中指定位置的两个元素
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 创建一个包含6个字符串的数组
+        string[] fruits = { "苹果", "香蕉", "橙子", "葡萄", "草莓", "西瓜" };
+        
+        Console.WriteLine("交换前的数组：");
+        for (int i = 0; i < fruits.Length; i++)
+        {
+            Console.Write(fruits[i] + " ");
+        }
+        
+        // 要求：交换第2个元素（索引1）和第5个元素（索引4）
+        int index1 = 1;  // 要交换的第一个位置
+        int index2 = 4;  // 要交换的第二个位置
+        
+        // 使用临时变量交换指定位置的元素
+        string temp = fruits[index1];    // 步骤1：保存第一个位置的值
+        fruits[index1] = fruits[index2]; // 步骤2：将第二个位置的值赋给第一个位置
+        fruits[index2] = temp;           // 步骤3：将保存的值赋给第二个位置
+        
+        Console.WriteLine("\n\n交换第2个和第5个元素后的数组：");
+        for (int i = 0; i < fruits.Length; i++)
+        {
+            Console.Write(fruits[i] + " ");
+        }
+    }
+}
+```
+
+## 题目3：将数组元素向右移动一位（循环移位）
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 创建一个包含5个整数的数组
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        
+        Console.WriteLine("移动前的数组：");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+        
+        // 将数组所有元素向右移动一位，最后一个元素移动到第一个位置
+        // 例如：{1,2,3,4,5} 变成 {5,1,2,3,4}
+        
+        // 步骤1：保存最后一个元素的值
+        int temp = numbers[numbers.Length - 1];
+        
+        // 步骤2：从后向前，将每个元素的值赋给后一个位置
+        for (int i = numbers.Length - 1; i > 0; i--)
+        {
+            numbers[i] = numbers[i - 1];
+        }
+        
+        // 步骤3：将保存的最后一个元素的值赋给第一个位置
+        numbers[0] = temp;
+        
+        Console.WriteLine("\n\n向右移动一位后的数组：");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+        
+        // 可选：反向操作，向左移动一位
+        Console.WriteLine("\n\n反向操作（向左移动一位）恢复原数组：");
+        
+        // 保存第一个元素的值
+        temp = numbers[0];
+        
+        // 从前向后，将每个元素的值赋给前一个位置
+        for (int i = 0; i < numbers.Length - 1; i++)
+        {
+            numbers[i] = numbers[i + 1];
+        }
+        
+        // 将保存的第一个元素的值赋给最后一个位置
+        numbers[numbers.Length - 1] = temp;
+        
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    }
+}
+```
+
+## 练习提示：
+
+1. **临时变量的作用**：临时变量用于暂存一个值，防止在交换过程中数据丢失
+2. **交换的三步法**：
+   - 将第一个值保存到临时变量
+   - 将第二个值赋给第一个位置
+   - 将临时变量中的值赋给第二个位置
+3. **数组索引**：注意C#数组索引从0开始
+4. **变量类型**：临时变量的类型应与数组元素的类型一致
+
+## 扩展挑战：
+
+完成以上基础练习后，可以尝试：
+1. 编写一个函数，接收数组和两个索引作为参数，交换这两个位置的元素
+2. 实现数组反转（不使用Array.Reverse方法）
+3. 实现数组元素向左移动k位
+
+这些练习有助于加深对临时变量和数组操作的理解。
+
+
+
 下面我**系统、按初学者友好顺序**，为你**详解 C# 中 `Array` 类的常见属性与方法**，并配合**通俗解释 + 示例代码**，非常适合教学或自学使用。
 
 ---
