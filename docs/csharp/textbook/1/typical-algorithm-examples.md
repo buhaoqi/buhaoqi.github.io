@@ -4,13 +4,98 @@ tags: []
 
 ---
 
-![算法与程序基础](../images/1-algorithm/009.jpeg)
-![算法与程序基础](../images/1-algorithm/010.jpeg)
-![算法与程序基础](../images/1-algorithm/011.jpeg)
-![算法与程序基础](../images/1-algorithm/012.jpeg)
-![算法与程序基础](../images/1-algorithm/013.jpeg)
-![算法与程序基础](../images/1-algorithm/014.jpeg)
-![算法与程序基础](../images/1-algorithm/015.jpeg)
-![算法与程序基础](../images/1-algorithm/016.jpeg)
-![算法与程序基础](../images/1-algorithm/017.jpeg)
-![算法与程序基础](../images/1-algorithm/018.jpeg)
+## 猜数字
+
+尝试写一个程序，让你想一个数字，让计算机用 for 循环来猜（提示：使用二分查找逻辑）。
+
+这是一个非常棒的逻辑训练！在这个“反向挑战”中，角色互换了：**你心中想一个数字，由计算机来执行“二分查找”算法。**
+
+二分查找（Binary Search）的核心思想是：每次都猜中间那个数，根据你的反馈（大了或小了），直接排除掉一半的错误答案。
+
+### 计算机猜数字程序
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("--- 反向猜数字：计算机来猜 ---");
+        Console.WriteLine("请在心中想一个 1 到 100 之间的数字，然后按任意键开始。");
+        Console.ReadKey();
+
+        int low = 1;      // 查找范围的下限
+        int high = 100;   // 查找范围的上限
+        int maxAttempts = 7; // 100以内数字，二分法最多只需7次
+
+        // 使用 for 循环给计算机有限的尝试次数
+        for (int i = 1; i <= maxAttempts; i++)
+        {
+            // 1. 计算中间值（二分查找的核心）
+            int guess = (low + high) / 2;
+
+            Console.WriteLine($"\n第 {i} 次尝试：计算机猜是 {guess}");
+            Console.WriteLine("请给计算机反馈：1.猜大了  2.猜小了  3.猜对了");
+            
+            string feedback = Console.ReadLine();
+
+            // 2. 根据反馈调整搜索范围
+            if (feedback == "3")
+            {
+                Console.WriteLine($"\n哈哈！计算机只用了 {i} 次就赢了！");
+                break;
+            }
+            else if (feedback == "1")
+            {
+                // 猜大了，说明目标在左半边，调整上限
+                high = guess - 1;
+            }
+            else if (feedback == "2")
+            {
+                // 猜小了，说明目标在右半边，调整下限
+                low = guess + 1;
+            }
+            else
+            {
+                Console.WriteLine("无效输入，浪费了一次机会哦！");
+            }
+
+            // 如果范围重叠且还没猜对，说明玩家可能记错了数字
+            if (low > high)
+            {
+                Console.WriteLine("\n奇怪... 按照你的反馈，这个数字不存在。你是不是记错数字了？");
+                break;
+            }
+        }
+
+        Console.WriteLine("\n游戏结束。");
+        Console.ReadKey();
+    }
+}
+
+```
+
+---
+
+### 为什么二分查找效率这么高？
+
+二分查找之所以强大，是因为它每次都能**砍掉一半**的可能性。你可以通过下面的示意图理解它的逻辑：
+
+### 核心知识点解析
+
+1. **范围缩小逻辑**：
+* 如果你说“猜大了”，计算机就知道目标数字一定比 `guess` 小，所以它把**上限 (`high`)** 移到 `guess - 1`。
+* 如果你说“猜小了”，计算机就知道目标数字一定比 `guess` 大，所以它把**下限 (`low`)** 移到 `guess + 1`。
+
+
+2. **效率计算**：
+对于 1 到 100 的范围，计算机最多只需要  次，也就是最多 **7 次** 必然能猜中。
+3. **整数除法**：
+在 C# 中，`int / int` 会自动舍去小数部分。例如 `(1 + 100) / 2` 的结果是 `50` 而不是 `50.5`，这正好符合我们找索引的需求。
+
+### 下一步建议
+
+你可以试着把范围从 1-100 扩大到 **1-1000**，你会发现计算机依然能在 **10 次** 左右猜中。
+
+**你想了解如何把这个逻辑改造成“作弊检测器”（即如果玩家撒谎，程序能立刻发现）吗？**

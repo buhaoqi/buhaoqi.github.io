@@ -109,6 +109,7 @@ nav:
       - 任务二 多维数组: csharp/textbook/6/2-multi-dimensional-arrays.md
       - 任务三 数组的遍历: csharp/textbook/6/3-array-traversal.md
       - 任务四 数组的排序和查找: csharp/textbook/6/4-array-sorting-and-searching.md
+      - 附:数组方法: csharp/textbook/6/array-methods.md
       - 数组练习题:
         - 数组基础练习: csharp/textbook/6/array-exercises1.md
         - new关键字数组练习: csharp/textbook/6/array-exercises2.md
@@ -141,6 +142,9 @@ nav:
       - 任务一 Connection连接字符串: csharp/textbook/12/connection-strings.md
       - 任务二 使用connection对象: csharp/textbook/12/using-connection.md
       - 任务三 连接的测试: csharp/textbook/12/connection-testing.md
+    - 项目:
+      - 游戏项目:
+        - 1.贪吃蛇: csharp/textbook/projects/games/proj1-snake-game.md
     - 参考答案:
       - 同步训练答案: 
         - 项目1-2: csharp/answers/synchronus-training/xm1.md
