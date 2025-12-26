@@ -231,7 +231,7 @@ nav:
   - 中文版Office实用教程:
     - 考试大纲: office/textbook/word/index.md
     - 教材目录: office/textbook/word/cover.md
-    - 模块1 word应用:
+    - 模块一 word应用:
       - 项目一 创建word文档: 
         - 任务一 启动word: office/textbook/word/1/proj1-create-doc/task1-word-intro.md
         - 任务二 认识word工作界面: office/textbook/word/1/proj1-create-doc/task2-create-and-save-doc.md
@@ -265,6 +265,8 @@ nav:
         - 任务一 插入页码: office/textbook/word/1/proj7-advanced-applications/task1-inserting-page-numbers.md
         - 任务二 插入符号与特殊字符: office/textbook/word/1/proj7-advanced-applications/task2-inserting-symbols-and-special-characters.md
         - 任务三 使用查找与替换功能: office/textbook/word/1/proj7-advanced-applications/task3-using-find-and-replace.md
+    - 模块二 excel应用:
+      - 项目一 制作常用电子表格: office/textbook/excel/proj1-common-spreadsheets.md
       - 教材同步训练答案: office/answers/word/sychronous-training-answers.md
       - 育仁单元测试答案: office/answers/word/unit-quiz-answers.md
       - 育仁周测月考答案: office/answers/word/week-month-answers.md
