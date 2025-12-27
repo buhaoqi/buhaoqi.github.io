@@ -77,7 +77,7 @@ nav:
   - 首页: 
     - 考试大纲: ./index.md
   - 算法与程序设计:
-    - 考试大纲: csharp/textbook/index.md
+    - 2026年考试大纲: csharp/textbook/index.md
     - 教材目录: csharp/textbook/cover.md
     - 项目一 算法与程序基础: 
       - 任务一 算法的定义及特性: csharp/textbook/1/algorithm-definition-and-characteristics.md
@@ -109,11 +109,10 @@ nav:
       - 任务二 多维数组: csharp/textbook/6/2-multi-dimensional-arrays.md
       - 任务三 数组的遍历: csharp/textbook/6/3-array-traversal.md
       - 任务四 数组的排序和查找: csharp/textbook/6/4-array-sorting-and-searching.md
-      - 附:数组方法: csharp/textbook/6/array-methods.md
+      - 附:数组方法: csharp/textbook/6/5-array-methods.md
       - 数组练习题:
-        - 数组基础练习: csharp/textbook/6/array-exercises1.md
-        - new关键字数组练习: csharp/textbook/6/array-exercises2.md
-        - 数组方法练习:  csharp/textbook/6/array-exercises3.md
+        - 数组基础练习: csharp/textbook/6/array-exercise-basics.md
+        - 数组方法练习:  csharp/textbook/6/array-exercise-methods.md
     - 项目七 C#面向对象基础: 
       - 任务一 类: csharp/textbook/7/class.md
       - 任务二 方法: csharp/textbook/7/methods.md
@@ -163,7 +162,7 @@ nav:
       - 旧版周测月考答案: csharp/answers/week-month/week-month-answers.md
       - 领海答案: csharp/answers/leading/answers.md
   - 数据库原理与应用技术:
-    - 考试大纲: mysql/textbook/index.md
+    - 2026年考试大纲: mysql/textbook/index.md
     - 教材目录: mysql/textbook/cover.md
     - 项目一 绪论:
       - 任务一数据库系统概述: mysql/textbook/1-overview/overview.md
@@ -229,7 +228,7 @@ nav:
       - 任务二 使用MYSQLDUMP命令进行备份: mysql/textbook/12-mysql-database-backup-and-recovery/backup-using-mysqldump.md
       - 任务三 MySQL数据恢复: mysql/textbook/12-mysql-database-backup-and-recovery/mysql-data-recovery.md
   - 中文版Office实用教程:
-    - 考试大纲: office/textbook/index.md
+    - 2026年考试大纲: office/textbook/index.md
     - 模块一 Word应用:
       - 项目一 创建word文档: 
         - 任务一 启动word: office/textbook/word/proj1-create-doc/task1-start-word.md
