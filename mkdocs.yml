@@ -229,47 +229,83 @@ nav:
       - 任务二 使用MYSQLDUMP命令进行备份: mysql/textbook/12-mysql-database-backup-and-recovery/backup-using-mysqldump.md
       - 任务三 MySQL数据恢复: mysql/textbook/12-mysql-database-backup-and-recovery/mysql-data-recovery.md
   - 中文版Office实用教程:
-    - 考试大纲: office/textbook/word/index.md
-    - 教材目录: office/textbook/word/cover.md
-    - 模块一 word应用:
+    - 考试大纲: office/textbook/index.md
+    - 模块一 Word应用:
       - 项目一 创建word文档: 
-        - 任务一 启动word: office/textbook/word/1/proj1-create-doc/task1-word-intro.md
-        - 任务二 认识word工作界面: office/textbook/word/1/proj1-create-doc/task2-create-and-save-doc.md
-        - 任务三 打开与关闭文档: office/textbook/word/1/proj1-create-doc/task3-open-and-close-doc.md
-        - 任务四 文档视图切换: office/textbook/word/1/proj1-create-doc/task4-doc-view-switching.md
-        - 任务五 使用帮助: office/textbook/word/1/proj1-create-doc/task5-using-help.md
+        - 任务一 启动word: office/textbook/word/proj1-create-doc/task1-start-word.md
+        - 任务二 认识word工作界面: office/textbook/word/proj1-create-doc/task2-word-ui.md
+        - 任务三 打开与关闭文档: office/textbook/word/proj1-create-doc/task3-create-doc.md
+        - 任务四 文档视图切换: office/textbook/word/proj1-create-doc/task4-save-exit.md
       - 项目二 编辑文本: 
-        - 任务一 选择文本: office/textbook/word/1/proj2-edit-text/task1-selecting-text.md
-        - 任务二 输入文本: office/textbook/word/1/proj2-edit-text/task2-inputting-text.md
-        - 任务三 删除文本: office/textbook/word/1/proj2-edit-text/task3-deleting-text.md
-        - 任务四 撤销与恢复操作: office/textbook/word/1/proj2-edit-text/task4-undo-and-redo.md
-        - 任务五 查找与替换文本: office/textbook/word/1/proj2-edit-text/task5-finding-and-replacing-text.md
+        - 任务一 选择文本: office/textbook/word/proj2-text-editing/task1.md
+        - 任务二 输入文本: office/textbook/word/proj2-text-editing/task2.md
+        - 任务三 删除文本: office/textbook/word/proj2-text-editing/task3.md
+        - 任务四 撤销与恢复操作: office/textbook/word/proj2-text-editing/task4.md
+        - 任务五 查找与替换文本: office/textbook/word/proj2-text-editing/task5.md
       - 项目三 文档格式化: 
-        - 任务一 字体格式设置: office/textbook/word/1/proj3-doc-formatting/task1-font-formatting.md
-        - 任务二 段落格式设置: office/textbook/word/1/proj3-doc-formatting/task2-paragraph-formatting.md
-        - 任务三 页面格式设置: office/textbook/word/1/proj3-doc-formatting
+        - 任务一 字体格式设置: office/textbook/word/proj3-format-doc/task1.md
+        - 任务二 段落格式设置: office/textbook/word/proj3-format-doc/task2.md
+        - 任务三 页面格式设置: office/textbook/word/proj3-format-doc/task3.md
       - 项目四 设置页眉与打印输出: 
-        - 任务一 页眉与页脚设置: office/textbook/word/1/proj4-header-and-footer/task1-header-and-footer-setup.md
-        - 任务二 页码设置: office/textbook/word/1/proj4-header-and-footer/task2-page-number-setup.md
-        - 任务三 打印预览: office/textbook/word/1/proj4-header-and-footer/task3-print-preview.md
-        - 任务四 打印文档: office/textbook/word/1/proj4-header-and-footer/task4-printing-documents.md
+        - 任务一 页眉与页脚设置: office/textbook/word/proj4-page-setting/task1.md
+        - 任务二 页码设置: office/textbook/word/proj4-page-setting/task2.md
+        - 任务三 打印预览: office/textbook/word/proj4-page-setting/task3.md
+        - 任务四 打印文档: office/textbook/word/proj4-page-setting/task4.md
       - 项目五 word表格应用: 
-        - 任务一 创建表格: office/textbook/word/1/proj5-word-tables/task1-creating-tables.md
-        - 任务二 表格数据输入与编辑: office/textbook/word/1/proj5-word-tables/task2-inputting-and-editing-table-data.md
-        - 任务三 表格格式设置: office/textbook/word/1/proj5-word-tables/task3-table-formatting.md
+        - 任务一 创建表格: office/textbook/word/proj5-table/task1.md
+        - 任务二 表格数据输入与编辑: office/textbook/word/proj5-table/task2.md
+        - 任务三 表格格式设置: office/textbook/word/proj5-table/task3.md
+        - 任务四 打印文档: office/textbook/word/proj5-table/task4.md
       - 项目六 图文混排: 
-        - 任务一 插入图片: office/textbook/word/1/proj6-mixed-text-and-images/task1-inserting-pictures.md
-        - 任务二 图片格式设置: office/textbook/word/1/proj6-mixed-text-and-images/task2-picture-formatting.md
-        - 任务三 插入艺术字: office/textbook/word/1/proj6-mixed-text-and-images/task3-inserting-wordart.md
+        - 任务一 插入图片: office/textbook/word/proj6-text-image-layout/task1.md
+        - 任务二 图片格式设置: office/textbook/word/proj6-text-image-layout/task2.md
+        - 任务三 插入艺术字: office/textbook/word/proj6-text-image-layout/task3.md
+        - 任务一 插入图片: office/textbook/word/proj6-text-image-layout/task4.md
+        - 任务二 图片格式设置: office/textbook/word/proj6-text-image-layout/task5.md
+        - 任务三 插入艺术字: office/textbook/word/proj6-text-image-layout/task6.md
       - 项目七 word高级应用: 
-        - 任务一 插入页码: office/textbook/word/1/proj7-advanced-applications/task1-inserting-page-numbers.md
-        - 任务二 插入符号与特殊字符: office/textbook/word/1/proj7-advanced-applications/task2-inserting-symbols-and-special-characters.md
-        - 任务三 使用查找与替换功能: office/textbook/word/1/proj7-advanced-applications/task3-using-find-and-replace.md
-    - 模块二 excel应用:
-      - 项目一 制作常用电子表格: office/textbook/excel/proj1-common-spreadsheets.md
-      - 教材同步训练答案: office/answers/word/sychronous-training-answers.md
-      - 育仁单元测试答案: office/answers/word/unit-quiz-answers.md
-      - 育仁周测月考答案: office/answers/word/week-month-answers.md
+        - 任务一 插入页码: office/textbook/word/proj7-advanced-apply/task1.md
+        - 任务二 插入符号与特殊字符: office/textbook/word/proj7-advanced-apply/task2.md
+    - 模块二 Excel应用:
+      - 项目一 制作常用电子表格:
+        - 任务一 Excel入门: office/textbook/excel/proj1/task1.md
+        - 任务二 工作薄工作表: office/textbook/excel/proj1/task2.md
+        - 任务三 制作表格: office/textbook/excel/proj1/task3.md
+        - 任务四 美化表格: office/textbook/excel/proj1/task4.md
+        - 任务五 输出表格: office/textbook/excel/proj1/task5.md
+      - 项目二 公式与函数:
+        - 任务一 公式的使用: office/textbook/excel/proj2/task1.md
+        - 任务二 函数的使用: office/textbook/excel/proj2/task2.md
+      - 项目三 数据处理:
+        - 任务一 排序: office/textbook/excel/proj3/task1.md
+        - 任务二 筛选: office/textbook/excel/proj3/task2.md
+        - 任务三 分类汇总: office/textbook/excel/proj3/task3.md
+      - 项目四 图表制作:
+        - 任务一 图表: office/textbook/excel/proj4/task1.md
+        - 任务二 迷你图: office/textbook/excel/proj4/task2.md
+      - 项目五 数据透视表图:
+        - 任务一 数据透视表: office/textbook/excel/proj5/task1.md
+        - 任务二 数据透视图: office/textbook/excel/proj5/task2.md
+    - 模块三 PPT应用:
+      - 项目一 基本操作: office/textbook/ppt/proj1/task1.md
+      - 项目二 演示文稿的编辑:
+        - 任务一 插入和设置对象: office/textbook/ppt/proj2/task1.md
+        - 任务二 使用表格和图表: office/textbook/ppt/proj2/task2.md
+        - 任务三 SmartArt图形的应用: office/textbook/ppt/proj2/task3.md
+      - 项目三 演示文稿的效果设置:
+        - 任务一 主题设置: office/textbook/ppt/proj3/task1.md
+        - 任务二 背景设置: office/textbook/ppt/proj3/task2.md
+        - 任务三 母版设置: office/textbook/ppt/proj3/task3.md
+        - 任务四 动画效果设置: office/textbook/ppt/proj3/task4.md
+        - 任务五 切换效果设置: office/textbook/ppt/proj3/task5.md
+      - 项目四 演示文稿放映与输出:
+        - 任务一 插入超链接: office/textbook/ppt/proj4/task1.md
+        - 任务二 页面设置: office/textbook/ppt/proj4/task2.md
+        - 任务三 放映方式设置: office/textbook/ppt/proj4/task3.md
+        - 任务四 作品打包: office/textbook/ppt/proj4/task4.md
+    - 教材同步训练答案: office/answers/word/sychronous-training-answers.md
+    - 育仁单元测试答案: office/answers/word/unit-quiz-answers.md
+    - 育仁周测月考答案: office/answers/word/week-month-answers.md
     # (更多内容待添加)
   - 不好奇课堂: https://buhaoqi.com
   
