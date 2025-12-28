@@ -95,8 +95,12 @@ nav:
       - 任务三 运算符与表达式: csharp/textbook/3/operators-and-expressions.md
     - 项目四 C#控制结构: 
       - 任务一 顺序结构语句: csharp/textbook/4/flow-control.md
-      - 任务二 分支结构语句: csharp/textbook/4/branching.md
-      - 任务三 循环结构语句: csharp/textbook/4/looping.md
+      - 任务二 分支结构语句: 
+        - if语句: csharp/textbook/4/if-statement.md
+        - switch语句: csharp/textbook/4/switch-statement.md
+      - 任务三 循环结构语句: 
+        - For循环: csharp/textbook/4/for-loop.md
+        - While循环: csharp/textbook/4/while-loop.md
       - 任务四 跳转语句: csharp/textbook/4/jumping.md
       - 练习题: csharp/textbook/4/exercises4.md
     - 项目五 Win应用程序开发: 

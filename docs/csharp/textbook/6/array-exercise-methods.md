@@ -4,19 +4,72 @@ tags: []
 
 ---
 
-## 练习:Array.Sort()（10道）
 
-1. 将整数数组 `{9, 4, 2, 7, 1}` 使用 `Array.Sort()` 按升序排序。
-2. 将字符串数组 `{ "banana", "apple", "cherry" }` 使用 `Array.Sort()` 按字典顺序排序。
-3. 将数组 `{ 10, 2, 8, 5, 3 }` 使用 `Array.Sort()` 排序后，再使用 `Array.Reverse()` 实现降序排序。
-4. 将数组 `{ 5, 9, 2, 7, 6, 1 }` 的第 2 个元素起连续 3 个元素（即 9, 2, 7）按升序排序。
-5. 对数组 `{ 100, 50, 200, 30, 10 }` 的最后三个元素使用区间排序。
-6. 对数组 `{ "dog", "cat", "apple", "zebra", "bat" }` 的中间 3 个元素排序后，再整体倒序输出。
-7. 将浮点数组 `{3.1, 2.4, 5.6, 1.2}` 进行升序排序。
-8. 将数组 `{ 5, 4, 3, 2, 1 }` 通过排序和反转的方式变为 `{1, 2, 3, 4, 5}`，再变为 `{5, 4, 3, 2, 1}`。
-9. 给定数组 `{8, 3, 7, 9, 2, 6}`，只对下标 1 \~ 4 的元素进行排序，不影响其他位置。
-10. 对字符串数组 `{ "Sun", "Earth", "Mars", "Venus" }` 使用 `Array.Sort()` 排序，再用 `Array.Reverse()` 实现降序排序。
-## 答案:Array.Sort()（10道）
+## Array.Sort()
+
+以下是各题的 C# 代码实现和输出结果：
+
+## 1. 整数数组升序排序
+```csharp
+int[] numbers1 = { 9, 4, 2, 7, 1 };
+Array.Sort(numbers1);
+Console.WriteLine(string.Join(", ", numbers1));  // 输出: 1, 2, 4, 7, 9
+```
+
+## 2. 字符串数组字典顺序排序
+```csharp
+string[] fruits = { "banana", "apple", "cherry" };
+Array.Sort(fruits);
+Console.WriteLine(string.Join(", ", fruits));  // 输出: apple, banana, cherry
+```
+
+## 3. 对指定范围的元素排序
+```csharp
+int[] numbers2 = { 5, 9, 2, 7, 6, 1 };
+// 从索引 1（第2个元素）开始，连续3个元素
+Array.Sort(numbers2, 1, 3);
+Console.WriteLine(string.Join(", ", numbers2));  // 输出: 5, 2, 7, 9, 6, 1
+// 注意：只对 9, 2, 7 排序，结果为 2, 7, 9
+```
+
+## 4. 对最后三个元素使用区间排序
+```csharp
+int[] numbers3 = { 100, 50, 200, 30, 10 };
+// 方法1：使用范围运算符（C# 8.0+）
+Array.Sort(numbers3[^3..]);  // 对最后三个元素排序
+Console.WriteLine(string.Join(", ", numbers3));  // 输出: 100, 50, 10, 30, 200
+
+// 方法2：使用传统方式
+int[] numbers3b = { 100, 50, 200, 30, 10 };
+Array.Sort(numbers3b, numbers3b.Length - 3, 3);
+Console.WriteLine(string.Join(", ", numbers3b));  // 输出: 100, 50, 10, 30, 200
+```
+
+## 5. 对中间3个元素排序，再整体倒序输出
+```csharp
+string[] animals = { "dog", "cat", "apple", "zebra", "bat" };
+
+// 对中间3个元素（索引1-3）排序
+Array.Sort(animals, 1, 3);  // 排序 "cat", "apple", "zebra"
+Console.WriteLine("排序后数组: " + string.Join(", ", animals));  
+// 输出: dog, apple, cat, zebra, bat
+
+// 整体倒序输出
+Array.Reverse(animals);
+Console.WriteLine("倒序输出: " + string.Join(", ", animals));  
+// 输出: bat, zebra, cat, apple, dog
+```
+
+## 6. 浮点数组升序排序
+```csharp
+double[] floats = { 3.1, 2.4, 5.6, 1.2 };
+Array.Sort(floats);
+Console.WriteLine(string.Join(", ", floats));  // 输出: 1.2, 2.4, 3.1, 5.6
+```
+
+
+
+
 
 ```c#
 // 题 1：升序排序整数数组
@@ -75,6 +128,64 @@ Array.Reverse(arr10);
 Console.WriteLine("题10: " + string.Join(", ", arr10));
 ```
 
+
+## Array.Reverse()
+
+9.  将数组 `{ 10, 2, 8, 5, 3 }` 使用 `Array.Sort()` 排序后，再使用 `Array.Reverse()` 实现降序排序。
+10. 将数组 `{ 5, 4, 3, 2, 1 }` 通过排序和反转的方式变为 `{1, 2, 3, 4, 5}`，再变为 `{5, 4, 3, 2, 1}`。
+10. 对字符串数组 `{ "Sun", "Earth", "Mars", "Venus" }` 使用 `Array.Sort()` 排序，再用 `Array.Reverse()` 实现降序排序。
+
+
+## Array.IndexOf()
+
+```csharp
+// 查找方法示例
+int[] numbers = { 1, 3, 5, 7, 9, 5, 3 };
+int index = Array.IndexOf(numbers, 5);  // 返回 2
+int lastIndex = Array.LastIndexOf(numbers, 5);  // 返回 5
+```
+
+
+## Array.Find()
+
+```c#
+int found = Array.Find(numbers, x => x > 6);  // 返回 7
+```
+
+## Array.Exists()
+
+```c#
+bool existsEven = Array.Exists(arr, x => x % 2 == 0);  // 返回 true
+```
+
+## Array.ForEach()
+```c#
+// 遍历与操作示例
+Array.ForEach(arr, x => Console.Write(x + " "));  // 输出: 9 8 5 2 1
+
+```
+
+
+## Array.Copy()
+
+```c#
+// 复制操作示例
+int[] source = { 1, 2, 3, 4, 5 };
+int[] dest = new int[5];
+Array.Copy(source, dest, 3);  // dest前3个元素变为 {1, 2, 3}
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ## 练习:中级题（15 道）
 
 1. 对一个整数数组先升序排序（`Sort()`），再倒序（`Reverse()`），实现降序排列。
@@ -90,12 +201,11 @@ Console.WriteLine("题10: " + string.Join(", ", arr10));
 11. 查找数组 `[2, 4, 6, 8]` 中不存在的值 `7` 的索引，并处理结果避免错误输出。
 12. 给定数组 `[100, 90, 80, 70, 60]`，不使用 `Sort()`，而是先 `Reverse()` 再判断是否降序排列。
 13. 使用 `Exists()` 判断字符串数组中是否有空字符串 `""`。
-14. 判断数组中是否所有字符串长度都大于 0（使用 `TrueForAll()`）。
+
 15. 综合题：定义一个整数数组，输出其中所有能被 3 整除但不能被 5 整除的元素（使用 `FindAll()`）。
 
 ------
 
-## 答案:中级题（15 道）
 
 ```c#
 /// 1. Sort + Reverse (降序)
