@@ -21,6 +21,21 @@ while (条件表达式)
 }
 ```
 
+示例
+
+```csharp
+int i = 1;
+while (i <= 5)
+{
+    Console.WriteLine("第 " + i + " 次问好");
+    i++;
+}
+```
+
+`while` 循环适合“**次数不确定，但有条件**”的场景。
+
+---
+
 ## 三、练习题
 
 ### 1.登录密码验证
@@ -42,15 +57,27 @@ while (password != "123456")
 Console.WriteLine("登录成功！");
 ```
 
-```csharp
-int i = 1;
-while (i <= 5)
+
+
+
+### 2.查询星期几
+
+```c#
+Console.WriteLine("欢迎查询星期几的英语单词");
+Console.WriteLine("==========================");
+bool toBeContinue = true;
+while (toBeContinue)
 {
-    Console.WriteLine("第 " + i + " 次问好");
-    i++;
+    Console.Write("请输入1-7之间的一个数字：");
+    string num = Console.ReadLine();
+    if( num == "1") Console.WriteLine("星期一：Monday");
+    else if (num == "2") Console.WriteLine("星期二：Tuesday");
+    else if (num == "3") Console.WriteLine("星期三：Wednesday");
+    else if (num == "4") Console.WriteLine("星期四：Thursday");
+    else if (num == "5") Console.WriteLine("星期五：Fridayday");
+    else if (num == "6") Console.WriteLine("星期六:Saturday");
+    else if (num == "7") Console.WriteLine("星期日:Sunday");
+    else  Console.WriteLine("非法输入");
+    Console.WriteLine("========结束=========");
 }
 ```
-
-`while` 循环适合“**次数不确定，但有条件**”的场景。
-
----

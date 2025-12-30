@@ -101,7 +101,8 @@ nav:
       - 任务三 循环结构语句: 
         - For循环: csharp/textbook/4/for-loop.md
         - While循环: csharp/textbook/4/while-loop.md
-      - 任务四 跳转语句: csharp/textbook/4/jumping.md
+      - 任务四 跳转语句: 
+        - break语句: csharp/textbook/4/break-statement.md
       - 练习题: csharp/textbook/4/exercises4.md
     - 项目五 Win应用程序开发: 
       - 任务一 窗体设计: csharp/textbook/5/1-windows-application-design.md
