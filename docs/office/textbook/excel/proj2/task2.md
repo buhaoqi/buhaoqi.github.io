@@ -3,171 +3,180 @@ noteId: "a7807580e2e411f0b182b5022acf9e32"
 tags: []
 
 ---
+### 1.函数是什么
 
-## 1.函数由几部分组成
 
 
+### 2.函数的组成部分
 
-## 2.函数的输入方式有哪几种
 
 
+### 3.函数的输入方式有几种
 
-## 3.常用函数有哪些
 
 
+### 4. SUM函数的用法
 
 
 
-## 4. sum函数的用法
+### 5.SUMIF函数的用法
 
 
 
-## 5. sumif函数的用法
+### 6.SUMIFS函数的用法
 
 
 
-## 6.sumifs函数的用法
+### 7. ABS函数
 
 
 
-## 7.abs函数的用法
+### 8. AND函数
 
 
 
-## 8.and函数的用法
+### 9. OR函数
 
 
 
-## 9.or函数的用法
+### 10.NOT函数
 
 
 
-## 10.not函数的用法
+### 11.XOR函数
 
 
 
-## 11.xor函数的用法
+### 12.IF函数
 
 
 
-## 12.if函数的用法
+### 13.VLOOKUP函数
 
 
 
-## 13.vlookup函数的用法
+### 14.YEAR函数
 
 
 
-## 14.year函数的用法
+### 15.MONTH函数
 
 
 
-## 15.month函数的用法
+### 16.DAY函数
 
 
 
-## 16.day函数的用法
+### 17.TODAY函数
 
 
 
-## 17.today函数的用法
+### 18.NOW函数
 
 
 
-## 18.now函数的用法
+### 19.DATE函数
 
 
 
-## 19.date函数的用法
+### 20.LEFT函数
 
 
 
-## 20.left lefttb函数的用法
+### 21.LEFTB函数
 
 
 
-## 21.right righttb函数的用法
+### 22. RIGHT函数
 
 
 
-## 22.mid midb函数的用法
+### 23.RIGHTB函数
 
 
 
-## 23.len lenb函数的用法
+### 24.MID函数
 
 
 
-## 24.text函数的用法
+### 25.MIDB函数
 
 
 
-## 25.replace  replaeceb函数的用法
+### 26.LEN函数
 
 
 
-## 26.substttute函数的用法
+### 27.LENB函数
 
 
 
-## 27.upper函数的用法
+### 28.TEXT函数
 
 
 
-## 28.lower函数的用法
+### 29.REPLACE函数
 
 
 
-## 29.trim函数的用法
+### 30.REPLACEB函数
 
 
 
-## 30.count函数的用法
+### 31.SUBSTITUTE函数
 
 
 
-## 31.countif函数的用法
+### 32.UPPER函数
 
 
 
-## 32.countifs函数的用法
+### 33.LOWER函数
 
 
 
-## 33.rank rankeq函数的用法
+### 34.TRIM函数
 
 
 
-## 34.randkavg函数的用法
+### 35.COUNT函数
 
 
 
-## 35.average函数的用法
+### 36.COUNTIF函数
 
 
 
-## 36.averageif函数的用法
+### 37.COUNTS函数
 
 
 
-## 37.averageifs函数的用法
+### 38.RANK函数
 
 
 
-## 38.maxmin函数的用法
+### 39.RANK.EQ函数
 
 
 
-## 39.公式返回的错误值和产生的原因是什么
+### 40.RANK.AVG函数
 
 
 
-## 40. 如何解决公式返回的错误值
+### 41.AVERAGE函数
 
 
 
-## 41.如何追踪引用单元格或追踪从属单元格
+### 42.AVERAGEIF函数
 
 
 
-## 42.如何使用公式求值检查计算公式
+### 43.AVERAGEIFS函数
+
+
+
+### 44.MAX函数
+
+
+
+### 45.MIN函数
