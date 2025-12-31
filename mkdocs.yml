@@ -280,10 +280,7 @@ nav:
       - 项目二 公式与函数:
         - 任务一 公式的使用: office/textbook/excel/proj2/task1.md
         - 任务二 函数的使用: office/textbook/excel/proj2/task2.md
-      - 项目三 数据处理:
-        - 任务一 排序: office/textbook/excel/proj3/task1.md
-        - 任务二 筛选: office/textbook/excel/proj3/task2.md
-        - 任务三 分类汇总: office/textbook/excel/proj3/task3.md
+      - 项目三 数据处理:  office/textbook/excel/proj3/proj.md
       - 项目四 图表制作:
         - 任务一 图表: office/textbook/excel/proj4/task1.md
         - 任务二 迷你图: office/textbook/excel/proj4/task2.md
