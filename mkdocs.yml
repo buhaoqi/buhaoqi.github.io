@@ -281,12 +281,8 @@ nav:
         - 任务一 公式的使用: office/textbook/excel/proj2/task1.md
         - 任务二 函数的使用: office/textbook/excel/proj2/task2.md
       - 项目三 数据处理:  office/textbook/excel/proj3/proj.md
-      - 项目四 图表制作:
-        - 任务一 图表: office/textbook/excel/proj4/task1.md
-        - 任务二 迷你图: office/textbook/excel/proj4/task2.md
-      - 项目五 数据透视表图:
-        - 任务一 数据透视表: office/textbook/excel/proj5/task1.md
-        - 任务二 数据透视图: office/textbook/excel/proj5/task2.md
+      - 项目四 图表制作: office/textbook/excel/proj4/proj.md
+      - 项目五 数据透视表图: office/textbook/excel/proj5/proj.md
     - 模块三 PPT应用:
       - 项目一 基本操作: office/textbook/ppt/proj1/task1.md
       - 项目二 演示文稿的编辑:
