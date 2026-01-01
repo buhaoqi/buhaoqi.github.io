@@ -280,26 +280,14 @@ nav:
       - 项目二 公式与函数:
         - 任务一 公式的使用: office/excel/proj2/task1.md
         - 任务二 函数的使用: office/excel/proj2/task2.md
-      - 项目三 数据处理:  office/excel/proj3/proj.md
-      - 项目四 图表制作: office/excel/proj4/proj.md
-      - 项目五 数据透视表图: office/excel/proj5/proj.md
+      - 项目三 数据处理:  office/excel/proj3.md
+      - 项目四 图表制作: office/excel/proj4.md
+      - 项目五 数据透视表图: office/excel/proj5.md
     - 模块三 PPT应用:
-      - 项目一 基本操作: office/ppt/proj1/task1.md
-      - 项目二 演示文稿的编辑:
-        - 任务一 插入和设置对象: office/ppt/proj2/task1.md
-        - 任务二 使用表格和图表: office/ppt/proj2/task2.md
-        - 任务三 SmartArt图形的应用: office/ppt/proj2/task3.md
-      - 项目三 演示文稿的效果设置:
-        - 任务一 主题设置: office/ppt/proj3/task1.md
-        - 任务二 背景设置: office/ppt/proj3/task2.md
-        - 任务三 母版设置: office/ppt/proj3/task3.md
-        - 任务四 动画效果设置: office/ppt/proj3/task4.md
-        - 任务五 切换效果设置: office/ppt/proj3/task5.md
-      - 项目四 演示文稿放映与输出:
-        - 任务一 插入超链接: office/ppt/proj4/task1.md
-        - 任务二 页面设置: office/ppt/proj4/task2.md
-        - 任务三 放映方式设置: office/ppt/proj4/task3.md
-        - 任务四 作品打包: office/ppt/proj4/task4.md
+      - 项目一 基本操作: office/ppt/proj1.md
+      - 项目二 演示文稿的编辑: office/ppt/proj2.md
+      - 项目三 演示文稿的效果设置: office/ppt/proj3.md
+      - 项目四 演示文稿放映与输出: office/ppt/proj4.md
     - 教材同步训练答案: office/answers/sychronous-training-answers.md
     - 育仁单元测试答案: office/answers/unit-quiz-answers.md
     - 育仁周测月考答案: office/answers/week-month-answers.md
