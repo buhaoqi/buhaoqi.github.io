@@ -232,6 +232,17 @@ nav:
       - 任务一 数据库备份概述: mysql/textbook/12-mysql-database-backup-and-recovery/database-backup-overview.md
       - 任务二 使用MYSQLDUMP命令进行备份: mysql/textbook/12-mysql-database-backup-and-recovery/backup-using-mysqldump.md
       - 任务三 MySQL数据恢复: mysql/textbook/12-mysql-database-backup-and-recovery/mysql-data-recovery.md
+  - 计算机网络基础:
+    - 2026年考试大纲: network-basics/index.md
+    - 模块一 计算机网络概述: network-basics/module1.md
+    - 模块三 OSI参考模型体系: network-basics/module3.md
+    - 模块四 TCP/IP参考模型体系: network-basics/module4.md
+    - 模块六 局域网组网技术: network-basics/module6.md
+    - 模块七 广域网技术概述: network-basics/module7.md
+    - 模块八 Internet技术与应用: network-basics/module8.md
+    - 模块九 网络安全: network-basics/module9.md
+    - 模块十 网络管理与结构化布线: network-basics/module10.md
+    - 未归类考点: network-basics/miscellaneous.md
   - 中文版Office实用教程:
     - 2026年考试大纲: office/index.md
     - 模块一 Word应用:
@@ -291,7 +302,19 @@ nav:
     - 教材同步训练答案: office/answers/sychronous-training-answers.md
     - 育仁单元测试答案: office/answers/unit-quiz-answers.md
     - 育仁周测月考答案: office/answers/week-month-answers.md
-    # (更多内容待添加)
+  - 计算机基础及应用:
+    - 2026年考试大纲: computer-basics/index.md
+    - 模块一 计算机基础知识:
+      - 项目一 认识计算机: computer-basics/module1/project1.md
+      - 项目二 计算机系统: computer-basics/module1/project2.md
+      - 项目三 信息在计算机中的表示: computer-basics/module1/project3.md
+      - 项目四 计算机维护: computer-basics/module1/project4.md
+      - 项目五 中英文录入: computer-basics/module1/project5.md
+    - 模块二 Windows10操作系统:
+      - 项目六 Windows10的基本概念: computer-basics/module2/project6.md
+      - 项目七 Windows10文件管理: computer-basics/module2/project7.md
+      - 项目八 Windows个性化设置: computer-basics/module2/project8.md
+      - 项目九 Windows使用工具: computer-basics/module2/project9.md
   - 不好奇课堂: https://buhaoqi.com
   
     
