@@ -95,15 +95,6 @@ A1 = TRUE
 **语法**：`IF(logical_test, [value_if_true], [value_if_false])`  
 **参数**：logical_test 必需。计算结果可能为 TRUE 或 FALSE 的任意值或表达式。
 
-### 13. VLOOKUP函数  
-**用途**：搜索某个单元格区域的第一列，然后返回该区域相同行上任何单元格中的值。  
-**语法**：`VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])`  
-**参数**：  
-
-- lookup_value 必需。要在表格或区域的第一列中搜索的值。  
-- table_array 必需。包含数据的单元格区域。  
-- col_index_num 必需。返回匹配值的列号。  
-- range_lookup 可选。指定查找精确匹配还是近似匹配。
 
 ### 14. YEAR函数  
 **用途**：返回某日期对应的年份。  
