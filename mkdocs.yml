@@ -291,6 +291,20 @@ nav:
       - 项目二 公式与函数:
         - 任务一 公式的使用: office/excel/proj2/task1.md
         - 任务二 函数的使用: office/excel/proj2/task2.md
+        - AVERAGE函数: office/excel/proj2/average.md
+        - COUNT函数: office/excel/proj2/count.md
+        - DATE函数: office/excel/proj2/date.md
+        - IF函数: office/excel/proj2/if.md
+        - LEN函数: office/excel/proj2/len.md
+        - MAX函数: office/excel/proj2/max-min.md
+        - RANK函数: office/excel/proj2/rank.md
+        - REPLACE函数: office/excel/proj2/replace.md
+        - SUBSTITUTE函数: office/excel/proj2/substitute.md
+        - SUMM函数: office/excel/proj2/sum.md
+        - TEXT函数: office/excel/proj2/text.md
+        - TRIM函数: office/excel/proj2/trim.md
+        - UPPER函数: office/excel/proj2/upper-lower.md
+        - VLOOKUP函数: office/excel/proj2/vlookup.md
       - 项目三 数据处理:  office/excel/proj3.md
       - 项目四 图表制作: office/excel/proj4.md
       - 项目五 数据透视表图: office/excel/proj5.md
