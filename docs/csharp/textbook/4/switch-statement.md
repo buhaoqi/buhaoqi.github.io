@@ -12,9 +12,9 @@ switch语句​​是一种基于变量值匹配的​​多分支语句。
 ## 二、switch语句的语法结构
 
 ```csharp
-switch (要判断的变量)
+switch (变量)
 {
-    case 常量1:
+    case 常量1: // ← 这是"case标签"
         // 如果变量等于值1，执行这里的代码
         break; // 必须用break跳出switch
 
@@ -28,16 +28,32 @@ switch (要判断的变量)
         // 如果变量不等于任何case的值，执行这里的代码（可选）
         break;
 }
+
+switch (变量表达式)
+{
+    case 常量表达式:  // ← 这是"case标签"，标识分支入口点,翻译为“分支“；
+        语句列表     // ← 这是语句块
+        break;       // ← 这是"跳转语句"，控制跳出switch
+    
+    case 常量表达式 :  // ← 这是"case标签"，标识分支入口点
+        语句列表
+        break;
+    
+    default:         // ← 这是"default标签"，默认分支的入口点
+        语句列表
+        break;
+}
 ```
 
 **语法说明**
 
-1.  case: 翻译为“分支“；`case` 后必须是常量，不能是变量或表达式。
-2.  break:翻译为“终止";
-3.  每个case块必须以跳转语句结束，最常用的就是`break;`。
-4.  `default`是可选的，用于处理“其他所有情况”。
-5.  每个 `case` 一般要有 `break`，否则会穿透执行下一个 case（除非你想要 fall-through 行为）。
-6.  C# 7.0+ 支持 `switch` 的模式匹配（比如 `case int n when n > 0:`）。
+1.  变量表达式：
+2.  case: `case` 后必须是常量，不能是变量或表达式。
+3.  break:翻译为“终止";
+4.  每个case块必须以跳转语句结束，最常用的就是`break;`。
+5.  `default`是可选的，用于处理“其他所有情况”。
+6.  每个 `case` 一般要有 `break`，否则会穿透执行下一个 case（除非你想要 fall-through 行为）。
+7.  C# 7.0+ 支持 `switch` 的模式匹配（比如 `case int n when n > 0:`）。
 
 ---
 
