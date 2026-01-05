@@ -164,7 +164,8 @@ nav:
         - 项目12: csharp/answers/synchronus-training/xm12.md
       - 技能实训答案: csharp/answers/tech-training/csharp-training.md
       - 技能实训项目答案: csharp/answers/tech-training/winform-project-sims.md
-      - 旧版周测月考答案: csharp/answers/week-month/week-month-answers.md
+      - 育仁单元测试答案: csharp/answers/week-month/week-month-answers.md
+      - 育仁周测月考答案: csharp/answers/week-month/week-month-answers.md
       - 领海答案: csharp/answers/leading/answers.md
   - 数据库原理与应用技术:
     - 2026年考试大纲: mysql/textbook/index.md

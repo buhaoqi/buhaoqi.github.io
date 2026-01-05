@@ -8991,9 +8991,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>注意</strong>：
-- <strong>降序排名</strong>：数值越大排名越靠前（第1名是最大值）
-- <strong>升序排名</strong>：数值越小排名越靠前（第1名是最小值）</p>
+<p><strong>注意</strong>：</p>
+<ul>
+<li><strong>降序排名</strong>：数值越大排名越靠前（第1名是最大值）</li>
+<li><strong>升序排名</strong>：数值越小排名越靠前（第1名是最小值）</li>
+</ul>
 <hr />
 <h2 id="_2"><strong>二、详细示例数据表</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="120"><strong>表1：学生考试成绩表（20条记录）</strong><a class="headerlink" href="#120" title="Permanent link">&para;</a></h3>
@@ -9430,15 +9432,48 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>- $F$2:$F$21：总分区域（绝对引用）
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>- 0：降序排名（分数越高排名越靠前）
 </span></code></pre></div>
-<p><strong>结果示例</strong>：
-| 姓名 | 总分 | 排名 |
-|------|------|------|
-| 赵七 | 286 | 1 |
-| 吴九 | 278 | 2 |
-| 孙七 | 276 | 3 |
-| 刘二 | 274 | 4 |
-| 郑一 | 274 | 4 |
-| 钱一 | 268 | 6 |</p>
+<p><strong>结果示例</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>总分</th>
+<th>排名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赵七</td>
+<td>286</td>
+<td>1</td>
+</tr>
+<tr>
+<td>吴九</td>
+<td>278</td>
+<td>2</td>
+</tr>
+<tr>
+<td>孙七</td>
+<td>276</td>
+<td>3</td>
+</tr>
+<tr>
+<td>刘二</td>
+<td>274</td>
+<td>4</td>
+</tr>
+<tr>
+<td>郑一</td>
+<td>274</td>
+<td>4</td>
+</tr>
+<tr>
+<td>钱一</td>
+<td>268</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
 <h3 id="2_1"><strong>示例2：升序排名（用时最少排名）</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
 <p>假设有比赛用时数据，时间越少成绩越好：</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>在I列（用时排名）输入公式：
@@ -9465,19 +9500,90 @@
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   =RANK.AVG(B2, $B$2:$B$11, 0)
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>   结果：相同销量得到平均排名
 </span></code></pre></div>
-<p><strong>对比结果表</strong>：
-| 产品名称 | 销量 | RANK.EQ排名 | RANK.AVG排名 | 说明 |
-|----------|------|-------------|--------------|------|
-| 小米13 | 180 | 1 | 1.5 | 与苹果手表并列，平均排名(1+2)/2=1.5 |
-| 苹果手表 | 180 | 1 | 1.5 | 同上 |
-| iPhone 15 | 150 | 3 | 3.5 | 与索尼耳机并列，(3+4)/2=3.5 |
-| 索尼耳机 | 150 | 3 | 3.5 | 同上 |
-| 华为P60 | 120 | 5 | 5.5 | 与华为平板并列，(5+6)/2=5.5 |
-| 华为平板 | 120 | 5 | 5.5 | 同上 |
-| 戴尔笔记本 | 110 | 7 | 7 | 唯一值 |
-| 联想电脑 | 105 | 8 | 8 | 唯一值 |
-| 三星电视 | 95 | 9 | 9 | 唯一值 |
-| MacBook Pro | 85 | 10 | 10 | 唯一值 |</p>
+<p><strong>对比结果表</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>产品名称</th>
+<th>销量</th>
+<th>RANK.EQ排名</th>
+<th>RANK.AVG排名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小米13</td>
+<td>180</td>
+<td>1</td>
+<td>1.5</td>
+<td>与苹果手表并列，平均排名(1+2)/2=1.5</td>
+</tr>
+<tr>
+<td>苹果手表</td>
+<td>180</td>
+<td>1</td>
+<td>1.5</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>iPhone 15</td>
+<td>150</td>
+<td>3</td>
+<td>3.5</td>
+<td>与索尼耳机并列，(3+4)/2=3.5</td>
+</tr>
+<tr>
+<td>索尼耳机</td>
+<td>150</td>
+<td>3</td>
+<td>3.5</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>华为P60</td>
+<td>120</td>
+<td>5</td>
+<td>5.5</td>
+<td>与华为平板并列，(5+6)/2=5.5</td>
+</tr>
+<tr>
+<td>华为平板</td>
+<td>120</td>
+<td>5</td>
+<td>5.5</td>
+<td>同上</td>
+</tr>
+<tr>
+<td>戴尔笔记本</td>
+<td>110</td>
+<td>7</td>
+<td>7</td>
+<td>唯一值</td>
+</tr>
+<tr>
+<td>联想电脑</td>
+<td>105</td>
+<td>8</td>
+<td>8</td>
+<td>唯一值</td>
+</tr>
+<tr>
+<td>三星电视</td>
+<td>95</td>
+<td>9</td>
+<td>9</td>
+<td>唯一值</td>
+</tr>
+<tr>
+<td>MacBook Pro</td>
+<td>85</td>
+<td>10</td>
+<td>10</td>
+<td>唯一值</td>
+</tr>
+</tbody>
+</table>
 <h3 id="5"><strong>示例5：并列排名的差异</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>情况：4个人得分相同，都是90分
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>最高分100分有1人，95分有2人
