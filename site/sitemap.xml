@@ -181,15 +181,31 @@
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/csharp/textbook/3/constants-and-variables/</loc>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/boolean/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/csharp/textbook/3/conversion-basic/</loc>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/boxing-unboxing/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/csharp/textbook/3/data-type-conversion/</loc>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/char/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/conversion-explicit-brace/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/conversion-explicit-convert/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/conversion-explicit-parse/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/conversion-implicit/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
@@ -197,11 +213,23 @@
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/decimal/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
          <loc>https://buhaoqi.github.io/csharp/textbook/3/enum/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
-         <loc>https://buhaoqi.github.io/csharp/textbook/3/operators-and-expressions/</loc>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/integer/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/primitives/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/3/string/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
@@ -210,6 +238,10 @@
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/textbook/4/break-statement/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/4/constants/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>
@@ -238,6 +270,10 @@
     </url>
     <url>
          <loc>https://buhaoqi.github.io/csharp/textbook/4/switch-statement/</loc>
+         <lastmod>2026-01-12</lastmod>
+    </url>
+    <url>
+         <loc>https://buhaoqi.github.io/csharp/textbook/4/variables/</loc>
          <lastmod>2026-01-12</lastmod>
     </url>
     <url>

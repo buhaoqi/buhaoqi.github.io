@@ -99,11 +99,12 @@ nav:
         - 结构类型: csharp/textbook/3/struct.md
         - 枚举类型: csharp/textbook/3/enum.md
         - string类型: csharp/textbook/3/string.md
+        - 类型名称: csharp/textbook/3/type-names.md
         - 隐式转换: csharp/textbook/3/conversion-implicit.md
         - 括号强转: csharp/textbook/3/conversion-explicit-brace.md
         - Parse: csharp/textbook/3/conversion-explicit-parse.md
         - Convert: csharp/textbook/3/conversion-explicit-convert.md
-        - 装箱拆箱: csharp/textbook/3/boxing-unboxing.md
+        - Object类型: csharp/textbook/3/boxing-unboxing.md
       - 任务二 常量与变量: 
         - 常量: csharp/textbook/4/constants.md
         - 变量: csharp/textbook/4/variables.md
