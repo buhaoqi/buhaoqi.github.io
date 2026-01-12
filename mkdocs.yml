@@ -91,12 +91,22 @@ nav:
       - 任务三 简单C#程序实例: csharp/textbook/2/simple-csharp-program.md
     - 项目三 C#语言基础: 
       - 任务一 数据类型:
-        - 基本数据类型: csharp/textbook/3/data-types.md
-        - 隐式数据转换: csharp/textbook/3/conversion-basic.md
-        - 数据类型转换: csharp/textbook/3/data-type-conversion.md
-        - 结构体: csharp/textbook/3/struct.md
+        - 概述: csharp/textbook/3/data-types.md
+        - 整数类型: csharp/textbook/3/integer.md
+        - 实数类型: csharp/textbook/3/decimal.md
+        - 字符类型: csharp/textbook/3/char.md
+        - 布尔类型: csharp/textbook/3/boolean.md
+        - 结构类型: csharp/textbook/3/struct.md
         - 枚举类型: csharp/textbook/3/enum.md
-      - 任务二 常量与变量: csharp/textbook/3/constants-and-variables.md
+        - string类型: csharp/textbook/3/string.md
+        - 隐式转换: csharp/textbook/3/conversion-implicit.md
+        - 括号强转: csharp/textbook/3/conversion-explicit-brace.md
+        - Parse: csharp/textbook/3/conversion-explicit-parse.md
+        - Convert: csharp/textbook/3/conversion-explicit-convert.md
+        - 装箱拆箱: csharp/textbook/3/boxing-unboxing.md
+      - 任务二 常量与变量: 
+        - 常量: csharp/textbook/4/constants.md
+        - 变量: csharp/textbook/4/variables.md
       - 任务三 运算符与表达式: csharp/textbook/3/operators-and-expressions.md
     - 项目四 C#控制结构: 
       - 任务一 顺序结构: csharp/textbook/4/sequential-statement.md
