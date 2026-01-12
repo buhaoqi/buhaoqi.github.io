@@ -92,6 +92,7 @@ nav:
     - 项目三 C#语言基础: 
       - 任务一 数据类型:
         - 基本数据类型: csharp/textbook/3/data-types.md
+        - 隐式数据转换: csharp/textbook/3/conversion-basic.md
         - 数据类型转换: csharp/textbook/3/data-type-conversion.md
         - 结构体: csharp/textbook/3/struct.md
         - 枚举类型: csharp/textbook/3/enum.md
