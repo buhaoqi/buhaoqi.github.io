@@ -90,7 +90,11 @@ nav:
       - 任务二 Visual Studio开发环境: csharp/textbook/2/visual-studio.md
       - 任务三 简单C#程序实例: csharp/textbook/2/simple-csharp-program.md
     - 项目三 C#语言基础: 
-      - 任务一 数据类型: csharp/textbook/3/data-types.md
+      - 任务一 数据类型:
+        - 基本数据类型: csharp/textbook/3/data-types.md
+        - 数据类型转换: csharp/textbook/3/data-type-conversion.md
+        - 结构体: csharp/textbook/3/struct.md
+        - 枚举类型: csharp/textbook/3/enum.md
       - 任务二 常量与变量: csharp/textbook/3/constants-and-variables.md
       - 任务三 运算符与表达式: csharp/textbook/3/operators-and-expressions.md
     - 项目四 C#控制结构: 
