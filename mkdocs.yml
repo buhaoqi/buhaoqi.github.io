@@ -91,25 +91,42 @@ nav:
       - 任务三 简单C#程序实例: csharp/textbook/2/simple-csharp-program.md
     - 项目三 C#语言基础: 
       - 任务一 数据类型:
-        - 概述: csharp/textbook/3/data-types.md
-        - 整数类型: csharp/textbook/3/integer.md
-        - 实数类型: csharp/textbook/3/decimal.md
-        - 字符类型: csharp/textbook/3/char.md
-        - 布尔类型: csharp/textbook/3/boolean.md
-        - 结构类型: csharp/textbook/3/struct.md
-        - 枚举类型: csharp/textbook/3/enum.md
-        - string类型: csharp/textbook/3/string.md
-        - 类型名称: csharp/textbook/3/type-names.md
-        - 隐式转换: csharp/textbook/3/conversion-implicit.md
-        - 括号强转: csharp/textbook/3/conversion-explicit-brace.md
-        - Parse: csharp/textbook/3/conversion-explicit-parse.md
-        - Convert: csharp/textbook/3/conversion-explicit-convert.md
-        - Object类型: csharp/textbook/3/boxing-unboxing.md
+        - 概述: csharp/textbook/3/task1/data-types.md
+        - 整数类型: csharp/textbook/3/task1/integer.md
+        - 实数类型: csharp/textbook/3/task1/decimal.md
+        - 字符类型: csharp/textbook/3/task1/char.md
+        - 布尔类型: csharp/textbook/3/task1/boolean.md
+        - 结构类型: csharp/textbook/3/task1/struct.md
+        - 枚举类型: csharp/textbook/3/task1/enum.md
+        - string类型: csharp/textbook/3/task1/string.md
+        - 类型名称: csharp/textbook/3/task1/type-names.md
+        - 隐式转换: csharp/textbook/3/task1/conversion-implicit.md
+        - 括号强转: csharp/textbook/3/task1/conversion-explicit-brace.md
+        - Parse: csharp/textbook/3/task1/conversion-explicit-parse.md
+        - Convert: csharp/textbook/3/task1/conversion-explicit-convert.md
+        - Object类型: csharp/textbook/3/task1/boxing-unboxing.md
       - 任务二 常量与变量: 
-        - 常量: csharp/textbook/4/constants.md
-        - 变量: csharp/textbook/4/variables.md
-      - 任务三 运算符与表达式: csharp/textbook/3/operators-and-expressions.md
+        - 常量: csharp/textbook/3/task2/constants.md
+        - 变量: csharp/textbook/3/task2/variables.md
+      - 任务三 运算符与表达式: 
+        - 概述: csharp/textbook/3/task3/overview.md
+        - 算术运算符: csharp/textbook/3/task3/arithmetic-operators.md
+        - 自增自减运算符: csharp/textbook/3/task3/increment-decrement-operators.md
+        - 字符串运算符: csharp/textbook/3/task3/string-operators.md
+        - 赋值运算符: csharp/textbook/3/task3/assignment-operators.md
+        - 比较运算符: csharp/textbook/3/task3/comparison-operators.md
+        - 逻辑运算符: csharp/textbook/3/task3/logical-operators.md
+        - 条件运算符: csharp/textbook/3/task3/conditional-operators.md
+        - 运算符优先级与结合性: csharp/textbook/3/task3/operator-precedence-and-associativity.md
+      - 练习题: csharp/textbook/3/index.md
     - 项目四 C#控制结构: 
+      - 任务一 顺序结构:
+        - 概述: csharp/textbook/4/task1/overview.md
+        - Console.ReadKey(): csharp/textbook/4/task1/console-readkey.md
+        - Console.Read(): csharp/textbook/4/task1/console-read.md
+        - Console.ReadLine(): csharp/textbook/4/task1/console-readline.md
+        - Console.Write(): csharp/textbook/4/task1/console-write.md
+        - Console.WriteLine(): csharp/textbook/4/task1/console-writeline
       - 任务一 顺序结构: csharp/textbook/4/sequential-statement.md
       - 任务二 分支结构: 
         - if语句: csharp/textbook/4/if-statement.md

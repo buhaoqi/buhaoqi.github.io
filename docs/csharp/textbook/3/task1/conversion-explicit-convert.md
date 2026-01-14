@@ -4,6 +4,48 @@ tags: []
 
 ---
 
+一、用途：将一种基本数据类型转换为另一种基本数据类型
+
+二、语法
+
+```c#
+Convert.目标数据类型(数据类型)
+```
+
+三、能转什么
+
+```c#
+//1.字符串 => 其他基本数据类型
+Convert.ToInt32("123");
+Convert.ToDouble("123.45");
+Convert.ToBoolean("true");
+Convert.ToChar("A");
+//2.实数 => 整数 （四舍五入）
+Convert.ToInt32(123.456); // 123
+Convert.ToInt32(123.556); // 124 四舍五入
+//3. 布尔值 => 整数
+Convert.ToInt32(true); // 1
+Convert.ToInt32(false); // 0
+Convert.ToBoolean(1); // true
+Convert.ToBoolean(0); //  false
+//4.任意类型 => 字符串(万能转)
+Convert.ToString(true); // "true"
+Convert.ToString(3.124); // "3.14"
+//5.特殊
+Convert.ToInt32("");
+
+```
+
+
+
+四、不能转什么
+
+```c#
+Convert.ToInt32("123.45"); //格式错误
+```
+
+
+
 
 
 ### **3. Convert 类方法**

@@ -72,3 +72,60 @@ tags: []
 - `true`：表示逻辑真  
 - `false`：表示逻辑假
 
+## 常量的知识点
+
+一、常量的定义
+
+二、常量的分类
+
+- 直接常量: 直接出现在程序中的值(不变的大小)。
+  - 不以变量形式出现
+  - 又叫”直接量“或”字面量“
+  - 默认类型是最小类型
+  - 指定类型后缀：U、L、UL
+  - 整型常量可以使用十六进制表示：前缀`0X`
+
+```c#
+//整型常量
+Console.WriteLine(100);
+//无符号整型常量
+Console.WriteLine(100U);
+//长整型常量
+Console.WriteLine(100L);
+//无符号长整型常量
+Console.WriteLine(100UL);
+//十六进制整型常量
+Console.WriteLine(0x20);
+//浮点型常量(小数)
+Console.WriteLine(3.14);
+//浮点型常量(科学计数法)
+Console.WriteLine(3.14e2);
+//单精度浮点型常量
+Console.WriteLine(3.14F);
+//双精度浮点型常量
+Console.WriteLine(3.14D);
+//固定精度浮点型常量
+Console.WriteLine(3.14M);
+//字符常量(单字符)
+Console.WriteLine('A');
+//字符常量(Unicode编码) 
+Console.WriteLine('\U0032');
+//字符串常量
+Console.WriteLine("Hello");
+//布尔值常量
+Console.WriteLine(true);
+```
+
+- 符号常量：用特定标识符表示某一数据(值)。
+  - 其值不能改变的变量。
+  - 常量名：建议大写，比如 PI
+  - 声明常量必须初始化
+  - 常量一经声明，不可修改
+
+```c#
+//语法
+const 数据类型 常量名 = 常量值;
+//示例
+const float PI = 3.14F;
+```
+

@@ -4,6 +4,48 @@ tags: []
 
 ---
 
+1.定义：用于表示逻辑真或假的数据类型。
+
+2.语法
+
+```c#
+bool b1 = true;
+bool b2 = false;
+System.Boolean b3 = !true;
+```
+
+3.用法
+
+- 分支结构：条件判断
+- 循环结构：作为开关使用
+- 与逻辑运算符搭配使用
+
+```c#
+true && true
+true && false
+true || false
+true || true
+false || false
+!true
+```
+
+4.注意事项
+
+- 布尔类型不允许直接转换为int类型
+
+```c#
+int i1 = (2 < 3);// 错误
+int i2 = (2 < 3) ? 1 : 0;
+```
+
+- 注意逻辑运算符的短路现象。
+
+```c#
+int a = 1;
+false && (10 > 9) ? a = 2 : a =0;
+true || (10 > 9) ? a = 2 : a =0;
+```
+
 
 
 ## 一、布尔类型基本概念

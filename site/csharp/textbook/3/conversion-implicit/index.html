@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#c" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -1153,8 +1153,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -1187,8 +1185,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1197,19 +1193,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      一、核心概念快速理解
+      1. 隐式转换的核心原则：从小到大
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="一、核心概念快速理解">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 常见的隐式转换路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 常见的隐式转换路径">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数之间的转换
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      简单比喻
+      整数到浮点数的转换
     </span>
   </a>
   
@@ -1218,7 +1232,7 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      一句话总结
+      字符到整数的转换
     </span>
   </a>
   
@@ -1226,74 +1240,50 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 隐式转换的总结表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 特别注意：什么不能隐式转换？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 给初学者的记忆小窍门
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      二、隐式转换详解
+      转换溢出
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="二、隐式转换详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 整数类型隐式转换规则
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 浮点数隐式转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 完整隐式转换路径图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 特殊隐式转换
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      三、显式转换详解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="三、显式转换详解">
+    <nav class="md-nav" aria-label="转换溢出">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 需要显式转换的场景
+      1. 为什么会发生溢出？
     </span>
   </a>
   
@@ -1302,16 +1292,35 @@
           <li class="md-nav__item">
   <a href="#2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 显式转换语法
+      2. 二进制视角的“溢出”
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
+  <a href="#3-c" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 显式转换的风险与检查
+      3. C# 中的溢出处理模式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. C# 中的溢出处理模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-unchecked" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. 默认模式（Unchecked）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-checked" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. 检查模式（Checked）
     </span>
   </a>
   
@@ -1321,225 +1330,20 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      四、数值类型转换表（完整）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="四、数值类型转换表（完整）">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#4_1" class="md-nav__link">
     <span class="md-ellipsis">
-      整数类型转换矩阵
+      4. 如何避免转换溢出？
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      浮点类型转换矩阵
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      混合类型转换规则
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      五、实际应用示例
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="五、实际应用示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例1：安全的类型转换方法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例2：颜色值处理（常见场景）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例3：数值计算中的精度控制
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      六、特殊转换场景
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="六、特殊转换场景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-char" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. char类型的转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 枚举类型转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-nullable" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 可空类型（Nullable）转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-checkedunchecked" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. checked/unchecked上下文
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      七、最佳实践总结
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、最佳实践总结">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      转换选择流程图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      黄金法则
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      常见错误避免
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      性能优化建议
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      八、练习题
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="八、练习题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      练习1：温度转换器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      练习2：安全计算器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      练习3：数据验证器
+      总结归纳
     </span>
   </a>
   
@@ -8657,8 +8461,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8667,19 +8469,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      一、核心概念快速理解
+      1. 隐式转换的核心原则：从小到大
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="一、核心概念快速理解">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 常见的隐式转换路径
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 常见的隐式转换路径">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      整数之间的转换
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      简单比喻
+      整数到浮点数的转换
     </span>
   </a>
   
@@ -8688,7 +8508,7 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      一句话总结
+      字符到整数的转换
     </span>
   </a>
   
@@ -8696,74 +8516,50 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 隐式转换的总结表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 特别注意：什么不能隐式转换？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 给初学者的记忆小窍门
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      二、隐式转换详解
+      转换溢出
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="二、隐式转换详解">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 整数类型隐式转换规则
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 浮点数隐式转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 完整隐式转换路径图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 特殊隐式转换
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      三、显式转换详解
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="三、显式转换详解">
+    <nav class="md-nav" aria-label="转换溢出">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 需要显式转换的场景
+      1. 为什么会发生溢出？
     </span>
   </a>
   
@@ -8772,16 +8568,35 @@
           <li class="md-nav__item">
   <a href="#2_1" class="md-nav__link">
     <span class="md-ellipsis">
-      2. 显式转换语法
+      2. 二进制视角的“溢出”
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3_1" class="md-nav__link">
+  <a href="#3-c" class="md-nav__link">
     <span class="md-ellipsis">
-      3. 显式转换的风险与检查
+      3. C# 中的溢出处理模式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. C# 中的溢出处理模式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-unchecked" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. 默认模式（Unchecked）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-checked" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. 检查模式（Checked）
     </span>
   </a>
   
@@ -8791,225 +8606,20 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      四、数值类型转换表（完整）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="四、数值类型转换表（完整）">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#4_1" class="md-nav__link">
     <span class="md-ellipsis">
-      整数类型转换矩阵
+      4. 如何避免转换溢出？
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      浮点类型转换矩阵
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      混合类型转换规则
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      五、实际应用示例
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="五、实际应用示例">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例1：安全的类型转换方法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例2：颜色值处理（常见场景）
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      示例3：数值计算中的精度控制
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      六、特殊转换场景
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="六、特殊转换场景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-char" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. char类型的转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 枚举类型转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-nullable" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 可空类型（Nullable）转换
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-checkedunchecked" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. checked/unchecked上下文
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      七、最佳实践总结
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、最佳实践总结">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      转换选择流程图
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      黄金法则
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      常见错误避免
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      性能优化建议
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      八、练习题
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="八、练习题">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      练习1：温度转换器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      练习2：安全计算器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      练习3：数据验证器
+      总结归纳
     </span>
   </a>
   
@@ -9036,563 +8646,139 @@
 
 
 
-<h1 id="c">C#值类型隐式转换与显式转换完全指南<a class="headerlink" href="#c" title="Permanent link">&para;</a></h1>
-<h2 id="_1">一、核心概念快速理解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2"><strong>简单比喻</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 隐式转换：自动升级（小杯→大杯）</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">small</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">          </span><span class="c1">// 小杯水</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">long</span><span class="w"> </span><span class="n">big</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">small</span><span class="p">;</span><span class="w">         </span><span class="c1">// 自动倒入大杯 ✅</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// 显式转换：强制缩小（大杯→小杯，可能溢出）</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kt">long</span><span class="w"> </span><span class="n">big2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// int small2 = big2;     // ❌ 编译错误（可能溢出）</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">small2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">big2</span><span class="p">;</span><span class="w">   </span><span class="c1">// ✅ 明确说&quot;我接受风险&quot;</span>
-</span></code></pre></div>
-<h3 id="_3"><strong>一句话总结</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+  <h1>隐式转换</h1>
+
+<p>在 C# 编程中，<strong>隐式转换（Implicit Conversion）是指编译器自动将一种数据类型转换为另一种数据类型的过程。这种转换不需要特殊的语法，因为它被认为是“安全的”——即不会导致数据丢失或精度下降</strong>。</p>
+<p>对于初学者来说，掌握隐式转换的核心在于理解“<strong>小杯水倒入大杯子</strong>”的逻辑。</p>
+<hr />
+<h2 id="1">1. 隐式转换的核心原则：从小到大<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>隐式转换之所以能自动发生，是因为目标类型的取值范围比源类型更广。</p>
 <ul>
-<li><strong>隐式转换</strong>：安全，自动进行，不会丢失数据</li>
-<li><strong>显式转换</strong>：可能有风险，需要明确写出来</li>
+<li><strong>整数类型：</strong> 内存占用小的类型可以自动转换为内存占用大的类型。</li>
+<li>
+<p><code>sbyte</code> -&gt; <code>short</code> -&gt; <code>int</code> -&gt; <code>long</code></p>
+</li>
+<li>
+<p><strong>浮点数类型：</strong> 整数可以自动转换为浮点数。</p>
+</li>
+<li><code>int</code> -&gt; <code>float</code> -&gt; <code>double</code> 或 <code>decimal</code></li>
 </ul>
-<h2 id="_4">二、隐式转换详解<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h3 id="1"><strong>1. 整数类型隐式转换规则</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// 数值范围小→大（无风险）</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">byte</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">long</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">sbyte</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">long</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kt">char</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="kt">long</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">// 示例</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kt">short</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">      </span><span class="c1">// ✅ byte→short</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">        </span><span class="c1">// ✅ short→int</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="kt">long</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">       </span><span class="c1">// ✅ int→long</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="kt">ushort</span><span class="w"> </span><span class="n">us</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="kt">uint</span><span class="w"> </span><span class="n">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">us</span><span class="p">;</span><span class="w">     </span><span class="c1">// ✅ ushort→uint</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kt">ulong</span><span class="w"> </span><span class="n">ul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ui</span><span class="p">;</span><span class="w">    </span><span class="c1">// ✅ uint→ulong</span>
+<hr />
+<h2 id="2">2. 常见的隐式转换路径<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="_1">整数之间的转换<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>当你把一个 <code>int</code> 赋值给 <code>long</code> 时，C# 会自动处理，因为 <code>long</code>（64位）完全能容纳 <code>int</code>（32位）的所有值。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">smallNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">long</span><span class="w"> </span><span class="n">bigNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">smallNum</span><span class="p">;</span><span class="w"> </span><span class="c1">// 隐式转换，安全</span>
 </span></code></pre></div>
-<h3 id="2"><strong>2. 浮点数隐式转换</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// 浮点数转换</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14f</span><span class="p">;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w">      </span><span class="c1">// ✅ float→double（精度提升）</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">// 整数→浮点数</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kt">float</span><span class="w"> </span><span class="n">floatFromInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">integer</span><span class="p">;</span><span class="w">    </span><span class="c1">// ✅ int→float</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="kt">double</span><span class="w"> </span><span class="n">doubleFromInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">integer</span><span class="p">;</span><span class="w">  </span><span class="c1">// ✅ int→double</span>
+<h3 id="_2">整数到浮点数的转换<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>虽然整数和浮点数的存储方式不同，但由于浮点数的表达范围通常远超整数，转换也是自动的。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="c1">// 隐式转换，price 变为 42.0</span>
 </span></code></pre></div>
-<h3 id="3"><strong>3. 完整隐式转换路径图</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>byte   → short → int → long → float → double
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sbyte  ↗
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>char   ↗
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>ushort → uint  → ulong → float → double
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>decimal ← int/uint/long/ulong/float/double
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        （浮点到decimal需要显式转换）
+<h3 id="_3">字符到整数的转换<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><code>char</code> 类型在底层是基于 Unicode 的 16 位数值，因此它可以隐式转换为 <code>int</code> 或更高级别的类型。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">asciiValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letter</span><span class="p">;</span><span class="w"> </span><span class="c1">// 隐式转换，结果为 65</span>
 </span></code></pre></div>
-<h3 id="4"><strong>4. 特殊隐式转换</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// 常量表达式（编译时计算）</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">constInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kt">byte</span><span class="w"> </span><span class="n">constByte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constInt</span><span class="p">;</span><span class="w">  </span><span class="c1">// ✅ 常量在编译时检查范围</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">// 枚举到其底层类型</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">enum</span><span class="w"> </span><span class="n">Days</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Monday</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">dayValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Days</span><span class="p">.</span><span class="n">Monday</span><span class="p">;</span><span class="w">  </span><span class="c1">// ✅ 枚举→int</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">// 可空类型（Nullable&lt;T&gt;）</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kt">int?</span><span class="w"> </span><span class="n">nullableInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">      </span><span class="c1">// int → int?</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="kt">double?</span><span class="w"> </span><span class="n">nullableDouble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"> </span><span class="c1">// double → double?</span>
-</span></code></pre></div>
-<h2 id="_5">三、显式转换详解<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h3 id="1_1"><strong>1. 需要显式转换的场景</strong><a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// 1. 大类型→小类型（可能丢失数据）</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">123.456</span><span class="p">;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">d</span><span class="p">;</span><span class="w">  </span><span class="c1">// 123（丢失小数部分）</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kt">long</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000L</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">i2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">l</span><span class="p">;</span><span class="w">  </span><span class="c1">// 需要显式转换</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1">// 2. 浮点数→整数</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">99.99f</span><span class="p">;</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="kt">int</span><span class="w"> </span><span class="n">i3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">f</span><span class="p">;</span><span class="w">  </span><span class="c1">// 99</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1">// 3. 有符号↔无符号（可能改变数值含义）</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="kt">int</span><span class="w"> </span><span class="n">signed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="kt">uint</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint</span><span class="p">)</span><span class="n">signed</span><span class="p">;</span><span class="w">  </span><span class="c1">// 4294967196（非常大的正数）</span>
-</span></code></pre></div>
-<h3 id="2_1"><strong>2. 显式转换语法</strong><a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// 基本语法</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">目标类型</span><span class="w"> </span><span class="err">变量名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="err">目标类型</span><span class="p">)</span><span class="err">源变量</span><span class="p">;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// 多种写法</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.99</span><span class="p">;</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">intPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">price</span><span class="p">;</span><span class="w">      </span><span class="c1">// 传统写法</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">intPrice2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">price</span><span class="p">);</span><span class="w">  </span><span class="c1">// 四舍五入</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">intPrice3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">price</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span><span class="w"> </span><span class="c1">// 字符串转换</span>
-</span></code></pre></div>
-<h3 id="3_1"><strong>3. 显式转换的风险与检查</strong><a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// ❌ 危险：溢出（静默错误）</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kt">byte</span><span class="w"> </span><span class="n">small</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">small</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)(</span><span class="n">small</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// 变成0，不报错！</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">// ✅ 安全：使用checked检查溢出</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">checked</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">{</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="c1">// b = (byte)(b + 1);  // 抛出OverflowException</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="c1">// 手动检查范围</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="kt">long</span><span class="w"> </span><span class="n">bigValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000000000L</span><span class="p">;</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bigValue</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MinValue</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">bigValue</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">)</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">{</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">safeValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">bigValue</span><span class="p">;</span>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">}</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="k">else</span>
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="p">{</span>
-</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;数值超出int范围！&quot;</span><span class="p">);</span>
-</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="_6">四、数值类型转换表（完整）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7"><strong>整数类型转换矩阵</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="3">3. 隐式转换的总结表<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>以下是 C# 中最常见的隐式数值转换关系：</p>
 <table>
 <thead>
 <tr>
-<th>从\到</th>
-<th>byte</th>
-<th>sbyte</th>
-<th>short</th>
-<th>ushort</th>
-<th>int</th>
-<th>uint</th>
-<th>long</th>
-<th>ulong</th>
-<th>char</th>
+<th>源类型</th>
+<th>目标类型 (部分列举)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>byte</strong></td>
-<td>-</td>
-<td>显式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-</tr>
-<tr>
 <td><strong>sbyte</strong></td>
-<td>显式</td>
-<td>-</td>
-<td>隐式</td>
-<td>显式</td>
-<td>隐式</td>
-<td>显式</td>
-<td>隐式</td>
-<td>显式</td>
-<td>显式</td>
+<td><code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>decimal</code></td>
 </tr>
 <tr>
-<td><strong>short</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
-<td>显式</td>
-<td>隐式</td>
-<td>显式</td>
-<td>隐式</td>
-<td>显式</td>
-<td>显式</td>
-</tr>
-<tr>
-<td><strong>ushort</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>显式</td>
+<td><strong>byte</strong></td>
+<td><code>short</code>, <code>ushort</code>, <code>int</code>, <code>uint</code>, <code>long</code>, <code>ulong</code>, <code>float</code>, <code>double</code>, <code>decimal</code></td>
 </tr>
 <tr>
 <td><strong>int</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
-<td>显式</td>
-<td>隐式</td>
-<td>显式</td>
-<td>显式</td>
-</tr>
-<tr>
-<td><strong>uint</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>显式</td>
-</tr>
-<tr>
-<td><strong>long</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
-<td>显式</td>
-<td>显式</td>
-</tr>
-<tr>
-<td><strong>ulong</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
-<td>显式</td>
+<td><code>long</code>, <code>float</code>, <code>double</code>, <code>decimal</code></td>
 </tr>
 <tr>
 <td><strong>char</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>隐式</td>
-<td>-</td>
+<td><code>ushort</code>, <code>int</code>, <code>uint</code>, <code>long</code>, <code>ulong</code>, <code>float</code>, <code>double</code>, <code>decimal</code></td>
 </tr>
-</tbody>
-</table>
-<h3 id="_8"><strong>浮点类型转换矩阵</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>从\到</th>
-<th>float</th>
-<th>double</th>
-<th>decimal</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td><strong>float</strong></td>
-<td>-</td>
-<td>隐式</td>
-<td>显式</td>
-</tr>
-<tr>
-<td><strong>double</strong></td>
-<td>显式</td>
-<td>-</td>
-<td>显式</td>
-</tr>
-<tr>
-<td><strong>decimal</strong></td>
-<td>显式</td>
-<td>显式</td>
-<td>-</td>
+<td><code>double</code></td>
 </tr>
 </tbody>
 </table>
-<h3 id="_9"><strong>混合类型转换规则</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>转换类型</th>
-<th>隐式/显式</th>
-<th>注意事项</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>整数→浮点</td>
-<td>隐式</td>
-<td>可能丢失精度（int→float）</td>
-</tr>
-<tr>
-<td>浮点→整数</td>
-<td>显式</td>
-<td>丢失小数部分</td>
-</tr>
-<tr>
-<td>decimal→其他浮点</td>
-<td>显式</td>
-<td>可能溢出或丢失精度</td>
-</tr>
-<tr>
-<td>其他浮点→decimal</td>
-<td>显式</td>
-<td>decimal精度更高</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_10">五、实际应用示例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<h3 id="1_2"><strong>示例1：安全的类型转换方法</strong><a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SafeConverter</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">{</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="c1">// 1. 安全整数转换（带范围检查）</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">SafeIntConvert</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">defaultValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">value</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MinValue</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">)</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="k">value</span><span class="p">;</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">defaultValue</span><span class="p">;</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="c1">// 2. 浮点数舍入转换</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">RoundToInt</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="n">MidpointRounding</span><span class="w"> </span><span class="n">rounding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MidpointRounding</span><span class="p">.</span><span class="n">AwayFromZero</span><span class="p">)</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Math</span><span class="p">.</span><span class="n">Round</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">rounding</span><span class="p">);</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="c1">// 3. 百分比计算（避免浮点误差）</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">CalculatePercentage</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">part</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="p">)</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">total</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">0m</span><span class="p">;</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">decimal</span><span class="p">)</span><span class="n">part</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100m</span><span class="p">;</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="p">}</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="c1">// 使用示例</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="kt">long</span><span class="w"> </span><span class="n">bigNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000000000L</span><span class="p">;</span>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="kt">int</span><span class="w"> </span><span class="n">safeInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SafeConverter</span><span class="p">.</span><span class="n">SafeIntConvert</span><span class="p">(</span><span class="n">bigNumber</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// -1（超出范围）</span>
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.99</span><span class="p">;</span>
-</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="kt">int</span><span class="w"> </span><span class="n">roundedPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SafeConverter</span><span class="p">.</span><span class="n">RoundToInt</span><span class="p">(</span><span class="n">price</span><span class="p">);</span><span class="w">  </span><span class="c1">// 20</span>
+<hr />
+<h2 id="4">4. 特别注意：什么不能隐式转换？<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>理解“不能隐式转换”的情况，能反过来帮你加深对隐式转换的理解：</p>
+<ol>
+<li><strong>大转小（高精转低精）：</strong> 例如 <code>double</code> 转 <code>int</code>，或者 <code>long</code> 转 <code>int</code>。这可能会丢失小数位或产生溢出，必须使用<strong>显式转换（强制转换）</strong>。</li>
+<li><strong><code>decimal</code> 与 <code>float/double</code>：</strong> 虽然都是浮点数，但由于它们的底层二进制实现逻辑完全不同，C# 禁止它们之间进行隐式转换，以防精度计算出错。</li>
+<li><strong>布尔值（bool）：</strong> 在 C# 中，<code>bool</code> 不能与任何数值类型（如 <code>0</code> 或 <code>1</code>）进行隐式转换（这与 C++ 不同）。</li>
+</ol>
+<hr />
+<h2 id="5">5. 给初学者的记忆小窍门<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>“顺水推舟”法则：</strong> &gt; 只要目标类型的“容量”更大，且转换后数据的“意义”不发生破坏（不丢精度、不丢位），C# 就会帮你自动完成。</p>
+</blockquote>
+<h2 id="_4">转换溢出<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>在数据类型转换中，<strong>转换溢出（Overflow）</strong> 是指当你试图将一个“大范围”的数据放入一个“小容量”的容器时，数据超出了目标类型所能表示的最大限度，从而导致数据损坏或结果错误的现象。</p>
+<p>简单来说，就像是你试图<strong>把一升水（Long类型的数据）倒入一个只能装200毫升的杯子（Int类型）里</strong>，溢出来的水就丢失了，剩下的水也不再是原来的那一升。</p>
+<h3 id="1_1">1. 为什么会发生溢出？<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p>溢出通常发生在<strong>显式转换（强制转换）</strong>中。因为隐式转换（从小到大）是安全的，编译器会自动处理；而显式转换（从大到小）时，编译器会认为“程序员已经知道风险并负责”，于是强制截断二进制位。</p>
+<h3 id="2_1">2. 二进制视角的“溢出”<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p>计算机存储数字是基于二进制位的。当大类型转小类型时，计算机会直接<strong>砍掉高位</strong>，只保留低位。</p>
+<p><strong>举例说明：</strong>
+假设我们要把 <code>int</code> 类型的 <code>257</code> 强制转换为 <code>byte</code> 类型：</p>
+<ul>
+<li><strong>int 257</strong> 的二进制（32位简化版）：<code>00000000 00000000 00000001 00000001</code></li>
+<li><strong>byte</strong> 只能存 8 位。</li>
+<li><strong>强制转换后：</strong> 计算机直接砍掉前面的24位，只剩下最后的 <code>00000001</code>。</li>
+<li><strong>结果：</strong> 转换后的值变成了 <code>1</code>。</li>
+</ul>
+<p>这就是典型的溢出：原数据是 257，转换后变成了 1，数据完全错了。</p>
+<h3 id="3-c">3. C# 中的溢出处理模式<a class="headerlink" href="#3-c" title="Permanent link">&para;</a></h3>
+<p>在 C# 中，处理溢出有两种主要的机制：</p>
+<h4 id="a-unchecked">A. 默认模式（Unchecked）<a class="headerlink" href="#a-unchecked" title="Permanent link">&para;</a></h4>
+<p>默认情况下，C# 在进行算术运算或转换溢出时<strong>不会报错</strong>。它会静默地完成转换，给你一个错误的结果（如上面的 257 变 1）。这在追求性能的程序中很常见，但对初学者来说是个陷阱。</p>
+<h4 id="b-checked">B. 检查模式（Checked）<a class="headerlink" href="#b-checked" title="Permanent link">&para;</a></h4>
+<p>如果你希望在发生溢出时让程序立刻“报错”而不是跑出错误结果，可以使用 <code>checked</code> 关键字。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">bigNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">byte</span><span class="w"> </span><span class="n">smallNumber</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// 使用 checked 块</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">checked</span><span class="w"> </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">smallNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">bigNumber</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这里会抛出 System.OverflowException 异常</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="2_2"><strong>示例2：颜色值处理（常见场景）</strong><a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// RGB颜色转换</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Color</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">{</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">byte</span><span class="w"> </span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="c1">// 从整数创建颜色（常见格式：0xRRGGBB）</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">Color</span><span class="w"> </span><span class="nf">FromInt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">rgb</span><span class="p">)</span>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Color</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">            </span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)((</span><span class="n">rgb</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">),</span><span class="w">  </span><span class="c1">// 提取红色</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">            </span><span class="n">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)((</span><span class="n">rgb</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">),</span><span class="w">   </span><span class="c1">// 提取绿色</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">            </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)(</span><span class="n">rgb</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">)</span><span class="w">           </span><span class="c1">// 提取蓝色</span>
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">        </span><span class="p">};</span>
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
-</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="c1">// 转换为灰度（需要浮点计算）</span>
-</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">byte</span><span class="w"> </span><span class="nf">ToGrayScale</span><span class="p">()</span>
-</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">        </span><span class="c1">// 使用浮点计算更精确</span>
-</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">gray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.299f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.587f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.114f</span><span class="p">;</span>
-</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">gray</span><span class="p">;</span><span class="w">  </span><span class="c1">// 显式转换回byte</span>
-</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="p">}</span>
-</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
-</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="c1">// 使用</span>
-</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="n">Color</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">FromInt</span><span class="p">(</span><span class="mh">0xFF0000</span><span class="p">);</span>
-</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="kt">byte</span><span class="w"> </span><span class="n">gray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">red</span><span class="p">.</span><span class="n">ToGrayScale</span><span class="p">();</span><span class="w">  </span><span class="c1">// 76</span>
-</span></code></pre></div>
-<h3 id="3_2"><strong>示例3：数值计算中的精度控制</strong><a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">// 财务计算（必须用decimal）</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MoneyCalculator</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">{</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">CalculateTotal</span><span class="p">(</span><span class="kt">decimal</span><span class="w"> </span><span class="n">unitPrice</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">quantity</span><span class="p">,</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">taxRate</span><span class="p">)</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="c1">// 中间计算保持decimal精度</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="kt">decimal</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unitPrice</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">quantity</span><span class="p">;</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="kt">decimal</span><span class="w"> </span><span class="n">tax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">taxRate</span><span class="p">;</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="kt">decimal</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tax</span><span class="p">;</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="c1">// 四舍五入到分</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="n">Round</span><span class="p">(</span><span class="n">total</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">MidpointRounding</span><span class="p">.</span><span class="n">AwayFromZero</span><span class="p">);</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="c1">// 避免的常见错误</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CommonMistakes</span><span class="p">()</span>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">        </span><span class="c1">// ❌ 错误：用double做财务计算</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// 可能得到0.30000000000000004</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">        </span><span class="c1">// ✅ 正确：用decimal</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">        </span><span class="kt">decimal</span><span class="w"> </span><span class="n">correctPrice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1m</span><span class="p">;</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">        </span><span class="kt">decimal</span><span class="w"> </span><span class="n">correctTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">correctPrice</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// 精确得到0.3</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="_11">六、特殊转换场景<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<h3 id="1-char"><strong>1. char类型的转换</strong><a class="headerlink" href="#1-char" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">// char↔数值的特殊规则</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">ascii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">letter</span><span class="p">;</span><span class="w">           </span><span class="c1">// 隐式：65</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="kt">char</span><span class="w"> </span><span class="n">fromAscii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="mi">65</span><span class="p">;</span><span class="w">    </span><span class="c1">// 显式：&#39;A&#39;</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1">// 数字字符转换</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="kt">char</span><span class="w"> </span><span class="n">digitChar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;7&#39;</span><span class="p">;</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">digitValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitChar</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span><span class="w">  </span><span class="c1">// 7（常用技巧）</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1">// Unicode字符</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="kt">char</span><span class="w"> </span><span class="n">chinese</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;中&#39;</span><span class="p">;</span>
-</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="kt">int</span><span class="w"> </span><span class="n">unicode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chinese</span><span class="p">;</span><span class="w">        </span><span class="c1">// 20013</span>
-</span></code></pre></div>
-<h3 id="2_3"><strong>2. 枚举类型转换</strong><a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">enum</span><span class="w"> </span><span class="n">Status</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Pending</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">Active</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Inactive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1">// 隐式：枚举→底层类型</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">Status</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Status</span><span class="p">.</span><span class="n">Active</span><span class="p">;</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">statusValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w">     </span><span class="c1">// 1</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1">// 显式：数值→枚举</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="kt">int</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">Status</span><span class="w"> </span><span class="n">fromValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Status</span><span class="p">)</span><span class="k">value</span><span class="p">;</span><span class="w">  </span><span class="c1">// Inactive</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="c1">// 检查是否有效</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Enum</span><span class="p">.</span><span class="n">IsDefined</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">Status</span><span class="p">),</span><span class="w"> </span><span class="k">value</span><span class="p">))</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="p">{</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="n">Status</span><span class="w"> </span><span class="n">validStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Status</span><span class="p">)</span><span class="k">value</span><span class="p">;</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="3-nullable"><strong>3. 可空类型（Nullable<T>）转换</strong><a class="headerlink" href="#3-nullable" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">// 基础类型↔可空类型</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kt">int?</span><span class="w"> </span><span class="n">nullable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normal</span><span class="p">;</span><span class="w">       </span><span class="c1">// 隐式：int → int?</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">back</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullable</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span><span class="w">    </span><span class="c1">// 需要.Value（可能抛异常）</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1">// 安全访问</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">safeValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullable</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果null则返回0</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="c1">// 可空类型间的转换</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="kt">int?</span><span class="w"> </span><span class="n">nullableInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="kt">long?</span><span class="w"> </span><span class="n">nullableLong</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullableInt</span><span class="p">;</span><span class="w">  </span><span class="c1">// 隐式：int? → long?</span>
-</span></code></pre></div>
-<h3 id="4-checkedunchecked"><strong>4. checked/unchecked上下文</strong><a class="headerlink" href="#4-checkedunchecked" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// 默认：unchecked（不检查算术溢出）</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">;</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">overflow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 变成int.MinValue，不报错</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1">// checked：严格检查</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="k">checked</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">{</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="c1">// int error = max + 1;  // 编译时/运行时异常</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="p">}</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="c1">// 项目级设置</span>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c1">// 在.csproj中添加：&lt;CheckForOverflowUnderflow&gt;true&lt;/CheckForOverflowUnderflow&gt;</span>
-</span></code></pre></div>
-<h2 id="_12">七、最佳实践总结<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<h3 id="_13"><strong>转换选择流程图</strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>开始转换
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    ↓
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>是字符串吗？ → 是 → 使用TryParse()
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    ↓ 否
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>转换安全吗？ → 是 → 使用隐式转换
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    ↓ 否
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>需要处理null吗？ → 是 → 使用Convert.ToXxx()
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>    ↓ 否
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>接受数据丢失吗？ → 是 → 使用显式转换 (类型)
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>    ↓ 否
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>                使用范围检查 + 显式转换
-</span></code></pre></div>
-<h3 id="_14"><strong>黄金法则</strong><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">// 法则1：优先隐式转换（最安全）</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">small</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">long</span><span class="w"> </span><span class="n">big</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">small</span><span class="p">;</span><span class="w">  </span><span class="c1">// ✅ 推荐</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1">// 法则2：字符串用TryParse</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="kt">string</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123&quot;</span><span class="p">;</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="n">TryParse</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1">// 法则3：显式转换要检查范围</span>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="kt">long</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000000000L</span><span class="p">;</span>
-</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">source</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MinValue</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">)</span>
-</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="p">{</span>
-</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">source</span><span class="p">;</span>
-</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="p">}</span>
-</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
-</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="c1">// 法则4：财务计算用decimal</span>
-</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="kt">decimal</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">19.99m</span><span class="p">;</span>
-</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="kt">decimal</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">  </span><span class="c1">// 59.97m（精确）</span>
-</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>
-</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="c1">// 法则5：浮点转换注意精度</span>
-</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1f</span><span class="p">;</span>
-</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w">  </span><span class="c1">// 可能不是精确的0.1</span>
-</span></code></pre></div>
-<h3 id="_15"><strong>常见错误避免</strong><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">// ❌ 错误1：忽略浮点精度</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1f</span><span class="p">;</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2f</span><span class="p">;</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="kt">float</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f2</span><span class="p">;</span><span class="w">  </span><span class="c1">// 可能不是0.3</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="c1">// ✅ 正确：用decimal或比较时用容差</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">epsilon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.00001f</span><span class="p">;</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="n">Abs</span><span class="p">(</span><span class="n">sum</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.3f</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">epsilon</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1">// ❌ 错误2：未处理可能为null的值</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="kt">int?</span><span class="w"> </span><span class="n">nullableValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetFromDatabase</span><span class="p">();</span>
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="kt">int</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullableValue</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span><span class="w">  </span><span class="c1">// 如果null则异常</span>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="c1">// ✅ 正确：使用空值合并运算符</span>
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="kt">int</span><span class="w"> </span><span class="n">safeValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullableValue</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="c1">// ❌ 错误3：混淆除法的类型</span>
-</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// 2（整数除法）</span>
-</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
-</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="c1">// ✅ 正确：需要小数时转换类型</span>
-</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="kt">double</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// 2.5</span>
-</span></code></pre></div>
-<h3 id="_16"><strong>性能优化建议</strong><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">// 1. 循环内避免重复转换</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">{</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="c1">// ❌ 不好：每次循环都转换</span>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="c1">// float value = (float)i;</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="c1">// ✅ 好：预先转换或改变循环变量类型</span>
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">}</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="c1">// 2. 使用合适的类型减少转换</span>
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">intList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">();</span><span class="w">  </span><span class="c1">// 泛型，无装箱</span>
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="n">ArrayList</span><span class="w"> </span><span class="n">oldList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span><span class="w">  </span><span class="c1">// 非泛型，需要装箱拆箱</span>
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="c1">// 3. 使用Span&lt;T&gt;处理大量数据转换</span>
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="mi">1000</span><span class="p">];</span>
-</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="n">Span</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MemoryMarshal</span><span class="p">.</span><span class="n">Cast</span><span class="o">&lt;</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">bytes</span><span class="p">);</span>
-</span></code></pre></div>
-<h2 id="_17">八、练习题<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
-<h3 id="1_3"><strong>练习1：温度转换器</strong><a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// 实现摄氏度和华氏度的安全转换</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="c1">// 要求：处理溢出、使用合适的类型</span>
-</span></code></pre></div>
-<h3 id="2_4"><strong>练习2：安全计算器</strong><a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">// 实现一个安全的数值计算器，支持：</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c1">// 1. 任意两个数值类型的加法</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="c1">// 2. 自动选择合适的结果类型</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1">// 3. 处理溢出和精度丢失</span>
-</span></code></pre></div>
-<h3 id="3_3"><strong>练习3：数据验证器</strong><a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">// 创建一个类型转换验证工具：</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1">// 1. 检查两个类型之间是否可以转换</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1">// 2. 是隐式还是显式转换</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1">// 3. 转换时可能的精度损失</span>
-</span></code></pre></div>
-<p>记住：<strong>了解数据的范围和精度要求是选择转换方法的关键</strong>。当不确定时，选择更安全的方式总是更好的。</p>
+<p>当程序抛出异常时，你可以捕获它并进行处理，而不是让错误的数据继续影响后续计算。</p>
+<h3 id="4_1">4. 如何避免转换溢出？<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>先判断后转换：</strong> 在转换前，检查源数据是否在目标类型的范围内。
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">bigNumber</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="kt">byte</span><span class="p">.</span><span class="n">MinValue</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">bigNumber</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="kt">byte</span><span class="p">.</span><span class="n">MaxValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">smallNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="n">bigNumber</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>使用 <code>Convert</code> 类：</strong> <code>Convert.ToByte()</code> 等方法内部自带溢出检查，如果溢出会直接抛出异常，比强制括号转换 <code>(byte)</code> 更安全。</p>
+</li>
+<li><strong>合理选择类型：</strong> 如果预感数据会很大，从一开始就使用 <code>long</code> 或 <code>decimal</code>，避免后续频繁转换。</li>
+</ol>
+<h3 id="_5">总结归纳<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>定义：</strong> 数据超出目标类型承载范围。</li>
+<li><strong>本质：</strong> 二进制高位被截断，导致数值剧变。</li>
+<li><strong>后果：</strong> 结果错误（如正数变负数，大数变小数），且默认情况下编译器不会提醒。</li>
+<li><strong>对策：</strong> 增强代码健壮性，使用 <code>checked</code> 或 <code>Convert</code> 方法进行安全转换。</li>
+</ul>
 
 
 

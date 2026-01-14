@@ -4,6 +4,49 @@ tags: []
 
 ---
 
+##  Parse()方法
+
+一、用途：将字符串类型转换为其他基本数据类型。
+
+二、语法格式
+
+```c#
+目标数据类型.Parse(字符串);
+```
+
+三、什么时候可以转
+
+```c#
+//整数字符串
+int  i1 = int.Parse("123"); // 123
+int  i1 = int.Parse("-123"); // -123
+//浮点数字符串
+double d1 = double.Parse("123.456");// 123.456
+double d1 = double.Parse("-123.456"); // -123.456
+//布尔字符串
+bool b1 = bool.Parse("true"); // true
+bool b1 = bool.Parse("-true");// 错误：FormatException
+//单字符字符串
+char c1 = char.Parse("A");
+
+```
+
+四、什么时候不可以转
+
+```c#
+//1.非字符串不可以用Parse()方法
+int i3 = int.Parse(123.456); 
+//2.无效格式的字符串不可以用Parse()方法
+int.Parse("abc"); // 格式错误：FormatException
+int.Parse("123.456");  // 格式错误：FormatException
+int.Parse("");//FormatException
+//3.超出范围:溢出错误
+byte.Parse("256"); // OverflowException 
+
+```
+
+
+
 
 ### **2. Parse() 方法**
 ```csharp

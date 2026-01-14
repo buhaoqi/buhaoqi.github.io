@@ -4,6 +4,35 @@ tags: []
 
 ---
 
+
+- string是一个unicode字符序列
+
+- 如何理解string类型：1.存储字符序列 2.操作字符序列
+
+- string是引用类型。
+
+  - 引用的值存在内存堆中
+
+  - 引用的地址存在内存栈中
+
+```c#
+string  str1 = "aaa";
+string str2 = str1;
+Console.WriteLine(str1); //
+```
+
+- 字符串具有不可变性：一旦声明就不能修改
+
+```c#
+string str1 = "aaa";
+str1 = str1 + "bbb";// 不是修改，而是创建新字符串
+```
+
+- 字符串的使用方式跟值类型相似，
+  - 声明、赋值、读、写
+
+
+
 ## **string是引用类型**
 
 ```csharp
