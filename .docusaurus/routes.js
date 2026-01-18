@@ -3,41 +3,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/buhaoqi/__docusaurus/debug',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug', '114'),
-    exact: true
-  },
-  {
-    path: '/buhaoqi/__docusaurus/debug/config',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug/config', 'ccd'),
-    exact: true
-  },
-  {
-    path: '/buhaoqi/__docusaurus/debug/content',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug/content', '9bb'),
-    exact: true
-  },
-  {
-    path: '/buhaoqi/__docusaurus/debug/globalData',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug/globalData', '77e'),
-    exact: true
-  },
-  {
-    path: '/buhaoqi/__docusaurus/debug/metadata',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug/metadata', '24c'),
-    exact: true
-  },
-  {
-    path: '/buhaoqi/__docusaurus/debug/registry',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug/registry', '19a'),
-    exact: true
-  },
-  {
-    path: '/buhaoqi/__docusaurus/debug/routes',
-    component: ComponentCreator('/buhaoqi/__docusaurus/debug/routes', '87a'),
-    exact: true
-  },
-  {
     path: '/buhaoqi/blog',
     component: ComponentCreator('/buhaoqi/blog', '698'),
     exact: true

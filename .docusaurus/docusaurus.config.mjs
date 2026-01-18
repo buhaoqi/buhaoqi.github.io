@@ -31,7 +31,7 @@ export default {
   "url": "https://buhaoqi.github.io",
   "baseUrl": "/buhaoqi/",
   "organizationName": "buhaoqi",
-  "projectName": "不好奇对口计算机",
+  "projectName": "buhaoqi",
   "deploymentBranch": "gh-pages",
   "onBrokenLinks": "throw",
   "i18n": {

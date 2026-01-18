@@ -954,7 +954,7 @@
       "js": [
         {
           "file": "assets/js/runtime~main.39f1b2d2.js",
-          "hash": "c53f032dd48647af",
+          "hash": "3f02179bc5f4b05c",
           "publicPath": "/buhaoqi/assets/js/runtime~main.39f1b2d2.js"
         }
       ]
@@ -1313,9 +1313,9 @@
     "8792": {
       "js": [
         {
-          "file": "assets/js/main.c9c97cad.js",
-          "hash": "824bbf2949dbd0f3",
-          "publicPath": "/buhaoqi/assets/js/main.c9c97cad.js"
+          "file": "assets/js/main.bf608653.js",
+          "hash": "ab6e2e3d6ac4102b",
+          "publicPath": "/buhaoqi/assets/js/main.bf608653.js"
         }
       ]
     },

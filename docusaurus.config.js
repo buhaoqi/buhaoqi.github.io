@@ -20,16 +20,18 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://buhaoqi.github.io',
+  url: 'git@github.com:buhaoqi/buhaoqi.github.io.git',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/buhaoqi/',
+  baseUrl: '/',
+  
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'buhaoqi', // Usually your GitHub org/user name.
   projectName: 'buhaoqi', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+
 
   onBrokenLinks: 'throw',
 
