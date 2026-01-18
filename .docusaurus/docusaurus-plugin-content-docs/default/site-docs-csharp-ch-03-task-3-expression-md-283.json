@@ -1,0 +1,24 @@
+{
+  "id": "csharp/ch03/task3/expression",
+  "title": "expression",
+  "description": "",
+  "source": "@site/docs/csharp/ch03/task3/expression.md",
+  "sourceDirName": "csharp/ch03/task3",
+  "slug": "/csharp/ch03/task3/expression",
+  "permalink": "/docs/csharp/ch03/task3/expression",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task3/expression.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "operator",
+    "permalink": "/docs/csharp/ch03/task3/operator"
+  },
+  "next": {
+    "title": "exercise",
+    "permalink": "/docs/csharp/ch03/exercise"
+  }
+}

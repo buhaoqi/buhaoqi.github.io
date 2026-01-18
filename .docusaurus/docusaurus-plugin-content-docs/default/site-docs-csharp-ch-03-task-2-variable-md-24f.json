@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task2/variable",
+  "title": "任务一 变量",
+  "description": "任务一 变量",
+  "source": "@site/docs/csharp/ch03/task2/variable.md",
+  "sourceDirName": "csharp/ch03/task2",
+  "slug": "/csharp/ch03/task2/variable",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task2/variable",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task2/variable.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "任务一 变量",
+    "sidebar_label": "任务一 变量",
+    "sidebar_position": 2
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 常量",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task2/constant"
+  },
+  "next": {
+    "title": "任务一 概述",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task3/overview"
+  }
+}

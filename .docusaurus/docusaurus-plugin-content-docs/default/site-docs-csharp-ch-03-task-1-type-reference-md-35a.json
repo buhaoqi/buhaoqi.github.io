@@ -1,0 +1,24 @@
+{
+  "id": "csharp/ch03/task1/type-reference",
+  "title": "type-reference",
+  "description": "",
+  "source": "@site/docs/csharp/ch03/task1/type-reference.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/type-reference",
+  "permalink": "/docs/csharp/ch03/task1/type-reference",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/type-reference.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "type-value",
+    "permalink": "/docs/csharp/ch03/task1/type-value"
+  },
+  "next": {
+    "title": "constant",
+    "permalink": "/docs/csharp/ch03/task2/constant"
+  }
+}

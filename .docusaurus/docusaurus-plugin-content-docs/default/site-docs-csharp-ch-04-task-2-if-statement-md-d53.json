@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task2/if-statement",
+  "title": "1.if语句",
+  "description": "1.if语句",
+  "source": "@site/docs/csharp/ch04/task2/if-statement.md",
+  "sourceDirName": "csharp/ch04/task2",
+  "slug": "/csharp/ch04/task2/if-statement",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task2/if-statement",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task2/if-statement.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "1.if语句",
+    "sidebar_label": "1.if语句",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "5.Console.ReadKey()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-readkey"
+  },
+  "next": {
+    "title": "2.switch语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task2/switch-statement"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task1/console-writeline",
+  "title": "1.Console.WriteLine()",
+  "description": "Console.WriteLine()",
+  "source": "@site/docs/csharp/ch04/task1/console-writeline.md",
+  "sourceDirName": "csharp/ch04/task1",
+  "slug": "/csharp/ch04/task1/console-writeline",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-writeline",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task1/console-writeline.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "1.Console.WriteLine()",
+    "sidebar_label": "1.Console.WriteLine()",
+    "sidebar_position": 2
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "概述",
+    "permalink": "/buhaoqi/docs/csharp/ch04/overview"
+  },
+  "next": {
+    "title": "2.Console.Write()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-write"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch01/index",
+  "title": "项目一算法与程序基础",
+  "description": "这里是文档正文...",
+  "source": "@site/docs/csharp/ch01/index.md",
+  "sourceDirName": "csharp/ch01",
+  "slug": "/csharp/ch01/",
+  "permalink": "/docs/csharp/ch01/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch01/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "项目一算法与程序基础",
+    "sidebar_label": "项目一算法与程序基础",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "考试大纲",
+    "permalink": "/docs/csharp/intro"
+  },
+  "next": {
+    "title": "任务一 算法2的定义及特性",
+    "permalink": "/docs/csharp/ch01/task1"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task1/console-read",
+  "title": "4.Console.Read()",
+  "description": "4.Console.Read()",
+  "source": "@site/docs/csharp/ch04/task1/console-read.md",
+  "sourceDirName": "csharp/ch04/task1",
+  "slug": "/csharp/ch04/task1/console-read",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-read",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task1/console-read.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "4.Console.Read()",
+    "sidebar_label": "4.Console.Read()",
+    "sidebar_position": 5
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "3.Console.ReadLine()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-readline"
+  },
+  "next": {
+    "title": "5.Console.ReadKey()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-readkey"
+  }
+}

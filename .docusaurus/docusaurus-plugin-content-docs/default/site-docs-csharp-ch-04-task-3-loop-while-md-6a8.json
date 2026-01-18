@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task3/loop-while",
+  "title": "2.while 循环语句",
+  "description": "2.while 循环语句",
+  "source": "@site/docs/csharp/ch04/task3/loop-while.md",
+  "sourceDirName": "csharp/ch04/task3",
+  "slug": "/csharp/ch04/task3/loop-while",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task3/loop-while",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task3/loop-while.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "2.while 循环语句",
+    "sidebar_label": "2.while 循环语句",
+    "sidebar_position": 2
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "1.for 循环语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task3/loop-for"
+  },
+  "next": {
+    "title": "1.break语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task4/break-statement"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch05/task4",
+  "title": "任务四 文档程序设计",
+  "description": "任务四 文档程序设计",
+  "source": "@site/docs/csharp/ch05/task4.md",
+  "sourceDirName": "csharp/ch05",
+  "slug": "/csharp/ch05/task4",
+  "permalink": "/buhaoqi/docs/csharp/ch05/task4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch05/task4.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "任务四 文档程序设计",
+    "sidebar_label": "任务四 文档程序设计",
+    "sidebar_position": 4
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务三 对话框",
+    "permalink": "/buhaoqi/docs/csharp/ch05/task3"
+  },
+  "next": {
+    "title": "概述",
+    "permalink": "/buhaoqi/docs/csharp/ch06/overview"
+  }
+}

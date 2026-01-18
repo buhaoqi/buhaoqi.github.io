@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch05/task1",
+  "title": "任务一 窗体设计",
+  "description": "任务一 窗体设计",
+  "source": "@site/docs/csharp/ch05/task1.md",
+  "sourceDirName": "csharp/ch05",
+  "slug": "/csharp/ch05/task1",
+  "permalink": "/buhaoqi/docs/csharp/ch05/task1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch05/task1.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "任务一 窗体设计",
+    "sidebar_label": "任务一 窗体设计",
+    "sidebar_position": 2
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "概述",
+    "permalink": "/buhaoqi/docs/csharp/ch05/overview"
+  },
+  "next": {
+    "title": "任务二 常用空间",
+    "permalink": "/buhaoqi/docs/csharp/ch05/task2"
+  }
+}

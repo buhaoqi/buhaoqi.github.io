@@ -1,0 +1,399 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/buhaoqi/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/buhaoqi/docs",
+          "mainDocId": "csharp/intro",
+          "docs": [
+            {
+              "id": "bookmarks",
+              "path": "/buhaoqi/docs/bookmarks"
+            },
+            {
+              "id": "bookmarks/intro",
+              "path": "/buhaoqi/docs/bookmarks/intro"
+            },
+            {
+              "id": "csharp/ch01/overview",
+              "path": "/buhaoqi/docs/csharp/ch01/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch01/task1",
+              "path": "/buhaoqi/docs/csharp/ch01/task1",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch01/task2",
+              "path": "/buhaoqi/docs/csharp/ch01/task2",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch01/task3",
+              "path": "/buhaoqi/docs/csharp/ch01/task3",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch01/task4",
+              "path": "/buhaoqi/docs/csharp/ch01/task4",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch01/task5",
+              "path": "/buhaoqi/docs/csharp/ch01/task5",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch02/overview",
+              "path": "/buhaoqi/docs/csharp/ch02/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch02/task1",
+              "path": "/buhaoqi/docs/csharp/ch02/task1",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch02/task2",
+              "path": "/buhaoqi/docs/csharp/ch02/task2",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch02/task3",
+              "path": "/buhaoqi/docs/csharp/ch02/task3",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/exercise",
+              "path": "/buhaoqi/docs/csharp/ch03/exercise",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/overview",
+              "path": "/buhaoqi/docs/csharp/ch03/overview"
+            },
+            {
+              "id": "csharp/ch03/task1/brace",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/brace",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/convert",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/convert",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/implicit-convention",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/implicit-convention",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/overview",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/parse",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/parse",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-alias",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-alias",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-bool",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-bool",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-char",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-char",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-decimal",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-decimal",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-enum",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-enum",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-int",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-int",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-object",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-object",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-string",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-string",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task1/type-struct",
+              "path": "/buhaoqi/docs/csharp/ch03/task1/type-struct",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task2/constant",
+              "path": "/buhaoqi/docs/csharp/ch03/task2/constant",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task2/variable",
+              "path": "/buhaoqi/docs/csharp/ch03/task2/variable",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/arithmetic-operators",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/arithmetic-operators",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/assignment-operators",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/assignment-operators",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/comparison-operators",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/comparison-operators",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/conditional-operators",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/conditional-operators",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/increment-decrement-operators",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/increment-decrement-operators",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/logical-operators",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/logical-operators",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/overview",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch03/task3/precedence-and-associativity",
+              "path": "/buhaoqi/docs/csharp/ch03/task3/precedence-and-associativity",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/exercise",
+              "path": "/buhaoqi/docs/csharp/ch04/exercise",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/overview",
+              "path": "/buhaoqi/docs/csharp/ch04/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task1/console-read",
+              "path": "/buhaoqi/docs/csharp/ch04/task1/console-read",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task1/console-readkey",
+              "path": "/buhaoqi/docs/csharp/ch04/task1/console-readkey",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task1/console-readline",
+              "path": "/buhaoqi/docs/csharp/ch04/task1/console-readline",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task1/console-write",
+              "path": "/buhaoqi/docs/csharp/ch04/task1/console-write",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task1/console-writeline",
+              "path": "/buhaoqi/docs/csharp/ch04/task1/console-writeline",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task2/if-statement",
+              "path": "/buhaoqi/docs/csharp/ch04/task2/if-statement",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task2/switch-statement",
+              "path": "/buhaoqi/docs/csharp/ch04/task2/switch-statement",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task3/loop-for",
+              "path": "/buhaoqi/docs/csharp/ch04/task3/loop-for",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task3/loop-while",
+              "path": "/buhaoqi/docs/csharp/ch04/task3/loop-while",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task4/break-statement",
+              "path": "/buhaoqi/docs/csharp/ch04/task4/break-statement",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch04/task4/continue-statement",
+              "path": "/buhaoqi/docs/csharp/ch04/task4/continue-statement",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch05/overview",
+              "path": "/buhaoqi/docs/csharp/ch05/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch05/task1",
+              "path": "/buhaoqi/docs/csharp/ch05/task1",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch05/task2",
+              "path": "/buhaoqi/docs/csharp/ch05/task2",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch05/task3",
+              "path": "/buhaoqi/docs/csharp/ch05/task3",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch05/task4",
+              "path": "/buhaoqi/docs/csharp/ch05/task4",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch06/overview",
+              "path": "/buhaoqi/docs/csharp/ch06/overview",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch06/task1",
+              "path": "/buhaoqi/docs/csharp/ch06/task1",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch06/task2",
+              "path": "/buhaoqi/docs/csharp/ch06/task2",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch06/task3",
+              "path": "/buhaoqi/docs/csharp/ch06/task3",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch06/task4",
+              "path": "/buhaoqi/docs/csharp/ch06/task4",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/ch06/task5",
+              "path": "/buhaoqi/docs/csharp/ch06/task5",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "csharp/intro",
+              "path": "/buhaoqi/docs/csharp/intro",
+              "sidebar": "csharpSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/buhaoqi/docs/intro"
+            },
+            {
+              "id": "mysql/intro",
+              "path": "/buhaoqi/docs/mysql/intro",
+              "sidebar": "mysqlSidebar"
+            },
+            {
+              "id": "tutorial-basics/congratulations",
+              "path": "/buhaoqi/docs/tutorial-basics/congratulations"
+            },
+            {
+              "id": "tutorial-basics/create-a-blog-post",
+              "path": "/buhaoqi/docs/tutorial-basics/create-a-blog-post"
+            },
+            {
+              "id": "tutorial-basics/create-a-document",
+              "path": "/buhaoqi/docs/tutorial-basics/create-a-document"
+            },
+            {
+              "id": "tutorial-basics/create-a-page",
+              "path": "/buhaoqi/docs/tutorial-basics/create-a-page"
+            },
+            {
+              "id": "tutorial-basics/deploy-your-site",
+              "path": "/buhaoqi/docs/tutorial-basics/deploy-your-site"
+            },
+            {
+              "id": "tutorial-basics/markdown-features",
+              "path": "/buhaoqi/docs/tutorial-basics/markdown-features"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/buhaoqi/docs/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/buhaoqi/docs/tutorial-extras/translate-your-site"
+            },
+            {
+              "id": "tutorials/ch02/index",
+              "path": "/buhaoqi/docs/tutorials/ch02/"
+            },
+            {
+              "id": "tutorials/cha01/index",
+              "path": "/buhaoqi/docs/tutorials/cha01/"
+            },
+            {
+              "id": "tutorials/tutorials",
+              "path": "/buhaoqi/docs/tutorials/tutorials"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "csharpSidebar": {
+              "link": {
+                "path": "/buhaoqi/docs/csharp/intro",
+                "label": "考试大纲"
+              }
+            },
+            "mysqlSidebar": {
+              "link": {
+                "path": "/buhaoqi/docs/mysql/intro",
+                "label": "MySQL 介绍"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

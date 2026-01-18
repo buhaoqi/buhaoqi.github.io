@@ -1,0 +1,19 @@
+{
+  "id": "bookmarks/intro",
+  "title": "实用网址导航",
+  "description": "这里收集了各种实用的网站资源，方便快速访问。",
+  "source": "@site/docs/bookmarks/intro.md",
+  "sourceDirName": "bookmarks",
+  "slug": "/bookmarks/intro",
+  "permalink": "/buhaoqi/docs/bookmarks/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/bookmarks/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "实用网址导航",
+    "slug": "/bookmarks/intro"
+  }
+}

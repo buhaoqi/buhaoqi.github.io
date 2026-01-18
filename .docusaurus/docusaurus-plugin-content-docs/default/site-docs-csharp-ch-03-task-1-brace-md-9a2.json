@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task1/brace",
+  "title": "任务一 括号强转",
+  "description": "任务一 括号强转",
+  "source": "@site/docs/csharp/ch03/task1/brace.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/brace",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task1/brace",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/brace.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "任务一 括号强转",
+    "sidebar_label": "任务一 括号强转",
+    "sidebar_position": 11
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 隐式转换",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/implicit-convention"
+  },
+  "next": {
+    "title": "任务一 Parse()方法",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/parse"
+  }
+}

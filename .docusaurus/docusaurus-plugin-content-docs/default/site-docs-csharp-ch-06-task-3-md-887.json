@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch06/task3",
+  "title": "任务三 数组的遍历",
+  "description": "任务三 数组的遍历",
+  "source": "@site/docs/csharp/ch06/task3.md",
+  "sourceDirName": "csharp/ch06",
+  "slug": "/csharp/ch06/task3",
+  "permalink": "/buhaoqi/docs/csharp/ch06/task3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch06/task3.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "任务三 数组的遍历",
+    "sidebar_label": "任务三 数组的遍历",
+    "sidebar_position": 4
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务二 多维数组",
+    "permalink": "/buhaoqi/docs/csharp/ch06/task2"
+  },
+  "next": {
+    "title": "任务四 数组的排序",
+    "permalink": "/buhaoqi/docs/csharp/ch06/task4"
+  }
+}

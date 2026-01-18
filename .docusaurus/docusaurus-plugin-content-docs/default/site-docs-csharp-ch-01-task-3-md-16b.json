@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch01/task3",
+  "title": "任务三 算法分析与评价",
+  "description": "任务三 算法分析与评价",
+  "source": "@site/docs/csharp/ch01/task3.md",
+  "sourceDirName": "csharp/ch01",
+  "slug": "/csharp/ch01/task3",
+  "permalink": "/buhaoqi/docs/csharp/ch01/task3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch01/task3.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "任务三 算法分析与评价",
+    "sidebar_label": "任务三 算法分析与评价",
+    "sidebar_position": 4
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务二 算法描述与设计",
+    "permalink": "/buhaoqi/docs/csharp/ch01/task2"
+  },
+  "next": {
+    "title": "任务四 算法与程序的关系",
+    "permalink": "/buhaoqi/docs/csharp/ch01/task4"
+  }
+}

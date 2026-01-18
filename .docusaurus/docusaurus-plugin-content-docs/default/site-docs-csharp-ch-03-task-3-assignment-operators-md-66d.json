@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task3/assignment-operators",
+  "title": "任务一 赋值运算符",
+  "description": "任务一 赋值运算符",
+  "source": "@site/docs/csharp/ch03/task3/assignment-operators.md",
+  "sourceDirName": "csharp/ch03/task3",
+  "slug": "/csharp/ch03/task3/assignment-operators",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task3/assignment-operators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task3/assignment-operators.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "任务一 赋值运算符",
+    "sidebar_label": "任务一 赋值运算符",
+    "sidebar_position": 4
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 自增自减运算符",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task3/increment-decrement-operators"
+  },
+  "next": {
+    "title": "任务一 比较运算符",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task3/comparison-operators"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task1/type-decimal",
+  "title": "任务一 实数类型",
+  "description": "任务一 实数类型",
+  "source": "@site/docs/csharp/ch03/task1/type-decimal.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/type-decimal",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-decimal",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/type-decimal.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "任务一 实数类型",
+    "sidebar_label": "任务一 实数类型",
+    "sidebar_position": 3
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 整数类型",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-int"
+  },
+  "next": {
+    "title": "任务一 字符类型",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-char"
+  }
+}

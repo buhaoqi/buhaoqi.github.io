@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task1/type-alias",
+  "title": "任务一 类型别名",
+  "description": "任务一 类型别名",
+  "source": "@site/docs/csharp/ch03/task1/type-alias.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/type-alias",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-alias",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/type-alias.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "任务一 类型别名",
+    "sidebar_label": "任务一 类型别名",
+    "sidebar_position": 9
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 字符串类型",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-string"
+  },
+  "next": {
+    "title": "任务一 隐式转换",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/implicit-convention"
+  }
+}

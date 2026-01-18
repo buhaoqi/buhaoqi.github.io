@@ -1,0 +1,20 @@
+{
+  "id": "tutorials/tutorials",
+  "title": "C# 教程介绍教程首页",
+  "description": "教程",
+  "source": "@site/docs/tutorials/intro.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/tutorials",
+  "permalink": "/buhaoqi/docs/tutorials/tutorials",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "tutorials",
+    "title": "C# 教程介绍教程首页",
+    "sidebar_position": 1
+  }
+}

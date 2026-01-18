@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task1/convert",
+  "title": "任务一 Convert()方法",
+  "description": "任务一 Convert()方法",
+  "source": "@site/docs/csharp/ch03/task1/convert.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/convert",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task1/convert",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/convert.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "任务一 Convert()方法",
+    "sidebar_label": "任务一 Convert()方法",
+    "sidebar_position": 13
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 Parse()方法",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/parse"
+  },
+  "next": {
+    "title": "任务一 object 类型",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-object"
+  }
+}

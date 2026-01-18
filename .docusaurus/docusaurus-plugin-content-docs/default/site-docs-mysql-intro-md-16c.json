@@ -1,0 +1,19 @@
+{
+  "id": "mysql/intro",
+  "title": "MySQL教程",
+  "description": "这里收集了各种实用的网站资源，方便快速访问。",
+  "source": "@site/docs/mysql/intro.md",
+  "sourceDirName": "mysql",
+  "slug": "/mysql/intro",
+  "permalink": "/buhaoqi/docs/mysql/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/mysql/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "MySQL教程"
+  },
+  "sidebar": "mysqlSidebar"
+}

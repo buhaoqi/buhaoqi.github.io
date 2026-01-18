@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task1/console-readkey",
+  "title": "5.Console.ReadKey()",
+  "description": "5.Console.ReadKey()",
+  "source": "@site/docs/csharp/ch04/task1/console-readkey.md",
+  "sourceDirName": "csharp/ch04/task1",
+  "slug": "/csharp/ch04/task1/console-readkey",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-readkey",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task1/console-readkey.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "5.Console.ReadKey()",
+    "sidebar_label": "5.Console.ReadKey()",
+    "sidebar_position": 6
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "4.Console.Read()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-read"
+  },
+  "next": {
+    "title": "1.if语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task2/if-statement"
+  }
+}

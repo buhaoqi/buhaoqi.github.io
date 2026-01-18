@@ -1,0 +1,15 @@
+{
+  "id": "csharp/ch02/index",
+  "title": "index",
+  "description": "",
+  "source": "@site/docs/csharp/ch02/index.md",
+  "sourceDirName": "csharp/ch02",
+  "slug": "/csharp/ch02/",
+  "permalink": "/docs/csharp/ch02/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch02/index.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

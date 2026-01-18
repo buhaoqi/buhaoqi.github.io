@@ -1,0 +1,20 @@
+{
+  "id": "tutorials/cha01/task1",
+  "title": "任务一 算法的定义及特性",
+  "description": "任务一 算法的定义及特性",
+  "source": "@site/docs/tutorials/cha01/task1.md",
+  "sourceDirName": "tutorials/cha01",
+  "slug": "/tutorials/cha01/task1",
+  "permalink": "/docs/tutorials/cha01/task1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/cha01/task1.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "任务一 算法的定义及特性",
+    "sidebar_label": "任务一 算法的定义及特性",
+    "sidebar_position": 2
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task4/break-statement",
+  "title": "1.break语句",
+  "description": "1.break语句",
+  "source": "@site/docs/csharp/ch04/task4/break-statement.md",
+  "sourceDirName": "csharp/ch04/task4",
+  "slug": "/csharp/ch04/task4/break-statement",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task4/break-statement",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task4/break-statement.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "1.break语句",
+    "sidebar_label": "1.break语句",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "2.while 循环语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task3/loop-while"
+  },
+  "next": {
+    "title": "2.continue语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task4/continue-statement"
+  }
+}

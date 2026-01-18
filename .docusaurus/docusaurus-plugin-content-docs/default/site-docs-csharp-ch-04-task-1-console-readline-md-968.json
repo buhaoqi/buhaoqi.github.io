@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task1/console-readline",
+  "title": "3.Console.ReadLine()",
+  "description": "3.Console.ReadLine()",
+  "source": "@site/docs/csharp/ch04/task1/console-readline.md",
+  "sourceDirName": "csharp/ch04/task1",
+  "slug": "/csharp/ch04/task1/console-readline",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-readline",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task1/console-readline.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "3.Console.ReadLine()",
+    "sidebar_label": "3.Console.ReadLine()",
+    "sidebar_position": 4
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "2.Console.Write()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-write"
+  },
+  "next": {
+    "title": "4.Console.Read()",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task1/console-read"
+  }
+}

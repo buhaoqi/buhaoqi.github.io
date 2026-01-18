@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task1/type-object",
+  "title": "任务一 object 类型",
+  "description": "任务一 object 类型",
+  "source": "@site/docs/csharp/ch03/task1/type-object.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/type-object",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-object",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/type-object.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "任务一 object 类型",
+    "sidebar_label": "任务一 object 类型",
+    "sidebar_position": 14
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 Convert()方法",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/convert"
+  },
+  "next": {
+    "title": "任务一 常量",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task2/constant"
+  }
+}

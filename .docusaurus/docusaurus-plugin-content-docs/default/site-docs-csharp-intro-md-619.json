@@ -1,0 +1,23 @@
+{
+  "id": "csharp/intro",
+  "title": "考试大纲",
+  "description": "一、C#概述",
+  "source": "@site/docs/csharp/intro.md",
+  "sourceDirName": "csharp",
+  "slug": "/csharp/intro",
+  "permalink": "/buhaoqi/docs/csharp/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/intro.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "考试大纲"
+  },
+  "sidebar": "csharpSidebar",
+  "next": {
+    "title": "概述",
+    "permalink": "/buhaoqi/docs/csharp/ch01/overview"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task1/overview",
+  "title": "概述",
+  "description": "概述",
+  "source": "@site/docs/csharp/ch04/task1/overview.md",
+  "sourceDirName": "csharp/ch04/task1",
+  "slug": "/csharp/ch04/task1/overview",
+  "permalink": "/docs/csharp/ch04/task1/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task1/overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "概述",
+    "sidebar_label": "概述",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "项目三 练习题",
+    "permalink": "/docs/csharp/ch03/exercise"
+  },
+  "next": {
+    "title": "1.Console.WriteLine()",
+    "permalink": "/docs/csharp/ch04/task1/console-writeline"
+  }
+}

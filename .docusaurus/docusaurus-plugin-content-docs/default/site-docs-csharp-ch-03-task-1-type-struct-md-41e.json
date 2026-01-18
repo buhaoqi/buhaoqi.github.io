@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task1/type-struct",
+  "title": "任务一 结构类型",
+  "description": "任务一 结构类型",
+  "source": "@site/docs/csharp/ch03/task1/type-struct.md",
+  "sourceDirName": "csharp/ch03/task1",
+  "slug": "/csharp/ch03/task1/type-struct",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-struct",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task1/type-struct.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "任务一 结构类型",
+    "sidebar_label": "任务一 结构类型",
+    "sidebar_position": 6
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 布尔类型",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-bool"
+  },
+  "next": {
+    "title": "任务一 枚举类型",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/type-enum"
+  }
+}

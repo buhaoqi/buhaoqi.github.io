@@ -1,0 +1,20 @@
+{
+  "id": "csharp/ch03/task4",
+  "title": "任务二 算法描述与设计",
+  "description": "这里是文档正文...",
+  "source": "@site/docs/csharp/ch03/task4.md",
+  "sourceDirName": "csharp/ch03",
+  "slug": "/csharp/ch03/task4",
+  "permalink": "/docs/csharp/ch03/task4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task4.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "任务二 算法描述与设计",
+    "sidebar_label": "任务二 算法描述与设计",
+    "sidebar_position": 2
+  }
+}

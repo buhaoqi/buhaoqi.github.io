@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch03/task3/logical-operators",
+  "title": "任务一 逻辑运算符",
+  "description": "任务一 逻辑运算符",
+  "source": "@site/docs/csharp/ch03/task3/logical-operators.md",
+  "sourceDirName": "csharp/ch03/task3",
+  "slug": "/csharp/ch03/task3/logical-operators",
+  "permalink": "/buhaoqi/docs/csharp/ch03/task3/logical-operators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch03/task3/logical-operators.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "任务一 逻辑运算符",
+    "sidebar_label": "任务一 逻辑运算符",
+    "sidebar_position": 6
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 比较运算符",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task3/comparison-operators"
+  },
+  "next": {
+    "title": "任务一 条件运算符",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task3/conditional-operators"
+  }
+}

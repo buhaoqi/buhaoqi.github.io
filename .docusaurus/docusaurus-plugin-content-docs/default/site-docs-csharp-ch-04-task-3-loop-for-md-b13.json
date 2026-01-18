@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch04/task3/loop-for",
+  "title": "1.for 循环语句",
+  "description": "1.for 循环语句",
+  "source": "@site/docs/csharp/ch04/task3/loop-for.md",
+  "sourceDirName": "csharp/ch04/task3",
+  "slug": "/csharp/ch04/task3/loop-for",
+  "permalink": "/buhaoqi/docs/csharp/ch04/task3/loop-for",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch04/task3/loop-for.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "1.for 循环语句",
+    "sidebar_label": "1.for 循环语句",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "2.switch语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task2/switch-statement"
+  },
+  "next": {
+    "title": "2.while 循环语句",
+    "permalink": "/buhaoqi/docs/csharp/ch04/task3/loop-while"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch02/overview",
+  "title": "C#概述",
+  "description": "C#概述",
+  "source": "@site/docs/csharp/ch02/overview.md",
+  "sourceDirName": "csharp/ch02",
+  "slug": "/csharp/ch02/overview",
+  "permalink": "/buhaoqi/docs/csharp/ch02/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch02/overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "C#概述",
+    "sidebar_label": "C#概述",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务五 典型算法举例",
+    "permalink": "/buhaoqi/docs/csharp/ch01/task5"
+  },
+  "next": {
+    "title": "任务一 C#语言简介",
+    "permalink": "/buhaoqi/docs/csharp/ch02/task1"
+  }
+}

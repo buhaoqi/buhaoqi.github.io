@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch01/task2",
+  "title": "任务二 算法描述与设计",
+  "description": "任务二 算法描述与设计",
+  "source": "@site/docs/csharp/ch01/task2.md",
+  "sourceDirName": "csharp/ch01",
+  "slug": "/csharp/ch01/task2",
+  "permalink": "/buhaoqi/docs/csharp/ch01/task2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch01/task2.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "任务二 算法描述与设计",
+    "sidebar_label": "任务二 算法描述与设计",
+    "sidebar_position": 3
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务一 算法的定义及特性",
+    "permalink": "/buhaoqi/docs/csharp/ch01/task1"
+  },
+  "next": {
+    "title": "任务三 算法分析与评价",
+    "permalink": "/buhaoqi/docs/csharp/ch01/task3"
+  }
+}

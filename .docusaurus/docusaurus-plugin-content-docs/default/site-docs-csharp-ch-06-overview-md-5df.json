@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch06/overview",
+  "title": "概述",
+  "description": "概述",
+  "source": "@site/docs/csharp/ch06/overview.md",
+  "sourceDirName": "csharp/ch06",
+  "slug": "/csharp/ch06/overview",
+  "permalink": "/buhaoqi/docs/csharp/ch06/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch06/overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "概述",
+    "sidebar_label": "概述",
+    "sidebar_position": 1
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务四 文档程序设计",
+    "permalink": "/buhaoqi/docs/csharp/ch05/task4"
+  },
+  "next": {
+    "title": "任务一 一维数组",
+    "permalink": "/buhaoqi/docs/csharp/ch06/task1"
+  }
+}

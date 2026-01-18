@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkbuhaoqi=globalThis.webpackChunkbuhaoqi||[]).push([[1903],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/buhaoqi/blog","blogTitle":"Blog","authorsListPath":"/buhaoqi/blog/authors"}')}}]);

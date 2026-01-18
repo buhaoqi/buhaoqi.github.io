@@ -1,0 +1,29 @@
+{
+  "id": "csharp/ch02/task3",
+  "title": "任务三 简单C#程序实例",
+  "description": "任务三 简单C#程序实例",
+  "source": "@site/docs/csharp/ch02/task3.md",
+  "sourceDirName": "csharp/ch02",
+  "slug": "/csharp/ch02/task3",
+  "permalink": "/buhaoqi/docs/csharp/ch02/task3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/csharp/ch02/task3.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "任务三 简单C#程序实例",
+    "sidebar_label": "任务三 简单C#程序实例",
+    "sidebar_position": 4
+  },
+  "sidebar": "csharpSidebar",
+  "previous": {
+    "title": "任务二 Visual Studio开发环境",
+    "permalink": "/buhaoqi/docs/csharp/ch02/task2"
+  },
+  "next": {
+    "title": "任务一 概述",
+    "permalink": "/buhaoqi/docs/csharp/ch03/task1/overview"
+  }
+}
