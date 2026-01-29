@@ -392,7 +392,6 @@ const sidebars = {
         'mysql/ch08/overview', // 概述
         'mysql/ch08/task1', // 任务一 
         'mysql/ch08/task2', // 任务二 
-        'mysql/ch08/demo1', // 案例 1
       ],
     },
     // 项目九
