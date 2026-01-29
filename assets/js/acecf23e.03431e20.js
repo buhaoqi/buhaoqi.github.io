@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkbuhaoqi_github_io=globalThis.webpackChunkbuhaoqi_github_io||[]).push([[1903],{1912(o){o.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog","authorsListPath":"/blog/authors"}')}}]);
