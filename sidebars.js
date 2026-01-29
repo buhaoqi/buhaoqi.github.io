@@ -393,7 +393,6 @@ const sidebars = {
         'mysql/ch08/task1', // 任务一 
         'mysql/ch08/task2', // 任务二 
         'mysql/ch08/demo1', // 案例 1
-        'mysql/ch08/demo2', // 案例 2
       ],
     },
     // 项目九
