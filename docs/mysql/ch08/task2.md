@@ -85,25 +85,8 @@ SELECT 语句
 
 ### 1.创建基本表
 
-```sql
--- 创建教师表 teacher
-CREATE TABLE IF NOT EXISTS teacher (
-    TeaID INT UNSIGNED NOT NULL COMMENT '教师工号（主键）',
-    Teaname VARCHAR(20) NOT NULL COMMENT '教师姓名',
-    Age TINYINT UNSIGNED NOT NULL COMMENT '教师年龄（1-255范围，符合实际）',
-    -- 工号作为唯一标识，设置为主键
-    PRIMARY KEY (TeaID)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='教师信息表（用于视图示例）';
+见：[教师表](../data.md)
 
--- 插入教师测试数据
-INSERT INTO teacher (TeaID, Teaname, Age) VALUES
-(101, '张敏', 35),
-(102, '李强', 42),
-(103, '王丽', 28),
-(104, '赵刚', 50),
-(105, '刘芳', 33),
-(106, '陈明', 45);
-```
 ### 2.创建 view_teacher 视图
 
 ```sql

@@ -1,9 +1,100 @@
 ---
 # 这部分是关键！侧边栏显示名由这里决定
-title: 数据  # 文档标题，若无 sidebar_label 则作为侧边栏名
-sidebar_label: 数据  # 显式指定侧边栏显示名（优先级最高）
+title: 数据表  # 文档标题，若无 sidebar_label 则作为侧边栏名
+sidebar_label: 数据表  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 4  # 侧边栏中排在第1位
 ---
+
+## 教师表:teacher
+
+```sql
+-- 创建教师表 teacher
+CREATE TABLE IF NOT EXISTS teacher (
+    TeaID INT UNSIGNED NOT NULL COMMENT '教师工号（主键）',
+    Teaname VARCHAR(20) NOT NULL COMMENT '教师姓名',
+    Age TINYINT UNSIGNED NOT NULL COMMENT '教师年龄（1-255范围，符合实际）',
+    -- 工号作为唯一标识，设置为主键
+    PRIMARY KEY (TeaID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='教师信息表（用于视图示例）';
+
+-- 插入教师测试数据
+INSERT INTO teacher (TeaID, Teaname, Age) VALUES
+(101, '张敏', 35),
+(102, '李强', 42),
+(103, '王丽', 28),
+(104, '赵刚', 50),
+(105, '刘芳', 33),
+(106, '陈明', 45);
+```
+## 用户表: users
+
+```sql
+-- 创建数据库（如果不存在）
+CREATE DATABASE IF NOT EXISTS demo_db;
+USE demo_db;
+
+-- 创建 users 表
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    age INT,
+    gender ENUM('男', '女', '其他') DEFAULT '其他',
+    country VARCHAR(50) DEFAULT '中国',
+    city VARCHAR(50),
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    account_balance DECIMAL(10, 2) DEFAULT 0.00,
+    membership_level ENUM('普通', '白银', '黄金', '铂金', '钻石') DEFAULT '普通',
+    INDEX idx_username (username),
+    INDEX idx_email (email),
+    INDEX idx_registration_date (registration_date),
+    INDEX idx_is_active (is_active)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+演示数据
+
+```sql
+-- 插入20条演示数据
+INSERT INTO users (username, email, password_hash, full_name, age, gender, country, city, last_login, is_active, account_balance, membership_level) VALUES
+-- 管理员账户
+('admin', 'admin@example.com', '$2y$10$xxxxxxxxxxxx', '系统管理员', 35, '男', '中国', '北京', '2024-01-28 14:30:00', TRUE, 10000.00, '钻石'),
+
+-- 普通用户
+('zhangsan', 'zhangsan@example.com', '$2y$10$xxxxxxxxxxxx', '张三', 28, '男', '中国', '上海', '2024-01-29 09:15:00', TRUE, 2500.50, '黄金'),
+('lisi', 'lisi@example.com', '$2y$10$xxxxxxxxxxxx', '李四', 32, '男', '中国', '广州', '2024-01-28 16:45:00', TRUE, 1500.00, '白银'),
+('wangwu', 'wangwu@example.com', '$2y$10$xxxxxxxxxxxx', '王五', 25, '女', '中国', '深圳', '2024-01-29 10:30:00', TRUE, 800.75, '普通'),
+
+('xiaohong', 'xiaohong@example.com', '$2y$10$xxxxxxxxxxxx', '小红', 22, '女', '中国', '杭州', '2024-01-27 11:20:00', TRUE, 3500.00, '铂金'),
+('xiaoming', 'xiaoming@example.com', '$2y$10$xxxxxxxxxxxx', '小明', 30, '男', '中国', '成都', '2024-01-29 08:45:00', TRUE, 1200.00, '白银'),
+
+-- 国际用户
+('john_doe', 'john@example.com', '$2y$10$xxxxxxxxxxxx', 'John Doe', 29, '男', '美国', '纽约', '2024-01-28 22:10:00', TRUE, 5000.00, '黄金'),
+('emma_wilson', 'emma@example.com', '$2y$10$xxxxxxxxxxxx', 'Emma Wilson', 31, '女', '英国', '伦敦', '2024-01-29 03:30:00', TRUE, 7500.25, '铂金'),
+('taro_yamada', 'taro@example.com', '$2y$10$xxxxxxxxxxxx', '山田太郎', 27, '男', '日本', '东京', '2024-01-28 19:45:00', TRUE, 3200.50, '白银'),
+
+-- 更多中国用户
+('lihua', 'lihua@example.com', '$2y$10$xxxxxxxxxxxx', '李华', 26, '女', '中国', '南京', '2024-01-26 14:20:00', TRUE, 900.00, '普通'),
+('zhangwei', 'zhangwei@example.com', '$2y$10$xxxxxxxxxxxx', '张伟', 33, '男', '中国', '武汉', '2024-01-29 11:10:00', TRUE, 4200.00, '黄金'),
+('liuxiang', 'liuxiang@example.com', '$2y$10$xxxxxxxxxxxx', '刘翔', 40, '男', '中国', '重庆', '2024-01-28 17:30:00', TRUE, 15000.00, '钻石'),
+
+-- 测试非活跃用户
+('inactive_user', 'inactive@example.com', '$2y$10$xxxxxxxxxxxx', '非活跃用户', 29, '男', '中国', '天津', '2024-01-01 09:00:00', FALSE, 0.00, '普通'),
+('test_user', 'test@example.com', '$2y$10$xxxxxxxxxxxx', '测试用户', 24, '女', '中国', '西安', '2024-01-28 13:15:00', TRUE, 100.00, '普通'),
+
+-- 更多多样化数据
+('chenjie', 'chenjie@example.com', '$2y$10$xxxxxxxxxxxx', '陈洁', 35, '女', '中国', '苏州', '2024-01-29 09:45:00', TRUE, 2800.00, '白银'),
+('zhouyuan', 'zhouyuan@example.com', '$2y$10$xxxxxxxxxxxx', '周媛', 23, '女', '中国', '长沙', '2024-01-27 15:20:00', TRUE, 1500.00, '普通'),
+('sunyang', 'sunyang@example.com', '$2y$10$xxxxxxxxxxxx', '孙阳', 38, '男', '中国', '郑州', '2024-01-29 10:00:00', TRUE, 8500.00, '铂金'),
+('maomao', 'maomao@example.com', '$2y$10$xxxxxxxxxxxx', '毛毛', 20, '女', '中国', '宁波', '2024-01-28 16:00:00', TRUE, 500.00, '普通'),
+('david_smith', 'david@example.com', '$2y$10$xxxxxxxxxxxx', 'David Smith', 34, '男', '澳大利亚', '悉尼', '2024-01-28 23:45:00', TRUE, 6200.00, '黄金'),
+('maria_garcia', 'maria@example.com', '$2y$10$xxxxxxxxxxxx', 'Maria Garcia', 29, '女', '西班牙', '马德里', '2024-01-29 02:30:00', TRUE, 4100.75, '白银');
+```
+
 
 ## 员工信息
 

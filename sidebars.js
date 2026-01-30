@@ -273,7 +273,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'mysql/data',  // 确保 docs/mysql/intro.md 存在
-      label: '数据',
+      label: '数据表',
     },
     // 项目一：绪论
     {
@@ -397,7 +397,7 @@ const sidebars = {
     // 项目九
     {
       type: 'category',
-      label: '项目九 MySQL 工具使用',
+      label: '项目九 MySQL数据库编程',
       collapsible: true,
       collapsed: false,
       items: [
@@ -406,6 +406,9 @@ const sidebars = {
         'mysql/ch09/task2', // 任务二 
         'mysql/ch09/task3', // 任务三
         'mysql/ch09/task4', // 任务三 
+        'mysql/ch09/atta-variable', // 任务三 
+        'mysql/ch09/exercise1', // 专项训练 
+        'mysql/ch09/exercise2', // 专项训练 
       ],
     },
     // 项目十
