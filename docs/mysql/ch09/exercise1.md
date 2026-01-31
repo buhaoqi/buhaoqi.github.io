@@ -1,31 +1,11 @@
 ---
 # 这部分是关键！侧边栏显示名由这里决定
-title: 触发器专项练习  # 文档标题，若无 sidebar_label 则作为侧边栏名
-sidebar_label: 触发器专项练习  # 显式指定侧边栏显示名（优先级最高）
+title: 练习:触发器  # 文档标题，若无 sidebar_label 则作为侧边栏名
+sidebar_label: 练习:触发器  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 10  # 侧边栏中排在第1位
 ---
 
-## 全真模拟一第 87 题
 
-87. 运行下面的 MySQL 程序，输出的结果是______。
-
-```sql
-create procedure js()
-begin
-    declare i int default 1;
-    declare s varchar(100) default '';
-    mylabel:repeat
-    if i mod 2=0 then
-        set i=i+1;
-        iterate mylabel;
-    end if;
-    set s=concat(s,convert(i,char),' ');
-    set i=i+1;
-    until i>=10
-    end repeat;
-    select s;
-end;
-```
 
 ## 全真模拟四第 84 题
 
@@ -126,8 +106,7 @@ Select orderid,userid,totalprice from orders;
 
 
 ## 参考答案
-###  全真模拟一第 87 题
-答案是：**1 3 5 7 9**
+
 ###  全真模拟四第 84 题
 答案是：**0**
 注意事项

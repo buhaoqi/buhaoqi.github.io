@@ -352,7 +352,7 @@ const sidebars = {
     // 项目六
     {
       type: 'category',
-      label: '项目六 MySQL数据库完整性',
+      label: '项目六 数据库完整性',
       collapsible: true,
       collapsed: false,
       items: [
@@ -367,7 +367,7 @@ const sidebars = {
     // 项目七
     {
       type: 'category',
-      label: '项目七 MySQL数据查询与更新',
+      label: '项目七 数据查询与更新',
       collapsible: true,
       collapsed: false,
       items: [
@@ -385,19 +385,21 @@ const sidebars = {
     // 项目八
     {
       type: 'category',
-      label: '项目八  MySQL索引与视图',
+      label: '项目八  索引与视图',
       collapsible: true,
       collapsed: false,
       items: [
         'mysql/ch08/overview', // 概述
         'mysql/ch08/task1', // 任务一 
-        'mysql/ch08/task2', // 任务二 
+        'mysql/ch08/task2', // 任务二
+        'mysql/ch08/exercise1', // 索引专项训练 
+        'mysql/ch08/exercise2', // 视图专项训练
       ],
     },
     // 项目九
     {
       type: 'category',
-      label: '项目九 MySQL数据库编程',
+      label: '项目九 数据库编程',
       collapsible: true,
       collapsed: false,
       items: [
@@ -409,12 +411,14 @@ const sidebars = {
         'mysql/ch09/atta-variable', // 任务三 
         'mysql/ch09/exercise1', // 专项训练 
         'mysql/ch09/exercise2', // 专项训练 
+        'mysql/ch09/exercise3', // 专项训练 
+        'mysql/ch09/exercise4', // 专项训练 
       ],
     },
     // 项目十
     {
       type: 'category',
-      label: '项目十 MySQL 工具使用',
+      label: '项目十 数据库设计',
       collapsible: true,
       collapsed: false,
       items: [
@@ -430,7 +434,7 @@ const sidebars = {
     // 项目十一
     {
       type: 'category',
-      label: '项目十一  MySQL 工具使用',
+      label: '项目十一 数据库安全',
       collapsible: true,
       collapsed: false,
       items: [
@@ -443,7 +447,7 @@ const sidebars = {
     // 项目十二
     {
       type: 'category',
-      label: '项目十二 MySQL 工具使用',
+      label: '项目十二 数据库备份和恢复',
       collapsible: true,
       collapsed: false,
       items: [
