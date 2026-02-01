@@ -38,7 +38,7 @@ sidebar_position: 4  # 侧边栏中排在第1位
 | 能否用于 SQL 表达式 | ✅ 可以            | ❌ 不可以         |
 | 适合场景         | 计算、转换、判断        | 业务流程          |
 
-## 二、创建存储函数的基本语法
+## 二、创建存储函数的基础语法
 
 ```sql
 DELIMITER $$
@@ -139,26 +139,77 @@ BEGIN
 END
 ```
 
-## 四、完整语法示例
+## 四、示例(基础语法)
 
-### 示例1：最简单的存储函数
+### 示例1：无参函数
 ```sql
 DELIMITER //
 
-CREATE FUNCTION hello_world() 
+CREATE FUNCTION hello() 
 RETURNS VARCHAR(50)
 DETERMINISTIC
 BEGIN
-    RETURN 'Hello, MySQL Function!';
+    RETURN 'Hello, MySQL!';
 END //
 
 DELIMITER ;
 
--- 调用
-SELECT hello_world();
+```
+**调用方式：**
+
+```sql
+SELECT hello();
 ```
 
-### 示例2：带参数的函数
+📌 输出：
+
+```
+Hello MySQL
+```
+### 示例4：带参函数
+
+```sql
+DELIMITER //
+CREATE FUNCTION greet(name VARCHAR(50)) 
+RETURNS VARCHAR(100)
+DETERMINISTIC
+COMMENT '简单的问候函数'
+BEGIN
+    RETURN CONCAT('Hello, ', name, '!');
+END //
+DELIMITER ;
+
+-- 调用
+SELECT greet('张三');  -- 返回 'Hello, 张三!'
+```
+
+### 示例3：计算两个数的和
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION add_numbers(a INT, b INT)
+RETURNS INT
+BEGIN
+    RETURN a + b;
+END $$
+
+DELIMITER ;
+```
+
+**使用：**
+
+```sql
+SELECT add_numbers(3, 5);
+```
+
+📌 输出：
+
+```
+8
+```
+
+### 示例3：计算折后价格
 ```sql
 DELIMITER //
 CREATE FUNCTION calculate_discount(
@@ -310,9 +361,57 @@ BEGIN
     RETURN TIMESTAMPDIFF(YEAR, birth_date, CURDATE());
 END;
 ```
+## 六、示例(流程控制函数)
+### 示例1：根据成绩返回等级
+
+```sql
+DELIMITER $$
+
+CREATE FUNCTION score_level(score INT)
+RETURNS VARCHAR(10)
+BEGIN
+    IF score >= 90 THEN
+        RETURN '优秀';
+    ELSEIF score >= 80 THEN
+        RETURN '良好';
+    ELSEIF score >= 60 THEN
+        RETURN '及格';
+    ELSE
+        RETURN '不及格';
+    END IF;
+END $$
+
+DELIMITER ;
+```
+
+**使用：**
+
+```sql
+SELECT score_level(85);
+```
+
+### 示例2: 在 `SELECT` 中使用
+
+```sql
+SELECT name, score, score_level(score) AS level
+FROM students;
+```
+
+👉 这就是 **存储函数最大的价值**：
+**像系统函数一样参与查询**
 
 
-## 六、查看和管理存储函数
+### 示例3: 在 `WHERE` 中使用
+
+```sql
+SELECT *
+FROM students
+WHERE score_level(score) = '优秀';
+```
+
+---
+
+## 七、查看和管理存储函数
 
 ```sql
 -- 查看所有函数
@@ -342,128 +441,6 @@ DROP FUNCTION IF EXISTS function_name;
 DROP FUNCTION IF EXISTS old_function;
 CREATE FUNCTION new_function() ... ;
 ```
-
-## 七、示例
-
-### 示例1：最简单的示例
-
-```sql
-DELIMITER //
-CREATE FUNCTION greet(name VARCHAR(50)) 
-RETURNS VARCHAR(100)
-DETERMINISTIC
-COMMENT '简单的问候函数'
-BEGIN
-    RETURN CONCAT('Hello, ', name, '!');
-END //
-DELIMITER ;
-
--- 调用
-SELECT greet('张三');  -- 返回 'Hello, 张三!'
-```
-
-**存储函数核心**：接收参数 → 执行逻辑 → 返回单个值。适合封装可重用的计算逻辑和业务规则。
-
-### 示例2：返回一个固定值
-
-```sql
-DELIMITER $$
-
-CREATE FUNCTION hello()
-RETURNS VARCHAR(20)
-BEGIN
-    RETURN 'Hello MySQL';
-END $$
-
-DELIMITER ;
-```
-
-**调用方式：**
-
-```sql
-SELECT hello();
-```
-
-📌 输出：
-
-```
-Hello MySQL
-```
-### 示例3：计算两个数的和
-
-```sql
-DELIMITER $$
-
-CREATE FUNCTION add_numbers(a INT, b INT)
-RETURNS INT
-BEGIN
-    RETURN a + b;
-END $$
-
-DELIMITER ;
-```
-
-**使用：**
-
-```sql
-SELECT add_numbers(3, 5);
-```
-
-📌 输出：
-
-```
-8
-```
----
-
-### 示例 4：根据成绩返回等级
-
-```sql
-DELIMITER $$
-
-CREATE FUNCTION score_level(score INT)
-RETURNS VARCHAR(10)
-BEGIN
-    IF score >= 90 THEN
-        RETURN '优秀';
-    ELSEIF score >= 80 THEN
-        RETURN '良好';
-    ELSEIF score >= 60 THEN
-        RETURN '及格';
-    ELSE
-        RETURN '不及格';
-    END IF;
-END $$
-
-DELIMITER ;
-```
-
-**使用：**
-
-```sql
-SELECT score_level(85);
-```
-
-### 示例5：在 `SELECT` 中使用
-
-```sql
-SELECT name, score, score_level(score) AS level
-FROM students;
-```
-
-👉 这就是 **存储函数最大的价值**：
-**像系统函数一样参与查询**
-
-
-### 示例6：在 `WHERE` 中使用
-
-```sql
-SELECT *
-FROM students
-WHERE score_level(score) = '优秀';
-```
-
----
 
 ## 八、注意事项
 

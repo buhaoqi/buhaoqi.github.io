@@ -25,7 +25,105 @@ begin
     select s;
 end;
 ```
+## 全真模拟一第89题
 
+第88、89题使用MySQL数据库teaching，其中包含学生表s、学生选课表sc，s表中含有sno（学号）、sn（姓名）、sex（性别）、age（年龄）、maj（专业）、dept（院系）共6个字段，表内容见1-88题表1，sc表中含有sno（学号）、cno（课程号）、score（成绩）共3个字段，表内容见1-88题表2。
+
+1-88题 表1 s表内容
+| sno | sn   | sex | age | maj   | dept   |
+|-----|------|-----|-----|-------|--------|
+| s1  | 王彤 | 女  | 18  | 计算机 | 信息学院 |
+| s2  | 苏乐 | 女  | 20  | 信息   | 信息学院 |
+| s3  | 林欣 | 男  | 19  | 信息   | 信息学院 |
+| s4  | 陶然 | 女  | 18  | 自动化 | 工学院   |
+| s5  | 王立 | 男  | 17  | 数学   | 理学院   |
+| s6  | 何欣荣 | 女  | 21  | 计算机 | 信息学院 |
+| s7  | 赵林林 | 女  | 19  | 数学   | 理学院   |
+| s8  | 李轩 | 男  | 19  | 自动化 | 工学院   |
+
+
+1-88题 表2 sc表内容
+| sno | cno | score |
+|-----|-----|-------|
+| s1  | c1  | 87    |
+| s1  | c2  | 85    |
+| s2  | c1  | 75    |
+| s2  | c2  | 72    |
+| s2  | c3  | 71    |
+| s2  | c4  | 88    |
+
+89.有如下MySQL程序：
+```sql
+DELIMITER $$
+CREATE PROCEDURE cal_students(IN sst ENUM('男','女'),IN dp VARCHAR(45),OUT num INT)
+BEGIN
+DECLARE people INT DEFAULT 0;
+SELECT COUNT(*) INTO people FROM s WHERE sex=sst AND dept=dp;
+SET num=people;
+END $$;
+```
+用下列语句进行调用，显示结果为：________。
+```sql
+CALL cal_students('女','信息学院',@n);
+SELECT @n;
+```
+## 全真模拟一第96-98题
+有销售管理数据库companysales，用来管理商品销售信息。其中，有员工表employee保存员工的相关信息，结构见表1-96题表1。有销售订单表sell_order，保存商品的销售信息。结构见表1-96题表2。
+
+**表1-96题表1 employee表结构**
+| 列名         | 数据类型    | 长度   | 为空性 | 说明                                     |
+|--------------|-------------|--------|--------|------------------------------------------|
+| employeeid   | int         | 默认   | ×      | 员工号，主键，自增                       |
+| employeename | varchar     | 50     | ×      | 员工姓名                                 |
+| sex          | enum        | 默认   | ×      | 员工性别取值只能为“男”，或者“女”，默认值为“男” |
+| birthdate    | date        | 默认   | √      | 出生年月                                 |
+| hiredate     | timestamp   | 默认   | √      | 雇用日期，默认值为当前的系统时间         |
+| salary       | Decimal(12,4)| 默认   | √      | 工资                                     |
+| departmentid | int         | 默认   | ×      | 部门编号                                 |
+
+**表1-96题表2 sell_order表结构**
+| 列名          | 数据类型 | 长度   | 为空性 | 说明               |
+|---------------|----------|--------|--------|--------------------|
+| Sellorderid   | Int      | 默认   | ×      | 销售订单号，主键，自增 |
+| Productid     | Int      | 默认   | ×      | 商品编号           |
+| Employeeid    | Int      | 默认   | ×      | 员工号             |
+| Customerid    | Int      | 默认   | ×      | 客户号             |
+| Sellordernumber| Int     | 默认   | √      | 订货数量           |
+| sellorderdate | date     | 默认   | √      | 订单签订的日期     |
+
+
+要求: 编写存储过程proc_del_employee,请填入合适语句使程序完成以下功能。
+
+在员工表中, 删除一条员工记录, 如果不存在该员工, 则提示无法删除。如果员工存在, 但该员工接收了订单, 则删除该员工的订单并删除该员工；如果该员工没有订单, 则删除该员工。要删除指定编号的员工, 所以proc_del_employee存储过程仅有一个参数em_id, 表示员工编号。请在空白位置填写正确的代码。
+
+```sql
+DELIMITER $$
+CREATE PROCEDURE proc_del_employee(______【96】______)
+MODIFIES SQL DATA
+COMMENT '根据员工编号删除员工信息.'
+BEGIN
+    IF NOT EXISTS(SELECT * FROM employee WHERE employeeid = em_id)
+    THEN
+        SELECT '该员工不存在,无法删除!';
+    ELSE
+        IF ______【97】______THEN
+            DELETE FROM sell_order WHERE employeeid = em_id;
+            SELECT '该员工有订单,并成功删除订单!';
+        ELSE
+            SELECT '该员工没有订单!';
+        END IF;
+        ______【98】______
+        SELECT '成功删除该员工信息!';
+    END IF;
+END$$
+DELIMITER ;
+```
+
+答案：
+
+96. `IN em_id INT`
+97. `EXISTS(SELECT * FROM employee WHERE employeeid = em_id)`
+98. `DELETE FROM employee WHERE employeeid = em_id`
 ## 全真模拟四第 87 题
 
 现有宠物商店电子商务系统数据库 `petstore`：
@@ -74,9 +172,6 @@ DELIMITER ;
 CALL cp(20130411,20130414,@bj);
 SELECT @bj;
 ```
-
-
-
 
 ## 参考答案
 ###  全真模拟一第 87 题

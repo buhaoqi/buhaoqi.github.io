@@ -442,6 +442,7 @@ const sidebars = {
         'mysql/ch11/task1', // 任务一 
         'mysql/ch11/task2', // 任务二 
         'mysql/ch11/task3', // 任务三 
+        'mysql/ch11/task4', // 任务四
       ],
     },
     // 项目十二
