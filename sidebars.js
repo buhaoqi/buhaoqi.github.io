@@ -270,6 +270,11 @@ const sidebars = {
       id: 'mysql/intro',  // 确保 docs/mysql/intro.md 存在
       label: '考试大纲',
     },
+     {
+      type: 'doc',
+      id: 'mysql/important',  // 确保 docs/mysql/intro.md 存在
+      label: '重要概念',
+    },
     {
       type: 'doc',
       id: 'mysql/data',  // 确保 docs/mysql/intro.md 存在

@@ -5,6 +5,332 @@ sidebar_label: 任务二 连接查询  # 显式指定侧边栏显示名（优先
 sidebar_position: 2  # 侧边栏中排在第1位
 ---
 
+# MySQL 联合查询详解
+
+## 一、连接查询基础概念
+
+### 数据准备：创建示例表
+```sql
+-- 创建员工表
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    dept_id INT,
+    salary DECIMAL(10,2)
+);
+
+-- 创建部门表
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50),
+    location VARCHAR(50)
+);
+
+-- 插入数据
+INSERT INTO departments VALUES 
+(1, '技术部', '北京'),
+(2, '市场部', '上海'),
+(3, '财务部', '深圳'),
+(4, '人事部', '广州');
+
+INSERT INTO employees VALUES
+(101, '张三', 1, 15000.00),
+(102, '李四', 1, 18000.00),
+(103, '王五', 2, 12000.00),
+(104, '赵六', 2, 14000.00),
+(105, '孙七', NULL, 16000.00),  -- 部门为NULL
+(106, '周八', 5, 13000.00);     -- 部门不存在于departments表
+```
+
+## 二、INNER JOIN（内连接）
+
+### 示例1：基本内连接
+```sql
+-- 查询员工及其部门信息（只返回匹配的记录）
+SELECT 
+    e.emp_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 结果：
+-- +----------+----------+-----------+----------+
+-- | emp_name | salary   | dept_name | location |
+-- +----------+----------+-----------+----------+
+-- | 张三     | 15000.00 | 技术部    | 北京     |
+-- | 李四     | 18000.00 | 技术部    | 北京     |
+-- | 王五     | 12000.00 | 市场部    | 上海     |
+-- | 赵六     | 14000.00 | 市场部    | 上海     |
+-- +----------+----------+-----------+----------+
+```
+
+## 三、LEFT JOIN（左连接）
+
+### 示例2：左连接 - 显示所有员工
+```sql
+-- 查询所有员工信息，包括没有部门的员工
+SELECT 
+    e.emp_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+LEFT JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 结果：
+-- +----------+----------+-----------+----------+
+-- | emp_name | salary   | dept_name | location |
+-- +----------+----------+-----------+----------+
+-- | 张三     | 15000.00 | 技术部    | 北京     |
+-- | 李四     | 18000.00 | 技术部    | 北京     |
+-- | 王五     | 12000.00 | 市场部    | 上海     |
+-- | 赵六     | 14000.00 | 市场部    | 上海     |
+-- | 孙七     | 16000.00 | NULL      | NULL     |  -- 部门为NULL
+-- | 周八     | 13000.00 | NULL      | NULL     |  -- 部门不存在
+-- +----------+----------+-----------+----------+
+```
+
+### 示例3：查找没有部门的员工
+```sql
+SELECT 
+    e.emp_name,
+    e.salary
+FROM employees e
+LEFT JOIN departments d ON e.dept_id = d.dept_id
+WHERE d.dept_id IS NULL;
+
+-- 结果：
+-- +----------+----------+
+-- | emp_name | salary   |
+-- +----------+----------+
+-- | 孙七     | 16000.00 |
+-- | 周八     | 13000.00 |
+-- +----------+----------+
+```
+
+## 四、RIGHT JOIN（右连接）
+
+### 示例4：右连接 - 显示所有部门
+```sql
+-- 查询所有部门信息，包括没有员工的部门
+ 
+
+-- 结果：
+-- +-----------+----------+----------+----------+
+-- | dept_name | location | emp_name | salary   |
+-- +-----------+----------+----------+----------+
+-- | 技术部    | 北京     | 张三     | 15000.00 |
+-- | 技术部    | 北京     | 李四     | 18000.00 |
+-- | 市场部    | 上海     | 王五     | 12000.00 |
+-- | 市场部    | 上海     | 赵六     | 14000.00 |
+-- | 财务部    | 深圳     | NULL     | NULL     |  -- 没有员工
+-- | 人事部    | 广州     | NULL     | NULL     |  -- 没有员工
+-- +-----------+----------+----------+----------+
+```
+
+## 五、FULL OUTER JOIN（全外连接 - MySQL模拟）
+
+### 示例5：全外连接（MySQL不支持，但可以模拟）
+```sql
+-- 使用UNION模拟全外连接
+SELECT 
+    e.emp_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+LEFT JOIN departments d ON e.dept_id = d.dept_id
+
+UNION
+
+SELECT 
+    e.emp_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+RIGHT JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 结果包含所有记录：
+-- 1. 员工和部门都存在的匹配记录
+-- 2. 有员工但没有部门的记录
+-- 3. 有部门但没有员工的记录
+```
+
+## 六、多表连接查询
+
+### 添加第三个表
+```sql
+-- 创建项目表
+CREATE TABLE projects (
+    project_id INT PRIMARY KEY,
+    project_name VARCHAR(50),
+    emp_id INT,
+    start_date DATE
+);
+
+INSERT INTO projects VALUES
+(1, '项目A', 101, '2023-01-01'),
+(2, '项目B', 102, '2023-02-01'),
+(3, '项目C', 103, '2023-03-01'),
+(4, '项目D', 110, '2023-04-01');  -- 员工110不存在
+```
+
+### 示例6：三表连接
+```sql
+-- 查询员工、所属部门及参与的项目
+SELECT 
+    e.emp_name,
+    d.dept_name,
+    p.project_name,
+    p.start_date
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id
+LEFT JOIN projects p ON e.emp_id = p.emp_id
+ORDER BY e.emp_name;
+
+-- 结果：
+-- +----------+-----------+--------------+------------+
+-- | emp_name | dept_name | project_name | start_date |
+-- +----------+-----------+--------------+------------+
+-- | 张三     | 技术部    | 项目A        | 2023-01-01 |
+-- | 李四     | 技术部    | 项目B        | 2023-02-01 |
+-- | 王五     | 市场部    | 项目C        | 2023-03-01 |
+-- | 赵六     | 市场部    | NULL         | NULL       |  -- 没有项目
+-- +----------+-----------+--------------+------------+
+```
+
+## 七、自连接查询
+
+### 添加经理关系字段
+```sql
+ALTER TABLE employees ADD COLUMN manager_id INT;
+
+UPDATE employees SET manager_id = NULL WHERE emp_id = 101;  -- 张三没有上级
+UPDATE employees SET manager_id = 101 WHERE emp_id IN (102, 103);  -- 李四和王五的经理是张三
+UPDATE employees SET manager_id = 102 WHERE emp_id = 104;  -- 赵六的经理是李四
+```
+
+### 示例7：自连接查询
+```sql
+-- 查询员工及其经理信息
+SELECT 
+    e.emp_name AS '员工',
+    e.salary AS '员工薪资',
+    m.emp_name AS '经理',
+    m.salary AS '经理薪资'
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.emp_id;
+
+-- 结果：
+-- +--------+--------------+--------+--------------+
+-- | 员工   | 员工薪资     | 经理   | 经理薪资     |
+-- +--------+--------------+--------+--------------+
+-- | 张三   | 15000.00     | NULL   | NULL         |
+-- | 李四   | 18000.00     | 张三   | 15000.00     |
+-- | 王五   | 12000.00     | 张三   | 15000.00     |
+-- | 赵六   | 14000.00     | 李四   | 18000.00     |
+-- | 孙七   | 16000.00     | NULL   | NULL         |
+-- | 周八   | 13000.00     | NULL   | NULL         |
+-- +--------+--------------+--------+--------------+
+```
+
+## 八、带聚合函数的连接查询
+
+### 示例8：统计各部门员工数量和平均工资
+```sql
+SELECT 
+    d.dept_name,
+    d.location,
+    COUNT(e.emp_id) AS '员工数量',
+    AVG(e.salary) AS '平均工资',
+    SUM(e.salary) AS '工资总额'
+FROM departments d
+LEFT JOIN employees e ON d.dept_id = e.dept_id
+GROUP BY d.dept_id, d.dept_name, d.location
+ORDER BY d.dept_id;
+
+-- 结果：
+-- +-----------+----------+--------------+--------------+--------------+
+-- | dept_name | location | 员工数量      | 平均工资     | 工资总额     |
+-- +-----------+----------+--------------+--------------+--------------+
+-- | 技术部    | 北京     | 2            | 16500.000000 | 33000.00     |
+-- | 市场部    | 上海     | 2            | 13000.000000 | 26000.00     |
+-- | 财务部    | 深圳     | 0            | NULL         | NULL         |
+-- | 人事部    | 广州     | 0            | NULL         | NULL         |
+-- +-----------+----------+--------------+--------------+--------------+
+```
+
+## 九、复杂条件连接查询
+
+### 示例9：带WHERE条件的连接查询
+```sql
+-- 查询工资高于15000的员工及其部门信息
+SELECT 
+    e.emp_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id
+WHERE e.salary > 15000
+ORDER BY e.salary DESC;
+
+-- 结果：
+-- +----------+----------+-----------+----------+
+-- | emp_name | salary   | dept_name | location |
+-- +----------+----------+-----------+----------+
+-- | 李四     | 18000.00 | 技术部    | 北京     |
+-- +----------+----------+-----------+----------+
+```
+
+## 十、连接查询最佳实践
+
+### 1. **使用表别名**
+```sql
+-- 推荐
+SELECT e.name, d.department_name
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.id;
+
+-- 不推荐
+SELECT employees.name, departments.department_name
+FROM employees
+INNER JOIN departments ON employees.dept_id = departments.id;
+```
+
+### 2. **明确指定连接条件**
+```sql
+-- 推荐：明确指定ON条件
+SELECT *
+FROM table1
+INNER JOIN table2 ON table1.id = table2.id;
+
+-- 不推荐：使用WHERE作为连接条件
+SELECT *
+FROM table1, table2
+WHERE table1.id = table2.id;
+```
+
+### 3. **选择正确的连接类型**
+- **INNER JOIN**: 只需要匹配的记录
+- **LEFT JOIN**: 需要左表所有记录，即使右表没有匹配
+- **RIGHT JOIN**: 需要右表所有记录，即使左表没有匹配
+- **注意**: 在MySQL中，RIGHT JOIN使用较少，通常用LEFT JOIN调整表顺序代替
+
+## 练习题
+
+### 练习1：查询每个部门的员工数量
+### 练习2：查询没有员工的所有部门
+### 练习3：查询每个员工的经理信息（如果有的话）
+### 练习4：查询参与项目的员工及其部门信息
+
+这些示例涵盖了考试大纲要求的连接查询知识点，请仔细理解每种连接类型的区别和适用场景。
+
+
+
 你想掌握 MySQL 中连接查询的基本用法，首先明确核心概念：**连接查询是将两个或多个表通过「共同关联字段」（如主外键、相同含义的字段）拼接在一起，获取整合后的数据集**，解决单表数据无法满足查询需求的问题（比如要同时查看员工姓名和其所属部门名称，数据分别在员工表和部门表中）。
 
 MySQL 中常用的连接查询分为「内连接」「外连接」「交叉连接」，其中**内连接和左外连接是实际开发中最常用的**，下面我会从「前置准备（创建关联表+填充数据）」开始，按「从简单到复杂」的顺序讲解每种连接的语法和实操，新手可直接复制 SQL 运行验证。

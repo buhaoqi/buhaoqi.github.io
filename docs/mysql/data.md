@@ -26,6 +26,40 @@ INSERT INTO teacher (TeaID, Teaname, Age) VALUES
 (105, '刘芳', 33),
 (106, '陈明', 45);
 ```
+
+## 员工表、部门表
+```sql
+-- 创建员工表
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    dept_id INT,
+    salary DECIMAL(10,2)
+);
+
+-- 创建部门表
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50),
+    location VARCHAR(50)
+);
+
+-- 插入数据
+INSERT INTO departments VALUES 
+(1, '技术部', '北京'),
+(2, '市场部', '上海'),
+(3, '财务部', '深圳'),
+(4, '人事部', '广州');
+
+INSERT INTO employees VALUES
+(101, '张三', 1, 15000.00),
+(102, '李四', 1, 18000.00),
+(103, '王五', 2, 12000.00),
+(104, '赵六', 2, 14000.00),
+(105, '孙七', NULL, 16000.00),  -- 部门为NULL
+(106, '周八', 5, 13000.00);     -- 部门不存在于departments表
+```
+
 ## 用户表: users
 
 ```sql
