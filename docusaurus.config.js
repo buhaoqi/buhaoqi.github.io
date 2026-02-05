@@ -53,6 +53,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          
         },
         blog: {
           showReadingTime: true,
@@ -189,8 +190,26 @@ const config = {
             // 可选：自定义激活状态
             // activeBaseRegex: '/docs/website-guide',
           },
+          // 4. 教育知识与能力
+          {
+            type: 'docSidebar',
+            sidebarId: 'teacherSidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '教育知识与能力',
+            // 可选：设置默认打开的文档
+            docId: 'teacher/intro',
+          },
+          // 5. 综合素质
+          {
+            type: 'docSidebar',
+            sidebarId: 'teacher2Sidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '综合素质',
+            // 可选：设置默认打开的文档
+            docId: 'teacher2/intro',
+          },
           
-          // 4. Blog (无type，内部页面) - 靠左
+          // 6. Blog (无type，内部页面) - 靠左
           {
             to: '/blog',
             label: 'Blog',
@@ -265,6 +284,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['csharp'],
       },
     }),
 };

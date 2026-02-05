@@ -8,20 +8,11 @@ slug: /bookmarks/intro
 
 这里收集了各种实用的网站资源，方便快速访问。
 
-## 技术社区
-- [GitHub](https://github.com) - 全球最大的代码托管平台
-- [Stack Overflow](https://stackoverflow.com) - 程序员问答社区
-- [掘金](https://juejin.cn) - 中文技术社区
+## 中职相关网站
 
-## 学习平台
-- [Coursera](https://www.coursera.org) - 国际在线课程
-- [Udemy](https://www.udemy.com) - 技能学习平台
-- [慕课网](https://www.imooc.com) - 中文IT技能学习
+- [河北省教育考试院](https://gk.hebeea.edu.cn/hebgk/)
+- [新形态教材网](https://abooks.hep.com.cn) 中职教材
 
-## 开发工具
-- [Can I use](https://caniuse.com) - 浏览器兼容性查询
-- [正则表达式测试](https://regex101.com)
-- [JSON格式化](https://jsonformatter.org)
 
 ## 设计资源
 - [Unsplash](https://unsplash.com) - 免费高质量图片

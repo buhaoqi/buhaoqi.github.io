@@ -45,6 +45,7 @@ const sidebars = {
       collapsible: true, // 可折叠（默认true）
       collapsed: false, // 默认展开（根据需要改true为折叠）
       items: [
+        'csharp/ch01/overview', // 概述
         // 任务一 
         {
           type: 'category',
@@ -91,6 +92,8 @@ const sidebars = {
             'csharp/ch01/task5/1', // 
             'csharp/ch01/task5/2', // 
             'csharp/ch01/task5/3', // 
+            'csharp/ch01/task5/4', // 
+            'csharp/ch01/task5/5', // 
           ],
         }
       ],
@@ -461,6 +464,244 @@ const sidebars = {
         'mysql/ch12/task1', // 任务一 
         'mysql/ch12/task2', // 任务二 
         'mysql/ch12/task3', // 任务三 
+      ],
+    }
+  ],
+  // ============ 教育知识与能力 侧边栏 ============
+  teacherSidebar: [
+    {
+      type: 'doc',
+      id: 'teacher/intro',  // 确保 docs/teacher/intro.md 存在
+      label: '考试大纲',
+    },
+     {
+      type: 'doc',
+      id: 'teacher/important',  // 确保 docs/teacher/intro.md 存在
+      label: '重要概念',
+    },
+    // 第一章 教育基础知识和基本原理
+    {
+      type: 'category',
+      label: '第一章 教育基础知识和基本原理',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch1/overview', // 概述
+        'teacher/ch1/sec1', // 任务一 教育及其产生与发展
+        'teacher/ch1/sec2', // 任务二 教育学及其产生与发展
+        'teacher/ch1/sec3', // 任务三 教育与社会的发展
+        'teacher/ch1/sec4', // 任务四 教育与人的发展
+        'teacher/ch1/sec5', // 任务五 教育制度
+        'teacher/ch1/sec6', // 任务六 教育目的
+        'teacher/ch1/sec7', // 任务七 教育科学研究的基本方法
+      ],
+    },
+    // 第二章 中学课程
+    {
+      type: 'category',
+      label: '第二章 中学课程',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch2/overview', // 概述
+        'teacher/ch2/sec1', // 任务一 
+        'teacher/ch2/sec2', // 任务二 
+        'teacher/ch2/sec3', // 任务三 
+      ],
+    },
+    // 第三章 中学教学
+    {
+      type: 'category',
+      label: '第三章 中学教学',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch3/overview', // 概述
+        'teacher/ch3/sec1', // 任务一 
+        'teacher/ch3/sec2', // 任务二 
+        'teacher/ch3/sec3', // 任务三 教育与社会的发展
+        'teacher/ch3/sec4', // 任务四 教育与人的发展
+        'teacher/ch3/sec5', // 任务五 教育制度
+        'teacher/ch3/sec6', // 任务六 教育目的
+        'teacher/ch3/sec7', // 任务七 教育科学研究的基本方法
+        'teacher/ch3/sec8', // 任务八 教育研究的基本方法
+      ],
+    },
+    // 第四章 中学生学习心理
+    {
+      type: 'category',
+      label: '第四章 中学生学习心理',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch4/overview', // 概述
+        'teacher/ch4/sec1', // 任务一 
+        'teacher/ch4/sec2', // 任务二 
+        'teacher/ch4/sec3', // 任务三 
+        'teacher/ch4/sec4', // 任务三 
+        'teacher/ch4/sec5', // 任务三 
+        'teacher/ch4/sec6', // 任务三 
+      ],
+    },
+    // 第五章 中学生发展心理
+    {
+      type: 'category',
+      label: '第五章 中学生发展心理',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch5/overview', // 概述
+        'teacher/ch5/sec1', // 任务一 
+        'teacher/ch5/sec2', // 任务二 
+        'teacher/ch5/sec3', // 任务三 
+        'teacher/ch5/sec4', // 任务二 
+        'teacher/ch5/sec5', // 任务三 
+        'teacher/ch5/sec6', // 任务二 
+        'teacher/ch5/sec7', // 任务三 
+      ],
+    },
+    // 第六章 中学生心理辅导
+    {
+      type: 'category',
+      label: '第六章 中学生心理辅导',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch6/overview', // 概述
+        'teacher/ch6/sec1', // 任务一 
+        'teacher/ch6/sec2', // 任务二 
+        'teacher/ch6/sec3', // 任务三
+      ],
+    },
+    // 第七章 中学德育
+    {
+      type: 'category',
+      label: '第七章 中学德育',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch7/overview', // 概述
+        'teacher/ch7/sec1', // 任务一 
+        'teacher/ch7/sec2', // 任务二 
+        'teacher/ch7/sec3', // 任务三 
+        'teacher/ch7/sec4', // 任务一 
+        'teacher/ch7/sec5', // 任务二 
+      ],
+    },
+    // 第八章 中学班级管理与教师心理
+    {
+      type: 'category',
+      label: '第八章 中学班级管理与教师心理',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch8/overview', // 概述
+        'teacher/ch8/sec1', // 任务一 
+        'teacher/ch8/sec2', // 任务二
+        'teacher/ch8/sec3', // 任务三
+        'teacher/ch8/sec4', // 任务四
+        'teacher/ch8/sec5', // 任务五
+      ],
+    },
+    // 第九章 主观题备考攻略
+    {
+      type: 'category',
+      label: '第九章 主观题备考攻略',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher/ch9/overview', // 概述
+        'teacher/ch9/sec1', // 任务一 
+        'teacher/ch9/sec2', // 任务二 
+        'teacher/ch9/sec3', // 任务三
+      ],
+    },
+  ],
+  // ============ 综合素质 侧边栏 ============
+  teacher2Sidebar: [
+    {
+      type: 'doc',
+      id: 'teacher2/intro',  // 确保 docs/teacher2/intro.md 存在
+      label: '考试大纲',
+    },
+     {
+      type: 'doc',
+      id: 'teacher2/important',  // 确保 docs/teacher2/intro.md 存在
+      label: '重要概念',
+    },
+    // 第一章
+    {
+      type: 'category',
+      label: '第一章 职业理念',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher2/ch1/overview', // 概述
+        'teacher2/ch1/sec1', // 任务一 
+        'teacher2/ch1/sec2', // 任务二 
+        'teacher2/ch1/sec3', // 任务三
+        'teacher2/ch1/sec4', // 任务四
+      ],
+    },
+    // 第二章
+    {
+      type: 'category',
+      label: '第二章 法律法规',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher2/ch2/overview', // 概述
+        'teacher2/ch2/sec1', // 任务一 
+        'teacher2/ch2/sec2', // 任务二 
+        'teacher2/ch2/sec3', // 任务三
+        'teacher2/ch2/sec4', // 任务四
+        'teacher2/ch2/sec5', // 任务五
+        'teacher2/ch2/sec6', // 任务六
+        'teacher2/ch2/sec7', // 任务七
+        'teacher2/ch2/sec8', // 任务八
+        'teacher2/ch2/sec9', // 任务九
+      ],
+    },
+    // 第三章 教师职业道德
+    {
+      type: 'category',
+      label: '第三章 教师职业道德',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher2/ch3/overview', // 概述
+        'teacher2/ch3/sec1', // 任务一 
+        'teacher2/ch3/sec2', // 任务二 
+        'teacher2/ch3/sec3', // 任务三
+      ],
+    },
+    // 第四章
+    {
+      type: 'category',
+      label: '第四章 基本能力',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher2/ch4/overview', // 概述
+        'teacher2/ch4/sec1', // 任务一 
+        'teacher2/ch4/sec2', // 任务二 
+        'teacher2/ch4/sec3', // 任务三
+        'teacher2/ch4/sec4', // 任务四
+      ],
+    },
+    // 第五章 文化素养
+    {
+      type: 'category',
+      label: '第五章 文化素养',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'teacher2/ch5/overview', // 概述
+        'teacher2/ch5/sec1', // 任务一 
+        'teacher2/ch5/sec2', // 任务二 
+        'teacher2/ch5/sec3', // 任务三
+        'teacher2/ch5/sec4', // 任务四
+        'teacher2/ch5/sec5', // 任务五
       ],
     }
   ],
