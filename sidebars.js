@@ -248,6 +248,9 @@ const sidebars = {
         'csharp/ch05/task2', // 任务二 常用控件
         'csharp/ch05/task3', // 任务三 对话框
         'csharp/ch05/task4', // 任务四 文档程序设计
+        'csharp/ch05/exercise1', // 任务四 文档程序设计
+        'csharp/ch05/exercise2', // 任务四 文档程序设计
+        'csharp/ch05/exercise3', // 任务四 文档程序设计
       ],
     },
     // 项目六 数组
