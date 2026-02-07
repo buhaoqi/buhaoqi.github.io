@@ -5,18 +5,18 @@ sidebar_label: 任务四 物理结构设计  # 显式指定侧边栏显示名（
 sidebar_position: 4  # 侧边栏中排在第1位
 ---
 
-## 一、核心定义与设计步骤
-### 1. 定义
+## 一、 物理结构设计是什么
+
 数据库物理结构设计是指对给定的**逻辑数据模型**，选取最适合应用环境的物理结构（包括存储结构与存取方法）的过程。
 
-### 2. 基本步骤
+## 二、物理结构设计的基本步骤
 物理设计分为两步：
 1.  **确定数据库的物理结构**：根据逻辑模型和应用需求，设计具体的存储与存取方案。
 2.  **评价物理结构**：重点从**时间效率**（响应速度）和**空间效率**（存储利用率）两个维度评估方案优劣，选择最优解。
 
----
 
-## 二、子任务一：物理结构设计的核心内容
+## 三、物理结构设计的核心内容
+
 物理设计依赖于具体的数据库管理系统（DBMS），设计时需充分了解：
 - 所用DBMS的内部特征，特别是其提供的存取方法和存储结构。
 - 数据的特性、用途，以及应用环境的处理频率、响应时间要求。
@@ -25,9 +25,7 @@ sidebar_position: 4  # 侧边栏中排在第1位
 1.  为关系模式选择合适的**存取方法**。
 2.  设计关系、索引等数据库文件的**物理存储结构**。
 
----
-
-## 三、子任务二：关系模式存取方法选择
+## 四、关系模式存取方法选择
 为满足多用户共享数据的需求，需为关系建立多条存取路径，常见的存取方法有两种：
 
 ### 1. 索引存取方法
@@ -44,7 +42,7 @@ sidebar_position: 4  # 侧边栏中排在第1位
 
 ---
 
-## 四、子任务三：确定数据库的存储结构
+## 五、确定数据库的存储结构
 这一步需综合权衡**存取时间、存储空间利用率、维护代价**三个相互矛盾的因素，选择折中方案。
 
 ### 1. 确定数据的存放位置
@@ -57,3 +55,35 @@ sidebar_position: 4  # 侧边栏中排在第1位
 
 ### 3. 评价物理结构
 综合衡量时间效率、空间效率、维护代价及用户需求，从多个设计方案中选出最优解。
+
+
+## 六、物理设计的结果
+
+```sql
+-- 这是物理层面的具体实现
+CREATE TABLE users (
+    user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    reg_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id),
+    UNIQUE KEY idx_username (username),
+    INDEX idx_email (email(20))  -- 对email前缀建索引
+) ENGINE=InnoDB 
+ROW_FORMAT=DYNAMIC
+PARTITION BY RANGE (YEAR(reg_time)) (
+    PARTITION p2023 VALUES LESS THAN (2024),
+    PARTITION p2024 VALUES LESS THAN (2025)
+);
+
+CREATE TABLE orders (
+    order_id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    order_time DATETIME NOT NULL,
+    PRIMARY KEY (order_id),
+    INDEX idx_user_time (user_id, order_time),  -- 复合索引
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+) ENGINE=InnoDB
+TABLESPACE orders_ts;  -- 指定表空间
+```
