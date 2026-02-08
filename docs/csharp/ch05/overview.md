@@ -7,8 +7,6 @@ sidebar_position: 1  # 侧边栏中排在第1位
 
 ## 高考考点
 
-六、Windows应用程序设计
-
 ### 任务一 窗体设计
 1. 掌握窗体的概念、属性、方法、事件；
 2. 掌握C#窗体的创建和使用方法；
@@ -40,7 +38,7 @@ sidebar_position: 1  # 侧边栏中排在第1位
 1. 了解多文档界面窗体；
 2. 了解菜单(MainMenu)控件、ToolTip控件
 
-## 窗体应用程序的项目结构
+## 一、窗体应用程序的项目结构
 
 ```
 MyWindowsApp/                         ← 解决方案文件夹
@@ -60,7 +58,7 @@ MyWindowsApp/                         ← 解决方案文件夹
     ├── Program.cs                   ← 程序入口点
     └── MyWindowsApp.csproj          ← 项目文件
 ```
-## 可以修改
+可以手动修改 VS 不要手动修改
 ```csharp
 ✅ 可以安全修改：
 1. Form1.cs - 写你的业务逻辑
@@ -74,6 +72,10 @@ MyWindowsApp/                         ← 解决方案文件夹
 3. Properties/Settings.Designer.cs - 自动生成
 4. bin/ 和 obj/ 文件夹 - 编译生成
 ```
+
+## 二、事件对象
+
+
 ## 一、窗体应用设计练习题集
 
 ### **练习1：学生信息录入系统**
