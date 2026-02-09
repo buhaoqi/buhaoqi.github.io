@@ -298,6 +298,7 @@ private void button1_Click(object sender, EventArgs e)
 |---|---|---|
 |窗体名.Activate()|激活窗体|是|
 |窗体名.Show()|显示窗体|是|
+|窗体名.ShowDialog()|显示模态窗体||
 |窗体名.Hide()|隐藏窗体（窗体不可见，但仍在内存中）|是|
 |窗体名.Close()|关闭窗体（窗体被销毁，从内存中移除）|是|
 |窗体名.Refresh()|刷新窗体|是|
