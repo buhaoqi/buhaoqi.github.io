@@ -226,7 +226,6 @@ public enum FontStyle
 | TabIndex | 整数 | 设置 Tab 键顺序 | 数值越小，Tab 键越早聚焦到此按钮 |
 
 
-
 ### Button控件事件
 | 事件 | 事件描述 | 示例 | 注意 |
 | :--- | :--- | :--- | :--- |
@@ -234,7 +233,6 @@ public enum FontStyle
 | Enter | 按钮获得焦点时触发 | `private void btnOk_Enter(...) { btnOk.BackColor = Color.Yellow; }` | 常用于焦点提示 |
 | MouseUp | 鼠标按键释放时触发 | `private void btnOk_MouseUp(...) { if(e.Button == MouseButtons.Right) {...} }` | 可区分鼠标左右键 |
 | TextChanged | 按钮文本改变时触发 | `private void btnOk_TextChanged(...) { ... }` | 较少使用 |
-
 
 ## 七、ComboBox控件
 
@@ -249,9 +247,7 @@ public enum FontStyle
 | Sorted | `true` 或 `false` | 是否对选项自动排序 | 为 `true` 时按字母顺序排序 |
 | Text | 字符串 | 当前显示的文本内容 | 在 `DropDownList` 模式下为选中项的文本 |
 
-
 ## 八、ListBox控件
-
 
 ### ListBox控件属性
 | 属性 | 属性值 | 属性说明 | 注意 |
@@ -262,7 +258,6 @@ public enum FontStyle
 | Sorted | `true` 或 `false` | 是否对项目自动排序 | 为 `true` 时按字母顺序排序 |
 | Text | 字符串 | 当前选中项的文本（单选模式） | 未选中时为空字符串 |
 
-
 ## 九、RadioButton控件
 
 
@@ -271,8 +266,6 @@ public enum FontStyle
 | :--- | :--- | :--- | :--- |
 | Checked | `true` 或 `false` | 是否被选中 | 为 `true` 时表示选中状态 |
 | Text | 字符串 | 显示在单选框旁边的文本 | 用于说明选项含义 |
-
-
 
 ## 十、CheckBox控件
 
@@ -284,7 +277,6 @@ public enum FontStyle
 | Text | 字符串 | 显示在复选框旁边的文本 | 用于说明选项含义 |
 
 
-
 ## 十一、HScrollBar｜VScrollBar控件
 
 
@@ -294,7 +286,6 @@ public enum FontStyle
 | Value | 整数 | 滚动条的当前值 | 必须在 `Minimum` 和 `Maximum` 之间 |
 | SmallChange | 整数 | 点击箭头按钮时的变化量 | 默认为 1 |
 | LargeChange | 整数 | 点击滑块空白区域时的变化量 | 默认为 10 |
-
 
 
 ## 十二、Timer控件
@@ -321,7 +312,6 @@ public enum FontStyle
 | Text | 字符串 | 显示在边框上的标题 | 可为空 |
 | Visible | `true` 或 `false` | 是否显示该分组框及其内部控件 | 为 `false` 时整个分组隐藏 |
 
-
 ## 十四、TabControl控件
 
 
@@ -331,4 +321,3 @@ public enum FontStyle
 | SelectedTab | TabPage 对象 | 当前选中的标签页 | 可通过代码切换 |
 | TabPages | TabPage 集合 | 所有的标签页集合 | 使用 `Add()` 添加新页 |
 | Multiline | `true` 或 `false` | 标签过多时是否允许多行显示 | 为 `true` 时可换行 |
-
