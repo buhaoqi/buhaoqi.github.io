@@ -245,7 +245,27 @@ const sidebars = {
       items: [
         'csharp/ch05/overview', // 概述
         'csharp/ch05/task1', // 任务一 窗体设计
-        'csharp/ch05/task2', // 任务二 常用控件
+        // 任务二 常用控件（二级分类，带子项）
+        {
+          type: 'category',
+          label: '任务二 常用控件',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'csharp/ch05/task2/overview', // 
+            'csharp/ch05/task2/label', // 
+            'csharp/ch05/task2/textbox', //
+            'csharp/ch05/task2/button', //
+            'csharp/ch05/task2/combobox', //
+            'csharp/ch05/task2/listbox', //
+            'csharp/ch05/task2/radiobutton', //
+            'csharp/ch05/task2/checkbox', //
+            'csharp/ch05/task2/hscrollbar-vscrollbar', //
+            'csharp/ch05/task2/timer', //
+            'csharp/ch05/task2/groupbox', // 
+            'csharp/ch05/task2/tabcontrol', // 
+          ],
+        },
         'csharp/ch05/task3', // 任务三 对话框
         'csharp/ch05/task4', // 任务四 文档程序设计
         'csharp/ch05/exercise1', // 任务四 文档程序设计

@@ -28,8 +28,8 @@ sidebar_position: 1  # 侧边栏中排在第1位
 11. 掌握滚动条(HScrollBar、VScrollBar)的属性：Value、SmallChange、LargeChange；
 12. 掌握时钟控件(Timer)的属性：Interval；
 13. 掌握时钟控件的Tick事件；
-了解分组框(GroupBox)的属性：Text、Visible；
-14. 了解选项卡(TabControl)的属性：SelectedTab、TabPages、Multiline；
+14. 了解分组框(GroupBox)的属性：Text、Visible；
+15. 了解选项卡(TabControl)的属性：SelectedTab、TabPages、Multiline；
 
 ### 任务三 对话框
 1. 了解对话框控件、消息框。
