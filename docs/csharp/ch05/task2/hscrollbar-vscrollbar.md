@@ -5,6 +5,16 @@ sidebar_label: HScrollBar|VScrollBar控件  # 显式指定侧边栏显示名（�
 sidebar_position: 8  # 侧边栏中排在第1位
 ---
 
+## 本节高考考点
+### HScrollBar｜VScrollBar控件属性
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Value | 整数 | 滚动条的当前值 | 必须在 `Minimum` 和 `Maximum` 之间 |
+| SmallChange | 整数 | 点击箭头按钮时的变化量 | 默认为 1 |
+| LargeChange | 整数 | 点击滑块空白区域时的变化量 | 默认为 10 |
+
+
+
 ## 一、用途
 
 
@@ -271,3 +281,49 @@ namespace HScrollBarLargeChangeDemo
 2. 该属性仅对轨道点击生效，与控制箭头步长的 `SmallChange` 相互独立，且决定了 `Value` 的最大有效值（`Maximum - LargeChange`）；
 3. 设置 `LargeChange` 可调整滚动条的粗粒度调节程度（值越大调节幅度越大），赋值后立即生效且受数值非负约束。
 
+
+
+## 示例
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp6
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void vScrollBar1_ValueChanged(object sender, EventArgs e)
+        {
+            label1.Text = $"当前Value值：{vScrollBar1.Value}";
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // 核心：设置Value为50（会自动约束在有效范围内）
+            hScrollBar1.Value = 100;
+            // 手动触发显示（也可依赖ValueChanged事件）
+            label1.Text = $"已手动设置Value为：{vScrollBar1.Value}";
+        }
+    }
+}
+
+```

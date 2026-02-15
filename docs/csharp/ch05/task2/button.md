@@ -4,6 +4,24 @@ title: Button控件  # 文档标题，若无 sidebar_label 则作为侧边栏名
 sidebar_label: Button控件  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 3  # 侧边栏中排在第1位
 ---
+## 本节高考考点
+### Button控件属性
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Name | 字符串 | 控件名称，用于代码中引用 | 建议采用有意义的名称，如 `btnSubmit` |
+| Enabled | `true` 或 `false` | 设置按钮是否可用 | 为 `false` 时按钮变灰，不可点击 |
+| Text | 字符串 | 按钮上显示的文本 | 可使用 `&` 设置快捷键，如 `&Save` 表示 `Alt+S` |
+| TabIndex | 整数 | 设置 Tab 键顺序 | 数值越小，Tab 键越早聚焦到此按钮 |
+
+
+### Button控件事件
+| 事件 | 事件描述 | 示例 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Click | 用户单击按钮时触发 | `private void btnOk_Click(...) { MessageBox.Show("已点击"); }` | 最常用的事件 |
+| Enter | 按钮获得焦点时触发 | `private void btnOk_Enter(...) { btnOk.BackColor = Color.Yellow; }` | 常用于焦点提示 |
+| MouseUp | 鼠标按键释放时触发 | `private void btnOk_MouseUp(...) { if(e.Button == MouseButtons.Right) {...} }` | 可区分鼠标左右键 |
+| TextChanged | 按钮文本改变时触发 | `private void btnOk_TextChanged(...) { ... }` | 较少使用 |
+
 
 ## 一、Button控件的4个核心用途
 ### 1. 触发程序的核心操作

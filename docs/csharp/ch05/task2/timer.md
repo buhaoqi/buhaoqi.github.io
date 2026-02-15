@@ -4,6 +4,16 @@ title: Timer控件  # 文档标题，若无 sidebar_label 则作为侧边栏名
 sidebar_label: Timer控件  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 9  # 侧边栏中排在第1位
 ---
+## 本节高考考点
+### Timer控件属性
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Interval | 整数（毫秒） | Tick 事件的时间间隔 | 默认为 100 毫秒 |
+
+### Timer控件事件
+| 事件 | 事件描述 | 示例 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Tick | 达到 Interval 时间间隔时触发 | `private void timer1_Tick(...) { label1.Text = DateTime.Now.ToString(); }` | 需启动计时器后才触发 |
 
 ## 一、用途
 WinForms中的Timer控件（`System.Windows.Forms.Timer`）是专门用于**在UI线程中实现轻量级定时任务**的控件，核心通过`Interval`（时间间隔）和`Tick`（间隔触发事件）配合，实现“延迟执行”或“定时循环执行”逻辑，是桌面应用中最常用的定时工具之一。

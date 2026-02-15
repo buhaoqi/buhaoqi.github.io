@@ -5,6 +5,17 @@ sidebar_label: ListBox 控件  # 显式指定侧边栏显示名（优先级最�
 sidebar_position: 5  # 侧边栏中排在第1位
 ---
 
+## 本节高考考点
+### ListBox控件属性
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Items | 对象集合 | 列表中的项目集合 | 使用 `Items.Add()` 添加项目 |
+| MultiColumn | `true` 或 `false` | 是否以多列形式显示 | 适合项目较多的情况 |
+| SelectedItems | 集合 | 当前选中的项目集合（多选模式） | 类型为 `SelectedObjectCollection` |
+| Sorted | `true` 或 `false` | 是否对项目自动排序 | 为 `true` 时按字母顺序排序 |
+| Text | 字符串 | 当前选中项的文本（单选模式） | 未选中时为空字符串 |
+
+
 ## 一、用途
 
 

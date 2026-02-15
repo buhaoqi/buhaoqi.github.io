@@ -288,6 +288,64 @@ const sidebars = {
         'csharp/ch06/task5', // 任务四 数组的查找
       ],
     },
+    // 项目七 面向对象基础
+    {
+      type: 'category',
+      label: '项目七 面向对象基础',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp/ch07/overview', // 概述
+        {
+          type: 'category',
+          label: '任务一 类',
+          collapsible: true,
+          collapsed: false,
+          items: [
+            'csharp/ch07/task1/overview', // 概述
+            'csharp/ch07/task1/class', // 任务一 
+            'csharp/ch07/task1/modifiers', // 任务四 
+            'csharp/ch07/task1/fields', // 任务二 
+            'csharp/ch07/task1/property', // 任务五
+            'csharp/ch07/task1/constructor', // 任务三 
+            'csharp/ch07/task1/this', // 任务六
+            'csharp/ch07/task1/exercise1', // 任务七
+            'csharp/ch07/task1/exercise2', // 任务八
+          ],
+        },
+        {
+          type: 'category',
+          label: '任务二 方法',
+          collapsible: true,
+          collapsed: false,
+          items: [
+            'csharp/ch07/task2/overview', // 概述
+            'csharp/ch07/task2/what-method-is', // 任务一 
+            'csharp/ch07/task2/parameters', // 任务二 
+            'csharp/ch07/task2/static', // 任务三 
+            'csharp/ch07/task2/exercise1', // 任务四
+            'csharp/ch07/task2/exercise2', // 任务五
+          ],
+        },
+      ],
+    },
+    // 项目八：面向对象编程
+    {
+      type: 'category',
+      label: '项目八：面向对象编程',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp/ch08/overview', // 概述
+        'csharp/ch08/task1', // 任务一
+        'csharp/ch08/task2', // 任务二 
+        'csharp/ch08/task3', // 任务三 
+        'csharp/ch08/task4', // 任务一
+        'csharp/ch08/task5', // 任务二 
+        'csharp/ch08/task6', // 任务三 
+        'csharp/ch08/task7', // 任务一
+      ],
+    },
   ],
   // ============ 新增的 MySQL 教程侧边栏 ============
   mysqlSidebar: [

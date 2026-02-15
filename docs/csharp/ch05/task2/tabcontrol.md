@@ -5,6 +5,16 @@ sidebar_label: TabControl控件  # 显式指定侧边栏显示名（优先级最
 sidebar_position: 1  # 侧边栏中排在第1位
 ---
 
+## 本节高考考点
+### TabControl控件属性
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| SelectedTab | TabPage 对象 | 当前选中的标签页 | 可通过代码切换 |
+| TabPages | TabPage 集合 | 所有的标签页集合 | 使用 `Add()` 添加新页 |
+| Multiline | `true` 或 `false` | 标签过多时是否允许多行显示 | 为 `true` 时可换行 |
+
+
+
 ## 一、用途
 
 

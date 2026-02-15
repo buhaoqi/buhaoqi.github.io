@@ -4,6 +4,14 @@ title: CheckBox控件  # 文档标题，若无 sidebar_label 则作为侧边栏�
 sidebar_label: CheckBox控件  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 7  # 侧边栏中排在第1位
 ---
+## 本节高考考点
+### CheckBox控件属性
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| Checked | `true` 或 `false` | 是否被选中（二态） | 当 `ThreeState=true` 时可能为 `null` |
+| CheckState | `Unchecked`/`Checked`/`Indeterminate` | 复选框的状态（三态） | 适用于需要"不确定"状态的场景 |
+| Text | 字符串 | 显示在复选框旁边的文本 | 用于说明选项含义 |
+
 
 ## 一、用途
 
@@ -192,6 +200,70 @@ namespace CheckBoxCheckStateDemo
 2. 半选状态需先设置 `TriState = true` 才能启用，否则仅支持双态；
 3. `Checked` 仅反映「是否全选」，无法区分未选和半选，需通过 `CheckState` 读取完整状态。
 
+
+你想知道WinForms中CheckBox控件的“半选”（Indeterminate状态）到底是什么意思，包括它的视觉表现、启用条件和实际用途，对吧？
+
+### 半选（Indeterminate）的核心含义
+“半选”是CheckBox的**第三种中间状态**，既不是“完全选中（打勾）”，也不是“完全未选中（空白）”，核心用来表示“不确定/部分选中”的状态——通常用在“批量选择”的场景中，提示用户“当前有部分子选项被选中，但并非全部”。
+
+### 1. 视觉表现（最直观的特征）
+开启半选后，CheckBox的外观和“选中/未选中”有明显区别：
+- **未选中**：复选框内部是空的（空白）；
+- **选中**：复选框内部有一个黑色的对勾（✓）；
+- **半选**：复选框内部被**灰色实心填充**（没有勾），看起来是“灰掉的”，但又不是完全空白。
+
+> 注：不同Windows系统/主题下视觉细节略有差异，但核心是“灰色填充”区别于勾和空白。
+
+### 2. 启用条件
+半选状态**不会默认生效**，必须先将CheckBox的`ThreeState`属性设为`true`（意为“支持三种状态”），否则强行设置`CheckState = Indeterminate`会被自动转为“未选中”。
+
+### 3. 实际使用场景（为什么需要半选）
+半选最常用在“层级选择”或“批量选择”的业务场景中，举个最典型的例子：
+比如你做一个“文件批量选择”功能：
+- 界面上有1个“全选”CheckBox（checkAll），下方有5个“单个文件”CheckBox（file1~file5）；
+- 当5个文件都没选：checkAll是“未选中”；
+- 当5个文件都选中：checkAll是“选中（打勾）”；
+- 当5个文件只选了2个（部分选中）：checkAll就设为“半选”，提示用户“有部分文件被选中，但不是全部”。
+
+### 4. 代码示例：直观体验半选
+下面的代码可以让你快速看到半选的效果：
+```csharp
+private void Form1_Load(object sender, EventArgs e)
+{
+    // 第一步：必须开启ThreeState，否则半选不生效
+    checkBox1.ThreeState = true;
+
+    // 演示三种状态的切换
+    button1.Text = "未选中";
+    button2.Text = "选中";
+    button3.Text = "半选";
+}
+
+private void button1_Click(object sender, EventArgs e)
+{
+    checkBox1.CheckState = CheckState.Unchecked; // 未选中
+}
+
+private void button2_Click(object sender, EventArgs e)
+{
+    checkBox1.CheckState = CheckState.Checked; // 选中（打勾）
+}
+
+private void button3_Click(object sender, EventArgs e)
+{
+    checkBox1.CheckState = CheckState.Indeterminate; // 半选（灰色填充）
+}
+```
+
+### 5. 关键注意点
+半选状态下，CheckBox的`Checked`属性会返回`false`（而非`true`）——这是因为“半选”本质是“非完全选中”，所以不要通过`Checked`判断半选，必须用`CheckState == CheckState.Indeterminate`来判断。
+
+### 总结
+1. 半选（Indeterminate）是CheckBox的第三种状态，视觉上表现为**灰色实心填充**（无勾），区别于选中（打勾）和未选中（空白）；
+2. 半选需要先设置`ThreeState = true`才能生效，否则会被自动转为未选中；
+3. 半选的核心用途是表示“部分选中/不确定”，常见于批量选择、层级选择的场景。
+
+
 ### 3.Text属性
 #### 1. Text 属性核心概念
 `Text` 是 CheckBox（复选框）控件的基础可读写属性，核心作用是**设置或获取复选框左侧/右侧显示的文本标签**，是用户识别复选框用途的核心标识，核心特点：
@@ -282,3 +354,84 @@ namespace CheckBoxTextDemo
 2. 支持换行（`\n`）、快捷键（`&`）等基础格式，显示 `&` 需用 `&&` 转义；
 3. `Text` 与勾选状态（`Checked`/`CheckState`）完全独立，仅控制显示内容，不影响复选框的选中逻辑。
 
+## 示例
+
+```csharp
+using System;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            // 开启checkBox4的三态支持（必须！否则半选不生效）
+            checkBox4.ThreeState = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                comboBox1.Items.Add(checkBox1.Text);
+            }
+
+
+        }
+        // 核心逻辑方法（之前写过的，保留不变）
+        private void UpdateCheckBox4State()
+        {
+            int checkedCount = 0;
+            if (checkBox1.Checked) checkedCount++;
+            if (checkBox2.Checked) checkedCount++;
+            if (checkBox3.Checked) checkedCount++;
+
+            switch (checkedCount)
+            {
+                case 3:
+                    checkBox4.CheckState = CheckState.Checked;
+                    break;
+                case 0:
+                    checkBox4.CheckState = CheckState.Unchecked;
+                    break;
+                default:
+                    checkBox4.CheckState = CheckState.Indeterminate;
+                    break;
+            }
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            UpdateCheckBox4State();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateCheckBox4State();
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateCheckBox4State();
+        }
+        //private void UpdateCheckBox4State()
+        //{
+        //    if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
+        //    {
+        //        checkBox4.CheckState = CheckState.Checked;
+        //    }
+        //    else if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked)
+        //    {
+        //        checkBox4.CheckState = CheckState.Unchecked;
+        //    }
+        //    else
+        //    {
+        //        checkBox4.CheckState = CheckState.Indeterminate;
+        //    }
+        //}
+    }
+}
+
+```

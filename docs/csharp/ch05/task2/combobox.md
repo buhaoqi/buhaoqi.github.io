@@ -4,12 +4,24 @@ title: ComboBox 控件  # 文档标题，若无 sidebar_label 则作为侧边栏
 sidebar_label: ComboBox 控件  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 4  # 侧边栏中排在第1位
 ---
+## 本节高考考点
+| 属性 | 属性值 | 属性说明 | 注意 |
+| :--- | :--- | :--- | :--- |
+| DroppedDown | `true` 或 `false` | 设置下拉列表是否展开 | 可通过代码控制展开/收起 |
+| Items | 字符串集合 | 下拉列表中的选项集合 | 使用 `Add()`、`Remove()` 等方法管理 |
+| SelectedIndex | 整数 | 当前选中项的索引（从0开始） | `-1` 表示未选中 |
+| SelectedItem | 对象 | 当前选中的项 | 通常为字符串 |
+| SelectedText | 字符串 | 可编辑部分中选中的文本 | 仅当 `DropDownStyle` 为 `DropDown` 时有效 |
+| Sorted | `true` 或 `false` | 是否对选项自动排序 | 为 `true` 时按字母顺序排序 |
+| Text | 字符串 | 当前显示的文本内容 | 在 `DropDownList` 模式下为选中项的文本 |
 
-## 一、用途
 
+## 一、ComboBox 控件是什么
+ComboBox 控件是一个可折叠的选项列表。也就是“下拉菜单“。
 
 ## 二、特点
-
+1. 节省空间：只占一行。
+2. 规范输入：预设选项，避免无效数据。
 
 ## 三、属性
 
@@ -722,3 +734,36 @@ namespace ComboBoxTextDemo
 2. 可编辑样式下 `Text` 可自由读写（支持自定义内容），仅选择样式下仅能读取/设置下拉项中存在的文本；
 3. 区分核心属性：`Text`（完整文本）≠ `SelectedText`（选中片段）≠ `SelectedItem`（选中项对象）。
 
+
+## 示例
+
+```csharp
+using System;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string str = "";
+            foreach (string s in comboBox1.Items)
+            {
+               str += s + " ";
+            }
+            label1.Text = str;
+            comboBox1.Sorted = true;
+            comboBox1.DroppedDown = true;
+            
+        }
+        
+    }
+}
+
+```

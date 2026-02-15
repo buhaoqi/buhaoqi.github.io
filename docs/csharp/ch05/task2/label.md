@@ -6,18 +6,87 @@ sidebar_position: 1  # 侧边栏中排在第1位
 ---
 
 ## 一、Label控件的用途
-1.用途：在窗体上显示信息，如：文本或图片。
+Label控件用于在窗体内显示信息，如：在窗体内显示文本或图片。
 
-比喻：Label 控件就像 “窗体上的便利贴”
+Label 控件就像 “窗体上的便利贴”
 
 
 ## 二、LabeL控件的特点
 
-2.特点：仅显示、不交互！
+特点：仅显示、不交互！
 
-- Label 控件是窗体中最基础、最常用的显示类控件
+- 显示类控件
+- 最基础、最常用
 - 不接收用户输入
 - 不触发点击、无焦点
+
+## 三、Label控件的属性
+### 1.Text 属性
+#### 用途
+读取或设置label 标签的文本内容。
+#### 语法
+
+```csharp
+label1.Text = "字符串"; // 任意字符串
+label1.Text = "";  // 空字符串
+label1.Text = "Hello World\n"; // 支持转移字符
+label1.Text = @"./images/thumbnail.jpg"; // 支持取消转义
+```
+
+示例
+```csharp
+label1.Text = "用户名："; // 写操作
+label2.Text = "密码："; // 写操作
+MessageBox.Show(label1.Text); // 读操作
+```
+
+
+
+
+| 属性 | 用途 |  用途 | 注意 |
+|------|------------|----------|------|
+| **Font** | `new Font("字体名", 字号, 字形)`<br /> new Font("微软雅黑", 16, FontStyle.Bold);| 设置Label显示文本的字体、字号、字形。 | 1.值类型:System.Drawing.Font<br />2.字体名:"微软雅黑"、"宋体"等<br /> 3.字号：通常1-1638（常用8-72）<br /> 4.字形：Regular（常规）、Bold（粗体）、<br />Italic（斜体）、Underline（下划线）、<br />Strikeout（删除线） |
+| **Image** |`Image.FromFile("路径")`<br />Image.FromFile(@".\images\logo2.png");<br />`Properties.Resources.图片名`|在Label上显示图片 |1.值类型:System.Drawing.Image<br />2.图片格式：BMP、GIF、JPEG、PNG、ICO等<br /> 3. 需配合ImageAlign属性控制图片位置 <br /> 4.可与文本同时显示或单独显示<br />5.用于显示图标、Logo、状态指示器等图形元素。 |
+| **TextAlign** |`TopLeft`、`TopCenter`、<br />`TopRight`、`MiddleLeft`、<br />`MiddleCenter`、`MiddleRight`、<br />`BottomLeft`、`BottomCenter`、<br />`BottomRight` | 控制Label中文本和图片的对齐方式。 | 1.System.Drawing.ContentAlignment<br /> 2.当AutoSize=true时，TextAlign效果可能不明显<br /> 3. 当有Image时，TextAlign控制文本位置，<br />ImageAlign控制图片位置<br />4. 默认值为TopLeft<br />5. 多行文本仍然受对齐方式影响<br />6. 与ImageAlign配合可实现图文混排布局 |
+
+
+FontStyle:
+
+```csharp
+public enum FontStyle
+{
+    Regular = 0,      // 常规
+    Bold = 1,         // 粗体
+    Italic = 2,       // 斜体
+    Underline = 4,    // 下划线
+    Strikeout = 8     // 删除线
+}
+```
+
+### 2.实战属性
+
+实战属性：实战中高频出现
+
+| 属性 | 属性值 | 属性说明 | 注意 |
+|------|--------|----------|------|
+| **AutoSize** | 1. `true`（自动调整大小,默认）<br />2. `false`（固定大小） | 控制Label是否自动调整大小以适应其文本内容。当设置为`true`时，Label的宽度和高度会根据Text属性的内容自动计算。 | 1. 值类型：`bool`<br />2. 当`AutoSize=true`时，手动设置`Width`和`Height`属性无效<br />3. 与`Anchor`属性配合使用时要注意布局变化<br />4. 多行文本时需要结合`WordWrap`属性使用<br />5. 设置固定大小时应先设置`AutoSize=false` |
+| **Visible** | 1. `true`（可见，默认）<br />2. `false`（隐藏） | 控制Label控件在窗体上是否可见。设置为`false`时，控件完全隐藏且不占用布局空间。 | 1. 值类型：`bool`<br />2. 与`Enabled`属性的区别：<br />   - `Enabled=false`：控件可见但灰显，不可交互<br />   - `Visible=false`：控件完全不可见<br />3. 父控件`Visible=false`时，子控件也不可见<br />4. 隐藏的控件仍存在于控件集合中，可通过代码访问 |
+| **Size** | `new Size(宽度, 高度)`<br />示例：`new Size(200, 50)` | 同时设置Label控件的宽度和高度（单位：像素）。该属性是`Width`和`Height`的组合表示。 | 1. 值类型：`System.Drawing.Size`<br />2. 修改`Size`属性会自动将`AutoSize`设置为`false`<br />3. 可通过`Size.Width`和`Size.Height`分别访问宽度和高度<br />4. 与`MaximumSize`和`MinimumSize`属性配合可实现大小限制<br />5. 设计时可通过拖拽控件边框直观调整 |
+| **Width**<br />**Height** | 整数值（像素）<br />示例：`Width = 200`<br />`Height = 50` | 分别设置Label控件的宽度（`Width`）和高度（`Height`）。这两个属性是`Size`属性的分解表示。 | 1. 值类型：`int`<br />2. 当`AutoSize=true`时，这两个属性为只读<br />3. 等价关系：<br />   - `label.Width` = `label.Size.Width`<br />   - `label.Height` = `label.Size.Height`<br />4. 设置其中一个不会影响另一个<br />5. 可通过`MaximumSize`和`MinimumSize`限制范围 |
+| **BorderStyle** | 1. `None`（无边框，默认）<br />2. `FixedSingle`（单线边框）<br />3. `Fixed3D`（三维凹陷边框） | 设置Label控件的边框样式。用于增强控件的视觉层次感，使其在界面上更加突出。 | 1. 值类型：`System.Windows.Forms.BorderStyle`<br />2. `FixedSingle`：创建简单的单像素边框<br />3. `Fixed3D`：创建具有三维凹陷效果的边框<br />4. 设置边框后可能需要调整内边距或文本位置<br />5. 常用场景：<br />   - `None`：普通文本标签<br />   - `FixedSingle`：标题框、分组标签<br />   - `Fixed3D`：状态指示、输入框标签 |
+
+
+### 3.次要属性
+
+| 属性 | 属性值 | 属性说明 | 注意 |
+|------|--------|----------|------|
+| **Name** | 任意合法的C#标识符<br />**示例：**<br />`lblUserName`<br />`lblStatus`<br />`lblCopyright`<br />`lblErrorInfo` | Label控件在代码中的唯一标识符。用于在程序中通过名称引用和操作控件，是事件处理和数据绑定的基础。 | 1. 值类型：`string`<br />2. 命名规范：建议使用`lbl`前缀 + 描述性名称<br />3. 设计器中修改Name属性会自动更新代码中的变量名<br />4. 同一容器内控件Name不能重复<br />5. 运行时可通过`Controls.Find("控件名", true)`查找控件 |
+| **Anchor** | `AnchorStyles`枚举值的组合<br />**常用组合示例：**<br />`AnchorStyles.Top \| AnchorStyles.Left`（默认）<br />`AnchorStyles.Top \| AnchorStyles.Right`<br />`AnchorStyles.Bottom \| AnchorStyles.Right`<br />`AnchorStyles.Top \| AnchorStyles.Bottom \| AnchorStyles.Left \| AnchorStyles.Right`（All）<br />`AnchorStyles.None` | 控制Label控件如何相对于其父容器边缘进行定位。当容器大小改变时，锚定的边将保持与容器边缘的固定距离。 | 1. 值类型：`System.Windows.Forms.AnchorStyles`<br />2. 与`Dock`属性互斥，只能使用其中一个<br />3. **常用布局场景：**<br />   - `Top,Left`：固定左上角位置<br />   - `Top,Right`：固定在右上角<br />   - `Bottom,Right`：固定在右下角<br />   - `All`：随容器拉伸/收缩<br />4. 默认值为`Top,Left`<br />5. 设计时可通过属性窗口直观设置 |
+| **CanFocus** | 1. `true`（可以接收焦点）<br />2. `false`（不能接收焦点，**默认**）<br />**示例：**<br />`label1.CanFocus` // 返回false<br />`label1.TabStop = true;`<br />`label1.CanFocus` // 可能返回true | 只读属性，用于判断 Label 是否可以接收焦点。默认情况下，Label 的 CanFocus 返回 false。 | 1. 值类型：`bool`（只读）<br />2. **Label默认不能获得焦点**<br />3. 要使Label可以接收焦点，需要同时设置：<br />   - `TabStop = true`<br />   - `Enabled = true`<br />   - `Visible = true`<br />4. 通常Label不需要焦点，特殊需求时才启用<br />5. 焦点相关属性还包括：`TabStop`、`TabIndex` |
+| **Focused** | 1. `true`（当前拥有焦点）<br />2. `false`（当前没有焦点）<br />**示例：**<br />`if (label1.Focused)`<br />`{`<br />`    // 当前label拥有焦点`<br />`}`<br />`else`<br />`{`<br />`    // 当前label没有焦点`<br />`}` | 指示Label控件当前是否拥有输入焦点。这是一个只读属性，用于检查控件的焦点状态。 | 1. 值类型：`bool`（只读）<br />2. **由于Label默认CanFocus=false**，因此Focused通常也为false<br />3. 如果需要让Label获得焦点，需要先启用焦点接收能力<br />4. **焦点获取方法：**<br />   - `label1.Focus()`<br />   - 用户通过Tab键切换<br />   - 用户鼠标点击（如果支持）<br />5. 焦点事件：`Enter`（获得焦点）、`Leave`（失去焦点） |
+
+
+
 
 ## 三、Label 控件的属性
 
