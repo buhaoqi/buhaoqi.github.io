@@ -1,114 +1,41 @@
 ---
 # 这部分是关键！侧边栏显示名由这里决定
-title: 一、方法是什么  # 文档标题，若无 sidebar_label 则作为侧边栏名
-sidebar_label: 一、方法是什么  # 显式指定侧边栏显示名（优先级最高）
+title: 任务一 方法是什么  # 文档标题，若无 sidebar_label 则作为侧边栏名
+sidebar_label: 任务一 方法是什么  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position:  1  # 侧边栏中排在第1位
 ---
 
-## 一、方法的由来
+## 一、方法是什么
 
-案例：求一个整数的平方
-
-```csharp
-int a = 5;
-int result = a * a;
-Console.WriteLine(result);
-
-a = 6;
-result = a * a;
-Console.WriteLine(result);
-
-a = 7;
-result = a * a;
-Console.WriteLine(result);
-```
-
-没有“方法”的概念，代码可能是这样的流水账。这段代码存在三个问题：
-
-1. 代码逻辑重复: 重复写相同的指令“输入一个数→计算平方→输出”。
-2. 维护困难，如果要修改求平方的逻辑或修改输出格式，需要修改多处。
-3. 可读性差：代码意图被重复的细节淹没。
-
-代码的方法改造
-
-第一步：方法体
-
-使用花括号把重复的代码包裹起来，形成一个代码块，称之为“方法体”。我们希望方法体可以重复调用。
+### 是一段可重复执行的代码块
 
 ```csharp
+use System;
+
+class static Program
 {
-    int a = 5;
-    int result = a * a;
-    Console.WriteLine(result);
+
 }
 ```
 
-第二步：方法名
+### 用于描述类的 “行为”
 
-为了调用方法体，需要为“方法体”起个名字，我们起名叫Square。这个名字就叫“方法名"。
+
+
+
+### 方法是绑定了数据的行为
+
+方法定义在类中，与类中的数据（字段 / 属性）绑定，。它通过操作类中的数据，实现特定的功能。
+
+## 二、定义方法的语法
 
 ```csharp
-Square{
-    int a = 5;
-    int result = a * a;
-    Console.WriteLine(result);
+修饰符 返回值类型 方法名([数据类型 参数名[,数据类型 参数名]])
+{
+    // 方法体：具体的操作逻辑
+    [return 返回值;] 
 }
 ```
-
-第三步：参数
-
-删掉变量a的初始化值5。我们不需要初始化，我们需要每次向方法体内传入不同的值。可以这样做：在方法名Square后面再添加一组小括号,然后把`int a`移动到小括号内，记得去掉分号。小括号里定义的变量叫参数，用于接收外部传入的值。
-
-```csharp
-Square(int a){
-    int result = a * a;
-    Console.WriteLine(result);
-}
-```
-
-第四步：返回值
-
-所有的方法必须设置返回值，在这里，返回值就是result。所以我们在代码底部，添加一行代码：`return result;`;同时必须在方法名的前面指定返回值的类型是int。 最后可以把`Console.WriteLine(result)`删掉。
-
-```csharp
-Square(int a){
-    int result = a * a;
-    return result;
-}
-```
-
-第五步：static
-
-```csharp
-static void Main(){
-    Console.WriteLine(Square(6));
-}
-```
-
-这是代码会报错：因为Main是一个静态方法，在静态方法内只能调用静态方法，所以修改代码：
-
-```csharp
-Static int Square(int a){
-    int result = a * a;
-    //Console.WriteLine(result);
-    return result;
-}
-```
-
-第六步：调用方法
-在方法名`Square()`后面紧跟着写一组小括号，小括号在这里表示”执行“。当调用“方法名和小括号”时就可以执行方法体内的代码：
-
-```csharp
-Square()
-```
-
-## 二、方法是什么
-
-- 方法的本质是一段封装好的可重复执行的代码块。
-- 方法是类的行为载体。
-- 方法是绑定了数据的行为。方法定义在类中，与类中的数据（字段 / 属性）绑定，用于描述类的 “行为”。它通过操作类中的数据，实现特定的功能。
-
-## 三、方法的基本语法
 
 ### 1.方法的结构
 #### 方法头是什么
@@ -125,7 +52,7 @@ Square()
 
 示例
 
-```c# linenums="1"
+```csharp
 void MyMethod()
 {
     Console.WriteLine("First");
@@ -153,13 +80,7 @@ void MyMethod()
 
 ### 2.定义方法的语法
 
-```csharp
-访问修饰符 特性修饰符 返回值类型 方法名(参数列表)
-{
-    // 方法体：具体的操作逻辑
-    [return 返回值;] 
-}
-```
+
 
 示例
 
@@ -190,15 +111,127 @@ Console.WriteLine($"{zhangSan.Name}的考试分数是：{examScore}");
 
 调用方法的语法是“对象名.方法名(参数)”，如果方法有返回值，还可以用变量接收返回的结果。
 
-### 4.访问修饰符
-方法的访问修饰符和属性类似，`public`修饰的方法可以在类外部通过对象调用，`private`修饰的方法只能在类内部调用，用来封装内部逻辑。比如我们可以把一些复杂的计算逻辑放在私有方法中，只暴露简单的公共方法给外部使用。
+### 4.修饰符
+
+见: [修饰符](../task1/modifiers.md)
+
+### 5.返回值类型
+**返回值类型（Return Type）** 决定了方法执行完毕后返回的结果值的数据类型。
+
+#### 1. 无返回值：`void` 关键字
+
+如果方法只是执行一系列动作（如打印日志、修改变量），不需要返回任何计算结果，则必须使用 `void`。
+
+* **特点**：方法体内可以不写 `return`，或者只写 `return;`（用于提前结束方法）。
+* **示例**：
+```csharp
+public void PrintMessage(string msg)
+{
+    Console.WriteLine(msg);
+    // 不需要 return
+}
+
+```
+
+#### 2. 返回基本类型或对象
+
+方法可以返回任何有效的 C# 类型，包括内置类型（`int`, `string`, `bool`）或自定义的类（`User`, `Order`）。
+
+* **规则**：方法体必须通过 `return` 关键字返回一个与声明类型**兼容**的值。
+* **示例**：
+```csharp
+public int Add(int a, int b)
+{
+    return a + b; // 必须返回 int
+}
+
+public User GetUserById(int id)
+{
+    return new User { Id = id }; // 返回一个对象
+}
+
+```
+
+#### 3. 返回多个值：元组 (Tuples)
+
+在 C# 7.0 及更高版本中，如果你想让一个方法返回多个相关的数据，而又不想专门定义一个类，可以使用**元组**。
+
+* **语法**：用括号 `()` 包裹多个类型。
+* **示例**：
+```csharp
+public (int min, int max) GetLimits()
+{
+    return (1, 100); 
+}
+
+// 调用时：
+var result = GetLimits();
+Console.WriteLine(result.min);
+
+```
 
 
-### 5.特性修饰符
+#### 4. 异步返回值：`Task` 与 `ValueTask`
 
-### 6.返回值类型
+在处理网络请求、文件读取等耗时操作时，C# 使用异步编程模型。此时返回值类型会发生变化。
 
-### 7.方法名命名规则
+| 声明类型 | 实际返回含义 | 对应非异步类型 |
+| --- | --- | --- |
+| **`Task`** | 异步操作完成，但不返回数据。 | `void` |
+| **`Task<T>`** | 异步操作完成，返回 `T` 类型数据。 | `T` |
+
+* **示例**：
+```csharp
+public async Task<string> DownloadDataAsync()
+{
+    // 模拟异步下载
+    await Task.Delay(1000);
+    return "下载完成的数据"; 
+}
+
+```
+
+#### 5. 核心规则与注意事项
+
+##### A. 返回路径完整性
+
+如果方法声明了非 `void` 的返回值，编译器会检查**所有可能的路径**是否都有 `return` 语句。
+
+```csharp
+public string CheckStatus(bool ok)
+{
+    if (ok) return "成功";
+    // 报错：并非所有的代码路径都返回值（如果 ok 为 false 怎么办？）
+}
+
+```
+
+##### B. 协变性 (Covariance)
+
+你可以返回声明类型的**子类**。例如，如果返回值类型是 `Animal`，你可以 `return new Dog();`。
+
+##### C. 表达式主体方法 (Expression-bodied members)
+
+对于只有一行返回逻辑的方法，可以使用 `=>` 符号简化：
+
+```csharp
+public int Square(int x) => x * x; 
+
+```
+
+---
+
+#### 总结对照表
+
+| 场景 | 返回值类型声明 | return 语句 |
+| --- | --- | --- |
+| 纯动作，无回执 | `void` | 无，或 `return;` |
+| 返回计算结果 | `int`, `string`, `double` 等 | `return 变量;` |
+| 返回复杂数据 | `List<T>`, `MyClass` | `return 实例;` |
+| 返回多个零散数据 | `(int, string)` | `return (1, "OK");` |
+| 异步方法 | `Task<T>` | `return 变量;` (配合 async/await) |
+
+### 6.方法名命名规则
 #### 基本语法规则（必须遵守）
 
 这些是编译器会检查的硬性规则，违反会导致编译错误：
@@ -310,6 +343,7 @@ C#方法命名的关键规则可归纳为：
 遵循这些规则，能让你的代码更符合C#社区的习惯，便于团队协作和后续维护。记住：**好的命名是写给“人”看的，不是给编译器看的**。
 ### 8.参数列表
 
+见: [参数列表](./parameters.md)
 
 ### 9.返回值
 
@@ -436,3 +470,99 @@ class Student
 
 
 
+## 一、方法的由来
+
+案例：求一个整数的平方
+
+```csharp
+int a = 5;
+int result = a * a;
+Console.WriteLine(result);
+
+a = 6;
+result = a * a;
+Console.WriteLine(result);
+
+a = 7;
+result = a * a;
+Console.WriteLine(result);
+```
+
+没有“方法”的概念，代码可能是这样的流水账。这段代码存在三个问题：
+
+1. 代码逻辑重复: 重复写相同的指令“输入一个数→计算平方→输出”。
+2. 维护困难，如果要修改求平方的逻辑或修改输出格式，需要修改多处。
+3. 可读性差：代码意图被重复的细节淹没。
+
+代码的方法改造
+
+第一步：方法体
+
+使用花括号把重复的代码包裹起来，形成一个代码块，称之为“方法体”。我们希望方法体可以重复调用。
+
+```csharp
+{
+    int a = 5;
+    int result = a * a;
+    Console.WriteLine(result);
+}
+```
+
+第二步：方法名
+
+为了调用方法体，需要为“方法体”起个名字，我们起名叫Square。这个名字就叫“方法名"。
+
+```csharp
+Square{
+    int a = 5;
+    int result = a * a;
+    Console.WriteLine(result);
+}
+```
+
+第三步：参数
+
+删掉变量a的初始化值5。我们不需要初始化，我们需要每次向方法体内传入不同的值。可以这样做：在方法名Square后面再添加一组小括号,然后把`int a`移动到小括号内，记得去掉分号。小括号里定义的变量叫参数，用于接收外部传入的值。
+
+```csharp
+Square(int a){
+    int result = a * a;
+    Console.WriteLine(result);
+}
+```
+
+第四步：返回值
+
+所有的方法必须设置返回值，在这里，返回值就是result。所以我们在代码底部，添加一行代码：`return result;`;同时必须在方法名的前面指定返回值的类型是int。 最后可以把`Console.WriteLine(result)`删掉。
+
+```csharp
+Square(int a){
+    int result = a * a;
+    return result;
+}
+```
+
+第五步：static
+
+```csharp
+static void Main(){
+    Console.WriteLine(Square(6));
+}
+```
+
+这是代码会报错：因为Main是一个静态方法，在静态方法内只能调用静态方法，所以修改代码：
+
+```csharp
+Static int Square(int a){
+    int result = a * a;
+    //Console.WriteLine(result);
+    return result;
+}
+```
+
+第六步：调用方法
+在方法名`Square()`后面紧跟着写一组小括号，小括号在这里表示”执行“。当调用“方法名和小括号”时就可以执行方法体内的代码：
+
+```csharp
+Square()
+```

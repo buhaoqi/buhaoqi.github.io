@@ -5,7 +5,148 @@ sidebar_label: 子任务二 修饰符  # 显式指定侧边栏显示名（优先
 sidebar_position:  2  # 侧边栏中排在第1位
 ---
 
-## 一、基本概念
+## 一、修饰符是什么
+
+> 修饰符（Modifiers） 是修饰类型（如类、结构、接口）或类型成员（如字段、属性、方法）声明的关键字，用来控制其访问范围、行为特性和运行方式。
+
+> C# 修饰符是用来控制类和成员的访问权限、继承行为和运行特性的关键字。
+
+访问修饰符是控制顶级类型（如class、struct、interface、enum）和类成员（如类、字段、属性、方法、构造函数等）的可访问性的关键字。
+
+修饰符定义了类型和类型成员的 **“身份标识与行为准则”**。
+
+修饰符的本质理解,请记住一句话：
+
+> 修饰符 = 控制 + 限制 + 扩展
+
+它们不会改变“功能逻辑”，
+但会改变“访问规则”和“运行方式”。
+
+**修饰符定义了代码元素的：**
+
+1. **可见性 (Visibility)**：谁有权看、谁有权调（访问权限）。
+2. **存在方式 (Manifestation)**：是属于“每个实例”还是属于“类集体”（静态与否）。
+3. **演变规则 (Evolution)**：是否允许被继承、被重写或被修改（扩展与多态）。
+
+
+## 二、修饰符分类
+
+修饰符按照“功能意图”分为四个维度：
+
+* **可见性**  封装性（Encapsulation）
+* **继承性**  类层级设计
+* **扩展性**  多态性（Polymorphism）
+* **稳定性**  稳定性（Polymorphism）
+
+### 1. 控制类的可见性 (Visibility)
+
+这一类决定了代码的“边界”，即**谁能访问这个类或成员**。
+
+
+|修饰符|	顶级类型（如顶级 class/struct）|	类成员（字段 / 方法 / 嵌套类等）	|备注|
+|---|---|---|---|
+|public|	✅ 支持|	✅ 支持	|完全开放，跨程序集可见。 |
+|internal|	✅ 支持（默认）|	✅ 支持	|对内开放，仅限当前项目（程序集）可见。|
+|private|	❌ 不支持|	✅ 支持（默认）	|完全封闭，仅限类内部可见。|
+|protected|	❌ 不支持|	✅ 支持	|家族开放，仅限自己和子类可见。|
+|protected internal| 	❌ 不支持| 	✅ 支持	|同程序集或子类 |
+|private protected	| ❌ 不支持	| ✅ 支持	|同程序集中的子类|
+
+
+示例：
+
+```csharp
+public class Student
+{
+    private int age;
+}
+```
+
+
+### 2. 控制类的继承性 (Inheritance)
+
+这一类决定了类与类之间的“父子关系”和**层级结构**。
+
+| 修饰符    | 翻译|含义   |说明       |
+| ------ | ----------- |----- |---- |
+| abstract | 抽象|**强制继承**，必须被子类实现 |它像一张蓝图，不能直接 new 出实例，必须由子类去实现。|
+| static | 静态|**脱离继承**|静态类不能被继承，也不能实例化，它是一个独立的工具集合。 |
+| sealed   |密封 |**禁止继承**   |它是最终版本，不准任何人再做它的子类（为了安全或性能优化）。|
+
+
+示例：
+
+```csharp
+public static int Count;
+```
+
+### 3. 控制类的扩展性 (Extensibility)
+
+这一类主要针对**类成员（方法/属性）**，决定了子类是否可以“魔改”父类的行为。扩展性也叫多态性(Polymorphism)
+
+
+
+
+| 修饰符    | 翻译|含义   |说明       |
+| -------- | ---------- |--- | ---------- |
+| `virtual`  |虚成员    | 允许子类重写 |父类给出一个默认做法，子类可以改，也可以不改。|
+| `override` | 重写     |重写父类方法|子类明确表示：“我要用我自己的逻辑替换父类的逻辑”。|
+|`abstract`|在成员上|**强制扩展**|父类只定义名字，不写代码，子类必须接手写完。|
+|`new` |隐藏|**切断联系**|子类定义一个同名成员，但与父类那个成员没关系，互不干扰。|
+
+示例1：
+
+```csharp
+public virtual void Study() { }
+
+public override void Study() { }
+```
+
+示例2:
+
+```csharp
+public abstract class Animal
+{
+    public abstract void Speak();
+}
+
+public class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("汪汪");
+    }
+}
+```
+
+这里用到了：
+
+* public
+* abstract
+* override
+
+### 4.控制状态的稳定性 (Stability)
+
+控制状态的稳定性，即**数据是否允许被修改**：
+
+| 修饰符    | 翻译|含义   |说明       |
+| -------- | ------------- |----- | ------------- |
+| readonly |只读|运行时只读| 只能在声明或构造函数中赋值 ，构造函数之后不可变|
+| const    |常量 |编译期常量|   写死在代码里      |
+
+
+### 5.其他修饰符
+
+| 修饰符     | 作用     |
+| ------- | ------ |
+| async   | 异步方法   |
+| extern  | 外部实现   |
+| unsafe  | 不安全代码  |
+| partial | 分部类    |
+
+
+
+## 三、补充知识
 
 ### 1.程序集是什么
 每个项目（Project）编译后生成的可执行文件或库文件（后缀.exe、.dll），通俗理解：相当于每个 “子工程” 编译后产出的一个 “成品文件”。
@@ -16,129 +157,3 @@ sidebar_position:  2  # 侧边栏中排在第1位
 ↓
 程序集(编译生成)
 ```
-## 二、访问修饰符
-
-### 1.访问修饰符是什么
-
-访问修饰符是控制顶级类型（如class、struct、interface、enum）和类成员（如类、字段、属性、方法、构造函数等）的可访问性的关键字。
-
-### 2.访问修饰符的分类
-|修饰符|	顶级类型（如顶级 class/struct）|	类成员（字段 / 方法 / 嵌套类等）	|备注|
-|---|---|---|---|
-|public|	✅ 支持|	✅ 支持	|无限制，让顶级类型对所有程序集可见|
-|private|	❌ 不支持|	✅ 支持	|表示类是内部的，只有当前项目内可访问;类成员默认就是private|
-|protected|	❌ 不支持|	✅ 支持	|protected是 “子类可见”，顶级类型无父类，因此不适用|
-|internal|	✅ 支持（默认）|	✅ 支持	|让顶级类型仅对当前程序集可见|
-|protectedinternal| 	❌ 不支持| 	✅ 支持	|组合修饰符仅适用于类成员|
-|private protected	| ❌ 不支持	| ✅ 支持	|组合修饰符仅适用于类成员（C# 7.2+）|
-
-
-### 3.访问修饰符的语法
-
-```csharp
-[访问修饰符] class 类名
-{
-    // 声明字段
-    [访问修饰符]  数据类型 字段名;
-}
-```
-### 示例1:顶级和成员类修饰符
-
-```csharp
-public class Person
-{
-  // 字段
-  private string name;
-  private int age;
-
-  // 属性
-  public string Name { get; set; }
-  public int Age { get; set; }
-
-  // 构造函数
-  public Person()
-  {
-      Name = "未知";
-      Age = 0;
-      Console.WriteLine("一个人诞生了");
-  }
-
-  //方法，打印信息
-   public void DisplayInfo()
-  {
-      Console.WriteLine($"姓名: {Name}");
-      Console.WriteLine($"年龄: {Age}");
-  }
-}
-```
-### 示例2：顶级类和嵌套类修饰符
-
-```csharp
-class Bird
-{
-    public string birdName;
-    public int birdAge;
-}
-
-class Program
-{
-    //private是嵌套类修饰符，不能用于顶级
-    private class Person
-    {
-        public string personName;
-        public int personAge;
-    }
-    
-    static void Main(string[] args)
-    {
-        Person p1 = new Person();
-        p1.personName = "张三";
-        p1.personAge = 10;
-        
-        Bird bird1 = new Bird();
-    }
-}
-```
-
-### **示例3: public修饰符的用法**
-
-
-#### Lesson1（需引入Lesson2）
-
-```csharp
-using Lesson2;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Bird bird2 = new Bird();
-    }
-}
-```
-
-#### Lesson2
-
-```csharp
-public class Bird
-{
-    public string _birdName;
-    public int _birdAge;
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        Bird bird1 = new Bird();
-    }
-}
-```
-
-## 二、特性修饰符
-
-## 三、行为修饰符
-
-## 四、字段约束
-
-## 五、特殊场景

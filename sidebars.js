@@ -322,7 +322,7 @@ const sidebars = {
             'csharp/ch07/task2/overview', // 概述
             'csharp/ch07/task2/what-method-is', // 任务一 
             'csharp/ch07/task2/parameters', // 任务二 
-            'csharp/ch07/task2/static', // 任务三 
+            'csharp/ch07/task2/reload', // 任务三 
             'csharp/ch07/task2/exercise1', // 任务四
             'csharp/ch07/task2/exercise2', // 任务五
           ],

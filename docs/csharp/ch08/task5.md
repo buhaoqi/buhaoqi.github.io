@@ -1,344 +1,286 @@
 ---
 # 这部分是关键！侧边栏显示名由这里决定
-title: 五、委托  # 文档标题，若无 sidebar_label 则作为侧边栏名
-sidebar_label: 五、委托  # 显式指定侧边栏显示名（优先级最高）
+title: 任务五 委托  # 文档标题，若无 sidebar_label 则作为侧边栏名
+sidebar_label: 任务五 委托  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position:  1  # 侧边栏中排在第1位
 ---
-对于C#初学者，理解委托可以从以下几个简单直观的角度入手：
 
-一、用生活中的例子理解委托
+## 委托是什么
 
-1. "遥控器"比喻
-```csharp
-// 委托就像遥控器上的按钮
-public delegate void 遥控器按钮();  // 定义一个委托类型
-​
-public class 电视机
-{
-    public void 开机()
-    {
-        Console.WriteLine("电视机开机了！");
-    }
-}
-​
-public class 空调
-{
-    public void 开机()
-    {
-        Console.WriteLine("空调开始制冷！");
-    }
-}
-​
-// 使用
-电视机 我的电视 = new 电视机();
-空调 我的空调 = new 空调();
-​
-遥控器按钮 电源按钮 = 我的电视.开机;  // 设置按钮功能
-电源按钮();  // 按下按钮 → 电视开机
-​
-电源按钮 = 我的空调.开机;  // 重新设置按钮功能
-电源按钮();  // 按下按钮 → 空调开机
-```
-2. "餐厅点菜"比喻
-```csharp
-// 委托就像服务员，把顾客的订单交给厨师
-public delegate void 厨师委托(string 菜名);  // 定义委托
-​
-public class 厨师
-{
-    public void 做川菜(string 菜名)
-    {
-        Console.WriteLine($"川菜厨师做：{菜名}");
-    }
-    
-    public void 做粤菜(string 菜名)
-    {
-        Console.WriteLine($"粤菜厨师做：{菜名}");
-    }
-}
-​
-// 服务员（委托）连接顾客和厨师
-厨师 张师傅 = new 厨师();
-厨师委托 服务员 = 张师傅.做川菜;
-​
-服务员("麻婆豆腐");  // 输出：川菜厨师做：麻婆豆腐
-服务员 = 张师傅.做粤菜;
-服务员("白切鸡");    // 输出：粤菜厨师做：白切鸡
-```
-二、委托的核心思想
+"委托是一种类型，它可以引用方法，让方法像变量一样被传递和调用"。
 
-简单理解：
+简单说：委托是“方法的容器”，能装下符合它签名的方法，然后通过委托调用这些方法。
 
-"委托是一种类型，它可以引用方法，让方法像变量一样被传递和调用"
+委托（Delegate）本质是**类型安全的方法指针**，可以把方法当作参数传递、存储或调用。
 
-三、从方法调用到委托的演进
+## 委托的基本语法
 
-阶段1：直接方法调用（硬编码）
-```csharp
-public class 计算器
-{
-    public int 加(int a, int b)
-    {
-        return a + b;
-    }
-    
-    public int 乘(int a, int b)
-    {
-        return a * b;
-    }
-}
-​
-// 使用：必须明确知道调用哪个方法
-计算器 计算 = new 计算器();
-int 结果1 = 计算.加(5, 3);  // 直接调用加法
-int 结果2 = 计算.乘(5, 3);  // 直接调用乘法
-```
-阶段2：使用委托（灵活调用）
-```csharp
-// 1. 定义委托类型
-public delegate int 计算委托(int a, int b);
-​
-public class 计算器
-{
-    public int 加(int a, int b) { return a + b; }
-    public int 乘(int a, int b) { return a * b; }
-    public int 减(int a, int b) { return a - b; }
-}
-​```
-```csharp
-// 使用：通过委托动态选择方法
-计算器 计算 = new 计算器();
-计算委托 当前计算 = 计算.加;  // 委托指向加法方法
-​
-int 结果 = 当前计算(5, 3);    // 8
-当前计算 = 计算.乘;           // 改为指向乘法方法
-结果 = 当前计算(5, 3);        // 15
-```
-四、委托的基本语法
-
-1. 委托声明
+### 1. 委托声明
 ```csharp
 // 声明委托类型（定义方法签名）
 public delegate void 简单委托();                    // 无参数，无返回值
 public delegate int 计算委托(int x, int y);         // 有参数，有返回值
 public delegate string 格式化委托(string 输入);     // 有参数，有返回值
 ```
-2. 委托实例化和使用
-```csharp
-public class 工具类
-{
-    public void 问好()
-    {
-        Console.WriteLine("你好！");
-    }
-    
-    public int 平方(int x)
-    {
-        return x * x;
-    }
-}
-​
-// 使用委托
-工具类 工具 = new 工具类();
-​
-// 实例化委托
-简单委托 我的委托 = 工具.问好;
-计算委托 计算委托 = 工具.平方;
-​
-// 调用委托
-我的委托();                    // 输出：你好！
-int 结果 = 计算委托(5);       // 返回：25
-```
-五、委托的高级特性
 
-1. 多播委托（一个委托多个方法）
-```csharp
-public delegate void 通知委托(string 消息);
-​
-public class 通知系统
-{
-    public void 发送邮件(string 消息)
-    {
-        Console.WriteLine($"邮件通知：{消息}");
-    }
-    
-    public void 发送短信(string 消息)
-    {
-        Console.WriteLine($"短信通知：{消息}");
-    }
-    
-    public void 记录日志(string 消息)
-    {
-        Console.WriteLine($"日志记录：{消息}");
-    }
-}
-​
-// 使用多播委托
-通知系统 系统 = new 通知系统();
-通知委托 通知器 = 系统.发送邮件;
-​
-// 添加多个方法到委托
-通知器 += 系统.发送短信;  // 使用 += 添加方法
-通知器 += 系统.记录日志;
-​
-// 调用时，所有方法都会执行
-通知器("系统维护通知");
-​
-// 输出：
-// 邮件通知：系统维护通知
-// 短信通知：系统维护通知  
-// 日志记录：系统维护通知
-​
-// 移除方法
-通知器 -= 系统.发送短信;  // 使用 -= 移除方法
-```
-2. 匿名方法
-```csharp
-计算委托 平方计算 = delegate(int x) 
-{
-    return x * x;
-};
-​
-// 调用
-int 结果 = 平方计算(5);  // 25
+### 2.使用委托
 
-3. Lambda表达式（更简洁）
+## 用法示例
 
-// 使用Lambda表达式创建委托
-计算委托 加法 = (a, b) => a + b;
-计算委托 乘法 = (a, b) => a * b;
-​
-// 调用
-int 和 = 加法(3, 4);    // 7
-int 积 = 乘法(3, 4);    // 12
-```
-六、实际应用场景
+### 示例1：委托的定义、绑定、调用
+核心目标：掌握委托的「定义格式」「绑定方法」「调用委托」三个基础步骤。
 
-场景1：按钮点击事件
 ```csharp
-// 定义按钮类
-public class 按钮
-{
-    // 定义点击事件（本质上是委托）
-    public event Action 点击事件;
-    
-    public void 被点击()
-    {
-        Console.WriteLine("按钮被点击了！");
-        // 触发所有注册的方法
-        点击事件?.Invoke();
-    }
-}
-​
-public class 游戏界面
-{
-    public void 开始游戏()
-    {
-        Console.WriteLine("游戏开始！");
-    }
-    
-    public void 播放音效()
-    {
-        Console.WriteLine("播放点击音效");
-    }
-}
-​
-// 使用
-按钮 开始按钮 = new 按钮();
-游戏界面 界面 = new 游戏界面();
-​
-// 注册多个事件处理方法
-开始按钮.点击事件 += 界面.开始游戏;
-开始按钮.点击事件 += 界面.播放音效;
-​
-// 点击按钮，触发所有注册的方法
-开始按钮.被点击();
-```
-场景2：排序算法的灵活应用
-```csharp
-// 定义比较委托
-public delegate bool 比较委托(int a, int b);
-​
-public class 排序工具
-{
-    public void 排序(int[] 数组, 比较委托 比较方法)
-    {
-        // 使用委托来决定排序规则
-        for (int i = 0; i < 数组.Length - 1; i++)
-        {
-            for (int j = i + 1; j < 数组.Length; j++)
-            {
-                if (比较方法(数组[i], 数组[j]))
-                {
-                    // 交换元素
-                    int 临时 = 数组[i];
-                    数组[i] = 数组[j];
-                    数组[j] = 临时;
-                }
-            }
-        }
-    }
-}
-​
-// 使用不同的比较方法
-排序工具 工具 = new 排序工具();
-int[] 数字 = { 3, 1, 4, 1, 5, 9, 2 };
-​
-// 升序排序
-工具.排序(数字, (a, b) => a > b);
-Console.WriteLine("升序: " + string.Join(", ", 数字));
-​
-// 降序排序  
-工具.排序(数字, (a, b) => a < b);
-Console.WriteLine("降序: " + string.Join(", ", 数字));
-```
-七、委托与事件的关系
+using System;
 
-事件是基于委托的
-```csharp
-public class 温度监测器
+// 1. 定义委托（相当于制定“方法模板”：返回值void，无参数）
+// 委托命名规范：动词+Delegate，或直接用Delegate结尾
+public delegate void GreetingDelegate();
+
+class DelegateDemo1
 {
-    // 1. 定义委托
-    public delegate void 温度报警委托(double 温度);
-    
-    // 2. 基于委托定义事件
-    public event 温度报警委托 温度过高;
-    
-    private double _当前温度;
-    
-    public double 当前温度
+    // 2. 定义符合委托签名的方法（返回值、参数和委托完全一致）
+    public static void SayHello()
     {
-        get { return _当前温度; }
-        set
-        {
-            _当前温度 = value;
-            if (_当前温度 > 30)
-            {
-                // 3. 触发事件
-                温度过高?.Invoke(_当前温度);
-            }
-        }
+        Console.WriteLine("你好！这是基础委托调用~");
+    }
+
+    public static void SayHi()
+    {
+        Console.WriteLine("Hi！这是另一个符合委托的方法~");
+    }
+
+    static void Main()
+    {
+        // 3. 创建委托对象，绑定方法（把方法“装进”委托里）
+        GreetingDelegate greet1 = new GreetingDelegate(SayHello);
+        
+        // 简化写法（C#语法糖，推荐）：直接赋值方法名
+        GreetingDelegate greet2 = SayHi;
+
+        // 4. 调用委托（本质是调用绑定的方法）
+        greet1(); // 输出：你好！这是基础委托调用~
+        greet2(); // 输出：Hi！这是另一个符合委托的方法~
     }
 }
+```
+关键说明：
+- 委托定义格式：`delegate 返回值类型 委托名(参数列表);`，必须和绑定的方法签名（返回值+参数）完全匹配；
+- 委托对象可以绑定**静态方法**（如上），也可以绑定实例方法（后续示例展示）；
+- 调用委托的方式和调用方法完全一样（`委托对象()`）。
 
-public class 报警系统
+
+### 示例2：带参数的委托
+
+核心目标：掌握「带参数的委托」定义和使用，理解委托如何给方法传参。
+
+```csharp
+using System;
+
+// 1. 定义带参数的委托（模板：返回值void，参数为string）
+public delegate void GreetPersonDelegate(string name);
+
+class DelegateDemo2
 {
-    public void 发出警报(double 温度)
+    // 2. 符合委托签名的方法（参数是string，返回值void）
+    public static void GreetChinese(string name)
     {
-        Console.WriteLine($"警报！温度过高：{温度}度");
+        Console.WriteLine($"你好，{name}！（中文问候）");
+    }
+
+    public static void GreetEnglish(string name)
+    {
+        Console.WriteLine($"Hello, {name}!（英文问候）");
+    }
+
+    static void Main()
+    {
+        // 3. 绑定方法到委托
+        GreetPersonDelegate greetCN = GreetChinese;
+        GreetPersonDelegate greetEN = GreetEnglish;
+
+        // 4. 调用委托时传递参数（参数会传给绑定的方法）
+        greetCN("小明"); // 输出：你好，小明！（中文问候）
+        greetEN("Tom");  // 输出：Hello, Tom!（英文问候）
     }
 }
-
-// 使用
-温度监测器 监测器 = new 温度监测器();
-报警系统 报警器 = new 报警系统();
-
-// 注册事件处理
-监测器.温度过高 += 报警器.发出警报;
-
-// 当温度变化时会自动触发事件
-监测器.当前温度 = 35;  // 输出：警报！温度过高：35度
 ```
+关键说明：
+
+- 委托的参数列表决定了调用委托时需要传递的参数；
+- 无论委托绑定哪个方法，传参格式都和委托定义一致，无需关心方法内部如何使用参数。
+
+
+### 示例3：有返回值的委托
+
+核心目标：掌握「有返回值的委托」，理解委托如何获取方法的返回值。
+
+```csharp
+using System;
+
+// 1. 定义有返回值的委托（模板：返回值int，参数两个int）
+public delegate int CalculateDelegate(int num1, int num2);
+
+class DelegateDemo3
+{
+    // 2. 符合委托签名的方法（返回int，两个int参数）
+    public static int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public static int Multiply(int a, int b)
+    {
+        return a * b;
+    }
+
+    static void Main()
+    {
+        // 3. 绑定方法到委托
+        CalculateDelegate addFunc = Add;
+        CalculateDelegate mulFunc = Multiply;
+
+        // 4. 调用委托，接收返回值
+        int sum = addFunc(5, 3);    // 调用Add方法，返回8
+        int product = mulFunc(5, 3); // 调用Multiply方法，返回15
+
+        Console.WriteLine($"5+3={sum}");      // 输出：5+3=8
+        Console.WriteLine($"5×3={product}"); // 输出：5×3=15
+    }
+}
+```
+关键说明：
+
+- 委托的返回值类型决定了调用委托后能接收的返回值类型；
+- 委托相当于“代理”，调用委托的返回值就是绑定方法的返回值。
+
+### 示例4：多播委托
+核心目标：掌握「多播委托」（委托的核心特性），一个委托对象可以绑定多个方法，调用时按顺序执行所有方法。
+
+```csharp
+using System;
+
+// 1. 定义委托（无返回值，单string参数）
+public delegate void NotifyDelegate(string message);
+
+class DelegateDemo4
+{
+    // 2. 多个符合签名的方法
+    public static void SendSms(string msg)
+    {
+        Console.WriteLine($"【短信通知】{msg}");
+    }
+
+    public static void SendEmail(string msg)
+    {
+        Console.WriteLine($"【邮件通知】{msg}");
+    }
+
+    public static void SendWeChat(string msg)
+    {
+        Console.WriteLine($"【微信通知】{msg}");
+    }
+
+    static void Main()
+    {
+        // 3. 多播委托：用 += 绑定多个方法
+        NotifyDelegate notify = SendSms; // 先绑定第一个方法
+        notify += SendEmail;             // 追加第二个方法
+        notify += SendWeChat;            // 追加第三个方法
+
+        // 4. 调用多播委托：会按绑定顺序执行所有方法
+        Console.WriteLine("=== 执行多播委托 ===");
+        notify("您的订单已发货！");
+
+        // 5. 用 -= 移除某个方法
+        notify -= SendEmail;
+        Console.WriteLine("\n=== 移除邮件通知后执行 ===");
+        notify("您的快递已签收！");
+    }
+}
+```
+输出结果：
+
+```
+=== 执行多播委托 ===
+【短信通知】您的订单已发货！
+【邮件通知】您的订单已发货！
+【微信通知】您的订单已发货！
+
+=== 移除邮件通知后执行 ===
+【短信通知】您的快递已签收！
+【微信通知】您的快递已签收！
+```
+
+关键说明：
+- 多播委托仅适用于**无返回值的委托**（有返回值的多播委托只会返回最后一个方法的结果）；
+- `+=` 用于追加方法，`-=` 用于移除方法；
+- 多播委托执行时，若其中一个方法抛出异常，后续方法不会执行。
+
+
+### 示例5：委托作为方法参数
+核心目标：掌握「委托作为方法参数」（实际开发中最常用），实现“方法的参数是另一个方法”，让代码更灵活。
+
+```csharp
+using System;
+
+// 1. 定义委托（模板：返回int，单int参数）
+public delegate int ProcessNumberDelegate(int num);
+
+class DelegateDemo5
+{
+    // 2. 业务方法：接收委托作为参数，用委托处理数字
+    public static void ProcessData(int number, ProcessNumberDelegate processFunc)
+    {
+        Console.WriteLine($"原始数字：{number}");
+        // 调用传入的委托（即调用外部传递的方法）
+        int result = processFunc(number);
+        Console.WriteLine($"处理后结果：{result}\n");
+    }
+
+    // 3. 不同的处理方法（符合委托签名）
+    public static int Square(int num) // 平方
+    {
+        return num * num;
+    }
+
+    public static int Double(int num) // 翻倍
+    {
+        return num * 2;
+    }
+
+    public static int AddTen(int num) // 加10
+    {
+        return num + 10;
+    }
+
+    static void Main()
+    {
+        // 4. 调用业务方法，传递不同的方法作为参数
+        ProcessData(5, Square);  // 传递Square方法
+        ProcessData(5, Double);  // 传递Double方法
+        ProcessData(5, AddTen);  // 传递AddTen方法
+    }
+}
+```
+输出结果：
+
+```
+原始数字：5
+处理后结果：25
+
+原始数字：5
+处理后结果：10
+
+原始数字：5
+处理后结果：15
+```
+
+关键说明：
+- 委托作为参数，让方法的“行为”可配置（如ProcessData方法无需修改，只需传递不同的处理方法，就能实现不同逻辑）；
+- 这是LINQ、事件、异步编程等高级特性的底层基础。
+
+
 八、初学者实践建议
 
 第一步：理解委托的概念
@@ -393,16 +335,9 @@ void 文件日志(string 消息) { Console.WriteLine("文件: " + 消息); }
 
 委托就像"多功能遥控器"：
 
-
-
-
-
 你可以设置遥控器的按钮1 = 电视开机
 
-
-
 也可以设置按钮1 = 空调开机
-
 
 
 还可以设置一个按钮同时控制电视+空调+灯光
