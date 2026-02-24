@@ -16,7 +16,7 @@ class Student
 }
 ```
 
-示例
+**有属性的学生类**
 
 ```csharp
 // ❌ 不好的做法：使用公共字段
@@ -48,6 +48,12 @@ public class EncapsulationExample
 - 属性是对字段的封装
 - 属性是对字段的逻辑控制
 
+> 属性是连接“字段”和“外部访问”的**中间通道**。
+
+它让外部代码能安全地访问字段，同时允许你在“取值或赋值”时添加控制逻辑。
+
+> “它看起来像方法，但又不是方法；像字段，但又不是字段。”
+
 属性是一种特殊的方法。字段式方法。
 
 - 属性用于封装字段的读取和写入操作。
@@ -57,13 +63,19 @@ public class EncapsulationExample
 
 ## **三、定义属性的语法**
 
-**完整语法**
+**基础语法**
 
 ```csharp
 [修饰符] 数据类型 属性名
 {
-    get { return 字段名; }// 取值逻辑，必须 return 一个值
-    set { 字段名 = value;  }// 赋值逻辑，使用关键字 value 表示传入的数据
+    get 
+    { 
+        return 字段名; // 取值逻辑，必须 return 一个值
+    }
+    set 
+    { 
+        字段名 = value;  // 赋值逻辑，使用关键字 value 表示传入的数据
+    }
 }
 ```
 
@@ -73,7 +85,7 @@ public class EncapsulationExample
 - **属性不是普通方法**：虽然写法像方法，但调用方式像字段。
 - **属性是特殊的成员**：它其实就是一对方法（get/set）的语法糖，让我们用字段的方式来读写数据。
 
-示例
+示例：封装字段的基础写法
 
 ```csharp
 class Student
@@ -87,7 +99,6 @@ class Student
     }
 }
 
-
 Student s = new Student();
 s.Name = "小明";  // 调用 set
 Console.WriteLine(s.Name); // 调用 get
@@ -98,75 +109,374 @@ Console.WriteLine(s.Name); // 调用 get
 - `get`和`set` 是一对访问器（Accessors），用于控制对字段的读取和写入。
 - `value` 是一个上下文关键字，表示外部传进来的值。
 
+示例 2：封装字段的经典写法
+
+```csharp
+public class Student
+{
+    private string name;   // 字段：用来存数据
+
+    public string Name     // 属性：用来访问字段
+    {
+        get { return name; }
+        set { name = value; }
+    }
+}
+```
+
+👉 说明：
+
+| **部分**               | **含义**                                           |
+| ---------------------- | -------------------------------------------------- |
+| `private string name;` | 字段，只能在类内部访问                             |
+| `public string Name`   | 属性，允许外部访问                                 |
+| `get`                  | 当读取属性时执行，例如 `Console.WriteLine(s.Name)` |
+| `set`                  | 当给属性赋值时执行，例如 `s.Name = "张三";`        |
+| `value`                | 代表传进来的赋值内容（系统关键字）                 |
+
+**✅ 调用演示：**
+
+```
+Student s = new Student();
+s.Name = "张三";               // 调用 set
+Console.WriteLine(s.Name);    // 调用 get
+```
+## 四、属性命名规则
+
+1. 属性名首字母通常**大写**（Pascal命名法）；
+
+2. 字段名一般小写；
+
+3. 属性名通常与字段名相似，例如：
+
+   ```
+   private int age;
+   public int Age
+   {
+       get { return age; }
+       set { age = value; }
+   }
+   ```
+4. 属性命名约定
+
+```csharp
+public class NamingConventions
+{
+    // ✅ 推荐：PascalCase属性名
+    public string FirstName { get; set; }
+    public int ItemCount { get; set; }
+    public decimal TotalPrice { get; set; }
+    
+    // ✅ 推荐：布尔属性使用肯定性名称
+    public bool IsActive { get; set; }
+    public bool HasItems { get; set; }
+    public bool CanEdit { get; set; }
+    
+    // ❌ 避免：含糊的布尔属性名
+    // public bool Status { get; set; } // 不好
+    // public bool Edit { get; set; }   // 不好
+    
+    // ✅ 推荐：集合属性使用复数名称
+    public List<string> Items { get; set; }
+    public Collection<int> Numbers { get; set; }
+}
+```
 
 ## 四、属性的分类
-### 示例1: 完整属性
+
+1. **完整属性** - 完全控制get/set逻辑
+2. **自动属性** - 简洁语法，编译器生成后台字段
+3. **表达式体属性** - 单行只读属性
+4. **计算属性** - 基于其他属性计算值
+5. **索引器属性** - 像数组一样访问对象
+6. **静态属性** - 类级别属性
+7. **抽象/接口属性** - 多态支持
+8. **只读属性** - 不可变数据
+9. **init属性** - 对象初始化时设置
+
+### **按访问器分类**
+
+#### **1. 只读属性 (Read-only Properties)**
 
 ```csharp
-public string Name
+public class Person
 {
-    // 字段
-    public string _name; 
-    //定义完整属性
-    get { return _name; }
-    set { _name = value; }
+    // 方式1：只有get访问器
+    public string Id { get; }
+    
+    // 方式2：init访问器（C# 9.0+）
+    public string Name { get; init; }
+    
+    // 方式3：私有set
+    public DateTime CreateTime { get; private set; }
+    
+    public Person(string id, string name)
+    {
+        Id = id;
+        Name = name;
+        CreateTime = DateTime.Now;
+    }
 }
 ```
 
-### 示例2：自动属性
+#### **2. 只写属性 (Write-only Properties)**
 
 ```csharp
-public string Name
-{ 
-    //没有字段，只有自动属性
+public class Security
+{
+    private string _password;
+    
+    // 只有set访问器
+    public string Password
+    {
+        set { _password = value; }
+    }
+    
+    // 另一种方式：私有get
+    public string SecretKey { private get; set; }
+}
+```
+
+#### **3. 读写属性 (Read-Write Properties)**
+
+```csharp
+public class Product
+{
+    // 完整的读写属性
     public string Name { get; set; }
+    public decimal Price { get; set; }
 }
 ```
 
-### 示例3： 只读属性
+### **按实现方式分类**
+
+#### **4. 自动属性 (Auto-Implemented Properties)**
 
 ```csharp
-public string Name
-{ 
-    //字段
-    private readonly string _name;
-    // 只读属性 - 只有 get 访问器
-    public string Name
+public class Student
+{
+    // 自动属性 - 编译器生成后台字段
+    public string Name { get; set; }
+    public int Age { get; set; } = 18;  // 带默认值
+    public string Email { get; init; }  // 只读自动属性
+}
+```
+
+#### **5. 完整属性 (Full Properties)**
+
+```csharp
+public class BankAccount
+{
+    private decimal _balance;
+    
+    // 完整属性 - 手动管理后台字段
+    public decimal Balance
     {
-        get { return _name; }
+        get { return _balance; }
+        set 
+        { 
+            if (value < 0) 
+                throw new ArgumentException("余额不能为负");
+            _balance = value; 
+        }
     }
 }
 ```
 
-### 示例4: 只写属性
+#### **6. 计算属性 (Computed Properties)**
 
 ```csharp
-public string Name
-{ 
-    //字段
-    private string _name;
-    // 只写属性 - 只有 set 访问器
-    public string Name
+public class Rectangle
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+    
+    // 计算属性 - 没有后台字段
+    public double Area => Width * Height;
+    public double Perimeter => 2 * (Width + Height);
+}
+```
+
+### **按作用域和特性分类**
+
+#### **7. 静态属性 (Static Properties)**
+
+```csharp
+public class AppConfig
+{
+    // 静态属性 - 属于类而不是实例
+    public static string AppName { get; set; } = "MyApp";
+    public static int InstanceCount { get; private set; }
+    
+    public AppConfig()
     {
-        set { _name = value; }
+        InstanceCount++;
     }
 }
 ```
 
-### 示例5：计算属性
+#### **8. 抽象属性 (Abstract Properties)**
 
 ```csharp
-//没有字段 自动属性
-public double Width { get; set; }
-public double Height { get; set; }
+public abstract class Shape
+{
+    // 抽象属性 - 派生类必须实现
+    public abstract string Name { get; }
+    public abstract double Area { get; }
+}
 
-// 只读计算属性
-public double Area 
-{ 
-    get { return Width * Height; } 
+public class Circle : Shape
+{
+    public override string Name => "Circle";
+    public override double Area => Math.PI * Radius * Radius;
+    public double Radius { get; set; }
 }
 ```
 
+#### **9. 虚属性 (Virtual Properties)**
+
+```csharp
+public class Animal
+{
+    // 虚属性 - 派生类可以重写
+    public virtual string Sound => "Some sound";
+    public virtual int Legs => 4;
+}
+
+public class Dog : Animal
+{
+    public override string Sound => "Woof";
+}
+
+public class Snake : Animal
+{
+    public override int Legs => 0;
+}
+```
+
+#### **10. 重写属性 (Override Properties)**
+
+```csharp
+public class BaseClass
+{
+    public virtual string Message => "Base";
+}
+
+public class DerivedClass : BaseClass
+{
+    // 重写属性
+    public override string Message => "Derived";
+}
+```
+
+### **按特殊用途分类**
+
+#### **11. 索引器属性 (Indexer Properties)**
+
+```csharp
+public class StringCollection
+{
+    private string[] _items = new string[10];
+    
+    // 索引器 - 让对象像数组一样使用
+    public string this[int index]
+    {
+        get => _items[index];
+        set => _items[index] = value;
+    }
+    
+    // 重载索引器
+    public int this[string value]
+    {
+        get
+        {
+            for (int i = 0; i < _items.Length; i++)
+                if (_items[i] == value) return i;
+            return -1;
+        }
+    }
+}
+
+// 使用
+var collection = new StringCollection();
+collection[0] = "Hello";        // 设置
+string item = collection[0];     // 获取
+int index = collection["Hello"]; // 查找索引
+```
+
+#### **12. 表达式体属性 (Expression-bodied Properties)**
+
+```csharp
+public class Calculator
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    
+    // 表达式体属性 - 单行实现
+    public double Sum => X + Y;
+    public double Product => X * Y;
+    public bool AreEqual => Math.Abs(X - Y) < 0.0001;
+}
+```
+
+#### **13. 接口属性 (Interface Properties)**
+
+```csharp
+public interface IVehicle
+{
+    // 接口属性声明
+    string Make { get; }
+    string Model { get; }
+    int Year { get; }
+    double Speed { get; set; }
+}
+
+public class Car : IVehicle
+{
+    // 实现接口属性
+    public string Make { get; set; }
+    public string Model { get; set; }
+    public int Year { get; set; }
+    public double Speed { get; set; }
+}
+```
+
+#### **14. 密封属性 (Sealed Properties)**
+
+```csharp
+public class Base
+{
+    public virtual string Property => "Base";
+}
+
+public class Derived : Base
+{
+    // 密封属性 - 防止进一步重写
+    public sealed override string Property => "Derived";
+}
+
+public class FurtherDerived : Derived
+{
+    // 这里不能再重写Property属性
+    // public override string Property => "Further"; // 错误！
+}
+```
+
+### **按访问级别分类**
+
+#### **15. 混合访问级别属性**
+
+```csharp
+public class AccessExample
+{
+    // 公共get，内部set
+    public string PublicGetInternalSet { get; internal set; }
+    
+    // 公共get，保护set
+    public string PublicGetProtectedSet { get; protected set; }
+    
+    // 公共get，私有set
+```
 ## **五、属性的由来**
 
 ### **1.private只能在类的内部访问**
@@ -233,8 +543,29 @@ public class Program
 
 但是，暴露方法后，岂不是一样可以任意从外部修改字段的值吗？当然不是，使用方法不但可以封装数据，还可以在方法中加入验证逻辑。
 
-### **3.可以在方法中加入验证逻辑**
+### **3.带逻辑的属性（常见进阶用法）**
 
+你可以在 `get` / `set` 中添加**业务逻辑**，比如检查、限制或格式化。
+
+示例 1：
+```csharp
+public class Student
+{
+    private int age;
+
+    public int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value < 0)
+                value = 0;  // 防止非法值
+            age = value;
+        }
+    }
+}
+```
+示例 2：
 ```csharp
 using System;
     
@@ -523,6 +854,41 @@ Console.WriteLine($"黄金比例: {MathHelper.GoldenRatio}");
 
 ## **八、练习题**
 
+练习三步曲：
+
+1. 先练“手写完整 get/set 版”
+2. 再练“自动属性”
+3. 最后练“带逻辑的属性”
+
+
+### **🏋️‍♀️ 示例练习：**
+
+```csharp
+class Product
+{
+    private double price;
+
+    public double Price
+    {
+        get { return price; }
+        set
+        {
+            if (value < 0) value = 0;
+            price = value;
+        }
+    }
+}
+```
+
+👉 试试写出对象：
+
+```csharp
+Product p = new Product();
+p.Price = -5;    // 自动改为 0
+Console.WriteLine(p.Price);
+```
+
+
 以下是 10 道专门练习属性定义语法的题目，涵盖自动属性、完整属性、只读属性、计算属性和业务逻辑控制：
 
 ### **练习题 1：基础自动属性**
@@ -536,7 +902,7 @@ Console.WriteLine($"黄金比例: {MathHelper.GoldenRatio}");
 
 **要求**：所有属性都使用自动属性语法，并设置合理的默认值。
 
-```
+```csharp
 // 参考答案
 public class Student
 {
@@ -632,7 +998,7 @@ public class BankAccount
 
 **要求**：所有计算属性使用表达式体语法。
 
-```
+```csharp
 // 参考答案
 public class Rectangle
 {
@@ -1464,833 +1830,3 @@ book2.Price = 价格;
 // 方式3：使用对象初始化器
 Book book3 = new Book { Title = "书名", Price = 价格 };
 ```
-
-
-非常好👏，你现在已经在学习 **C# 属性（Property）** 这个非常核心的概念。 很多初学者第一次看到属性定义语法时，都会觉得——
-
-> “它看起来像方法，但又不是方法；像字段，但又不是字段。”
-
-所以我们要从**语法、功能、用法、规律**四个角度，一步步掌握。
-
-------
-
-## **🧩 一、属性是什么？**
-
-在 C# 中，**属性（Property）** 是一种用于**保护字段**的“智能封装器”。
-
-你可以理解为：
-
-> 属性是连接“字段”和“外部访问”的**中间通道**。
-
-它让外部代码能安全地访问字段，同时允许你在“取值或赋值”时添加控制逻辑。
-
-------
-
-## **🧱 二、属性的语法结构（完整版）**
-
-最标准的定义语法如下：
-
-```
-<访问修饰符> <类型> <属性名>
-{
-    get
-    {
-        // 取值逻辑（读取字段）
-    }
-
-    set
-    {
-        // 赋值逻辑（修改字段）
-    }
-}
-```
-
-------
-
-## **🧩 三、例子：封装字段的经典写法**
-
-```
-public class Student
-{
-    private string name;   // 字段：用来存数据
-
-    public string Name     // 属性：用来访问字段
-    {
-        get { return name; }
-        set { name = value; }
-    }
-}
-```
-
-👉 说明：
-
-| **部分**               | **含义**                                           |
-| ---------------------- | -------------------------------------------------- |
-| `private string name;` | 字段，只能在类内部访问                             |
-| `public string Name`   | 属性，允许外部访问                                 |
-| `get`                  | 当读取属性时执行，例如 `Console.WriteLine(s.Name)` |
-| `set`                  | 当给属性赋值时执行，例如 `s.Name = "张三";`        |
-| `value`                | 代表传进来的赋值内容（系统关键字）                 |
-
-------
-
-### **✅ 调用演示：**
-
-```
-Student s = new Student();
-s.Name = "张三";               // 调用 set
-Console.WriteLine(s.Name);    // 调用 get
-```
-
-------
-
-## **🪄 四、自动属性（Auto-Implemented Property）**
-
-如果没有额外逻辑，只是简单封装字段，可以使用更简洁的“自动属性”语法：
-
-```
-public class Student
-{
-    public string Name { get; set; }
-}
-```
-
-系统会自动生成一个“隐藏的字段”，效果等同于上面的完整写法。
-
-------
-
-### **✅ 自动属性还可以设置访问限制：**
-
-```
-public string Name { get; private set; }  // 只能在类内部改
-```
-
-------
-
-## **🧠 五、属性命名规则**
-
-1. 属性名首字母通常**大写**（Pascal命名法）；
-
-2. 字段名一般小写；
-
-3. 属性名通常与字段名相似，例如：
-
-   ```
-   private int age;
-   public int Age
-   {
-       get { return age; }
-       set { age = value; }
-   }
-   ```
-
-------
-
-## **🧩 六、带逻辑的属性（常见进阶用法）**
-
-你可以在 `get` / `set` 中添加**业务逻辑**，比如检查、限制或格式化。
-
-```
-public class Student
-{
-    private int age;
-
-    public int Age
-    {
-        get { return age; }
-        set
-        {
-            if (value < 0)
-                value = 0;  // 防止非法值
-            age = value;
-        }
-    }
-}
-```
-
-------
-
-## **✅ 七、属性与方法的区别**
-
-| **对比项** | **属性**                     | **方法**                     |
-| ---------- | ---------------------------- | ---------------------------- |
-| 调用方式   | 看起来像字段访问（`s.Name`） | 用括号调用（`s.GetName()`）  |
-| 是否可读写 | 可通过 `get`/`set` 控制      | 取值、赋值逻辑要分写两个方法 |
-| 常用目的   | 封装字段                     | 实现动作、行为逻辑           |
-
-------
-
-## **💡 八、初学者练习建议**
-
-练习三步曲：
-
-1. 先练“手写完整 get/set 版”
-2. 再练“自动属性”
-3. 最后练“带逻辑的属性”
-
-------
-
-### **🏋️‍♀️ 示例练习：**
-
-```
-class Product
-{
-    private double price;
-
-    public double Price
-    {
-        get { return price; }
-        set
-        {
-            if (value < 0) value = 0;
-            price = value;
-        }
-    }
-}
-```
-
-👉 试试写出对象：
-
-```
-Product p = new Product();
-p.Price = -5;    // 自动改为 0
-Console.WriteLine(p.Price);
-```
-
-------
-
-## **✅ 总结口诀：**
-
-> **字段存数据，属性管出入。 get取值用，set赋值补。 自动省代码，逻辑写内部。**
-
-------
-
-是否希望我帮你出 **10 道初学者练习题**，从基础的属性定义到带逻辑的属性逐步练？
-
-# C#属性类型完整分类
-
-您提到的只读属性、只写属性、计算属性、自动属性确实是常见的属性类型，但C#中属性还有更多分类方式。让我为您完整介绍：
-
-## **一、按访问器分类**
-
-### **1. 只读属性 (Read-only Properties)**
-
-```
-public class Person
-{
-    // 方式1：只有get访问器
-    public string Id { get; }
-    
-    // 方式2：init访问器（C# 9.0+）
-    public string Name { get; init; }
-    
-    // 方式3：私有set
-    public DateTime CreateTime { get; private set; }
-    
-    public Person(string id, string name)
-    {
-        Id = id;
-        Name = name;
-        CreateTime = DateTime.Now;
-    }
-}
-```
-
-### **2. 只写属性 (Write-only Properties)**
-
-```
-public class Security
-{
-    private string _password;
-    
-    // 只有set访问器
-    public string Password
-    {
-        set { _password = value; }
-    }
-    
-    // 另一种方式：私有get
-    public string SecretKey { private get; set; }
-}
-```
-
-### **3. 读写属性 (Read-Write Properties)**
-
-```
-public class Product
-{
-    // 完整的读写属性
-    public string Name { get; set; }
-    public decimal Price { get; set; }
-}
-```
-
-## **二、按实现方式分类**
-
-### **4. 自动属性 (Auto-Implemented Properties)**
-
-```
-public class Student
-{
-    // 自动属性 - 编译器生成后台字段
-    public string Name { get; set; }
-    public int Age { get; set; } = 18;  // 带默认值
-    public string Email { get; init; }  // 只读自动属性
-}
-```
-
-### **5. 完整属性 (Full Properties)**
-
-```
-public class BankAccount
-{
-    private decimal _balance;
-    
-    // 完整属性 - 手动管理后台字段
-    public decimal Balance
-    {
-        get { return _balance; }
-        set 
-        { 
-            if (value < 0) 
-                throw new ArgumentException("余额不能为负");
-            _balance = value; 
-        }
-    }
-}
-```
-
-### **6. 计算属性 (Computed Properties)**
-
-```
-public class Rectangle
-{
-    public double Width { get; set; }
-    public double Height { get; set; }
-    
-    // 计算属性 - 没有后台字段
-    public double Area => Width * Height;
-    public double Perimeter => 2 * (Width + Height);
-}
-```
-
-## **三、按作用域和特性分类**
-
-### **7. 静态属性 (Static Properties)**
-
-```
-public class AppConfig
-{
-    // 静态属性 - 属于类而不是实例
-    public static string AppName { get; set; } = "MyApp";
-    public static int InstanceCount { get; private set; }
-    
-    public AppConfig()
-    {
-        InstanceCount++;
-    }
-}
-```
-
-### **8. 抽象属性 (Abstract Properties)**
-
-```
-public abstract class Shape
-{
-    // 抽象属性 - 派生类必须实现
-    public abstract string Name { get; }
-    public abstract double Area { get; }
-}
-
-public class Circle : Shape
-{
-    public override string Name => "Circle";
-    public override double Area => Math.PI * Radius * Radius;
-    public double Radius { get; set; }
-}
-```
-
-### **9. 虚属性 (Virtual Properties)**
-
-```
-public class Animal
-{
-    // 虚属性 - 派生类可以重写
-    public virtual string Sound => "Some sound";
-    public virtual int Legs => 4;
-}
-
-public class Dog : Animal
-{
-    public override string Sound => "Woof";
-}
-
-public class Snake : Animal
-{
-    public override int Legs => 0;
-}
-```
-
-### **10. 重写属性 (Override Properties)**
-
-```
-public class BaseClass
-{
-    public virtual string Message => "Base";
-}
-
-public class DerivedClass : BaseClass
-{
-    // 重写属性
-    public override string Message => "Derived";
-}
-```
-
-## **四、按特殊用途分类**
-
-### **11. 索引器属性 (Indexer Properties)**
-
-```
-public class StringCollection
-{
-    private string[] _items = new string[10];
-    
-    // 索引器 - 让对象像数组一样使用
-    public string this[int index]
-    {
-        get => _items[index];
-        set => _items[index] = value;
-    }
-    
-    // 重载索引器
-    public int this[string value]
-    {
-        get
-        {
-            for (int i = 0; i < _items.Length; i++)
-                if (_items[i] == value) return i;
-            return -1;
-        }
-    }
-}
-
-// 使用
-var collection = new StringCollection();
-collection[0] = "Hello";        // 设置
-string item = collection[0];     // 获取
-int index = collection["Hello"]; // 查找索引
-```
-
-### **12. 表达式体属性 (Expression-bodied Properties)**
-
-```
-public class Calculator
-{
-    public double X { get; set; }
-    public double Y { get; set; }
-    
-    // 表达式体属性 - 单行实现
-    public double Sum => X + Y;
-    public double Product => X * Y;
-    public bool AreEqual => Math.Abs(X - Y) < 0.0001;
-}
-```
-
-### **13. 接口属性 (Interface Properties)**
-
-```
-public interface IVehicle
-{
-    // 接口属性声明
-    string Make { get; }
-    string Model { get; }
-    int Year { get; }
-    double Speed { get; set; }
-}
-
-public class Car : IVehicle
-{
-    // 实现接口属性
-    public string Make { get; set; }
-    public string Model { get; set; }
-    public int Year { get; set; }
-    public double Speed { get; set; }
-}
-```
-
-### **14. 密封属性 (Sealed Properties)**
-
-```
-public class Base
-{
-    public virtual string Property => "Base";
-}
-
-public class Derived : Base
-{
-    // 密封属性 - 防止进一步重写
-    public sealed override string Property => "Derived";
-}
-
-public class FurtherDerived : Derived
-{
-    // 这里不能再重写Property属性
-    // public override string Property => "Further"; // 错误！
-}
-```
-
-## **五、按访问级别分类**
-
-### **15. 混合访问级别属性**
-
-```
-public class AccessExample
-{
-    // 公共get，内部set
-    public string PublicGetInternalSet { get; internal set; }
-    
-    // 公共get，保护set
-    public string PublicGetProtectedSet { get; protected set; }
-    
-    // 公共get，私有set
-```
-
-# C#属性定义语法详解
-
-在C#中，属性(Property)是封装字段的重要机制，提供了多种灵活的语法形式。下面详细介绍各种属性定义语法。
-
-## **一、属性基础概念**
-
-### **1. 属性 vs 字段**
-
-- **字段(Field)**：存储数据的变量
-- **属性(Property)**：提供对字段的安全访问，包含访问器(get/set)
-
-## **二、完整的属性定义语法**
-
-### **1. 传统完整属性（有后台字段）**
-
-```
-public class Person
-{
-    // 私有后台字段
-    private string _name;
-    private int _age;
-    
-    // 完整属性定义
-    public string Name
-    {
-        // get访问器 - 读取值
-        get 
-        { 
-            return _name; 
-        }
-        // set访问器 - 设置值
-        set 
-        { 
-            _name = value; 
-        }
-    }
-    
-    // 带验证的完整属性
-    public int Age
-    {
-        get { return _age; }
-        set 
-        {
-            if (value < 0 || value > 150)
-                throw new ArgumentException("年龄必须在0-150之间");
-            _age = value;
-        }
-    }
-}
-```
-
-### **2. 使用不同的访问修饰符**
-
-```
-public class Account
-{
-    private decimal _balance;
-    private string _password;
-    
-    // 公共get，私有set
-    public decimal Balance
-    {
-        get { return _balance; }
-        private set { _balance = value; }
-    }
-    
-    // 内部get，公共set
-    public string AccountNumber
-    {
-        internal get { return _accountNumber; }
-        set { _accountNumber = value; }
-    }
-    private string _accountNumber;
-    
-    // 只读属性（只有get）
-    public DateTime CreateTime
-    {
-        get { return _createTime; }
-    }
-    private DateTime _createTime = DateTime.Now;
-    
-    // 只写属性（只有set）
-    public string Password
-    {
-        set { _password = value; }
-    }
-}
-```
-
-## **三、自动属性（Auto-Implemented Properties）**
-
-### **1. 基本自动属性**
-
-```
-public class Product
-{
-    // 自动属性 - 编译器自动生成后台字段
-    public string Name { get; set; }
-    public decimal Price { get; set; }
-    public int Stock { get; set; }
-    
-    // 等同于：
-    // private string _name;
-    // public string Name 
-    // { 
-    //     get { return _name; } 
-    //     set { _name = value; } 
-    // }
-}
-```
-
-### **2. 带不同访问级别的自动属性**
-
-```
-public class User
-{
-    // 公共get，内部set
-    public string Username { get; internal set; }
-    
-    // 公共get，保护set
-    public string Email { get; protected set; }
-    
-    // 公共get，私有set
-    public int LoginCount { get; private set; }
-    
-    // 只读自动属性（只能在构造函数中设置）
-    public string UserId { get; }
-    
-    // 内部get，公共set
-    public string Status { internal get; set; }
-}
-```
-
-### **3. 带默认值的自动属性**
-
-```
-public class Settings
-{
-    // C# 6.0+：属性初始化器
-    public string Theme { get; set; } = "Light";
-    public int PageSize { get; set; } = 20;
-    public bool Notifications { get; set; } = true;
-    
-    // 只读属性的初始化
-    public DateTime Created { get; } = DateTime.Now;
-    public Guid Id { get; } = Guid.NewGuid();
-}
-```
-
-## **四、计算属性（Computed Properties）**
-
-### **1. 基于其他属性的计算**
-
-```
-public class Rectangle
-{
-    public double Width { get; set; }
-    public double Height { get; set; }
-    
-    // 计算属性 - 没有后台字段，值由其他属性计算得出
-    public double Area
-    {
-        get { return Width * Height; }
-    }
-    
-    public double Perimeter
-    {
-        get { return 2 * (Width + Height); }
-    }
-    
-    // 布尔计算属性
-    public bool IsSquare
-    {
-        get { return Width == Height; }
-    }
-}
-```
-
-## **五、表达式体属性（C# 6.0+）**
-
-### **1. 只读表达式体属性**
-
-```
-public class Circle
-{
-    public double Radius { get; set; }
-    
-    // 表达式体属性 - 只读
-    public double Area => Math.PI * Radius * Radius;
-    public double Circumference => 2 * Math.PI * Radius;
-    public double Diameter => 2 * Radius;
-}
-```
-
-### **2. 带逻辑的表达式体属性**
-
-```
-public class Student
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public List<int> Scores { get; } = new List<int>();
-    
-    // 复杂表达式体属性
-    public string FullName => $"{FirstName} {LastName}";
-    
-    public double AverageScore => 
-        Scores.Count > 0 ? Scores.Average() : 0;
-    
-    public string Grade => AverageScore switch
-    {
-        >= 90 => "A",
-        >= 80 => "B",
-        >= 70 => "C",
-        >= 60 => "D",
-        _ => "F"
-    };
-    
-    public bool IsPassing => AverageScore >= 60;
-}
-```
-
-## **六、只读属性（Read-only Properties）**
-
-### **1. 多种只读属性实现方式**
-
-```
-public class ImmutablePerson
-{
-    // 方式1：只有get访问器的自动属性（C# 6.0+）
-    public string Name { get; }
-    public int BirthYear { get; }
-    
-    // 方式2：传统只读属性
-    private readonly string _id;
-    public string Id
-    {
-        get { return _id; }
-    }
-    
-    // 方式3：表达式体只读属性
-    public int Age => DateTime.Now.Year - BirthYear;
-    
-    // 方式4：计算只读属性
-    public bool IsAdult => Age >= 18;
-    
-    // 构造函数中初始化只读属性
-    public ImmutablePerson(string name, int birthYear, string id)
-    {
-        Name = name;
-        BirthYear = birthYear;
-        _id = id;
-    }
-}
-```
-
-## **八、静态属性（Static Properties）**
-
-### **1. 静态属性定义**
-
-```
-public class AppConfig
-{
-    // 静态自动属性
-    public static string AppName { get; set; } = "MyApplication";
-    public static string Version { get; set; } = "1.0.0";
-    
-    // 静态只读属性
-    public static DateTime StartTime { get; } = DateTime.Now;
-    
-    // 静态计算属性
-    public static TimeSpan Uptime => DateTime.Now - StartTime;
-    
-    // 带后台字段的静态属性
-    private static int _instanceCount;
-    public static int InstanceCount
-    {
-        get { return _instanceCount; }
-        private set { _instanceCount = value; }
-    }
-    
-    public AppConfig()
-    {
-        InstanceCount++;
-    }
-}
-```
-
-## **十二、属性命名约定**
-
-```
-public class NamingConventions
-{
-    // ✅ 推荐：PascalCase属性名
-    public string FirstName { get; set; }
-    public int ItemCount { get; set; }
-    public decimal TotalPrice { get; set; }
-    
-    // ✅ 推荐：布尔属性使用肯定性名称
-    public bool IsActive { get; set; }
-    public bool HasItems { get; set; }
-    public bool CanEdit { get; set; }
-    
-    // ❌ 避免：含糊的布尔属性名
-    // public bool Status { get; set; } // 不好
-    // public bool Edit { get; set; }   // 不好
-    
-    // ✅ 推荐：集合属性使用复数名称
-    public List<string> Items { get; set; }
-    public Collection<int> Numbers { get; set; }
-}
-```
-
-## **总结**
-
-C#提供了丰富的属性定义语法：
-
-1. **完整属性** - 完全控制get/set逻辑
-2. **自动属性** - 简洁语法，编译器生成后台字段
-3. **表达式体属性** - 单行只读属性
-4. **计算属性** - 基于其他属性计算值
-5. **索引器属性** - 像数组一样访问对象
-6. **静态属性** - 类级别属性
-7. **抽象/接口属性** - 多态支持
-8. **只读属性** - 不可变数据
-9. **init属性** - 对象初始化时设置
-
-**选择建议：**
-
-- 优先使用自动属性
-- 需要验证时使用完整属性
-- 只读计算值使用表达式体属性
-- 考虑使用记录类型简化不可变对象
-
-掌握这些语法可以让你编写出更清晰、更安全的C#代码！
-
-
-
-

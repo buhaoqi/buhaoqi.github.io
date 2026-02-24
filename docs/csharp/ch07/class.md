@@ -1,13 +1,14 @@
 ---
 # 这部分是关键！侧边栏显示名由这里决定
-title: 子任务一 类是什么  # 文档标题，若无 sidebar_label 则作为侧边栏名
-sidebar_label: 子任务一 类是什么  # 显式指定侧边栏显示名（优先级最高）
+title: 任务一 类是什么  # 文档标题，若无 sidebar_label 则作为侧边栏名
+sidebar_label: 任务一 类是什么  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position:  1  # 侧边栏中排在第1位
 ---
 ## **一、类（Class）是什么？**
 在面向对象编程中：
 
-- 类是定义对象属性和方法的模板。
+- 如果说对象是一个实体，那么类就是对象的定义。
+- 类定义了对象特征和行为。
 - 类是一个抽象的概念，它描述了具有相同属性和方法的对象的集合。
 - 类是一种数据类型。
 
@@ -59,13 +60,12 @@ class Program
 }
 ```
 
-### 类名
+类名
 1. **帕斯卡命名法**：类名通常使用帕斯卡命名法：每个单词的首字母大写，其他小写。例如GetInfo等
 2. **语义化**：类名应该具有描述性，以便在不查看类的定义的情况下也可以理解它的用途，避免使用单个字符或不具有描述性的类名。
 3. **名词化**：如果类是具体的类型，类名通常使用名词，反映实际世界中的对象。的首字母大写。
 
 
-## 三、示例：定义类
 ### 示例1：定义Person 类
 #### 定义Person类
 - **字段**：`name`、`age`、`gender` - 存储人的基本信息
@@ -145,7 +145,99 @@ class Program
     }
 }
 ```
-### 示例2：定义Calculator 类
+
+## 三、对象是什么
+
+**对象（Object）**：根据类创建的具体实例。它包含了类定义的属性和方法的具体值。比如：
+
+- 小花是一只具体的猫对象。
+- 张三是一个具体的人对象。
+- 李四也是一个具体的人对象。
+
+## **四、使用类的语法**
+
+```csharp
+using System;
+
+// 定义类的位置
+[类访问修饰符] [类修饰符] class 类名 [: 基类] [, 接口列表]
+{
+    // 定义类 见上
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 使用类的位置
+        // 创建类的示例对象的语法
+        类名 对象实例名称 = new 类的同名构造函数名();
+
+        // 字段的读操作
+        对象实例名称.字段名;
+
+        // 字段的写操作
+        对象实例名称.字段名 = 新值;
+    }
+}
+
+```
+### 示例1：使用Person 类
+
+```csharp
+using System;
+// 定义一个person类
+public class Person
+{
+    // 定义类，见上
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("=== Person类示例 ===\n");
+        
+        // 创建Person对象
+        Person person1 = new Person("张三", 20, "男");
+        Person person2 = new Person("李四", 17, "女");
+        
+        // 调用对象的方法
+        Console.WriteLine("=== person1的信息 ===");
+        person1.Introduce();        // 输出：大家好，我叫张三，今年20岁，性别男。
+        person1.CanDrive();         // 输出：张三可以开车了。
+        
+        Console.WriteLine("\n=== person2的信息 ===");
+        person2.Introduce();        // 输出：大家好，我叫李四，今年17岁，性别女。
+        person2.CanDrive();         // 输出：李四还不能开车，还差1年。
+        
+        Console.WriteLine("\n=== person2过生日 ===");
+        person2.HaveBirthday();     // 年龄变为18
+        person2.CanDrive();         // 现在可以开车了
+        
+        // 使用属性访问和修改数据
+        Console.WriteLine("\n=== 使用属性修改数据 ===");
+        Console.WriteLine($"修改前姓名：{person1.Name}");
+        person1.Name = "张三丰";
+        Console.WriteLine($"修改后姓名：{person1.Name}");
+        
+        Console.WriteLine("\n按任意键退出...");
+        Console.ReadKey();
+    }
+}
+```
+这里有几个关键点：
+
+1. Person: 数据类型。
+2. p1：变量名，表示一个Person类型的对象。
+3. `new` 关键字：表示在内存中“新建一个对象”。
+4. `Person()`：调用的是**构造函数**
+5. 在 C# 中，**构造函数的名字必须和类名相同**。如果你没写构造函数，C# 会自动提供一个默认的无参构造函数。
+
+
+
+## 五、练习
+
+### 练习 1：定义Calculator 类
 - **字段**：`result` - 存储计算结果，`calculateCount` - 记录计算次数
 - <strike>**构造函数重载**：提供多种创建对象的方式</strike>
 - **方法**：实现基本的数学运算（加、减、乘、除）
@@ -251,98 +343,7 @@ class Program
 }
 
 ```
-
-
-## 四、对象是什么
-
-**对象（Object）**：根据类创建的具体实例。它包含了类定义的属性和方法的具体值。比如：
-
-- 小花是一只具体的猫对象。
-- 张三是一个具体的人对象。
-- 李四也是一个具体的人对象。
-
-## **五、使用类的语法**
-
-```csharp
-using System;
-
-// 定义类的位置
-[类访问修饰符] [类修饰符] class 类名 [: 基类] [, 接口列表]
-{
-    // 定义类 见上
-}
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        // 使用类的位置
-        // 创建类的示例对象的语法
-        类名 对象实例名称 = new 类的同名构造函数名();
-
-        // 字段的读操作
-        对象实例名称.字段名;
-
-        // 字段的写操作
-        对象实例名称.字段名 = 新值;
-    }
-}
-
-```
-
-## 六、示例：使用类
-### 示例1：使用Person 类
-
-```csharp
-using System;
-// 定义一个person类
-public class Person
-{
-    // 定义类，见上
-}
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("=== Person类示例 ===\n");
-        
-        // 创建Person对象
-        Person person1 = new Person("张三", 20, "男");
-        Person person2 = new Person("李四", 17, "女");
-        
-        // 调用对象的方法
-        Console.WriteLine("=== person1的信息 ===");
-        person1.Introduce();        // 输出：大家好，我叫张三，今年20岁，性别男。
-        person1.CanDrive();         // 输出：张三可以开车了。
-        
-        Console.WriteLine("\n=== person2的信息 ===");
-        person2.Introduce();        // 输出：大家好，我叫李四，今年17岁，性别女。
-        person2.CanDrive();         // 输出：李四还不能开车，还差1年。
-        
-        Console.WriteLine("\n=== person2过生日 ===");
-        person2.HaveBirthday();     // 年龄变为18
-        person2.CanDrive();         // 现在可以开车了
-        
-        // 使用属性访问和修改数据
-        Console.WriteLine("\n=== 使用属性修改数据 ===");
-        Console.WriteLine($"修改前姓名：{person1.Name}");
-        person1.Name = "张三丰";
-        Console.WriteLine($"修改后姓名：{person1.Name}");
-        
-        Console.WriteLine("\n按任意键退出...");
-        Console.ReadKey();
-    }
-}
-```
-这里有几个关键点：
-
-1. Person: 数据类型。
-2. p1：变量名，表示一个Person类型的对象。
-3. `new` 关键字：表示在内存中“新建一个对象”。
-4. `Person()`：调用的是**构造函数**
-5. 在 C# 中，**构造函数的名字必须和类名相同**。如果你没写构造函数，C# 会自动提供一个默认的无参构造函数。
-
-### 示例 2：使用Calculator类
+### 练习2：使用Calculator类
 
 ```csharp
 using System;

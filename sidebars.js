@@ -295,39 +295,19 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch07/overview', // 概述
-        {
-          type: 'category',
-          label: '任务一 类',
-          collapsible: true,
-          collapsed: false,
-          items: [
-            'csharp/ch07/task1/overview', // 概述
-            'csharp/ch07/task1/class', // 任务一 
-            'csharp/ch07/task1/modifiers', // 任务四 
-            'csharp/ch07/task1/fields', // 任务二 
-            'csharp/ch07/task1/property', // 任务五
-            'csharp/ch07/task1/constructor', // 任务三 
-            'csharp/ch07/task1/this', // 任务六
-            'csharp/ch07/task1/exercise1', // 任务七
-            'csharp/ch07/task1/exercise2', // 任务八
-          ],
-        },
-        {
-          type: 'category',
-          label: '任务二 方法',
-          collapsible: true,
-          collapsed: false,
-          items: [
-            'csharp/ch07/task2/overview', // 概述
-            'csharp/ch07/task2/what-method-is', // 任务一 
-            'csharp/ch07/task2/parameters', // 任务二 
-            'csharp/ch07/task2/reload', // 任务三 
-            'csharp/ch07/task2/exercise1', // 任务四
-            'csharp/ch07/task2/exercise2', // 任务五
-          ],
-        },
-      ],
+          'csharp/ch07/overview', // 概述
+          'csharp/ch07/class', // 任务一 
+          'csharp/ch07/modifiers', // 任务四 
+          'csharp/ch07/fields', // 任务二 
+          'csharp/ch07/property', // 任务五
+          'csharp/ch07/constructor', // 任务三 
+          'csharp/ch07/this', // 任务六
+          'csharp/ch07/what-method-is', // 任务一 
+          'csharp/ch07/parameters', // 任务二 
+          'csharp/ch07/reload', // 任务三 
+          'csharp/ch07/exercise1', // 任务四
+          'csharp/ch07/exercise2', // 任务五
+        ],
     },
     // 项目八：面向对象编程
     {
