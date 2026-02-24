@@ -191,23 +191,23 @@ const config = {
             // activeBaseRegex: '/docs/website-guide',
           },
           // 4. 教育知识与能力
-          {
-            type: 'docSidebar',
-            sidebarId: 'teacherSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '教育知识与能力',
-            // 可选：设置默认打开的文档
-            docId: 'teacher/intro',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'teacherSidebar',  // 需要在sidebars.js中定义
+          //   position: 'left',
+          //   label: '教育知识与能力',
+          //   // 可选：设置默认打开的文档
+          //   docId: 'teacher/intro',
+          // },
           // 5. 综合素质
-          {
-            type: 'docSidebar',
-            sidebarId: 'teacher2Sidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '综合素质',
-            // 可选：设置默认打开的文档
-            docId: 'teacher2/intro',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'teacher2Sidebar',  // 需要在sidebars.js中定义
+          //   position: 'left',
+          //   label: '综合素质',
+          //   // 可选：设置默认打开的文档
+          //   docId: 'teacher2/intro',
+          // },
           
           // 6. Blog (无type，内部页面) - 靠左
           {
