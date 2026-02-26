@@ -65,3 +65,134 @@ sidebar_position:  0  # 侧边栏中排在第1位
 17. 静态成员有哪些
 18. 静态成员和实例成员的区别是什么
 
+
+
+
+## 程序集是什么
+每个项目（Project）编译后生成的可执行文件或库文件（后缀.exe、.dll），通俗理解：相当于每个 “子工程” 编译后产出的一个 “成品文件”。
+```csharp
+解决方案
+↓
+项目
+↓
+程序集(编译生成)
+```
+## 实体是什么
+
+### 一、先给核心定义（新手友好版）
+在编程（尤其是面向对象编程/OOP）中，**实体**就是对现实世界中“具体事物”的抽象描述，是“有属性、有行为的独立个体”。
+👉 通俗比喻：
+- 现实中：猫、狗、学生、订单都是“实体”；
+- 代码中：用`class`定义的`Animal`、`Student`类，以及通过类实例化的`cat`、`stu`对象，都是对现实实体的代码映射。
+
+### 二、实体的两个核心特征（结合C#示例）
+#### 1. 有“属性”（描述实体的特征）
+属性是实体的“静态特征”，比如猫的名字、年龄，学生的学号、成绩。
+```csharp
+// Animal是对“动物”这个实体的抽象定义
+public class Animal
+{
+    // 属性：描述动物的特征（实体的静态信息）
+    public string Name { get; set; } // 名字
+    public int Age { get; set; }     // 年龄
+    public string Species { get; set; } // 种类
+}
+```
+
+#### 2. 有“行为”（实体能做的事情）
+行为是实体的“动态动作”，比如猫会叫、学生会考试，对应代码中的方法。
+```csharp
+public class Animal
+{
+    // 属性
+    public string Name { get; set; }
+
+    // 行为：实体能执行的动作（对应方法）
+    public void MakeSound() // 发出叫声
+    {
+        Console.WriteLine($"{Name}在叫～");
+    }
+
+    public void Run() // 跑
+    {
+        Console.WriteLine($"{Name}在跑～");
+    }
+}
+```
+
+### 三、实体的两种形态（易混淆点）
+新手常分不清“实体类”和“实体对象”，用简单例子区分：
+| 形态         | 含义                          | 代码示例                  |
+|--------------|-------------------------------|---------------------------|
+| 实体类（模板） | 对一类实体的“抽象定义”（比如“猫的模板”） | `class Animal { ... }`    |
+| 实体对象（实例） | 符合模板的“具体个体”（比如一只叫“咪咪”的猫） | `Animal cat = new Animal { Name = "咪咪" };` |
+
+👉 通俗理解：
+- 实体类 = 蛋糕模具；
+- 实体对象 = 用模具做出来的具体蛋糕。
+
+### 四、C#中“实体”的常见应用场景（贴合教学）
+1. **业务实体（最常用）**：描述业务中的核心事物，比如：
+   - 电商系统：`Order`（订单）、`Product`（商品）；
+   - 学校系统：`Student`（学生）、`Teacher`（老师）；
+2. **数据实体**：对应数据库表的“行”，比如数据库有`Student`表，代码中就定义`Student`类作为数据实体，属性和表字段一一对应（后续学EF Core会重点用到）；
+3. **领域实体**：更完整的业务实体，包含属性+业务逻辑（比如`Student`类有`CalculateTotalScore()`方法计算总分）。
+
+### 五、简单示例：完整的“学生实体”
+```csharp
+using System;
+using System.Collections.Generic;
+
+// 学生实体类（对“学生”这个现实实体的抽象）
+public class Student
+{
+    // 1. 属性：学生的特征
+    public string Id { get; set; } // 学号
+    public string Name { get; set; } // 姓名
+    public int Age { get; set; } // 年龄
+    public List<int> Scores { get; set; } = new List<int>(); // 各科成绩
+
+    // 2. 行为：学生能做的事
+    // 计算总分（业务行为）
+    public int CalculateTotalScore()
+    {
+        int total = 0;
+        foreach (int score in Scores)
+        {
+            total += score;
+        }
+        return total;
+    }
+
+    // 打印信息（展示行为）
+    public void ShowInfo()
+    {
+        Console.WriteLine($"学号：{Id}，姓名：{Name}，总分：{CalculateTotalScore()}");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        // 实例化具体的学生实体对象（对应现实中的“张三同学”）
+        Student zhangsan = new Student
+        {
+            Id = "2024001",
+            Name = "张三",
+            Age = 18,
+            Scores = new List<int> { 90, 85, 95 }
+        };
+
+        // 调用实体对象的行为
+        zhangsan.ShowInfo(); // 输出：学号：2024001，姓名：张三，总分：270
+    }
+}
+```
+
+### 总结
+1. 编程中的“实体”是**现实事物的代码抽象**，核心是“有属性（特征）、有行为（动作）”；
+2. 实体分“类（模板）”和“对象（具体个体）”，类是抽象定义，对象是具体实例；
+3. C#中实体通常用`class`定义，是面向对象编程的核心基础，也是后续学习数据库交互、业务开发的关键。
+
+这个概念可以结合你之前讲的“类和对象”“方法重载”等知识点，用“动物”“学生”这些贴近生活的例子讲解，学生更容易理解。

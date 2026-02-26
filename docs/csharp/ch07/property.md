@@ -1000,16 +1000,87 @@ public class BankAccount
 
 ```csharp
 // 参考答案
+// public class Rectangle
+// {
+//     public double Width { get; set; }
+//     public double Height { get; set; }
+
+//     // 计算属性
+//     public double Area => Width * Height;
+//     public double Perimeter => 2 * (Width + Height);
+//     public bool IsSquare => Width == Height;
+//     public string Description => $"矩形 {Width}×{Height} ({(IsSquare ? "正方形" : "长方形")})";
+// }
+
 public class Rectangle
 {
+    // 基础属性（保持原有自动属性写法，无箭头）
     public double Width { get; set; }
     public double Height { get; set; }
 
-    // 计算属性
-    public double Area => Width * Height;
-    public double Perimeter => 2 * (Width + Height);
-    public bool IsSquare => Width == Height;
-    public string Description => $"矩形 {Width}×{Height} ({(IsSquare ? "正方形" : "长方形")})";
+    // 计算属性：面积（替换箭头语法，改用传统get只读属性）
+    public double Area
+    {
+        get
+        {
+            return Width * Height;
+        }
+    }
+
+    // 计算属性：周长（替换箭头语法）
+    public double Perimeter
+    {
+        get
+        {
+            return 2 * (Width + Height);
+        }
+    }
+
+    // 计算属性：是否为正方形（替换箭头语法）
+    public bool IsSquare
+    {
+        get
+        {
+            return Width == Height;
+        }
+    }
+
+    // 计算属性：描述信息（替换箭头语法，拆分三元表达式为if-else更易理解）
+    public string Description
+    {
+        get
+        {
+            string shapeType;
+            if (IsSquare)
+            {
+                shapeType = "正方形";
+            }
+            else
+            {
+                shapeType = "长方形";
+            }
+            return "矩形 " + Width + "×" + Height + " (" + shapeType + ")";
+        }
+    }
+}
+
+// 测试代码（可选，用于验证功能）
+public class Program
+{
+    public static void Main()
+    {
+        Rectangle rect1 = new Rectangle();
+        rect1.Width = 5;
+        rect1.Height = 5;
+        Console.WriteLine(rect1.Area); // 输出25
+        Console.WriteLine(rect1.Description); // 输出：矩形 5×5 (正方形)
+
+        Rectangle rect2 = new Rectangle();
+        rect2.Width = 4;
+        rect2.Height = 6;
+        Console.WriteLine(rect2.Perimeter); // 输出20
+        Console.WriteLine(rect2.Description); // 输出：矩形 4×6 (长方形)
+    }
 }
 ```
 
@@ -1030,33 +1101,117 @@ public class Rectangle
 
 ```csharp
 // 参考答案
+// public class Product
+// {
+//     public string ProductId { get; }
+//     public DateTime CreatedDate { get; }
+    
+//     private string _productName;
+//     private decimal _price;
+    
+//     public string ProductName
+//     {
+//         get => _productName;
+//         set => _productName = !string.IsNullOrWhiteSpace(value) ? value : "未知产品";
+//     }
+    
+//     public decimal Price
+//     {
+//         get => _price;
+//         set => _price = value >= 0 ? value : 0;
+//     }
+    
+//     public bool IsActive { get; set; } = true;
+    
+//     public Product(string productId, string productName)
+//     {
+//         ProductId = productId;
+//         ProductName = productName;
+//         CreatedDate = DateTime.Now;
+//     }
+// }
+using System; // 需引入DateTime所在的命名空间
+
 public class Product
 {
+    // 只读自动属性（保持原有写法，无箭头）
     public string ProductId { get; }
     public DateTime CreatedDate { get; }
     
+    // 私有字段（原代码保留）
     private string _productName;
     private decimal _price;
     
+    // 替换ProductName的箭头语法：改用传统get/set代码块
     public string ProductName
     {
-        get => _productName;
-        set => _productName = !string.IsNullOrWhiteSpace(value) ? value : "未知产品";
+        get
+        {
+            return _productName; // 替换 get => _productName
+        }
+        set
+        {
+            // 替换 set => 后的三元表达式，改用if-else更易理解
+            if (!string.IsNullOrWhiteSpace(value))
+            {
+                _productName = value;
+            }
+            else
+            {
+                _productName = "未知产品";
+            }
+        }
     }
     
+    // 替换Price的箭头语法：改用传统get/set代码块
     public decimal Price
     {
-        get => _price;
-        set => _price = value >= 0 ? value : 0;
+        get
+        {
+            return _price; // 替换 get => _price
+        }
+        set
+        {
+            // 替换 set => 后的三元表达式，改用if-else
+            if (value >= 0)
+            {
+                _price = value;
+            }
+            else
+            {
+                _price = 0;
+            }
+        }
     }
     
-    public bool IsActive { get; set; } = true;
+    // 自动属性（移除初始化箭头/赋值语法，改在构造函数初始化）
+    public bool IsActive { get; set; }
     
+    // 构造函数
     public Product(string productId, string productName)
     {
         ProductId = productId;
         ProductName = productName;
         CreatedDate = DateTime.Now;
+        // 初始化IsActive为true（替代原代码的 = true 初始化）
+        IsActive = true;
+    }
+}
+
+// 测试代码（可选，验证功能）
+public class Program
+{
+    public static void Main()
+    {
+        // 测试1：正常产品名称和价格
+        Product p1 = new Product("P001", "智能手机");
+        p1.Price = 2999.99m;
+        Console.WriteLine($"产品1：{p1.ProductName}，价格：{p1.Price}，状态：{p1.IsActive}");
+        
+        // 测试2：空产品名称和负数价格（验证校验逻辑）
+        Product p2 = new Product("P002", "");
+        p2.Price = -100;
+        Console.WriteLine($"产品2：{p2.ProductName}，价格：{p2.Price}，状态：{p2.IsActive}");
     }
 }
 ```
@@ -1196,33 +1351,120 @@ public class Logger
 
 ```csharp
 // 参考答案
+// public class AppConfig
+// {
+//     public static string AppName { get; } = "我的应用程序";
+//     public static string Version { get; } = "1.0.0";
+//     public static int UserCount { get; private set; } = 0;
+
+//     static AppConfig()
+//     {
+//         Console.WriteLine($"应用程序初始化: {AppName} v{Version}");
+//     }
+
+//     public static void AddUser()
+//     {
+//         UserCount++;
+//         Console.WriteLine($"用户数量: {UserCount}");
+//     }
+
+//     public static void RemoveUser()
+//     {
+//         if (UserCount > 0)
+//             UserCount--;
+//         Console.WriteLine($"用户数量: {UserCount}");
+//     }
+
+//     public static string GetAppInfo()
+//     {
+//         return $"{AppName} v{Version} - 当前用户: {UserCount}";
+//     }
+// }
+
+using System;
+
 public class AppConfig
 {
-    public static string AppName { get; } = "我的应用程序";
-    public static string Version { get; } = "1.0.0";
-    public static int UserCount { get; private set; } = 0;
-
-    static AppConfig()
+    // 1. 替换静态只读自动属性：改用私有静态字段 + 公共静态只读属性（无箭头）
+    private static readonly string _appName = "我的应用程序";
+    public static string AppName
     {
-        Console.WriteLine($"应用程序初始化: {AppName} v{Version}");
+        get
+        {
+            return _appName;
+        }
     }
 
+    private static readonly string _version = "1.0.0";
+    public static string Version
+    {
+        get
+        {
+            return _version;
+        }
+    }
+
+    // 2. 替换静态私有set属性：改用私有静态字段 + 公共静态只读get + 内部修改逻辑
+    private static int _userCount = 0;
+    public static int UserCount
+    {
+        get
+        {
+            return _userCount;
+        }
+        // 保留private set，新手阶段可保留，也可完全移除（仅通过方法修改）
+        private set
+        {
+            _userCount = value;
+        }
+    }
+
+    // 静态构造函数（原代码保留，无箭头）
+    static AppConfig()
+    {
+        Console.WriteLine("应用程序初始化: " + AppName + " v" + Version);
+    }
+
+    // 新增：若想完全移除private set，可删除UserCount的set块，仅通过字段修改
+    // 此时AddUser/RemoveUser中直接改_userCount即可，如下：
+    // public static void AddUser()
+    // {
+    //     _userCount++;
+    //     Console.WriteLine("用户数量: " + _userCount);
+    // }
+
+    // 静态方法（替换字符串插值为拼接，避免$语法，更基础）
     public static void AddUser()
     {
         UserCount++;
-        Console.WriteLine($"用户数量: {UserCount}");
+        Console.WriteLine("用户数量: " + UserCount);
     }
 
     public static void RemoveUser()
     {
         if (UserCount > 0)
             UserCount--;
-        Console.WriteLine($"用户数量: {UserCount}");
+        Console.WriteLine("用户数量: " + UserCount);
     }
 
     public static string GetAppInfo()
     {
-        return $"{AppName} v{Version} - 当前用户: {UserCount}";
+        // 替换字符串插值为拼接，无箭头/特殊语法
+        return AppName + " v" + Version + " - 当前用户: " + UserCount;
+    }
+}
+
+// 测试代码（验证功能）
+public class Program
+{
+    public static void Main()
+    {
+        AppConfig.AddUser();   // 输出：用户数量: 1
+        AppConfig.AddUser();   // 输出：用户数量: 2
+        AppConfig.RemoveUser();// 输出：用户数量: 1
+        
+        string info = AppConfig.GetAppInfo();
+        Console.WriteLine(info); // 输出：我的应用程序 v1.0.0 - 当前用户: 1
     }
 }
 ```
@@ -1364,6 +1606,106 @@ public class OrderItem
     public decimal Price { get; set; }
     public int Quantity { get; set; }
 }
+```
+
+示例：计算属性
+
+```csharp
+using System;
+
+// 简单的圆类：演示计算属性的基础用法
+public class Circle
+{
+    // 普通字段：存储半径值
+    private double _radius;
+
+    // 普通可写属性：半径（带简单校验，确保半径非负）
+    public double Radius
+    {
+        get
+        {
+            // 获取私有字段的值
+            return _radius;
+        }
+        set
+        {
+            // 校验：半径不能为负数，否则设为0
+            if (value >= 0)
+            {
+                _radius = value;
+            }
+            else
+            {
+                _radius = 0;
+            }
+        }
+    }
+
+    // 计算属性1：面积（只读，通过半径动态计算）
+    public double Area
+    {
+        get
+        {
+            // 圆的面积公式：π × 半径²
+            return Math.PI * _radius * _radius;
+        }
+    }
+
+    // 计算属性2：周长（只读，通过半径动态计算）
+    public double Perimeter
+    {
+        get
+        {
+            // 圆的周长公式：2 × π × 半径
+            return 2 * Math.PI * _radius;
+        }
+    }
+}
+
+// 测试代码：验证计算属性的效果
+public class Program
+{
+    public static void Main()
+    {
+        // 1. 创建圆对象，设置半径为5
+        Circle circle1 = new Circle();
+        circle1.Radius = 5;
+        Console.WriteLine("半径为5的圆：");
+        Console.WriteLine($"面积 = {circle1.Area:F2}"); // F2：保留2位小数
+        Console.WriteLine($"周长 = {circle1.Perimeter:F2}");
+
+        Console.WriteLine("-----分割线-----");
+
+        // 2. 修改半径为10，计算属性自动更新
+        circle1.Radius = 10;
+        Console.WriteLine("半径改为10的圆：");
+        Console.WriteLine($"面积 = {circle1.Area:F2}");
+        Console.WriteLine($"周长 = {circle1.Perimeter:F2}");
+
+        Console.WriteLine("-----分割线-----");
+
+        // 3. 测试负数半径（校验生效，半径设为0）
+        circle1.Radius = -3;
+        Console.WriteLine("半径设为-3（自动修正为0）的圆：");
+        Console.WriteLine($"面积 = {circle1.Area:F2}");
+        Console.WriteLine($"周长 = {circle1.Perimeter:F2}");
+    }
+}
+```
+运行结果
+
+```csharp
+半径为5的圆：
+面积 = 78.54
+周长 = 31.42
+-----分割线-----
+半径改为10的圆：
+面积 = 314.16
+周长 = 62.83
+-----分割线-----
+半径设为-3（自动修正为0）的圆：
+面积 = 0.00
+周长 = 0.00
 ```
 
 ### **练习题 10：综合练习 - 完整的用户管理系统**
