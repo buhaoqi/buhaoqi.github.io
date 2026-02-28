@@ -17,14 +17,309 @@ sidebar_position:  1  # 侧边栏中排在第1位
 
 这就是多态 —— 行为相同，表现形式不同
 
-多态的实现方式：
-
-- 方法重写
-- 方法重载
-- 接口
-
 ## 二、多态的实现方式
-### 方式1：`virtual + override`
+
+当子类想要改变父类的行为时，需要用到这些组合。
+
+| 关键字         | 用法说明                                                     |
+| -------------- | ------------------------------------------------------------ |
+| **`virtual`**  | 声明在父类中，表示该成员是“虚”的，**允许**在子类中被重写。   |
+| **`override`** | 声明在子类中，表示**正式重写**父类的 virtual 或 abstract 成员。 |
+| **`new`**      | **隐藏**（Hide）父类成员。子类定义了一个同名成员，但它与父类成员没有多态关系。 |
+
+
+## override
+
+### 1.核心定义与使用前提
+`override`（重写）的核心作用：**让子类重写实现父类中允许被重写的成员（方法/属性/索引器/事件）**，且必须满足以下前提：
+1. 父类中的成员必须标记为 `virtual`（虚成员，有默认实现）、`abstract`（抽象成员，无实现）或 `override`（已被重写的成员）；
+2. 子类重写的成员，**签名必须完全一致**（方法名、参数列表、返回值、访问修饰符兼容）；
+3. `override` 不能修饰静态成员（`static`）、私有成员（`private`）或密封成员（`sealed`）。
+
+示例
+
+```csharp
+using System;
+
+// 父类：定义虚方法（允许子类重写）
+class Animal
+{
+    public string Name { get; set; } = "未命名";
+
+    // virtual、abstract
+    public void MakeSound()
+    {
+        Console.WriteLine($"{Name}发出通用叫声");
+    }
+
+    // virtual、abstract
+    public void Sleep(int hours)
+    {
+        Console.WriteLine($"{Name}睡了{hours}小时");
+    }
+}
+
+// 子类1：Dog 重写父类虚方法
+class Dog : Animal
+{
+    // override 重写无参virtual方法（完全替换逻辑）
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name}汪汪叫");
+    }
+
+    // override 重写带参virtual方法（保留父类逻辑 + 扩展）
+    public override void Sleep(int hours)
+    {
+        // base 调用父类原逻辑（可选）
+        base.Sleep(hours);
+        Console.WriteLine($"狗狗{Name}还打了呼噜");
+    }
+}
+
+// 子类2：Cat 重写父类虚方法
+class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name}喵喵叫");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // 多态核心：父类类型变量，指向子类实例
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+
+        animal1.MakeSound(); // 输出：未命名汪汪叫
+        animal1.Sleep(5);    // 输出：未命名睡了5小时 → 狗狗未命名还打了呼噜
+
+        animal2.MakeSound(); // 输出：未命名喵喵叫
+    }
+}
+```
+
+
+## virtual:重写父类 `virtual` 方法
+父类定义 `virtual` 方法（有默认实现），子类用 `override` 重写，保留父类逻辑或完全替换。
+```csharp
+using System;
+
+// 父类：定义虚方法（允许子类重写）
+class Animal
+{
+    public string Name { get; set; } = "未命名";
+
+    // 虚方法：有默认实现，允许子类重写
+    public virtual void MakeSound()
+    {
+        Console.WriteLine($"{Name}发出通用叫声");
+    }
+
+    // 虚方法：带参数的场景
+    public virtual void Sleep(int hours)
+    {
+        Console.WriteLine($"{Name}睡了{hours}小时");
+    }
+}
+
+// 子类1：Dog 重写父类虚方法
+class Dog : Animal
+{
+    // override 重写无参虚方法（完全替换逻辑）
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name}汪汪叫");
+    }
+
+    // override 重写带参虚方法（保留父类逻辑 + 扩展）
+    public override void Sleep(int hours)
+    {
+        // base 调用父类原逻辑（可选）
+        base.Sleep(hours);
+        Console.WriteLine($"狗狗{Name}还打了呼噜");
+    }
+}
+
+// 子类2：Cat 重写父类虚方法
+class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name}喵喵叫");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // 多态核心：父类类型变量，指向子类实例
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+
+        animal1.MakeSound(); // 输出：未命名汪汪叫
+        animal1.Sleep(5);    // 输出：未命名睡了5小时 → 狗狗未命名还打了呼噜
+
+        animal2.MakeSound(); // 输出：未命名喵喵叫
+    }
+}
+```
+**关键说明**：
+- `base.方法名()` 可以调用父类原有的实现逻辑，适合“扩展而非完全替换”的场景；
+- 多态的核心价值：无需修改父类代码，通过子类重写扩展功能（符合“开闭原则”）。
+
+## abstract:重写父类 `abstract` 抽象方法（必须重写）
+如果父类是抽象类，且成员标记为 `abstract`（无实现），子类必须用 `override` 重写，否则编译报错。
+```csharp
+using System;
+
+// 抽象父类：无实例化能力，抽象方法无实现
+abstract class Shape
+{
+    // 抽象方法：只有声明，无大括号（无实现）
+    public abstract double GetArea();
+}
+
+// 子类1：矩形，必须重写 GetArea
+class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    // override 重写抽象方法（必须实现）
+    public override double GetArea()
+    {
+        return Width * Height;
+    }
+}
+
+// 子类2：圆形，必须重写 GetArea
+class Circle : Shape
+{
+    public double Radius { get; set; }
+
+    public override double GetArea()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Shape rect = new Rectangle { Width = 5, Height = 3 };
+        Shape circle = new Circle { Radius = 2 };
+
+        Console.WriteLine(rect.GetArea());  // 输出：15
+        Console.WriteLine(circle.GetArea());// 输出：12.566370614359172
+    }
+}
+```
+**关键说明**：
+- 抽象方法强制子类实现核心逻辑（比如所有图形都必须计算面积），避免子类遗漏关键功能；
+- 抽象类无法实例化，只能通过子类实例化（`new Rectangle()`）。
+
+## 重写属性（和方法逻辑一致）
+`override` 不仅能重写方法，也能重写属性（仅限 `virtual/abstract` 属性）。
+```csharp
+using System;
+
+class Person
+{
+    // 虚属性：有默认实现
+    public virtual string Info
+    {
+        get { return "通用人员信息"; }
+        set { }
+    }
+}
+
+class Student : Person
+{
+    public string StudentId { get; set; } = "2024001";
+
+    // override 重写属性
+    public override string Info
+    {
+        get { return $"学生信息：学号{StudentId}"; }
+        // 重写 set 访问器（可选）
+        set { StudentId = value; }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Person p = new Student();
+        Console.WriteLine(p.Info); // 输出：学生信息：学号2024001
+
+        p.Info = "2024002";
+        Console.WriteLine(((Student)p).StudentId); // 输出：2024002
+    }
+}
+```
+
+### 三、`override` 的关键注意事项（避坑必看）
+1. **签名必须完全一致**：方法名、参数类型/个数/顺序、返回值必须和父类一致（返回值支持“协变”，比如父类返回 `Animal`，子类可返回 `Dog`，新手暂时不用深究）；
+2. **访问修饰符不能更严格**：父类是 `public`，子类不能改成 `private/protected`（可保持 `public` 或放宽，比如 `protected` 改 `public`）；
+3. **不能重写密封成员**：如果父类成员是 `sealed override`（密封重写），后续子类无法再重写；
+4. **静态成员不能重写**：`static` 成员归属于类本身，不参与继承，无法用 `override`（只能用 `new` 隐藏）；
+5. **`override` 可搭配 `sealed`**：子类重写后，可标记为 `sealed override`，禁止孙类继续重写。
+
+### 四、`override` vs `new`（核心区别，新手必分清）
+很多新手会混淆 `override` 和 `new`，用表格对比：
+
+| 特性                | `override`（重写）| `new`（隐藏）|
+|---------------------|----------------------------|----------------------------|
+| 作用                | 真正替换父类成员，多态生效 | 隐藏父类成员，多态不生效   |
+| 前提                | 父类成员必须是 `virtual/abstract` | 无前提（可隐藏任意成员）|
+| 调用逻辑            | 父类类型变量调用子类实现   | 父类类型变量调用父类实现   |
+
+**示例对比**：
+```csharp
+class Parent
+{
+    public virtual void Show() { Console.WriteLine("父类"); }
+}
+
+class ChildOverride : Parent
+{
+    public override void Show() { Console.WriteLine("子类override"); }
+}
+
+class ChildNew : Parent
+{
+    public new void Show() { Console.WriteLine("子类new"); }
+}
+
+// 测试
+Parent p1 = new ChildOverride();
+Parent p2 = new ChildNew();
+p1.Show(); // 输出：子类override（多态生效）
+p2.Show(); // 输出：父类（多态不生效）
+```
+
+### 总结
+`override` 关键字的核心用法和关键点：
+1. **核心作用**：重写父类 `virtual/abstract` 成员，实现多态，让父类类型变量调用子类逻辑；
+2. **使用前提**：父类成员必须是 `virtual/abstract/override`，子类签名完全一致；
+3. **核心场景**：
+   - 重写 `virtual` 方法：扩展/替换父类默认逻辑；
+   - 重写 `abstract` 方法：强制实现抽象类的核心契约；
+4. **避坑要点**：不重写静态成员、密封成员，区分 `override` 和 `new`；
+5. **核心价值**：符合“开闭原则”，无需修改父类代码，通过子类扩展功能，是面向对象编程的核心特性。
+
+简单记：`override` 就是“子类按自己的方式实现父类要求的功能”，让代码更灵活、易扩展。
+
+## 虚(virtual)
+
+### 方式1
 #### 简介
 - 特点：运行时多态。最常用
 - 核心逻辑：父类用 `virtual`定义虚方法（有默认实现）→ 子类用 `override` 重写→ 父类引用指向子类实例，自动执行子类逻辑
