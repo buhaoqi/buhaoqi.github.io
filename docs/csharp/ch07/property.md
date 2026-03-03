@@ -261,6 +261,89 @@ public class Student
     public string Email { get; init; }  // 只读自动属性
 }
 ```
+`public string Name { get; } `是自动属性，C# 编译器会帮你做两件事：
+- 偷偷生成一个隐藏的、编译器自动命名的私有字段（不是你定义的 _name，而是类似 `<Name>`k__BackingField 这种你看不到的字段）；
+- get 访问器只会返回这个隐藏字段的值，和你自己定义的 _name 字段没有任何关系。
+
+```csharp
+using System;
+
+class Animal
+{
+    //字段
+  	private string _name;
+    private string _color;
+  	// 1.protected: 允许_age字段在当前类和子类中访问
+  	// 2. protected 修饰符：用于修饰字段、属性、方法
+    protected int _age;
+  	// 属性
+    public string Name { get;} // 只读属性
+    public string Color { get; set; }
+    public int Age 
+    {
+      get { return _age; }
+      // 3.protected修饰属性时，要放在访问器的前面，
+      protected set
+      {
+        if ( value >= 0)
+        	_age = value;
+        else 
+          _age = 0;
+      }
+    }
+
+    public Animal()
+    {
+        _name = "未命名";
+        Color = "黑色";
+        Age = 3;
+    }
+  
+  	public Animal(string name,string color, int age)
+    {
+       _name = name;
+       Color=color;
+       Age= age;
+       Console.WriteLine($"父类初始化完毕");
+    }
+  
+    public void Sleep()
+    {
+        Console.WriteLine($"{_name}今天睡了 5 小时。");
+    }
+}
+
+// 子类：Dog
+class Dog : Animal
+{
+  public Dog(string name,string color, int age):base(name,color,age){
+    Console.WriteLine("子类初始化完毕");
+  }
+    
+    public void MakeSound()
+    {
+        Console.WriteLine("汪汪");
+    }
+}
+
+// 入口类
+class Program
+{
+    static void Main()
+    {
+      	Animal a1 = new Animal("旺财","黄色",3);
+      	a1.Sleep();
+      
+        Dog d1 = new Dog("来福","黑色",5);
+        Console.WriteLine(d1.Name);   // 问：这里为什么输出空？
+        Console.WriteLine(d1.Age);    // 输出：
+        Console.WriteLine(d1.Color);  // 输出：
+        d1.Sleep();                   // 输出：
+        d1.MakeSound();               // 新增：
+    }
+}
+```
+
 
 #### **5. 完整属性 (Full Properties)**
 

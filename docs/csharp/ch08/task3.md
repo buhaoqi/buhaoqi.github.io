@@ -854,3 +854,169 @@ s1.GetArea(); // 执行子类的GetArea（输出：矩形面积：15.00）
    - 父类引用想访问子类成员，需先强制类型转换（`(Rectangle)s1`）。
 
 简单记：**引用类型决定“能访问什么”，实例类型决定“执行什么逻辑”**（重写方法）。
+
+
+## 多态: new 隐藏成员
+
+`new` 关键字的核心作用是**隐藏父类的同名成员**，而非抽象重写，这和 `abstract+override` 的设计逻辑完全不同。
+
+### 先说明核心逻辑变化
+
+- `abstract` 是「强制子类实现」，父类只定义规则；
+- `new` 是「子类重新定义同名成员，隐藏父类版本」，父类可以有默认实现，子类可选隐藏（非强制）。
+
+### 修正+重构后的完整代码
+
+```csharp
+using System;
+
+// 普通基类（不再是抽象类）：定义图形的通用模板
+class Shape
+{
+    // 普通属性（有实现，不再是抽象属性）
+    public string Name { get; set; }
+
+    // 构造函数（修正原代码的参数名大小写错误）
+    public Shape(string name)
+    {
+        Name = name; // 原代码写的是 Name = name，参数名和属性名区分大小写
+    }
+
+    // 普通方法（有默认实现，不再是抽象方法）
+    // 父类提供默认的面积计算逻辑（这里返回0，子类用new隐藏）
+    public double GetArea()
+    {
+        Console.WriteLine("这是Shape基类的GetArea方法");
+        return 0;
+    }
+}
+
+// 矩形类：继承自Shape，用new隐藏父类的GetArea方法
+class Rectangle : Shape
+{
+    // 矩形特有的字段
+    private double _width;
+    private double _height;
+
+    // 属性（修正原代码的语法错误：Height属性嵌套在Width里的问题）
+    public double Width
+    {
+        get { return _width; }
+        set
+        {
+            if (value < 0) throw new ArgumentException("宽度不能为负数");
+            _width = value;
+        }
+    }
+
+    public double Height
+    {
+        get { return _height; }
+        set
+        {
+            if (value < 0) throw new ArgumentException("高度不能为负数");
+            _height = value;
+        }
+    }
+
+    // 构造函数
+    public Rectangle(string name, double width, double height) : base(name)
+    {
+        Width = width;
+        Height = height;
+    }
+
+    // 用new关键字隐藏父类的GetArea方法
+    public new double GetArea()
+    {
+        return Width * Height;
+    }
+}
+
+// 圆形类：继承自Shape，用new隐藏父类的GetArea方法
+class Circle : Shape
+{
+    // 字段：圆形半径（修正原代码的privae拼写错误）
+    private double _radius;
+
+    // 属性
+    public double Radius
+    {
+        get { return _radius; }
+        set
+        {
+            if (value < 0) throw new ArgumentException("半径不能为负数");
+            _radius = value;
+        }
+    }
+
+    // 构造函数
+    public Circle(string name, double radius) : base(name)
+    {
+        Radius = radius;
+    }
+
+    // 用new关键字隐藏父类的GetArea方法
+    public new double GetArea()
+    {
+        return Math.PI * Math.Pow(Radius, 2);
+    }
+}
+
+// 使用类
+class Program
+{
+    static void Main()
+    {
+        // 注意：用new隐藏时，变量类型决定调用哪个版本的方法
+        // 1. 变量类型为子类：调用子类new的方法
+        Rectangle rectangle = new Rectangle("长方形", 5, 3);
+        Console.WriteLine($"{rectangle.Name}的面积：{rectangle.GetArea():F2}");
+
+        // 2. 变量类型为父类：调用父类的原始方法（这是new和override的核心区别）
+        Shape circle = new Circle("圆形", 4);
+        Console.WriteLine($"{circle.Name}的面积：{circle.GetArea():F2}");
+
+        // 3. 强制转换为子类：才能调用子类new的方法
+        Circle circle2 = (Circle)circle;
+        Console.WriteLine($"{circle2.Name}的面积（子类调用）：{circle2.GetArea():F2}");
+
+        // 暂停控制台
+        Console.ReadKey();
+    }
+}
+```
+
+### 关键修改点和解释
+
+1. **父类 `Shape` 的修改**：
+
+   - 移除 `abstract` 修饰符，变成普通类；
+   - 抽象属性 `Name` 改为普通可读写属性；
+   - 抽象方法 `GetArea()` 改为普通方法，添加默认实现（返回0）；
+   - 修正构造函数参数名错误（原代码 `Name = name` 是笔误，参数名应该小写 `name`）。
+
+2. **子类的核心修改**：
+
+   - 移除 `override` 关键字，替换为 `new` 关键字，用于隐藏父类的 `GetArea()` 方法；
+   - 修正原代码的语法错误：
+     - `Rectangle` 中 `Height` 属性嵌套在 `Width` 里的问题；
+     - `Circle` 中 `privae` 拼写错误（正确是 `private`）；
+     - 缺少分号、参数校验的语法问题。
+
+3. **`new` 关键字的核心特性（重点）**：
+
+   - 调用哪个版本的 `GetArea()` 由**变量的声明类型**决定，而非实际对象类型：
+     - `Rectangle rectangle = new Rectangle()`：调用子类 `new` 的方法；
+     - `Shape circle = new Circle()`：调用父类的原始方法（这和 `override` 完全不同，`override` 会调用子类实现）；
+     - 必须强制转换为子类类型（`(Circle)circle`），才能调用子类 `new` 的方法。
+
+4. **运行结果示例**：
+
+   ```
+   长方形的面积：15.00
+   这是Shape基类的GetArea方法
+   圆形的面积：0.00
+   圆形的面积（子类调用）：50.27
+   ```
+
