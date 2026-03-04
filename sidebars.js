@@ -368,9 +368,6 @@ const sidebars = {
         'csharp/ch11/overview', // 概述
         'csharp/ch11/task1', // 任务一
         'csharp/ch11/task2', // 任务二 
-        'csharp/ch11/task3', // 任务三 
-        'csharp/ch11/task4', // 任务一
-        'csharp/ch11/task5', // 任务二 
       ],
     },
   ],
