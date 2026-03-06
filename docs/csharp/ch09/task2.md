@@ -48,8 +48,97 @@ Chars、Length，掌握String类的方法： Equals、Compare、Contains、Conc
 |------------|----------------------------------------------------------------------|
 | **用途**   | 比较两个字符串的大小（按Unicode编码值），返回整数表示比较结果         |
 | **语法**   | 1. `string.Compare(string str1, string str2)`；<br />2. `string.Compare(string str1, string str2, bool ignoreCase)` |
-| **参数**   | - str1/str2：待比较的字符串；<br />- ignoreCase：是否忽略大小写（bool） |
+| **参数**   | - str1/str2：待比较的字符串；<br />- ignoreCase：是否忽略大小写（bool） true: 忽略  false: 不忽略(默认值) |
 | **注意事项** | 1. 返回值规则：<br />  `-` 小于0：str1 `<` str2；<br />  - 等于0：str1 = str2；<br />  `-` 大于0：str1 `>` str2；<br />2. 区分大小写时，大写字母编码值小于小写（如"A"`<`"a"）；<br />3. `null`视为小于任何非空字符串。 |
+
+#### `String.Compare` 和 `String.CompareTo`
+先通过一张表直观对比两者的核心差异：
+
+| 特性                | `String.Compare`（静态方法）                          | `String.CompareTo`（实例方法）                        |
+|---------------------|-------------------------------------------------------|-------------------------------------------------------|
+| 方法类型            | 静态方法（通过 `string` 类直接调用）                   | 实例方法（通过字符串对象调用）                        |
+| 空值处理            | 支持比较 `null`（不会抛异常）                         | 调用者为 `null` 会抛 `NullReferenceException`         |
+| 参数灵活性          | 支持 2-3 个参数（可指定是否忽略大小写/文化规则）       | 仅支持 1 个参数（只能按默认规则比较）                 |
+| 调用方式            | `string.Compare(str1, str2)`                          | `str1.CompareTo(str2)`                                |
+| 底层逻辑            | 可封装 `CompareTo`，支持更多扩展规则                  | 核心的基础比较逻辑，严格按 Unicode 编码值逐字符对比   |
+
+#### 二、具体用法与示例
+##### 1. `String.Compare`（静态方法）
+- **核心特点**：灵活、安全，支持自定义比较规则（忽略大小写/文化），能处理 `null`。
+- **返回值规则**：和之前讲的一致（负数：str1`<str2；0：相等；正数：str1>`str2）。
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string str1 = null;
+        string str2 = "abc";
+        
+        // 1. 基础比较（支持 null，不会报错）
+        int result1 = string.Compare(str1, str2);
+        Console.WriteLine(result1); // 输出 -1（null 被视为小于任何非空字符串）
+        
+        // 2. 忽略大小写比较（灵活扩展）
+        int result2 = string.Compare("ABC", "abc", StringComparison.OrdinalIgnoreCase);
+        Console.WriteLine(result2); // 输出 0
+        
+        // 3. 两个非空字符串默认比较
+        int result3 = string.Compare("ABC#", "ABCD");
+        Console.WriteLine(result3); // 输出 -1（#(35) < D(68)）
+    }
+}
+```
+
+##### 2. `String.CompareTo`（实例方法）
+- **核心特点**：简洁、基础，只能按默认规则（区分大小写、序数比较）比较，调用者不能为 `null`。
+- **返回值规则**：和 `Compare` 完全一致，但调用者为 `null` 会直接抛异常。
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string str1 = "ABC#";
+        string str2 = "ABCD";
+        string str3 = null;
+        
+        // 1. 正常调用（实例非 null）
+        int result1 = str1.CompareTo(str2);
+        Console.WriteLine(result1); // 输出 -1（和 Compare 结果一致）
+        
+        // 2. 调用者为 null（会抛 NullReferenceException）
+        // int result2 = str3.CompareTo(str2); // 运行报错！
+        
+        // 3. 参数为 null（不会报错，实例非 null 时，非空字符串 > null）
+        int result3 = str1.CompareTo(null);
+        Console.WriteLine(result3); // 输出 1
+    }
+}
+```
+
+#### 三、底层关联
+- `String.Compare` 是对 `CompareTo` 的**封装和扩展**：当你用 `string.Compare(str1, str2)`（无第三个参数）时，底层其实就是调用 `str1?.CompareTo(str2) ?? (str2 == null ? 0 : -1)`（处理 null 后调用 CompareTo）。
+- `CompareTo` 是**最基础的比较逻辑**：所有字符串的大小对比最终都会落到 `CompareTo` 上，它严格遵循 Unicode 编码值逐字符对比，没有任何扩展规则。
+
+#### 四、使用场景建议
+- 用 `String.Compare`：
+  - 需要忽略大小写/指定文化规则时；
+  - 比较的字符串可能为 `null` 时；
+  - 想更灵活控制比较规则时。
+- 用 `String.CompareTo`：
+  - 确定两个字符串都非 `null` 时；
+  - 只需默认规则（区分大小写）比较时；
+  - 代码追求简洁（少写 `string.` 前缀）时。
+
+#### 总结
+1. **方法类型与灵活性**：`Compare` 是静态方法，支持 null、可自定义比较规则；`CompareTo` 是实例方法，调用者不能为 null，仅支持默认规则。
+2. **底层逻辑**：`Compare` 封装了 `CompareTo`，基础比较逻辑完全一致，返回值规则相同。
+3. **使用选择**：优先用 `Compare`（更安全、灵活），仅当确定字符串非 null 且只需默认比较时用 `CompareTo`。
 
 ### 3. Contains
 | 项         | 说明                                                                 |
