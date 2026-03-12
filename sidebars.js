@@ -218,7 +218,9 @@ const sidebars = {
           collapsed: true,
           items: [
             'csharp/ch04/task3/loop-for', // for循环
+            'csharp/ch04/task3/exercise-for', // 练习题（单独的文档项）
             'csharp/ch04/task3/loop-while', // while循环
+            'csharp/ch04/task3/exercise-while', // 练习题（单独的文档项）
           ],
         },
         // 任务四 跳转语句（二级分类，带子项）
@@ -232,7 +234,6 @@ const sidebars = {
             'csharp/ch04/task4/continue-statement', // continue语句
           ],
         },
-        'csharp/ch04/exercise', // 练习题（单独的文档项）
       ],
     },
 
