@@ -171,7 +171,16 @@ const config = {
           //   ]
           // },
          
-          // 2. MySQL教程 (docSidebar类型) - 靠左
+          // 2. C#课件 (docSidebar类型) - 靠左
+          {
+            type: 'docSidebar',
+            sidebarId: 'csharpTutorials',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: 'C#课件',
+            // 可选：设置默认打开的文档
+            docId: 'csharptutorials/index',
+          },
+          // 3. MySQL教程 (docSidebar类型) - 靠左
           {
             type: 'docSidebar',
             sidebarId: 'mysqlSidebar',  // 需要在sidebars.js中定义
@@ -181,7 +190,7 @@ const config = {
             docId: 'mysql/intro',
           },
           
-          // 3. 网址导航 (doc类型) - 靠左
+          // 4. 网址导航 (doc类型) - 靠左
           {
             type: 'doc',
             docId: 'bookmarks/intro',  // 对应 docs/website-guide/intro.md

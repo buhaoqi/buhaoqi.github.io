@@ -373,6 +373,45 @@ const sidebars = {
     },
   ],
   // ============ 新增的 MySQL 教程侧边栏 ============
+  csharpTutorials: [
+     {
+      type: 'doc',
+      id: 'csharp-tutorials/index',  // 确保 docs/mysql/intro.md 存在
+      label: '首页',
+    },
+    // 2026 年 3 月
+    {
+      type: 'category',
+      label: '2026年 3 月',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp-tutorials/0306', // 
+        'csharp-tutorials/0307', // 
+        'csharp-tutorials/0308', // 
+        'csharp-tutorials/0309', //
+        'csharp-tutorials/0310', //
+        'csharp-tutorials/0311', //
+        'csharp-tutorials/0312', //
+        'csharp-tutorials/0313', // 
+        'csharp-tutorials/0314', // 
+        'csharp-tutorials/0315', // 
+        'csharp-tutorials/0316', // 
+        'csharp-tutorials/0317', // 
+        'csharp-tutorials/0318', // 
+        'csharp-tutorials/0323', // 
+        'csharp-tutorials/0324', // 
+        'csharp-tutorials/0325', // 
+        'csharp-tutorials/0326', // 
+        'csharp-tutorials/0327', // 
+        'csharp-tutorials/0328', //
+        'csharp-tutorials/0329', // 
+        'csharp-tutorials/0330', // 
+        'csharp-tutorials/0331', // 
+      ],
+    },
+  ],
+  // ============ 新增的 MySQL 教程侧边栏 ============
   mysqlSidebar: [
     {
       type: 'doc',
