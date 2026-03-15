@@ -11,6 +11,7 @@ slug: /bookmarks/intro
 ## AI工具
 
 - [https://fogsight.ai/](https://fogsight.ai/) 雾象：创建各种动画
+- [https://www.xfun.design/homePage](https://www.xfun.design/homePage) LOGO 生成
 
 ## 在线编辑器
 
