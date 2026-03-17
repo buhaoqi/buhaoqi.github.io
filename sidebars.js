@@ -135,6 +135,7 @@ const sidebars = {
             'csharp/ch03/task1/type-struct', // 
             'csharp/ch03/task1/type-enum', // 
             'csharp/ch03/task1/type-string', // 
+            'csharp/ch03/task1/type-tuple', // 
             'csharp/ch03/task1/type-alias', // 
             'csharp/ch03/task1/implicit-convention', // 
             'csharp/ch03/task1/brace', // 
