@@ -387,6 +387,16 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
+        'csharp-tutorials/0101', // 
+        'csharp-tutorials/0102', // 
+        'csharp-tutorials/0103', // 
+        'csharp-tutorials/0104', // 
+        'csharp-tutorials/0105', // 
+        'csharp-tutorials/0106', // 
+        'csharp-tutorials/0107', // 
+        'csharp-tutorials/0108', // 
+        'csharp-tutorials/0109', // 
+        'csharp-tutorials/0110', // 
         'csharp-tutorials/0306', // 
         'csharp-tutorials/0307', // 
         'csharp-tutorials/0308', // 
