@@ -383,42 +383,105 @@ const sidebars = {
     // 2026 年 3 月
     {
       type: 'category',
+      label: '2026年 1 月',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp-tutorials/202601/0101', // 
+        'csharp-tutorials/202601/0102', // 
+        'csharp-tutorials/202601/0103', // 
+        'csharp-tutorials/202601/0104', // 
+        'csharp-tutorials/202601/0105', // 
+        'csharp-tutorials/202601/0106', // 
+        'csharp-tutorials/202601/0107', // 
+        'csharp-tutorials/202601/0108', // 
+        'csharp-tutorials/202601/0109', // 
+        'csharp-tutorials/202601/0110', // 
+      ],
+    },
+    // 2026 年 3 月
+    {
+      type: 'category',
+      label: '2026年 2 月',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp-tutorials/202602/0201', // 
+        'csharp-tutorials/202602/0202', // 
+        'csharp-tutorials/202602/0203', // 
+        'csharp-tutorials/202602/0204', // 
+        'csharp-tutorials/202602/0205', // 
+        'csharp-tutorials/202602/0206', // 
+        'csharp-tutorials/202602/0207', // 
+        'csharp-tutorials/202602/0208', // 
+        'csharp-tutorials/202602/0209', // 
+        'csharp-tutorials/202602/0210', // 
+      ],
+    },
+    // 2026 年 3 月
+    {
+      type: 'category',
       label: '2026年 3 月',
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp-tutorials/0101', // 
-        'csharp-tutorials/0102', // 
-        'csharp-tutorials/0103', // 
-        'csharp-tutorials/0104', // 
-        'csharp-tutorials/0105', // 
-        'csharp-tutorials/0106', // 
-        'csharp-tutorials/0107', // 
-        'csharp-tutorials/0108', // 
-        'csharp-tutorials/0109', // 
-        'csharp-tutorials/0110', // 
-        'csharp-tutorials/0306', // 
-        'csharp-tutorials/0307', // 
-        'csharp-tutorials/0308', // 
-        'csharp-tutorials/0309', //
-        'csharp-tutorials/0310', //
-        'csharp-tutorials/0311', //
-        'csharp-tutorials/0312', //
-        'csharp-tutorials/0313', // 
-        'csharp-tutorials/0314', // 
-        'csharp-tutorials/0315', // 
-        'csharp-tutorials/0316', // 
-        'csharp-tutorials/0317', // 
-        'csharp-tutorials/0318', // 
-        'csharp-tutorials/0323', // 
-        'csharp-tutorials/0324', // 
-        'csharp-tutorials/0325', // 
-        'csharp-tutorials/0326', // 
-        'csharp-tutorials/0327', // 
-        'csharp-tutorials/0328', //
-        'csharp-tutorials/0329', // 
-        'csharp-tutorials/0330', // 
-        'csharp-tutorials/0331', // 
+        'csharp-tutorials/202603/0306', // 
+        'csharp-tutorials/202603/0307', // 
+        'csharp-tutorials/202603/0308', // 
+        'csharp-tutorials/202603/0309', //
+        'csharp-tutorials/202603/0310', //
+        'csharp-tutorials/202603/0311', //
+        'csharp-tutorials/202603/0312', //
+        'csharp-tutorials/202603/0313', // 
+        'csharp-tutorials/202603/0314', // 
+        'csharp-tutorials/202603/0315', // 
+        'csharp-tutorials/202603/0316', // 
+        'csharp-tutorials/202603/0317', // 
+        'csharp-tutorials/202603/0318', // 
+        'csharp-tutorials/202603/0323', // 
+        'csharp-tutorials/202603/0324', // 
+        'csharp-tutorials/202603/0325', // 
+        'csharp-tutorials/202603/0326', // 
+        'csharp-tutorials/202603/0327', // 
+        'csharp-tutorials/202603/0328', //
+        'csharp-tutorials/202603/0329', // 
+        'csharp-tutorials/202603/0330', // 
+        'csharp-tutorials/202603/0331', // 
+      ],
+    },
+    // 2026 年 4 月
+    {
+      type: 'category',
+      label: '2026年 4 月',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp-tutorials/202604/0401', // 
+        'csharp-tutorials/202604/0402', // 
+        'csharp-tutorials/202604/0403', // 
+        'csharp-tutorials/202604/0404', // 
+        'csharp-tutorials/202604/0405', // 
+        'csharp-tutorials/202604/0406', // 
+        'csharp-tutorials/202604/0407', // 
+        'csharp-tutorials/202604/0408', // 
+        'csharp-tutorials/202604/0409', // 
+        'csharp-tutorials/202604/0410', // 
+        'csharp-tutorials/202604/0411', // 
+        'csharp-tutorials/202604/0412', // 
+        'csharp-tutorials/202604/0413', // 
+        'csharp-tutorials/202604/0414', // 
+        'csharp-tutorials/202604/0415', // 
+        'csharp-tutorials/202604/0416', // 
+        'csharp-tutorials/202604/0417', // 
+        'csharp-tutorials/202604/0418', // 
+        'csharp-tutorials/202604/0423', // 
+        'csharp-tutorials/202604/0424', // 
+        'csharp-tutorials/202604/0425', // 
+        'csharp-tutorials/202604/0426', // 
+        'csharp-tutorials/202604/0427', // 
+        'csharp-tutorials/202604/0428', //
+        'csharp-tutorials/202604/0429', // 
+        'csharp-tutorials/202604/0430', // 
       ],
     },
   ],
