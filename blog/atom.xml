@@ -2,11 +2,101 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buhaoqi.github.io/blog</id>
     <title>河北对口高考计算机专业 Blog</title>
-    <updated>2026-03-19T00:00:00.000Z</updated>
+    <updated>2026-03-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buhaoqi.github.io/blog"/>
     <subtitle>河北对口高考计算机专业 Blog</subtitle>
     <icon>https://buhaoqi.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[First Blog Post]]></title>
+        <id>https://buhaoqi.github.io/blog/what-is-nuget</id>
+        <link href="https://buhaoqi.github.io/blog/what-is-nuget"/>
+        <updated>2026-03-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[如果你刚开始学习 C# 和 .NET，一定会频繁遇到一个词——NuGet。它几乎是每个 .NET 项目都离不开的工具。那么，NuGet 究竟是什么？这个奇怪的名字又是怎么来的？这篇文章将一次性讲清楚。]]></summary>
+        <content type="html"><![CDATA[<p>如果你刚开始学习 C# 和 .NET，一定会频繁遇到一个词——<strong>NuGet</strong>。它几乎是每个 .NET 项目都离不开的工具。那么，NuGet 究竟是什么？这个奇怪的名字又是怎么来的？这篇文章将一次性讲清楚。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一nuget-是什么">一、NuGet 是什么？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%80nuget-%E6%98%AF%E4%BB%80%E4%B9%88" class="hash-link" aria-label="Direct link to 一、NuGet 是什么？" title="Direct link to 一、NuGet 是什么？" translate="no">​</a></h2>
+<p>NuGet 是 <strong>.NET 平台的包管理器</strong>。通俗地说，它就是一个 <strong>“代码超市”</strong>。</p>
+<p>在开发软件时，很多常见功能（比如解析 JSON、操作 Excel、连接数据库）其实不需要你从头编写。社区和微软已经提供了大量高质量、经过测试的代码库（称为“包”）。NuGet 的任务就是帮你 <strong>找到、下载、安装、更新</strong> 这些包，并自动处理它们之间的依赖关系。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nuget-的核心功能">NuGet 的核心功能<a href="https://buhaoqi.github.io/blog/what-is-nuget#nuget-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD" class="hash-link" aria-label="Direct link to NuGet 的核心功能" title="Direct link to NuGet 的核心功能" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p><strong>安装第三方库</strong><br>
+<!-- -->假设你需要处理 JSON 数据。如果没有 NuGet，你需要去官网下载 <code>Newtonsoft.Json.dll</code>，手动复制到项目文件夹，再添加引用。而有了 NuGet，你只需在 Visual Studio 中打开“管理 NuGet 程序包”，搜索 <code>Newtonsoft.Json</code>，点击“安装”，一切自动完成。</p>
+</li>
+<li class="">
+<p><strong>自动管理依赖</strong><br>
+<!-- -->一个包可能依赖其他包。例如，安装 <code>A</code> 包时，如果它需要 <code>B</code> 包，NuGet 会自动把 <code>B</code> 也下载并配置好，无需你手动干预。</p>
+</li>
+<li class="">
+<p><strong>版本控制</strong><br>
+<!-- -->你可以精确指定要安装的版本（如 <code>1.0.0</code> 或 <code>2.0.0</code>）。当包有新版本时，NuGet 会提示你更新，且可以轻松回退。</p>
+</li>
+<li class="">
+<p><strong>统一仓库</strong><br>
+<!-- -->全球的 .NET 开发者都将自己的包发布到 NuGet 官方仓库 <a href="https://www.nuget.org/" target="_blank" rel="noopener noreferrer" class="">nuget.org</a> 上。目前该仓库已拥有超过 30 万个包，总下载量数十亿次。</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何使用-nuget">如何使用 NuGet？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-nuget" class="hash-link" aria-label="Direct link to 如何使用 NuGet？" title="Direct link to 如何使用 NuGet？" translate="no">​</a></h3>
+<p>在 Visual Studio 中，最简单的方式是：</p>
+<ul>
+<li class="">右键单击项目 → “管理 NuGet 程序包”</li>
+<li class="">在“浏览”选项卡中搜索你需要的包</li>
+<li class="">选择版本，点击“安装”</li>
+</ul>
+<p>如果你习惯命令行，可以在“程序包管理器控制台”或终端中执行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Install-Package Newtonsoft.Json</span><br></span></code></pre></div></div>
+<p>对于 .NET Core / .NET 5+ 项目，还可以使用 <code>dotnet</code> 命令：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dotnet add package Newtonsoft.Json</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二nuget-这个名字的来历">二、“NuGet” 这个名字的来历<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%BA%8Cnuget-%E8%BF%99%E4%B8%AA%E5%90%8D%E5%AD%97%E7%9A%84%E6%9D%A5%E5%8E%86" class="hash-link" aria-label="Direct link to 二、“NuGet” 这个名字的来历" title="Direct link to 二、“NuGet” 这个名字的来历" translate="no">​</a></h2>
+<p>“NuGet” 是一个生造的单词，但它背后有一段有趣的故事。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="从-nupack-到-nuget">从 NuPack 到 NuGet<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%BB%8E-nupack-%E5%88%B0-nuget" class="hash-link" aria-label="Direct link to 从 NuPack 到 NuGet" title="Direct link to 从 NuPack 到 NuGet" translate="no">​</a></h3>
+<p>NuGet 最初的名字叫 <strong>NuPack</strong>（New Package 的缩写），意为“新包”。它在 2010 年由微软的团队开发，旨在为 .NET 提供一个官方的包管理工具。</p>
+<p>然而，在发布前夕，团队发现 “NuPack” 这个名称与另一款商业产品重名。为了避免商标纠纷，他们不得不紧急改名。</p>
+<p>在讨论新名字时，团队成员之一提出了 “NuGet” 的建议。这个名字保留了原名的 <strong>“Nu”</strong> 前缀，又用 <strong>“Get”</strong> 替代了 <strong>“Pack”</strong>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="名字的含义">名字的含义<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E5%90%8D%E5%AD%97%E7%9A%84%E5%90%AB%E4%B9%89" class="hash-link" aria-label="Direct link to 名字的含义" title="Direct link to 名字的含义" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong>Nu</strong> = <strong>New</strong>（新）<br>
+<!-- -->在英语中，“Nu” 是 “New” 的谐音或简写。这体现了包管理器的核心理念：获取“新”的代码组件，同时也象征着 .NET 生态的新生。</p>
+</li>
+<li class="">
+<p><strong>Get</strong> = <strong>获取</strong><br>
+<!-- -->直观地表达了工具的功能——从仓库中获取（Get）包。</p>
+</li>
+</ul>
+<p>因此，“NuGet” 的字面意思就是 <strong>“获取新组件”</strong>。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="文化彩蛋希腊字母-νυ">文化彩蛋：希腊字母 Νυ<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E6%96%87%E5%8C%96%E5%BD%A9%E8%9B%8B%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D-%CE%BD%CF%85" class="hash-link" aria-label="Direct link to 文化彩蛋：希腊字母 Νυ" title="Direct link to 文化彩蛋：希腊字母 Νυ" translate="no">​</a></h3>
+<p>也有一种非官方的说法认为，“Nu” 还暗指希腊字母 $\Nu$（Nu）。在科技领域使用希腊字母命名是一种常见做法（如 μTorrent、π 等），这为名字增添了一丝极客色彩。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三nuget-对-net-开发者的意义">三、NuGet 对 .NET 开发者的意义<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%89nuget-%E5%AF%B9-net-%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%84%8F%E4%B9%89" class="hash-link" aria-label="Direct link to 三、NuGet 对 .NET 开发者的意义" title="Direct link to 三、NuGet 对 .NET 开发者的意义" translate="no">​</a></h2>
+<p>对于 C# 学习者来说，NuGet 可以让你站在巨人的肩膀上。无论是做 Web 开发、桌面应用、移动应用，还是游戏开发，你几乎总能找到一个现成的 NuGet 包来快速实现所需功能。</p>
+<p>类比其他语言：</p>
+<ul>
+<li class="">JavaScript 世界：<strong>npm</strong></li>
+<li class="">Python 世界：<strong>pip</strong></li>
+<li class="">Java 世界：<strong>Maven</strong></li>
+<li class="">.NET 世界：<strong>NuGet</strong></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 总结" title="Direct link to 总结" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>NuGet 是什么</strong>：.NET 的包管理器，帮你下载、安装、管理第三方代码库。</li>
+<li class=""><strong>名字由来</strong>：从 “NuPack” 改名而来，“Nu” 代表 “New”，“Get” 代表获取，合起来就是“获取新组件”，简洁地表达了工具的核心功能。</li>
+</ul>
+<p>下次当你需要在项目中引用一个第三方库时，记得去 NuGet 超市逛一逛，你会发现那里几乎有你想要的一切。</p>]]></content>
+        <author>
+            <name>Sébastien Lorber</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <author>
+            <name>Yangshun Tay</name>
+            <uri>https://linkedin.com/in/yangshun</uri>
+        </author>
+        <category label="Hola" term="Hola"/>
+        <category label="Docusaurus" term="Docusaurus"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C#程序的书写规范]]></title>
         <id>https://buhaoqi.github.io/blog/code-normal</id>
