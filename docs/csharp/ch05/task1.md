@@ -25,7 +25,7 @@ sidebar_position: 2  # 侧边栏中排在第1位
 2.窗体是一个类
 > 窗体是一种容器类对象。
 >
-> 窗体使用 System.Windows.Forms 命名控件定义 Form 类
+> 窗体使用 System.Windows.Forms 命名空间定义 Form 类
 >
 > 每实例化一个窗体类，就产生一个窗体。
 
