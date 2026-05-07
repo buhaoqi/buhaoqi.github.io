@@ -298,15 +298,15 @@ const sidebars = {
       collapsed: false,
       items: [
           'csharp/ch07/overview', // 概述
-          'csharp/ch07/class', // 任务一 
-          'csharp/ch07/modifiers', // 任务四 
-          'csharp/ch07/fields', // 任务二 
-          'csharp/ch07/property', // 任务五
-          'csharp/ch07/constructor', // 任务三 
-          'csharp/ch07/this', // 任务六
-          'csharp/ch07/what-method-is', // 任务一 
-          'csharp/ch07/parameters', // 任务二 
-          'csharp/ch07/reload', // 任务三 
+          'csharp/ch07/class_basics/class', // 任务一 
+          'csharp/ch07/class_basics/modifiers', // 任务四 
+          'csharp/ch07/class_basics/fields', // 任务二 
+          'csharp/ch07/class_basics/property', // 任务五
+          'csharp/ch07/class_basics/constructor', // 任务三 
+          'csharp/ch07/class_basics/this', // 任务六
+          'csharp/ch07/method_basics/what-method-is', // 任务一 
+          'csharp/ch07/method_basics/parameters', // 任务二 
+          'csharp/ch07/method_basics/reload', // 任务三 
           'csharp/ch07/exercise1', // 任务四
           'csharp/ch07/exercise2', // 任务五
         ],

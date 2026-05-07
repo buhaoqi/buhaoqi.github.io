@@ -161,7 +161,7 @@ public int Add(int num1, int num2)
 
 ### 2.方法头
 
-![方法头](./images/methods-constructure.png)
+![方法头](../images/methods-constructure.png)
 
 方法头指定方法的特征。包括：
 
@@ -169,7 +169,7 @@ public int Add(int num1, int num2)
 - 方法的名称；
 - 哪种类型的数据可以传递给方法或从方法返回，以及应如何处理这些数据。
 
-![方法头](./images/methods-head.png)
+![方法头](../images/methods-head.png)
 
 示例
 
@@ -194,7 +194,7 @@ void MyMethod()
 - 方法调用
 - 内嵌的块
 
-![方法头](./images/methods-body.png)
+![方法头](../images/methods-body.png)
 
 ## 四、调用方法的语法
 
@@ -383,7 +383,7 @@ class Program
 
 ## 七、修饰符
 
-见: [修饰符](./modifiers.md)
+见: [修饰符](../class_basics/modifiers.md)
 
 ## 八、返回值类型
 **返回值类型（Return Type）** 决定了方法执行完毕后返回的结果值的数据类型。
@@ -502,7 +502,7 @@ public int Square(int x) => x * x;
 
 ## 九、参数列表
 
-见: [参数列表](./parameters.md)
+见: [参数列表](../class_basics/parameters.md)
 
 
 
