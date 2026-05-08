@@ -502,7 +502,7 @@ public int Square(int x) => x * x;
 
 ## 九、参数列表
 
-见: [参数列表](../class_basics/parameters.md)
+见: [参数列表](./parameters.md)
 
 
 
