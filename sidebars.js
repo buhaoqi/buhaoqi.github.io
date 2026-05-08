@@ -297,13 +297,14 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-          'csharp/ch07/overview', // 概述
+          'csharp/ch07/class_basics/overview-class', // 概述
           'csharp/ch07/class_basics/class', // 任务一 
           'csharp/ch07/class_basics/modifiers', // 任务四 
           'csharp/ch07/class_basics/fields', // 任务二 
           'csharp/ch07/class_basics/property', // 任务五
           'csharp/ch07/class_basics/constructor', // 任务三 
           'csharp/ch07/class_basics/this', // 任务六
+          'csharp/ch07/method_basics/overview-method', // 概述
           'csharp/ch07/method_basics/what-method-is', // 任务一 
           'csharp/ch07/method_basics/parameters', // 任务二 
           'csharp/ch07/method_basics/reload', // 任务三 

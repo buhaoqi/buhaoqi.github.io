@@ -5,7 +5,15 @@ sidebar_label: 概述  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 1  # 侧边栏中排在第1位
 ---
 
-## 考点
+## 对口升学考试大纲：
+
+```
+9．掌握C#语言的流程控制语句：
+顺序结构语句、赋值语句、输入输出语句、复合语句；
+条件语句：if…else、switch…case
+循环语句：for、while、do…while 
+跳转语句：break、continue
+```
 
 算法与程序基础
 
