@@ -10,7 +10,7 @@ slug: /bookmarks/intro
 
 - [https://www.bebingocard.com](https://www.bebingocard.com)
 - [https://bewildcard.com/service](https://bewildcard.com/service)
-
+- [AI 充值](https://bewild.ai/)
 
 ## AI工具
 

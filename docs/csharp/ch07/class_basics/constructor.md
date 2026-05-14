@@ -935,3 +935,397 @@ class Program
 ```
 
 **要点：** 对象初始化器 `{}` 适合简化赋值操作；构造函数适合执行逻辑初始化。
+
+
+
+完全理解你的感受！很多初学者练习题要么太简单（比如只让写一个构造函数打印一句话），要么脱离实际。下面给你**3道循序渐进、真正锻炼思维的构造函数练习题**，每道题都有明确的输入输出示例，并且覆盖了笔试面试中的高频考点。
+
+---
+
+## 练习题 1：图书类（基础：构造函数重载 + 默认值）
+
+**题目描述**  
+创建一个 `Book` 类，包含三个私有字段：
+- `title`（标题，字符串）
+- `author`（作者，字符串）
+- `price`（价格，浮点数）
+
+**要求**：
+1. 编写两个构造函数：
+   - 无参构造函数：标题设为 `"未知书名"`，作者设为 `"佚名"`，价格设为 `0.0`
+   - 带参构造函数：接收标题、作者、价格三个参数，用它们初始化字段。
+2. 编写一个 `ShowInfo()` 方法，输出书的信息，格式如：`《红楼梦》曹雪芹 ￥59.8`
+3. 在 `Main` 中分别使用两个构造函数创建对象，并调用 `ShowInfo()`。
+
+**示例输出**：
+```
+《未知书名》佚名 ￥0.0
+《三体》刘慈欣 ￥68.0
+```
+
+**考察点**：  
+- 构造函数重载  
+- `this` 的隐式使用（区分字段和参数）  
+- 默认值的设置  
+
+---
+
+## 练习题 2：学生类（中级：`this` 调用 + 参数校验）
+
+**题目描述**  
+创建一个 `Student` 类，包含：
+- `name`（姓名，string）
+- `age`（年龄，int，要求 0~120）
+- `score`（成绩，double，0~100）
+
+**要求**：
+1. 提供三个构造函数：
+   - 无参构造函数：调用 “只传姓名” 的构造函数，姓名设为 `"新生"`。
+   - 构造函数 `Student(string name)`：调用 `Student(name, 18, 0)`（年龄默认18，成绩默认0）。
+   - 构造函数 `Student(string name, int age, double score)`：直接初始化所有字段。**在内部必须校验年龄和成绩的有效性**（无效则 age 设为18，score 设为0）。
+2. 编写 `Show()` 方法输出学生信息。
+3. 在 `Main` 中测试以下三种创建方式：
+   - `new Student()`
+   - `new Student("李明")`
+   - `new Student("王芳", 25, 95.5)`
+   - 故意给非法年龄（比如 `new Student("坏蛋", 200, 80)`），观察输出。
+
+**示例输出**：
+```
+姓名:新生, 年龄:18, 成绩:0
+姓名:李明, 年龄:18, 成绩:0
+姓名:王芳, 年龄:25, 成绩:95.5
+姓名:坏蛋, 年龄:18, 成绩:80  (年龄被修正)
+```
+
+**考察点**：  
+- 构造函数链（`this(...)` 调用）  
+- 参数校验与防御性编程  
+- 理解构造函数的执行顺序  
+
+---
+
+## 练习题 3：计数器类（进阶：静态构造函数 + 复制构造函数）
+
+**题目描述**  
+实现一个 `Counter` 类，用于记录计数器的当前值，并附加一个全局最大限制。
+
+**要求**：
+1. 实例字段：`_currentValue`（int，当前计数）。
+2. 静态只读字段：`MaxLimit`（int，所有计数器允许的最大值）。  
+   - 该值通过**静态构造函数**初始化：从配置读取（为了模拟，直接写死在静态构造函数中为 `100`），且不可更改。
+3. 实例构造函数：
+   - `Counter()`：将当前值初始化为 `0`。
+   - `Counter(int initialValue)`：如果 `initialValue > MaxLimit` 则抛出 `ArgumentOutOfRangeException`，否则赋值。
+4. **复制构造函数**：`Counter(Counter other)`，用 other 的当前值初始化新计数器。
+5. 方法：
+   - `Increment()`：当前值加1，不能超过 `MaxLimit`，否则抛出异常。
+   - `GetValue()` 返回当前值。
+6. 在 `Main` 中演示：
+   - 输出 `Counter.MaxLimit`
+   - 创建两个计数器，其中一个通过复制另一个得到
+   - 验证修改复制后的计数器不影响原计数器
+
+**示例输出**（假设 MaxLimit = 100）：
+```
+最大允许值: 100
+原始计数器: 0 -> 递增后: 1
+复制得到的计数器: 1 (独立的对象)
+尝试创建超过限制的计数器抛出异常: 参数 initialValue 不能大于 100
+```
+
+**考察点**：  
+- 静态构造函数的作用与调用时机  
+- 复制构造函数的理解（深拷贝/浅拷贝概念入门）  
+- 异常的基本处理  
+- 静态成员与实例成员的区别  
+
+---
+
+## 为什么这三道题是“经典”？
+
+| 题目 | 核心练习目标 | 常见错误陷阱 |
+|------|-------------|--------------|
+| 图书类 | 构造函数重载 + 默认值 | 忘记在无参构造函数中初始化字段；参数名和字段名冲突 |
+| 学生类 | `this` 调用链 + 参数校验 | 不注意调用顺序导致字段重复赋值；忘记校验边界值 |
+| 计数器类 | 静态构造 + 复制构造 + 业务限制 | 误以为复制构造是引用复制；静态构造被多次调用 |
+
+做完这三道题，你将彻底掌握：
+- 构造函数的各种形态（默认、有参、重载、链式调用、静态、复制）
+- 对象初始化时的常见设计模式
+- 简单的健壮性处理
+
+你可以先把每个题目自己动手写出来，遇到卡壳的地方再对照我提供的**提示**（见下方）。写完再看标准参考答案，进步会非常快！  
+
+<details>
+<summary>👉 点击查看提示（不建议一开始就看）</summary>
+
+**题1提示**：  
+- 字段命名建议用 `_title` 或 `title`，但参数同名时必须用 `this.title = title`。  
+- 无参构造方法体内可以直接调用带参构造并传入默认值，但为了练习，建议手动赋值。
+
+**题2提示**：  
+- 构造函数链写法：  
+  `public Student(string name) : this(name, 18, 0) { }`  
+- 校验逻辑放在最完整的构造函数中（被其他构造最终调用）。
+
+**题3提示**：  
+- 静态构造函数语法：`static Counter() { MaxLimit = 100; }`  
+- 复制构造函数：`public Counter(Counter other) { _currentValue = other._currentValue; }`  
+- 记得判断初始值有效性时使用 `if (initialValue > MaxLimit) throw ...`
+
+</details>
+
+动手试试吧！如果你写完需要我帮你检查或者提供参考答案，随时告诉我。
+
+
+下面是三道练习题的标准答案，每道题都包含完整的类实现和 `Main` 方法演示。建议你写完自己的代码后再对照参考，效果最好。
+
+---
+
+## 答案 1：图书类（构造函数重载 + 默认值）
+
+```csharp
+using System;
+
+public class Book
+{
+    // 私有字段
+    private string title;
+    private string author;
+    private double price;
+
+    // 无参构造函数：设置默认值
+    public Book()
+    {
+        title = "未知书名";
+        author = "佚名";
+        price = 0.0;
+    }
+
+    // 带参构造函数
+    public Book(string title, string author, double price)
+    {
+        this.title = title;   // this 区分字段和参数
+        this.author = author;
+        this.price = price;
+    }
+
+    // 显示信息的方法
+    public void ShowInfo()
+    {
+        Console.WriteLine($"《{title}》{author} ￥{price}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Book book1 = new Book();                     // 使用无参构造
+        Book book2 = new Book("三体", "刘慈欣", 68.0); // 使用带参构造
+
+        book1.ShowInfo();
+        book2.ShowInfo();
+    }
+}
+```
+
+**输出**：
+```
+《未知书名》佚名 ￥0
+《三体》刘慈欣 ￥68
+```
+
+---
+
+## 答案 2：学生类（`this` 调用 + 参数校验）
+
+```csharp
+using System;
+
+public class Student
+{
+    private string name;
+    private int age;
+    private double score;
+
+    // 无参构造函数：调用单参数构造，姓名设为"新生"
+    public Student() : this("新生")
+    {
+    }
+
+    // 单参数构造函数：调用三参数构造，年龄默认18，成绩默认0
+    public Student(string name) : this(name, 18, 0)
+    {
+    }
+
+    // 完整构造函数：包含参数校验
+    public Student(string name, int age, double score)
+    {
+        this.name = name;
+
+        // 校验年龄 (0~120)
+        this.age = (age >= 0 && age <= 120) ? age : 18;
+
+        // 校验成绩 (0~100)
+        this.score = (score >= 0 && score <= 100) ? score : 0;
+    }
+
+    public void Show()
+    {
+        Console.WriteLine($"姓名:{name}, 年龄:{age}, 成绩:{score}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Student s1 = new Student();                 // 无参
+        Student s2 = new Student("李明");           // 单参
+        Student s3 = new Student("王芳", 25, 95.5); // 完整参数
+        Student s4 = new Student("坏蛋", 200, 80);  // 年龄非法
+
+        s1.Show();
+        s2.Show();
+        s3.Show();
+        s4.Show();
+    }
+}
+```
+
+**输出**：
+```
+姓名:新生, 年龄:18, 成绩:0
+姓名:李明, 年龄:18, 成绩:0
+姓名:王芳, 年龄:25, 成绩:95.5
+姓名:坏蛋, 年龄:18, 成绩:80
+```
+
+---
+
+## 答案 3：计数器类（静态构造函数 + 复制构造函数）
+
+```csharp
+using System;
+
+public class Counter
+{
+    // 实例字段
+    private int _currentValue;
+
+    // 静态只读字段
+    public static readonly int MaxLimit;
+
+    // 静态构造函数：初始化 MaxLimit（只执行一次）
+    static Counter()
+    {
+        // 模拟从配置读取，这里直接写死为 100
+        MaxLimit = 100;
+    }
+
+    // 实例构造函数：初始值为 0
+    public Counter()
+    {
+        _currentValue = 0;
+    }
+
+    // 实例构造函数：带初始值，并验证
+    public Counter(int initialValue)
+    {
+        if (initialValue > MaxLimit)
+            throw new ArgumentOutOfRangeException(nameof(initialValue),
+                $"参数 initialValue 不能大于 {MaxLimit}");
+        _currentValue = initialValue;
+    }
+
+    // 复制构造函数
+    public Counter(Counter other)
+    {
+        if (other == null)
+            throw new ArgumentNullException(nameof(other));
+        _currentValue = other._currentValue;
+    }
+
+    // 增加计数
+    public void Increment()
+    {
+        if (_currentValue + 1 > MaxLimit)
+            throw new InvalidOperationException($"当前值已达上限 {MaxLimit}，无法递增");
+        _currentValue++;
+    }
+
+    // 获取当前值
+    public int GetValue()
+    {
+        return _currentValue;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // 输出静态成员
+        Console.WriteLine($"最大允许值: {Counter.MaxLimit}");
+
+        // 创建两个计数器
+        Counter c1 = new Counter();          // 值为 0
+        c1.Increment();                      // 变为 1
+        Console.WriteLine($"原始计数器: {c1.GetValue()}");
+
+        // 复制构造函数
+        Counter c2 = new Counter(c1);
+        Console.WriteLine($"复制得到的计数器: {c2.GetValue()} (独立的对象)");
+
+        // 修改 c2 不影响 c1
+        c2.Increment();   // c2 变为 2
+        Console.WriteLine($"c2 递增后: {c2.GetValue()}, c1 仍然是: {c1.GetValue()}");
+
+        // 测试超出限制的异常
+        try
+        {
+            Counter c3 = new Counter(150);
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            Console.WriteLine($"尝试创建超过限制的计数器抛出异常: {ex.Message}");
+        }
+
+        // 测试递增到超限
+        Counter c4 = new Counter(Counter.MaxLimit);
+        try
+        {
+            c4.Increment();
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine($"尝试递增超过限制: {ex.Message}");
+        }
+    }
+}
+```
+
+**输出示例**（可能因异常消息文本略有不同）：
+```
+最大允许值: 100
+原始计数器: 1
+复制得到的计数器: 1 (独立的对象)
+c2 递增后: 2, c1 仍然是: 1
+尝试创建超过限制的计数器抛出异常: 参数 initialValue 不能大于 100 (Parameter 'initialValue')
+尝试递增超过限制: 当前值已达上限 100，无法递增
+```
+
+---
+
+## 总结
+
+这三道题覆盖了：
+- 基础的重载和默认值
+- 构造函数链（`this` 调用）
+- 参数校验与防御性编程
+- 静态构造函数的执行时机
+- 复制构造函数（值类型拷贝）
+
+认真完成并理解这些代码，你对 C# 构造函数的掌握会更扎实。如果有任何疑问（例如为什么用 `readonly` 而不是 `const`，或者复制构造函数中的深拷贝问题），欢迎继续提问！
