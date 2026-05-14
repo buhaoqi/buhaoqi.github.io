@@ -8,7 +8,6 @@ sidebar_position:  1  # 侧边栏中排在第1位
 
 ## 面向对象编程是什么
 
-
 ## **一、类（Class）是什么？**
 在面向对象编程中：
 
@@ -23,17 +22,34 @@ sidebar_position:  1  # 侧边栏中排在第1位
 - 类是事物的抽象。比如：人类、鸟类都是事物的抽象。
 - 类用来描述一类事物的共性。也就是事物的特征（属性）和行为（方法）
 
-## **二、定义类的语法**
+## 二、类的成员
 
 一个典型的类通常由以下四种成员组成：
 
 1. 字段（Field）：定义类的特征
 2. 属性（Property）：封装字段
-3. 方法（Method）：定义类的行为
-4. 构造函数（Constructor）：初始化类
+3. 构造函数（Constructor）：初始化类
+4. 方法（Method）：定义类的行为
 
 成员共同定义了类的特征和行为。不同类型的成员在面向对象编程中承担不同的角色，这些成员共同构建了类的结构和功能，使其具有自己的特性和行为。
 
+C#类的全部成员类型一共有 13 种：
+
+1. 字段
+2. 常量
+3. 属性
+4. 索引器
+5. 方法
+6. 构造函数
+7. 析构函数
+8. 委托
+9. 事件
+10. 运算符重载
+11. 嵌套类型
+12. 静态构造函数
+13. 继承自 object 的成员
+
+## 三、声明类的语法
 ```csharp
 using System;
 
@@ -72,7 +88,18 @@ class Program
 3. **名词化**：如果类是具体的类型，类名通常使用名词，反映实际世界中的对象。的首字母大写。
 
 
-## 三、对象是什么
+定义类的合法位置
+
+在 C# 中，类（class）能直接定义的合法位置只有两个：
+
+- 命名空间（namespace）内部
+- 类（class）内部（也就是嵌套类）
+
+除此之外，任何其他位置都不允许直接定义类，比如：方法内部、结构体内部、接口内部
+
+直接写在文件顶层（没有 namespace 包裹时，属于全局命名空间，本质还是命名空间下）
+
+## 四、对象是什么
 
 **对象（Object）**：根据类创建的具体实例。它包含了类定义的属性和方法的具体值。比如：
 
@@ -80,7 +107,7 @@ class Program
 - 张三是一个具体的人对象。
 - 李四也是一个具体的人对象。
 
-## **四、创建对象的语法**
+## **五、创建对象的语法**
 
 ```csharp
 using System;
@@ -237,204 +264,6 @@ public class Student
 
 简单说：**编译器不关心顺序，但人关心——好的顺序让你和同事能快速看懂代码**。
 
-
-## 五、什么时候嵌套类？
-### 嵌套类的核心特性
-嵌套类是定义在另一个类（外部类/包含类）内部的类，它的核心特性：
-1. 可以直接访问外部类的**静态成员**，但访问非静态成员需要外部类的实例；
-2. 按访问修饰符（public/private/protected/internal）控制可见性，默认是`private`（仅外部类可访问）；
-3. 逻辑上属于外部类的“附属”，仅与外部类强关联，不适合被其他无关类使用。
-
-### 场景1：为外部类服务的“辅助类”
-当一个类的作用**仅限于辅助外部类完成功能**，且不会被其他类调用时，适合嵌套。（最常用）
-👉 示例（动物叫声的辅助枚举嵌套在Animal类中）：
-```csharp
-using System;
-
-public class Animal
-{
-    // 嵌套枚举：仅Animal类使用的叫声类型，外部无需访问
-    private enum SoundType
-    {
-        Bark,   // 狗叫
-        Meow,   // 猫叫
-        Moo     // 牛叫
-    }
-
-    // 移除属性的箭头语法（改用传统get/set写法，虽然原代码没箭头，但统一基础写法）
-    private string _name;
-    public string Name
-    {
-        get { return _name; }
-        set { _name = value; }
-    }
-
-    // 外部类方法使用嵌套枚举（移除switch表达式的=>，改用传统switch语句）
-    public void MakeSound(SoundType sound)
-    {
-        string soundStr;
-        // 传统switch语句替代switch表达式，无任何箭头语法
-        switch (sound)
-        {
-            case SoundType.Bark:
-                soundStr = "Woof";
-                break;
-            case SoundType.Meow:
-                soundStr = "Meow";
-                break;
-            case SoundType.Moo:
-                soundStr = "Moo";
-                break;
-            default:
-                soundStr = "未知叫声";
-                break;
-        }
-        Console.WriteLine($"{Name}发出了：{soundStr}");
-    }
-
-    // 新增：对外暴露调用入口（解决原Main中无法访问私有枚举的问题，让代码可运行）
-    public void MakeDogSound()
-    {
-        MakeSound(SoundType.Bark);
-    }
-
-    public void MakeCatSound()
-    {
-        MakeSound(SoundType.Meow);
-    }
-
-    public void MakeCowSound()
-    {
-        MakeSound(SoundType.Moo);
-    }
-}
-
-public class Program
-{
-    public static void Main()
-    {
-        Animal dog = new Animal();
-        // 移除对象初始化器的箭头语法（改用传统赋值）
-        dog.Name = "狗";
-        // 调用新增的公开方法，间接使用私有枚举
-        dog.MakeDogSound();
-
-        Animal cat = new Animal();
-        cat.Name = "猫";
-        cat.MakeCatSound();
-
-        Animal cow = new Animal();
-        cow.Name = "牛";
-        cow.MakeCowSound();
-    }
-}
-```
-
-### 场景2：封装“逻辑内聚”的子功能
-当某个功能是外部类的“子模块”，且类名太通用（如`Node`/`Item`），嵌套可避免和其他类重名。
-👉 示例（链表的节点类嵌套在链表类中）：
-```csharp
-public class SimpleLinkedList
-{
-    // 嵌套类：仅链表使用的节点，外部无需知道节点的实现
-    private class Node
-    {
-        public int Value { get; set; }
-        public Node Next { get; set; }
-    }
-
-    private Node _head; // 链表头节点
-
-    // 外部类提供添加元素的方法，隐藏节点的操作
-    public void Add(int value)
-    {
-        Node newNode = new Node { Value = value };
-        if (_head == null)
-        {
-            _head = newNode;
-            return;
-        }
-        Node current = _head;
-        while (current.Next != null)
-        {
-            current = current.Next;
-        }
-        current.Next = newNode;
-    }
-}
-```
-
-### 场景3：实现“仅外部类可用”的接口/功能
-通过`private`嵌套类实现接口，外部无法直接实例化该类，仅外部类能提供访问入口，保证封装性。（控制访问范围）
-👉 示例（外部类暴露功能，嵌套类实现具体逻辑）：
-```csharp
-// 定义一个简单接口
-public interface ISoundMaker
-{
-    void PlaySound();
-}
-
-public class Animal
-{
-    public string Name { get; set; }
-
-    // 嵌套类：实现ISoundMaker，仅Animal类可访问
-    private class DogSound : ISoundMaker
-    {
-        public void PlaySound()
-        {
-            Console.WriteLine("Woof!");
-        }
-    }
-
-    // 外部类提供统一入口，隐藏具体实现
-    public void MakeDogSound()
-    {
-        ISoundMaker maker = new DogSound();
-        maker.PlaySound();
-    }
-}
-```
-
-### 场景4：与外部类强关联的“数据容器”
-当一个类仅用于存储外部类的临时数据/配置，且无独立存在的意义时，适合嵌套。
-👉 示例（学生类中嵌套成绩容器）：
-```csharp
-public class Student
-{
-    public string Name { get; set; }
-
-    // 嵌套类：仅存储学生的单科成绩，无独立意义
-    public class Score
-    {
-        public string Subject { get; set; }
-        public int Point { get; set; }
-    }
-
-    // 学生的成绩列表，使用嵌套类作为元素类型
-    public List<Score> Scores = new List<Score>();
-}
-
-public class Program
-{
-    public static void Main()
-    {
-        Student stu = new Student { Name = "张三" };
-        // 嵌套类可通过“外部类.嵌套类”访问（如果是public）
-        stu.Scores.Add(new Student.Score { Subject = "数学", Point = 90 });
-    }
-}
-```
-
-### 绝对不要用嵌套类的场景（避坑）
-1. 嵌套类需要被多个外部类使用（此时应独立定义）；
-2. 嵌套类的逻辑复杂、代码量多（会导致外部类过于臃肿）；
-3. 仅为了“代码归拢”而嵌套，无实际逻辑关联（如把无关的`Teacher`类嵌套在`Student`类中）。
-
-### 总结
-1. 嵌套类的核心适用场景：**仅为外部类服务、逻辑强内聚、避免命名污染、控制访问范围**；
-2. 设计原则：嵌套类应“轻量、内聚、无独立存在意义”，否则优先独立定义；
-3. 访问控制：默认`private`（仅外部类可见），需对外暴露时设为`public/internal`。
 
 ## 示例
 
@@ -813,81 +642,7 @@ public class Program
 
 ---
 
-### 示例5：定义“计算器”类
 
-特点：带静态成员的类（区分实例成员 vs 静态成员）
-
-**要求**：
-
-1. 类的定义
-2. 静态属性
-3. 构造函数（无参/有参）
-3. 静态方法
-4. 无需实例化即可调用
-
-```csharp
-using System;
-
-// 计算器类（以静态成员为主，适合工具类）
-public class Calculator
-{
-    // 静态属性：记录计算次数（所有对象共享）
-    public static int CalculateCount { get; set; } = 0;
-
-    // 静态方法：加法
-    public static int Add(int a, int b)
-    {
-        CalculateCount++; // 每次计算，次数+1
-        return a + b;
-    }
-
-    // 静态方法：乘法
-    public static int Multiply(int a, int b)
-    {
-        CalculateCount++;
-        return a * b;
-    }
-
-    // 实例方法：对比（需要实例化才能调用）
-    public void ShowTip()
-    {
-        Console.WriteLine("这是计算器的实例方法～");
-    }
-}
-
-public class Program
-{
-    public static void Main()
-    {
-        // 1. 调用静态方法：无需new，直接“类名.方法名”
-        int sum = Calculator.Add(5, 10);
-        Console.WriteLine($"5+10={sum}");
-
-        int product = Calculator.Multiply(6, 8);
-        Console.WriteLine($"6×8={product}");
-
-        // 2. 访问静态属性：所有调用共享同一个值
-        Console.WriteLine($"累计计算次数：{Calculator.CalculateCount}"); // 输出2
-
-        // 3. 调用实例方法：必须先实例化对象
-        Calculator calc = new Calculator();
-        calc.ShowTip();
-    }
-}
-```
-#### 运行结果：
-```
-5+10=15
-6×8=48
-累计计算次数：2
-这是计算器的实例方法～
-```
-#### 知识点：
-- 静态成员：用`static`修饰，属于“类本身”，所有实例共享，无需`new`即可调用；
-- 实例成员：非静态，属于“具体对象”，必须实例化后才能调用；
-- 工具类（如计算器、数学工具）通常用静态方法，方便直接调用。
-
----
 
 ### 示例6：定义“动物”基类 + “狗/猫”子类
 
