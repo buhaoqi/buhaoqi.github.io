@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buhaoqi.github.io/blog</id>
     <title>河北对口高考计算机专业 Blog</title>
-    <updated>2026-04-20T00:00:00.000Z</updated>
+    <updated>2026-05-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buhaoqi.github.io/blog"/>
     <subtitle>河北对口高考计算机专业 Blog</subtitle>
     <icon>https://buhaoqi.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[vocabulary console]]></title>
+        <id>https://buhaoqi.github.io/blog/vocabulary-console</id>
+        <link href="https://buhaoqi.github.io/blog/vocabulary-console"/>
+        <updated>2026-05-09T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">This word   has two pronunciations </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">one for the verb one for the noun.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Let's go through them.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">the first one          console.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">It's a verb meaning that to comfort someone who is  sad or upset.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">And the second one is CONSOLE. A Console is a panel that is used to operate a machine. most commonly you've heard of a games console.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">For example nintendo switch</span><br></span></code></pre></div></div>]]></content>
+        <author>
+            <name>Yangshun Tay</name>
+            <uri>https://linkedin.com/in/yangshun</uri>
+        </author>
+        <category label="vocabulary study" term="vocabulary study"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[高点击封面标题库]]></title>
         <id>https://buhaoqi.github.io/blog/control-flow</id>
