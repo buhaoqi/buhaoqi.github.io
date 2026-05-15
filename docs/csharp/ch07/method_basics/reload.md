@@ -5,6 +5,98 @@ sidebar_label: 任务九 方法的重载  # 显式指定侧边栏显示名（优
 sidebar_position:  3  # 侧边栏中排在第1位
 ---
 
+
+## 方法重载是什么
+
+**方法重载**是指在同一个类中，定义**多个同名方法**，但它们的**参数列表不同**（参数个数、类型或顺序不同）。调用时，编译器根据传入的参数自动匹配对应版本。
+
+**核心示例：**
+```csharp
+class Calculator
+{
+    public int Add(int a, int b) { return a + b; }
+    public double Add(double a, double b) { return a + b; }
+    public int Add(int a, int b, int c) { return a + b + c; }
+}
+
+// 调用
+Calculator calc = new Calculator();
+calc.Add(3, 5);       // 匹配第一个
+calc.Add(3.2, 4.6);   // 匹配第二个
+calc.Add(1, 2, 3);    // 匹配第三个
+```
+
+**重载的好处：**  
+- 统一功能命名，提升代码可读性（比如多个 `Console.WriteLine` 重载）  
+- 为不同场景提供灵活的参数组合  
+
+**注意：** 仅返回值不同或仅参数名不同 **不能构成重载**。
+
+
+## 重载的要点
+
+### 1️⃣ 重载的依据 —— 参数列表必须不同  
+- ✅ **参数个数不同**  
+  ```csharp
+  void Print(int a) { }
+  void Print(int a, int b) { }
+  ```
+- ✅ **参数类型不同**  
+  ```csharp
+  void Print(int a) { }
+  void Print(string s) { }
+  ```
+- ✅ **参数顺序不同**（类型顺序）  
+  ```csharp
+  void Print(int a, string b) { }
+  void Print(string a, int b) { }
+  ```
+
+### 2️⃣ 返回类型不是重载依据  
+```csharp
+int GetValue() { return 1; }
+string GetValue() { return ""; }   // ❌ 编译错误，仅返回值不同不允许
+```
+
+### 3️⃣ 修饰符（如 `static`、`virtual`）不影响重载  
+```csharp
+void Work() { }
+static void Work(int x) { }   // ✅ 合法，参数不同即可
+```
+
+### 4️⃣ 参数修饰符 `ref` / `out` / `in` 会参与重载区分  
+```csharp
+void Compute(ref int a) { }
+void Compute(out int a) { }   // ✅ 合法，ref/out 视为不同签名
+```
+> 注意：`ref` 和 `out` 在**调用时**语义不同，但编译期能区分重载。
+
+### 5️⃣ 可选参数与 `params` 容易引发歧义  
+- 可选参数可能导致重载冲突，编译器按**最匹配原则**选择  
+- `params` 数组参数可与普通数组重载，但需注意调用时的二义性  
+  ```csharp
+  void Sum(int[] nums) { }
+  void Sum(params int[] nums) { }   // ⚠️ 调用 Sum(1,2,3) 会匹配 params 版本
+  ```
+
+### 6️⃣ 重载解析规则（优先级从高到低）  
+1. 精确匹配参数类型  
+2. 通过隐式转换匹配  
+3. 使用 `params` 展开匹配  
+4. 如果仍无法判断，编译器报歧义错误  
+
+### 7️⃣ 典型应用场景  
+- 提供不同输入参数的处理方式（例如 `Console.WriteLine` 有 19 个重载）  
+- 构造函数重载（实现多种初始化方式）  
+- 简化调用接口，避免用户记忆多个方法名  
+
+---
+
+✅ **一句话记忆**：  
+> **参数列表（数量、类型、顺序、ref/out）不同即可重载，返回类型、修饰符、参数名无关**
+
+
+
 ## 示例1：计算器 - 不同参数个数
 ```csharp
 public class Calculator
