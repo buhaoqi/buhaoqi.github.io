@@ -344,6 +344,67 @@ Console.WriteLine($"方法外: {originalValue}"); // 变为100
 
 ### 3.输出传递（`out`修饰符）
 
+
+下面是一个极简的示例，演示如何用 `out` 让一个方法“返回”两个值。
+
+```csharp
+using System;
+
+public class OutExample
+{
+    // 一个方法，同时返回 和 与 差
+    public static void Calculate(int a, int b, out int sum, out int diff)
+    {
+        sum = a + b;   // out 参数必须赋值
+        diff = a - b;
+    }
+
+    public static void Main()
+    {
+        int x = 10, y = 3;
+        int resultSum, resultDiff;   // 不需要初始化，直接声明
+
+        // 调用方法，使用 out 传递变量
+        Calculate(x, y, out resultSum, out resultDiff);
+
+        Console.WriteLine($"{x} + {y} = {resultSum}");
+        Console.WriteLine($"{x} - {y} = {resultDiff}");
+
+        // 也可以在调用时直接声明 out 变量（C# 7.0+ 语法）
+        Calculate(20, 5, out int s, out int d);
+        Console.WriteLine($"\n20 + 5 = {s}");
+        Console.WriteLine($"20 - 5 = {d}");
+    }
+}
+```
+
+**运行结果：**
+```
+10 + 3 = 13
+10 - 3 = 7
+
+20 + 5 = 25
+20 - 5 = 15
+```
+
+#### 给初学者的讲解
+
+1. **`out` 的作用**：让一个方法可以“输出”多个值。  
+   - 普通方法只能 `return` 一个值，用了 `out` 就能“顺便”带出多个结果。
+
+2. **使用规则**：  
+   - 方法内部必须给每个 `out` 参数赋值，否则报错。  
+   - 调用方法时，传递的 `out` 变量**不需要提前赋值**（可以只声明）。  
+   - 在方法调用时，变量名前要写 `out` 关键字。
+
+3. **上面代码里的重点**：  
+   - `Calculate` 方法接收两个数 `a, b`，同时返回 `sum` 和 `diff`。  
+   - `Main` 中 `resultSum`、`resultDiff` 只声明没赋值，直接传给了方法。  
+   - 第二种写法 `out int s` 是 C# 7.0 的简化语法，可以在调用时直接声明变量。
+
+这个例子没有使用任何复杂概念，只聚焦 `out` 的“多返回值”用途，学生很容易看懂。
+
+
 在 C# 中，`out` 修饰符的用途就是——让方法可以通过参数“输出”多个结果。一个方法通常只能 `return` 一个值，但有时候我们希望返回多个结果。 这时候 `out` 就派上用场了。
 
 使用规则
