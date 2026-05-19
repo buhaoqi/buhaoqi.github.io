@@ -5,6 +5,172 @@ sidebar_label: 任务八 方法的参数  # 显式指定侧边栏显示名（优
 sidebar_position:  2  # 侧边栏中排在第1位
 ---
 
+
+
+## 案例一：值参（Value Parameter）
+
+**作用**：传递参数值的副本，方法内修改不影响原始变量。
+
+```csharp
+using System;
+
+class ValueParameterDemo
+{
+    static void Square(int number)  // 值参
+    {
+        number = number * number;
+        Console.WriteLine($"方法内部：number = {number}");
+    }
+
+    static void Main()
+    {
+        int num = 5;
+        Console.WriteLine($"调用前：num = {num}");
+        Square(num);
+        Console.WriteLine($"调用后：num = {num}");  // 仍然为5，未改变
+    }
+}
+```
+
+**输出**：
+```
+调用前：num = 5
+方法内部：number = 25
+调用后：num = 5
+```
+
+**说明**：`number` 是 `num` 的副本，修改 `number` 不会影响 `num`。
+
+---
+
+## 案例二：引用参（`ref` 参数）
+
+**作用**：传递变量的引用，方法内修改会直接影响原始变量。
+
+```csharp
+using System;
+
+class RefParameterDemo
+{
+    static void Square(ref int number)  // 引用参
+    {
+        number = number * number;
+        Console.WriteLine($"方法内部：number = {number}");
+    }
+
+    static void Main()
+    {
+        int num = 5;
+        Console.WriteLine($"调用前：num = {num}");
+        Square(ref num);   // 调用时需加 ref
+        Console.WriteLine($"调用后：num = {num}");  // 变为25
+    }
+}
+```
+
+**输出**：
+```
+调用前：num = 5
+方法内部：number = 25
+调用后：num = 25
+```
+
+**说明**：`ref` 传递的是 `num` 的引用，方法内直接修改原始变量。
+
+---
+
+## 案例三：输出参（`out` 参数）
+
+**作用**：方法可返回多个值，调用前无需初始化，必须在方法内赋值。
+
+```csharp
+using System;
+
+class OutParameterDemo
+{
+    // 计算一个数的商和余数
+    static void Divide(int dividend, int divisor, out int quotient, out int remainder)
+    {
+        quotient = dividend / divisor;
+        remainder = dividend % divisor;
+    }
+
+    static void Main()
+    {
+        int a = 17, b = 5;
+        int q, r;  // 无需初始化
+        Divide(a, b, out q, out r);
+        Console.WriteLine($"{a} ÷ {b} = {q} 余 {r}");
+    }
+}
+```
+
+**输出**：
+```
+17 ÷ 5 = 3 余 2
+```
+
+**说明**：`out` 参数用于返回额外结果，方法内必须对所有 `out` 参数赋值。
+
+---
+
+## 案例四：数组参（`params` 参数）
+
+**作用**：允许方法接收可变数量的参数，编译器自动打包为数组。
+
+```csharp
+using System;
+
+class ParamsParameterDemo
+{
+    // 计算任意多个整数的和
+    static int Sum(params int[] numbers)
+    {
+        int total = 0;
+        foreach (int n in numbers)
+            total += n;
+        return total;
+    }
+
+    static void Main()
+    {
+        // 可以传入0个、多个参数，或直接传递数组
+        Console.WriteLine($"Sum() = {Sum()}");                 // 0个参数
+        Console.WriteLine($"Sum(5) = {Sum(5)}");               // 1个参数
+        Console.WriteLine($"Sum(1, 2, 3) = {Sum(1, 2, 3)}");   // 多个参数
+        int[] arr = { 10, 20, 30 };
+        Console.WriteLine($"Sum(arr) = {Sum(arr)}");           // 直接传数组
+    }
+}
+```
+
+**输出**：
+```
+Sum() = 0
+Sum(5) = 5
+Sum(1, 2, 3) = 6
+Sum(arr) = 60
+```
+
+**说明**：`params` 必须是方法最后一个参数，且只能用于一维数组。
+
+---
+
+## 总结
+
+| 参数类型 | 关键字 | 方向 | 调用前初始化 | 影响原始变量 |
+|---------|--------|------|--------------|----------------|
+| 值参     | 无     | 输入 | 必须         | 否             |
+| 引用参   | `ref`  | 输入/输出 | 必须       | 是             |
+| 输出参   | `out`  | 输出 | 不必         | 是（赋值后）    |
+| 数组参   | `params` | 输入 | 不必（可变参数） | 不适用（数组内容可变） |
+
+这些案例可直接复制到 Visual Studio 或任意 C# 环境中运行。建议学生动手修改参数，观察行为变化，加深理解。
+
+
+
+
+
 ## 一、参数是什么
 参数是一个变量。
 
