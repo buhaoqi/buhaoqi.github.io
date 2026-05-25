@@ -689,6 +689,81 @@ const sidebars = {
       ],
     }
   ],
+  // ============ 计算机应用基础 教程侧边栏 ============
+  computerBasicSidebar: [
+    {
+      type: 'doc',
+      id: 'computer-basics/index',  // 确保 docs/computer-basics/ch03-01.md 存在
+      label: '考试大纲',
+    },
+    // 项目一：认识计算机
+    {
+      type: 'category',
+      label: '项目一 认识计算机',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index1', // 概述
+        'computer-basics/ch01-01', // 任务一 计算机的发展
+        'computer-basics/ch01-02', // 任务二 计算机的特点和分类
+        'computer-basics/ch01-03', // 任务三 计算机的应用
+        'computer-basics/ch01-04', // 任务四 计算机的前沿技术
+      ],
+    },
+    // 项目二 计算机系统
+    {
+      type: 'category',
+      label: '项目二 计算机系统',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index2', // 概述
+        'computer-basics/ch02-01', // 任务一 计算机的硬件系统
+        'computer-basics/ch02-02', // 任务二 计算机的软件系统
+        'computer-basics/ch02-03', // 任务三 计算机的工作原理
+        'computer-basics/ch02-04', // 任务四 微型计算机的硬件系统
+        'computer-basics/ch02-05', // 任务五 微型计算机的主要性能指标
+      ],
+    },
+    // 项目三 信息在计算机中的表示
+    {
+      type: 'category',
+      label: '项目三 信息在计算机中的表示',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index3', // 概述
+        'computer-basics/ch03-01', // 任务一 信息的表示
+        'computer-basics/ch03-02', // 任务二 数制及其转换
+        'computer-basics/ch03-03', // 任务三 字符编码
+      ],
+    },
+    // 项目四 计算机维护
+    {
+      type: 'category',
+      label: '项目四 计算机维护',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index4', // 概述
+        'computer-basics/ch04-01', // 任务一 计算机病毒的防护
+        'computer-basics/ch04-02', // 任务二 计算机的安全防护和使用
+        'computer-basics/ch04-03', // 任务三 信息安全
+      ],
+    },
+    // 项目五 中英文录入
+    {
+      type: 'category',
+      label: '项目五 中英文录入',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index5', // 概述
+        'computer-basics/ch05-01', // 任务一 认识键盘
+        'computer-basics/ch05-02', // 任务二 中英文录入
+      ],
+    },
+  ],
   // ============ 教育知识与能力 侧边栏 ============
   // teacherSidebar: [
   //   {

@@ -189,7 +189,15 @@ const config = {
             // 可选：设置默认打开的文档
             docId: 'mysql/intro',
           },
-          
+          // 3. 计算机基础 - 靠左
+          {
+            type: 'docSidebar',
+            sidebarId: 'computerBasicSidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '计算机应用基础',
+            // 可选：设置默认打开的文档
+            docId: 'computer-basics/index',
+          },
           // 4. 网址导航 (doc类型) - 靠左
           {
             type: 'doc',
