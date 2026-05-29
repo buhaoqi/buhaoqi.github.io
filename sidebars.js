@@ -285,9 +285,10 @@ const sidebars = {
         'csharp/ch06/overview', // 概述
         'csharp/ch06/task1', // 任务一 一维数组
         'csharp/ch06/task2', // 任务二 多维数组
-        'csharp/ch06/task3', // 任务三 数组的遍历
+        'csharp/ch06/task3', // 任务三 数组方法
         'csharp/ch06/task4', // 任务四 数组的排序
-        'csharp/ch06/task5', // 任务四 数组的查找
+        'csharp/ch06/task5', // 任务五 同步实验
+        'csharp/ch06/task6', // 任务六 同步训练
       ],
     },
     // 项目七 面向对象基础
