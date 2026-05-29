@@ -3,82 +3,719 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">任务三 字符编码 | 河北对口高考计算机专业</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" name="twitter:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" property="og:url" content="https://buhaoqi.github.io/docs/computer-basics/ch03-03"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="任务三 字符编码 | 河北对口高考计算机专业"><meta data-rh="true" name="description" content="任务一 进位计数制"><meta data-rh="true" property="og:description" content="任务一 进位计数制"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://buhaoqi.github.io/docs/computer-basics/ch03-03"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/ch03-03" hreflang="en"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/ch03-03" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"任务三 字符编码","item":"https://buhaoqi.github.io/docs/computer-basics/ch03-03"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="河北对口高考计算机专业 RSS Feed">
+<title data-rh="true">任务三 字符编码 | 河北对口高考计算机专业</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" name="twitter:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" property="og:url" content="https://buhaoqi.github.io/docs/computer-basics/ch03-03"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="任务三 字符编码 | 河北对口高考计算机专业"><meta data-rh="true" name="description" content="任务描述"><meta data-rh="true" property="og:description" content="任务描述"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://buhaoqi.github.io/docs/computer-basics/ch03-03"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/ch03-03" hreflang="en"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/ch03-03" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"任务三 字符编码","item":"https://buhaoqi.github.io/docs/computer-basics/ch03-03"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="河北对口高考计算机专业 RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="河北对口高考计算机专业 Atom Feed"><link rel="stylesheet" href="/assets/css/styles.761b036b.css">
-<script src="/assets/js/runtime~main.aba6dcb5.js" defer="defer"></script>
-<script src="/assets/js/main.d69fb0db.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ce97f3fb.js" defer="defer"></script>
+<script src="/assets/js/main.f4dc5958.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid="csharp/intro" href="/docs/csharp/intro">算法与程序设计</a><a class="navbar__item navbar__link" docid="csharptutorials/index" href="/docs/csharp-tutorials/">C#课件</a><a class="navbar__item navbar__link" docid="mysql/intro" href="/docs/mysql/intro">MySQL教程</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" docid="computer-basics/index" href="/docs/computer-basics/">计算机应用基础</a><a class="navbar__item navbar__link" href="/docs/bookmarks/intro">网址导航</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://buhaoqi.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/computer-basics/"><span title="考试大纲" class="linkLabel_WmDU">考试大纲</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index1"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index1"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-01"><span title="任务一 计算机的发展" class="linkLabel_WmDU">任务一 计算机的发展</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-02"><span title="任务二 计算机的特点和分类" class="linkLabel_WmDU">任务二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-03"><span title="任务三 计算机的应用" class="linkLabel_WmDU">任务三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-04"><span title="任务四 计算机的前沿技术" class="linkLabel_WmDU">任务四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index2"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index2"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-01"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-02"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-03"><span title="任务三 计算机的工作原理" class="linkLabel_WmDU">任务三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-04"><span title="任务四 微型计算机的硬件系统" class="linkLabel_WmDU">任务四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-05"><span title="任务五 微型计算机的主要性能指标" class="linkLabel_WmDU">任务五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/computer-basics/index3"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index3"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-01"><span title="任务一 进位计数制" class="linkLabel_WmDU">任务一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-02"><span title="任务二 数的编码" class="linkLabel_WmDU">任务二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/computer-basics/ch03-03"><span title="任务三 字符编码" class="linkLabel_WmDU">任务三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index4"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index4"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-01"><span title="任务一 计算机病毒的防护" class="linkLabel_WmDU">任务一 计算机病毒的防护</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-02"><span title="任务二 计算机的安全防护和使用" class="linkLabel_WmDU">任务二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-03"><span title="任务三  信息安全" class="linkLabel_WmDU">任务三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index5"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index5"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-01"><span title="任务一 认识键盘" class="linkLabel_WmDU">任务一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-02"><span title="任务二  中英文录入" class="linkLabel_WmDU">任务二  中英文录入</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">项目三 信息在计算机中的表示</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">任务三 字符编码</span></li></ul></nav><div class="theme-doc-markdown markdown"><header><h1>任务三 字符编码</h1></header><p>任务一 进位计数制
-信息如何在计算机中表示？
-进位计数制是什么
-答案：按进位方式来计数的规则
-数码是什么
-基数是什么
-位权是什么
-位权与基数的关系是什么
-计数规则是什么
-十进制是什么？如何表示
-二进制是什么？如何表示
-二进制的优点是什么
-八进制是什么？如何表示
-十六进制是什么？如何表示
-常用计数制的计数和数码对照表
-常用计数制的表示方法
-进位计数制的表示方法是什么
-十进制整数转为二进制数的方法是 i 什么
-十进制整数转为十六进制数的方法是 i 什么
-十进制小数转为二进制小数的方法是 i 什么
-其他进制数转为十进制数的方法是什么
-二进制转为八进制的方法是什么
-二进制转为十六进制的方法是什么
-八进制转为二进制的方法是什么
-十六进制转为二进制的方法是什么
-八进制转为十六进制的方法是什么
-十六进制转为八进制的方法是什么</p>
-<p>任务检测
-一、选择题</p>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid="csharp/intro" href="/docs/csharp/intro">算法与程序设计</a><a class="navbar__item navbar__link" docid="csharptutorials/index" href="/docs/csharp-tutorials/">C#课件</a><a class="navbar__item navbar__link" docid="mysql/intro" href="/docs/mysql/intro">MySQL教程</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" docid="computer-basics/index" href="/docs/computer-basics/">计算机应用基础</a><a class="navbar__item navbar__link" href="/docs/bookmarks/intro">网址导航</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://buhaoqi.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/computer-basics/"><span title="考试大纲" class="linkLabel_WmDU">考试大纲</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index1"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index1"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-01"><span title="任务一 计算机的发展" class="linkLabel_WmDU">任务一 计算机的发展</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-02"><span title="任务二 计算机的特点和分类" class="linkLabel_WmDU">任务二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-03"><span title="任务三 计算机的应用" class="linkLabel_WmDU">任务三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-04"><span title="任务四 计算机的前沿技术" class="linkLabel_WmDU">任务四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index2"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index2"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-01"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-02"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-03"><span title="任务三 计算机的工作原理" class="linkLabel_WmDU">任务三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-04"><span title="任务四 微型计算机的硬件系统" class="linkLabel_WmDU">任务四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-05"><span title="任务五 微型计算机的主要性能指标" class="linkLabel_WmDU">任务五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/computer-basics/index3"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index3"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-01"><span title="任务一 进位计数制" class="linkLabel_WmDU">任务一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-02"><span title="任务二 数的编码" class="linkLabel_WmDU">任务二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/computer-basics/ch03-03"><span title="任务三 字符编码" class="linkLabel_WmDU">任务三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index4"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index4"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-01"><span title="任务一 计算机病毒的防护" class="linkLabel_WmDU">任务一 计算机病毒的防护</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-02"><span title="任务二 计算机的安全防护和使用" class="linkLabel_WmDU">任务二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-03"><span title="任务三  信息安全" class="linkLabel_WmDU">任务三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index5"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index5"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-01"><span title="任务一 认识键盘" class="linkLabel_WmDU">任务一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-02"><span title="任务二  中英文录入" class="linkLabel_WmDU">任务二  中英文录入</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">项目三 信息在计算机中的表示</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">任务三 字符编码</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>任务三 字符编码</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="任务描述">任务描述<a href="#任务描述" class="hash-link" aria-label="Direct link to 任务描述" title="Direct link to 任务描述" translate="no">​</a></h2>
+<p>在计算机中，所有的数据在存储和运算时都要使用二进制数表示。电子计算机诞生于美国，美国的通用语言为英语，这些英文字符在计算机中二进制表示方法是ASCII码。我国的通用语言是汉字，我们的汉字也要在计算机中进行二进制编码，才能被计算机处理。这就是计算机的字符编码知识。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="预备知识">预备知识<a href="#预备知识" class="hash-link" aria-label="Direct link to 预备知识" title="Direct link to 预备知识" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一西文字符编码">一、西文字符编码<a href="#一西文字符编码" class="hash-link" aria-label="Direct link to 一、西文字符编码" title="Direct link to 一、西文字符编码" translate="no">​</a></h3>
+<p>计算机中常用的西文字符编码是美国信息交换标准代码：ASCII码。它是最通用的信息交换标准，并等同于国际标准ISO/IEC 646。分为7位码和8位码两个版本。</p>
 <ol>
-<li class="">二进制数10110111转换成十进制数为（）
-A. 183  B. 185  C. 197  D. 195</li>
-<li class="">二进制数11000011转换成十进制数为（）
-A. 183  B. 185  C. 197  D. 195</li>
-<li class="">下列四个不同进制的数中，最大的一个是（）
-A. (2E)₁₆  B. (45)₁₀  C. (37)₈  D. (110001)₂</li>
-<li class="">将二进制数101101101101.11转换成八进制数是（）
-A. 5555.6  B. 4535.6  C. 5055.6  D. 5105.4</li>
-<li class="">将十进制数59转换为二进制数是（）
-A. 101011  B. 111011  C. 111001  D. 110111</li>
-<li class="">将二进制数1101101110转换为八进制数是（）
-A. 1555  B. 1556  C. 1557  D. 1558</li>
-<li class="">下列各种进制的数中最小的数是（）
-A. (213)D  B. (10A)H  C. (335)O  D. (110111000)B</li>
-<li class="">十六进制3FC3转换为相应的二进制是（）
-A. 11111111000011  B. 01111111000011
-C. 01111111000001  D. 11111111000001</li>
-<li class="">将十进制数25.3125转换成十六进制数是（）
-A. 19.4  B. 19.5  C. 20.4  D. 20.5</li>
-<li class="">将十进制的整数化为N进制整数的方法是（）
-A. 乘N取整法  B. 除N取整法  C. 乘N取余法  D. 除N取余法</li>
+<li class="">基本ASCII码
+7位码是国际通用码，一个字符占用一个字节的二进制位，是半角字符，有效数字7位，左侧最高位置0，共8位二进制位，也叫基本ASCII码。编码范围从00000000B ~ 01111111B（00H ~ 7FH）；可以表示128个不同的字符。其中通用控制字符33个，空格1个，阿拉伯数字10个，大、小写英文字母52个，各种标点符号和运算符号32个。</li>
+</ol>
+<p>0 ~ 31及127（共33个）是控制字符或通信专用字符（其余为可显示字符），如控制符：LF（换行）、CR（回车）、FF（换页）、DEL（删除）、BS（退格）、BEL（响铃）等；通信专用字符：SOH（文头）、EOT（文尾）、ACK（确认）等；ASCII值为8、9、10和13分别转换为退格、制表、换行和回车字符。它们并没有特定的图形显示，但会依不同的应用程序，而对文本显示有不同的影响。</p>
+<p>32 ~ 126（共95个）是可显示字符：其中32是空格；48 ~ 57为0到9十个阿拉伯数字；65 ~ 90为26个大写英文字母；97 ~ 122号为26个小写英文字母；其余为一些标点符号、运算符号等。表3-3-1：基本ASCII码。</p>
+<p>表3-3-1 基本ASCII码</p>
+<table><thead><tr><th>十进制ASCII码</th><th>十六进制ASCII码</th><th>表示的英文字符</th></tr></thead><tbody><tr><td>0 ~ 31、127</td><td>00H ~ 1FH、7FH</td><td>回车、删除等控制字符</td></tr><tr><td>32</td><td>20H</td><td>空格</td></tr><tr><td>48 ~ 57</td><td>30H ~ 39H</td><td>0 ~ 9</td></tr><tr><td>65 ~ 90</td><td>41H ~ 5AH</td><td>A到Z共26个大写英文字母</td></tr><tr><td>97 ~ 122</td><td>61H ~ 7AH</td><td>a到z共26个小写英文字母</td></tr><tr><td>其余</td><td></td><td>一些标点、运算符号</td></tr></tbody></table>
+<ol start="2">
+<li class="">扩展ASCII码
+8位ASCII码允许最高位为1，后128个称为扩展ASCII码。</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二汉字代码">二、汉字代码<a href="#二汉字代码" class="hash-link" aria-label="Direct link to 二、汉字代码" title="Direct link to 二、汉字代码" translate="no">​</a></h3>
+<p>概念：计算机处理汉字信息的前提条件是对每个汉字进行二进制编码，这些编码统称为汉字代码。在汉字信息处理系统中，对于不同部位，存在着多种不同的编码方式。例如，从键盘输入汉字使用的汉字代码（外码）就与计算机内部对汉字信息进行存储、传送、加工所使用的代码（内码）不同，但它们都是为系统各相关部分标识汉字使用的。计算机系统工作时，汉字信息在系统的各部分之间传送，它到达某个部分就要用该部分所规定的汉字代码表示汉字。因此，汉字信息在系统内传送的过程就是汉字代码转换的过程。这些代码构成该系统的代码体系。</p>
+<p>根据应用目的的不同，汉字编码主要有输入码、交换码、机内码、字形码四种。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1汉字输入码外码">1.汉字输入码（外码）<a href="#1汉字输入码外码" class="hash-link" aria-label="Direct link to 1.汉字输入码（外码）" title="Direct link to 1.汉字输入码（外码）" translate="no">​</a></h4>
+<p>是为用户由计算机外部输入汉字而编制的汉字编码，又称为汉字外部码，简称外码。汉字输入码位于人机界面上，面向用户，所以它的编码原则就是简单易记、操作方便、有利于提高输入速度。主要有以下四类：
+(1)顺序码：将汉字按一定顺序排好，然后逐个赋予一个号码作为该汉字的编码。例区位码、电报码等。最典型的就是汉字区位码。
+区位码把全部汉字和图形符号排列在一个94行*94列的矩阵中，构成一个二维表格。
+“区”：二维表格中的每一行，用区号表示，范围是01<del>94；
+“位”：二维表格中的每一列，用位号表示，范围是01</del>94；
+区位码：每个汉字的区号和位号的组合而成的四位十进制数，（高两位是区号，低两位是位号）
+比如：汉字“中”在区位码二维表格中的第54行48列，那么它的区号为54，位号为48，完整的“中”字区位码为5448。
+汉字“国”的区位码为2590，表示它的区号是25，位号是90。
+区位码最大优点是一字一码，即无重码，最大缺点是难以记忆。
+(2)音码：根据汉字的读音进行编码。优点是只要具有汉语拼音的基础，就可掌握。最大弱点是对于那些不知道读音的字无法输入，另外重码率非常高。例如全拼输入法、智能ABC输入法、搜狗拼音输入法、QQ拼音输入法等各种拼音输入法。
+(3)形码：根据汉字的字型进行编码。如五笔字型、郑码输入法、表形码输入法、大众码等。较常用的是五笔字型输入法。五笔相对于拼音输入法具有重码率低的特点，熟练后可快速输入汉字。但随着智能拼音流行，使用五笔的人数急剧下降。
+(4)音形码：根据汉字的读音和字型进行编码。如双拼码、五十字元等。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2汉字交换码国标码">2.汉字交换码——国标码<a href="#2汉字交换码国标码" class="hash-link" aria-label="Direct link to 2.汉字交换码——国标码" title="Direct link to 2.汉字交换码——国标码" translate="no">​</a></h4>
+<p>(1)国标码的含义：
+汉字信息处理系统之间或通信系统之间传输信息时，对每一个汉字所规定的统一编码。我国已指定了国家标准信息交换汉字编码《信息交换用汉字编码字符集——基本集》即GB 2312-80，又称国标码。
+国标码收录的就是区位码中的所有字符，可以说区位码是国标码的另一种表现形式，共7 445个字符。其中有6 763个汉字和682个非汉字图形符号。汉字中有一级常用汉字3 755个，按拼音排序在区位码的16到55区；二级汉字3 008个，按部首排序在区位码的56到87区。</p>
+<p>因为汉字符号非常多，相对于英文只需要8位二进制数就可以，汉字需要用16位二进制数来表示一个汉字符号，即使用两个字节存储一个国标码，每一个汉字符号都是全角字符。国家标准规定国标码的编码范围是2121H—7E7EH（两个字节的最高位都是0）。如表3-3-2为汉字“国”的二进制国标码。</p>
+<p>表3-3-2 汉字“国”的二进制国标码</p>
+<table><thead><tr><th>0</th><th>0</th><th>1</th><th>1</th><th>1</th><th>0</th><th>0</th><th>1</th><th>0</th><th>1</th><th>1</th><th>1</th><th>1</th><th>0</th><th>1</th><th>0</th></tr></thead><tbody><tr><td>高位字节39H</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>低位字节7AH</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p>“国”的国标码为397AH</p>
+<p>(2)区位码和国标码的关系：
+国标码中的汉字就是区位码中的汉字，只是它们的编码方式不同，区位码作为一种汉字输入码，是面向用户的，用十进制表示，例“东”的区位码是2565，是25区65位。而国标码是计算机中使用的，用16位二进制表示，通常简化写成十六进制编码，例“东”的国标码是3961H，其中高位字节39H对应区位码中的区号25，低位字节61H对应区位码的位号65。</p>
+<p>区位码的区号01<del>94，对应国标码的高位字节：21H</del>7EH
+区位码的位号01<del>94，对应国标码的低位字节：21H</del>7EH
+国标码与区位码是一一对应的，它们之间的转换关系为：区位码的区号和位号分别转换为十六进制，再分别加20H就得到该字的国标码中的高位字节和低位字节，合起来就是它们的国标码，即十六进制的区位码+2020H=国标码。</p>
+<p>例如：
+“中”字区位码为5448，区号54转换为十六进制为36H，加20H后为56H；
+位号48转换为十六进制为30H，加20H后为50H；
+“中”的国标码为5650H。</p>
+<p>例如：
+“国”字区位码为2590，转换为十六进制为195AH，195AH+2020H=397AH，“国”字的国标码为397AH。</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-汉字机内码内码">3. 汉字机内码（内码）<a href="#3-汉字机内码内码" class="hash-link" aria-label="Direct link to 3. 汉字机内码（内码）" title="Direct link to 3. 汉字机内码（内码）" translate="no">​</a></h4>
+<p>西方字符的标准交换码ASCII码是用一个字节来表示的，编码范围是00H ~ 7FH；汉字国标码是用两个字节来表示，编码范围是2121H ~ 7E7EH，很明显它们相关字节的最高位都是0，有相同编码部分。为了在计算机中把汉字和西文字符区别开并相互兼容，特规定：把国标码每个字节的最高位由0置为1，作为汉字内码（即内码的两个字节的最高位都是1，编码范围是A1A1H ~ FEFEH），在计算机内部使用。如表3-3-3为汉字“国”的机内码。这样计算机就可以用字节的最高位来区分西文和汉字，字节最高位为0时表示ASCII码，为1时表示汉字。所以机内码就是汉字信息处理系统内部存储、处理汉字而使用的编码，简称内码。</p>
+<p>表3-3-3 汉字“国”的机内码</p>
+<table><thead><tr><th>1</th><th>0</th><th>1</th><th>1</th><th>1</th><th>0</th><th>0</th><th>1</th><th>1</th><th>1</th><th>1</th><th>1</th><th>1</th><th>0</th><th>1</th><th>0</th></tr></thead><tbody><tr><td>高位字节B9H</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>低位字节FAH</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p>“国”的机内码为B9FAH</p>
+<p>国标码和机内码的转换规则为：国标码的两个字节分别加80H，得到汉字的内码，即机内码=国标码+8080H。</p>
+<p>例如：
+汉字“中”的国标码为5650H，5650H+8080H=D6D0H，“中”字的机内码为D6D0H。</p>
+<p>汉字“国”的国标码为397AH，397AH+8080H=B9FAH，“国”的机内码为B9FAH。</p>
+<p>一个汉字的区位码、国标码和机内码之间的相互转换关系，以汉字“国”为例：表3-3-4、表3-3-5。</p>
+<p>表3-3-4 汉字的区位码→国标码→机内码转换关系示例</p>
+<table><thead><tr><th>汉字</th><th>区位码</th><th>十进制</th><th>转换为十六进制</th><th>分别加20H</th><th>国标码</th><th>分别加80H</th><th>机内码</th></tr></thead><tbody><tr><td>国</td><td>2590</td><td>区号25</td><td>19H</td><td>39H</td><td>397AH</td><td>B9H</td><td>B9FAH</td></tr><tr><td></td><td></td><td>位号90</td><td>5AH</td><td>7AH</td><td></td><td>FAH</td><td></td></tr></tbody></table>
+<p>表3-3-5 汉字的机内码→国标码→区位码转换关系示例</p>
+<table><thead><tr><th>汉字</th><th>机内码</th><th>减8080H</th><th>国标码</th><th>减2020H</th><th>十六进制区位码</th><th>转换为十进制区位码</th></tr></thead><tbody><tr><td>国</td><td>B9FAH</td><td></td><td>397AH</td><td></td><td>195AH</td><td>2590</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-汉字字形码汉字字库汉字字模汉字输出码点阵码">4. 汉字字形码（汉字字库、汉字字模、汉字输出码、点阵码）<a href="#4-汉字字形码汉字字库汉字字模汉字输出码点阵码" class="hash-link" aria-label="Direct link to 4. 汉字字形码（汉字字库、汉字字模、汉字输出码、点阵码）" title="Direct link to 4. 汉字字形码（汉字字库、汉字字模、汉字输出码、点阵码）" translate="no">​</a></h4>
+<p>存储在计算机内的汉字需要在屏幕上显示或在打印机上输出时，需要知道汉字的字形信息。汉字内码并不能直接反映汉字的字形，而要采用专门的字形码。</p>
+<p>目前的汉字处理系统中，字形信息的表示大体上有两类形式：一类是用活字或文字版的母体字形形式；另一类是点阵表示法、矢量表示法等形式，其中最基本的，也是大多数字形库采用的是以点阵的形式存储汉字字形编码的方法。</p>
+<p>点阵字形是将字符的字形分解成若干“点”组成的点阵，将此点阵置于网格上，每一小方格是点阵中的一个“点”，点阵中的每一个点可以有黑白两种颜色，有字形笔画的点用黑色；反之用白色，这样就能描写出汉字字形了。</p>
+<p>图3-3-1是汉字“学”的点阵，如果用十进制的“1”表示黑色点，用“0”表示没有笔画的白色点，每一行16个点用两字节表示，则需32字节描述一个汉字的字形，即一个字形码占32字节。根据汉字输出的要求不同，点阵的多少也不同。简易型汉字为16<em>16点阵，提高型汉字为24</em>24</p>
+<p>点阵、32<em>32点阵，甚至更高。点阵越大，描述的字形越细致美观，质量越高，所占存储空间也越大。汉字点阵的信息量是很大的，以16</em>16点阵为例，每个汉字要占用32个字节，国标码两级6763个汉字要占用约212KB存储空间。</p>
+<p>一个计算机汉字处理系统常配有宋体、仿宋、黑体、楷体等多种字体。同一个汉字不同字体的字形编码是不相同的。</p>
+<p>通常，计算机中所有汉字的字形码集合起来组成汉字库（或称为字模库）存放在计算机里，当汉字输出时由专门的字形检索程序根据这个汉字的内码从汉字库里检索出对应的字形码，由字形码再控制输出设备输出汉字。</p>
+<p>综上所述，汉字处理过程就是这些代码的转换过程。可以把汉字信息处理系统抽象为一个简单模型，如图3-3-2汉字信息处理系统所示。</p>
+<p>图3-3-2 汉字信息处理系统
+输入 → 输入码 → 国标码 → 机内码 → 字形码 → 输出</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="任务检测">任务检测<a href="#任务检测" class="hash-link" aria-label="Direct link to 任务检测" title="Direct link to 任务检测" translate="no">​</a></h2>
+<p>一、单选题</p>
+<ol>
+<li class="">在24×16点阵字库中，每个汉字的字模信息需要用（ ）个字节存储
+A. 48B. 96C. 24D. 384</li>
+<li class="">已知小写英文字母“m”的十六进制ASCII码值是6D，则小写英文字母“b”的十六进制ASCII码值是（ ）
+A. 98HB. 62HC. 99HD. 63H</li>
+<li class="">基本ASCII码在机器中用8位二进制表示一个字符，其（ ）
+A. 最左边一位为0B. 最右边一位为0
+C. 最左边一位为1D. 最右边一位为1</li>
+<li class="">英文小写字母“b”和大写字母“B”的十六进制ASCII码值相差（ ）
+A. 10HB. 20HC. 30HD. 40H</li>
+<li class="">汉字系统中的汉字字库里存放的是汉字的（ ）
+A. 内码B. 外码C. 字模D. 国际码</li>
+<li class="">在24*24点阵字库中，每个汉字的字模信息需用（ ）个字节存储
+A. 9B. 32C. 72D. 128</li>
+<li class="">一个汉字和一个英文字符在微机中存储时所占字节数的比值为（ ）
+A. 1 : 1B. 2 : 1C. 4 : 1D. 1 : 4</li>
+<li class="">显示或打印汉字时，系统使用的是汉字的（ ）
+A. 机内码B. 字形码C. 输入码D. 国际码</li>
+<li class="">下列关于ASCII编码的叙述中，正确的是（ ）
+A. 一个字符的标准ASCII码占一个字节，其最高二进制位总为1
+B. 所有大写英文字母的ASCII码都小于小写英文字母“a”的ASCII码
+C. 所有大写英文字母的ASCII码都大于小写英文字母“a”的ASCII码
+D. 标准ASCII码表有256个不同的字符编码</li>
+<li class="">一般情况下，1KB内存最多能存储（ ）个ASCII码字符，或（ ）个汉字
+A. 1024，1024B. 1024，512C. 512，512D. 512，1024</li>
 </ol>
 <p>二、判断题</p>
 <ol>
-<li class="">同样的一个数值11，在不同进制中所表示的值是不一样的（）</li>
-<li class="">二进制数11001转换成十进制数是25（）</li>
-<li class="">十六进制数79对应的十进制数为247（）</li>
-<li class="">十六进制数289可以表示为289H（）</li>
-<li class="">十进制小数都可以精确地转化为其他进制的小数（）</li>
+<li class="">“A”的ASCII码值为65，则“C”的ASCII码值为67</li>
+<li class="">每个汉字机内码至少占2个字节，每个字节最高位为0</li>
+<li class="">汉字的输入功能是把汉字外码转换成汉字的机内码</li>
+<li class="">对于一个汉字来说，它的输入码、国标码、机内码都是唯一的</li>
+<li class="">对于一个汉字来说，它的区位码、国标码、机内码都是唯一的</li>
 </ol>
 <p>三、填空题</p>
 <ol>
-<li class="">在一个非零无符号二进制整数之后添加一个0，则此数的值为原数的____倍。</li>
-<li class="">将十进制数214转换为八进制数是____。</li>
-<li class="">将十进制数216转换为十六进制数是____。</li>
-<li class="">十进制小数0.6875转换成二进制小数是____。</li>
-<li class="">有一个数值为152，它与十六进制数6A等值，则该数值是____进制数。</li>
-</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/computer-basics/ch03-03.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/computer-basics/ch03-02"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">任务二 数的编码</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/computer-basics/index4"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">概述</div></a></nav></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+<li class="">汉字内码每个编码长为两个字节，每个字节最高位为______。</li>
+<li class="">一个汉字的十六进制国标码是4E22，该汉字的二字节十六进制内码是______。</li>
+<li class="">若某个汉字的机内码为DFC2H，则此汉字在国标码为______。</li>
+<li class="">汉字编码中的国标码规定了一级汉字有______个，二级汉字有______个。</li>
+<li class="">已知小写的英文字母“m”的十六进制ASCII码值为6D，则小写英文字母“c”的十六进制ASCII码值是______。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="任务检测答案">任务检测答案<a href="#任务检测答案" class="hash-link" aria-label="Direct link to 任务检测答案" title="Direct link to 任务检测答案" translate="no">​</a></h2>
+<p>单选：A,B,A,B,C,C,B,B,B,B
+判断：√,×,√,×,√
+填空：1,CEA2H,5F42H,3755 3008,63H</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="知识拓展">知识拓展<a href="#知识拓展" class="hash-link" aria-label="Direct link to 知识拓展" title="Direct link to 知识拓展" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="声音图像视频的编码">声音、图像、视频的编码<a href="#声音图像视频的编码" class="hash-link" aria-label="Direct link to 声音、图像、视频的编码" title="Direct link to 声音、图像、视频的编码" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>声音编码：计算机要处理自然界的声音，需要将波形数据转换成0、1数码组成的数字数据，即音频数字化。波形声音转换成数字化音频需要经过抽样、量化、编码三个步骤。目前，计算机音频的编码格式有多种标准，常见音频文件格式有MIDI格式、WAV格式、MP3格式和RealAudio格式。</p>
+</li>
+<li class="">
+<p>MIDI（Musical Instrument Digital Interface，乐器数字接口）是数字音乐/电子合成乐器国际标准。MIDI文件有几个变通的格式：CMF文件、RIFF文件等。</p>
+</li>
+<li class="">
+<p>WAV为微软公司开发的一种声音文件格式。</p>
+</li>
+<li class="">
+<p>WMA由微软开发，WMA针对的不是单机市场，是网络支持流技术，即一边读一边播放，因此WMA可以很轻松地实现在线广播。</p>
+</li>
+<li class="">
+<p>MP3是一种音频压缩技术，也称为动态影像专家压缩标准3。其重放的音质与最初的不压缩音频相比没有明显的下降。</p>
+</li>
+<li class="">
+<p>RealAudio（即时播音系统）是一种新型流式音频文件格式。主要适用于网络上的在线播放。主要有RA、RM、RMX等三种。</p>
+</li>
+<li class="">
+<p>AIFF是音频交换文件格式，是Apple苹果电脑上面的标准音频格式。</p>
+</li>
+<li class="">
+<p>图像编码：图像编码与声音编码类似，也需要对模拟图形进行数字化转换，即模拟图像信号转换成数字化信号。图像编码技术也称为图像压缩技术。常见的图像文件格式有BMP格式、GIF格式和JPEG格式等。</p>
+</li>
+<li class="">
+<p>BMP是Windows操作系统中的标准图像文件格式。由于压缩比很小，图像质量比较高，但占用较大空间，常用于存储在单机中使用，少见于频繁的网络传输。</p>
+</li>
+<li class="">
+<p>GIF是“图像互换格式”，一种无损压缩格式，其压缩率一般在50%左右。目前几乎所有相关软件都支持GIF图像文件。</p>
+</li>
+<li class="">
+<p>JPEG是常见的一种静态图像有损压缩格式。文件后缀名为.jpg或.jpeg。</p>
+</li>
+<li class="">
+<p>TIFF标签图像文件格式，是一种灵活的位图格式，与JPEG和PNG一起成为流行的高位彩色图像格式。TIFF文件以.tif为扩展名。</p>
+</li>
+<li class="">
+<p>PNG，便携式网络图形，是一种采用无损压缩算法的位图格式。PNG文件的扩展名为.png。</p>
+</li>
+<li class="">
+<p>视频编码
+视频编码是指通过压缩技术，将原始视频格式的文件转换成另一种视频格式文件的方式。常见视频文件格式有AVI格式、MPEG格式、RealVideo格式、MOV格式、3GP格式和MKV格式等。</p>
+</li>
+<li class="">
+<p>AVI即音频视频交错格式，是将音频和视频同步组合在一起可以同步播放的文件格式。它对视频文件采用了一种有损压缩方式，可跨多平台使用。</p>
+</li>
+<li class="">
+<p>MPEG是国际通用的动态图像压缩算法标准。MPEG、MPG、DAT等格式同属MPEG。MP4，是一种使用MPEG -4的多媒体文档格式，文件扩展名为.mp4，以储存数码音讯及数码视讯为主，是目前运用非常广泛的一种视频格式。</p>
+</li>
+<li class="">
+<p>RealVideo格式文件包括扩展名为 .ra、.rm、.ram、.rmvb 的4种视频格式，是一种高压缩比的有损视频格式，是视频流技术的始创者。</p>
+</li>
+<li class="">
+<p>MOV即QuickTime影片格式，Apple公司开发流式视频封装标准。</p>
+</li>
+<li class="">
+<p>3GP是一种3G流媒体的视频编码格式，多用于移动通信领域。3GP是MP4格式的一种简化版本，减少了储存空间和较低的频宽需求，让手机的有限储存空间可以使用。</p>
+</li>
+<li class="">
+<p>MKV不是一种压缩格式，而是Matroska的一种媒体文件。MKV最大的</p>
+</li>
+</ol>
+<p>特点就是能容纳多种不同类型编码的视频、音频及字幕流。
+7.  WMV是微软开发的一系列视频编解码和其相关的视频编码格式的统称，是微软Windows媒体框架的一部分。
+8.  ASF同JPG、MPG文件一样也是一种文件类型，但它是专为在IP网上传送有同步关系的多媒体数据而设计的，所以ASF格式的信息特别适合在IP网上传输。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="项目总结">项目总结<a href="#项目总结" class="hash-link" aria-label="Direct link to 项目总结" title="Direct link to 项目总结" translate="no">​</a></h2>
+<p>通过本项目能掌握四种常用进位制的基数、数码、对应关系及相互转换，西文标准信息交换代码ASCII码，汉字四种编码：输入码、国标码、机内码、字形码的含义和相互转换，了解声音、图像、视频的主要编码方式。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="知识点总结">知识点总结<a href="#知识点总结" class="hash-link" aria-label="Direct link to 知识点总结" title="Direct link to 知识点总结" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一基础概念类">一、基础概念类<a href="#一基础概念类" class="hash-link" aria-label="Direct link to 一、基础概念类" title="Direct link to 一、基础概念类" translate="no">​</a></h3>
+<ol>
+<li class="">为什么计算机中的数据都要用二进制表示？</li>
+<li class="">什么是字符编码？计算机中为什么要对字符进行编码？</li>
+<li class="">计算机中西文字符和汉字分别主要采用什么编码体系？</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二ascii-编码相关">二、ASCII 编码相关<a href="#二ascii-编码相关" class="hash-link" aria-label="Direct link to 二、ASCII 编码相关" title="Direct link to 二、ASCII 编码相关" translate="no">​</a></h3>
+<ol>
+<li class="">ASCII 码的全称是什么？对应的国际标准是什么？</li>
+<li class="">ASCII 码分为哪两个版本？分别是几位码？</li>
+<li class="">基本 ASCII 码占用几个字节？最高位固定为多少？</li>
+<li class="">基本 ASCII 码的二进制、十六进制范围分别是什么？</li>
+<li class="">基本 ASCII 码一共可以表示多少个字符？</li>
+<li class="">基本 ASCII 码中控制字符有多少个？范围是多少？</li>
+<li class="">基本 ASCII 码中可显示字符有多少个？范围是多少？</li>
+<li class="">空格字符的十进制、十六进制 ASCII 码分别是多少？</li>
+<li class="">数字 0～9 的十进制、十六进制 ASCII 码范围分别是多少？</li>
+<li class="">大写字母 A～Z 的十进制、十六进制 ASCII 码范围分别是多少？</li>
+<li class="">小写字母 a～z 的十进制、十六进制 ASCII 码范围分别是多少？</li>
+<li class="">大写字母与小写字母的 ASCII 码差值是多少（十进制与十六进制）？</li>
+<li class="">LF、CR、FF、DEL、BS、BEL 分别代表什么控制字符？</li>
+<li class="">扩展 ASCII 码是几位？最高位有什么特点？</li>
+<li class="">标准 ASCII 码共有多少个字符？扩展 ASCII 码共有多少个字符？</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三汉字编码总体类">三、汉字编码总体类<a href="#三汉字编码总体类" class="hash-link" aria-label="Direct link to 三、汉字编码总体类" title="Direct link to 三、汉字编码总体类" translate="no">​</a></h3>
+<ol>
+<li class="">什么是汉字代码？</li>
+<li class="">汉字信息处理系统中为什么会存在多种编码？</li>
+<li class="">汉字在系统中传输的本质是什么？</li>
+<li class="">按应用目的划分，汉字编码主要分为哪四种？</li>
+<li class="">完整的汉字信息处理流程是什么（从输入到输出）？</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四汉字输入码外码">四、汉字输入码（外码）<a href="#四汉字输入码外码" class="hash-link" aria-label="Direct link to 四、汉字输入码（外码）" title="Direct link to 四、汉字输入码（外码）" translate="no">​</a></h3>
+<ol>
+<li class="">什么是汉字输入码？又被称为什么？</li>
+<li class="">汉字输入码的设计原则是什么？</li>
+<li class="">汉字输入码主要分为哪四类？</li>
+<li class="">什么是顺序码？典型代表有哪些？</li>
+<li class="">区位码的编码矩阵是几行几列？区号、位号范围分别是多少？</li>
+<li class="">区位码由几部分组成？分别是什么？</li>
+<li class="">举例说明“中”“国”的区位码及其区、位号。</li>
+<li class="">区位码的优点和缺点分别是什么？</li>
+<li class="">什么是音码？优点和缺点分别是什么？举例常见输入法。</li>
+<li class="">什么是形码？典型代表是什么？优缺点是什么？</li>
+<li class="">什么是音形码？举例说明。</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五汉字交换码国标码">五、汉字交换码（国标码）<a href="#五汉字交换码国标码" class="hash-link" aria-label="Direct link to 五、汉字交换码（国标码）" title="Direct link to 五、汉字交换码（国标码）" translate="no">​</a></h3>
+<ol>
+<li class="">什么是汉字交换码？我国的标准全称是什么？标准号是多少？</li>
+<li class="">GB 2312-80 共收录多少个字符？其中汉字、符号各多少？</li>
+<li class="">GB 2312-80 中一级汉字、二级汉字各多少个？分别按什么排序？分布在哪些区？</li>
+<li class="">一个国标码占用几个字节？属于全角还是半角字符？</li>
+<li class="">国标码的十六进制编码范围是什么？每个字节最高位是多少？</li>
+<li class="">区位码与国标码的对应关系是什么？</li>
+<li class="">区位码转换为国标码的公式是什么？</li>
+<li class="">已知某汉字区位码，如何分步计算国标码？</li>
+<li class="">分别写出“中”“国”的区位码、国标码及计算过程。</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="六汉字机内码内码">六、汉字机内码（内码）<a href="#六汉字机内码内码" class="hash-link" aria-label="Direct link to 六、汉字机内码（内码）" title="Direct link to 六、汉字机内码（内码）" translate="no">​</a></h3>
+<ol>
+<li class="">什么是汉字机内码？作用是什么？</li>
+<li class="">为什么要在国标码基础上设置机内码？</li>
+<li class="">机内码如何由国标码转换而来？每个字节最高位变成多少？</li>
+<li class="">机内码的十六进制范围是什么？</li>
+<li class="">计算机如何通过最高位区分 ASCII 码和汉字？</li>
+<li class="">国标码转机内码的计算公式是什么？</li>
+<li class="">分别写出“中”“国”的国标码、机内码及计算过程。</li>
+<li class="">机内码转换为国标码的公式是什么？</li>
+<li class="">国标码转换为区位码的公式是什么？</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="七汉字字形码字模输出码">七、汉字字形码（字模/输出码）<a href="#七汉字字形码字模输出码" class="hash-link" aria-label="Direct link to 七、汉字字形码（字模/输出码）" title="Direct link to 七、汉字字形码（字模/输出码）" translate="no">​</a></h3>
+<ol>
+<li class="">什么是汉字字形码？作用是什么？</li>
+<li class="">字形信息主要有哪两类表示方式？最常用的是哪种？</li>
+<li class="">什么是点阵字形？如何用 0 和 1 表示字形？</li>
+<li class="">常见汉字点阵有哪些规格？</li>
+<li class="">点阵大小与字形质量、存储空间的关系是什么？</li>
+<li class="">16×16 点阵的一个汉字占用多少字节？如何计算？</li>
+<li class="">24×24 点阵的一个汉字占用多少字节？</li>
+<li class="">什么是汉字库（字模库）？</li>
+<li class="">不同字体（宋体、黑体等）的字形码是否相同？</li>
+<li class="">计算机如何根据内码实现汉字显示/打印？</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="八声音图像视频编码">八、声音、图像、视频编码<a href="#八声音图像视频编码" class="hash-link" aria-label="Direct link to 八、声音、图像、视频编码" title="Direct link to 八、声音、图像、视频编码" translate="no">​</a></h3>
+<ol>
+<li class="">音频数字化需要经过哪三个步骤？</li>
+<li class="">常见音频编码格式有哪些？分别简述特点。</li>
+<li class="">什么是图像编码？又被称为什么？</li>
+<li class="">常见图像文件格式有哪些？各自特点是什么？</li>
+<li class="">什么是视频编码？</li>
+<li class="">常见视频文件格式有哪些？各自特点是什么？</li>
+<li class="">MKV 格式与普通压缩格式最大区别是什么？</li>
+<li class="">3GP 格式与 MP4 格式的关系是什么？主要应用场景是什么？</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="九综合计算与判断类">九、综合计算与判断类<a href="#九综合计算与判断类" class="hash-link" aria-label="Direct link to 九、综合计算与判断类" title="Direct link to 九、综合计算与判断类" translate="no">​</a></h3>
+<ol>
+<li class="">24×16 点阵汉字字模占用多少字节？</li>
+<li class="">24×24 点阵汉字字模占用多少字节？</li>
+<li class="">1KB 内存可存放多少个 ASCII 字符？多少个汉字内码？</li>
+<li class="">已知某汉字国标码，如何计算机内码？</li>
+<li class="">已知某汉字机内码，如何求国标码？</li>
+<li class="">汉字内码每个字节的最高位固定为多少？</li>
+<li class="">汉字字库中存储的是汉字的哪种编码？</li>
+<li class="">显示/打印汉字时使用的是哪种编码？</li>
+<li class="">一个汉字与一个英文字符在存储时所占字节数之比是多少？</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="知识点答案">知识点答案<a href="#知识点答案" class="hash-link" aria-label="Direct link to 知识点答案" title="Direct link to 知识点答案" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一基础概念类-1">一、基础概念类<a href="#一基础概念类-1" class="hash-link" aria-label="Direct link to 一、基础概念类" title="Direct link to 一、基础概念类" translate="no">​</a></h3>
+<ol>
+<li class="">为什么计算机中的数据都要用二进制表示？</li>
+</ol>
+<p>答：计算机由逻辑电路组成，只能识别高、低电平两种状态，因此所有数据在存储和运算时都必须使用二进制数表示。</p>
+<ol start="2">
+<li class="">什么是字符编码？计算机中为什么要对字符进行编码？</li>
+</ol>
+<p>答：字符编码是为字符分配的二进制表示规则。计算机只能处理二进制数据，字符必须转换为二进制编码才能被存储、传输和处理。</p>
+<ol start="3">
+<li class="">计算机中西文字符和汉字分别主要采用什么编码体系？</li>
+</ol>
+<p>答：西文字符主要采用 ASCII 码；汉字主要采用 GB 2312 国标码、机内码、输入码、字形码等体系。</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二ascii-编码相关-1">二、ASCII 编码相关<a href="#二ascii-编码相关-1" class="hash-link" aria-label="Direct link to 二、ASCII 编码相关" title="Direct link to 二、ASCII 编码相关" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>ASCII 码的全称是什么？对应的国际标准是什么？
+答：美国信息交换标准代码；等同于国际标准 ISO/IEC 646。</p>
+</li>
+<li class="">
+<p>ASCII 码分为哪两个版本？分别是几位码？
+答：基本 ASCII 码（7 位码）和扩展 ASCII 码（8 位码）。</p>
+</li>
+<li class="">
+<p>基本 ASCII 码占用几个字节？最高位固定为多少？
+答：占用 1 个字节；最高位固定为 0。</p>
+</li>
+<li class="">
+<p>基本 ASCII 码的二进制、十六进制范围分别是什么？
+答：二进制：00000000B～01111111B；十六进制：00H～7FH。</p>
+</li>
+<li class="">
+<p>基本 ASCII 码一共可以表示多少个字符？
+答：128 个。</p>
+</li>
+<li class="">
+<p>基本 ASCII 码中控制字符有多少个？范围是多少？
+答：33 个；范围是十进制 0～31 及 127。</p>
+</li>
+<li class="">
+<p>基本 ASCII 码中可显示字符有多少个？范围是多少？
+答：95 个；范围是十进制 32～126。</p>
+</li>
+<li class="">
+<p>空格字符的十进制、十六进制 ASCII 码分别是多少？
+答：十进制 32，十六进制 20H。</p>
+</li>
+<li class="">
+<p>数字 0～9 的十进制、十六进制 ASCII 码范围分别是多少？
+答：十进制 48～57；十六进制 30H～39H。</p>
+</li>
+<li class="">
+<p>大写字母 A～Z 的十进制、十六进制 ASCII 码范围分别是多少？
+答：十进制 65～90；十六进制 41H～5AH。</p>
+</li>
+<li class="">
+<p>小写字母 a～z 的十进制、十六进制 ASCII 码范围分别是多少？
+答：十进制 97～122；十六进制 61H～7AH。</p>
+</li>
+<li class="">
+<p>大写字母与小写字母的 ASCII 码差值是多少（十进制与十六进制）？
+答：十进制 32，十六进制 20H。</p>
+</li>
+<li class="">
+<p>LF、CR、FF、DEL、BS、BEL 分别代表什么控制字符？
+答：LF 换行，CR 回车，FF 换页，DEL 删除，BS 退格，BEL 响铃。</p>
+</li>
+<li class="">
+<p>扩展 ASCII 码是几位？最高位有什么特点？
+答：8 位；最高位可以为 1。</p>
+</li>
+<li class="">
+<p>标准 ASCII 码共有多少个字符？扩展 ASCII 码共有多少个字符？
+答：标准 128 个；扩展 256 个。</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三汉字编码总体类-1">三、汉字编码总体类<a href="#三汉字编码总体类-1" class="hash-link" aria-label="Direct link to 三、汉字编码总体类" title="Direct link to 三、汉字编码总体类" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>什么是汉字代码？
+答：计算机处理汉字信息时，为每个汉字分配的二进制编码统称为汉字代码。</p>
+</li>
+<li class="">
+<p>汉字信息处理系统中为什么会存在多种编码？
+答：在输入、存储、传输、显示/打印等不同环节，对汉字的表示需求不同，因此需要不同编码。</p>
+</li>
+<li class="">
+<p>汉字在系统中传输的本质是什么？
+答：汉字代码在不同编码形式之间转换的过程。</p>
+</li>
+<li class="">
+<p>按应用目的划分，汉字编码主要分为哪四种？
+答：输入码（外码）、交换码（国标码）、机内码（内码）、字形码（输出码）。</p>
+</li>
+<li class="">
+<p>完整的汉字信息处理流程是什么（从输入到输出）？
+答：输入 → 输入码 → 国标码 → 机内码 → 字形码 → 输出。</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四汉字输入码外码-1">四、汉字输入码（外码）<a href="#四汉字输入码外码-1" class="hash-link" aria-label="Direct link to 四、汉字输入码（外码）" title="Direct link to 四、汉字输入码（外码）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>什么是汉字输入码？又被称为什么？
+答：为用户从外部输入汉字而编制的编码；又称外码。</p>
+</li>
+<li class="">
+<p>汉字输入码的设计原则是什么？
+答：简单易记、操作方便、利于提高输入速度。</p>
+</li>
+<li class="">
+<p>汉字输入码主要分为哪四类？
+答：顺序码、音码、形码、音形码。</p>
+</li>
+<li class="">
+<p>什么是顺序码？典型代表有哪些？
+答：按顺序给汉字编号的编码；代表：区位码、电报码。</p>
+</li>
+<li class="">
+<p>区位码的编码矩阵是几行几列？区号、位号范围分别是多少？
+答：94 行×94 列；区号 01～94，位号 01～94。</p>
+</li>
+<li class="">
+<p>区位码由几部分组成？分别是什么？
+答：四位十进制数，高两位是区号，低两位是位号。</p>
+</li>
+<li class="">
+<p>举例说明“中”“国”的区位码及其区、位号。
+答：“中”：54 区 48 位，区位码 5448；“国”：25 区 90 位，区位码 2590。</p>
+</li>
+<li class="">
+<p>区位码的优点和缺点分别是什么？
+答：优点：无重码；缺点：难记忆。</p>
+</li>
+<li class="">
+<p>什么是音码？优点和缺点分别是什么？举例常见输入法。
+答：按读音编码；优点：易上手；缺点：重码率高，不会读音无法输入。例：全拼、搜狗拼音、智能 ABC。</p>
+</li>
+<li class="">
+<p>什么是形码？典型代表是什么？优缺点是什么？
+答：按字形结构编码；代表：五笔字型。优点：重码少、输入快；缺点：学习成本高。</p>
+</li>
+<li class="">
+<p>什么是音形码？举例说明。
+答：结合读音和字形编码；例：双拼码、五十字元。</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五汉字交换码国标码-1">五、汉字交换码（国标码）<a href="#五汉字交换码国标码-1" class="hash-link" aria-label="Direct link to 五、汉字交换码（国标码）" title="Direct link to 五、汉字交换码（国标码）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>什么是汉字交换码？我国的标准全称是什么？标准号是多少？
+答：系统间交换汉字信息的统一编码；《信息交换用汉字编码字符集——基本集》；GB 2312-80。</p>
+</li>
+<li class="">
+<p>GB 2312-80 共收录多少个字符？其中汉字、符号各多少？
+答：共 7445 个；汉字 6763 个，非汉字图形符号 682 个。</p>
+</li>
+<li class="">
+<p>GB 2312-80 中一级汉字、二级汉字各多少个？分别按什么排序？分布在哪些区？
+答：一级 3755 个，按拼音排序，16～55 区；二级 3008 个，按部首排序，56～87 区。</p>
+</li>
+<li class="">
+<p>一个国标码占用几个字节？属于全角还是半角字符？
+答：2 个字节；全角字符。</p>
+</li>
+<li class="">
+<p>国标码的十六进制编码范围是什么？每个字节最高位是多少？
+答：2121H～7E7EH；每个字节最高位为 0。</p>
+</li>
+<li class="">
+<p>区位码与国标码的对应关系是什么？
+答：一一对应；区号对应国标码高位字节，位号对应低位字节。</p>
+</li>
+<li class="">
+<p>区位码转换为国标码的公式是什么？
+答：十六进制区位码 + 2020H = 国标码。</p>
+</li>
+<li class="">
+<p>已知某汉字区位码，如何分步计算国标码？
+答：①区号、位号分别转十六进制；②分别加 20H；③组合为两字节国标码。</p>
+</li>
+<li class="">
+<p>分别写出“中”“国”的区位码、国标码及计算过程。
+答：</p>
+</li>
+</ol>
+<ul>
+<li class="">中：区位码 5448 → 十六进制 3630H → +2020H → 国标码 5650H</li>
+<li class="">国：区位码 2590 → 十六进制 195AH → +2020H → 国标码 397AH</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="六汉字机内码内码-1">六、汉字机内码（内码）<a href="#六汉字机内码内码-1" class="hash-link" aria-label="Direct link to 六、汉字机内码（内码）" title="Direct link to 六、汉字机内码（内码）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>什么是汉字机内码？作用是什么？
+答：计算机内部存储、处理、传输汉字使用的编码；简称内码。</p>
+</li>
+<li class="">
+<p>为什么要在国标码基础上设置机内码？
+答：避免国标码与 ASCII 码冲突，便于区分汉字与西文字符。</p>
+</li>
+<li class="">
+<p>机内码如何由国标码转换而来？每个字节最高位变成多少？
+答：国标码每个字节最高位由 0 改为 1；最高位为 1。</p>
+</li>
+<li class="">
+<p>机内码的十六进制范围是什么？
+答：A1A1H～FEFEH。</p>
+</li>
+<li class="">
+<p>计算机如何通过最高位区分 ASCII 码和汉字？
+答：最高位为 0 是 ASCII 码；最高位为 1 是汉字内码。</p>
+</li>
+<li class="">
+<p>国标码转机内码的计算公式是什么？
+答：国标码 + 8080H = 机内码。</p>
+</li>
+<li class="">
+<p>分别写出“中”“国”的国标码、机内码及计算过程。
+答：</p>
+</li>
+</ol>
+<ul>
+<li class="">中：国标码 5650H + 8080H = 机内码 D6D0H</li>
+<li class="">国：国标码 397AH + 8080H = 机内码 B9FAH</li>
+</ul>
+<ol start="8">
+<li class="">
+<p>机内码转换为国标码的公式是什么？
+答：机内码 − 8080H = 国标码。</p>
+</li>
+<li class="">
+<p>国标码转换为区位码的公式是什么？
+答：国标码 − 2020H = 十六进制区位码。</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="七汉字字形码字模输出码-1">七、汉字字形码（字模/输出码）<a href="#七汉字字形码字模输出码-1" class="hash-link" aria-label="Direct link to 七、汉字字形码（字模/输出码）" title="Direct link to 七、汉字字形码（字模/输出码）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>什么是汉字字形码？作用是什么？
+答：描述汉字字形的编码；用于屏幕显示和打印输出。</p>
+</li>
+<li class="">
+<p>字形信息主要有哪两类表示方式？最常用的是哪种？
+答：活字形式、点阵/矢量形式；最常用点阵表示法。</p>
+</li>
+<li class="">
+<p>什么是点阵字形？如何用 0 和 1 表示字形？
+答：将汉字拆分为网格点阵；有笔画为 1，无笔画为 0。</p>
+</li>
+<li class="">
+<p>常见汉字点阵有哪些规格？
+答：16×16、24×24、32×32 等。</p>
+</li>
+<li class="">
+<p>点阵大小与字形质量、存储空间的关系是什么？
+答：点阵越大，字形越清晰美观，占用存储空间越大。</p>
+</li>
+<li class="">
+<p>16×16 点阵的一个汉字占用多少字节？如何计算？
+答：32 字节；16×16÷8=32。</p>
+</li>
+<li class="">
+<p>24×24 点阵的一个汉字占用多少字节？
+答：72 字节；24×24÷8=72。</p>
+</li>
+<li class="">
+<p>什么是汉字库（字模库）？
+答：所有汉字字形码的集合。</p>
+</li>
+<li class="">
+<p>不同字体（宋体、黑体等）的字形码是否相同？
+答：不相同。</p>
+</li>
+<li class="">
+<p>计算机如何根据内码实现汉字显示/打印？
+答：根据内码从汉字库中查找对应字形码，再控制输出设备显示。</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="八声音图像视频编码-1">八、声音、图像、视频编码<a href="#八声音图像视频编码-1" class="hash-link" aria-label="Direct link to 八、声音、图像、视频编码" title="Direct link to 八、声音、图像、视频编码" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>音频数字化需要经过哪三个步骤？
+答：抽样、量化、编码。</p>
+</li>
+<li class="">
+<p>常见音频编码格式有哪些？分别简述特点。
+答：</p>
+</li>
+</ol>
+<ul>
+<li class="">MIDI：电子音乐标准</li>
+<li class="">WAV：微软原生无压缩格式</li>
+<li class="">MP3：高压缩，音质好</li>
+<li class="">WMA：支持流媒体</li>
+<li class="">RealAudio：适合网络在线播放</li>
+<li class="">AIFF：苹果标准音频格式</li>
+</ul>
+<ol start="3">
+<li class="">
+<p>什么是图像编码？又被称为什么？
+答：将模拟图像转为数字信号；又称图像压缩技术。</p>
+</li>
+<li class="">
+<p>常见图像文件格式有哪些？各自特点是什么？
+答：</p>
+</li>
+</ol>
+<ul>
+<li class="">BMP：Windows 标准，几乎无压缩</li>
+<li class="">GIF：无损压缩，支持动图</li>
+<li class="">JPEG：有损压缩，体积小</li>
+<li class="">TIFF：灵活位图格式</li>
+<li class="">PNG：无损压缩，透明背景</li>
+</ul>
+<ol start="5">
+<li class="">
+<p>什么是视频编码？
+答：通过压缩将原始视频转换为其他格式的技术。</p>
+</li>
+<li class="">
+<p>常见视频文件格式有哪些？各自特点是什么？
+答：</p>
+</li>
+</ol>
+<ul>
+<li class="">AVI：音视频交错</li>
+<li class="">MPEG/MP4：通用压缩标准</li>
+<li class="">RM/RMVB：高压缩流媒体</li>
+<li class="">MOV：苹果 QuickTime 格式</li>
+<li class="">3GP：手机专用，体积小</li>
+<li class="">MKV：封装多音视频字幕</li>
+<li class="">WMV/ASF：微软流媒体格式</li>
+</ul>
+<ol start="7">
+<li class="">
+<p>MKV 格式与普通压缩格式最大区别是什么？
+答：MKV 是封装格式，可容纳多种编码的视频、音频、字幕。</p>
+</li>
+<li class="">
+<p>3GP 格式与 MP4 格式的关系是什么？主要应用场景是什么？
+答：3GP 是 MP4 的简化版；主要用于移动通信设备。</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="九综合计算与判断类-1">九、综合计算与判断类<a href="#九综合计算与判断类-1" class="hash-link" aria-label="Direct link to 九、综合计算与判断类" title="Direct link to 九、综合计算与判断类" translate="no">​</a></h3>
+<p>一、选择题答案
+1.A  2.B  3.A  4.B  5.C  6.C  7.B  8.B  9.B  10.B</p>
+<p>二、判断题答案
+1.√  2.×  3.√  4.×  5.√</p>
+<p>三、填空题答案</p>
+<ol>
+<li class="">1</li>
+<li class="">CE A2H</li>
+<li class="">5F42H</li>
+<li class="">3755；3008</li>
+<li class="">63H</li>
+</ol>
+<p>补充简答</p>
+<ol>
+<li class="">
+<p>24×16 点阵汉字字模占用多少字节？
+答：48 字节。</p>
+</li>
+<li class="">
+<p>24×24 点阵汉字字模占用多少字节？
+答：72 字节。</p>
+</li>
+<li class="">
+<p>1KB 内存可存放多少个 ASCII 字符？多少个汉字内码？
+答：1024 个 ASCII 字符；512 个汉字内码。</p>
+</li>
+<li class="">
+<p>已知某汉字国标码，如何计算机内码？
+答：国标码 + 8080H。</p>
+</li>
+<li class="">
+<p>已知某汉字机内码，如何求国标码？
+答：机内码 − 8080H。</p>
+</li>
+<li class="">
+<p>汉字内码每个字节的最高位固定为多少？
+答：1。</p>
+</li>
+<li class="">
+<p>汉字字库中存储的是汉字的哪种编码？
+答：字形码（字模）。</p>
+</li>
+<li class="">
+<p>显示/打印汉字时使用的是哪种编码？
+答：字形码。</p>
+</li>
+<li class="">
+<p>一个汉字与一个英文字符在存储时所占字节数之比是多少？
+答：2:1。</p>
+</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/computer-basics/ch03-03.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/computer-basics/ch03-02"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">任务二 数的编码</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/computer-basics/index4"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">概述</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#任务描述" class="table-of-contents__link toc-highlight">任务描述</a></li><li><a href="#预备知识" class="table-of-contents__link toc-highlight">预备知识</a><ul><li><a href="#一西文字符编码" class="table-of-contents__link toc-highlight">一、西文字符编码</a></li><li><a href="#二汉字代码" class="table-of-contents__link toc-highlight">二、汉字代码</a></li></ul></li><li><a href="#任务检测" class="table-of-contents__link toc-highlight">任务检测</a></li><li><a href="#任务检测答案" class="table-of-contents__link toc-highlight">任务检测答案</a></li><li><a href="#知识拓展" class="table-of-contents__link toc-highlight">知识拓展</a><ul><li><a href="#声音图像视频的编码" class="table-of-contents__link toc-highlight">声音、图像、视频的编码</a></li></ul></li><li><a href="#项目总结" class="table-of-contents__link toc-highlight">项目总结</a></li><li><a href="#知识点总结" class="table-of-contents__link toc-highlight">知识点总结</a><ul><li><a href="#一基础概念类" class="table-of-contents__link toc-highlight">一、基础概念类</a></li><li><a href="#二ascii-编码相关" class="table-of-contents__link toc-highlight">二、ASCII 编码相关</a></li><li><a href="#三汉字编码总体类" class="table-of-contents__link toc-highlight">三、汉字编码总体类</a></li><li><a href="#四汉字输入码外码" class="table-of-contents__link toc-highlight">四、汉字输入码（外码）</a></li><li><a href="#五汉字交换码国标码" class="table-of-contents__link toc-highlight">五、汉字交换码（国标码）</a></li><li><a href="#六汉字机内码内码" class="table-of-contents__link toc-highlight">六、汉字机内码（内码）</a></li><li><a href="#七汉字字形码字模输出码" class="table-of-contents__link toc-highlight">七、汉字字形码（字模/输出码）</a></li><li><a href="#八声音图像视频编码" class="table-of-contents__link toc-highlight">八、声音、图像、视频编码</a></li><li><a href="#九综合计算与判断类" class="table-of-contents__link toc-highlight">九、综合计算与判断类</a></li></ul></li><li><a href="#知识点答案" class="table-of-contents__link toc-highlight">知识点答案</a><ul><li><a href="#一基础概念类-1" class="table-of-contents__link toc-highlight">一、基础概念类</a></li><li><a href="#二ascii-编码相关-1" class="table-of-contents__link toc-highlight">二、ASCII 编码相关</a></li><li><a href="#三汉字编码总体类-1" class="table-of-contents__link toc-highlight">三、汉字编码总体类</a></li><li><a href="#四汉字输入码外码-1" class="table-of-contents__link toc-highlight">四、汉字输入码（外码）</a></li><li><a href="#五汉字交换码国标码-1" class="table-of-contents__link toc-highlight">五、汉字交换码（国标码）</a></li><li><a href="#六汉字机内码内码-1" class="table-of-contents__link toc-highlight">六、汉字机内码（内码）</a></li><li><a href="#七汉字字形码字模输出码-1" class="table-of-contents__link toc-highlight">七、汉字字形码（字模/输出码）</a></li><li><a href="#八声音图像视频编码-1" class="table-of-contents__link toc-highlight">八、声音、图像、视频编码</a></li><li><a href="#九综合计算与判断类-1" class="table-of-contents__link toc-highlight">九、综合计算与判断类</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
