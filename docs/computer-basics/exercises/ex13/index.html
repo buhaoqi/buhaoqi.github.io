@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-computer-basics/exercises/ex13" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">练习一 计算机病毒的防范 | 河北对口高考计算机专业</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" name="twitter:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" property="og:url" content="https://buhaoqi.github.io/docs/computer-basics/exercises/ex13"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="练习一 计算机病毒的防范 | 河北对口高考计算机专业"><meta data-rh="true" name="description" content="单选题"><meta data-rh="true" property="og:description" content="单选题"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex13"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex13" hreflang="en"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex13" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"练习一 计算机病毒的防范","item":"https://buhaoqi.github.io/docs/computer-basics/exercises/ex13"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="河北对口高考计算机专业 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="河北对口高考计算机专业 Atom Feed"><link rel="stylesheet" href="/assets/css/styles.761b036b.css">
+<script src="/assets/js/runtime~main.2e0f6ef1.js" defer="defer"></script>
+<script src="/assets/js/main.20cba3e5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid="csharp/intro" href="/docs/csharp/intro">算法与程序设计</a><a class="navbar__item navbar__link" docid="csharptutorials/index" href="/docs/csharp-tutorials/">C#课件</a><a class="navbar__item navbar__link" docid="mysql/intro" href="/docs/mysql/intro">MySQL教程</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" docid="computer-basics/index" href="/docs/computer-basics/">计算机应用基础</a><a class="navbar__item navbar__link" href="/docs/bookmarks/intro">网址导航</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://buhaoqi.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/computer-basics/"><span title="考试大纲" class="linkLabel_WmDU">考试大纲</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index1"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index1"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex1"><span title="练习一 计算机的发展史" class="linkLabel_WmDU">练习一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex2"><span title="练习二 计算机的特点和分类" class="linkLabel_WmDU">练习二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex3"><span title="练习三 计算机的应用" class="linkLabel_WmDU">练习三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex4"><span title="练习四 计算机的前沿技术" class="linkLabel_WmDU">练习四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex5"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex5"><span title="练习一 计算机的硬件系统" class="linkLabel_WmDU">练习一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex6"><span title="练习二 计算机的软件系统" class="linkLabel_WmDU">练习二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex7"><span title="练习三 计算机的工作原理" class="linkLabel_WmDU">练习三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex8"><span title="练习四 微型计算机的硬件系统" class="linkLabel_WmDU">练习四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex9"><span title="练习五 微型计算机的主要性能指标" class="linkLabel_WmDU">练习五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex10"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex10"><span title="练习一 进位计数制" class="linkLabel_WmDU">练习一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex11"><span title="练习二 数的编码" class="linkLabel_WmDU">练习二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex12"><span title="练习三 字符编码" class="linkLabel_WmDU">练习三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex13"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/computer-basics/exercises/ex13"><span title="练习一 计算机病毒的防范" class="linkLabel_WmDU">练习一 计算机病毒的防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex14"><span title="练习二 计算机的安全防护和使用" class="linkLabel_WmDU">练习二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex15"><span title="练习三  信息安全" class="linkLabel_WmDU">练习三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex16"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex16"><span title="练习一 认识键盘" class="linkLabel_WmDU">练习一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex17"><span title="练习二  中英文录入" class="linkLabel_WmDU">练习二  中英文录入</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/ch01-01"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-01"><span title="任务一 计算机的发展史" class="linkLabel_WmDU">任务一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-02"><span title="任务二 计算机的特点和分类" class="linkLabel_WmDU">任务二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-03"><span title="任务三 计算机的应用" class="linkLabel_WmDU">任务三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-04"><span title="任务四 计算机的前沿技术" class="linkLabel_WmDU">任务四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index2"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index2"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-01"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-02"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-03"><span title="任务三 计算机的工作原理" class="linkLabel_WmDU">任务三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-04"><span title="任务四 微型计算机的硬件系统" class="linkLabel_WmDU">任务四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-05"><span title="任务五 微型计算机的主要性能指标" class="linkLabel_WmDU">任务五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index3"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index3"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-01"><span title="任务一 进位计数制" class="linkLabel_WmDU">任务一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-02"><span title="任务二 数的编码" class="linkLabel_WmDU">任务二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-03"><span title="任务三 字符编码" class="linkLabel_WmDU">任务三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index4"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index4"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-01"><span title="任务一 计算机病毒的防范" class="linkLabel_WmDU">任务一 计算机病毒的防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-02"><span title="任务二 计算机的安全防护和使用" class="linkLabel_WmDU">任务二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-03"><span title="任务三  信息安全" class="linkLabel_WmDU">任务三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index5"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index5"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-01"><span title="任务一 认识键盘" class="linkLabel_WmDU">任务一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-02"><span title="任务二  中英文录入" class="linkLabel_WmDU">任务二  中英文录入</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">项目四 计算机维护</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">练习一 计算机病毒的防范</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>练习一 计算机病毒的防范</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="单选题">单选题<a href="#单选题" class="hash-link" aria-label="Direct link to 单选题" title="Direct link to 单选题" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第13类计算机病毒的防范">第13类：计算机病毒的防范<a href="#第13类计算机病毒的防范" class="hash-link" aria-label="Direct link to 第13类：计算机病毒的防范" title="Direct link to 第13类：计算机病毒的防范" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>下列关于计算机病毒的叙述，错误的是（    ）<br>
+<!-- -->A. 电子邮件是计算机病毒传播的主要途径之一<br>
+<!-- -->B. 电子邮件是个人间的通信手段，即使传播计算机病毒也是个别的，影响不大<br>
+<!-- -->C. 一般情况下只要不打开电子邮件的附件，系统就不会感染它所携带的病毒<br>
+<!-- -->D. 杀毒软件对计算机病毒的检测与消除能力通常滞后于病毒的出现</p>
+</li>
+<li class="">
+<p>下列类型的文件中，不易感染病毒的是（   ）<br>
+<!-- -->A. *.exe<br>
+<!-- -->B. *.doc<br>
+<!-- -->C. *.com<br>
+<!-- -->D. *.txt</p>
+</li>
+<li class="">
+<p>防病毒卡能够（   ）<br>
+<!-- -->A. 杜绝病毒对计算机的侵害<br>
+<!-- -->B. 自动发现病毒入侵的某些迹象<br>
+<!-- -->C. 自动消除已感染的所有病毒<br>
+<!-- -->D. 自动发现并阻止任何病毒的入侵</p>
+</li>
+<li class="">
+<p>下列叙述中，正确的是（  ）<br>
+<!-- -->A. 反病毒软件通常是滞后于计算机新病毒的出现<br>
+<!-- -->B. 反病毒软件总是超前于病毒的出现，它可以查、杀任何种类的病毒<br>
+<!-- -->C. 感染过计算机病毒的计算机具有对该病毒的免疫性<br>
+<!-- -->D. 计算机病毒会危害计算机用户的健康</p>
+</li>
+<li class="">
+<p>下列关于计算机病毒，说法正确的是（   ）<br>
+<!-- -->A. 计算机病毒只在可执行文件中传染<br>
+<!-- -->B. 计算机病毒主要通过读/写移动存储器或Internet网络进行传播<br>
+<!-- -->C. 只要删除所有感染了病毒的文件就可以彻底消除病毒<br>
+<!-- -->D. 计算机杀毒软件可以查出和清除任意已知的和未知的计算机病毒</p>
+</li>
+<li class="">
+<p>在计算机中，通常所说的“宏病毒”感染的文件类型是（    ）<br>
+<!-- -->A. COM<br>
+<!-- -->B. DOC<br>
+<!-- -->C. EXE<br>
+<!-- -->D. TXT</p>
+</li>
+<li class="">
+<p>下列关于计算机病毒的叙述，错误的是（    ）<br>
+<!-- -->A. 计算机病毒是人为制造的、企图破坏计算机功能或计算机数据的一段小程序<br>
+<!-- -->B. 反病毒软件需要随着新病毒的出现而升级，提高查、杀病毒的功能<br>
+<!-- -->C. 计算机病毒具有传染性<br>
+<!-- -->D. 反病毒软件可以查、杀任何种类的病毒</p>
+</li>
+<li class="">
+<p>计算机启动时运行的病毒称为（   ）病毒。<br>
+<!-- -->A. 定时发作型<br>
+<!-- -->B. 良性<br>
+<!-- -->C. 恶性<br>
+<!-- -->D. 引导型</p>
+</li>
+<li class="">
+<p>下列选项中，不属于计算机病毒特征的是（   ）<br>
+<!-- -->A. 破坏性<br>
+<!-- -->B. 潜伏性<br>
+<!-- -->C. 传染性<br>
+<!-- -->D. 免疫性</p>
+</li>
+<li class="">
+<p>下面有关计算机病毒的叙述中，（ ）是不正确的
+A. 计算机病毒会破坏计算机系统数据
+B. 将磁盘格式化可以清除病毒
+C. 有些病毒可以写入关上了写保护口的U盘
+D. 现在的微机经常是带病毒运行的</p>
+</li>
+<li class="">
+<p>下列关于计算机病毒的叙述中，正确的是（ ）
+A. 反病毒软件可以查、杀任何种类的病毒
+B. 计算机病毒是一种破坏了的程序
+C. 反病毒软件必须随着新病毒的出现而升级，提高查、杀病毒的功能
+D. 感染过计算机病毒的计算机具有对该病毒的免疫性</p>
+</li>
+<li class="">
+<p>计算机病毒的特点是（ ）
+A. 传染性、潜伏性和破坏性
+B. 传染性、破坏性和易读性
+C. 潜伏性、破坏性和易读性
+D. 传染性、潜伏性和安全性</p>
+</li>
+<li class="">
+<p>下面的关于计算机病毒的说法，正确的为（ ）
+A. 计算机病毒是一段程序，只要不主动执行它就不会造成破坏
+B. 计算机病毒只会破坏系统软件
+C. 计算机病毒不会通过光盘传染
+D. 计算机病毒是一个能通过自身复制传染，起破坏作用的计算机程序</p>
+</li>
+<li class="">
+<p>下列措施中不能防止计算机病毒的是（ ）
+A. 安装防病毒卡
+B. 定期取得最高版本的杀毒软件
+C. 不使用来历不明的U盘
+D. 为了拷贝文件，而不将U盘写保护</p>
+</li>
+<li class="">
+<p>若发现某U盘已经感染上病毒，最不应采取的手段是（ ）
+A. 将该U盘报废
+B. 换一台计算机再使用该U盘上的文件
+C. 格式化该U盘
+D. 用消毒软件清除该U盘的病毒</p>
+</li>
+<li class="">
+<p>计算机病毒能够自我复制，这是计算机病毒的（ ）
+A. 隐蔽性
+B. 潜伏性
+C. 传染性
+D. 破坏性</p>
+</li>
+<li class="">
+<p>下面是关于计算机病毒的4条叙述，其中正确的一条是（ ）
+A. 严禁在计算机上玩游戏是预防计算机病毒侵入的措施
+B. 计算机病毒是一种人为编制的特殊程序，会使计算机系统不能正常运转
+C. 计算机病毒只能破坏磁盘上的程序和数据
+D. 计算机病毒只破坏内存中的程序和数据</p>
+</li>
+<li class="">
+<p>当计算机病毒发作时，主要造成的破坏是（ ）
+A. 对磁盘片的物理损坏
+B. 对磁盘驱动器的损坏
+C. 对CPU的损坏
+D. 对存储在硬盘上的程序、数据甚至系统的破坏</p>
+</li>
+<li class="">
+<p>目前最好的防病毒软件的作用是（ ）
+A. 检查计算机是否染有病毒，消除已感染的任何病毒
+B. 杜绝病毒对计算机的侵害
+C. 查出计算机已感染的任何病毒，消除其中的一部分
+D. 检查计算机是否染有病毒，消除已感染的部分病毒
+一、单项选择题（本大题共25小题，每题2分，共50分）</p>
+</li>
+<li class="">
+<p>以下选项中，不属于网络安全防护的基本策略的是（   ）
+A. 防火墙     B.入侵检测     C.数据加密     D.数据备份</p>
+</li>
+<li class="">
+<p>以下不是计算机安全的五大基本要素的是（   ）
+A. 完整性    B.可用性    C.保密性      D.可靠性</p>
+</li>
+<li class="">
+<p>计算机病毒是指（    ）
+A.生物病毒的一种     B.计算机自动生成的小程序
+C.被损坏的程序       D.特制的具有破坏性的小程序</p>
+</li>
+<li class="">
+<p>计算机病毒会通过各种渠道从已被感染的计算机扩散到未被感染的计算机。此特征为计算机病毒的(    )。
+A.潜伏性    B.传染性    C.欺骗性     D.持久性</p>
+</li>
+<li class="">
+<p>下面列出的计算机病毒传播途径，不正确的说法是（   ）
+A.使用来路不明的软件       B.通过借用他人的.软盘
+C.通过非法的软件复制       D.软盘与带病毒的软盘放在一起</p>
+</li>
+<li class="">
+<p>下面关于计算机病毒说法错误的是(   )
+A.病毒可以直接或间接执行     B.通过杀毒软件可以找到病毒的文件名
+C.病毒属于主动攻击           D.计算机病毒的攻击有激发条件</p>
+</li>
+<li class="">
+<p>下列关于《中华人民共和国网络安全法》的说法，正确的是（   ）
+A.	旨在规范网络信息服务市场秩序，保障公民、法人和其他组织合法权益
+B.	旨在维护国家安全和公共利益，保障网络空间主权和国家安全
+C.旨在促进网络信息传播秩序，提高网络文化素质
+D.旨在规范网络信息服务市场秩序，促进网络经济持续健康发展</p>
+</li>
+<li class="">
+<p>计算机病毒最重要的特征是（      ）
+A.破坏性和并发性    B.破坏性和传染性    C.传染性和伪装性     D.破坏性和永久性</p>
+</li>
+<li class="">
+<p>验证某个信息在传送过程中是否被篡改，这属于(   )
+A.消息认证技术   B.防病毒技术   C.加密技术    D.访问控制技术</p>
+</li>
+<li class="">
+<p>保障信息安全最基本、最核心的技术措施是(   )
+A.信息加密技术    B.信息确认技术    C.网络控制技术    D.数据一致性技术</p>
+</li>
+<li class="">
+<p>下列措施中，(     )不是减少病毒的传染和造成的损失的好办法。
+A.	重要的文件要及时、定期备份，使备份能反映出系统的最新状态
+B.	外来的文件要经过病毒检测才能使用，不要使用盗版软件
+C.	不与外界进行任何交流，所有软件都自行开发
+D.定期用抗病毒软件对系统进行查毒、杀毒</p>
+</li>
+<li class="">
+<p>下列关于计算机病毒的四条叙述中，有错误的一条是(    )。
+A.计算机病毒是一个标记或一个命令
+B.计算机病毒是人为制造的一种程序
+C.计算机病毒是一种通过磁盘、网络等媒介传播、扩散，并能传染其他程序的程序
+D.计算机病毒是能够实现自身复制，并借助一定的媒体存在的具有潜伏性、传染性和破坏性的程序</p>
+</li>
+<li class="">
+<p>下列关于计算机病毒的叙述中，正确的一条是（     ）
+A.反病毒软件可以查、杀任何种类的病毒
+B.计算机病毒是一种被破坏了的程序
+C.反病毒软件必须随着新病毒的出现而升级，提高查、杀病毒的功能
+D.感染过计算机病毒的计算机具有对该病毒的免疫性</p>
+</li>
+<li class="">
+<p>下面的做法中,对提高信息保密性无影响的做法是（   ）
+A.定期对系统做“木马”检查       B.对机房屏蔽，以防止电磁辐射的泄露
+C.定期对系统做“磁盘整理”       D.给信息加密后保存、传送</p>
+</li>
+<li class="">
+<p>计算机安全不包括（    ）
+A.实体安全    B.安装安全     C.系统安全   D. 信息安全
+16.信息处理环节存在不安全的因素并不包括（   ）
+A.输入的数据容易被篡改                     B.操作员操作容易产生误操作
+C.IO 设备容易产生信息泄露       D.系统软件和处理软件容易受到病毒的攻击
+17.信息安全需求不包括（    ）
+A.保密性、完整性   B.可用性、可控性   C.不可否认性    D.信息内容的正确性</p>
+</li>
+<li class="">
+<p>下面关于计算机病毒说法正确的是（   ）
+A.正版的操作系统也会受计算机病毒的攻击
+B.防火墙主要的任务就是防止病毒感染自己的计算机系统
+C.正版的操作系统中有可能在初始装入时就植入计算机病毒
+D.一台计算机只要杀死了某种病毒，则该计算机不会再感染这种病毒</p>
+</li>
+<li class="">
+<p>微机感染病毒后，可能造成（   ）
+A.引导扇区数据损坏     B.鼠标损坏   C.内存条物理损坏   D.显示器损坏</p>
+</li>
+<li class="">
+<p>下面说法正确的是（   ）
+A.计算机病毒主要破坏了数据的完整性        B.计算机病毒主要破坏了数据的保密性
+C.计算机病毒主要破坏了数据的可控性       D.计算机病毒主要破坏了数据的不可否认性
+21.网络安全服务体系中，安全服务不包括(   )
+A.数据保密服务  B.访问控制服务  C.语义检查服务   D.身份认证服务
+22.入侵检测是指(    )
+A.检测系统关键点(如注册表)的数据是否受到攻击     B.检测系统的硬件系统是否正常
+C.检测网络是否工作正常        D.检测系统中是否存在“木马”
+23.关于系统更新的说法，下列正确的是(   )
+A.系统更新之后，系统就不会再出现漏洞    B.系统更新包的下载需要注册
+C.系统更新的存在，是因为系统存在漏洞    D.只要系统更新一次，以后就不必再更新
+24.计算机安全服务体系中，安全服务不包括（   ）
+A.数据保密服务    B.访问控制服务   C.数据完整性服务   D.数据来源的合法性服务
+25.防范计算机病毒的有效方法是(    ）
+A.安装杀毒软件并及时更新    B.不在计算机上使用u盘<br>
+<!-- -->C.不浏览网页     D.不给陌生人发送电子邮件</p>
+</li>
+<li class="">
+<p>关于计算机病毒,下列叙述中错误的是（）
+A. 计算机病毒是一种人为编造的程序和指令
+B. 计算机病毒只可感染可执行文件
+C. 文件染上计算机病毒不一定立即触发
+D. 预防计算机病毒有软件预防和硬件保护</p>
+</li>
+<li class="">
+<p>下列关于防火墙的描述中,不正确的是（）
+A. 限制特定端口互联 B. 限制特定IP互联
+C. 限制CPU温度过高 D. 记录网络访问记录</p>
+</li>
+<li class="">
+<p>关于计算机病毒，下列叙述中错误的是（）
+A. 计算机病毒是一种人为编造的程序和指令
+B. 计算机病毒只可感染可执行文件
+C. 文件染上计算机病毒不一定立即触发
+D. 预防计算机病毒有软件预防和硬件保护</p>
+</li>
+<li class="">
+<p>计算机病毒是指编制或者在计算机程序中插入的破坏计算机功能或者破坏数据、影响计算机使用并且能够自我复制的一组计算机指令或者（）
+A. 目录树  B. 文件夹  C. 程序代码  D. 图标</p>
+</li>
+<li class="">
+<p>个人计算机之间“病毒”的传染媒介可以是（）
+A. 键盘输入  B. 机械硬盘  C. 显示器输出  D. U盘</p>
+</li>
+<li class="">
+<p>下面的操作，有利于预防计算机病毒入侵的是（）
+①对下载的文件马上杀毒 ②及时安装操作系统补丁
+③及时升级杀毒软件和病毒防火墙 ④打开QQ上陌生人信息中的链接
+⑤随意打开来历不明的邮件
+A. ①②③  B. ①②④  C. ②③⑤  D. ③④⑤</p>
+</li>
+<li class="">
+<p>新型计算机病毒传播中不被反病毒程序发现的特性是指其具有（）
+A. 强壮性  B. 潜伏性  C. 变种性  D. 繁殖性</p>
+</li>
+<li class="">
+<p>计算机病毒是指编制或者在计算机程序中插入的破坏计算机功能或者破坏数据、影响计算机使用并且能够自我复制的一组计算机指令或者（）
+A. 目录树 B. 文件夹 C. 程序代码 D. 图标</p>
+</li>
+<li class="">
+<p>个人计算机之间“病毒”的传染媒介可以是（）
+A. 键盘输入 B. 机械硬盘 C. 显示器输出 D. U盘</p>
+</li>
+<li class="">
+<p>Windows系统补丁程序的最主要功能是（）
+A. 修补应用程序漏洞 B. 清除系统病毒
+C. 防止黑客的攻击 D. 修补系统安全漏洞</p>
+</li>
+<li class="">
+<p>下面的操作，有利于预防计算机病毒入侵的是（）
+①对下载的文件马上杀毒 ②及时安装操作系统补丁
+③及时升级杀毒软件和病毒防火墙 ④打开QQ上陌生人信息中的链接
+⑤随意打开来历不明的邮件
+A. ①②③ B. ①②④ C. ②③⑤ D. ③④⑤</p>
+</li>
+<li class="">
+<p>新型计算机病毒传播中不被反病毒程序发现的特性是指其具有（）
+A. 强壮性 B. 潜伏性 C. 变种性 D. 繁殖性</p>
+</li>
+<li class="">
+<p>下列对计算机安全不会造成危害的是（）
+A. 感染计算机病毒 B. 将数据加密
+C. 个人账号密码被盗 D. 受到黑客攻击</p>
+</li>
+<li class="">
+<p>以下方法中，不是用于预防计算机病毒的是（   ）
+A.系统升级修复漏洞                   B.设置防火墙
+C.切断一切与外界交换信息的渠道       D.不从不明站点下载程序或文件</p>
+</li>
+<li class="">
+<p>计算机病毒的特点不包括（   ）。
+A.传染性     B.破坏性     C.可触发性       D.免疫性</p>
+</li>
+<li class="">
+<p>下列操作中,不可能清除文件型计算机病毒的是（   ）
+A.将感染计算机病毒的文件更名     B.用杀毒软件进行清除
+C.格式化感染计算机病毒的磁盘     D.删除感染计算机病毒的文件</p>
+</li>
+<li class="">
+<p>下面无法预防计算机病毒的做法是（    ）
+A.给计算机安装卡巴斯基软件       B.经常升级防病毒软件
+C.给计算机加上口令               D.不要轻易打开陌生人的邮件</p>
+</li>
+<li class="">
+<p>访问控制中的“授权”是用来（   ）
+A.限制用户对资源的使用权限     B.控制用户可否上网
+C.控制操作系统是否可以启动        D.控制是否有收发邮件的权限</p>
+</li>
+<li class="">
+<p>保证信息不暴露给未经授权的实体是指信息的（   ）
+A. 可靠性    B.可用性    C. 完整性    D.保密性
+7.甲明明发了邮件给乙，但矢口否认，这破坏了信息安全中的（   ）
+A .保密性    B.不可抵赖性    C.可用性    D. 可靠性</p>
+</li>
+<li class="">
+<p>计算机病毒的特点是(   )。
+A.传播性、潜伏性、易读性与隐蔽性       B.破坏性、传播性、潜伏性与安全性
+C.传播性、潜伏性、破坏性与隐蔽性       D.传播性、潜伏性、破坏性与易读性</p>
+</li>
+<li class="">
+<p>下面，关于计算机安全属性说法不正确的是（   ）
+A.计算机的安全属性包括:保密性、完整性、不可抵赖性、可靠性等
+B.计算机的安全属性包括:保密性、完整性、不可抵赖性、可用性等
+C.计算机的安全属性包括:可靠性、完整性、保密性、正确性等
+D.计算机的安全属性包括:保密性、完整性、可用性、可靠性等</p>
+</li>
+<li class="">
+<p>目前，计算机病毒扩散最快的途径是(    )
+A.通过软件复制     B.通过网络传播     C.通过磁盘拷贝     D.运行游戏软件</p>
+</li>
+<li class="">
+<p>以下关于计算机病毒的特征说法正确的是(     )。
+A.计算机病毒只具有破坏性，没有其他特征
+B.计算机病毒具有破坏性，不具有传染性
+C.破坏性和传染性是计算机病毒的两大主要特征
+D.计算机病毒只具有传染性，不具有破坏性</p>
+</li>
+<li class="">
+<p>计算机病毒是一段可运行的程序，它一般（   ）保存在磁盘中。
+A.作为一个文件    B.作为一段数据    C.不作为单独文件     D.作为一段资料</p>
+</li>
+<li class="">
+<p>从技术上讲，计算机安全不包括（   ）
+A. 实体安全    B.系统安全    C.信息安全      D.计算机制造安全</p>
+</li>
+<li class="">
+<p>下列叙述中，（   ）是正确的。
+A.反病毒软件总是超前于病毒的出现，它可以查、杀任何种类的病毒
+B.任何一种反病毒软件总是滞后于计算机新病毒的出现
+C.感染过计算机病毒的计算机具有对该病毒的免疫性
+D.计算机病毒会危害计算机用户的健康</p>
+</li>
+<li class="">
+<p>下面是有关计算机病毒的说法，其中不正确（     ）
+A.计算机病毒有引导型病毒、文件型病毒、复合型病毒等
+B.计算机病毒中也有良性病毒
+C.计算机病毒实际上是一种计算机程序
+D.计算机病毒是由于程序的错误编制而产生的
+16.计算机安全中的系统安全是指（    ）
+A.系统操作员的人身安全
+B.计算机系统中的每个软件实体能安全使用
+C.操作系统本身的安全
+D.物理安全，即物理设备不被破坏以及对电磁辐射、搭线窃听等破坏行为的预防
+17.计算机安全的属性不包括（   ）
+A.信息的保密性      B.信息的完整性    C.信息的可靠性   D.信息的及时性</p>
+</li>
+<li class="">
+<p>以下不符合网络道德规范的是（   ）
+A.	向朋友介绍防止某种病毒的做法     B.向朋友提供网上下载视频文件的做法
+C. 利用邮件对好友提出批评            D.出自好奇，利用网络窃听好友电话</p>
+</li>
+<li class="">
+<p>计算机病毒是指能够侵入计算机系统，并在计算机系统潜伏、转播、破坏系统正常工作的一种具有繁殖能力的(   )
+A. 指令   B.设备    C.程序或可执行的代码段    D. 文件</p>
+</li>
+<li class="">
+<p>关于计算机病毒说法错误的是(     )
+A.病毒可以直接或间接执行          B.病毒没有文件名
+C.病毒属于主动攻击                D.计算机一旦感染病毒，会马上破坏该计算机系统
+21.杀毒完后，应及时给系统打上补丁，是因为(    )
+A.有些病毒就是针对系统的漏洞设计的，及时打上补丁，可使系统不再受到这种病毒的攻击
+B.否则系统会崩渍
+C.如果现在不打补丁，以后再无法再打补丁
+D.不打补丁，病毒等于未杀掉
+22.当U盘感染病毒，用各种清除病毒软件都不能清除病毒时，则应该对此U盘（   ）
+A .丢弃不用    B.删除所有文件   C. 进行格式化   D.删除Command.con文件
+23.下面能有效预防计算机病毒的方法是（   ）
+A.尽可能的多做磁盘碎片整理    B.及时升级防病毒软件
+C.尽可能地多做磁盘清理        D.把重要文件压缩存放
+24.下列说法不正确的是（    ）
+A.计算机病毒程序可以通过链接到Word的宏命令上去执行
+B.计算机病毒程序可以链接到可执行文件上去执行
+C.木马程序可以通过打开一个图片文件去传播
+D.计算机病毒程序可以链接到Excel工作薄文件上去执行
+25.关于加密技术，下面说法错误的是（  ）
+A.加密的过程由发送方完成                  B.解密的过程由接收方完成
+C.加密算法决不可以公开                    D.密钥(尤其是私钥)决不可以公开</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="多选题">多选题<a href="#多选题" class="hash-link" aria-label="Direct link to 多选题" title="Direct link to 多选题" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>下列关于计算机病毒的描述，正确的是（   ）<br>
+<!-- -->A. 计算机病毒具有传染性    B. 计算机病毒具有潜伏性<br>
+<!-- -->C. 计算机病毒是一种生物病毒    D. 计算机病毒具有破坏性</p>
+</li>
+<li class="">
+<p>计算机病毒的清除方法有（    ）<br>
+<!-- -->A. 杀毒软件清除法    B. 重装系统并格式化硬盘    C. 手工清除方法    D. 更换硬盘</p>
+</li>
+<li class="">
+<p>关于计算机病毒，下面说法正确的是（   ）<br>
+<!-- -->A. 一台计算机能用A盘启动，但不能用B盘启动，则计算机一定感染了病毒<br>
+<!-- -->B. 有些计算机病毒并不破坏程序和数据，而是占用磁盘存储空间<br>
+<!-- -->C. 计算机病毒不会损坏硬件<br>
+<!-- -->D. 可执行文件的长度变长，则该文件有可能被病毒感染</p>
+</li>
+<li class="">
+<p>计算机病毒的传播的介质可能是（   ）
+A. 硬盘     B.U盘      C.打印机     D. 网络
+2.下列属于计算机病毒的特征的是（    ）
+A.破坏性和潜伏性    B.传染性和隐蔽性   C.周期性和免疫性   D.寄生性和激发性
+3.关于计算机病毒,下面说法正确的是（   ）
+A.一台计算机能用A盘启动,但不能用B盘启动,则计算机肯定感染了病毒
+B.有些计算机病毒并不破坏程序和数据,而是占用磁盘存储空间
+C.计算机病毒不会损坏硬件
+D.可执行文件的长度变长,则该文件有可能被病毒感染
+4.某某打开了网友 QQ 上发来的一个链接后，发现电脑运行非常卡顿，下列操作无助于解决该问题的是(     )
+A.删除该网友的聊天记录       B.格式化本地硬盘
+C.使用安全软件扫描电脑       D.清空浏览器访问记录
+5.下列措施中对于预防计算机病毒有帮助的是（    ）
+A.安装杀毒软件定期扫描               B.经常进行操作系统补丁更新，修复漏洞
+C.定期整理磁盘碎片                   D.禁用浏览器中不必要的加载项</p>
+</li>
+<li class="">
+<p>以下关于计算机病毒的特征说法不正确的是（   ）。
+A.计算机病毒只具有破坏性，没有其他特征
+B.计算机病毒具有破坏性，不具有传染性
+C.破坏性和传染性是计算机病毒的两大主要特征
+D.计算机病毒只具有传染性，不具有破坏性
+7.关于数据完整性，说法错误的是（    ）
+A.保护网络中各系统之间交换的数据，防止因数据被截获而造成泄密
+B.提供连接实体身份的鉴别
+C.防止非法实体对用户的主动攻击，保证数据接受方收到的信息与发送方发送的信息完全一致
+D.确保数据数据是由合法实体发出的
+8.以下有关软件加密和硬件加密的比较，正确的是(    ）
+A.硬件加密对用户是透明的，而软件加密需要在操作系统或软件中写入加密程序
+B.硬件加密的兼容性比软件加密好
+C.硬件加密的安全性比软件加密好
+D.硬件加密的速度比软件加密快
+9.以下关于非对称密钥加密说法，不正确的是（   ）
+A.加密方和解密方使用的是不同的算法       B.加密密钥和解密密钥是不同的
+C.加密密钥和解密密钥是相同的             D.加密密钥和解密密钥没有任何关系
+10.关于计算机病毒，下列说法不正确的是（   ）
+A. 计算机病毒是一种程序，它在一定条件下被激活，只对数据起破坏作用，没有传染性
+B. 计算机病毒是一种数据，它在一定条件下被激活，起破坏作用，并没有传染性
+C. 计算机病毒是一种程序，它在一定条件下被激活，起破坏作用，并有极强的传染性，但无自我复制能力
+D. 计算机病毒是一种程序，它在一定条件下被激活，破坏计算机正常工作，并有极强的传染性</p>
+</li>
+<li class="">
+<p>预防计算机病毒的措施有（   ）
+A.安装杀毒软件并定期更新          B.不随意下载和运行不明软件
+C.定期备份重要数据                 D.关闭计算机网络连接
+2.人们借用生物学中的病毒来形容计算机病毒的理由有（   ）
+A.两者都有肯定时期的埋伏期
+B.两者都有感染性,只是受感染的对象不同而已
+C.两者感染的途径都是一样的
+D.计算机病毒可以破坏计算机系统,而生物病毒破坏的是生物的肌体
+3.以下各项工作,属于计算机病毒的预防工作的是（   ）
+A.不使用盗版的光盘          B.建立数据备份制度<br>
+<!-- -->C.建立微机局域网            D.备份重要的系统参数
+4.下面现象不属于计算机犯罪行为的是（   ）
+A.利用计算机网络破坏或窃取他人的信息资源
+B.某公司职员早上上班时,机器启动后不久就没有动静了
+C.某公司会计利用工作之便修改财务系统的数据,侵吞公款
+D.由于操作不当心,把计算机内的一些重要资料给删除掉了
+5.计算机安全包括（   ）。
+A.实体安全   B.软件安全   C.数据安全   D.运行安全
+6.下列属于隐藏计算机病毒的载体是(   )
+A .网络中的某台主机    B.显示器    C. 光盘    D.U盘
+7.以下关于计算机病毒说法正确的是(    )
+A.良性病毒同样具备计算机病毒的所有特征
+B.计算机病毒的发作时有激发条件的，未必一旦感染，立即发作
+C.计算机病毒也会破坏 Word文档
+D.破坏力强的计算机病毒，通常病毒的代码较长
+8.下列防止电脑病毒感染的方法，正确的是（   ）
+A.不随意打开来路不明的邮电       B.不用硬盘启动
+C.不用来路不明的程序             D.使用杀毒软件
+9.发现计算机感染病毒后，以下做法无法用来清除病毒的操作是（   ）
+A.使用杀毒软件清除病毒   B.扫描磁盘   C.整理磁盘碎片   D.重新启动计算机
+10.认证技术包括（   ）
+A.消息认证技术    B.木马识别技术    C.水印技术   D.数字签名技术</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="判断题">判断题<a href="#判断题" class="hash-link" aria-label="Direct link to 判断题" title="Direct link to 判断题" translate="no">​</a></h2>
+<ol>
+<li class="">使计算机病毒传播范围最广的媒介是Internet （ ）</li>
+<li class="">使用杀毒软件一定能检测并清除计算机感染的病毒 （ ）</li>
+<li class="">程序装入时间比平时长，程序运行比平时慢，出现这种情况，表示计算机可能有病毒 （ ）</li>
+<li class="">所谓良性病毒，只占用系统CPU资源和干扰系统工作，一般并不破坏数据 （ ）</li>
+<li class="">当你用一张带引导型病毒的系统盘启动计算机时，病毒会进入内存，但不会感染硬盘 （ ）
+1.所有的计算机病毒都是可以被清除的。（   ）
+2.链路加密方式适用于在广域网系统中应用。（   ）
+3.流密码属于对称加密方式。（   ）
+4.数字签名只能使用非对称加密方式来实现。（   ）
+5.当通过浏览器以在线方式申请数字证书时，申请证书和下载证书的计算机必须是同一台计算机。（   ）
+6.暴力破解与字典攻击属于同类网络攻击方式，其中暴力破解中所采用的字典要比字典攻击中使用的字典的范围要大。（   ）
+7.我们使用盗版杀毒软件也可以有效的清除病毒。（   ）
+8.上网浏览网页不会感染计算机病毒。（   ）
+9.可通过磁盘扫描程序完成计算机病毒的扫描和清除。（  ）
+10.常用的数据库备份方法有冷备份、热备份和逻辑备份。（  ）
+1.防火墙既能阻止外部网络对内部网络的攻击，也能防止内部网络的信息泄露。（  ）
+2.只要安装了杀毒软件，计算机就不会感染病毒。（   ）
+3.漏洞扫描)是对计算机系统或其他网络设备进行与安全相关的检测，找出安全隐患和可被黑客利用的漏洞。（  ）
+4.安装杀毒软件后，计算机就一定不会感染病毒。（  ）
+5.特洛伊木马只是一个程序，它驻留在目标计算机中，随计算机启动而自动启动，并且在某一端口进行监听，对接收到的数据进行识别，然后对目标计算机执行相应的操作。（   ）
+6.计算机病毒是一种具有自我复制能力的程序，它只能通过网络传播。（  ）
+7.身份认证技术是基于加密的技术,它的作用就是用来确定用户是否是真实的。（   ）
+8.信息安全中的 “保密性” 指的是确保信息不被未授权的人修改。（  ）
+9.按照密钥数量,密钥体制可分为对称密钥体制和非对称密钥体制。（   ）
+10.钓鱼邮件通常伪装成合法机构的邮件，目的是骗取用户的账号和密码。（  ）</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="填空题">填空题<a href="#填空题" class="hash-link" aria-label="Direct link to 填空题" title="Direct link to 填空题" translate="no">​</a></h2>
+<ol>
+<li class="">计算机病毒的传播途径主要有 ______、磁盘、光盘等。</li>
+<li class="">计算机病毒分为 ______、文件型、复合型三类。</li>
+<li class="">计算机病毒也是一段程序，它区别于正常程序的主要特点是 ______ 和 ______。</li>
+<li class="">网络计算机病毒相比于单机病毒危害性更 ______。</li>
+<li class="">从计算机病毒破坏性来看，所谓 ______ 病毒，即该病毒发作时将破坏数据，删除文件或使整个系统处于瘫痪状态等。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="多选题-1">多选题<a href="#多选题-1" class="hash-link" aria-label="Direct link to 多选题" title="Direct link to 多选题" translate="no">​</a></h2>
+<ol>
+<li class="">计算机病毒与生物病毒有很多相似之处，因此而命名为“病毒”，具有（）等特征。
+A. 寄生性 B. 传染性 C. 再生性 D. 潜伏性</li>
+<li class="">预防病毒传播的主要措施有（）
+A. 谨慎使用公共和共享的软件 B. 密切关注有关媒体发布的反病毒信息
+C. 限制网上可执行代码的交换 D. 不复制文件</li>
+<li class="">计算机病毒的预防措施主要有（）
+A. 定期备份常用数据和系统软件 B. 不使用非法复制或解密的软件
+C. 定期检测，及时杀毒，避免带毒操作 D. 及时更新清除病毒软件的版本</li>
+<li class="">计算机病毒的破坏性表现在（）
+A. 占用系统资源 B. 降低系统运行速度
+C. 破坏计算机硬件 D. 修改或破坏文件中的数据</li>
+<li class="">本地计算机被感染病毒的途径可能是（）
+A. 使用他人的U盘 B. 软盘表面受损
+C. 机房电源不稳定 D. 上网</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="判断题-1">判断题<a href="#判断题-1" class="hash-link" aria-label="Direct link to 判断题" title="Direct link to 判断题" translate="no">​</a></h2>
+<ol>
+<li class="">当前计算机病毒的传播途径包括网络和U盘。（）</li>
+<li class="">计算机病毒具有自我复制功能。（）</li>
+<li class="">计算机感染某种病毒后，就会产生相应的免疫力，以后就不会再感染此类病毒。（）</li>
+<li class="">现在科技发展迅速，反病毒软件总是超前于病毒的出现，它可以查杀任何种类的病毒。（）</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="填空题-1">填空题<a href="#填空题-1" class="hash-link" aria-label="Direct link to 填空题" title="Direct link to 填空题" translate="no">​</a></h2>
+<ol>
+<li class="">计算机病毒发作时干扰系统运行，甚至造成网络瘫痪，是利用计算机病毒______特征。</li>
+<li class="">计算机病毒传播的首要途径是______。</li>
+<li class="">______是指编制或者在计算机程序中插入的破坏计算机功能或者毁坏数据，影响计算机使用，并能自我复制的一组计算机指令或程序代码。</li>
+<li class="">对个人计算机进行病毒防范，最直接的方法就是______。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="简答题">简答题<a href="#简答题" class="hash-link" aria-label="Direct link to 简答题" title="Direct link to 简答题" translate="no">​</a></h2>
+<ol start="6">
+<li class="">计算机病毒主要特点有哪些？传播途径是什么？</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/computer-basics/exercises/ex13.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/computer-basics/exercises/ex12"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">练习三 字符编码</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/computer-basics/exercises/ex14"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">练习二 计算机的安全防护和使用</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#单选题" class="table-of-contents__link toc-highlight">单选题</a></li><li><a href="#第13类计算机病毒的防范" class="table-of-contents__link toc-highlight">第13类：计算机病毒的防范</a></li><li><a href="#多选题" class="table-of-contents__link toc-highlight">多选题</a></li><li><a href="#判断题" class="table-of-contents__link toc-highlight">判断题</a></li><li><a href="#填空题" class="table-of-contents__link toc-highlight">填空题</a></li><li><a href="#多选题-1" class="table-of-contents__link toc-highlight">多选题</a></li><li><a href="#判断题-1" class="table-of-contents__link toc-highlight">判断题</a></li><li><a href="#填空题-1" class="table-of-contents__link toc-highlight">填空题</a></li><li><a href="#简答题" class="table-of-contents__link toc-highlight">简答题</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

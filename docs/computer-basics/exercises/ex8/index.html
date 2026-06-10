@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-computer-basics/exercises/ex8" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">练习四 微型计算机的硬件系统 | 河北对口高考计算机专业</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" name="twitter:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" property="og:url" content="https://buhaoqi.github.io/docs/computer-basics/exercises/ex8"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="练习四 微型计算机的硬件系统 | 河北对口高考计算机专业"><meta data-rh="true" name="description" content="单选题"><meta data-rh="true" property="og:description" content="单选题"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex8"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex8" hreflang="en"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex8" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"练习四 微型计算机的硬件系统","item":"https://buhaoqi.github.io/docs/computer-basics/exercises/ex8"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="河北对口高考计算机专业 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="河北对口高考计算机专业 Atom Feed"><link rel="stylesheet" href="/assets/css/styles.761b036b.css">
+<script src="/assets/js/runtime~main.2e0f6ef1.js" defer="defer"></script>
+<script src="/assets/js/main.20cba3e5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid="csharp/intro" href="/docs/csharp/intro">算法与程序设计</a><a class="navbar__item navbar__link" docid="csharptutorials/index" href="/docs/csharp-tutorials/">C#课件</a><a class="navbar__item navbar__link" docid="mysql/intro" href="/docs/mysql/intro">MySQL教程</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" docid="computer-basics/index" href="/docs/computer-basics/">计算机应用基础</a><a class="navbar__item navbar__link" href="/docs/bookmarks/intro">网址导航</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://buhaoqi.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/computer-basics/"><span title="考试大纲" class="linkLabel_WmDU">考试大纲</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index1"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index1"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex1"><span title="练习一 计算机的发展史" class="linkLabel_WmDU">练习一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex2"><span title="练习二 计算机的特点和分类" class="linkLabel_WmDU">练习二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex3"><span title="练习三 计算机的应用" class="linkLabel_WmDU">练习三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex4"><span title="练习四 计算机的前沿技术" class="linkLabel_WmDU">练习四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex5"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex5"><span title="练习一 计算机的硬件系统" class="linkLabel_WmDU">练习一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex6"><span title="练习二 计算机的软件系统" class="linkLabel_WmDU">练习二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex7"><span title="练习三 计算机的工作原理" class="linkLabel_WmDU">练习三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/computer-basics/exercises/ex8"><span title="练习四 微型计算机的硬件系统" class="linkLabel_WmDU">练习四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex9"><span title="练习五 微型计算机的主要性能指标" class="linkLabel_WmDU">练习五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex10"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex10"><span title="练习一 进位计数制" class="linkLabel_WmDU">练习一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex11"><span title="练习二 数的编码" class="linkLabel_WmDU">练习二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex12"><span title="练习三 字符编码" class="linkLabel_WmDU">练习三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex13"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex13"><span title="练习一 计算机病毒的防范" class="linkLabel_WmDU">练习一 计算机病毒的防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex14"><span title="练习二 计算机的安全防护和使用" class="linkLabel_WmDU">练习二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex15"><span title="练习三  信息安全" class="linkLabel_WmDU">练习三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex16"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex16"><span title="练习一 认识键盘" class="linkLabel_WmDU">练习一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex17"><span title="练习二  中英文录入" class="linkLabel_WmDU">练习二  中英文录入</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/ch01-01"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-01"><span title="任务一 计算机的发展史" class="linkLabel_WmDU">任务一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-02"><span title="任务二 计算机的特点和分类" class="linkLabel_WmDU">任务二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-03"><span title="任务三 计算机的应用" class="linkLabel_WmDU">任务三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-04"><span title="任务四 计算机的前沿技术" class="linkLabel_WmDU">任务四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index2"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index2"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-01"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-02"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-03"><span title="任务三 计算机的工作原理" class="linkLabel_WmDU">任务三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-04"><span title="任务四 微型计算机的硬件系统" class="linkLabel_WmDU">任务四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-05"><span title="任务五 微型计算机的主要性能指标" class="linkLabel_WmDU">任务五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index3"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index3"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-01"><span title="任务一 进位计数制" class="linkLabel_WmDU">任务一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-02"><span title="任务二 数的编码" class="linkLabel_WmDU">任务二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-03"><span title="任务三 字符编码" class="linkLabel_WmDU">任务三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index4"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index4"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-01"><span title="任务一 计算机病毒的防范" class="linkLabel_WmDU">任务一 计算机病毒的防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-02"><span title="任务二 计算机的安全防护和使用" class="linkLabel_WmDU">任务二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-03"><span title="任务三  信息安全" class="linkLabel_WmDU">任务三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index5"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index5"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-01"><span title="任务一 认识键盘" class="linkLabel_WmDU">任务一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-02"><span title="任务二  中英文录入" class="linkLabel_WmDU">任务二  中英文录入</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">项目二 计算机系统</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">练习四 微型计算机的硬件系统</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>练习四 微型计算机的硬件系统</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="单选题">单选题<a href="#单选题" class="hash-link" aria-label="Direct link to 单选题" title="Direct link to 单选题" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>下列关于磁道的说法正确的是（   ）<br>
+<!-- -->A. 盘面上的磁道是一组同心圆<br>
+<!-- -->B. 由于每一磁道的周长不同，所以每一磁道的存储容量也不同<br>
+<!-- -->C. 盘面上的磁道是一条阿基米德螺线<br>
+<!-- -->D. 磁道的编号是最内圈为0，并次序由内向外逐渐增大，最外圈的编号最大</p>
+</li>
+<li class="">
+<p>CGA、EGA和VGA标志着（   ）的不同规格和性能。<br>
+<!-- -->A. 打印机<br>
+<!-- -->B. 存储器<br>
+<!-- -->C. 显示器<br>
+<!-- -->D. 硬盘</p>
+</li>
+<li class="">
+<p>主机板上CMOS芯片的主要用途是（   ）<br>
+<!-- -->A. 管理内存与CPU的通讯<br>
+<!-- -->B. 增加内存的容量<br>
+<!-- -->C. 储存时间、日期、硬盘参数与计算机配置信息<br>
+<!-- -->D. 存放基本输入输出系统程序、引导程序和自检程序</p>
+</li>
+<li class="">
+<p>微型计算机采用总线结构连接CPU、内存储器和外部设备，总线由三部分组成，它包括（   ）<br>
+<!-- -->A. 数据总线、传输总线和通信总线<br>
+<!-- -->B. 地址总线、逻辑总线和信号总线<br>
+<!-- -->C. 控制总线、地址总线和运算总线<br>
+<!-- -->D. 数据总线、地址总线和控制总线</p>
+</li>
+<li class="">
+<p>微型计算机配置高速缓冲存储器是为了解决（   ）<br>
+<!-- -->A. 主机与外设之间速度不匹配问题<br>
+<!-- -->B. CPU与辅助存储器之间速度不匹配问题<br>
+<!-- -->C. 内存储器与辅助存储器之间速度不匹配问题<br>
+<!-- -->D. CPU与内存储器之间速度不匹配问题</p>
+</li>
+<li class="">
+<p>下列关于总线的说法，错误的是（   ）<br>
+<!-- -->A. 总线是计算机中数据传输的公共通道<br>
+<!-- -->B. 按照传输信号的不同，总线分为地址总线、数据总线和控制总线<br>
+<!-- -->C. 地址总线、数据总线和控制总线都是双向传输的<br>
+<!-- -->D. 总线的数据传输方式包括串行和并行</p>
+</li>
+<li class="">
+<p>微型计算机的总线一般由（   ）组成。<br>
+<!-- -->A. 数据总线、地址总线、控制总线<br>
+<!-- -->B. 内部总线、系统总线、外部总线<br>
+<!-- -->C. 并行总线、串行总线<br>
+<!-- -->D. 以上都是</p>
+</li>
+<li class="">
+<p>以下关于微型计算机接口的说法，错误的是（   ）<br>
+<!-- -->A. 接口可以实现不同设备之间的信息交换<br>
+<!-- -->B. 接口可以提高计算机系统的性能<br>
+<!-- -->C. 接口可以使计算机系统更加复杂，降低了可靠性<br>
+<!-- -->D. 接口可以实现不同速度的设备之间的匹配</p>
+</li>
+<li class="">
+<p>使用Cache可以提高计算机运行速度，这是因为（   ）<br>
+<!-- -->A. Cache增大了内存的容量<br>
+<!-- -->B. Cache扩大了硬盘的容量<br>
+<!-- -->C. Cache缩短了CPU的等待时间<br>
+<!-- -->D. Cache可以存放程序和数据</p>
+</li>
+<li class="">
+<p>计算机中Cache的作用是（   ）<br>
+<!-- -->A. 扩大主存容量<br>
+<!-- -->B. 提高CPU访问内存的速度<br>
+<!-- -->C. 存储数据和程序<br>
+<!-- -->D. 处理数据</p>
+</li>
+<li class="">
+<p>计算机中输入输出接口的作用是（   ）<br>
+<!-- -->A. 连接CPU和内存<br>
+<!-- -->B. 连接计算机和外部设备<br>
+<!-- -->C. 存储数据<br>
+<!-- -->D. 处理数据</p>
+</li>
+<li class="">
+<p>以微处理器为核心，配上存储器、输入输出接口电路及系统总线可以组成（   ）<br>
+<!-- -->A. CPU<br>
+<!-- -->B. 微型计算机系统<br>
+<!-- -->C. 微型计算机<br>
+<!-- -->D. 硬件系统</p>
+</li>
+<li class="">
+<p>下列既是输入设备，又是输出设备的为（）
+A. 游戏手柄  B. 打印机  C. 扫描仪  D. 触摸屏</p>
+</li>
+<li class="">
+<p>内存的存储单元上一般标有带有规则的序号，这些序号可以称之为（）
+A. 位置  B. 地址  C. 序号  D. 存储编码</p>
+</li>
+<li class="">
+<p>下列选项中，不属于硬盘的主要技术指标的是（）
+A. 转速  B. 存储容量  C. 主频  D. 传输速率</p>
+</li>
+<li class="">
+<p>下列选项中，不属于台式机主板的组成部分的是（）
+A. 南桥芯片  B. CPU插槽  C. CPU风扇  D. 内存插槽</p>
+</li>
+<li class="">
+<p>下列关于内存的说法中，正确的是（）
+A. 台式机内存条和笔记本内存条的外观、尺寸、规格都相同
+B. DDR4内存工作电压比DDR3内存工作电压要高
+C. 计算机对内存的存取速度比对硬盘的存取速度要快
+D. 一台台式机主板上最多只能安装一条内存条</p>
+</li>
+<li class="">
+<p>下列关于USB接口的说法中，正确的是（）
+A. USB接口有USB 2.0、USB 2.6、USB 3.0等不同规范
+B. USB接口中TYPE-A型、TYPE-B型和TYPE-C型外观形状相同
+C. USB接口只能连接鼠标
+D. USB接口支持热插拔</p>
+</li>
+<li class="">
+<p>静态RAM的特点是（）
+A. 在不断电的条件下，信息在静态RAM中保持不变，故不必定期刷新就能永久保存信息
+B. 在不断电的条件下，信息在静态RAM中不能永久无条件保持，必须定期刷新才不致丢失信息
+C. 在静态RAM中的信息只能读不能写
+D. 在静态RAM中的信息断电后也不会丢失</p>
+</li>
+<li class="">
+<p>计算机存储器是由一个个存储单元构成的，每个存储单元的大小就是一个（）
+A. 字节  B. 字  C. 位  D. 字长</p>
+</li>
+<li class="">
+<p>随机存储器RAM的特点是（）
+A. RAM中既可写入信息，也可读出信息  B. RAM中只能写入信息
+C. RAM中只能读出信息  D. RAM中既不可写入信息，也不可读出信息</p>
+</li>
+<li class="">
+<p>下列属于计算机内存储器的是（）
+A. 硬盘  B. 光盘  C. CD-ROM  D. ROM</p>
+</li>
+<li class="">
+<p>存储容量大、可靠性高、价格低、在断电后可以永久地保存信息的是（）
+A. RAM  B. CD-ROM  C. Cache  D. ROM</p>
+</li>
+<li class="">
+<p>下列选项中存取速度最快的设备是（）
+A. 光盘  B. RAM  C. 硬盘  D. Cache</p>
+</li>
+<li class="">
+<p>（）总线即通用串行总线，是一种新型接口标准，目前广泛应用于多种数码设备。
+A. USB  B. AGP  C. PCI  D. IEEE 1394</p>
+</li>
+<li class="">
+<p>计算机的硬盘属于（）
+A. 内存  B. CPU的一部分  C. 外存  D. 一种光设备</p>
+</li>
+<li class="">
+<p>下列关于USB接口的叙述中，错误的是（）
+A. USB2.0是一种中高速的串行接口
+B. USB符合即插即用规范，连接的设备不用关机就可以插拔
+C. 一个USB接口通过扩展可以连接多个设备
+D. 鼠标这样的慢速设备，不能使用USB接口</p>
+</li>
+<li class="">
+<p>关于PC机主板上的CMOS芯片，下面说法中正确的是（）
+A. CMOS芯片用于存储计算机系统的配置参数，它是只读存储器
+B. CMOS芯片的功能与BIOS完全相同
+C. CMOS芯片用于存储正在运行的程序，是易失性的
+D. CMOS芯片需要一个电池给它供电，否则其中的数据在主机断电时会丢失</p>
+</li>
+<li class="">
+<p>微型计算机的运算器、控制器及内存储器统称为（）
+A. CPU  B. ALU  C. 主机  D. 外设</p>
+</li>
+<li class="">
+<p>计算机内存比外存（）
+A. 便宜但能存储更多的信息  B. 存储容量大
+C. 存取速度快  D. 昂贵但能存储更多的信息</p>
+</li>
+<li class="">
+<p>在微型计算机中，如果电源突然中断，则存储在（）中的信息将丢失。
+A. 软盘  B. RAM  C. ROM  D. 硬盘</p>
+</li>
+<li class="">
+<p>液晶显示器的主要参数有颜色质量、响应时间和（）
+A. 亮度  B. 大小  C. 外观颜色  D. 分辨率</p>
+</li>
+<li class="">
+<p>在利用拼音输入汉字时，有时虽正确输入了拼音码但却找不到所要的汉字，其原因不可能是（）
+A. 计算机显示器的分辨率不支持该汉字的显示
+B. 汉字显示程序不能正常工作
+C. 操作系统当前所支持的汉字字符集不含该汉字
+D. 汉字输入软件出错</p>
+</li>
+<li class="">
+<p>内存条插在主板的（）上。
+A. CPU  B. 机箱  C. 显示卡  D. 内存条插槽</p>
+</li>
+<li class="">
+<p>闪存卡和U盘的主要区别是闪存卡需要使用（）才能和计算机连接。
+A. 读写器  B. 输入设备  C. 输出设备  D. 存储器</p>
+</li>
+<li class="">
+<p>分辨率是显示器的一个重要指标，它是指显示器的（）
+A. 整屏最多可显示像素数  B. 可显示最大颜色数
+C. 屏幕尺寸  D. 刷新频率</p>
+</li>
+<li class="">
+<p>计算机屏幕的显示分辨率与（）无关。
+A. 显示器支持的最高分辨率  B. 显卡的性能
+C. 操作系统对分辨率的设置  D. 显示文件的大小</p>
+</li>
+<li class="">
+<p>ROM中的信息是（）
+A. 由计算机制造厂预先写入的  B. 在系统安装时写入的
+C. 根据用户需求不同，由用户随时写入的  D. 由程序临时写入的</p>
+</li>
+<li class="">
+<p>关于PC机主板的叙述中错误的是（）
+A. CPU和RAM存储器均通过相应的插座安装在主板上
+B. 芯片组是主板的重要组成部分，所有控制功能几乎都集成在芯片组内
+C. 为便于安装，主板的物理尺寸已标准化
+D. 光盘驱动器也安装在主板上</p>
+</li>
+<li class="">
+<p>PC机中存放基本输入/输出系统（BIOS）的器件是（）
+A. RAM  B. ROM  C. 硬盘  D. 寄存器</p>
+</li>
+<li class="">
+<p>一个字符的ASCII码占用的存储空间为（）
+A. 2个字节  B. 1个字节  C. 4个字节  D. 8个字节</p>
+</li>
+<li class="">
+<p>计算机中正在运行的程序和数据都是保存在计算机的（）中。
+A. RAM  B. 硬盘  C. ROM  D. 软盘</p>
+</li>
+<li class="">
+<p>下列说法正确的是（）
+A. CD-ROM是软盘驱动器
+B. 显示器像素越多分辨率越高
+C. 开机后插上鼠标，屏幕上才会出现鼠标指针
+D. 硬盘驱动器是内部存储器</p>
+</li>
+<li class="">
+<p>DRAM存储器的中文含义是（）
+A. 静态随机存储器  B. 动态只读存储器
+C. 静态只读存储器  D. 动态随机存储器</p>
+</li>
+<li class="">
+<p>图1为存储器的层次结构图，其中★标记的位置是（）
+A. RAM  B. ROM  C. 寄存器  D. 高速缓冲存储器</p>
+</li>
+<li class="">
+<p>主板上的CMOS芯片的主要用途是（）
+A. 增加内存的容量
+B. 管理内存与CPU的通信
+C. 储存时间、日期、硬盘参数与计算机配置信息
+D. 存放基本输入输出系统程序、引导程序和自检程序</p>
+</li>
+<li class="">
+<p>以下说法错误的是（）
+A. 计算机的主机包括CPU和内存，CPU包括运算器和控制器
+B. 内存和外存一样，在断电情况下都可以长期保存数据
+C. ROM被称为只读存储器，用于保存一些固定的数据和程序
+D. 计算机系统由硬件系统和软件系统组成</p>
+</li>
+<li class="">
+<p>字长为64位的计算机是指（）
+A. 该计算机的内存容量为64 MB
+B. 该计算机CPU一次能处理的二进制位数为64位
+C. 该计算机能够处理的最大数值不超过2⁶⁴
+D. 该计算机每秒钟所能执行的指令条数为64</p>
+</li>
+<li class="">
+<p>字长为8位的计算机,它能表示的无符号整数的范围是（）
+A. 0<del>127 B. 0</del>255 C. 0<del>128 D. 0</del>256</p>
+</li>
+<li class="">
+<p>一般来说，计算机的字长不可能是（）
+A. 8 B. 15 C. 32 D. 128</p>
+</li>
+<li class="">
+<p>不同的计算机，其指令系统也不相同，这主要取决于（）
+A.所用的CPU结构  B.所用的操作系统  C.所用的程序设计语言  D.系统的总体</p>
+</li>
+<li class="">
+<p>下列关于计算机CPU的叙述,错误的是（）
+A. CPU由运算器和控制器组成 B. CPU中的寄存器可以用来存放临时数据
+C. 所有计算机的CPU都具有相同的机器指令 D. CPU可直接访问内存</p>
+</li>
+<li class="">
+<p>内存容量是影响计算机性能的要素之一,通常容量越大越好,但其容量受到多种因素的制约。下列因素中,不影响内存容量的因素是（）
+A. CPU数据线的宽度
+B. 主板芯片组的型号
+C. 主板存储器插座类型与数目
+D. CPU地址线的宽度</p>
+</li>
+<li class="">
+<p>下列说法正确的是（）
+A. CD-ROM是软盘驱动器
+B. 显示器像素越多分辨率越高
+C. 开机后插上鼠标,屏幕上才会出现鼠标指针
+D. 硬盘驱动器是内部存储器</p>
+</li>
+<li class="">
+<p>计算机中正在运行的程序和数据都是保存在计算机的（）中。
+A. RAM B. 硬盘 C. ROM D. 软盘</p>
+</li>
+<li class="">
+<p>关于微型计算机的知识正确的叙述是（）
+A. 键盘是输入设备，打印机是输出设备，它们都是计算机的外部设备
+B. 当显示器显示键盘输入的字符时，它属于输入设备；当显示器显示程序的运行结果时，它属于输出设备</p>
+</li>
+<li class="">
+<p>在利用拼音输入汉字时,有时虽正确输入了拼音码但却找不到所要的汉字,其原因不可能是（）
+A. 计算机显示器的分辨率不支持该汉字的显示
+B. 汉字显示程序不能正常工作
+C. 操作系统当前所支持的汉字字符集不含该汉字
+D. 汉字输入软件出错</p>
+</li>
+<li class="">
+<p>某种计算机的内存容量是640K，这里的640K容量是指（   ）个字节。<br>
+<!-- -->A. 640      B. 640<em>1000      C. 640</em>1024      D. 640<em>1024</em>1024</p>
+</li>
+<li class="">
+<p>存储量可以用 KB 表示，4KB 表示存储单元为（   ）<br>
+<!-- -->A. 4000 个字    B. 4000 个字节    C. 4096 个字    D. 4096 个字节</p>
+</li>
+<li class="">
+<p>计算机的内存储器比外存储器更优越的是（）
+A. 更便宜  B. 存储容量更大  C. 存取速度快  D. 虽贵但能存储更多的信息</p>
+</li>
+<li class="">
+<p>计算机字长取决于（）总线的宽度。
+A. 控制总线  B. 数据总线  C. 地址总线  D. 通信总线</p>
+</li>
+<li class="">
+<p>微型计算机系统中的中央处理器通常是指（）
+A．存储器和控制器  B．存储器和运算器
+C．运算器和控制器  D．存储器、控制器和运算器</p>
+</li>
+<li class="">
+<p>在微机中，通用寄存器的位数是（）
+A.8位  B.16位  C.计算机字长  D.32位</p>
+</li>
+<li class="">
+<p>当前微型计算机的主存储器可分为（）
+A.内存和外存  B.RAM 和 ROM  C.软盘和硬盘  D.磁盘与磁带</p>
+</li>
+<li class="">
+<p>微型计算机的内存容量主要指（）的容量。
+A.RAM  B.ROM  C.CMOS  D.Cache</p>
+</li>
+<li class="">
+<p>PCI 是指（）
+A.产品型号  B.总线标准  C.微机系统名称  D.微处理器型号</p>
+</li>
+<li class="">
+<p>计算机断电时会丢失信息的是（）
+A．软盘  B．硬盘  C．RAM  D．ROM</p>
+</li>
+<li class="">
+<p>在 PC 机中负责各类 I/O 设备控制器、CPU 与存储器之间相互交换信息、传输数据的一组公用信号线称为（）
+A. I/O 总线 B.CPU 总线 C.存储器总线 D.前端总线</p>
+</li>
+<li class="">
+<p>下面关于 ROM 的说法中，不正确的是（）
+A.CPU 不能向 ROM 随机写入数据  B.ROM 中的内容在断电后不会消失
+C.ROM 是只读存储器的英文缩写  D.ROM 是只读的，所以它不是内存而是外存</p>
+</li>
+<li class="">
+<p>下面关于通用串行总线 USB 的描述，不正确的是（） 。
+A．USB 接口为外设提供电源  B．USB 设备可以起集线器作用
+C．可同时连接 127台输入／输出设备  D．通用串行总线不需要软件控制就能正常工作</p>
+</li>
+<li class="">
+<p>微型计算机硬件系统的性能主要取决于（）
+A. 微处理器  B. 内存储器  C. 显示适配卡  D. 硬磁盘存储器</p>
+</li>
+<li class="">
+<p>下列诸因素中，对微机工作影响最小的是（）
+A.尘土  B.噪声  C.温度  D.湿度</p>
+</li>
+<li class="">
+<p>在描述信息传输中 bps 表示的是（）。
+A.每秒传输的字节数  B.每秒传输的指令数
+C.每秒传输的字数  D.每秒传输的位数</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="多选题">多选题<a href="#多选题" class="hash-link" aria-label="Direct link to 多选题" title="Direct link to 多选题" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>关于微型计算机的知识，正确的有（）
+A. 外存储器中的信息不能直接进入CPU进行处理
+B. 系统总线是CPU与各部件之间传送各种信息的公共通道
+C. 光盘驱动器属于主机，光盘属于外部设备
+D. 家用电脑不属于微型计算机</p>
+</li>
+<li class="">
+<p>微机采用总线结构，总线按照作用的不同可以分为（   ）<br>
+<!-- -->A. 系统总线<br>
+<!-- -->B. 地址总线<br>
+<!-- -->C. 控制总线<br>
+<!-- -->D. 数据总线</p>
+</li>
+<li class="">
+<p>下列微机部件中（   ）在系统板上的。<br>
+<!-- -->A. 微处理器CPU<br>
+<!-- -->B. 内存<br>
+<!-- -->C. 基本输入/输出系统BIOS<br>
+<!-- -->D. CMOS芯片</p>
+</li>
+<li class="">
+<p>下列对微型计算机的说法，正确的是（   ）<br>
+<!-- -->A. 微型计算机就是体积最小的计算机<br>
+<!-- -->B. 微型计算机是指以微处理器为核心，配以存储器，输入输出接口和各种总线所构成的总体<br>
+<!-- -->C. 普通的微型计算机由主机箱，键盘，显示器，和各种输入输出设备组成<br>
+<!-- -->D. 微型计算机的各功能部件通过大规模集成电路技术将所有逻辑部件都集成在一块或几块芯片上</p>
+</li>
+<li class="">
+<p>微型计算机采用总线结构连接CPU、内存储器和外部设备，下面属于微机总线的包括（   ）<br>
+<!-- -->A. 数据总线<br>
+<!-- -->B. 地址总线<br>
+<!-- -->C. 控制总线<br>
+<!-- -->D. 通信总线</p>
+</li>
+<li class="">
+<p>下列微机部件中（   ）在系统板上的。<br>
+<!-- -->A. 微处理器CPU<br>
+<!-- -->B. 内存<br>
+<!-- -->C. 基本输入/输出系统BIOS<br>
+<!-- -->D. CMOS芯片</p>
+</li>
+<li class="">
+<p>按照总线上传输信息类型的不同，总线可分为多种类型，以下属于总线的是（   ）<br>
+<!-- -->A. 交换总线<br>
+<!-- -->B. 地址总线<br>
+<!-- -->C. 数据总线<br>
+<!-- -->D. 运输总线</p>
+</li>
+<li class="">
+<p>一般来说，在下列（   ）情况下需要启动CMOS设置程序对系统进行设置。<br>
+<!-- -->A. 安装一个数据库管理系统<br>
+<!-- -->B. 用户希望改变启动盘的顺序<br>
+<!-- -->C. 安装打印机驱动程序<br>
+<!-- -->D. PC组装好之后第一次加电</p>
+</li>
+<li class="">
+<p>BIOS的中文名叫作基本输入/输出系统，它主要包含（   ）<br>
+<!-- -->A. 系统设置信息　　B. 加电自检程序　　C. 键盘驱动程序　　D. 系统自举程序</p>
+</li>
+<li class="">
+<p>微型计算机的主板上安装的主要部件有（   ）<br>
+<!-- -->A. 处理器　　B. 内存条　　C. 处理输入输出的芯片　　D. 一些扩展槽</p>
+</li>
+<li class="">
+<p>关于微型计算机内部结构的说法中，正确的是（   ）<br>
+<!-- -->A. 主板上的核心部件是各种接口<br>
+<!-- -->B. 适配器是外部设备同总线和微处理器连接的接口<br>
+<!-- -->C. BIOS是集成在主板上的RAM<br>
+<!-- -->D. CPU多核技术可以提高计算机的多任务处理速度</p>
+</li>
+<li class="">
+<p>微型计算机的主板上安装的主要部件有（   ）<br>
+<!-- -->A. 处理器    B. 内存条    C. 处理输入输出的芯片    D. 一些扩展槽</p>
+</li>
+<li class="">
+<p>下面关于微型计算机的知识描述正确的是（   ）<br>
+<!-- -->A. 硬盘和光盘都是外存储器，硬盘的存储速度要比光盘快<br>
+<!-- -->B. 运算器是负责对数据进行算术和逻辑运算的部件<br>
+<!-- -->C. ROM中的程序是计算机制造商写入的，用户一般不能修改其中的内容，属于外存<br>
+<!-- -->D. ROM和RAM都是内存，都可以用来长期保存信息</p>
+</li>
+<li class="">
+<p>下列有关总线的叙述不正确的有（   ）<br>
+<!-- -->A. 总线是计算机各功能部件之间传送信息的公共通信干线<br>
+<!-- -->B. 总线包含地址总线、数据总线、控制总线和PCI总线<br>
+<!-- -->C. USB是一种通用的串行总线标准<br>
+<!-- -->D. 控制总线不仅可以传输数据信息还可以传输控制信息</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="判断题">判断题<a href="#判断题" class="hash-link" aria-label="Direct link to 判断题" title="Direct link to 判断题" translate="no">​</a></h2>
+<ol>
+<li class="">要提高计算机的运算速度，只需要采用高速CPU，而对主存储器没有速度要求。（）</li>
+<li class="">字节是计算机中常用的数据单位之一，它的英文名字是Byte。（）</li>
+<li class="">计算机中最小存储单位是二进制的一个数位。（）</li>
+<li class="">1个字节是由8个二进制数位组成的。（）</li>
+<li class="">在计算机中，1024 B称为1 KB。（）</li>
+<li class="">在计算机中，1 K个字节大约可以存储1000个汉字。（）</li>
+<li class="">1 MB就是1024×1024 B。（）</li>
+<li class="">下列一套电脑配置<!-- -->:i7<!-- --> 1165G7/2.8 GHz/16 G/500 G,其中“500 G”是指内存。（）</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="填空题">填空题<a href="#填空题" class="hash-link" aria-label="Direct link to 填空题" title="Direct link to 填空题" translate="no">​</a></h2>
+<ol>
+<li class="">当内存储器的容量为512 MB时，若首地址的十六进制表示为00000000H，则末地址的十六进制表示为______H。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="简答题">简答题<a href="#简答题" class="hash-link" aria-label="Direct link to 简答题" title="Direct link to 简答题" translate="no">​</a></h2></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/computer-basics/exercises/ex8.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/computer-basics/exercises/ex7"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">练习三 计算机的工作原理</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/computer-basics/exercises/ex9"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">练习五 微型计算机的主要性能指标</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#单选题" class="table-of-contents__link toc-highlight">单选题</a></li><li><a href="#多选题" class="table-of-contents__link toc-highlight">多选题</a></li><li><a href="#判断题" class="table-of-contents__link toc-highlight">判断题</a></li><li><a href="#填空题" class="table-of-contents__link toc-highlight">填空题</a></li><li><a href="#简答题" class="table-of-contents__link toc-highlight">简答题</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

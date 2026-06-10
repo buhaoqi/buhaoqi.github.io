@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-computer-basics/exercises/ex10" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">练习一 进位计数制 | 河北对口高考计算机专业</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" name="twitter:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" property="og:url" content="https://buhaoqi.github.io/docs/computer-basics/exercises/ex10"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="练习一 进位计数制 | 河北对口高考计算机专业"><meta data-rh="true" name="description" content="单选题"><meta data-rh="true" property="og:description" content="单选题"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex10"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex10" hreflang="en"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/exercises/ex10" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"练习一 进位计数制","item":"https://buhaoqi.github.io/docs/computer-basics/exercises/ex10"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="河北对口高考计算机专业 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="河北对口高考计算机专业 Atom Feed"><link rel="stylesheet" href="/assets/css/styles.761b036b.css">
+<script src="/assets/js/runtime~main.2e0f6ef1.js" defer="defer"></script>
+<script src="/assets/js/main.20cba3e5.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid="csharp/intro" href="/docs/csharp/intro">算法与程序设计</a><a class="navbar__item navbar__link" docid="csharptutorials/index" href="/docs/csharp-tutorials/">C#课件</a><a class="navbar__item navbar__link" docid="mysql/intro" href="/docs/mysql/intro">MySQL教程</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" docid="computer-basics/index" href="/docs/computer-basics/">计算机应用基础</a><a class="navbar__item navbar__link" href="/docs/bookmarks/intro">网址导航</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://buhaoqi.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/computer-basics/"><span title="考试大纲" class="linkLabel_WmDU">考试大纲</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index1"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index1"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex1"><span title="练习一 计算机的发展史" class="linkLabel_WmDU">练习一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex2"><span title="练习二 计算机的特点和分类" class="linkLabel_WmDU">练习二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex3"><span title="练习三 计算机的应用" class="linkLabel_WmDU">练习三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex4"><span title="练习四 计算机的前沿技术" class="linkLabel_WmDU">练习四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex5"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex5"><span title="练习一 计算机的硬件系统" class="linkLabel_WmDU">练习一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex6"><span title="练习二 计算机的软件系统" class="linkLabel_WmDU">练习二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex7"><span title="练习三 计算机的工作原理" class="linkLabel_WmDU">练习三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex8"><span title="练习四 微型计算机的硬件系统" class="linkLabel_WmDU">练习四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex9"><span title="练习五 微型计算机的主要性能指标" class="linkLabel_WmDU">练习五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex10"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/computer-basics/exercises/ex10"><span title="练习一 进位计数制" class="linkLabel_WmDU">练习一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex11"><span title="练习二 数的编码" class="linkLabel_WmDU">练习二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex12"><span title="练习三 字符编码" class="linkLabel_WmDU">练习三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex13"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex13"><span title="练习一 计算机病毒的防范" class="linkLabel_WmDU">练习一 计算机病毒的防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex14"><span title="练习二 计算机的安全防护和使用" class="linkLabel_WmDU">练习二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex15"><span title="练习三  信息安全" class="linkLabel_WmDU">练习三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/exercises/ex16"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex16"><span title="练习一 认识键盘" class="linkLabel_WmDU">练习一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/exercises/ex17"><span title="练习二  中英文录入" class="linkLabel_WmDU">练习二  中英文录入</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/ch01-01"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-01"><span title="任务一 计算机的发展史" class="linkLabel_WmDU">任务一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-02"><span title="任务二 计算机的特点和分类" class="linkLabel_WmDU">任务二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-03"><span title="任务三 计算机的应用" class="linkLabel_WmDU">任务三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch01-04"><span title="任务四 计算机的前沿技术" class="linkLabel_WmDU">任务四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index2"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index2"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-01"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-02"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-03"><span title="任务三 计算机的工作原理" class="linkLabel_WmDU">任务三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-04"><span title="任务四 微型计算机的硬件系统" class="linkLabel_WmDU">任务四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch02-05"><span title="任务五 微型计算机的主要性能指标" class="linkLabel_WmDU">任务五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index3"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index3"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-01"><span title="任务一 进位计数制" class="linkLabel_WmDU">任务一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-02"><span title="任务二 数的编码" class="linkLabel_WmDU">任务二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch03-03"><span title="任务三 字符编码" class="linkLabel_WmDU">任务三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index4"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index4"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-01"><span title="任务一 计算机病毒的防范" class="linkLabel_WmDU">任务一 计算机病毒的防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-02"><span title="任务二 计算机的安全防护和使用" class="linkLabel_WmDU">任务二 计算机的安全防护和使用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch04-03"><span title="任务三  信息安全" class="linkLabel_WmDU">任务三  信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/index5"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/index5"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-01"><span title="任务一 认识键盘" class="linkLabel_WmDU">任务一 认识键盘</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/ch05-02"><span title="任务二  中英文录入" class="linkLabel_WmDU">任务二  中英文录入</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">项目三 信息在计算机中的表示</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">练习一 进位计数制</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>练习一 进位计数制</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="单选题">单选题<a href="#单选题" class="hash-link" aria-label="Direct link to 单选题" title="Direct link to 单选题" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>将十进制数81转换为十六进制数的结果是（）
+A. (51)₁₆  B. (54)₁₆  C. (55)₁₆  D. (61)₁₆</p>
+</li>
+<li class="">
+<p>十进制数110转换成二进制数是（）
+A. 01100110  B. 01101000  C. 01101110  D. 01100100</p>
+</li>
+<li class="">
+<p>十进制数50.75转换成二进制形式后，正确答案是（）
+A. 110010.11  B. 101101.01  C. 110101.11  D. 101011.01</p>
+</li>
+<li class="">
+<p>将二进制数1111011.1101的小数点右移3位后，结果是原数的（）倍。
+A. 4  B. 3  C. 100  D. 8</p>
+</li>
+<li class="">
+<p>八进制数中，小数点左边第四位上的位权是8的（）次方。
+A. 2  B. 3  C. 4  D. 5</p>
+</li>
+<li class="">
+<p>将八进制数670转换为二进制数为（）
+A. 110101011  B. 101111000  C. 110111000  D. 110110000</p>
+</li>
+<li class="">
+<p>和十进制数225相等的二进制数是（）
+A. 11100001  B. 11111110  C. 10000000  D. 11111111</p>
+</li>
+<li class="">
+<p>十进制数215对应的十六进制数是（）
+A. B7  B. C7  C. D7  D. DA</p>
+</li>
+<li class="">
+<p>最大的10位无符号二进制整数转换成八进制数是（）
+A. 1023  B. 1777  C. 1000  D. 1024</p>
+</li>
+<li class="">
+<p>下列数中最小的是（）
+A. (167)₈  B. (80)₁₆  C. (120)₁₀  D. (1110110)₂</p>
+</li>
+<li class="">
+<p>若要表示0到511的十进制数，使用二进制数表示最少需用（）位。
+A. 7  B. 8  C. 9  D. 10</p>
+</li>
+<li class="">
+<p>两个二进制数进行算术减法运算，10000-00101=（）
+A. 01011  B. 01101  C. 00101  D. 00100</p>
+</li>
+<li class="">
+<p>在某进制下，算式37+6=45成立，则该算式采用的进制是（）
+A. 十进制  B. 八进制  C. 十二进制  D. 十六进制</p>
+</li>
+<li class="">
+<p>下列式子中成立的是（）
+A. DBH=218D  B. 237O=10011111B
+C. 100D<code>&lt;</code>62H  D. 11011B<code>&gt;</code>44O</p>
+</li>
+<li class="">
+<p>下列有关“基数”表述正确的是（）
+A. 基数是指某一数字符号在数的不同位置所表示的值的大小
+B. 二进制的基数是“2”，十进制的基数是“10”
+C. 基数就是一个数的数值
+D. 只有正数才有基数</p>
+</li>
+<li class="">
+<p>下面（）不是计算机采用二进制的主要原因。
+A. 二进制只有0和1两个状态，技术上容易实现
+B. 二进制运算规则简单
+C. 二进制数的0和1与逻辑代数的“真”和“假”相吻合，适合于计算机进行逻辑运算
+D. 二进制可与十进制直接进行算术运算</p>
+<ol>
+<li class="">在计算机内部，数值型数据和非数值型数据都是以（）形式进行表示和存储的。
+A. 程序  B. 汉字  C. 十进制  D. 二进制</li>
+</ol>
+</li>
+<li class="">
+<p>下列关于计算机的叙述中，不正确的一项是（）
+A. 计算机内部都采用十进制处理数据
+B. 指令的执行是由计算机硬件实现的
+C. 国际常用的ASCII码是7位ASCII码
+D. 超级计算机又称为巨型机</p>
+</li>
+<li class="">
+<p>在一个存储单元能存放一个字节，那么容量为32 KB的存储器中的存储单元个数为（）
+A. 32768  B. 32000  C. 16384  D. 65536</p>
+</li>
+<li class="">
+<p>下列单位换算关系中，正确的是（）
+A. 1 GB=1024 TB  B. 1 MB=1024 KB
+C. 1 TB=1024 MB  D. 1 KB=1024 GB</p>
+</li>
+<li class="">
+<p>下列关于“1 KB”准确的含义是（）
+A. 1000个二进制位  B. 1000个字节
+C. 1024个二进制位  D. 1024个字节</p>
+</li>
+<li class="">
+<p>在微机中，bit的中文定义是（）
+A. 二进制位  B. 双字  C. 字节  D. 字</p>
+</li>
+<li class="">
+<p>（）是表示存储空间大小的基本单位。
+A. 位  B. 字  C. 字符  D. 字节</p>
+</li>
+<li class="">
+<p>十进制数50.75转换成二进制形式后,正确答案是（）
+A. 110010.11 B. 101101.01 C. 110101.11 D. 101011.01</p>
+</li>
+<li class="">
+<p>将二进制数1111011.1101的小数点右移3位后,结果是原数的（）倍。
+A. 4 B. 3 C. 100 D. 8</p>
+</li>
+<li class="">
+<p>八进制数中,小数点左边第四位上的位权是8的（）次方。
+A. 2 B. 3 C. 4 D. 5</p>
+</li>
+<li class="">
+<p>二进制数“01010101”与“10100101”执行（）运算后,运算结果为“11110000”。
+A. 与 B. 或 C. 算术加 D. 异或</p>
+</li>
+<li class="">
+<p>长度为1字节的二进制数，若采用原码表示，且由5个“1”和3个“0”组成，则可表示的最小十进制整数为（）
+A. -120 B. -112 C. -15 D. -8</p>
+</li>
+<li class="">
+<p>逻辑异或运算11011011⊕10001001的运算结果是（）
+A. 00001000 B. 01010010 C. 10010101 D. 11001011</p>
+</li>
+<li class="">
+<p>正确表示32位二进制地址，最多需要（）位十六进制数。
+A. 7 B. 6 C. 5 D. 8</p>
+</li>
+<li class="">
+<p>计算机中,机器数的正、负号分别用（）表示。
+A. +和- B. 0和1 C. 1和0 D. T和F</p>
+</li>
+<li class="">
+<p>表示6种状态至少需要（）位二进制编码。
+A. 2 B. 3 C. 4 D. 5</p>
+</li>
+<li class="">
+<p>下列数中最小的是（）
+A. (167)₈ B. (80)₁₆ C. (120)₁₀ D. (1110110)₂</p>
+</li>
+<li class="">
+<p>将八进制数670转换为二进制数为（）
+A. 110101011 B. 101111000 C. 110111000 D. 110110000</p>
+</li>
+<li class="">
+<p>和十进制数225相等的二进制数是（）
+A. 11100001 B. 11111110 C. 10000000 D. 11111111</p>
+</li>
+<li class="">
+<p>十进制数215对应的十六进制数是（）
+A. B7 B. C7 C. D7 D. DA</p>
+</li>
+<li class="">
+<p>下列式子中成立的是（）
+A. DBH=218D B. 237O=10011111B
+C. 100D<code>&lt;</code>62H D. 11011B<code>&gt;</code>44O</p>
+</li>
+<li class="">
+<p>已知两个8位二进制数的补码分别为10011011和00000110，其相加之和对应的十进制数是（）
+A. -161 B. -73 C. -95 D. 161</p>
+</li>
+<li class="">
+<p>最大的10位无符号二进制整数转换成八进制数是（）
+A. 1023 B. 1777 C. 1000 D. 1024</p>
+</li>
+<li class="">
+<p>对于一个值不为0的二进制整数x，进行（）后结果为0。
+A. x与x按位“与”运算 B. 将x按位“取反”运算
+C. x与x按位“或”运算 D. x与x按位“异或”运算</p>
+</li>
+<li class="">
+<p>若要表示0到511的十进制数，使用二进制数表示最少需用（）位。
+A. 7 B. 8 C. 9 D. 10</p>
+</li>
+<li class="">
+<p>两个二进制数进行算术减法运算，10000-00101=（）
+A. 01011 B. 01101 C. 00101 D. 00100</p>
+</li>
+<li class="">
+<p>下列关于原码和补码的叙述，正确的是（）
+A. 用原码表示时，数值0有一种表示方式
+B. 用补码表示时，数值0有两种表示方式
+C. 数值用补码表示后，加法和减法运算可以统一使用加法完成
+D. 只要将原码的符号位保持不变，数值位各位取反再在末位加1，就可以将原码转换为补码</p>
+</li>
+<li class="">
+<p>在某进制下，算式37+6=45成立，则该算式采用的进制是（）
+A. 十进制 B. 八进制 C. 十二进制 D. 十六进制</p>
+</li>
+<li class="">
+<p>下列有关“基数”表述正确的是（）
+A. 基数是指某一数字符号在数的不同位置所表示的值的大小
+B. 二进制的基数是“2”，十进制的基数是“10”
+C. 基数就是一个数的数值
+D. 只有正数才有基数</p>
+</li>
+<li class="">
+<p>下列逻辑运算规则的描述中，（）是错误的。
+A. 0∨0=0 B. 0∨1=1 C. 1∨0=1 D. 1∨1=0</p>
+</li>
+<li class="">
+<p>下面（）不是计算机采用二进制的主要原因。
+A. 二进制只有0和1两个状态，技术上容易实现
+B. 二进制运算规则简单
+C. 二进制数的0和1与逻辑代数的“真”和“假”相吻合，适合于计算机进行逻辑运算
+D. 二进制可与十进制直接进行算术运算</p>
+</li>
+<li class="">
+<p>下列关于计算机的叙述中，不正确的一项是（）
+A. 计算机内部都采用十进制处理数据
+B. 指令的执行是由计算机硬件实现的
+C. 国际常用的ASCII码是7位ASCII码
+D. 超级计算机又称为巨型机</p>
+</li>
+<li class="">
+<p>下列正确的叙述是（   ）<br>
+<!-- -->A. 十进制数可用 10 个数码，分别是 1～10<br>
+<!-- -->B. 一般在数字后面加一大写字母 B 表示十进制数<br>
+<!-- -->C. 二进制数只有两个数码：1 和 2<br>
+<!-- -->D. 在计算机内部都是用二进制编码形式表示的</p>
+</li>
+<li class="">
+<p>在计算机中想要表示出任意一个无符号的三位数至少要用（   ）位二进制数。<br>
+<!-- -->A. 9<br>
+<!-- -->B. 10<br>
+<!-- -->C. 11<br>
+<!-- -->D. 12</p>
+</li>
+<li class="">
+<p>将十六进制数 1ABH 转换为十进制数是（   ）<br>
+<!-- -->A. 112<br>
+<!-- -->B. 427<br>
+<!-- -->C. 272<br>
+<!-- -->D. 273</p>
+</li>
+<li class="">
+<p>若在一个非零的无符号二进制整数右边加两个零形成一个新的数，则其数值是原数值的（    ）<br>
+<!-- -->A. 四倍<br>
+<!-- -->B. 二倍<br>
+<!-- -->C. 四分之一<br>
+<!-- -->D. 二分之一</p>
+</li>
+<li class="">
+<p>十进制数 625.25 对应的二进制数是（   ）<br>
+<!-- -->A. 1011110001.0001<br>
+<!-- -->B. 100011101.10<br>
+<!-- -->C. 1000111001.001<br>
+<!-- -->D. 1001110001.01</p>
+</li>
+<li class="">
+<p>有一个数值 51，它与十六进制数 24 相等，那么该数值是（   ）<br>
+<!-- -->A. 七进制数<br>
+<!-- -->B. 八进制数<br>
+<!-- -->C. 十进制数<br>
+<!-- -->D. 九进制数</p>
+</li>
+<li class="">
+<p>一个字长为 5 位的无符号二进制数能表示的十进制数值范围是（    ）<br>
+<!-- -->A. 1<del>32<br>
+<!-- -->B. 0</del>32<br>
+<!-- -->C. 1<del>31<br>
+<!-- -->D. 0</del>31</p>
+</li>
+<li class="">
+<p>在进位计数制中，当某一位的值达到某个固定的量时，就要向高位产生进位。这个固定量就是该种进位计数制的（   ）<br>
+<!-- -->A. 阶码<br>
+<!-- -->B. 尾数<br>
+<!-- -->C. 原码<br>
+<!-- -->D. 基数</p>
+</li>
+<li class="">
+<p>十进制数 27 对应的二进制数是（   ）<br>
+<!-- -->A. 1011<br>
+<!-- -->B. 1100<br>
+<!-- -->C. 10111<br>
+<!-- -->D. 11011</p>
+</li>
+<li class="">
+<p>下列 4 种不同数制表示的数中，数值最大的一个是（   ）<br>
+<!-- -->A. 八进制数 367<br>
+<!-- -->B. 十进制数 258<br>
+<!-- -->C. 十六进制数 F6<br>
+<!-- -->D. 二进制数 10000001</p>
+</li>
+<li class="">
+<p>为了避免混淆，十六进制数在书写时常在后面加字母（   ）<br>
+<!-- -->A. H<br>
+<!-- -->B. O<br>
+<!-- -->C. D<br>
+<!-- -->D. B</p>
+</li>
+<li class="">
+<p>下列关于计算机数制的描述正确的是（   ）<br>
+<!-- -->A. 八进制数有 8 个数码，范围是从 1 到 8<br>
+<!-- -->B. 一般在数字后面加一个大写字母 B 表示十六进制数<br>
+<!-- -->C. 计算机内部所有信息都是以二进制数表示的<br>
+<!-- -->D. 十进制整数转换为二进制的规则是“除 2 取余数，余数顺序排列”</p>
+</li>
+<li class="">
+<p>在一个非零无符号二进制整数之后添加一个 0，则此数的值为原数的（    ）<br>
+<!-- -->A. 4 倍<br>
+<!-- -->B. 2 倍<br>
+<!-- -->C. 1/2 倍<br>
+<!-- -->D. 1/4 倍</p>
+</li>
+<li class="">
+<p>十进制数 25 转换为二进制数是（   ）<br>
+<!-- -->A. 11001<br>
+<!-- -->B. 11010<br>
+<!-- -->C. 11011<br>
+<!-- -->D. 11100</p>
+</li>
+<li class="">
+<p>与十进制 36.875 等值的二进制数是（   ）<br>
+<!-- -->A. 110100.011<br>
+<!-- -->B. 100100.111<br>
+<!-- -->C. 100110.111<br>
+<!-- -->D. 100101.101</p>
+</li>
+<li class="">
+<p>下列数据中，有可能是八进制数的是（   ）<br>
+<!-- -->A. 488<br>
+<!-- -->B. 317<br>
+<!-- -->C. 597<br>
+<!-- -->D. 189</p>
+</li>
+<li class="">
+<p>下列各类进制的整数中，（   ）值最大。<br>
+<!-- -->A. 八进制数 11<br>
+<!-- -->B. 十六进制数 11<br>
+<!-- -->C. 二进制数 11<br>
+<!-- -->D. 十进制数 11</p>
+</li>
+<li class="">
+<p>下列四个计算机存储容量的换算公式中，错误的是（   ）<br>
+<!-- -->A. 1KB = 1024MB<br>
+<!-- -->B. 1KB = 1024B<br>
+<!-- -->C. 1MB = 1024KB<br>
+<!-- -->D. 1GB = 1024MB</p>
+</li>
+<li class="">
+<p>以下信息存储容量单位中，按由小到大顺序排列的是（    ）<br>
+<!-- -->A. MB、KB、GB<br>
+<!-- -->B. KB、MB、GB<br>
+<!-- -->C. GB、KB、MB<br>
+<!-- -->D. GB、MB、KB</p>
+</li>
+<li class="">
+<p>十进制数 25 转换为二进制数是（   ）（注：与第14题重复，但原归类中列出，保留）<br>
+<!-- -->A. 11001<br>
+<!-- -->B. 11010<br>
+<!-- -->C. 11011<br>
+<!-- -->D. 11100</p>
+</li>
+<li class="">
+<p>二进制数10110111转换成十进制数为（）
+A. 183  B. 185  C. 197  D. 195</p>
+</li>
+<li class="">
+<p>二进制数11000011转换成十进制数为（）
+A. 183  B. 185  C. 197  D. 195</p>
+</li>
+<li class="">
+<p>下列四个不同进制的数中，最大的一个是（）
+A. (2E)₁₆  B. (45)₁₀  C. (37)₈  D. (110001)₂</p>
+</li>
+<li class="">
+<p>将二进制数101101101101.11转换成八进制数是（）
+A. 5555.6  B. 4535.6  C. 5055.6  D. 5105.4</p>
+</li>
+<li class="">
+<p>将十进制数59转换为二进制数是（）
+A. 101011  B. 111011  C. 111001  D. 110111</p>
+</li>
+<li class="">
+<p>将二进制数1101101110转换为八进制数是（）
+A. 1555  B. 1556  C. 1557  D. 1558</p>
+</li>
+<li class="">
+<p>下列各种进制的数中最小的数是（）
+A. (213)D  B. (10A)H  C. (335)O  D. (110111000)B</p>
+</li>
+<li class="">
+<p>十六进制3FC3转换为相应的二进制是（）
+A. 11111111000011  B. 01111111000011
+C. 01111111000001  D. 11111111000001</p>
+</li>
+<li class="">
+<p>将十进制数25.3125转换成十六进制数是（）
+A. 19.4  B. 19.5  C. 20.4  D. 20.5</p>
+</li>
+<li class="">
+<p>将十进制的整数化为N进制整数的方法是（）
+A. 乘N取整法  B. 除N取整法  C. 乘N取余法  D. 除N取余法</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="多选题">多选题<a href="#多选题" class="hash-link" aria-label="Direct link to 多选题" title="Direct link to 多选题" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>关于数制及其转换，下列说法不正确的有（   ）<br>
+<!-- -->A. 数制共包括十进制、二进制、八进制、十六进制，不存在其它数制<br>
+<!-- -->B. 某种数制所采用的数码个数称为其基数<br>
+<!-- -->C. 二进制必能精确转换为十进制<br>
+<!-- -->D. 十进制必能精确转换为二进制</p>
+</li>
+<li class="">
+<p>下列说法中错误的是（   ）<br>
+<!-- -->A. 为便于用户操作，计算机内部存储数据可以采用十进制形式<br>
+<!-- -->B. 现代计算机内部存储数据大多数采用二进制，有的也采用八进制或十六进制<br>
+<!-- -->C. 字长的长短与计算机的运算速度没多大关系<br>
+<!-- -->D. 计算机处理数据时，CPU通过数据总线一次存取、加工和传送的数据称为字</p>
+</li>
+<li class="">
+<p>计算机中使用二进制数的突出优点是（    ）<br>
+<!-- -->A. 方便计数    B. 易用电器元件实现    C. 算术运算简便    D. 可用逻辑代数作为分析设计的工具</p>
+</li>
+<li class="">
+<p>下列说法正确的是（   ）<br>
+<!-- -->A. 二进制和其他进制可以直接转换    B. 十进制和其他进制可以直接转换<br>
+<!-- -->C. 八进制和其他进制可以直接转换    D. 八进制和十六进制不能直接转换</p>
+</li>
+<li class="">
+<p>有关二进制的论述，下面（   ）是正确的。<br>
+<!-- -->A. 二进制数只有0和1两个数码    B. 二进制运算逢二进一<br>
+<!-- -->C. 二进制数各位上的权分别为0，2，4，…    D. 二进制数只有二位数组成</p>
+</li>
+<li class="">
+<p>关于进位计数制和数制转化的说法中正确的是（   ）<br>
+<!-- -->A. 十进制数转化为二进制数的方法是除2取余法<br>
+<!-- -->B. 十六进制中的数码是由十进制的1到16共十六个数码组成<br>
+<!-- -->C. 八进制共有8个数码，故基数为8<br>
+<!-- -->D. 在计算机内部采用二进制数据，但在输入、输出时，通常用十进制表示</p>
+</li>
+<li class="">
+<p>下列数值表示形式中正确的有（）
+A. 56D B. 101110B C. 17H D. A230</p>
+</li>
+<li class="">
+<p>下列关于二进制的论述，正确的是（）
+A. 二进制只有0和1两个数码
+B. 二进制只有两位数字
+C. 无符号二进制整数从右向左各位的权值分别是0,1,2,4…
+D. 二进制的运算规则是“逢二进一、借一当二”</p>
+</li>
+<li class="">
+<p>下列数值表示形式中正确的有（）
+A. 99H B. 1011B C. 83D D. D40</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二判断题">二、判断题<a href="#二判断题" class="hash-link" aria-label="Direct link to 二、判断题" title="Direct link to 二、判断题" translate="no">​</a></h3>
+<ol>
+<li class="">同样的一个数值11，在不同进制中所表示的值是不一样的（）</li>
+<li class="">二进制数11001转换成十进制数是25（）</li>
+<li class="">十六进制数79对应的十进制数为247（）</li>
+<li class="">十六进制数289可以表示为289H（）</li>
+<li class="">十进制小数都可以精确地转化为其他进制的小数（）</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="填空题">填空题<a href="#填空题" class="hash-link" aria-label="Direct link to 填空题" title="Direct link to 填空题" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>将十六进制数A10转换为二进制数是______。</p>
+</li>
+<li class="">
+<p>十进制数97.75转换为二进制数是______。</p>
+</li>
+<li class="">
+<p>二进制数110001转换成十进制数是______。</p>
+</li>
+<li class="">
+<p>十进制数59.125转换成八进制数是______。</p>
+</li>
+<li class="">
+<p>将二进制数101101101.111101转换成十六进制数为______。</p>
+</li>
+<li class="">
+<p>执行二进制算术加法运算：10101010+00101010=______。</p>
+</li>
+<li class="">
+<p>在一个非零无符号二进制整数最后去掉一个0，则此数的值为原数的______。</p>
+</li>
+<li class="">
+<p>将八进制数143转换成二进制数为______。</p>
+</li>
+<li class="">
+<p>一个二进制整数从右向左查第7位上的1相当于2的______次方。</p>
+</li>
+<li class="">
+<p>二进制数111001-100111=______。</p>
+</li>
+<li class="">
+<p>二进制数10111101110转换成八进制数是______。</p>
+</li>
+<li class="">
+<p>某编码方案用10位二进制数进行编码，最多可编______个码。</p>
+</li>
+<li class="">
+<p>已知x=101011B，对x求逻辑非，结果是______B。</p>
+</li>
+<li class="">
+<p>与十进制数28.5相等的十六进制数是______。</p>
+</li>
+<li class="">
+<p>与十六进制数35.4相等的十进制数是______。</p>
+</li>
+<li class="">
+<p>二进制数11011010与11110000进行逻辑与运算的结果是______。</p>
+</li>
+<li class="">
+<p>在一个非零无符号二进制整数之后添加一个0，则此数的值为原数的____倍。</p>
+</li>
+<li class="">
+<p>将十进制数214转换为八进制数是____。</p>
+</li>
+<li class="">
+<p>将十进制数216转换为十六进制数是____。</p>
+</li>
+<li class="">
+<p>十进制小数0.6875转换成二进制小数是____。</p>
+</li>
+<li class="">
+<p>有一个数值为152，它与十六进制数6A等值，则该数值是____进制数。</p>
+</li>
+<li class="">
+<p>将十进制数81转换为十六进制数的结果是（）
+<code> A. (51)₁₆ B. (54)₁₆ C. (55)₁₆ D. (61)₁₆</code></p>
+</li>
+<li class="">
+<p>十进制数110转换成二进制数是（）
+A. 01100110 B. 01101000 C. 01101110 D. 01100100</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="简答题">简答题<a href="#简答题" class="hash-link" aria-label="Direct link to 简答题" title="Direct link to 简答题" translate="no">​</a></h2>
+<ol>
+<li class="">已知两个8位二进制数的补码分别为10000111和01110001，求其相加之和对应的十进制数。</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/computer-basics/exercises/ex10.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/computer-basics/exercises/ex9"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">练习五 微型计算机的主要性能指标</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/computer-basics/exercises/ex11"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">练习二 数的编码</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#单选题" class="table-of-contents__link toc-highlight">单选题</a></li><li><a href="#多选题" class="table-of-contents__link toc-highlight">多选题</a><ul><li><a href="#二判断题" class="table-of-contents__link toc-highlight">二、判断题</a></li></ul></li><li><a href="#填空题" class="table-of-contents__link toc-highlight">填空题</a></li><li><a href="#简答题" class="table-of-contents__link toc-highlight">简答题</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
