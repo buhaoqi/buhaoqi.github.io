@@ -705,6 +705,68 @@ const sidebars = {
       collapsed: false,
       items: [
         'computer-basics/index1', // 概述
+        'computer-basics/exercises/ex1', // 任务一 计算机的发展
+        'computer-basics/exercises/ex2', // 任务二 计算机的特点和分类
+        'computer-basics/exercises/ex3', // 任务三 计算机的应用
+        'computer-basics/exercises/ex4', // 任务四 计算机的前沿技术
+      ],
+    },
+    // 项目二 计算机系统
+    {
+      type: 'category',
+      label: '项目二 计算机系统',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/exercises/ex5', // 任务一 计算机的硬件系统
+        'computer-basics/exercises/ex6', // 任务二 计算机的软件系统
+        'computer-basics/exercises/ex7', // 任务三 计算机的工作原理
+        'computer-basics/exercises/ex8', // 任务四 微型计算机的硬件系统
+        'computer-basics/exercises/ex9', // 任务五 微型计算机的主要性能指标
+      ],
+    },
+    // 项目三 信息在计算机中的表示
+    {
+      type: 'category',
+      label: '项目三 信息在计算机中的表示',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/exercises/ex10', // 任务一 信息的表示
+        'computer-basics/exercises/ex11', // 任务二 数制及其转换
+        'computer-basics/exercises/ex12', // 任务三 字符编码
+      ],
+    },
+    // 项目四 计算机维护
+    {
+      type: 'category',
+      label: '项目四 计算机维护',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/exercises/ex13', // 概述
+        'computer-basics/exercises/ex14', // 任务一 计算机病毒的防护
+        'computer-basics/exercises/ex15', // 任务二 计算机的安全防护和使用
+      ],
+    },
+    // 项目五 中英文录入
+    {
+      type: 'category',
+      label: '项目五 中英文录入',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/exercises/ex16', // 任务三 信息安全
+        'computer-basics/exercises/ex17', // 概述
+      ],
+    },
+    // 项目一：认识计算机
+    {
+      type: 'category',
+      label: '项目一 认识计算机',
+      collapsible: true,
+      collapsed: false,
+      items: [
         'computer-basics/ch01-01', // 任务一 计算机的发展
         'computer-basics/ch01-02', // 任务二 计算机的特点和分类
         'computer-basics/ch01-03', // 任务三 计算机的应用
