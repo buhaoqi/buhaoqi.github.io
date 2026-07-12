@@ -401,6 +401,16 @@ const sidebars = {
         'csharp-tutorials/202601/0108', // 
         'csharp-tutorials/202601/0109', // 
         'csharp-tutorials/202601/0110', // 
+        'csharp-tutorials/202601/0111', // 
+        'csharp-tutorials/202601/0112', // 
+        'csharp-tutorials/202601/0113', // 
+        'csharp-tutorials/202601/0114', // 
+        'csharp-tutorials/202601/0115', // 
+        'csharp-tutorials/202601/0116', // 
+        'csharp-tutorials/202601/0117', // 
+        'csharp-tutorials/202601/0118', // 
+        'csharp-tutorials/202601/0119', // 
+        'csharp-tutorials/202601/0120', // 
       ],
     },
     // 2026 年 3 月
