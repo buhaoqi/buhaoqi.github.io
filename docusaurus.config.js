@@ -198,6 +198,15 @@ const config = {
             // 可选：设置默认打开的文档
             docId: 'computer-basics/index',
           },
+          // 4. 计算机网络基础 - 靠左
+          {
+            type: 'docSidebar',
+            sidebarId: 'netWorkBasicSidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '计算机网络基础',
+            // 可选：设置默认打开的文档
+            docId: 'network-basics/index',
+          },
           // 4. 网址导航 (doc类型) - 靠左
           {
             type: 'doc',
@@ -207,26 +216,7 @@ const config = {
             // 可选：自定义激活状态
             // activeBaseRegex: '/docs/website-guide',
           },
-          // 4. 教育知识与能力
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'teacherSidebar',  // 需要在sidebars.js中定义
-          //   position: 'left',
-          //   label: '教育知识与能力',
-          //   // 可选：设置默认打开的文档
-          //   docId: 'teacher/intro',
-          // },
-          // 5. 综合素质
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'teacher2Sidebar',  // 需要在sidebars.js中定义
-          //   position: 'left',
-          //   label: '综合素质',
-          //   // 可选：设置默认打开的文档
-          //   docId: 'teacher2/intro',
-          // },
-          
-          // 6. Blog (无type，内部页面) - 靠左
+          // 5. Blog (无type，内部页面) - 靠左
           {
             to: '/blog',
             label: 'Blog',
@@ -235,7 +225,7 @@ const config = {
             activeBaseRegex: '^/blog',
           },
           
-          // 5. 不好奇课堂 (外部链接) - 靠右
+          // 6. 不好奇课堂 (外部链接) - 靠右
           {
             href: 'https://buhaoqi.com',
             label: '不好奇课堂',

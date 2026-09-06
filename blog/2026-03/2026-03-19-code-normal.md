@@ -18,7 +18,7 @@ int b = 20;
 int c = a + b;
 Console.WriteLine($"计算结果：{c}");
 ```
-
+<!-- truncate -->
 ### **使用空行分组**
 ```csharp
 // 输入部分

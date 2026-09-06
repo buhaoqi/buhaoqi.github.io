@@ -17,3 +17,30 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+
+vocabulary:
+  label: vocabulary
+  permalink: /vocabulary
+  description: vocabulary study description
+
+design:
+  label: design
+  permalink: /design
+  description: design study description
+
+designcoding:
+  label: designcoding
+  permalink: /design-coding
+  description: design2 study description
+
+数据类型 栈:
+  label: 数据类型栈
+  permalink: /data-types
+  description: design2 study description
+
+
+AI Coding:
+  label: AI Coding
+  permalink: /ai-coding
+  description: design2 study description

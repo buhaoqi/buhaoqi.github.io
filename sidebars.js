@@ -809,7 +809,9 @@ const sidebars = {
       items: [
         'computer-basics/index3', // 概述
         'computer-basics/ch03-01', // 任务一 信息的表示
+        'computer-basics/ch03-koubo1', // 任务二 数制及其转换
         'computer-basics/ch03-02', // 任务二 数制及其转换
+        'computer-basics/ch03-koubo2', // 任务二 数制及其转换
         'computer-basics/ch03-03', // 任务三 字符编码
       ],
     },
@@ -830,6 +832,156 @@ const sidebars = {
     {
       type: 'category',
       label: '项目五 中英文录入',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index5', // 概述
+        'computer-basics/ch05-01', // 任务一 认识键盘
+        'computer-basics/ch05-02', // 任务二 中英文录入
+      ],
+    },
+  ],
+  // ============ 计算机网络基础 教程侧边栏 ============
+  netWorkBasicSidebar: [
+    {
+      type: 'doc',
+      id: 'network-basics/index',  // 
+      label: '考试大纲',
+    },
+    // 模块一：计算机网络概述
+    {
+      type: 'category',
+      label: '模块一 计算机网络概述',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'network-basics/unit01/overview', // 概述
+         {
+          type: 'category',
+          label: '项目一 网络发展与基本概念',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit01/project1/task1', // 
+            'network-basics/unit01/project1/task2', // 
+            'network-basics/unit01/project1/task3', // 
+          ],
+        },
+        'network-basics/unit01/project2', // 任务二 计算机的特点和分类
+        'network-basics/unit01/project3', // 任务三 计算机的应用
+        'network-basics/unit01/project4', // 任务四 计算机的前沿技术
+      ],
+    },
+    // 模块二：数据通信基础
+    {
+      type: 'category',
+      label: '模块二：数据通信基础',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'network-basics/unit02/overview', // 概述
+        'network-basics/unit02/project1', // 任务一 数据通信的基本概念
+        'network-basics/unit02/project2', // 任务二 数据传输方式
+        'network-basics/unit02/project3', // 任务三 数据交换方式
+        'network-basics/unit02/project4', // 任务四 数据通信的性能指标
+      ],
+    },
+    // 模块三: OSI参考模型体系
+    {
+      type: 'category',
+      label: '模块三 OSI参考模型体系',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+      ],
+    },
+    // 模块四 TCP/IP参考模型体系
+    {
+      type: 'category',
+      label: '模块四 TCP/IP参考模型体系',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/exercises/ex13', // 概述
+        'computer-basics/exercises/ex14', // 任务一 计算机病毒的防护
+        'computer-basics/exercises/ex15', // 任务二 计算机的安全防护和使用
+      ],
+    },
+    // 模块五 局域网技术
+    {
+      type: 'category',
+      label: '模块五 局域网技术',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/exercises/ex16', // 任务三 信息安全
+        'computer-basics/exercises/ex17', // 概述
+      ],
+    },
+    // 模块六 局域网组网技术
+    {
+      type: 'category',
+      label: '模块六 局域网组网技术',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/ch01-01', // 任务一 计算机的发展
+        'computer-basics/ch01-02', // 任务二 计算机的特点和分类
+        'computer-basics/ch01-03', // 任务三 计算机的应用
+        'computer-basics/ch01-04', // 任务四 计算机的前沿技术
+      ],
+    },
+    // 模块七 广域网技术概述
+    {
+      type: 'category',
+      label: '模块七 广域网技术概述',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index2', // 概述
+        'computer-basics/ch02-01', // 任务一 计算机的硬件系统
+        'computer-basics/ch02-02', // 任务二 计算机的软件系统
+        'computer-basics/ch02-03', // 任务三 计算机的工作原理
+        'computer-basics/ch02-04', // 任务四 微型计算机的硬件系统
+        'computer-basics/ch02-05', // 任务五 微型计算机的主要性能指标
+      ],
+    },
+    // 模块八 Internet技术与应用
+    {
+      type: 'category',
+      label: '模块八 Internet技术与应用',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index3', // 概述
+        'computer-basics/ch03-01', // 任务一 信息的表示
+        'computer-basics/ch03-koubo1', // 任务二 数制及其转换
+        'computer-basics/ch03-02', // 任务二 数制及其转换
+        'computer-basics/ch03-koubo2', // 任务二 数制及其转换
+        'computer-basics/ch03-03', // 任务三 字符编码
+      ],
+    },
+    // 模块九 网络安全
+    {
+      type: 'category',
+      label: '模块九 网络安全',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/index4', // 概述
+        'computer-basics/ch04-01', // 任务一 计算机病毒的防护
+        'computer-basics/ch04-02', // 任务二 计算机的安全防护和使用
+        'computer-basics/ch04-03', // 任务三 信息安全
+      ],
+    },
+    // 模块十 网络管理与结构化布线
+    {
+      type: 'category',
+      label: '模块十 网络管理与结构化布线',
       collapsible: true,
       collapsed: false,
       items: [

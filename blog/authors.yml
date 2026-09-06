@@ -23,3 +23,15 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+buhaoqi:
+  name: cun zhang
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
+  page: true
+  socials:
+    x: buhaoqi
+    linkedin: buhaoqi
+    github: buhaoqi
+    newsletter: https://thisweekinreact.com
