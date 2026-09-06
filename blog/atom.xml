@@ -2,22 +2,1088 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buhaoqi.github.io/blog</id>
     <title>河北对口高考计算机专业 Blog</title>
-    <updated>2026-05-09T00:00:00.000Z</updated>
+    <updated>2026-08-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buhaoqi.github.io/blog"/>
     <subtitle>河北对口高考计算机专业 Blog</subtitle>
     <icon>https://buhaoqi.github.io/img/favicon.ico</icon>
     <entry>
+        <title type="html"><![CDATA[C#编译器VSCLR]]></title>
+        <id>https://buhaoqi.github.io/blog/complier-clr</id>
+        <link href="https://buhaoqi.github.io/blog/complier-clr"/>
+        <updated>2026-08-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[C#编译器负责编译时检查（比如类型是否匹配、范围是否超限），CLR负责运行时行为（比如内存布局、运算执行）。两者分工不同，分开说更清晰。]]></summary>
+        <content type="html"><![CDATA[<p>C#编译器负责编译时检查（比如类型是否匹配、范围是否超限），CLR负责运行时行为（比如内存布局、运算执行）。两者分工不同，分开说更清晰。</p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="designcoding" term="designcoding"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[整数类型到底是什么]]></title>
+        <id>https://buhaoqi.github.io/blog/what-is-integer-in-csharp</id>
+        <link href="https://buhaoqi.github.io/blog/what-is-integer-in-csharp"/>
+        <updated>2026-08-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[问：整数类型到底是什么？ 我认为整数类型就是一套规则。如果你认同，请列出包括哪几条规则]]></summary>
+        <content type="html"><![CDATA[<p>问：整数类型到底是什么？ 我认为整数类型就是一套规则。如果你认同，请列出包括哪几条规则</p>
+<p><strong>完全认同，而且你这个理解非常高级！</strong></p>
+<p>如果把“盒子”比喻看作是给初学者的“拐杖”，那么**“一套规则”**才是程序员看类型的“本质视角”。</p>
+<p>在计算机科学中，<strong>类型（Type）本质上就是一组约束和契约</strong>。正是这套规则，告诉了编译器和CLR（运行时）该如何对待内存里的那串0和1。</p>
+<p>基于C#的实际情况，我把整数类型的这套规则拆解为以下 <strong>“7条铁律”</strong>，你可以直接用在视频里作为干货总结：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="整数类型的七条规则">整数类型的“七条规则”<a href="https://buhaoqi.github.io/blog/what-is-integer-in-csharp#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%83%E6%9D%A1%E8%A7%84%E5%88%99" class="hash-link" aria-label="Direct link to 整数类型的“七条规则”" title="Direct link to 整数类型的“七条规则”" translate="no">​</a></h3>
+<p><strong>规则一：存储空间规则（占多大坑）</strong>
+它严格规定了占用内存的字节数（1B、2B、4B、8B）。这决定了它“能住多大的房子”，是后续所有规则的基础。</p>
+<p><strong>规则二：符号规则（有没有正负）</strong>
+它规定了最高位（MSB）是“符号位”还是“数值位”。有符号（<code>int</code>）能存负数，无符号（<code>uint</code>）存不了负数但正数范围翻倍。</p>
+<p><strong>规则三：取值范围规则（能存多大数）</strong>
+基于规则一和规则二，通过数学公式（如 <code>-2^(n-1)</code> 到 <code>2^(n-1)-1</code>）计算出精确的上下限。超出这个范围就是“溢出”，违反规则。</p>
+<p><strong>规则四：内存布局规则（0和1怎么排）</strong>
+它规定了数值在二进制层面的存储方式。<strong>有符号整数强制使用“补码”表示法</strong>，这样加减法都能用同一套电路逻辑（CPU只需加法器就能处理减法），这是计算机底层运作的基石。</p>
+<p><strong>规则五：运算规则（加减乘除怎么算）</strong>
+它规定了哪些算术运算符（<code>+ - * / %</code>）和位运算符（<code>&amp; | ^ &lt;&lt; &gt;&gt;</code>）是被允许的。<strong>特别地，C#规定：小于32位的整数（byte/short）参与运算时，会强制“升级”为32位<code>int</code>再计算。</strong> 这也是为什么你用<code>byte</code>做加法会报错的原因，完全由规则决定。</p>
+<p><strong>规则六：转换规则（能不能互相换）</strong>
+它规定了类型之间如何“兼容转换”：</p>
+<ul>
+<li class=""><strong>隐式转换（安全）</strong>：小范围转大范围（如 <code>int</code> -&gt; <code>long</code>），因为不可能丢失数据，编译器允许。</li>
+<li class=""><strong>显式转换（强转，风险）</strong>：大范围转小范围（如 <code>long</code> -&gt; <code>int</code>），可能溢出，需要开发者手动“签字画押”（写 <code>(int)</code>）。</li>
+</ul>
+<p><strong>规则七：字面量推断规则（代码里的数字默认是谁）</strong>
+它规定了你直接写一个数字（比如 <code>100</code>）时，编译器默认把它当作 <code>int</code>；如果写 <code>100L</code>，加了后缀才当作 <code>long</code>。这套规则约束了编译器如何“猜”你的意图。</p>
+<hr>
+<p><strong>建议在视频里这样串联（啊哈时刻）：</strong></p>
+<p>你可以对着镜头说：</p>
+<blockquote>
+<p>“很多同学把整数类型只当成‘盒子’，但当你把它看成<strong>规则</strong>，很多问题就豁然开朗了。</p>
+<p>比如，为什么你明明给 <code>byte</code> 赋了 <code>255</code> 可以，但赋 <code>256</code> 就报错？——这是**规则一（空间）<strong>和</strong>规则三（范围）**在约束你。</p>
+<p>为什么你用 <code>byte a=1; byte b=a+1;</code> 会报错？——因为**规则五（运算规则）<strong>规定它俩运算前得先转成 <code>int</code>，把 <code>int</code> 塞回 <code>byte</code> 必须遵守</strong>规则六（转换规则）**要求强转。</p>
+</blockquote>
+<p>你会发现，<strong>你写的每一行代码，其实都是在跟这套规则“谈判”</strong>。把这7条搞懂，整数类型你就彻底通透，再也不用死记硬背了。”</p>
+<hr>
+<p><em>PS：上一稿中我说留到后面讲的内容（溢出、类型转换、字面量后缀），其实正好对应这里的规则三、规则六和规则七。如果你觉得这期内容充实度刚好，规则五（运算升级）和规则四（补码存储）可以留到下下期《类型转换》或《底层原理》里细讲，这期先有个概念就行。</em></p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="AI Coding" term="AI Coding"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[村长 Agent]]></title>
+        <id>https://buhaoqi.github.io/blog/cunzhang-agent</id>
+        <link href="https://buhaoqi.github.io/blog/cunzhang-agent"/>
+        <updated>2026-08-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[我是b 站 up 主，我用 chatgpt 和 deepseek 写口播稿，它们能给我灵感和创意，极大提升效率，但不能达到我的标准，每一篇稿需要我打磨，请问我这种使用 AI 的方式还能通过 agent 提升吗]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>我是b 站 up 主，我用 chatgpt 和 deepseek 写口播稿，它们能给我灵感和创意，极大提升效率，但不能达到我的标准，每一篇稿需要我打磨，请问我这种使用 AI 的方式还能通过 agent 提升吗</p>
+</blockquote>
+<p>能，而且我认为<strong>你的这种使用方式，反而非常适合做 Agent</strong>。</p>
+<p>但关键不是做一个“自动写稿 Agent”，而是做一个**“村长编剧工作流 Agent”**。</p>
+<p>你现在的瓶颈其实不是 AI 不会写，而是：</p>
+<blockquote>
+<p><strong>AI 能写出 70～80 分的稿子，但你心里有一套 AI 不知道的“90 分标准”。</strong></p>
+</blockquote>
+<p>你每次修改，其实都在告诉 AI：</p>
+<ul>
+<li class="">哪句话太 AI 味</li>
+<li class="">哪个知识点讲得不严谨</li>
+<li class="">哪个例子不够好</li>
+<li class="">哪个地方太啰嗦</li>
+<li class="">哪个转折不自然</li>
+<li class="">哪句话不适合口播</li>
+<li class="">哪里没有“村长”的味道</li>
+<li class="">哪里不符合初学者认知规律</li>
+<li class="">哪些技术表述虽然通俗，但不够严谨</li>
+</ul>
+<p><strong>这些“修改动作”才是最有价值的数据。</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="你现在的工作方式">你现在的工作方式<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E4%BD%A0%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="Direct link to 你现在的工作方式" title="Direct link to 你现在的工作方式" translate="no">​</a></h3>
+<p>大概是：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">你提出主题</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ChatGPT / DeepSeek 给灵感</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AI 写初稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">你人工打磨</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">发布</span><br></span></code></pre></div></div>
+<p>这已经很好了。</p>
+<p>但 Agent 可以升级成：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">                    ┌→ 技术严谨性检查</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">主题 → 内容策划 → 初稿 → ├→ 初学者理解检查</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    ├→ 口播检查</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    ├→ “村长风格”检查</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    └→ 废话检查</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                              ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                         自动修改</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                              ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                         第二稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                              ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                         你最终审核</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                              ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    你的修改意见/最终稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                              ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                       沉淀为“标准”</span><br></span></code></pre></div></div>
+<p>这才是你真正值得做的 Agent。</p>
+<p>OpenAI 对 Agent 的定义本身就强调：Agent 不只是“一次生成”，而是可以按照一个工作流执行多个步骤，并根据结果继续判断、修正。(<a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="A practical guide to building agents | OpenAI" class="">OpenAI</a>)</p>
+<hr>
+<h1>更重要的是：不要一开始做“多 Agent”</h1>
+<p>我反而<strong>不建议你马上搞什么 10 个 AI 老师互相讨论</strong>。</p>
+<p>你的需求非常适合先做一个：</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="村长编剧-agent">“村长编剧 Agent”<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%9D%91%E9%95%BF%E7%BC%96%E5%89%A7-agent" class="hash-link" aria-label="Direct link to “村长编剧 Agent”" title="Direct link to “村长编剧 Agent”" translate="no">​</a></h2>
+<p>它里面固定几个阶段：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-选题分析">① 选题分析<a href="https://buhaoqi.github.io/blog/cunzhang-agent#-%E9%80%89%E9%A2%98%E5%88%86%E6%9E%90" class="hash-link" aria-label="Direct link to ① 选题分析" title="Direct link to ① 选题分析" translate="no">​</a></h3>
+<p>输入：</p>
+<blockquote>
+<p>第 14 集：整数类型</p>
+</blockquote>
+<p>Agent 先不写稿，而是分析：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">本集核心知识：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">学生必须学会什么？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">前置知识：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">学生已经学过什么？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">容易产生的误解：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">有哪些？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">本集最值得讲的一个“啊哈时刻”：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">是什么？</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">哪些内容应该留到后面：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">是什么？</span><br></span></code></pre></div></div>
+<p>这一步非常重要。</p>
+<p>因为你现在和 ChatGPT 对话时，其实<strong>你自己就在充当这个“课程架构师”</strong>。</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-生成第一版">② 生成第一版<a href="https://buhaoqi.github.io/blog/cunzhang-agent#-%E7%94%9F%E6%88%90%E7%AC%AC%E4%B8%80%E7%89%88" class="hash-link" aria-label="Direct link to ② 生成第一版" title="Direct link to ② 生成第一版" translate="no">​</a></h3>
+<p>然后才让 AI 写口播稿。</p>
+<p>但这里不是简单地告诉它：</p>
+<blockquote>
+<p>“帮我写一篇 C# 整数类型的口播稿。”</p>
+</blockquote>
+<p>而是给它你的<strong>课程规范</strong>。</p>
+<p>例如：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">你是“村长讲 C#”的编剧。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">目标：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">让初学者“一听就懂”。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">原则：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1. 不追求炫技</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2. 不堆概念</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3. 一个概念尽量只用一个核心比喻</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4. 先建立直觉，再给术语</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5. 技术表述必须严谨</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">6. 不能为了通俗而制造错误</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">7. 口语化，但不能像 AI 聊天</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">8. 能一句话讲清楚，就不要讲三句</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">9. 每个重要知识点都要回答“为什么”</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">10. 不提前透支后续课程内容</span><br></span></code></pre></div></div>
+<p>这些东西一旦固化，<strong>你就不用每一集重新告诉 AI。</strong></p>
+<hr>
+<h1>③ 最关键：让 Agent 学会“挑你的毛病”</h1>
+<p>这一层对你价值最大。</p>
+<p>例如生成稿子以后，不要马上让它改。</p>
+<p>先让它扮演：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="村长总编">“村长总编”<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%9D%91%E9%95%BF%E6%80%BB%E7%BC%96" class="hash-link" aria-label="Direct link to “村长总编”" title="Direct link to “村长总编”" translate="no">​</a></h3>
+<p>逐条检查：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">技术错误：0</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">概念混淆：2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">AI 味：3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">废话：4</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">口播不自然：2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">初学者理解障碍：3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">前后逻辑问题：1</span><br></span></code></pre></div></div>
+<p>然后给出：</p>
+<blockquote>
+<p><strong>必须修改的 5 个地方</strong></p>
+</blockquote>
+<p>而不是直接把整篇稿子改掉。</p>
+<p>这样你仍然是最终导演。</p>
+<hr>
+<h1>④ 你的修改，是 Agent 最宝贵的训练数据</h1>
+<p>这一点我特别建议你重视。</p>
+<p>比如你这次问我的评论区回复：</p>
+<p>原来：</p>
+<blockquote>
+<p>对象中的字段是对象，存的也是引用地址，真正的对象在堆里另存，字段本身只占一个指针大小。</p>
+</blockquote>
+<p>你自己又进行了调整：</p>
+<blockquote>
+<p>对！如果字段是一个类类型，它保存的也是对象的引用，真正的对象在堆中另存。字段里存的是“对象的地址”，而不是把类的实例整个嵌进去。</p>
+</blockquote>
+<p>这其实就在产生一条非常有价值的规则：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">村长偏好：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">❌ 字段是对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ 字段是类类型</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">❌ 直接说“指针”</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ 优先说“引用”</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">❌ 过度严格导致初学者听不懂</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">✅ 先用“地址”建立直觉，再强调严格术语是“引用”</span><br></span></code></pre></div></div>
+<p><strong>如果 Agent 能不断从你的修改中提炼这些规则，它会越来越像你。</strong></p>
+<p>这就是我认为你最应该做的方向。</p>
+<hr>
+<h1>最终甚至可以形成一个“村长知识库”</h1>
+<p>我建议你以后把自己的资料分成 5 类：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">/村长AI编剧系统</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── 01_课程体系</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 100集课程大纲</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 前后知识依赖</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── 每集教学目标</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── 02_村长风格</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 口播风格</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 常用表达</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 禁用表达</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── “没废话”原则</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── 03_技术标准</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── C#知识库</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 容易讲错的知识</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── 技术严谨性规则</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── 04_优秀成稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 第1集</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── 第2集</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── ...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── 第13集</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── 05_修改案例</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ├── AI原稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ├── 村长修改稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    └── 为什么这么改</span><br></span></code></pre></div></div>
+<p>最后这个 <strong>“AI 原稿 → 你的修改稿 → 为什么修改”</strong>，我认为是最有价值的。</p>
+<p>因为单纯把你的最终稿给 AI 看，它只能知道：</p>
+<blockquote>
+<p>“村长最后喜欢这样写。”</p>
+</blockquote>
+<p>但如果同时给它：</p>
+<blockquote>
+<p>AI 原稿
+↓
+村长改成这样
+↓
+修改原因</p>
+</blockquote>
+<p>它才能逐渐理解：</p>
+<blockquote>
+<p><strong>“村长为什么这么改。”</strong></p>
+</blockquote>
+<p>这才是真正的风格知识。</p>
+<hr>
+<h1>甚至可以形成一个“自我进化循环”</h1>
+<p>你每完成一集：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">AI 初稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">你的修改</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">最终稿</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Agent 对比差异</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">提炼修改规律</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">更新《村长编剧规范》</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">下一集</span><br></span></code></pre></div></div>
+<p>第 1 集可能你要改 100 处。</p>
+<p>第 20 集可能只需要改 50 处。</p>
+<p>第 50 集可能只需要改 20 处。</p>
+<p>这才是 Agent 真正给你带来的效率提升。</p>
+<p>而不是：</p>
+<blockquote>
+<p>“AI 帮我把一篇稿子从 0 写到 100。”</p>
+</blockquote>
+<p>而是：</p>
+<blockquote>
+<p><strong>“让 AI 从越来越接近我的 70 分，逐渐逼近我的 90 分。”</strong></p>
+</blockquote>
+<p>这和现在 AI Agent 的评估思路也非常吻合：把“什么叫优秀”明确成评价标准，然后用真实案例持续评估、发现失败模式、改进工作流。(<a href="https://developers.openai.ac.cn/api/docs/guides/agent-evals?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="评估智能体工作流 | OpenAI API - OpenAI 教程" class="">OpenAI开发者</a>)</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="我甚至认为你现在已经具备做这个-agent-的最佳条件">我甚至认为你现在已经具备做这个 Agent 的最佳条件<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%88%91%E7%94%9A%E8%87%B3%E8%AE%A4%E4%B8%BA%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%B7%B2%E7%BB%8F%E5%85%B7%E5%A4%87%E5%81%9A%E8%BF%99%E4%B8%AA-agent-%E7%9A%84%E6%9C%80%E4%BD%B3%E6%9D%A1%E4%BB%B6" class="hash-link" aria-label="Direct link to 我甚至认为你现在已经具备做这个 Agent 的最佳条件" title="Direct link to 我甚至认为你现在已经具备做这个 Agent 的最佳条件" translate="no">​</a></h2>
+<p>因为你不是刚开始做内容。</p>
+<p>你已经有：</p>
+<p><strong>100 集 C# 课程规划 + 第 13 集成稿 + 大量修改记录 + 明确的“村长”人格 + 对初学者教学的判断标准。</strong></p>
+<p>这些东西比单纯一个 Prompt <strong>值钱得多</strong>。</p>
+<p>而且你的工作并不是完全自动化，而是典型的：</p>
+<blockquote>
+<p><strong>AI 做 70%，人做最后 30%。</strong></p>
+</blockquote>
+<p>我建议你<strong>千万不要追求把最后 30% 也完全自动化</strong>。</p>
+<p>因为那最后 30%，恰恰是你这个 UP 主的价值。</p>
+<p>Agent 应该做的是：</p>
+<blockquote>
+<p><strong>把你的 70% → 90%，而不是替代你的 90% → 100%。</strong></p>
+</blockquote>
+<p>如果你愿意，我下一步可以直接帮你设计一套完整的 <strong>“村长 AI 编剧 Agent”架构</strong>——包括 <strong>Agent 的角色、知识库目录、Prompt、工作流、评审标准，以及如何把你前 13 集的修改记录变成它的“风格训练集”</strong>。这会比单纯写一个“大 Prompt”效果好很多。 (<a href="https://openai.github.io/openai-agents-python/multi_agent/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="Agent orchestration - OpenAI Agents SDK" class="">openai.github.io</a>)</p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="AI Coding" term="AI Coding"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[存储栈与堆]]></title>
+        <id>https://buhaoqi.github.io/blog/stack-heap</id>
+        <link href="https://buhaoqi.github.io/blog/stack-heap"/>
+        <updated>2026-08-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[这是学习 C# 时最容易产生误解的地方。]]></summary>
+        <content type="html"><![CDATA[<p>这是学习 C# 时最容易产生误解的地方。</p>
+<p>很多教材都会说：</p>
+<ul>
+<li class=""><strong>值类型变量存储在栈（Stack）中。</strong></li>
+<li class=""><strong>引用类型对象存储在堆（Heap）中。</strong></li>
+</ul>
+<p>这句话虽然方便初学者理解，但实际上并不严谨。要真正理解值类型和引用类型，首先必须明白<strong>什么是栈，什么是堆</strong>。</p>
+<hr>
+<h1>什么是内存栈（Stack）？</h1>
+<p><strong>栈（Stack）是一块专门用于管理方法调用和局部变量的内存区域。</strong></p>
+<p>它具有三个特点：</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-自动管理">① 自动管理<a href="https://buhaoqi.github.io/blog/stack-heap#-%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86" class="hash-link" aria-label="Direct link to ① 自动管理" title="Direct link to ① 自动管理" translate="no">​</a></h2>
+<p>当一个方法开始执行时，CLR 会给这个方法分配一块栈空间。</p>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>执行到这里时，栈里会创建一个栈帧（Stack Frame）。</p>
+<p>里面保存：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ b = 20       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├──────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ a = 10       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────┘</span><br></span></code></pre></div></div>
+<p>方法结束：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>返回之后：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">整个栈帧立即销毁</span><br></span></code></pre></div></div>
+<p>无需 GC（垃圾回收）。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-后进先出lifo">② 后进先出（LIFO）<a href="https://buhaoqi.github.io/blog/stack-heap#-%E5%90%8E%E8%BF%9B%E5%85%88%E5%87%BAlifo" class="hash-link" aria-label="Direct link to ② 后进先出（LIFO）" title="Direct link to ② 后进先出（LIFO）" translate="no">​</a></h2>
+<p>Stack 的意思就是：</p>
+<blockquote>
+<p>一摞盘子。</p>
+</blockquote>
+<p>只能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">放在最上面</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">取也从最上面取</span><br></span></code></pre></div></div>
+<p>所以：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Main()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Test()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Print()</span><br></span></code></pre></div></div>
+<p>栈中就是：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Print()      │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├──────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Test()       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├──────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Main()       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────┘</span><br></span></code></pre></div></div>
+<p>Print 返回：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Test()       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├──────────────┤</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Main()       │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────┘</span><br></span></code></pre></div></div>
+<p>所以叫：</p>
+<p><strong>后进先出（Last In First Out）</strong></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-分配速度极快">③ 分配速度极快<a href="https://buhaoqi.github.io/blog/stack-heap#-%E5%88%86%E9%85%8D%E9%80%9F%E5%BA%A6%E6%9E%81%E5%BF%AB" class="hash-link" aria-label="Direct link to ③ 分配速度极快" title="Direct link to ③ 分配速度极快" translate="no">​</a></h2>
+<p>为什么快？</p>
+<p>因为栈根本不用找空闲内存。</p>
+<p>只需要：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈顶指针 += 大小</span><br></span></code></pre></div></div>
+<p>例如：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈顶</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">□□□□□□□□□□</span><br></span></code></pre></div></div>
+<p>申请一个 int（4 字节）：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈顶</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">■■■■□□□□□□</span><br></span></code></pre></div></div>
+<p>仅仅移动一下指针即可。</p>
+<p>因此：</p>
+<blockquote>
+<p><strong>栈的分配和释放速度几乎是所有内存分配方式中最快的。</strong></p>
+</blockquote>
+<hr>
+<h1>什么是内存堆（Heap）？</h1>
+<p>堆（Heap）是一块<strong>专门存放对象（Object）数据</strong>的大型内存区域。</p>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name">Person</span><span class="token plain"> p </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>执行：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<p>CLR 会在 Heap 中寻找一块足够大的连续空间。</p>
+<p>例如：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Heap</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌──────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Person对象   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Name         │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Age          │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└──────────────┘</span><br></span></code></pre></div></div>
+<p>然后返回：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Person对象的地址</span><br></span></code></pre></div></div>
+<p>变量：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">p</span><br></span></code></pre></div></div>
+<p>保存的就是：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Person对象的位置（引用）</span><br></span></code></pre></div></div>
+<p>例如：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Stack                    Heap</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌────────┐          ┌──────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ p ─────┼────────► │ Person对象   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└────────┘          │ Name         │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    │ Age          │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    └──────────────┘</span><br></span></code></pre></div></div>
+<hr>
+<h1>为什么需要堆？</h1>
+<p>因为对象大小通常不知道。</p>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> s</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>字符串长度可能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">"A"</span><br></span></code></pre></div></div>
+<p>也可能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">"Hello"</span><br></span></code></pre></div></div>
+<p>也可能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">100000 个字符</span><br></span></code></pre></div></div>
+<p>数组更明显：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token class-name punctuation" style="color:#393A34">[</span><span class="token class-name punctuation" style="color:#393A34">]</span><span class="token plain"> arr </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name keyword" style="color:#00009f">int</span><span class="token punctuation" style="color:#393A34">[</span><span class="token number" style="color:#36acaa">1000000</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>长度运行时才知道。</p>
+<p>所以：</p>
+<p><strong>不能把所有对象都直接放在固定大小的栈帧中。</strong></p>
+<p>因此：</p>
+<blockquote>
+<p><strong>CLR 将对象放到更灵活、更大的 Heap 中。</strong></p>
+</blockquote>
+<hr>
+<h1>堆为什么慢？</h1>
+<p>因为需要：</p>
+<ol>
+<li class="">找空闲区域</li>
+<li class="">分配对象</li>
+<li class="">维护对象信息</li>
+<li class="">将来还要 GC 回收</li>
+</ol>
+<p>不像栈：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">移动一下栈顶指针即可。</span><br></span></code></pre></div></div>
+<p>所以：</p>
+<p><strong>Heap 的分配速度远慢于 Stack。</strong></p>
+<hr>
+<h1>栈和堆最大的区别</h1>
+<table><thead><tr><th>内存栈（Stack）</th><th>内存堆（Heap）</th></tr></thead><tbody><tr><td>存放方法调用信息</td><td>存放对象数据</td></tr><tr><td>自动分配</td><td>动态分配</td></tr><tr><td>自动释放</td><td>垃圾回收（GC）</td></tr><tr><td>速度快</td><td>相对较慢</td></tr><tr><td>生命周期随方法结束</td><td>生命周期由对象是否仍被引用决定</td></tr></tbody></table>
+<hr>
+<h1>需要纠正一个常见误区</h1>
+<p>很多书都会说：</p>
+<blockquote>
+<p><strong>值类型存在栈中，引用类型存在堆中。</strong></p>
+</blockquote>
+<p>这句话<strong>并不准确</strong>。</p>
+<p>更准确的说法应该是：</p>
+<ul>
+<li class=""><strong>值类型变量保存的是数据本身。</strong></li>
+<li class=""><strong>引用类型变量保存的是对象的引用（地址信息）。</strong></li>
+<li class=""><strong>对象通常分配在堆上，但变量本身放在哪里，取决于它声明的位置。</strong></li>
+</ul>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">Person</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> Age</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name">Person</span><span class="token plain"> p </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>通常情况下：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Stack                    Heap</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌────────┐          ┌─────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ p ─────┼────────► │ Person对象  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└────────┘          │ Age = 0     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    └─────────────┘</span><br></span></code></pre></div></div>
+<p>这里：</p>
+<ul>
+<li class=""><strong><code>p</code> 是一个局部变量，因此位于当前方法的栈帧（逻辑上如此，JIT 可能优化到寄存器）。</strong></li>
+<li class=""><strong><code>Person</code> 对象位于堆中。</strong></li>
+</ul>
+<p>再例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">Person</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> Age</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name">Person</span><span class="token plain"> p </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>这里的 <code>Age</code> 是 <strong>Person 对象的一部分</strong>，因此 <code>Age</code> 虽然是值类型，也存储在 <strong>堆中的对象内部</strong>，而不是栈上。</p>
+<p>因此，对于 C# 来说，更重要的是理解：</p>
+<ul>
+<li class=""><strong>值类型</strong>决定的是<strong>变量保存的是数据本身</strong>。</li>
+<li class=""><strong>引用类型</strong>决定的是<strong>变量保存的是对象的引用</strong>。</li>
+<li class=""><strong>栈（Stack）和堆（Heap）描述的是内存区域和对象的存放方式</strong>，它们与“值类型/引用类型”有关联，但不是一一对应的关系。</li>
+</ul>
+<p><strong>一句最准确、也最适合教学的总结是：</strong></p>
+<blockquote>
+<p><strong>栈（Stack）是 CLR 用来管理方法调用和局部变量的一块高速内存区域；堆（Heap）是 CLR 用来存放对象实例的一块动态内存区域。值类型和引用类型描述的是数据的存储语义，而不是简单地决定数据一定放在栈或堆中。</strong></p>
+</blockquote>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="designcoding" term="designcoding"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据类型逻辑上会进栈？]]></title>
+        <id>https://buhaoqi.github.io/blog/local-variables</id>
+        <link href="https://buhaoqi.github.io/blog/local-variables"/>
+        <updated>2026-07-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[问题：在逻辑上，所有方法内的值类型都会进入内存栈，这样理解正确吗？]]></summary>
+        <content type="html"><![CDATA[<p>问题：在逻辑上，所有方法内的值类型都会进入内存栈，这样理解正确吗？</p>
+<p>ChatGPT:</p>
+<p>这个理解<strong>作为 C# 内存模型的入门逻辑，可以说“基本正确”，但必须加一个限定条件</strong>：</p>
+<blockquote>
+<p><strong>从 C# 语言层面的抽象模型看：方法内部定义的值类型局部变量属于方法栈帧（stack frame）的一部分。</strong></p>
+<p><strong>但是从实际 CLR/JIT 执行角度看：它们不一定真的进入物理内存栈。</strong></p>
+</blockquote>
+<p>这两个层面要分开。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一层c逻辑模型教学层面">第一层：C#逻辑模型（教学层面）<a href="https://buhaoqi.github.io/blog/local-variables#%E7%AC%AC%E4%B8%80%E5%B1%82c%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E6%95%99%E5%AD%A6%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="Direct link to 第一层：C#逻辑模型（教学层面）" title="Direct link to 第一层：C#逻辑模型（教学层面）" translate="no">​</a></h2>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">double</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3.14</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>我们可以画成：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">线程栈 Stack</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌────────────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ Test() 栈帧     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ int a = 10     │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│ double b=3.14  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│                │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└────────────────┘</span><br></span></code></pre></div></div>
+<p>这个理解：</p>
+<p>✅ 正确</p>
+<p>因为：</p>
+<ul>
+<li class=""><code>a</code> 是值类型</li>
+<li class=""><code>b</code> 是值类型</li>
+<li class="">它们属于方法内部变量</li>
+<li class="">方法调用时会创建执行上下文</li>
+</ul>
+<p>所以教学上说：</p>
+<blockquote>
+<p>方法内部值类型变量存在栈中</p>
+</blockquote>
+<p>没有问题。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二层真实运行时jit之后">第二层：真实运行时（JIT之后）<a href="https://buhaoqi.github.io/blog/local-variables#%E7%AC%AC%E4%BA%8C%E5%B1%82%E7%9C%9F%E5%AE%9E%E8%BF%90%E8%A1%8C%E6%97%B6jit%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="Direct link to 第二层：真实运行时（JIT之后）" title="Direct link to 第二层：真实运行时（JIT之后）" translate="no">​</a></h2>
+<p>但是 CLR 不这样执行。</p>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">int</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Add</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>你认为：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">b</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
+<p>但是 Release：</p>
+<p>JIT可能直接生成：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mov eax,30</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ret</span><br></span></code></pre></div></div>
+<p>实际：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">CPU寄存器 eax</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">30</span><br></span></code></pre></div></div>
+<p>栈：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">空</span><br></span></code></pre></div></div>
+<p>甚至：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a不存在</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">b不存在</span><br></span></code></pre></div></div>
+<p>因为它们只是编译阶段的概念。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="所以准确说法应该是">所以准确说法应该是：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%89%80%E4%BB%A5%E5%87%86%E7%A1%AE%E8%AF%B4%E6%B3%95%E5%BA%94%E8%AF%A5%E6%98%AF" class="hash-link" aria-label="Direct link to 所以准确说法应该是：" title="Direct link to 所以准确说法应该是：" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="不严谨">不严谨：<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%8D%E4%B8%A5%E8%B0%A8" class="hash-link" aria-label="Direct link to 不严谨：" title="Direct link to 不严谨：" translate="no">​</a></h3>
+<blockquote>
+<p>方法内所有值类型都会进入栈。</p>
+</blockquote>
+<p>❌ 不准确</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="更准确">更准确：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%9B%B4%E5%87%86%E7%A1%AE" class="hash-link" aria-label="Direct link to 更准确：" title="Direct link to 更准确：" translate="no">​</a></h3>
+<blockquote>
+<p>方法内值类型变量属于栈帧管理范围，但 JIT 编译后可能被放入寄存器、优化消除，或者必要时才存入栈。</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么很多资料仍然说值类型在栈">为什么很多资料仍然说“值类型在栈”？<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%88%E5%A4%9A%E8%B5%84%E6%96%99%E4%BB%8D%E7%84%B6%E8%AF%B4%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%9C%A8%E6%A0%88" class="hash-link" aria-label="Direct link to 为什么很多资料仍然说“值类型在栈”？" title="Direct link to 为什么很多资料仍然说“值类型在栈”？" translate="no">​</a></h2>
+<p>因为它解决的是另一个问题：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="引用类型">引用类型：<a href="https://buhaoqi.github.io/blog/local-variables#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B" class="hash-link" aria-label="Direct link to 引用类型：" title="Direct link to 引用类型：" translate="no">​</a></h3>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name">Person</span><span class="token plain"> p </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>逻辑：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Stack</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">p</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Heap</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Person对象</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="值类型">值类型：<a href="https://buhaoqi.github.io/blog/local-variables#%E5%80%BC%E7%B1%BB%E5%9E%8B" class="hash-link" aria-label="Direct link to 值类型：" title="Direct link to 值类型：" translate="no">​</a></h3>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> age </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">18</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>逻辑：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Stack</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">age=18</span><br></span></code></pre></div></div>
+<p>目的是帮助初学者理解：</p>
+<ul>
+<li class="">值类型保存数据本身</li>
+<li class="">引用类型保存地址</li>
+</ul>
+<p>这个模型没有错。</p>
+<p>但它不是 CPU 实际执行模型。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一个非常重要的例外">一个非常重要的例外<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%80%E4%B8%AA%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%E7%9A%84%E4%BE%8B%E5%A4%96" class="hash-link" aria-label="Direct link to 一个非常重要的例外" title="Direct link to 一个非常重要的例外" translate="no">​</a></h2>
+<p>值类型也可能进入堆：</p>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">Person</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> Age</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>这里：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name">Person</span><span class="token plain"> p </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">p</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Age </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p><code>Age</code> 是值类型：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Heap:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Person对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    int Age=20</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>所以：</p>
+<blockquote>
+<p>值类型 ≠ 一定在栈</p>
+</blockquote>
+<p>更准确：</p>
+<blockquote>
+<p>值类型的数据存储位置取决于它的宿主。</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="最终建议你在课程中这样表达">最终建议你在课程中这样表达：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%9C%80%E7%BB%88%E5%BB%BA%E8%AE%AE%E4%BD%A0%E5%9C%A8%E8%AF%BE%E7%A8%8B%E4%B8%AD%E8%BF%99%E6%A0%B7%E8%A1%A8%E8%BE%BE" class="hash-link" aria-label="Direct link to 最终建议你在课程中这样表达：" title="Direct link to 最终建议你在课程中这样表达：" translate="no">​</a></h2>
+<p>如果面向初学者：</p>
+<blockquote>
+<p><strong>逻辑上，方法内部创建的值类型变量属于栈空间；但实际运行时，JIT 编译器会优化它们的位置，可能放入 CPU 寄存器，甚至完全消除。</strong></p>
+</blockquote>
+<p>这句话既符合教学，又符合 .NET 底层真实情况。</p>
+<p>你现在遇到的困惑，其实是因为你已经从“C#语法层”进入了“CLR执行层”。很多 C# 教程停留在第一层，所以会产生矛盾。你现在研究的方向已经接近 CLR/JIT 原理了。</p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="数据类型栈" term="数据类型栈"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[哪些数据类型会进栈？]]></title>
+        <id>https://buhaoqi.github.io/blog/simple-types</id>
+        <link href="https://buhaoqi.github.io/blog/simple-types"/>
+        <updated>2026-07-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[问题：在发布模式下，几乎所有的 C#的简单值都会进寄存器，对吗？什么变量会进内存栈？]]></summary>
+        <content type="html"><![CDATA[<p>问题：在发布模式下，几乎所有的 C#的简单值都会进寄存器，对吗？什么变量会进内存栈？</p>
+<p>ChatGPT:</p>
+<p>你的理解<strong>方向接近正确，但需要修正一个非常关键的概念</strong>：</p>
+<blockquote>
+<p><strong>“C# 简单值变量几乎都会进寄存器”——在 Release（发布）模式下，对于短生命周期、参与计算的局部变量，这句话大体成立。</strong></p>
+<p><strong>但是，“变量进寄存器” ≠ “变量不在栈上”。</strong></p>
+<p>真正困难的地方，就是把 <strong>C#语言层面的变量存储</strong> 和 <strong>JIT 编译后的机器码执行位置</strong> 混在了一起。</p>
+</blockquote>
+<p>我们一步一步拆开。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-首先纠正一个常见误区">1. 首先纠正一个常见误区<a href="https://buhaoqi.github.io/blog/simple-types#1-%E9%A6%96%E5%85%88%E7%BA%A0%E6%AD%A3%E4%B8%80%E4%B8%AA%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA" class="hash-link" aria-label="Direct link to 1. 首先纠正一个常见误区" title="Direct link to 1. 首先纠正一个常见误区" translate="no">​</a></h2>
+<p>很多教材会说：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<blockquote>
+<p>a 在栈中。</p>
+</blockquote>
+<p>这个说法<strong>只是在解释 C# 概念模型时的简化说法</strong>。</p>
+<p>实际运行：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Main</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>经过：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">C#代码</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IL中间语言</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">JIT编译</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">CPU机器码</span><br></span></code></pre></div></div>
+<p>到了 CPU：</p>
+<p>可能变成：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mov eax,10</span><br></span></code></pre></div></div>
+<p>也就是说：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">CPU寄存器 eax</span><br></span></code></pre></div></div>
+<p>根本没有进入栈。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-那什么时候-int-会进入栈">2. 那什么时候 int 会进入栈？<a href="https://buhaoqi.github.io/blog/simple-types#2-%E9%82%A3%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99-int-%E4%BC%9A%E8%BF%9B%E5%85%A5%E6%A0%88" class="hash-link" aria-label="Direct link to 2. 那什么时候 int 会进入栈？" title="Direct link to 2. 那什么时候 int 会进入栈？" translate="no">​</a></h2>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">ReadLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>这里 JIT 发现：</p>
+<p>变量 a 的生命周期比较长：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">创建a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">等待输入</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">使用a</span><br></span></code></pre></div></div>
+<p>寄存器不能一直占用。</p>
+<p>因为：</p>
+<ul>
+<li class="">CPU寄存器数量非常有限</li>
+<li class="">方法调用可能覆盖寄存器</li>
+<li class="">GC、异常处理需要保存状态</li>
+</ul>
+<p>所以可能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈空间</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">┌─────────┐</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   a=10  │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└─────────┘</span><br></span></code></pre></div></div>
+<p>机器码类似：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mov [rbp-4],10</span><br></span></code></pre></div></div>
+<p>这里才是真正意义上的：</p>
+<blockquote>
+<p>a 在栈帧里面。</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-release模式下jit优化非常激进">3. Release模式下，JIT优化非常激进<a href="https://buhaoqi.github.io/blog/simple-types#3-release%E6%A8%A1%E5%BC%8F%E4%B8%8Bjit%E4%BC%98%E5%8C%96%E9%9D%9E%E5%B8%B8%E6%BF%80%E8%BF%9B" class="hash-link" aria-label="Direct link to 3. Release模式下，JIT优化非常激进" title="Direct link to 3. Release模式下，JIT优化非常激进" translate="no">​</a></h2>
+<p>比如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">int</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Add</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> c</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>很多人认为：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">b</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">c</span><br></span></code></pre></div></div>
+<p>实际上 Release：</p>
+<p>JIT可能直接生成：</p>
+<div class="language-asm codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-asm codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">mov eax,30</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ret</span><br></span></code></pre></div></div>
+<p>三个变量：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">b</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">c</span><br></span></code></pre></div></div>
+<p>全部消失。</p>
+<p>因为：</p>
+<p>JIT发现：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">10+20=30</span><br></span></code></pre></div></div>
+<p>直接返回30。</p>
+<p>这叫：</p>
+<blockquote>
+<p>常量折叠(Constant Folding)</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-那是不是所有简单值都在寄存器">4. 那是不是所有简单值都在寄存器？<a href="https://buhaoqi.github.io/blog/simple-types#4-%E9%82%A3%E6%98%AF%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E7%AE%80%E5%8D%95%E5%80%BC%E9%83%BD%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8" class="hash-link" aria-label="Direct link to 4. 那是不是所有简单值都在寄存器？" title="Direct link to 4. 那是不是所有简单值都在寄存器？" translate="no">​</a></h2>
+<p>不完全。</p>
+<p>更准确说：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况1简单计算变量">情况1：简单计算变量<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B51%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%8F%98%E9%87%8F" class="hash-link" aria-label="Direct link to 情况1：简单计算变量" title="Direct link to 情况1：简单计算变量" translate="no">​</a></h3>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> x</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">1</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> y</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">2</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> z</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">x</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">y</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>非常可能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">CPU寄存器</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">eax = 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ebx = 2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ecx = 3</span><br></span></code></pre></div></div>
+<p>甚至变量不存在。</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况2需要取地址">情况2：需要取地址<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B52%E9%9C%80%E8%A6%81%E5%8F%96%E5%9C%B0%E5%9D%80" class="hash-link" aria-label="Direct link to 情况2：需要取地址" title="Direct link to 情况2：需要取地址" translate="no">​</a></h3>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">unsafe</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">int</span><span class="token operator" style="color:#393A34">*</span><span class="token plain"> p</span><span class="token operator" style="color:#393A34">=</span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>或者：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name">Span</span><span class="token class-name punctuation" style="color:#393A34">&lt;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token class-name punctuation" style="color:#393A34">&gt;</span><span class="token plain"> span </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">stackalloc</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">int</span><span class="token punctuation" style="color:#393A34">[</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>必须有内存地址：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">a</span><br></span></code></pre></div></div>
+<p>因为寄存器没有固定地址。</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况3变量跨越方法调用">情况3：变量跨越方法调用<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B53%E5%8F%98%E9%87%8F%E8%B7%A8%E8%B6%8A%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8" class="hash-link" aria-label="Direct link to 情况3：变量跨越方法调用" title="Direct link to 情况3：变量跨越方法调用" translate="no">​</a></h3>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">SomeMethod</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>调用：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">SomeMethod()</span><br></span></code></pre></div></div>
+<p>会破坏很多寄存器。</p>
+<p>所以：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">寄存器</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">保存</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">栈</span><br></span></code></pre></div></div>
+<p>可能发生。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-还有一个更容易混淆的问题值类型对象">5. 还有一个更容易混淆的问题：值类型对象<a href="https://buhaoqi.github.io/blog/simple-types#5-%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%AE%B9%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E9%97%AE%E9%A2%98%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%AF%B9%E8%B1%A1" class="hash-link" aria-label="Direct link to 5. 还有一个更容易混淆的问题：值类型对象" title="Direct link to 5. 还有一个更容易混淆的问题：值类型对象" translate="no">​</a></h2>
+<p>例如：</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">Person</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> Age</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name">Person</span><span class="token plain"> p</span><span class="token operator" style="color:#393A34">=</span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">p</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Age</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><br></span></code></pre></div></div>
+<p>这里：</p>
+<p>变量：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">p</span><br></span></code></pre></div></div>
+<p>是引用类型变量。</p>
+<p>可能：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">p</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> | 地址</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">堆:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Person对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Age=20</span><br></span></code></pre></div></div>
+<p>但是 Release：</p>
+<p>甚至：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">p</span><br></span></code></pre></div></div>
+<p>这个引用也可能只存在寄存器：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">rax = 对象地址</span><br></span></code></pre></div></div>
+<p>所以：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">引用变量p</span><br></span></code></pre></div></div>
+<p>也不一定真的在栈。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-最准确的理解方式">6. 最准确的理解方式<a href="https://buhaoqi.github.io/blog/simple-types#6-%E6%9C%80%E5%87%86%E7%A1%AE%E7%9A%84%E7%90%86%E8%A7%A3%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="Direct link to 6. 最准确的理解方式" title="Direct link to 6. 最准确的理解方式" translate="no">​</a></h2>
+<p>不要问：</p>
+<blockquote>
+<p>这个变量在栈还是寄存器？</p>
+</blockquote>
+<p>因为 C# 已经进入 JIT 世界后，这个问题不够准确。</p>
+<p>应该问：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="变量是否需要内存地址">变量是否需要内存地址？<a href="https://buhaoqi.github.io/blog/simple-types#%E5%8F%98%E9%87%8F%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80" class="hash-link" aria-label="Direct link to 变量是否需要内存地址？" title="Direct link to 变量是否需要内存地址？" translate="no">​</a></h3>
+<p>如果：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">不需要地址</span><br></span></code></pre></div></div>
+<p>那么：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">寄存器</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">或者直接消除</span><br></span></code></pre></div></div>
+<p>概率很高。</p>
+<p>如果：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">需要地址</span><br></span></code></pre></div></div>
+<p>那么：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">栈</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">或者堆</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-给你一个适合教学的总结">7. 给你一个适合教学的总结<a href="https://buhaoqi.github.io/blog/simple-types#7-%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E9%80%82%E5%90%88%E6%95%99%E5%AD%A6%E7%9A%84%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 7. 给你一个适合教学的总结" title="Direct link to 7. 给你一个适合教学的总结" translate="no">​</a></h2>
+<p>如果你制作 C#底层课程，我建议这样讲：</p>
+<blockquote>
+<p>在 Debug 模式下，为了方便调试，局部变量通常会保留在栈中。</p>
+<p>在 Release 模式下，JIT 编译器会重新安排变量的位置。简单值类型变量（int、double、bool等）通常优先放入CPU寄存器，甚至可能被优化掉。</p>
+<p>只有当变量需要稳定地址、生命周期较长、参与引用、异常处理或调试需求时，才可能进入栈。</p>
+</blockquote>
+<hr>
+<p>所以你的研究结果：</p>
+<blockquote>
+<p>“绝大多数简单值都会进寄存器”</p>
+</blockquote>
+<p><strong>在 Release + JIT + 局部变量场景下，是非常接近事实的。</strong></p>
+<p>真正应该修正的是：</p>
+<p>不是：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int → 栈</span><br></span></code></pre></div></div>
+<p>而是：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">int变量</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">JIT决定</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">寄存器 / 栈 / 消除</span><br></span></code></pre></div></div>
+<p>这才是现代 .NET 运行时真实情况。你之前研究 C# 数据进入内存栈和堆的方向，如果继续深入，下一步应该研究 <strong>JIT、SSA、中间表示(IR)、寄存器分配(Register Allocation)</strong>，这才是解释“变量到底去哪”的核心。</p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="数据类型栈" term="数据类型栈"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[YouTube Channels Design2]]></title>
+        <id>https://buhaoqi.github.io/blog/youtube-channels-design2</id>
+        <link href="https://buhaoqi.github.io/blog/youtube-channels-design2"/>
+        <updated>2026-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[如果你的目标不是"普通UP主"，而是想把《秒懂计算机》做成一个长期品牌，我建议不要只参考计算机频道，而是参考设计水平最高的 YouTube 频道。]]></summary>
+        <content type="html"><![CDATA[<p>如果你的目标不是"普通UP主"，而是想把**《秒懂计算机》做成一个长期品牌**，我建议不要只参考计算机频道，而是参考<strong>设计水平最高</strong>的 YouTube 频道。</p>
+<p>下面这些是我认为值得长期研究的。</p>
+<hr>
+<h1>第一梯队（★★★★★ 必看）</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-fireship计算机">1. Fireship（计算机）<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#1-fireship%E8%AE%A1%E7%AE%97%E6%9C%BA" class="hash-link" aria-label="Direct link to 1. Fireship（计算机）" title="Direct link to 1. Fireship（计算机）" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/tx_5Vs-bRZgp7v3HzC2mzWrTvSHcMtg9VeXHAt9sdui8NB5ZwyW2NF_QtkQRthMrrKwVoEkJ1NlHjEp05d7xPOCykxln_i1MwDj0VDezJfEzddOanPnYt_3JywZWxM79jn8oO8g25i0kXXalpxE_1HOPhiRi7lzuRTxHypjyMayO3_kzDVFswFxHqm4XC4zU?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/6lBewacdJQy_2vFkbVLrItzMj5TjllzmkRwYe1go1P1bwcqoOov_-NjwwacMiczpF3MLb2YSAh1CUbNnQqT0z0HWbF9SU3ycHgLr4MjVxznjjX-HXZgzz-yQPOazvjYL8EflxhzsJHjLlishey0gAxCqUpCduNAnZ80hD50xErocvZ1nihhJ_MfiY9Qr6Zde?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/21YHYV98wxNkS-VAsCTR84d0J_AHzmKSRTQ0joXH06tJSuYxTy7lKz7YNLyioEMT4g08OyXtML7SOSNRV3P-1ziQfQPKWylu1PzjyD9u7qjjrRCLrnZCqPzswsscwkjSuwptn0ndhTOVfKWvbhPtGdcJK7t4_KEahbPM0gv-7TMdJMQkTLkO0wZ7HI-DepRX?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><strong>推荐指数：10/10</strong></p>
+<p>这是目前 YouTube 编程领域封面设计最成熟的频道之一。</p>
+<p>特点：</p>
+<ul>
+<li class="">深色背景</li>
+<li class="">高对比度</li>
+<li class="">一到两个主体</li>
+<li class="">颜色极少</li>
+<li class="">留白很多</li>
+<li class="">科技感很强</li>
+</ul>
+<p>几乎不会出现：</p>
+<p>五颜六色</p>
+<p>很多小元素</p>
+<p>很长标题</p>
+<p>整个封面高级感非常强。</p>
+<p>值得学习：</p>
+<p>配色</p>
+<p>光影</p>
+<p>留白</p>
+<hr>
+<h1>2. Computerphile（计算机）</h1>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/ef20ilLustEHnXO8ui8F6iwHMwJ6CJHY0bSeHEyhkhDiwhS86ochYKpGTBmp9mU9ZhJANL6T2SuWb72R_H1tzZInzDEAj4cAlv6r4D1J9DJfShP5RlMqBhF2fZbX-336R35v394t-E911c4a0QAcj_yZqn-U3IHRGzWywXcla4CXVe0Fa8_31S-cbY-N4VxF?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/QTnM6IT3k3VDv95JTibpvF90MfQpSKZTYnTiAxuDZaw_RHvl6nPu1fXcxyfvK2sdx6Goj2Skj4145uWsfQqvdMwLpWtKTbOT8otqI7eOosHAYkuHdHoMzDkEVkFIq9MSAzesnKviGxuhzmFeGPehbzWj8KJb7gZSy1hP9FBYOAGRbnC0VJ0fdB_awchkHCpV?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/6RcyAgnYcWxYwsGkZlnfmpsHo8hYr9iNC3LbTqCdIUcJfWAvogkfnx-6ci3RDokZh64dpUzZa7iTFx32O0DWN3sSitEGJqnEv1ciWHz_-1-VP3bEvZpjUvR2ijV7QmYc-IC3vsBBBL5x0nIaqOnUozx1ymExlHyB2tWDajpKw3jnfDrzEZJPw_uC4a-mVTFN?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/jAGh5kioA-8v5HFJdokTnGuyPTsXmoWKqIF9a0K-9kB0xf-Z82a3BcR-gFvmbCU2Y9l3lyaixx_ln8tbevF5iMeFEZZqYq0YvDixnPxJZJkF6pRTleQx2qEdQLSfrBUaZZZ5SHczIuRbHnElFYUFV3dy0dHpJKAGq5INewe8urd_Je7JvMgLjeHQUD-2T5yc?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/YWOBHHLiUe7hQ1thznf9jfjU631SQKPHh_cqQ_txpdUnD4GeHEMZlRyn3Rlif9JFpUCi-lok96Xw2YExYEWkBc9h1lLB2zmAur2sMDynHx_09P2iugDbjSyxSfpMQBS5dHgttaExs37Ir2fMlrk9u2aaDmQ-aBLNdVPiSHuEsWyahi1cER5w2kg4PTl6y4aB?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/y3OmI1RVRrheQwNQA41RebzCGdotbADPtCJWWrUo7edvMNun99Z0ixDjuso394AjGQjQ-7NBQGBryLBYQr_hY8U6EqrUY5L6fqbwQTvSKMwQpauyWJZqZKD3Sc3R735o5WboEVECPuR7mlvKmOnkQ0VtjFgWkbf1V6eNa73CTCkZPwWnbSXfbujGefwKzT3a?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>推荐指数：</p>
+<p>★★★★★</p>
+<p>虽然封面简单。</p>
+<p>但是：</p>
+<p>专业。</p>
+<p>学术。</p>
+<p>可信。</p>
+<p>非常适合：</p>
+<p>计算机基础。</p>
+<hr>
+<h1>3. Ben Eater（计算机底层）</h1>
+<p>推荐指数：</p>
+<p>★★★★★</p>
+<p>讲：</p>
+<p>CPU</p>
+<p>汇编</p>
+<p>面包板</p>
+<p>计算机组成。</p>
+<p>封面：</p>
+<p>极简。</p>
+<p>专业。</p>
+<hr>
+<h1>第二梯队（设计参考）</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="branch-education">Branch Education<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#branch-education" class="hash-link" aria-label="Direct link to Branch Education" title="Direct link to Branch Education" translate="no">​</a></h2>
+<p>推荐指数：</p>
+<p>★★★★★</p>
+<p>这是我非常推荐研究的。</p>
+<p>因为：</p>
+<p>它讲：</p>
+<p>CPU</p>
+<p>GPU</p>
+<p>SSD</p>
+<p>RAM</p>
+<p>互联网。</p>
+<p>封面：</p>
+<p>高级。</p>
+<p>纪录片风。</p>
+<p>科技感。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="veritasium">Veritasium<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#veritasium" class="hash-link" aria-label="Direct link to Veritasium" title="Direct link to Veritasium" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/HagfInT3aeb8DHwZgYBdTId07cuTK8Y3a5lhsHBmCyXzpZ4SD4yeo63l_q6isXxw3ThlvyRwyLzxqDjkt4g7lAz50CmydlLADmu0tqTo1SkyUZmSNXE3FNBENwTIZJrw0UwQC31Uhjtb_lYvqrnOFvDJ47pp0yLGIDpGMobxS3IbfxeJ_CKB5RIp3PtD8vad?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/r8ZjNBCpzAojBc6iCcyGIxG9yaEZAr892ogg3O6Hi0UuxLfWUW1bY7M57nonTshrP26LzeH_9z1wgOPm5yrUXlDk1pEkoLgENDYknD2p3VnNtdjcZMXbulX6Bh1Bvc9Ec-T_oLAEMO05sOXshvYpA3Rx7hSDKwxa9Unvg-0F-QQvDXm-E-46Fsya5JtNP0QA?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/HQHxD7Fl0pe-kULlyJsD_JQOO6ZMgxsDjrETudrnd7yJy6VuS-XZkP73qMrnegoktxdMpfjGWxKuJek8sUlt3JA9uJ16HLPZ-TAOsOnnVGmyyjTGNuffff1bqrbzsGM_x4Eh2RXHG_h8SW3LPHv5Y6ozypT2746p5zgMIp3vjX3QzA3TF_3NRmsTKkRVevtu?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/6mzgetfZBAW7nzpgl-sr4II1m8LSnr5gG9Pufy6hKWN_89JlhpeVhfU4NAW8tUvHGGBzQZ4ciFI-RD9yiLo0u8PbdalIgkC3FGqQmj5Qh5RmiNZhLWqgirYDlh4nt3xVAWWMEg3Zm5BUogBSdtNeiOO19nM8cem4tEQWIa2VUtPqV_oYBT0vnMwrSBP_NVJi?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/donPj51dKrooeJj3mz4W9rDGOWwIhBT7AGucXUulCg1TH2ypRHHBGdifaQtFClOi0RN_HTFEWPZ-LFoeFh44n41F7-xL36gIIznuyOyUXnzFz0DSimxb1-pETf-e3dmk7_c1gjQck-_6fAAeFYeqH-CqfM_rJbLjPHs68WagZmj3OP7qWUCteXfQD73BFFkW?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>推荐指数：</p>
+<p>★★★★★</p>
+<p>虽然不是计算机。</p>
+<p>但是：</p>
+<p>封面设计：</p>
+<p>世界顶级。</p>
+<p>特点：</p>
+<p>一个主体。</p>
+<p>一个问题。</p>
+<p>大量留白。</p>
+<p>颜色统一。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="kurzgesagt">Kurzgesagt<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#kurzgesagt" class="hash-link" aria-label="Direct link to Kurzgesagt" title="Direct link to Kurzgesagt" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/_f-mzYvdwSuGyFsn7-njcmrnZlM0SJ2y7e6f9rMOCoTHpuRDtBI90YACgXMvnG6NXOkU9owJURMKTwhworzZoyhrY2dtpFyAyUTvZFp1WywL1OcOHBfvFryOUo_le2m6KlsS7o1RLXnT0ZgxJa-AA7pbeNTewRLYh6xOoPjnjVYwMV-LBW8yoGgoSEhImupq?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/0lAPUhl5EuRSsDQHuPCwNVc2pl-BSUKaI9Zx3s_WTMxNysxqMan1Aq8Mtb9OsJFj8y2fHFtJ9ZSudAK_2NDlQGzW0447vZj_kk_YFrPm7M0Ul3w5yk38KFT8uWKdzZFDPzgLVfzZtfQU3XuWG0v0lP9iIVEQiE0Fvw14qk5wMbtsTexvjg1IMtkBtXgmsb0U?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/bQS-Qzp6zuHhUC301M_WIi2XjacjSjaa1W4dU59zGYfN_3uIvkUzOApOWDW_ALbibW72BLSQqR3LHUZKaLrT99tk5ukP8l0IfTEZAlVmAn-l2tLgcrOViwaIWAoufygy6mxELJ-LQpvtb9072rF5FaNvHes5JJ02rzCmwwUluDg5Dm27fH8CcUsMtpNQBLJj?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/6cKqVxwYKtXypIFRgCGtI0usdAjWALjFsqxwH4Z1al0tDM5-NefDEAO4hh3q_BNoGIVaVZqBTeU8xAwWIiziJd7wUB2Lk-mqo9unc8tMn2RzIzlO3OKZgDF9M_CzK2m6Pk7ezXUKy2BMm9lWMVisutt759nv8Yb6QebfockfrwjJiIZ4lidNpXsTdMG3a9BY?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/LM4AgjQhDWrObtNC-hwnlsbLBGoIsVgqjOcxPxk9LeZ4H5sIrlf6KPs83q8IOtG6yVvE9IkxuGxENwY-UrCx3baxOU8bP9mlWB4ZiQV709zscUa-QLvYcVukiW2PLILnHuO4TWVInJc6aPXhQLmDXJAN-100PnbsqLmr8hUXW7z7i3AbaeCLStje7mheLiIv?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>推荐指数：</p>
+<p>★★★★★</p>
+<p>如果你以后：</p>
+<p>做动画。</p>
+<p>一定要研究。</p>
+<p>配色：</p>
+<p>世界顶级。</p>
+<hr>
+<h1>第三梯队（设计感）</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="coldfusion">ColdFusion<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#coldfusion" class="hash-link" aria-label="Direct link to ColdFusion" title="Direct link to ColdFusion" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/gOWMMTSWTcu895y22LmcKHdiEpg9ZulSatL6q2guh8yES0HVXGwvCyx2yeS-guqiI__zj26WTvGlnI91RjYV5YLz3xdZcLXbnU0gfNVu86bvp6dolqr9tUNymXjj80r1oyYByfwkkIbgCEE2f-M8hNEJ_ND9Ho-rCzrW0H2Zd6fLJQYzb67auF_qYLg6MxPM?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/dKDUGX79XGSR1S2UVFLntNoPrtacld8IYl8tr08f1d8lnzRxfqQABdBi9aogxu-x_2CBUti22PYX4I5_YZearwKm8P1R_ZLuBf6dNlWmLd1wGEiHx39HuT5ghxy4zhLntvkiBS8etIHFGi8OU5ebFsB_adl4YSynAJqJ7WfWa51rdfQEJJ3-h3W4F_QV-KYD?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/s_fDt4YZ88PG-FLJvURfgM0Sb_g9FGAz6oz7X6gafJ314aUcdoohTgjXsgDPndZMDCdkhmL1n2fh5A3xI8IIF86GBSUQ6tNHaOymvtObrBlNn1p5-cweMjfYNSiYM3eMsGF7S-L2MffZm3GAZ_1s2dGss0mdG2p4yCkT1ju64RgU_aJDXUQgdqcdBikmpFCE?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/evf3hkVI1R2bpLhQdXQEkeJqabjYUuSIaT0CEkeTS38TBkYL4AziSIP1U2PBeoRHL0HavMw3RRp07PhKF1FHrZpKr7zee14Gfpyu_5rXmHZAw30lFkOLCDIfQRU1upOddCxIGXpIbO6HX2P1RxNt4DRrLf-6X7jUcFyFC5rHZp5Q4nkYZQhl4LEPsys7_xti?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/HMmTHARP6q03d0WxtjUPq3h060FUIGMVQiMOLxfD5HExqEFA51DYL2MVOjydC171I7SpMC7VCRuPJF2ZeHa5LA35wmsb1Ajt-NvQ3tqvXx2EpDrRSK0pgfwWs_zrfX7O5WZbkf-ao4eF1EIw-58vS2ze2mP17kpZXQbo7syORbhOn0t16iO3DB5WLHO6TuZp?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/behUwGxyYcxxCYMihC5vLxNksb3tBbMkzlGNF7IN9T4QmvYpm3uVmQvACZnPeRccSHMrnGP9BGLxFWFEayfq75iq2JQ2LYPHhLnP7Yn5oswlKMFGj91mhDVoiHJIz9Ips1n3v9R8U1ckSxRCAZNQuGXhWfMzyOLgEm0tD-si1avxjQc28focXZtTXmLtEe0c?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>科技频道。</p>
+<p>颜色：</p>
+<p>蓝色。</p>
+<p>灰色。</p>
+<p>橙色。</p>
+<p>纪录片风。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="asianometry">Asianometry<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#asianometry" class="hash-link" aria-label="Direct link to Asianometry" title="Direct link to Asianometry" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/Z5wzbGPA3wfgqlBKIK3cOeMuqng70qJefrGlnb0rPdxcSMI8Rdq-ZlUN9cXE_b8yGDrD09ovI7vq70OXXAaN28u03lL4UxtuDDXOZbJRMLmF7LVoLrgpGtZsEfDUnQXNss545DnJMX6XjA2BhUOmBL0KKBNpClwO0P4VdptwvsFZQ6oFSsMoYNPYTIOFDX2o?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/gOMgJeA4z6aubV6dprdpxaHs6EBvJt7_Kt4OUElbA2FMWCSs7fyiFIs8oDpbHVI9tLvgWt9MeO1B8Jt2Qr4KntyQz8SUAjGpsR4uQDsEliA50fyQfwYPei7T11SjFds3_t55FTwRYcYlyY2tEv133jrD7S8gA6Dry141aCLMuBPZChQtOmCh723cE5ZBErTl?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>半导体。</p>
+<p>CPU。</p>
+<p>科技历史。</p>
+<p>封面：</p>
+<p>非常高级。</p>
+<hr>
+<h1>第四梯队（计算机）</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="low-level-learning">Low Level Learning<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#low-level-learning" class="hash-link" aria-label="Direct link to Low Level Learning" title="Direct link to Low Level Learning" translate="no">​</a></h2>
+<p>讲：</p>
+<p>Linux</p>
+<p>Kernel</p>
+<p>Compiler</p>
+<p>CPU。</p>
+<p>封面：</p>
+<p>深色。</p>
+<p>绿色。</p>
+<p>科技。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bytebytego">ByteByteGo<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#bytebytego" class="hash-link" aria-label="Direct link to ByteByteGo" title="Direct link to ByteByteGo" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/UHnJL2LB2C368d3Gq0LUKVlCu6cqIxu83Sve7bLht9p4f3Et2ZhtyJvwpKbm55DSkIvR-39GMTZ0ar9Th4WikSKI7iaWo29L3WBZxEjgnkSICTtQQMejHw4rb3nnfJBbi8-RlB87jASBLbk52x27kaxUP5fJ1aDcJ5wiZct7Y9KzzoG60hNFevidim-GY1a_?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/PVN_UafXFdwXnAmdmUapk-BRIB5IrpWdibc2dG3GEkDFHrRsRpw3j0cbQSl42h7G2yfD7sM-GCrr70n8cZYYGrZ8hkNtmOmYGoqqEGBJvN9HAyf3IhmRoE6oXo8bJZajUMQjQIS7_mGCwZrgr_E88rWW92PsMSxsV5nAhLMWAd4e_9TUyaqTqs83z1XQoRCK?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/AQGtSM3byTaGLtCsmdV3sZzyuhfWbxWawnsZ4wwsY-IVD6ENmXNaZs_eZG1W4dB-sM7suW7b1lMYhS9Z4DNbS4k3omWEjvjq87bDWAFRbN8eccFQd1ZYogD10x95WnhtR3Lq-JRwiyF-yFfpFU9niIni4A75ARS4DfZGavcTYb9YMSuhitPKqbXxzO9u0kqE?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>讲：</p>
+<p>系统设计。</p>
+<p>数据库。</p>
+<p>网络。</p>
+<p>封面：</p>
+<p>极简。</p>
+<p>专业。</p>
+<hr>
+<h1>我最推荐你研究的颜色</h1>
+<p>如果让我总结 YouTube 高质量科技频道。</p>
+<p>他们几乎都有共同特点：</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="背景">背景<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E8%83%8C%E6%99%AF" class="hash-link" aria-label="Direct link to 背景" title="Direct link to 背景" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">深蓝</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">深灰</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">黑色</span><br></span></code></pre></div></div>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主色">主色<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E4%B8%BB%E8%89%B2" class="hash-link" aria-label="Direct link to 主色" title="Direct link to 主色" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">白色</span><br></span></code></pre></div></div>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="点缀">点缀<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E7%82%B9%E7%BC%80" class="hash-link" aria-label="Direct link to 点缀" title="Direct link to 点缀" translate="no">​</a></h3>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">科技青</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">蓝色</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">绿色</span><br></span></code></pre></div></div>
+<p>很少：</p>
+<p>红色。</p>
+<p>黄色。</p>
+<p>紫色。</p>
+<p>大面积出现。</p>
+<hr>
+<h1>我认为你的频道应该走哪种风格？</h1>
+<p>结合你：</p>
+<p>村长IP</p>
+<p>计算机底层</p>
+<p>零基础</p>
+<p>我建议：</p>
+<p>不要学：</p>
+<p>Fireship。</p>
+<p>因为：</p>
+<p>太酷。</p>
+<p>太快。</p>
+<p>太程序员。</p>
+<hr>
+<p>不要学：</p>
+<p>Computerphile。</p>
+<p>因为：</p>
+<p>太学术。</p>
+<hr>
+<p>我建议：</p>
+<p><strong>50% Branch Education + 30% Veritasium + 20% Fireship</strong></p>
+<p>为什么？</p>
+<p>因为：</p>
+<p>你的定位其实不是：</p>
+<p>教程序员。</p>
+<p>而是：</p>
+<p>帮普通人建立计算机世界观。</p>
+<p>这更像：</p>
+<p>纪录片。</p>
+<p>而不是：</p>
+<p>教程。</p>
+<hr>
+<h1>如果让我给《秒懂计算机》设计一套视觉规范</h1>
+<p>我会采用：</p>
+<table><thead><tr><th>元素</th><th>推荐</th></tr></thead><tbody><tr><td>背景</td><td>深蓝渐变（接近夜空）</td></tr><tr><td>光效</td><td>科技青发光线条</td></tr><tr><td>字体</td><td>白色粗体</td></tr><tr><td>关键词</td><td>科技青</td></tr><tr><td>品牌色</td><td>保留你的绿色作为 Logo 或小面积强调</td></tr><tr><td>人物</td><td>村长 IP 占画面约 30%，保持统一形象</td></tr><tr><td>背景元素</td><td>CPU、芯片、PCB 电路、二进制数字、网格，而不是教室或黑板</td></tr></tbody></table>
+<p>这样的封面既能和你现有的 <strong>《村长讲 C#》</strong> 做出区分，又能建立《秒懂计算机》的独立品牌：<strong>一眼看上去就是科技科普，而不是传统编程教学。</strong></p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="designcoding" term="designcoding"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[YouTube Channels Computer]]></title>
+        <id>https://buhaoqi.github.io/blog/youtube-channels-computer</id>
+        <link href="https://buhaoqi.github.io/blog/youtube-channels-computer"/>
+        <updated>2026-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[油管编程频道 TOP20]]></summary>
+        <content type="html"><![CDATA[<p>油管编程频道 TOP20</p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/UxydrvqRDnyblwtiLOoozd_bHoPZ04ch8dwDbYJXRzv6QnlQ2_AuEx6NVrxnoeEy6P1ud1vDysImoerBVnGkTeyB0Fi57GQtLU3HECYkkjeWj6p_r4tA0friirj7VSAeTG9p4bUG3sRbsga6hpJL6TvNpQCZcdxsWgSw4AcCeNa02Ay7k0L__ahlxKcmyC5a?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/9XFaeXdJ1I5z-qw2Eo7lEZwutF6AIzYsRI88zdh8u-lXBEOjQkpGR9vQ5V3_70NLafOkzOjagShgGPXaKum2nAuXSpO_Ki2L50mWXu1nE-d8aD69GiAQDwzhCqa1K4fo--ngOzS1CesBYkkZ69qMz4XknxqGPk0ANm_HHTwVc3SDxry4v514EpHLxTJJWO2y?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://images.openai.com/static-rsc-4/Dwrn5BAqXoj9qAnr6EWq4BEhZOweACrCJS_5sSLFeJ8cm9VmGTlnRR1fP0gSEN1pvuE9lGWMyeZf355-joW16ZA9qfCvl-c4aj5GnU904OTyJdNsfR6k8l-9-ZMtb03WMdxlXvr4hJWXY6ov1gzgus22M3T6wuCTFfIu8a3Gteknw82L-RFmylE6x0Dbb2F4?purpose=fullsize" alt="Image" class="img_ev3q"></p>
+<p>ByteByteGo 的视频动效风格非常有代表性：<strong>不是传统动画片，而是“技术图解动画（motion infographic）”</strong>。</p>
+<p>它的核心思路是：</p>
+<p><strong>先设计一张高质量技术架构图，再让图里的元素按照讲解逻辑运动起来。</strong></p>
+<p>这也是为什么它看起来专业、清晰，而且适合讲复杂计算机知识。</p>
+<hr>
+<ol>
+<li class="">动效类型：二维信息图动画（Motion Graphics）</li>
+</ol>
+<p>ByteByteGo 主要不是 3D 建模，而是：</p>
+<ul>
+<li class="">图标</li>
+<li class="">方框</li>
+<li class="">箭头</li>
+<li class="">数据流</li>
+<li class="">文字标签</li>
+<li class="">简单角色</li>
+</ul>
+<p>组成一个动态系统。</p>
+<p>例如讲：</p>
+<p>"用户请求 → API Gateway → 服务 → 数据库"</p>
+<p>静态：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">User</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">API Gateway</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Service</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Database</span><br></span></code></pre></div></div>
+<p>动态：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">User</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  |  request</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">API Gateway</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  |  forward</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Service</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  | query</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Database</span><br></span></code></pre></div></div>
+<p>通过：</p>
+<ul>
+<li class="">箭头移动</li>
+<li class="">高亮</li>
+<li class="">缩放</li>
+<li class="">淡入淡出</li>
+</ul>
+<p>让观众理解数据流。</p>
+<hr>
+<h1>2. 常用制作软件</h1>
+<p>这类视频一般会使用：</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adobe-after-effectsae">Adobe After Effects（AE）★★★★★<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#adobe-after-effectsae" class="hash-link" aria-label="Direct link to Adobe After Effects（AE）★★★★★" title="Direct link to Adobe After Effects（AE）★★★★★" translate="no">​</a></h2>
+<p>最核心。</p>
+<p>负责：</p>
+<ul>
+<li class="">文字动画</li>
+<li class="">路径动画</li>
+<li class="">图标移动</li>
+<li class="">镜头推进</li>
+<li class="">转场</li>
+</ul>
+<p>例如：</p>
+<p>一个数据库圆柱：</p>
+<p>先出现：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">   ______</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  /      \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> |        |</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  \______/</span><br></span></code></pre></div></div>
+<p>然后：</p>
+<p>数据块从 API 飘进去。</p>
+<p>这种就是 AE 做的。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adobe-illustrator--figma">Adobe Illustrator / Figma<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#adobe-illustrator--figma" class="hash-link" aria-label="Direct link to Adobe Illustrator / Figma" title="Direct link to Adobe Illustrator / Figma" translate="no">​</a></h2>
+<p>负责：</p>
+<p>制作静态素材。</p>
+<p>比如：</p>
+<ul>
+<li class="">服务器图标</li>
+<li class="">云</li>
+<li class="">数据库</li>
+<li class="">用户头像</li>
+<li class="">网络节点</li>
+</ul>
+<p>通常：</p>
+<p>Figma 设计 → SVG 导出 → AE 动画。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lottie可能使用">Lottie（可能使用）<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#lottie%E5%8F%AF%E8%83%BD%E4%BD%BF%E7%94%A8" class="hash-link" aria-label="Direct link to Lottie（可能使用）" title="Direct link to Lottie（可能使用）" translate="no">​</a></h2>
+<p>很多互联网产品动画会使用：</p>
+<ul>
+<li class="">After Effects</li>
+<li class="">Bodymovin</li>
+<li class="">Lottie</li>
+</ul>
+<p>把动画导出成网页可用格式。</p>
+<hr>
+<h1>3. 它的视觉风格为什么高级？</h1>
+<p>关键不是软件。</p>
+<p>而是设计原则。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则1颜色极少">原则1：颜色极少<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%991%E9%A2%9C%E8%89%B2%E6%9E%81%E5%B0%91" class="hash-link" aria-label="Direct link to 原则1：颜色极少" title="Direct link to 原则1：颜色极少" translate="no">​</a></h2>
+<p>通常：</p>
+<p>背景：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">白色 / 深蓝 / 浅灰</span><br></span></code></pre></div></div>
+<p>主体：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">蓝色</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">绿色</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">橙色</span><br></span></code></pre></div></div>
+<p>不会五颜六色。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则2一个画面只表达一个关系">原则2：一个画面只表达一个关系<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%992%E4%B8%80%E4%B8%AA%E7%94%BB%E9%9D%A2%E5%8F%AA%E8%A1%A8%E8%BE%BE%E4%B8%80%E4%B8%AA%E5%85%B3%E7%B3%BB" class="hash-link" aria-label="Direct link to 原则2：一个画面只表达一个关系" title="Direct link to 原则2：一个画面只表达一个关系" translate="no">​</a></h2>
+<p>例如：</p>
+<p>讲缓存：</p>
+<p>不会同时出现：</p>
+<p>CPU</p>
+<p>内存</p>
+<p>硬盘</p>
+<p>网络</p>
+<p>用户</p>
+<p>全部动画。</p>
+<p>而是：</p>
+<p>第一步：</p>
+<p>CPU 请求数据</p>
+<p>↓</p>
+<p>第二步：</p>
+<p>Cache 命中</p>
+<p>↓</p>
+<p>第三步：</p>
+<p>返回数据</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则3动画服务于理解">原则3：动画服务于理解<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%993%E5%8A%A8%E7%94%BB%E6%9C%8D%E5%8A%A1%E4%BA%8E%E7%90%86%E8%A7%A3" class="hash-link" aria-label="Direct link to 原则3：动画服务于理解" title="Direct link to 原则3：动画服务于理解" translate="no">​</a></h2>
+<p>不是：</p>
+<p>为了炫。</p>
+<p>而是：</p>
+<p>告诉你：</p>
+<p>"东西从哪里来，到哪里去。"</p>
+<p>所以大量使用：</p>
+<ul>
+<li class="">移动</li>
+<li class="">连线</li>
+<li class="">聚焦</li>
+<li class="">放大</li>
+</ul>
+<hr>
+<h1>4. 如果你做《秒懂计算机》，非常适合借鉴</h1>
+<p>你的课程方向：</p>
+<ul>
+<li class="">进制</li>
+<li class="">CPU</li>
+<li class="">内存</li>
+<li class="">编译器</li>
+<li class="">CLR</li>
+<li class="">操作系统</li>
+</ul>
+<p>其实非常适合这种风格。</p>
+<p>例如：</p>
+<p>讲：</p>
+<p>"变量去哪了？"</p>
+<p>可以做：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">C#代码</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">int age = 18;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Compiler</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">IL代码</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">JIT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">CPU指令</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">       ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Memory</span><br></span></code></pre></div></div>
+<p>每一步出现动画。</p>
+<p>这就是 ByteByteGo 的思路。</p>
+<hr>
+<h1>5. 我建议你的制作路线（适合个人创作者）</h1>
+<p>不用一开始追求复杂。</p>
+<p>推荐：</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一阶段">第一阶段<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="Direct link to 第一阶段" title="Direct link to 第一阶段" translate="no">​</a></h2>
+<p>工具：</p>
+<ul>
+<li class="">Figma</li>
+<li class="">After Effects</li>
+</ul>
+<p>流程：</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Figma设计图</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">导入AE</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">添加移动、缩放、路径动画</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">配音</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">剪辑</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二阶段">第二阶段<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="Direct link to 第二阶段" title="Direct link to 第二阶段" translate="no">​</a></h2>
+<p>加入：</p>
+<ul>
+<li class="">3D芯片模型</li>
+<li class="">光效</li>
+<li class="">粒子</li>
+</ul>
+<p>工具：</p>
+<ul>
+<li class="">Blender</li>
+<li class="">Cinema 4D</li>
+</ul>
+<hr>
+<h1>如果按照你的“村长讲 C#”基础，我觉得《秒懂计算机》最适合的风格：</h1>
+<p>不是纯 ByteByteGo。</p>
+<p>而是：</p>
+<p>**ByteByteGo（技术图解）</p>
+<ul>
+<li class="">Branch Education（科技视觉）</li>
+<li class="">村长 IP（人格化教学）**</li>
+</ul>
+<p>例如：</p>
+<p>画面：</p>
+<p>左边：</p>
+<p>村长讲解</p>
+<p>右边：</p>
+<p>动态计算机结构图</p>
+<p>中间：</p>
+<p>数据流动画</p>
+<p>这样既专业，又不会像大学公开课那么冷。</p>
+<p>其实你现在做的“进制三要素”“变量内存原理”，天然适合这种动效形式。你已经有内容体系，只差建立一套统一的视觉动画语言。</p>]]></content>
+        <author>
+            <name>cun zhang</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="design" term="design"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[vocabulary console]]></title>
         <id>https://buhaoqi.github.io/blog/vocabulary-console</id>
         <link href="https://buhaoqi.github.io/blog/vocabulary-console"/>
         <updated>2026-05-09T00:00:00.000Z</updated>
-        <content type="html"><![CDATA[<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">This word   has two pronunciations </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">one for the verb one for the noun.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Let's go through them.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">the first one          console.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">It's a verb meaning that to comfort someone who is  sad or upset.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">And the second one is CONSOLE. A Console is a panel that is used to operate a machine. most commonly you've heard of a games console.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">For example nintendo switch</span><br></span></code></pre></div></div>]]></content>
+        <summary type="html"><![CDATA[测试]]></summary>
+        <content type="html"><![CDATA[<p>测试</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">This word   has two pronunciations </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">one for the verb one for the noun.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Let's go through them.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">the first one          console.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">It's a verb meaning that to comfort someone who is  sad or upset.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">And the second one is CONSOLE. A Console is a panel that is used to operate a machine. most commonly you've heard of a games console.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">For example nintendo switch</span><br></span></code></pre></div></div>]]></content>
         <author>
             <name>Yangshun Tay</name>
             <uri>https://linkedin.com/in/yangshun</uri>
         </author>
-        <category label="vocabulary study" term="vocabulary study"/>
+        <category label="vocabulary" term="vocabulary"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[高点击封面标题库]]></title>
