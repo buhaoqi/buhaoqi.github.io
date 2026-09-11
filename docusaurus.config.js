@@ -207,6 +207,15 @@ const config = {
             // 可选：设置默认打开的文档
             docId: 'network-basics/index',
           },
+          // 4. 计算机网络基础 - 靠左
+          {
+            type: 'docSidebar',
+            sidebarId: 'ninthitSidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '九类信息技术',
+            // 可选：设置默认打开的文档
+            docId: 'ninthit/index',
+          },
           // 4. 网址导航 (doc类型) - 靠左
           {
             type: 'doc',

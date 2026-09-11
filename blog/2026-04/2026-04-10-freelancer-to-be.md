@@ -1,5 +1,5 @@
 ---
-slug: control-flow
+slug: business-feasibilit
 title: 市场可行性分析
 authors: [slorber, yangshun]
 tags: [hola, docusaurus]

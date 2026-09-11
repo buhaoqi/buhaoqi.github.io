@@ -1,5 +1,5 @@
 ---
-slug: control-flow
+slug: desing-cover
 title: 高点击封面标题库
 authors: [slorber, yangshun]
 tags: [hola, docusaurus]
