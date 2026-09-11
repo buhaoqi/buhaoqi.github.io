@@ -1,0 +1,1761 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-computer-basics/proj2/task4" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">任务四 微型计算机的硬件系统 | 河北对口高考计算机专业</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" name="twitter:image" content="https://buhaoqi.github.io/img/logo-orange-social.png"><meta data-rh="true" property="og:url" content="https://buhaoqi.github.io/docs/computer-basics/proj2/task4"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="任务四 微型计算机的硬件系统 | 河北对口高考计算机专业"><meta data-rh="true" name="description" content="知识点"><meta data-rh="true" property="og:description" content="知识点"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://buhaoqi.github.io/docs/computer-basics/proj2/task4"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/proj2/task4" hreflang="en"><link data-rh="true" rel="alternate" href="https://buhaoqi.github.io/docs/computer-basics/proj2/task4" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"任务四 微型计算机的硬件系统","item":"https://buhaoqi.github.io/docs/computer-basics/proj2/task4"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="河北对口高考计算机专业 RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="河北对口高考计算机专业 Atom Feed"><link rel="stylesheet" href="/assets/css/styles.761b036b.css">
+<script src="/assets/js/runtime~main.c58986a9.js" defer="defer"></script>
+<script src="/assets/js/main.91394bbe.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.png" alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid="csharp/intro" href="/docs/csharp/intro">算法与程序设计</a><a class="navbar__item navbar__link" docid="csharptutorials/index" href="/docs/csharp-tutorials/">C#课件</a><a class="navbar__item navbar__link" docid="mysql/intro" href="/docs/mysql/intro">MySQL教程</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" docid="computer-basics/index" href="/docs/computer-basics/">计算机应用基础</a><a class="navbar__item navbar__link" docid="network-basics/index" href="/docs/ninthit/">计算机网络基础</a><a class="navbar__item navbar__link" docid="ninthit/index" href="/docs/ninthit/">九类信息技术</a><a class="navbar__item navbar__link" href="/docs/bookmarks/intro">网址导航</a><a class="navbar__item navbar__link" href="/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://buhaoqi.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/computer-basics/"><span title="考试大纲" class="linkLabel_WmDU">考试大纲</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/proj1/"><span title="项目一 认识计算机" class="categoryLinkLabel_W154">项目一 认识计算机</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj1/"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj1/task1"><span title="任务一 计算机的发展史" class="linkLabel_WmDU">任务一 计算机的发展史</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj1/task2"><span title="任务二 计算机的特点和分类" class="linkLabel_WmDU">任务二 计算机的特点和分类</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj1/task3"><span title="任务三 计算机的应用" class="linkLabel_WmDU">任务三 计算机的应用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj1/task4"><span title="任务四 计算机的前沿技术" class="linkLabel_WmDU">任务四 计算机的前沿技术</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/computer-basics/proj2/"><span title="项目二 计算机系统" class="categoryLinkLabel_W154">项目二 计算机系统</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj2/"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj2/task1"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj2/task2"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj2/task3"><span title="任务三 计算机的工作原理" class="linkLabel_WmDU">任务三 计算机的工作原理</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/computer-basics/proj2/task4"><span title="任务四 微型计算机的硬件系统" class="linkLabel_WmDU">任务四 微型计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj2/task5"><span title="任务五 微型计算机的主要性能指标" class="linkLabel_WmDU">任务五 微型计算机的主要性能指标</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/proj3/"><span title="项目三 信息在计算机中的表示" class="categoryLinkLabel_W154">项目三 信息在计算机中的表示</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj3/"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj3/task1"><span title="任务一 进位计数制" class="linkLabel_WmDU">任务一 进位计数制</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj3/task2"><span title="任务二 数的编码" class="linkLabel_WmDU">任务二 数的编码</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj3/task3"><span title="任务三 字符编码" class="linkLabel_WmDU">任务三 字符编码</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/proj4/"><span title="项目四 计算机维护" class="categoryLinkLabel_W154">项目四 计算机维护</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj4/"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj4/task1"><span title="任务一 计算机病毒防范" class="linkLabel_WmDU">任务一 计算机病毒防范</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj4/task2"><span title="任务二 计算机安全防护和适用" class="linkLabel_WmDU">任务二 计算机安全防护和适用</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj4/task3"><span title="任务二 信息安全" class="linkLabel_WmDU">任务二 信息安全</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/docs/computer-basics/proj5/"><span title="项目五 中英文录入" class="categoryLinkLabel_W154">项目五 中英文录入</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj5/"><span title="概述" class="linkLabel_WmDU">概述</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj5/task1"><span title="任务一 计算机的硬件系统" class="linkLabel_WmDU">任务一 计算机的硬件系统</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/computer-basics/proj5/task2"><span title="任务二 计算机的软件系统" class="linkLabel_WmDU">任务二 计算机的软件系统</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">项目二 计算机系统</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">任务四 微型计算机的硬件系统</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>任务四 微型计算机的硬件系统</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="知识点">知识点<a href="#知识点" class="hash-link" aria-label="Direct link to 知识点" title="Direct link to 知识点" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="任务描述">任务描述<a href="#任务描述" class="hash-link" aria-label="Direct link to 任务描述" title="Direct link to 任务描述" translate="no">​</a></h3>
+<ul>
+<li class="">小李成为计算机专业学生，父母买了一台联想品牌台式机。</li>
+<li class="">&quot;四大件&quot;：主机、显示器、键盘和鼠标。</li>
+<li class="">计算机硬件系统五大部分如何成为这&quot;四大件&quot;。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="预备知识">预备知识<a href="#预备知识" class="hash-link" aria-label="Direct link to 预备知识" title="Direct link to 预备知识" translate="no">​</a></h3>
+<ul>
+<li class="">微型计算机是由<strong>超大规模集成电路</strong>组成、体积较小的电子计算机。</li>
+<li class="">生活中接触到的计算机一般指微型计算机，简称&quot;微型机&quot;&quot;微机&quot;&quot;个人计算机&quot;&quot;PC&quot;等。</li>
+<li class="">微型计算机的硬件分为<strong>主机</strong>和<strong>外部设备</strong>：<!-- -->
+<ul>
+<li class=""><strong>主机</strong>包括 CPU 和内存；</li>
+<li class=""><strong>外部设备</strong>包括外存和输入输出设备。</li>
+</ul>
+</li>
+<li class="">主机的各部件之间通过<strong>总线</strong>相连；外部设备则通过相应的<strong>接口电路</strong>再与总线相连。</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="微型计算机硬件组成树形图">微型计算机硬件组成（树形图）<a href="#微型计算机硬件组成树形图" class="hash-link" aria-label="Direct link to 微型计算机硬件组成（树形图）" title="Direct link to 微型计算机硬件组成（树形图）" translate="no">​</a></h3>
+<p>图2-4-1　</p>
+<ul>
+<li class="">微型计算机硬件分为：<!-- -->
+<ul>
+<li class=""><strong>主机</strong>：<!-- -->
+<ul>
+<li class="">CPU：控制器、运算器</li>
+<li class="">内存：RAM、ROM</li>
+</ul>
+</li>
+<li class=""><strong>外部设备</strong>：<!-- -->
+<ul>
+<li class="">外存：硬盘、光盘、U盘等</li>
+<li class="">输入设备：键盘、鼠标、扫描仪等</li>
+<li class="">输出设备：显示器、打印机、绘图仪等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li class="">微型计算机硬件中最核心的是<strong>微处理器</strong>。</li>
+<li class=""><strong>1971年</strong>，世界上第一片4位微处理器<strong>4004</strong>在<strong>Intel</strong>公司诞生，由此组成了第一台微型计算机<strong>MCS-4</strong>，标志着计算机进入了微型计算机时代。</li>
+<li class=""><strong>1981年</strong>，<strong>IBM</strong>公司推出了第一台个人计算机，简称<strong>PC</strong>（Personal Computer）。</li>
+<li class="">微型计算机的发展史实际上就是<strong>微处理器</strong>的发展史。</li>
+<li class="">从诞生以来，微型计算机经历了<strong>4位、8位、16位、32位和64位</strong>微处理器的发展阶段。</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一主机">一、主机<a href="#一主机" class="hash-link" aria-label="Direct link to 一、主机" title="Direct link to 一、主机" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-中央处理器cpu">1. 中央处理器（CPU）<a href="#1-中央处理器cpu" class="hash-link" aria-label="Direct link to 1. 中央处理器（CPU）" title="Direct link to 1. 中央处理器（CPU）" translate="no">​</a></h4>
+<ul>
+<li class="">中央处理器是微型计算机的核心部件，它是包含有<strong>运算器</strong>和<strong>控制器</strong>的一块大规模集成电路芯片，写作 <strong>CPU</strong>，俗称<strong>微处理器</strong>。</li>
+<li class="">一台计算机所使用的CPU基本决定这台计算机的性能和档次。</li>
+<li class="">作为计算机系统的运算和控制核心，是信息处理、程序运行的<strong>最终执行单元</strong>。</li>
+<li class="">按照处理信息的字长，CPU可分为：4位、8位、16位、32位、64位微处理器。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="1cpu发展的主要阶段六个阶段">（1）CPU发展的主要阶段（六个阶段）<a href="#1cpu发展的主要阶段六个阶段" class="hash-link" aria-label="Direct link to （1）CPU发展的主要阶段（六个阶段）" title="Direct link to （1）CPU发展的主要阶段（六个阶段）" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>第一阶段（1971—1973年）</strong>：4位和8位低档微处理器时代，代表产品是 Intel 4004。1971年，Intel生产的4004微处理器将运算器和控制器集成在一个芯片上，标志着CPU的诞生。</li>
+<li class=""><strong>第二阶段（1974—1977年）</strong>：8位中高档微处理器时代，代表产品是 Intel 8080，此时指令系统已经比较完善。</li>
+<li class=""><strong>第三阶段（1978—1984年）</strong>：16位微处理器时代，代表产品是 Intel 8086，指令系统已经比较成熟。</li>
+<li class=""><strong>第四阶段（1985—1992年）</strong>：32位微处理器时代，代表产品是 Intel 80386，已经可以胜任多任务、多用户的作业。</li>
+<li class=""><strong>第五阶段（1993—2005年）</strong>：奔腾系列微处理器的时代。</li>
+<li class=""><strong>第六阶段（2005年后）</strong>：处理器逐渐向更多核心、更高并行度发展。典型代表有英特尔酷睿系列处理器和AMD锐龙系列处理器。</li>
+<li class="">现代处理器进一步引入了并行化、多核化、虚拟化以及远程管理系统等功能。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="2cpu的主要生产商">（2）CPU的主要生产商<a href="#2cpu的主要生产商" class="hash-link" aria-label="Direct link to （2）CPU的主要生产商" title="Direct link to （2）CPU的主要生产商" translate="no">​</a></h5>
+<ul>
+<li class="">
+<p>目前CPU厂商主要有<strong>英特尔（Intel）公司</strong>和<strong>AMD公司</strong>。</p>
+</li>
+<li class="">
+<p><strong>英特尔公司CPU型号</strong>：</p>
+<ul>
+<li class="">奔腾双核、赛扬双核：低端处理器，只能满足上网、办公、看电影日常基本使用；</li>
+<li class="">酷睿i3：中端处理器，可理解为精简版的酷睿i5，可以玩网络游戏或大型单机游戏；</li>
+<li class="">酷睿i5：高端处理器，可以玩大型网络游戏、大型单机游戏，并可实现较高的游戏效果；</li>
+<li class="">酷睿i7：发烧级处理器，常用网络应用都可以，还能最高效果运行发烧级大型游戏；</li>
+<li class="">酷睿i9：已全新推出。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>AMD公司CPU型号</strong>：</p>
+<ul>
+<li class="">闪龙系列：单核心、双核心（低端），只能满足上网、办公、看电影；</li>
+<li class="">速龙系列：双核心、三核心、四核心、多核心（中端），可玩网络游戏或大型单机游戏；</li>
+<li class="">羿龙系列：双核心、三核心、四核心、六核心（高端），发烧级处理器。</li>
+</ul>
+</li>
+<li class="">
+<p>我国具有自主知识产权的处理器是**&quot;龙芯&quot;**系列芯片。</p>
+</li>
+<li class="">
+<p>&quot;龙芯&quot;系列芯片由中国科学院中科技术有限公司设计研制。</p>
+</li>
+<li class="">
+<p>产品包括：龙芯1号（小CPU）、龙芯2号（中CPU）、龙芯3号（大CPU）三个系列，此外还包括龙芯7A1000桥片。</p>
+</li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-内存手写笔记主存储器">2. 内存（手写笔记：主存储器）<a href="#2-内存手写笔记主存储器" class="hash-link" aria-label="Direct link to 2. 内存（手写笔记：主存储器）" title="Direct link to 2. 内存（手写笔记：主存储器）" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p>内存指主板上的存储部件，也就是<strong>内存条</strong>，一般由<strong>半导体器件</strong>构成。</p>
+</li>
+<li class="">
+<p>是 CPU 直接与之沟通，并用其存储数据的部件，以及与硬盘等外部存储器交换的数据。</p>
+</li>
+<li class="">
+<p>存放当前正在使用（即执行中）的数据和程序。</p>
+</li>
+<li class="">
+<p>物理实质：一组或多组具备数据输入输出和数据存储功能的集成电路。</p>
+</li>
+<li class="">
+<p>内存只用于<strong>暂时存放</strong>程序和数据，一旦关闭电源或发生断电，其中的程序和数据就会<strong>丢失</strong>。</p>
+</li>
+<li class="">
+<p>计算机的内存容量通常是指**随机存储器（RAM）**的容量，是内存条的关键性参数。</p>
+</li>
+<li class="">
+<p>内存条以前有256MB、512MB、1G、2G、4G等容量级别；目前8G、16G已成为家庭微型机主流配置，也有32G、64G甚至更高。</p>
+</li>
+<li class="">
+<p>内存容量相对于外存较小，但存取速度快，其速度在 <strong>ns</strong> 级。</p>
+</li>
+<li class="">
+<p>微机内存类型主要有 <strong>DDR、DDR2、DDR3、DDR4</strong> 等，目前主流内存类型是 <strong>DDR4</strong>。</p>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二外部设备">二、外部设备<a href="#二外部设备" class="hash-link" aria-label="Direct link to 二、外部设备" title="Direct link to 二、外部设备" translate="no">​</a></h3>
+<ul>
+<li class="">微型机的外部设备主要包括<strong>外存储器、输入设备、输出设备</strong>三部分。</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="一外存储器简称外存或辅存">（一）外存储器（简称外存或辅存）<a href="#一外存储器简称外存或辅存" class="hash-link" aria-label="Direct link to （一）外存储器（简称外存或辅存）" title="Direct link to （一）外存储器（简称外存或辅存）" translate="no">​</a></h4>
+<ul>
+<li class="">最常见的是硬盘、光盘、U盘、移动硬盘等，又称<strong>辅助存储器</strong>。</li>
+<li class="">一般由磁性材料或光存储材料构成，可以<strong>永久地保存信息</strong>。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-硬盘">1. 硬盘<a href="#1-硬盘" class="hash-link" aria-label="Direct link to 1. 硬盘" title="Direct link to 1. 硬盘" translate="no">​</a></h5>
+<ul>
+<li class="">硬盘是微型机最基础的外部存储器。</li>
+<li class="">由硬质合金材料构成的多张盘片组成，硬盘与硬盘驱动器作为一个整体被密封在一个金属盒内，合称为硬盘，通常固定在主机箱内。</li>
+<li class="">硬盘和U盘相比具有<strong>使用寿命长、容量大、存取速度快</strong>等优点。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="1硬盘主流品牌">（1）硬盘主流品牌<a href="#1硬盘主流品牌" class="hash-link" aria-label="Direct link to （1）硬盘主流品牌" title="Direct link to （1）硬盘主流品牌" translate="no">​</a></h6>
+<ul>
+<li class="">希捷、西部数据、东芝、三星等。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="2硬盘的种类">（2）硬盘的种类<a href="#2硬盘的种类" class="hash-link" aria-label="Direct link to （2）硬盘的种类" title="Direct link to （2）硬盘的种类" translate="no">​</a></h6>
+<ul>
+<li class="">按结构分为：<strong>固态硬盘（SSD）</strong>、<strong>机械硬盘（HDD）</strong>。</li>
+<li class=""><strong>固态硬盘</strong>：采用<strong>闪存颗粒</strong>存储，具有防震抗摔性好、功耗小、重量轻、速度快、无噪声、容量低、价格高等特点，主要应用于高端，如今已开始普及。</li>
+<li class=""><strong>机械硬盘</strong>：采用<strong>磁性碟片</strong>存储，主要由盘片、磁头、磁头控制器、接口、缓存等几部分组成。目前仍是主要的微机硬盘。和固态硬盘相比速度慢一点，但容量大、价格便宜。</li>
+<li class="">硬盘按尺寸通常分为<strong>2.5英寸</strong>和<strong>3.5英寸</strong>两种：<!-- -->
+<ul>
+<li class="">2.5英寸：适用于移动设备和笔记本电脑等小型设备；</li>
+<li class="">3.5英寸：常用于需要大容量存储和高速读写的场景，如数据中心和企业服务器。</li>
+</ul>
+</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="3硬盘的物理结构">（3）硬盘的物理结构<a href="#3硬盘的物理结构" class="hash-link" aria-label="Direct link to （3）硬盘的物理结构" title="Direct link to （3）硬盘的物理结构" translate="no">​</a></h6>
+<ul>
+<li class=""><strong>磁头</strong>：硬盘有几面盘片就会有几个磁头。磁头是盘片上读写合一的电磁感觉式磁头，是硬盘中最昂贵的部件，也是硬盘技术中最重要和最关键的一环。</li>
+<li class=""><strong>磁道</strong>：当磁盘旋转时，磁头沿半径划出一个个圆形轨迹，这些同心圆轨迹就叫作磁道。磁道肉眼看不到，是盘面上以特殊方式磁化的一些磁化区。一张1.44MB的3.5英寸软盘一面有80个磁道，硬盘上磁道密度远大于此。</li>
+<li class=""><strong>扇区</strong>：磁盘上每个磁道被等分为若干个弧段，便是扇区。每个扇区可存放<strong>512个字节</strong>的信息。磁盘读写以扇区为单位。1.44MB 3.5英寸软盘每个磁道分为18个扇区。</li>
+<li class=""><strong>柱面</strong>：硬盘由重叠的一组盘片构成，每个盘面磁道数目相等，从外缘&quot;0&quot;开始编号，具有相同编号的磁道形成一个圆柱，称为柱面。柱面数与一个盘面上的磁道数相等。</li>
+<li class=""><strong>硬盘容量 = 磁道数（或柱面数）× 磁头数（或盘片数）× 扇区数 × 512B</strong></li>
+<li class="">硬盘结构示意图部件：主轴、盘片、磁头组件、磁头驱动机构、接口。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="4硬盘的基本参数手写笔记一字节8位1kb1024">（4）硬盘的基本参数（手写笔记：一字节=8位，1KB=1024）<a href="#4硬盘的基本参数手写笔记一字节8位1kb1024" class="hash-link" aria-label="Direct link to （4）硬盘的基本参数（手写笔记：一字节=8位，1KB=1024）" title="Direct link to （4）硬盘的基本参数（手写笔记：一字节=8位，1KB=1024）" translate="no">​</a></h6>
+<ul>
+<li class=""><strong>容量</strong>：使用字节（B）、千字节（KB）、兆字节（MB）、吉字节（GB）、太字节（TB）衡量。目前市场上主流微机硬盘容量在1—12TB。</li>
+<li class=""><strong>转速</strong>：硬盘盘片一分钟内所能完成的最大转数。单位 <strong>rpm</strong>（转/每分钟）。rpm值越大，内部传输率越快，访问时间越短。家用普通硬盘转速一般有 <strong>5400rpm、7200rpm</strong> 几种。</li>
+<li class=""><strong>平均访问时间</strong>：磁头从起始位置到达目标磁道位置，并从目标磁道上找到要读写的数据扇区所需的时间。体现硬盘的读写速度。</li>
+<li class=""><strong>传输速率</strong>：硬盘读写数据的速度，单位为<strong>兆字节每秒（MB/s）</strong>。</li>
+<li class=""><strong>缓存</strong>：硬盘控制器上的一块内存芯片，具有极快的存取速度，是硬盘内部存储和外界接口之间的缓冲器。缓存大小与速度直接关系到硬盘传输速度。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="5硬盘接口">（5）硬盘接口<a href="#5硬盘接口" class="hash-link" aria-label="Direct link to （5）硬盘接口" title="Direct link to （5）硬盘接口" translate="no">​</a></h6>
+<ul>
+<li class="">硬盘与主机间的连接部件，作用是在硬盘缓存和主机内存之间传输数据。</li>
+<li class="">主要为 <strong>IDE接口、SATA接口、SCSI接口、光纤通道</strong>。</li>
+<li class="">微型机现主要是 <strong>SATA接口</strong>。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="6硬盘格式化">（6）硬盘格式化<a href="#6硬盘格式化" class="hash-link" aria-label="Direct link to （6）硬盘格式化" title="Direct link to （6）硬盘格式化" translate="no">​</a></h6>
+<ul>
+<li class="">一张新的磁盘不能存储数据，必须格式化。</li>
+<li class="">格式化分为<strong>低级格式化</strong>和<strong>高级格式化</strong>两种：<!-- -->
+<ul>
+<li class="">低级格式化：物理级格式化，用于划分硬盘的磁柱面、建立扇区数和选择扇区间隔比。硬盘要先低级格式化才能高级格式化；刚出厂的硬盘已经过低级格式化，无须用户再进行。</li>
+<li class="">高级格式化：对硬盘各分区进行磁道格式化，在逻辑上划分磁道，同时清除硬盘数据、生成引导区信息、初始化FAT表、标注逻辑坏道等。一般重装系统时都是高级格式化。</li>
+</ul>
+</li>
+<li class="">一般新盘必须格式化；使用过的旧盘也可格式化，格式化后磁盘上全部数据将被删除。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="7硬盘使用注意事项">（7）硬盘使用注意事项<a href="#7硬盘使用注意事项" class="hash-link" aria-label="Direct link to （7）硬盘使用注意事项" title="Direct link to （7）硬盘使用注意事项" translate="no">​</a></h6>
+<ul>
+<li class="">硬盘工作时千万不要强行关掉电源，会导致物理损坏和数据丢失。</li>
+<li class="">关机后不要马上再开机，至少半分钟以后再打开。</li>
+<li class="">硬盘工作时尽量避免震荡，磁头与磁片距离非常近，剧烈震荡可能划伤磁片或损坏磁头。</li>
+<li class="">硬盘害怕灰尘。灰尘吸到电路板上会导致工作不稳定或内部零件损坏。</li>
+<li class="">硬盘温度过高或过低都会导致晶体振荡器时钟主频改变，造成电路元件失灵；温度过低会使空气中水分凝结在元件上导致短路。</li>
+<li class="">要定期整理硬盘以提高速度；但不要三天两头清理，会减少硬盘寿命。</li>
+<li class="">安装防毒软件，预防病毒破坏；发现病毒及时清除；尽量不要格式化硬盘。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-光盘">2. 光盘<a href="#2-光盘" class="hash-link" aria-label="Direct link to 2. 光盘" title="Direct link to 2. 光盘" translate="no">​</a></h5>
+<ul>
+<li class="">光盘是光盘存储器的简称，以**光学方式（激光）**进行读写信息的存储介质。</li>
+<li class="">信息保存时间长，读写速度比硬盘慢。</li>
+<li class="">按读写功能分为：<!-- -->
+<ul>
+<li class=""><strong>只读型（CD-ROM）</strong></li>
+<li class=""><strong>一次写入型（CD-R）</strong>：使用时允许写入一次，不能擦除，可以多次读出</li>
+<li class=""><strong>可重复写型（CD-RW）</strong>：允许用户重复改写和读出</li>
+</ul>
+</li>
+<li class="">由于U盘及移动硬盘广泛使用，微机中已很少使用光盘。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-u盘可移动存储器">3. U盘（可移动存储器）<a href="#3-u盘可移动存储器" class="hash-link" aria-label="Direct link to 3. U盘（可移动存储器）" title="Direct link to 3. U盘（可移动存储器）" translate="no">​</a></h5>
+<ul>
+<li class="">U盘是<strong>闪存</strong>的一种，因此也叫闪存盘。</li>
+<li class="">U盘与硬盘最大不同：不需物理驱动器，<strong>即插即用</strong>，存储容量远超软盘、光盘，极便于携带。</li>
+<li class="">通过 <strong>USB接口</strong>连到电脑主机后，可像普通硬盘一样进行格式化、拷贝、删除等操作。</li>
+<li class="">属于移动存储设备，用于备份数据。</li>
+<li class="">特点：小巧便于携带、存储容量大、安全性好、价格便宜。</li>
+<li class="">一般U盘容量有1G、2G、4G、8G、16G、32G、64G等。均用USB接口。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-移动硬盘">4. 移动硬盘<a href="#4-移动硬盘" class="hash-link" aria-label="Direct link to 4. 移动硬盘" title="Direct link to 4. 移动硬盘" translate="no">​</a></h5>
+<ul>
+<li class="">主要用于计算机之间交换数据或进行大量数据备份。</li>
+<li class="">目前主要采用 <strong>USB接口</strong>，可随时插上或拔除。</li>
+<li class="">特点：小巧而便于携带，容量大，实现&quot;海量&quot;存储，兼容性好，即插即用，速度快，体积小，质量小，安全可靠。</li>
+<li class="">容量从几十G到几百G，1TB、2TB、6TB甚至更大。</li>
+<li class="">使用注意：不要长时间使用；不要整理磁盘碎片；不要混用供电线；切忌摔打；不要在传输过程中实行热插拔；防止电磁、尘埃、水汽等外界干扰。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-云盘">5. 云盘<a href="#5-云盘" class="hash-link" aria-label="Direct link to 5. 云盘" title="Direct link to 5. 云盘" translate="no">​</a></h5>
+<ul>
+<li class="">云盘是互联网存储工具，是互联网云技术的产物。</li>
+<li class="">通过互联网为企业和个人提供信息的<strong>储存、读取、下载</strong>等服务。</li>
+<li class="">通过网络实现&quot;云&quot;，大量数据可永久存储。</li>
+<li class="">特点：安全稳定、海量存储。</li>
+<li class="">知名云盘服务商：百度云盘（百度网盘）、360云盘、金山快盘、阿里云、微云腾讯云等。</li>
+<li class="">云盘相对于传统实体磁盘更方便，用户不需要把实体磁盘带在身上。</li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="二输入设备">（二）输入设备<a href="#二输入设备" class="hash-link" aria-label="Direct link to （二）输入设备" title="Direct link to （二）输入设备" translate="no">​</a></h4>
+<ul>
+<li class="">输入设备是将程序和数据送到计算机中进行处理的外部设备。</li>
+<li class="">常用输入设备：键盘、鼠标、扫描仪、条形码阅读器、光学字符阅读器、触摸屏、手写笔、麦克风、数码相机、摄影机等。</li>
+<li class="">主要用于图形系统的数据输入设备：跟踪球、操纵杆、数字化仪、光笔等。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="1键盘">（1）键盘<a href="#1键盘" class="hash-link" aria-label="Direct link to （1）键盘" title="Direct link to （1）键盘" translate="no">​</a></h5>
+<ul>
+<li class="">键盘是计算机的基本输入设备，是人与计算机进行信息交流的主要工具。</li>
+<li class="">早先键盘接口多是 <strong>PS/2口（紫色口）</strong>，现在多是 <strong>USB接口</strong>。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="2鼠标">（2）鼠标<a href="#2鼠标" class="hash-link" aria-label="Direct link to （2）鼠标" title="Direct link to （2）鼠标" translate="no">​</a></h5>
+<ul>
+<li class="">根据工作原理分为：<strong>机械式、光电式、光机式</strong>。</li>
+<li class="">按连接方式分为：<strong>有线鼠标</strong>和<strong>无线鼠标</strong>。</li>
+<li class="">早先鼠标接口也是 <strong>PS/2口（浅绿色口）</strong>，现在也是 USB 接口。</li>
+<li class="">无线鼠标为适应大屏幕显示器、笔记本电脑而生产，采用电池无线遥控，接收范围在<strong>18米</strong>以内。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="3扫描仪">（3）扫描仪<a href="#3扫描仪" class="hash-link" aria-label="Direct link to （3）扫描仪" title="Direct link to （3）扫描仪" translate="no">​</a></h5>
+<ul>
+<li class="">扫描仪是继鼠标和键盘之后的第三大计算机输入设备。</li>
+<li class="">可将影像转换为计算机可以显示、编辑、存储和输出的数字格式，是功能很强的输入设备。</li>
+<li class="">早期主要用于向计算机输入图像；配合汉字自动识别软件也可输入汉字。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="4触摸屏">（4）触摸屏<a href="#4触摸屏" class="hash-link" aria-label="Direct link to （4）触摸屏" title="Direct link to （4）触摸屏" translate="no">​</a></h5>
+<ul>
+<li class="">触摸屏是一种交互输入设备，用户用手指或光笔触摸屏某位置即可控制计算机运行。</li>
+<li class="">特点：操作简单，使用灵活。</li>
+<li class="">应用：公共信息查询、工业控制、军事指挥、电子游戏、多媒体教学等。</li>
+<li class="">日常生活中：ATM自动取款机、银行大厅计算机、火车站取票机等都采用触摸屏。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="5手写和语音输入设备">（5）手写和语音输入设备<a href="#5手写和语音输入设备" class="hash-link" aria-label="Direct link to （5）手写和语音输入设备" title="Direct link to （5）手写和语音输入设备" translate="no">​</a></h5>
+<ul>
+<li class="">手写输入设备一般由<strong>书写板</strong>和<strong>输入笔</strong>组成。</li>
+<li class="">语音输入设备主要通过<strong>麦克风</strong>配合相应的语音识别软件来输入到计算机中。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="6rfid射频识别">（6）RFID射频识别<a href="#6rfid射频识别" class="hash-link" aria-label="Direct link to （6）RFID射频识别" title="Direct link to （6）RFID射频识别" translate="no">​</a></h5>
+<ul>
+<li class="">射频识别（RFID）是一种<strong>无线通信技术</strong>，可以通过无线电信号识别特定目标并读写相关数据，无需识别系统与特定目标之间建立机械或光学接触。</li>
+<li class="">应用广泛：高速收费路口的ETC业务、门禁系统、食品安全溯源等。</li>
+</ul>
+<p>我先查看这8张图片的内容，从输出设备开始提取。</p>
+<p>以下是从&quot;（三）输出设备&quot;开始的全部知识点逐行提取：</p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="三输出设备">（三）输出设备<a href="#三输出设备" class="hash-link" aria-label="Direct link to （三）输出设备" title="Direct link to （三）输出设备" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>输出设备的主要作用</strong>：把计算机处理信息的结果用人所能识别的形式表示出来。</li>
+<li class="">包括：显示设备、打印设备、语音输出设备、图像输出设备等。</li>
+<li class="">常用的有：<strong>显示器、打印机、绘图仪、音箱、视频投影仪</strong>等。</li>
+</ul>
+<hr>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-显示器监视器">1. 显示器（监视器）<a href="#1-显示器监视器" class="hash-link" aria-label="Direct link to 1. 显示器（监视器）" title="Direct link to 1. 显示器（监视器）" translate="no">​</a></h5>
+<ul>
+<li class="">显示器是用户与计算机之间交互对话的主要信息窗口。</li>
+<li class=""><strong>显示器和显卡</strong>两者一起构成计算机的<strong>显示系统</strong>。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="1分类">（1）分类<a href="#1分类" class="hash-link" aria-label="Direct link to （1）分类" title="Direct link to （1）分类" translate="no">​</a></h6>
+<ul>
+<li class="">按显示器件分为：<!-- -->
+<ul>
+<li class=""><strong>阴极射线管显示器（CRT）</strong>：多用于台式机；</li>
+<li class=""><strong>液晶显示器（LCD）</strong>：多用于笔记本电脑；</li>
+<li class=""><strong>发光二极管显示器（LED）</strong>；</li>
+<li class="">**等离子体显示器（PDP）**等。</li>
+</ul>
+</li>
+<li class="">LCD优点：机身薄、节省空间、省电不产生高温、低辐射、画面柔和不伤眼，已代替CRT。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="2主要技术参数和概念">（2）主要技术参数和概念<a href="#2主要技术参数和概念" class="hash-link" aria-label="Direct link to （2）主要技术参数和概念" title="Direct link to （2）主要技术参数和概念" translate="no">​</a></h6>
+<ul>
+<li class=""><strong>屏幕尺寸</strong>：用矩形屏幕的对角线长度，以<strong>英寸</strong>为单位。一般家用微机显示器多是20英寸左右；笔记本多是14英寸、15.6英寸。</li>
+<li class=""><strong>像素</strong>：屏幕上能独立控制其颜色和亮度的最小区域，是显示画面的最小组成单位。像素可用一个数表示（如&quot;0.3兆像素&quot;=30万像素），也可用一对数字表示（如&quot;640×480显示器&quot;，总数=640×480=307,200像素）。</li>
+<li class=""><strong>点距</strong>：一种给定颜色的一个像素点与离它最近的相邻同色像素点之间的距离。点距不能用软件更改。相同分辨率下，点距越小，显示图像越清晰细腻，分辨率和图像质量越高。</li>
+<li class=""><strong>显示分辨率</strong>：显示器屏幕上每行和每列所能显示的像素数。分辨率越高，屏幕显示内容越丰富，图像越清晰。一般表示为水平分辨率和垂直分辨率的乘积，如1920×1080。目前微机显示器支持1280×1024、1024×768、1600×900等规格。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="3显示卡显卡">（3）显示卡（显卡）<a href="#3显示卡显卡" class="hash-link" aria-label="Direct link to （3）显示卡（显卡）" title="Direct link to （3）显示卡（显卡）" translate="no">​</a></h6>
+<ul>
+<li class="">显卡又称<strong>视频卡、视频适配器、图形卡、图形适配器、显示适配器</strong>等。</li>
+<li class="">是连接 <strong>CPU 与显示器</strong>的接口电路，承担输出显示图形的任务。</li>
+<li class="">主流显卡显示芯片主要由 <strong>NVIDIA（英伟达）</strong> 和 <strong>AMD（超威半导体）</strong> 两大厂商制造。</li>
+<li class="">采用NVIDIA芯片的显卡称为 <strong>N卡</strong>；采用AMD芯片的显卡称为 <strong>A卡</strong>。</li>
+</ul>
+<p><strong>分类：按连接方式分</strong></p>
+<ul>
+<li class="">
+<p><strong>集成显卡</strong>：</p>
+<ul>
+<li class="">将显示芯片、显存及相关电路都集成在主板上；</li>
+<li class="">显示芯片大部分集成在主板的<strong>北桥芯片</strong>中；</li>
+<li class="">优点：功耗低、发热量小、价格便宜；</li>
+<li class="">缺点：性能相对略低，固化在主板或CPU上，本身无法更换，必须换就只能换主板。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>独立显卡</strong>：</p>
+<ul>
+<li class="">将显示芯片、显存及相关电路单独做在一块电路板上，自成一体作为独立板卡；</li>
+<li class="">需占用主板扩展插槽（ISA、PCI、AGP或PCI-E）；</li>
+<li class="">优点：单独安装显存，一般不占用系统内存，显示效果和性能更好，容易升级；</li>
+<li class="">缺点：系统功耗加大、发热量较大，需额外购买资金。</li>
+</ul>
+</li>
+</ul>
+<p><strong>显卡性能的两个决定部分</strong>：</p>
+<ul>
+<li class="">
+<p>一是<strong>图形处理器GPU</strong>，二是<strong>显存</strong>。</p>
+</li>
+<li class="">
+<p><strong>图形处理器GPU</strong>：</p>
+<ul>
+<li class="">又称显示核心、视觉处理器、显示芯片；</li>
+<li class="">是专门做图像运算工作的微处理器；</li>
+<li class="">是显示卡的&quot;心脏&quot;，相当于CPU在电脑中的作用；</li>
+<li class="">决定了显卡的档次和大部分性能；</li>
+<li class="">尤其在3D图形处理时，完成部分原本CPU的工作。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>显存</strong>：</p>
+<ul>
+<li class="">显示内存的简称，类似于主板的内存；</li>
+<li class="">功能：暂时储存GPU要处理的数据和处理完毕的数据；</li>
+<li class="">显存容量 = 显示分辨率 × 颜色位数 / 8bit；</li>
+<li class="">家用微机显存1G、2G即可；游戏电竞类需要更大；</li>
+<li class="">显存值越大，可存储图像数据越多，显示效果越好。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>GPU和显存的关系</strong>：就像电脑中的CPU与内存的关系。GPU负责处理运算图形数据，显存负责缓存图形数据。</p>
+</li>
+</ul>
+<p><strong>显存性能的两个决定因素</strong>：</p>
+<ul>
+<li class="">
+<p>一是<strong>容量</strong>，二是<strong>带宽</strong>。</p>
+</li>
+<li class="">
+<p><strong>显存容量</strong>：决定能缓存多少数据。常见容量有128M、256M、512M、896M、1G、2G等。容量越大，能缓存数据越多。</p>
+</li>
+<li class="">
+<p><strong>显存带宽</strong>：显存与GPU交换数据的通道。带宽越大，数据交换越快。</p>
+</li>
+<li class="">
+<p>显存带宽由<strong>频率</strong>和<strong>位宽</strong>两个因素决定。</p>
+<ul>
+<li class="">显存频率：一般有DDR2、DDR3、GDDR3、GDDR5等，GDDR5频率最高，等效频率可达4GHz以上。</li>
+<li class="">显存位宽：一般有64bit、128bit、256bit、448bit、512bit等。位宽越大，制造难度越大、成本越高。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>显存带宽计算公式</strong>：带宽 = 频率 × 位宽 / 8。</p>
+</li>
+</ul>
+<hr>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-打印机">2. 打印机<a href="#2-打印机" class="hash-link" aria-label="Direct link to 2. 打印机" title="Direct link to 2. 打印机" translate="no">​</a></h5>
+<ul>
+<li class="">打印机用于将计算机处理结果打印在相关介质上。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="1分类-1">（1）分类<a href="#1分类-1" class="hash-link" aria-label="Direct link to （1）分类" title="Direct link to （1）分类" translate="no">​</a></h6>
+<ul>
+<li class="">按数据输出方式：<strong>行式打印机、串式打印机、页式打印机</strong>。</li>
+<li class="">按打印颜色：<strong>单色打印机、彩色打印机</strong>。</li>
+<li class="">按工作方式：<!-- -->
+<ul>
+<li class=""><strong>击打式打印机</strong>（针式打印机、字模打印机等）</li>
+<li class=""><strong>非击打式打印机</strong>（激光打印机、喷墨打印机、热敏打印机等）</li>
+</ul>
+</li>
+<li class="">目前市面上常见的是<strong>激光打印机</strong>。</li>
+<li class="">新型打印机：热转印打印机、大幅面打印机、三维立体（3D）打印机等。</li>
+</ul>
+<h6 class="anchor anchorTargetStickyNavbar_Vzrq" id="2几种常见的打印机">（2）几种常见的打印机<a href="#2几种常见的打印机" class="hash-link" aria-label="Direct link to （2）几种常见的打印机" title="Direct link to （2）几种常见的打印机" translate="no">​</a></h6>
+<ul>
+<li class="">
+<p><strong>针式打印机</strong>：</p>
+<ul>
+<li class="">由走纸装置、打印头和色带组成；</li>
+<li class="">打印头上纵向排列若干打印针（一般24根）；</li>
+<li class="">优点：打印成本低、容易维修、价格低、打印介质广泛；</li>
+<li class="">缺点：打印质量差、速度慢、噪声大；</li>
+<li class="">现在使用较少，主要在银行、超市打印票据。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>喷墨打印机</strong>：</p>
+<ul>
+<li class="">将彩色液体油墨经喷嘴变成细小微粒喷到印纸上；</li>
+<li class="">优点：价格低、打印质量好、速度较快、噪声较低、体积小；</li>
+<li class="">缺点：打印成本较高，打印的文字或图像遇水会褪色。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>激光打印机</strong>：</p>
+<ul>
+<li class="">激光扫描技术和电子照相技术相结合；</li>
+<li class="">优点：速度快、分辨率高、质量好、噪声低、不褪色；</li>
+<li class="">缺点：机器价格、使用成本相对贵；</li>
+<li class="">已经是现在主流打印机。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>三维立体打印机（3D打印机）</strong>：</p>
+<ul>
+<li class="">连接电脑，把电脑中的信息输出为真实物体模型（传统打印机只能输出到纸张等平面上）；</li>
+<li class="">属于快速成型技术，由CAD数据通过成型设备以材料累加方式制成实物模型；</li>
+<li class="">不需要传统刀具、夹具和机床，可自动、快速、直接、精确地将设计转化为模型。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>热转印打印机</strong>：</p>
+<ul>
+<li class="">利用透明染料进行打印；</li>
+<li class="">应用：服装吊牌、火车票、登机牌、行李牌、笔记本标签、电器产品标示标签等；</li>
+<li class="">特点：经得起时间考验，长期保存不变形、不褪色、不因接触溶剂磨损、不因温度高变形变色。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>大幅面打印机</strong>：</p>
+<ul>
+<li class="">打印原理与喷墨打印机基本相同，打印喷墨直接印刷，无需制版出片；</li>
+<li class="">打印幅宽一般达24英寸（61cm）以上；</li>
+<li class="">主要用途：工程与建筑领域，也应用于广告制作、大幅摄影、艺术写真、室内装潢；</li>
+<li class="">特点：适用于任意材质，兼容面广，无须制版，印刷快捷且成本低廉。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-音箱">3. 音箱<a href="#3-音箱" class="hash-link" aria-label="Direct link to 3. 音箱" title="Direct link to 3. 音箱" translate="no">​</a></h5>
+<ul>
+<li class="">音箱是声音输出设备，好比计算机的嘴巴，计算机通过声卡告诉音箱要说什么。</li>
+<li class="">分为：<!-- -->
+<ul>
+<li class=""><strong>有源音箱</strong>：带有电源插头，具有放大器功能，音量大；</li>
+<li class=""><strong>无源音箱</strong>：没有电源插头，自身不带放大器，由声卡直接输出，音量小、音质不佳，通过软件控制音量和高低音。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-绘图仪">4. 绘图仪<a href="#4-绘图仪" class="hash-link" aria-label="Direct link to 4. 绘图仪" title="Direct link to 4. 绘图仪" translate="no">​</a></h5>
+<ul>
+<li class="">绘图仪可将计算机输出信息以<strong>图形</strong>形式输出。</li>
+<li class="">可绘制：各种管理图表和统计图、大地测量图、建筑设计图、电路布线图、各种机械图与计算机辅助设计图等。</li>
+<li class="">在绘图软件支持下可绘制复杂、精确的图形，是计算机辅助设计不可缺少的工具。</li>
+</ul>
+<hr>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-视频投影仪">5. 视频投影仪<a href="#5-视频投影仪" class="hash-link" aria-label="Direct link to 5. 视频投影仪" title="Direct link to 5. 视频投影仪" translate="no">​</a></h5>
+<ul>
+<li class="">视频投影仪是将图像或视频投射到幕布上的设备。</li>
+<li class="">可通过不同接口与计算机、VCD、DVD、BD、游戏机、DV等相连接播放视频信号。</li>
+<li class="">广泛应用于家庭、办公室、学校和娱乐场所。</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="知识扩展">知识扩展<a href="#知识扩展" class="hash-link" aria-label="Direct link to 知识扩展" title="Direct link to 知识扩展" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="一系统总线">一、系统总线<a href="#一系统总线" class="hash-link" aria-label="Direct link to 一、系统总线" title="Direct link to 一、系统总线" translate="no">​</a></h4>
+<ul>
+<li class="">冯·诺依曼型计算机由五大部件组成，现代计算机中部件之间需要通信，引入了<strong>总线</strong>。</li>
+<li class=""><strong>总线定义</strong>：在计算机系统中，各个部件之间传送信息的公共通路叫总线。</li>
+<li class="">微型计算机以总线结构连接各个功能部件，是各个部件共享的传输介质。</li>
+<li class="">总线是CPU、内存、输入/输出设备传递信息的公用通道，为CPU、内存条、显卡、声卡、网卡、鼠标和键盘提供各类扩展槽或接口。</li>
+<li class="">主机各部件通过总线相连接，输入输出设备通过接口电路与总线相连接，再通过系统总线与CPU进行信息交换。</li>
+<li class="">总线的物理结构就是<strong>主板</strong>。</li>
+<li class="">输入输出接口一般采用大规模、超大规模集成电路技术，以电路板形式插在主板扩展槽内，常称作<strong>适配器或&quot;卡&quot;</strong>，如显示卡、声卡等。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-总线分类">1. 总线分类<a href="#1-总线分类" class="hash-link" aria-label="Direct link to 1. 总线分类" title="Direct link to 1. 总线分类" translate="no">​</a></h5>
+<ul>
+<li class="">
+<p><strong>按位置分</strong>：</p>
+<ul>
+<li class="">内部总线：芯片内部的总线；</li>
+<li class="">外部总线：计算机各部件之间的信息传输总线。通常意义上所说的总线就是外部总线。</li>
+</ul>
+</li>
+<li class="">
+<p><strong>按功能分</strong>：</p>
+<ul>
+<li class="">
+<p><strong>数据总线DB（Data Bus）</strong>；</p>
+</li>
+<li class="">
+<p><strong>地址总线AB（Address Bus）</strong>；</p>
+</li>
+<li class="">
+<p><strong>控制总线CB（Control Bus）</strong>；</p>
+</li>
+<li class="">
+<p>统称为系统总线。</p>
+</li>
+<li class="">
+<p><strong>（1）数据总线DB</strong>：传送系统中的数据或指令。总是<strong>双向总线</strong>，宽度和CPU字长有关。</p>
+</li>
+<li class="">
+<p><strong>（2）地址总线AB</strong>：传送地址信息。地址是识别信息存放位置的编号。是CPU向外传输的<strong>单向总线</strong>。</p>
+</li>
+<li class="">
+<p><strong>（3）控制总线CB</strong>：传送控制信号（如读写信号、中断信号、请求信号等）。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-总线的性能指标三项">2. 总线的性能指标（三项）<a href="#2-总线的性能指标三项" class="hash-link" aria-label="Direct link to 2. 总线的性能指标（三项）" title="Direct link to 2. 总线的性能指标（三项）" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>（1）总线宽度</strong>：一次能并行传输数据的二进制位数（即数据线根数），和字长相关。如32位总线一次传送32位数据。</li>
+<li class=""><strong>（2）总线频率</strong>：表示总线速度，常用<strong>MHz</strong>描述。</li>
+<li class=""><strong>（3）标准传输率</strong>：每秒传输最大字节数（<strong>MBps</strong>）。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-总线的标准">3. 总线的标准<a href="#3-总线的标准" class="hash-link" aria-label="Direct link to 3. 总线的标准" title="Direct link to 3. 总线的标准" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>（1）ISA总线</strong>：工业标准体系结构。16位体系结构，只支持16位I/O设备，数据传输率约16MB/S。插槽颜色一般为<strong>黑色</strong>。工作频率8MHz左右。已被淘汰。</li>
+<li class=""><strong>（2）PCI总线</strong>：外部部件互连标准总线。目前个人电脑中使用最广泛的接口。插槽颜色一般为<strong>白色</strong>。工作频率33MHz/66MHz。有32bit、64bit之分。取代了ISA总线。</li>
+<li class=""><strong>（3）AGP总线</strong>：加速图像接口。英特尔推出的3D标准图像接口，提供四倍于PCI的效率。是<strong>显示卡专用</strong>的局部总线。</li>
+<li class=""><strong>（4）PCI Express</strong>：新一代总线接口，将全面取代现行的PCI和AGP。数据传输速率最高可达<strong>10GB/s</strong>以上。</li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="二主板">二、主板<a href="#二主板" class="hash-link" aria-label="Direct link to 二、主板" title="Direct link to 二、主板" translate="no">​</a></h4>
+<ul>
+<li class="">主板在计算机机箱内，是计算机最基本、最重要的部件之一，也是主机箱内面积最大的一块印刷电路板。</li>
+<li class="">计算机主机中各部件都通过主板连接，主板性能对计算机整体性能影响很大。</li>
+<li class="">主板上主要是<strong>各芯片组和各总线插槽</strong>。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="1北桥芯片">（1）北桥芯片<a href="#1北桥芯片" class="hash-link" aria-label="Direct link to （1）北桥芯片" title="Direct link to （1）北桥芯片" translate="no">​</a></h5>
+<ul>
+<li class="">系统控制芯片，主要负责 <strong>CPU、内存、显卡</strong>三者之间的数据交换。</li>
+<li class="">在与南桥芯片组成的芯片组中起主导作用，往往有较高的工作频率。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="2南桥芯片">（2）南桥芯片<a href="#2南桥芯片" class="hash-link" aria-label="Direct link to （2）南桥芯片" title="Direct link to （2）南桥芯片" translate="no">​</a></h5>
+<ul>
+<li class="">负责 <strong>I/O总线</strong>之间的通信，设计用来处理低速信号。</li>
+<li class="">通过北桥与CPU联系。</li>
+<li class="">包括硬盘、USB、网卡等。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="3bios-rom芯片">（3）BIOS ROM芯片<a href="#3bios-rom芯片" class="hash-link" aria-label="Direct link to （3）BIOS ROM芯片" title="Direct link to （3）BIOS ROM芯片" translate="no">​</a></h5>
+<ul>
+<li class="">BIOS（Basic Input/Output System，<strong>基本输入输出系统</strong>），全称是ROM-BIOS。</li>
+<li class="">是个人电脑启动时加载的<strong>第一个软件</strong>。</li>
+<li class="">是固化到主板上一个ROM芯片上的程序。</li>
+<li class="">保存着计算机最重要的基本输入输出程序、开机后自检程序和系统自启动程序。</li>
+<li class="">可从CMOS中读写系统设置信息。</li>
+<li class="">主要功能：为计算机提供最底层、最直接的硬件设置和控制。</li>
+<li class="">计算机在BIOS程序控制下启动操作系统。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="4cmos-ram芯片">（4）CMOS RAM芯片<a href="#4cmos-ram芯片" class="hash-link" aria-label="Direct link to （4）CMOS RAM芯片" title="Direct link to （4）CMOS RAM芯片" translate="no">​</a></h5>
+<ul>
+<li class="">主板上一块<strong>可读写</strong>的RAM芯片。</li>
+<li class="">用来保存BIOS设置完电脑硬件参数后的数据，仅用于存放数据。</li>
+<li class="">CMOS是<strong>易失性</strong>的，利用它保持当前时间和日期，保存配置参数（如启动盘等）。</li>
+<li class="">耗电非常少，工厂原装电池可用若干年；电池失效时配置和时间丢失。</li>
+<li class="">CMOS配置信息不正确会导致不能开机、时间不准、零部件不能识别等故障。</li>
+<li class="">BIOS ROM中的&quot;系统设置程序&quot;用来设置BIOS参数，并保存在CMOS中。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="5扩展槽">（5）扩展槽<a href="#5扩展槽" class="hash-link" aria-label="Direct link to （5）扩展槽" title="Direct link to （5）扩展槽" translate="no">​</a></h5>
+<ul>
+<li class="">主板上的扩展插槽又称**&quot;总线插槽&quot;**，是主机通过系统总线与外部设备联系的通道。</li>
+<li class="">外设接口电路适配卡（显卡、声卡、网卡等）都插在扩展槽内，如PCI插槽、AGP插槽、PCI-E插槽等。</li>
+</ul>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="6主要接口电路">（6）主要接口电路<a href="#6主要接口电路" class="hash-link" aria-label="Direct link to （6）主要接口电路" title="Direct link to （6）主要接口电路" translate="no">​</a></h5>
+<ul>
+<li class=""><strong>硬盘接口</strong>：IDE接口和SATA接口；</li>
+<li class=""><strong>串行COM接口</strong>：连接串行鼠标和外置Modem等；</li>
+<li class=""><strong>并行LPT接口</strong>：一般连接打印机或扫描仪；</li>
+<li class=""><strong>PS/2接口</strong>：仅用于连接键盘和鼠标，现已几乎被USB取代；</li>
+<li class=""><strong>USB接口</strong>：如今最流行的接口，最大支持<strong>127个</strong>外设，可独立供电；</li>
+<li class=""><strong>MIDI接口</strong>：声卡和游戏的接口；</li>
+<li class=""><strong>SATA接口</strong>：串行硬盘驱动器接口。</li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="输入输出接口末尾段落">输入输出接口（末尾段落）<a href="#输入输出接口末尾段落" class="hash-link" aria-label="Direct link to 输入输出接口（末尾段落）" title="Direct link to 输入输出接口（末尾段落）" translate="no">​</a></h4>
+<ul>
+<li class="">输入输出接口是微机中CPU和外部设备之间的连接通道。</li>
+<li class="">输入输出设备必须通过输入输出接口电路与系统总线相连，才能通过系统总线与CPU进行信息交换。</li>
+<li class="">一般采用大规模、超大规模集成电路技术，以电路板形式插在主机板扩展槽内，常称作<strong>适配器或&quot;卡&quot;</strong>，如显示卡、声卡等。</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="豆包作业主机">豆包作业：主机<a href="#豆包作业主机" class="hash-link" aria-label="Direct link to 豆包作业：主机" title="Direct link to 豆包作业：主机" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空1分共25分">一、填空题（每空1分，共25分）<a href="#一填空题每空1分共25分" class="hash-link" aria-label="Direct link to 一、填空题（每空1分，共25分）" title="Direct link to 一、填空题（每空1分，共25分）" translate="no">​</a></h3>
+<ol>
+<li class="">微型计算机硬件中最核心的是________。</li>
+<li class="">中央处理器（CPU）是包含有________和________的一块大规模集成电路芯片，俗称________。</li>
+<li class="">一台计算机所使用的CPU基本决定这台计算机的________和________。</li>
+<li class="">CPU是计算机系统的________和________核心，是信息处理、程序运行的________执行单元。</li>
+<li class="">按照处理信息的字长，CPU可分为4位、8位、________、32位和________微处理器。</li>
+<li class="">1971年世界上第一片4位微处理器________在________公司诞生，标志着CPU的诞生。</li>
+<li class="">第三阶段（1978—1984年）是16位微处理器时代，代表产品是Intel________。</li>
+<li class="">第四阶段代表产品是Intel________，已经可以胜任________、多用户的作业。</li>
+<li class="">目前CPU厂商主要有________公司和________公司。</li>
+<li class="">我国具有自主知识产权的处理器是________系列芯片，由中国科学院________公司设计研制。</li>
+<li class="">内存一般由________器件构成，是________直接与之沟通的部件。</li>
+<li class="">内存只用于暂时存放程序和数据，一旦关闭电源或发生断电，其中的程序和数据就会________。</li>
+<li class="">计算机的内存容量通常是指________的容量。</li>
+<li class="">内存存取速度快，其速度在________级。</li>
+<li class="">目前主流微机内存类型是________。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二单选题每题2分共20分">二、单选题（每题2分，共20分）<a href="#二单选题每题2分共20分" class="hash-link" aria-label="Direct link to 二、单选题（每题2分，共20分）" title="Direct link to 二、单选题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>微型计算机的核心部件是（　）
+A. 内存　　B. CPU　　C. 硬盘　　D. 主板</p>
+</li>
+<li class="">
+<p>CPU中包含的两个主要部件是（　）
+A. 运算器和存储器　　B. 控制器和运算器　　C. 输入设备和输出设备　　D. 内存和外存</p>
+</li>
+<li class="">
+<p>标志着CPU诞生的微处理器是（　）
+A. Intel 8080　　B. Intel 8086　　C. Intel 4004　　D. Intel 80386</p>
+</li>
+<li class="">
+<p>16位微处理器时代的代表产品是（　）
+A. Intel 4004　　B. Intel 8080　　C. Intel 8086　　D. Intel 80386</p>
+</li>
+<li class="">
+<p>可以胜任多任务、多用户作业的是（　）
+A. 4位微处理器　　B. 8位微处理器　　C. 16位微处理器　　D. 32位微处理器</p>
+</li>
+<li class="">
+<p>英特尔公司中端处理器、可理解为精简版酷睿i5的是（　）
+A. 赛扬双核　　B. 酷睿i3　　C. 酷睿i7　　D. 酷睿i9</p>
+</li>
+<li class="">
+<p>AMD公司面向中端、可玩网络游戏的CPU系列是（　）
+A. 闪龙系列　　B. 速龙系列　　C. 羿龙系列　　D. 酷睿系列</p>
+</li>
+<li class="">
+<p>关于内存，下列说法正确的是（　）
+A. 内存中的数据断电后不会丢失
+B. 内存由磁性材料构成
+C. 内存用于暂时存放当前正在使用的数据和程序
+D. 内存容量通常指ROM的容量</p>
+</li>
+<li class="">
+<p>目前微机主流内存类型是（　）
+A. DDR　　B. DDR2　　C. DDR3　　D. DDR4</p>
+</li>
+<li class="">
+<p>主机各部件之间通过什么相连（　）
+A. 接口电路　　B. 总线　　C. 电缆　　D. 路由器</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三多选题每题3分共15分">三、多选题（每题3分，共15分）<a href="#三多选题每题3分共15分" class="hash-link" aria-label="Direct link to 三、多选题（每题3分，共15分）" title="Direct link to 三、多选题（每题3分，共15分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>下列属于CPU发展阶段的有（　）
+A. 4位和8位低档微处理器时代
+B. 8位中高档微处理器时代
+C. 16位微处理器时代
+D. 32位微处理器时代
+E. 奔腾系列微处理器时代</p>
+</li>
+<li class="">
+<p>下列关于CPU主要生产商的说法正确的有（　）
+A. 英特尔公司和AMD公司是目前主要CPU厂商
+B. 酷睿i7属于发烧级处理器
+C. 速龙系列是AMD公司的产品
+D. 龙芯是我国具有自主知识产权的处理器
+E. 羿龙系列是英特尔公司的产品</p>
+</li>
+<li class="">
+<p>下列属于主机组成部分的有（　）
+A. CPU　　B. 内存　　C. 硬盘　　D. 键盘　　E. 控制器</p>
+</li>
+<li class="">
+<p>下列关于内存的说法正确的有（　）
+A. 内存就是内存条
+B. 内存由半导体器件构成
+C. 内存容量通常指RAM的容量
+D. 内存存取速度比外存慢
+E. 目前主流内存类型是DDR4</p>
+</li>
+<li class="">
+<p>下列属于英特尔酷睿系列的有（　）
+A. i3　　B. i5　　C. i7　　D. i9　　E. 闪龙</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四判断题每题2分共20分">四、判断题（每题2分，共20分）<a href="#四判断题每题2分共20分" class="hash-link" aria-label="Direct link to 四、判断题（每题2分，共20分）" title="Direct link to 四、判断题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">CPU是计算机系统的运算和控制核心。（　）</li>
+<li class="">1971年Intel生产的4004将运算器和控制器集成在一个芯片上，标志着CPU的诞生。（　）</li>
+<li class="">第二阶段（1974—1977年）是16位微处理器时代。（　）</li>
+<li class="">奔腾双核和赛扬双核属于英特尔公司的低端处理器。（　）</li>
+<li class="">AMD公司的羿龙系列属于低端处理器。（　）</li>
+<li class="">龙芯3号是小CPU。（　）</li>
+<li class="">内存中的数据一旦断电就会丢失。（　）</li>
+<li class="">内存容量相对于外存较小，但存取速度快。（　）</li>
+<li class="">目前家庭微型机的主流内存配置是256MB和512MB。（　）</li>
+<li class="">ROM和RAM都属于内存。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五简答题每题10分共20分">五、简答题（每题10分，共20分）<a href="#五简答题每题10分共20分" class="hash-link" aria-label="Direct link to 五、简答题（每题10分，共20分）" title="Direct link to 五、简答题（每题10分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">简述CPU发展的六个阶段及各阶段代表产品。</li>
+<li class="">简述内存的特点和作用。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一套参考答案">第一套参考答案<a href="#第一套参考答案" class="hash-link" aria-label="Direct link to 第一套参考答案" title="Direct link to 第一套参考答案" translate="no">​</a></h3>
+<p><strong>填空题</strong></p>
+<ol>
+<li class="">微处理器</li>
+<li class="">运算器；控制器；微处理器</li>
+<li class="">性能；档次</li>
+<li class="">运算；控制；最终</li>
+<li class="">16位；64位</li>
+<li class="">4004；Intel</li>
+<li class="">8086</li>
+<li class="">80386；多任务</li>
+<li class="">英特尔（Intel）；AMD</li>
+<li class="">龙芯；中科技术</li>
+<li class="">半导体；CPU</li>
+<li class="">丢失</li>
+<li class="">随机存储器（RAM）</li>
+<li class="">ns（纳秒）</li>
+<li class="">DDR4</li>
+</ol>
+<p><strong>单选题</strong>
+1.B　2.B　3.C　4.C　5.D　6.B　7.B　8.C　9.D　10.B</p>
+<p><strong>多选题</strong>
+1.ABCDE　2.ABCD　3.ABE　4.ABCE　5.ABCD</p>
+<p><strong>判断题</strong>
+1.√　2.√　3.×（是8位）　4.√　5.×（是高端）　6.×（龙芯3号是大CPU）　7.√　8.√　9.×（主流8G/16G）　10.√</p>
+<p><strong>简答题</strong></p>
+<ol>
+<li class="">
+<p>CPU发展六阶段：①1971—1973年，4位和8位低档，Intel 4004；②1974—1977年，8位中高档，Intel 8080；③1978—1984年，16位，Intel 8086；④1985—1992年，32位，Intel 80386；⑤1993—2005年，奔腾系列；⑥2005年后，多核时代，代表为英特尔酷睿和AMD锐龙。</p>
+</li>
+<li class="">
+<p>内存特点和作用：内存即内存条，由半导体器件构成，是CPU直接沟通的部件，存放当前正在使用的数据和程序；只用于暂时存放，断电后数据丢失；容量通常指RAM容量，相对外存较小但存取速度快（ns级）；目前主流为DDR4。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="豆包作业外部存储器">豆包作业：外部存储器<a href="#豆包作业外部存储器" class="hash-link" aria-label="Direct link to 豆包作业：外部存储器" title="Direct link to 豆包作业：外部存储器" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空1分共25分-1">一、填空题（每空1分，共25分）<a href="#一填空题每空1分共25分-1" class="hash-link" aria-label="Direct link to 一、填空题（每空1分，共25分）" title="Direct link to 一、填空题（每空1分，共25分）" translate="no">​</a></h3>
+<ol>
+<li class="">外存储器简称外存或辅存，一般由________材料或________材料构成，可以永久地保存信息。</li>
+<li class="">硬盘和U盘相比具有使用寿命长、________、________等优点。</li>
+<li class="">硬盘主流品牌有希捷、<strong><strong><strong><strong>、</strong></strong></strong></strong>、三星等。</li>
+<li class="">硬盘按结构分为________（SSD）和________（HDD）。</li>
+<li class="">固态硬盘采用________颗粒来存储；机械硬盘采用________来存储。</li>
+<li class="">2.5英寸硬盘适用于________；3.5英寸硬盘常用于数据中心和________。</li>
+<li class="">硬盘有几面盘片就会有几个________，它是硬盘中最昂贵的部件。</li>
+<li class="">磁盘上的每个磁道被等分为若干个弧段，称为________，每个可以存放________个字节。</li>
+<li class="">硬盘的柱面数与一个盘面上的________数是相等的。</li>
+<li class="">硬盘容量=磁道数×磁头数×扇区数×________B。</li>
+<li class="">硬盘转速单位为________，家用普通硬盘一般有5400rpm和________rpm。</li>
+<li class="">硬盘缓存是硬盘控制器上的一块________芯片。</li>
+<li class="">微型机硬盘接口现在主要是________接口。</li>
+<li class="">硬盘格式化分为________格式化和________格式化两种。</li>
+<li class="">光盘是以________方式（激光）进行读写信息的存储介质。</li>
+<li class="">光盘按读写功能分为只读型（<strong><strong><strong><strong>）、一次写入型（</strong></strong></strong></strong>）和可重复写型（CD-RW）。</li>
+<li class="">U盘是________的一种，通过________接口连到电脑。</li>
+<li class="">云盘是互联网存储工具，具有安全稳定、________存储的特点。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二单选题每题2分共20分-1">二、单选题（每题2分，共20分）<a href="#二单选题每题2分共20分-1" class="hash-link" aria-label="Direct link to 二、单选题（每题2分，共20分）" title="Direct link to 二、单选题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>微型机最基础的外部存储器是（　）
+A. 光盘　　B. 硬盘　　C. U盘　　D. 移动硬盘</p>
+</li>
+<li class="">
+<p>固态硬盘（SSD）的存储介质是（　）
+A. 磁性碟片　　B. 闪存颗粒　　C. 光学材料　　D. 半导体</p>
+</li>
+<li class="">
+<p>下列关于机械硬盘的说法正确的是（　）
+A. 采用闪存颗粒存储
+B. 速度比固态硬盘快
+C. 容量大、价格便宜
+D. 无噪声</p>
+</li>
+<li class="">
+<p>磁盘读写数据的基本单位是（　）
+A. 磁道　　B. 柱面　　C. 扇区　　D. 字节</p>
+</li>
+<li class="">
+<p>每个扇区可以存放的信息是（　）
+A. 256个字节　　B. 512个字节　　C. 1024个字节　　D. 512个bit</p>
+</li>
+<li class="">
+<p>家用普通硬盘的常见转速是（　）
+A. 5400rpm　　B. 7200rpm或5400rpm　　C. 10000rpm　　D. 15000rpm</p>
+</li>
+<li class="">
+<p>一张新磁盘必须进行的操作是（　）
+A. 分区　　B. 格式化　　C. 杀毒　　D. 压缩</p>
+</li>
+<li class="">
+<p>刚出厂的硬盘已经过了（　）
+A. 高级格式化　　B. 低级格式化　　C. 分区　　D. 杀毒</p>
+</li>
+<li class="">
+<p>允许写入一次、不能擦除但可多次读出的光盘是（　）
+A. CD-ROM　　B. CD-R　　C. CD-RW　　D. DVD</p>
+</li>
+<li class="">
+<p>下列不属于云盘服务商的是（　）
+A. 百度网盘　　B. 360云盘　　C. 金山快盘　　D. 希捷</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三多选题每题3分共15分-1">三、多选题（每题3分，共15分）<a href="#三多选题每题3分共15分-1" class="hash-link" aria-label="Direct link to 三、多选题（每题3分，共15分）" title="Direct link to 三、多选题（每题3分，共15分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>下列属于外存储器的有（　）
+A. 硬盘　　B. 光盘　　C. U盘　　D. 移动硬盘　　E. 云盘</p>
+</li>
+<li class="">
+<p>下列属于机械硬盘组成部分的有（　）
+A. 盘片　　B. 磁头　　C. 磁头控制器　　D. 接口　　E. 缓存</p>
+</li>
+<li class="">
+<p>下列属于硬盘基本参数的有（　）
+A. 容量　　B. 转速　　C. 平均访问时间　　D. 传输速率　　E. 缓存</p>
+</li>
+<li class="">
+<p>下列关于U盘的说法正确的有（　）
+A. U盘是闪存的一种
+B. U盘需要物理驱动器才能工作
+C. U盘通过USB接口连接电脑
+D. U盘可以进行格式化、拷贝、删除操作
+E. U盘容量一般有1G、2G、4G等</p>
+</li>
+<li class="">
+<p>下列关于硬盘使用注意事项的说法正确的有（　）
+A. 硬盘工作时不要强行关掉电源
+B. 关机后可以马上再次开机
+C. 硬盘工作时要尽量避免震荡
+D. 硬盘害怕灰尘
+E. 要经常频繁整理硬盘以提高速度</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四判断题每题2分共20分-1">四、判断题（每题2分，共20分）<a href="#四判断题每题2分共20分-1" class="hash-link" aria-label="Direct link to 四、判断题（每题2分，共20分）" title="Direct link to 四、判断题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">外存可以永久保存信息。（　）</li>
+<li class="">固态硬盘速度快、无噪声，但容量低、价格高。（　）</li>
+<li class="">机械硬盘比固态硬盘容量大、价格便宜。（　）</li>
+<li class="">磁头是硬盘中最昂贵的部件。（　）</li>
+<li class="">磁道用肉眼可以清楚看到。（　）</li>
+<li class="">硬盘柱面数与一个盘面上的磁道数相等。（　）</li>
+<li class="">硬盘转速越快，整体性能越好。（　）</li>
+<li class="">微型机现在主要使用SATA接口。（　）</li>
+<li class="">高级格式化会清除硬盘上的数据。（　）</li>
+<li class="">移动硬盘在传输过程中可以随时热插拔。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五简答题每题10分共20分-1">五、简答题（每题10分，共20分）<a href="#五简答题每题10分共20分-1" class="hash-link" aria-label="Direct link to 五、简答题（每题10分，共20分）" title="Direct link to 五、简答题（每题10分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">比较固态硬盘（SSD）和机械硬盘（HDD）的区别。</li>
+<li class="">简述硬盘使用时的注意事项。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二套参考答案">第二套参考答案<a href="#第二套参考答案" class="hash-link" aria-label="Direct link to 第二套参考答案" title="Direct link to 第二套参考答案" translate="no">​</a></h3>
+<p><strong>填空题</strong></p>
+<ol>
+<li class="">磁性；光存储</li>
+<li class="">容量大；存取速度快</li>
+<li class="">西部数据；东芝</li>
+<li class="">固态硬盘；机械硬盘</li>
+<li class="">闪存；磁性碟片</li>
+<li class="">移动设备和笔记本电脑；企业服务器</li>
+<li class="">磁头</li>
+<li class="">扇区；512</li>
+<li class="">磁道</li>
+<li class="">512</li>
+<li class="">rpm（转/每分钟）；7200</li>
+<li class="">内存</li>
+<li class="">SATA</li>
+<li class="">低级；高级</li>
+<li class="">光学</li>
+<li class="">CD-ROM；CD-R</li>
+<li class="">闪存；USB</li>
+<li class="">海量</li>
+</ol>
+<p><strong>单选题</strong>
+1.B　2.B　3.C　4.C　5.B　6.B　7.B　8.B　9.B　10.D</p>
+<p><strong>多选题</strong>
+1.ABCDE　2.ABCDE　3.ABCDE　4.ACDE　5.ACD</p>
+<p><strong>判断题</strong>
+1.√　2.√　3.√　4.√　5.×（肉眼看不到）　6.√　7.√　8.√　9.√　10.×（不要在传输中热插拔）</p>
+<p><strong>简答题</strong></p>
+<ol>
+<li class="">
+<p>SSD与HDD区别：①存储介质不同——SSD用闪存颗粒，HDD用磁性碟片；②SSD防震抗摔、功耗小、重量轻、速度快、无噪声，但容量低、价格高；③HDD由盘片、磁头等组成，容量大、价格便宜，但速度慢、有噪声。</p>
+</li>
+<li class="">
+<p>硬盘使用注意事项：①工作时不要强行关电源，关机后至少半分钟再开机；②避免震荡，防止磁头划伤磁片；③远离灰尘，保持适宜温度；④定期整理但不要频繁清理；⑤安装防毒软件，发现病毒及时清除，尽量不要格式化。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="豆包作业输入设备">豆包作业：输入设备<a href="#豆包作业输入设备" class="hash-link" aria-label="Direct link to 豆包作业：输入设备" title="Direct link to 豆包作业：输入设备" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空1分共20分">一、填空题（每空1分，共20分）<a href="#一填空题每空1分共20分" class="hash-link" aria-label="Direct link to 一、填空题（每空1分，共20分）" title="Direct link to 一、填空题（每空1分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">输入设备是将________和________送到计算机中进行处理的外部设备。</li>
+<li class="">键盘是计算机的________输入设备，早先接口多是________口（紫色口），现在多是USB接口。</li>
+<li class="">鼠标根据工作原理可分为机械式、<strong><strong><strong><strong>、</strong></strong></strong></strong>。</li>
+<li class="">鼠标按连接方式分为________和________。</li>
+<li class="">早先鼠标接口是PS/2口（________色口），现在也是USB接口。</li>
+<li class="">无线鼠标采用电池无线遥控，接收范围在________米以内。</li>
+<li class="">扫描仪是继鼠标和键盘之后的第________大计算机输入设备。</li>
+<li class="">扫描仪可将影像转换为计算机可以显示、编辑、存储和输出的________格式。</li>
+<li class="">触摸屏是一种________输入设备，用户用手指或光笔触摸屏某位置即可控制计算机。</li>
+<li class="">手写输入设备一般由________和________组成。</li>
+<li class="">语音输入设备主要通过________配合相应的语音识别软件来输入。</li>
+<li class="">RFID是一种________通信技术，可以通过________信号识别特定目标。</li>
+<li class="">RFID技术应用举例：高速收费路口的________业务、门禁系统、食品安全溯源等。</li>
+<li class="">键盘和鼠标早先的PS/2接口中，键盘是________色口，鼠标是________色口。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二单选题每题2分共20分-2">二、单选题（每题2分，共20分）<a href="#二单选题每题2分共20分-2" class="hash-link" aria-label="Direct link to 二、单选题（每题2分，共20分）" title="Direct link to 二、单选题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>计算机最基本的输入设备是（　）
+A. 鼠标　　B. 键盘　　C. 扫描仪　　D. 触摸屏</p>
+</li>
+<li class="">
+<p>键盘早先使用的接口是（　）
+A. USB　　B. PS/2（紫色）　　C. PS/2（浅绿色）　　D. SATA</p>
+</li>
+<li class="">
+<p>鼠标早先使用的PS/2接口颜色是（　）
+A. 紫色　　B. 浅绿色　　C. 红色　　D. 黄色</p>
+</li>
+<li class="">
+<p>下列不属于鼠标按工作原理分类的是（　）
+A. 机械式　　B. 光电式　　C. 光机式　　D. 无线式</p>
+</li>
+<li class="">
+<p>无线鼠标的接收范围一般在（　）
+A. 5米以内　　B. 10米以内　　C. 18米以内　　D. 30米以内</p>
+</li>
+<li class="">
+<p>继鼠标和键盘之后的第三大计算机输入设备是（　）
+A. 扫描仪　　B. 触摸屏　　C. 麦克风　　D. 数码相机</p>
+</li>
+<li class="">
+<p>ATM自动取款机主要使用的输入设备是（　）
+A. 键盘　　B. 触摸屏　　C. 扫描仪　　D. 手写笔</p>
+</li>
+<li class="">
+<p>手写输入设备的组成是（　）
+A. 键盘+鼠标　　B. 书写板+输入笔　　C. 麦克风+耳机　　D. 摄像头+麦克风</p>
+</li>
+<li class="">
+<p>RFID技术识别目标依靠的是（　）
+A. 机械接触　　B. 光学接触　　C. 无线电信号　　D. 红外信号</p>
+</li>
+<li class="">
+<p>下列不属于输入设备的是（　）
+A. 条形码阅读器　　B. 光学字符阅读器　　C. 音箱　　D. 麦克风</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三多选题每题3分共15分-2">三、多选题（每题3分，共15分）<a href="#三多选题每题3分共15分-2" class="hash-link" aria-label="Direct link to 三、多选题（每题3分，共15分）" title="Direct link to 三、多选题（每题3分，共15分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>下列属于输入设备的有（　）
+A. 键盘　　B. 鼠标　　C. 扫描仪　　D. 触摸屏　　E. 麦克风</p>
+</li>
+<li class="">
+<p>下列关于鼠标的说法正确的有（　）
+A. 按工作原理分为机械式、光电式、光机式
+B. 按连接方式分为有线和无线
+C. 无线鼠标接收范围在18米以内
+D. 现在鼠标多采用USB接口
+E. 鼠标是计算机最基本的输入设备</p>
+</li>
+<li class="">
+<p>下列属于扫描仪应用的有（　）
+A. 向计算机输入图像
+B. 配合汉字识别软件输入汉字
+C. 将影像转换为数字格式
+D. 控制计算机运行
+E. 语音输入</p>
+</li>
+<li class="">
+<p>触摸屏的应用领域包括（　）
+A. 公共信息查询
+B. 工业控制
+C. 军事指挥
+D. 多媒体教学
+E. ATM自动取款机</p>
+</li>
+<li class="">
+<p>下列关于RFID的说法正确的有（　）
+A. 是一种无线通信技术
+B. 通过无线电信号识别特定目标
+C. 无需与目标建立机械或光学接触
+D. 应用于ETC业务和门禁系统
+E. 属于输出设备</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四判断题每题2分共20分-2">四、判断题（每题2分，共20分）<a href="#四判断题每题2分共20分-2" class="hash-link" aria-label="Direct link to 四、判断题（每题2分，共20分）" title="Direct link to 四、判断题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">键盘是人与计算机进行信息交流的主要工具。（　）</li>
+<li class="">现在键盘和鼠标都使用USB接口。（　）</li>
+<li class="">鼠标按工作原理分为有线和无线两种。（　）</li>
+<li class="">扫描仪可以将影像转换为数字格式。（　）</li>
+<li class="">触摸屏操作简单、使用灵活。（　）</li>
+<li class="">火车站取票机采用的输入设备是键盘。（　）</li>
+<li class="">语音输入设备主要通过麦克风配合语音识别软件工作。（　）</li>
+<li class="">RFID识别必须与目标建立机械接触。（　）</li>
+<li class="">条形码阅读器和光学字符阅读器都属于输入设备。（　）</li>
+<li class="">数字化仪、光笔主要用于图形系统的数据输入。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五简答题每题125分共25分">五、简答题（每题12.5分，共25分）<a href="#五简答题每题125分共25分" class="hash-link" aria-label="Direct link to 五、简答题（每题12.5分，共25分）" title="Direct link to 五、简答题（每题12.5分，共25分）" translate="no">​</a></h3>
+<ol>
+<li class="">简述常用输入设备的种类及各自特点。</li>
+<li class="">简述RFID技术的原理和应用。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="第三套参考答案">第三套参考答案<a href="#第三套参考答案" class="hash-link" aria-label="Direct link to 第三套参考答案" title="Direct link to 第三套参考答案" translate="no">​</a></h3>
+<p><strong>填空题</strong></p>
+<ol>
+<li class="">程序；数据</li>
+<li class="">基本；PS/2</li>
+<li class="">光电式；光机式</li>
+<li class="">有线鼠标；无线鼠标</li>
+<li class="">浅绿</li>
+<li class="">18</li>
+<li class="">三</li>
+<li class="">数字</li>
+<li class="">交互</li>
+<li class="">书写板；输入笔</li>
+<li class="">麦克风</li>
+<li class="">无线；无线电</li>
+<li class="">ETC</li>
+<li class="">紫；浅绿</li>
+</ol>
+<p><strong>单选题</strong>
+1.B　2.B　3.B　4.D　5.C　6.A　7.B　8.B　9.C　10.C</p>
+<p><strong>多选题</strong>
+1.ABCDE　2.ABCD　3.ABC　4.ABCDE　5.ABCD</p>
+<p><strong>判断题</strong>
+1.√　2.√　3.×（按工作原理分机械式/光电式/光机式，有线无线是按连接方式）　4.√　5.√　6.×（是触摸屏）　7.√　8.×（无需机械或光学接触）　9.√　10.√</p>
+<p><strong>简答题</strong></p>
+<ol>
+<li class="">
+<p>常用输入设备：①键盘——基本输入设备，信息交流主要工具；②鼠标——分机械/光电/光机式，有线/无线；③扫描仪——第三大输入设备，将影像转数字格式，可配合OCR输入汉字；④触摸屏——手指/光笔操作，简单灵活，用于ATM、取票机等；⑤手写输入——书写板+输入笔；⑥语音输入——麦克风+识别软件；⑦RFID——无线射频识别。</p>
+</li>
+<li class="">
+<p>RFID原理：是一种无线通信技术，通过无线电信号识别特定目标并读写相关数据，无需与目标建立机械或光学接触。应用：高速路口ETC收费、门禁系统、食品安全溯源等。</p>
+</li>
+</ol>
+<p>根据8张图片内容，以下是三套完整试题（含答案）。</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="豆包作业输出设备">豆包作业：输出设备<a href="#豆包作业输出设备" class="hash-link" aria-label="Direct link to 豆包作业：输出设备" title="Direct link to 豆包作业：输出设备" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空1分共25分-2">一、填空题（每空1分，共25分）<a href="#一填空题每空1分共25分-2" class="hash-link" aria-label="Direct link to 一、填空题（每空1分，共25分）" title="Direct link to 一、填空题（每空1分，共25分）" translate="no">​</a></h3>
+<ol>
+<li class="">输出设备的主要作用是把计算机处理信息的结果用________所能识别的形式表示出来。</li>
+<li class="">显示器和________两者一起构成计算机的显示系统。</li>
+<li class="">按显示器件，显示器分为CRT、________、________和PDP等类型。</li>
+<li class="">________显示器机身薄、省电、低辐射，已代替了CRT显示器。</li>
+<li class="">屏幕尺寸用矩形屏幕的________长度，以________为单位。</li>
+<li class="">屏幕上能独立控制颜色和亮度的最小区域称为________。</li>
+<li class="">相同分辨率下，________越小，显示图像越清晰细腻。</li>
+<li class="">显示分辨率一般表示为________分辨率和________分辨率的乘积。</li>
+<li class="">显卡又称为视频卡、视频适配器、图形卡等，是连接________与________的接口电路。</li>
+<li class="">主流显卡芯片主要由________和________两大厂商制造；采用NVIDIA芯片的显卡称为________，采用AMD芯片的称为________。</li>
+<li class="">显卡按连接方式分为________显卡和________显卡。</li>
+<li class="">显卡的性能由________和________两部分决定。</li>
+<li class="">显存带宽 = ________ × ________ / 8。</li>
+<li class="">按工作方式，打印机分为________打印机和________打印机。</li>
+<li class="">目前市面上主流的打印机是________打印机。</li>
+<li class="">3D打印机输出的是真实的________模型。</li>
+<li class="">音箱分为________音箱和________音箱。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二单选题每题2分共20分-3">二、单选题（每题2分，共20分）<a href="#二单选题每题2分共20分-3" class="hash-link" aria-label="Direct link to 二、单选题（每题2分，共20分）" title="Direct link to 二、单选题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>下列不属于输出设备的是（　）
+A. 显示器　　B. 打印机　　C. 扫描仪　　D. 绘图仪</p>
+</li>
+<li class="">
+<p>LCD显示器指的是（　）
+A. 阴极射线管显示器　　B. 液晶显示器　　C. 发光二极管显示器　　D. 等离子体显示器</p>
+</li>
+<li class="">
+<p>家用微机显示器屏幕尺寸一般多为（　）
+A. 14英寸　　B. 15.6英寸　　C. 20英寸左右　　D. 32英寸</p>
+</li>
+<li class="">
+<p>&quot;640×480显示器&quot;中，480指的是（　）
+A. 水平像素数　　B. 垂直像素数　　C. 点距　　D. 分辨率总数</p>
+</li>
+<li class="">
+<p>点距是指（　）
+A. 屏幕对角线长度
+B. 同一像素点与相邻同色像素点之间的距离
+C. 屏幕行数
+D. 屏幕刷新率</p>
+</li>
+<li class="">
+<p>采用AMD显示芯片的显卡称为（　）
+A. N卡　　B. A卡　　C. I卡　　D. M卡</p>
+</li>
+<li class="">
+<p>下列关于集成显卡的说法正确的是（　）
+A. 性能比独立显卡好
+B. 功耗大、发热高
+C. 价格便宜，但性能略低，固化在主板上无法更换
+D. 单独安装在电路板上</p>
+</li>
+<li class="">
+<p>显存容量的计算公式是（　）
+A. 显示分辨率×颜色位数/8bit
+B. 频率×位宽/8
+C. 水平像素×垂直像素×2
+D. 频率×位宽</p>
+</li>
+<li class="">
+<p>打印票据主要使用的打印机是（　）
+A. 激光打印机　　B. 喷墨打印机　　C. 针式打印机　　D. 3D打印机</p>
+</li>
+<li class="">
+<p>带有电源插头、具有放大器功能、音量大的音箱是（　）
+A. 有源音箱　　B. 无源音箱　　C. 耳机　　D. 扬声器</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三多选题每题3分共15分-3">三、多选题（每题3分，共15分）<a href="#三多选题每题3分共15分-3" class="hash-link" aria-label="Direct link to 三、多选题（每题3分，共15分）" title="Direct link to 三、多选题（每题3分，共15分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>下列属于输出设备的有（　）
+A. 显示器　　B. 打印机　　C. 绘图仪　　D. 音箱　　E. 视频投影仪</p>
+</li>
+<li class="">
+<p>下列属于显示器主要技术参数的有（　）
+A. 屏幕尺寸　　B. 像素　　C. 点距　　D. 显示分辨率　　E. 转速</p>
+</li>
+<li class="">
+<p>下列关于显卡的说法正确的有（　）
+A. 显卡是连接CPU与显示器的接口电路
+B. NVIDIA芯片的显卡称为N卡
+C. 集成显卡功耗低、价格便宜
+D. 独立显卡性能更好但功耗和发热较大
+E. 显卡性能只由显存容量决定</p>
+</li>
+<li class="">
+<p>下列关于打印机的说法正确的有（　）
+A. 激光打印机是目前主流打印机
+B. 针式打印机噪声大、速度慢
+C. 喷墨打印机打印遇水会褪色
+D. 3D打印机输出真实物体模型
+E. 热转印打印的文字长期保存不褪色</p>
+</li>
+<li class="">
+<p>下列属于非击打式打印机的有（　）
+A. 针式打印机　　B. 激光打印机　　C. 喷墨打印机　　D. 热敏打印机　　E. 字模打印机</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四判断题每题2分共20分-3">四、判断题（每题2分，共20分）<a href="#四判断题每题2分共20分-3" class="hash-link" aria-label="Direct link to 四、判断题（每题2分，共20分）" title="Direct link to 四、判断题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">显示器和显卡一起构成计算机的显示系统。（　）</li>
+<li class="">CRT显示器多用于笔记本电脑。（　）</li>
+<li class="">点距可以通过软件更改。（　）</li>
+<li class="">分辨率越高，屏幕显示内容越丰富，图像越清晰。（　）</li>
+<li class="">独立显卡需占用主板扩展插槽。（　）</li>
+<li class="">GPU是显示卡的&quot;心脏&quot;，相当于CPU在电脑中的作用。（　）</li>
+<li class="">显存频率中GDDR5的频率最低。（　）</li>
+<li class="">针式打印机是目前主流打印机。（　）</li>
+<li class="">无源音箱自身不带放大器，由声卡直接输出。（　）</li>
+<li class="">视频投影仪可以与DVD、游戏机等连接播放视频。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五简答题每题10分共20分-2">五、简答题（每题10分，共20分）<a href="#五简答题每题10分共20分-2" class="hash-link" aria-label="Direct link to 五、简答题（每题10分，共20分）" title="Direct link to 五、简答题（每题10分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">比较集成显卡和独立显卡的优缺点。</li>
+<li class="">简述针式、喷墨、激光三种打印机的特点。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="输出设备参考答案">输出设备参考答案<a href="#输出设备参考答案" class="hash-link" aria-label="Direct link to 输出设备参考答案" title="Direct link to 输出设备参考答案" translate="no">​</a></h3>
+<p><strong>填空题</strong></p>
+<ol>
+<li class="">人</li>
+<li class="">显卡</li>
+<li class="">LCD（液晶显示器）；LED（发光二极管显示器）</li>
+<li class="">液晶（LCD）</li>
+<li class="">对角线；英寸</li>
+<li class="">像素</li>
+<li class="">点距</li>
+<li class="">水平；垂直</li>
+<li class="">CPU；显示器</li>
+<li class="">NVIDIA（英伟达）；AMD（超威半导体）；N卡；A卡</li>
+<li class="">集成；独立</li>
+<li class="">图形处理器GPU；显存</li>
+<li class="">频率；位宽</li>
+<li class="">击打式；非击打式</li>
+<li class="">激光</li>
+<li class="">物体</li>
+<li class="">有源；无源</li>
+</ol>
+<p><strong>单选题</strong>
+1.C　2.B　3.C　4.B　5.B　6.B　7.C　8.A　9.C　10.A</p>
+<p><strong>多选题</strong>
+1.ABCDE　2.ABCD　3.ABCD　4.ABCDE　5.BCD</p>
+<p><strong>判断题</strong>
+1.√　2.×（CRT多用于台式机，LCD多用于笔记本）　3.×（不能用软件更改）　4.√　5.√　6.√　7.×（GDDR5最高）　8.×（激光是主流）　9.√　10.√</p>
+<p><strong>简答题</strong></p>
+<ol>
+<li class="">
+<p>集成显卡：将显示芯片、显存集成在主板上，优点功耗低、发热小、价格便宜；缺点性能略低，固化在主板上无法单独更换。独立显卡：单独做在电路板上，占用扩展插槽，优点单独显存、不占系统内存、性能好、易升级；缺点功耗大、发热大、需额外购买。</p>
+</li>
+<li class="">
+<p>针式：打印成本低、易维修、价格低，但质量差、速度慢、噪声大，多用于票据打印；喷墨：价格低、质量好、噪声低、体积小，但成本高、遇水褪色；激光：速度快、分辨率高、质量好、噪声低、不褪色，是目前主流。</p>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="豆包作业系统总线">豆包作业：系统总线<a href="#豆包作业系统总线" class="hash-link" aria-label="Direct link to 豆包作业：系统总线" title="Direct link to 豆包作业：系统总线" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空1分共20分-1">一、填空题（每空1分，共20分）<a href="#一填空题每空1分共20分-1" class="hash-link" aria-label="Direct link to 一、填空题（每空1分，共20分）" title="Direct link to 一、填空题（每空1分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">在计算机系统中，各个部件之间传送信息的________通路叫总线。</li>
+<li class="">总线的物理结构就是________。</li>
+<li class="">按位置，总线分为________总线和________总线。</li>
+<li class="">按功能，总线分为数据总线________、地址总线________和控制总线________，统称为系统总线。</li>
+<li class="">数据总线总是________向总线，其宽度和CPU的________有关。</li>
+<li class="">地址总线是CPU向________传输的单向总线。</li>
+<li class="">总线的主要性能指标有总线宽度、________和标准传输率三项。</li>
+<li class="">总线频率常用________为单位；标准传输率单位是________。</li>
+<li class="">ISA总线插槽颜色一般为________色，已被淘汰。</li>
+<li class="">PCI总线插槽颜色一般为________色，工作频率为________/________MHz。</li>
+<li class="">AGP总线是________专用的局部总线，能提供四倍于PCI的效率。</li>
+<li class="">PCI Express最高传输速率可达________GB/s以上。</li>
+<li class="">数据总线传送系统中的________或指令。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二单选题每题2分共20分-4">二、单选题（每题2分，共20分）<a href="#二单选题每题2分共20分-4" class="hash-link" aria-label="Direct link to 二、单选题（每题2分，共20分）" title="Direct link to 二、单选题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>计算机各部件之间传送信息的公共通路称为（　）
+A. 接口　　B. 总线　　C. 电缆　　D. 通道</p>
+</li>
+<li class="">
+<p>通常意义上所说的总线指的是（　）
+A. 内部总线　　B. 外部总线　　C. 芯片总线　　D. 局部总线</p>
+</li>
+<li class="">
+<p>传送地址信息的总线是（　）
+A. 数据总线DB　　B. 地址总线AB　　C. 控制总线CB　　D. 系统总线</p>
+</li>
+<li class="">
+<p>下列属于双向总线的是（　）
+A. 数据总线　　B. 地址总线　　C. 控制总线　　D. 以上都是单向</p>
+</li>
+<li class="">
+<p>总线宽度指的是（　）
+A. 总线物理长度
+B. 一次能并行传输数据的二进制位数
+C. 总线频率
+D. 传输速率</p>
+</li>
+<li class="">
+<p>ISA总线的数据传输率大约是（　）
+A. 16MB/S　　B. 33MB/S　　C. 66MB/S　　D. 10GB/s</p>
+</li>
+<li class="">
+<p>目前个人电脑中使用最广泛的总线接口是（　）
+A. ISA　　B. PCI　　C. AGP　　D. 以上都不是</p>
+</li>
+<li class="">
+<p>显示卡专用的局部总线是（　）
+A. ISA　　B. PCI　　C. AGP　　D. PCI Express</p>
+</li>
+<li class="">
+<p>新一代将全面取代PCI和AGP的总线接口是（　）
+A. ISA　　B. VESA　　C. PCI Express　　D. EISA</p>
+</li>
+<li class="">
+<p>地址总线传送的地址是识别什么的编号（　）
+A. 信息存放位置　　B. CPU型号　　C. 内存容量　　D. 设备厂家</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三多选题每题3分共15分-4">三、多选题（每题3分，共15分）<a href="#三多选题每题3分共15分-4" class="hash-link" aria-label="Direct link to 三、多选题（每题3分，共15分）" title="Direct link to 三、多选题（每题3分，共15分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>按功能，系统总线分为（　）
+A. 数据总线　　B. 地址总线　　C. 控制总线　　D. 内部总线　　E. 外部总线</p>
+</li>
+<li class="">
+<p>下列关于数据总线的说法正确的有（　）
+A. 传送数据或指令
+B. 是双向总线
+C. 宽度和CPU字长有关
+D. 是CPU向外传输的单向总线
+E. 传送控制信号</p>
+</li>
+<li class="">
+<p>总线的主要性能指标包括（　）
+A. 总线宽度　　B. 总线频率　　C. 标准传输率　　D. 总线长度　　E. 总线颜色</p>
+</li>
+<li class="">
+<p>下列关于PCI总线的说法正确的有（　）
+A. 目前个人电脑使用最广泛
+B. 插槽颜色一般为白色
+C. 工作频率33MHz/66MHz
+D. 有32bit、64bit之分
+E. 已被淘汰</p>
+</li>
+<li class="">
+<p>下列属于总线标准的有（　）
+A. ISA　　B. PCI　　C. AGP　　D. PCI Express　　E. USB</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四判断题每题2分共20分-4">四、判断题（每题2分，共20分）<a href="#四判断题每题2分共20分-4" class="hash-link" aria-label="Direct link to 四、判断题（每题2分，共20分）" title="Direct link to 四、判断题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">总线是各个部件共享的传输介质。（　）</li>
+<li class="">内部总线是计算机各部件之间的信息传输总线。（　）</li>
+<li class="">数据总线是双向总线。（　）</li>
+<li class="">地址总线是CPU向外传输的单向总线。（　）</li>
+<li class="">总线宽度和CPU字长相关。（　）</li>
+<li class="">ISA总线目前仍在广泛使用。（　）</li>
+<li class="">PCI总线插槽颜色一般为黑色。（　）</li>
+<li class="">AGP总线是显示卡专用局部总线。（　）</li>
+<li class="">PCI Express传输速率可达10GB/s以上。（　）</li>
+<li class="">控制总线传送控制信号，如读写信号、中断信号、请求信号等。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五简答题每题125分共25分-1">五、简答题（每题12.5分，共25分）<a href="#五简答题每题125分共25分-1" class="hash-link" aria-label="Direct link to 五、简答题（每题12.5分，共25分）" title="Direct link to 五、简答题（每题12.5分，共25分）" translate="no">​</a></h3>
+<ol>
+<li class="">简述按功能划分的三种系统总线及其作用。</li>
+<li class="">简述四种总线标准（ISA、PCI、AGP、PCI Express）的特点。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="系统总线参考答案">系统总线参考答案<a href="#系统总线参考答案" class="hash-link" aria-label="Direct link to 系统总线参考答案" title="Direct link to 系统总线参考答案" translate="no">​</a></h3>
+<p><strong>填空题</strong></p>
+<ol>
+<li class="">公共</li>
+<li class="">主板</li>
+<li class="">内部；外部</li>
+<li class="">DB；AB；CB</li>
+<li class="">双；字长</li>
+<li class="">外（主存储器和输入输出接口）</li>
+<li class="">总线频率</li>
+<li class="">MHz；MBps</li>
+<li class="">黑</li>
+<li class="">白；33；66</li>
+<li class="">显示卡</li>
+<li class="">10</li>
+<li class="">数据</li>
+</ol>
+<p><strong>单选题</strong>
+1.B　2.B　3.B　4.A　5.B　6.A　7.B　8.C　9.C　10.A</p>
+<p><strong>多选题</strong>
+1.ABC　2.ABC　3.ABC　4.ABCD　5.ABCD</p>
+<p><strong>判断题</strong>
+1.√　2.×（外部总线）　3.√　4.√　5.√　6.×（已淘汰）　7.×（白色）　8.√　9.√　10.√</p>
+<p><strong>简答题</strong></p>
+<ol>
+<li class="">
+<p>三种系统总线：①数据总线DB——传送数据或指令，双向，宽度与CPU字长有关；②地址总线AB——传送地址信息，CPU向外单向传输；③控制总线CB——传送控制信号（读写、中断、请求等）。</p>
+</li>
+<li class="">
+<p>①ISA：16位，16MB/S，黑色插槽，8MHz，已淘汰；②PCI：目前最广泛，白色插槽，33/66MHz，32/64bit；③AGP：显示卡专用，4倍PCI效率；④PCI Express：新一代，10GB/s以上，将取代PCI和AGP。</p>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="豆包作业主板">豆包作业：主板<a href="#豆包作业主板" class="hash-link" aria-label="Direct link to 豆包作业：主板" title="Direct link to 豆包作业：主板" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空1分共25分-3">一、填空题（每空1分，共25分）<a href="#一填空题每空1分共25分-3" class="hash-link" aria-label="Direct link to 一、填空题（每空1分，共25分）" title="Direct link to 一、填空题（每空1分，共25分）" translate="no">​</a></h3>
+<ol>
+<li class="">主板是主机箱内面积最________的一块印刷电路板，计算机各部件都通过________连接。</li>
+<li class="">主板上主要是各________和各________。</li>
+<li class="">北桥芯片主要负责________、________和________三者之间的数据交换。</li>
+<li class="">南桥芯片负责________总线之间的通信，通过北桥与CPU联系。</li>
+<li class="">BIOS全称是________，是个人电脑启动时加载的________软件。</li>
+<li class="">BIOS是固化到主板上一个________芯片上的程序。</li>
+<li class="">BIOS保存着开机后________程序和系统________程序。</li>
+<li class="">CMOS是主板上一块________的RAM芯片，用来保存________设置的数据。</li>
+<li class="">CMOS是________性的，依靠主板上的________保持时间和配置信息。</li>
+<li class="">扩展槽又称为________插槽，是主机通过系统总线与外部设备联系的通道。</li>
+<li class="">USB接口最大可以支持________个外设。</li>
+<li class="">PS/2接口仅用于连接________和________，现已几乎被USB取代。</li>
+<li class="">LPT接口一般用来连接________或________。</li>
+<li class="">SATA接口是________驱动器接口。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二单选题每题2分共20分-5">二、单选题（每题2分，共20分）<a href="#二单选题每题2分共20分-5" class="hash-link" aria-label="Direct link to 二、单选题（每题2分，共20分）" title="Direct link to 二、单选题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>计算机最基本、最重要的部件之一是（　）
+A. CPU　　B. 主板　　C. 内存　　D. 硬盘</p>
+</li>
+<li class="">
+<p>负责CPU、内存、显卡三者之间数据交换的芯片是（　）
+A. 南桥芯片　　B. 北桥芯片　　C. BIOS芯片　　D. CMOS芯片</p>
+</li>
+<li class="">
+<p>下列由南桥芯片负责的是（　）
+A. CPU与内存数据交换
+B. CPU与显卡数据交换
+C. 硬盘、USB、网卡等I/O通信
+D. 显示控制</p>
+</li>
+<li class="">
+<p>个人电脑启动时加载的第一个软件是（　）
+A. 操作系统　　B. BIOS　　C. 驱动程序　　D. 应用程序</p>
+</li>
+<li class="">
+<p>BIOS保存在哪种芯片中（　）
+A. 可读写RAM　　B. 只读ROM　　C. 硬盘　　D. 缓存</p>
+</li>
+<li class="">
+<p>关于CMOS，下列说法正确的是（　）
+A. 是固化在ROM中的程序
+B. 是可读写的RAM芯片，保存硬件参数和时间
+C. 断电后数据不会丢失
+D. 是操作系统的一部分</p>
+</li>
+<li class="">
+<p>CMOS电池失效会导致（　）
+A. 不能开机、时间不准、零部件不能识别
+B. 系统运行更快
+C. BIOS被删除
+D. 硬盘格式化</p>
+</li>
+<li class="">
+<p>现在最流行、最大支持127个外设的接口是（　）
+A. COM　　B. LPT　　C. PS/2　　D. USB</p>
+</li>
+<li class="">
+<p>仅用于连接键盘和鼠标的接口是（　）
+A. USB　　B. PS/2　　C. LPT　　D. SATA</p>
+</li>
+<li class="">
+<p>串行硬盘驱动器接口指的是（　）
+A. IDE　　B. SATA　　C. LPT　　D. COM</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三多选题每题3分共15分-5">三、多选题（每题3分，共15分）<a href="#三多选题每题3分共15分-5" class="hash-link" aria-label="Direct link to 三、多选题（每题3分，共15分）" title="Direct link to 三、多选题（每题3分，共15分）" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>下列关于主板的说法正确的有（　）
+A. 是机箱内面积最大的印刷电路板
+B. 各部件通过主板连接
+C. 主板性能对整机性能影响很大
+D. 主板上主要是芯片组和总线插槽
+E. 主板就是CPU</p>
+</li>
+<li class="">
+<p>下列属于主板主要组成部分的有（　）
+A. 北桥芯片　　B. 南桥芯片　　C. BIOS ROM芯片　　D. CMOS RAM芯片　　E. 扩展槽</p>
+</li>
+<li class="">
+<p>下列关于BIOS和CMOS的说法正确的有（　）
+A. BIOS是基本输入输出系统
+B. BIOS固化在ROM芯片中
+C. CMOS是可读写RAM芯片
+D. CMOS保存时间日期和硬件配置参数
+E. BIOS和CMOS是同一块芯片</p>
+</li>
+<li class="">
+<p>下列属于主板接口电路的有（　）
+A. IDE接口和SATA接口
+B. 串行COM接口
+C. 并行LPT接口
+D. PS/2接口
+E. USB接口</p>
+</li>
+<li class="">
+<p>下列关于南桥芯片的说法正确的有（　）
+A. 负责I/O总线之间的通信
+B. 设计用来处理低速信号
+C. 包括硬盘、USB、网卡等
+D. 通过北桥与CPU联系
+E. 负责CPU、内存、显卡之间的数据交换</p>
+</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="四判断题每题2分共20分-5">四、判断题（每题2分，共20分）<a href="#四判断题每题2分共20分-5" class="hash-link" aria-label="Direct link to 四、判断题（每题2分，共20分）" title="Direct link to 四、判断题（每题2分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">主板是主机箱内面积最大的印刷电路板。（　）</li>
+<li class="">北桥芯片在芯片组中起主导作用，工作频率较高。（　）</li>
+<li class="">南桥芯片负责CPU、内存、显卡之间的数据交换。（　）</li>
+<li class="">BIOS是个人电脑启动时加载的第一个软件。（　）</li>
+<li class="">CMOS是只读存储器。（　）</li>
+<li class="">CMOS中的时间和日期依靠电池保持。（　）</li>
+<li class="">扩展槽又称总线插槽，显卡、声卡等都插在扩展槽内。（　）</li>
+<li class="">USB接口最大支持127个外设。（　）</li>
+<li class="">PS/2接口现在已被USB接口广泛取代。（　）</li>
+<li class="">LPT接口一般用于连接串行鼠标和外置Modem。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="五简答题每题10分共20分-3">五、简答题（每题10分，共20分）<a href="#五简答题每题10分共20分-3" class="hash-link" aria-label="Direct link to 五、简答题（每题10分，共20分）" title="Direct link to 五、简答题（每题10分，共20分）" translate="no">​</a></h3>
+<ol>
+<li class="">简述北桥芯片和南桥芯片的功能区别。</li>
+<li class="">简述BIOS和CMOS的区别与联系。</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主板参考答案">主板参考答案<a href="#主板参考答案" class="hash-link" aria-label="Direct link to 主板参考答案" title="Direct link to 主板参考答案" translate="no">​</a></h3>
+<p><strong>填空题</strong></p>
+<ol>
+<li class="">大；主板</li>
+<li class="">芯片组；总线插槽</li>
+<li class="">CPU；内存；显卡</li>
+<li class="">I/O</li>
+<li class="">基本输入输出系统；第一个</li>
+<li class="">ROM</li>
+<li class="">自检；自启动</li>
+<li class="">可读写；BIOS</li>
+<li class="">易失；电池</li>
+<li class="">总线</li>
+<li class="">127</li>
+<li class="">键盘；鼠标</li>
+<li class="">打印机；扫描仪</li>
+<li class="">串行硬盘</li>
+</ol>
+<p><strong>单选题</strong>
+1.B　2.B　3.C　4.B　5.B　6.B　7.A　8.D　9.B　10.B</p>
+<p><strong>多选题</strong>
+1.ABCD　2.ABCDE　3.ABCD　4.ABCDE　5.ABCD</p>
+<p><strong>判断题</strong>
+1.√　2.√　3.×（这是北桥功能）　4.√　5.×（CMOS是可读写RAM）　6.√　7.√　8.√　9.√　10.×（这是COM接口，LPT连打印机/扫描仪）</p>
+<p><strong>简答题</strong></p>
+<ol>
+<li class="">
+<p>北桥：系统控制芯片，负责CPU、内存、显卡三者间数据交换，在芯片组中起主导作用，频率较高；南桥：负责I/O总线通信，处理低速信号，连接硬盘、USB、网卡等，通过北桥与CPU联系。</p>
+</li>
+<li class="">
+<p>区别：BIOS是固化在ROM中的程序，是基本输入输出系统，负责硬件设置和控制，只读；CMOS是可读写RAM芯片，用来保存BIOS设置的硬件参数、时间日期，易失，靠电池供电。联系：BIOS中的&quot;系统设置程序&quot;用来设置BIOS参数，设置结果保存在CMOS中；计算机在BIOS控制下启动操作系统，CMOS提供具体配置信息。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="任务检测">任务检测<a href="#任务检测" class="hash-link" aria-label="Direct link to 任务检测" title="Direct link to 任务检测" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="一选择题">一、选择题<a href="#一选择题" class="hash-link" aria-label="Direct link to 一、选择题" title="Direct link to 一、选择题" translate="no">​</a></h3>
+<p><strong>1.</strong> 微型计算机配置高速缓冲存储器是为了解决（　）</p>
+<ul>
+<li class="">A. 主机与外设之间速度不匹配问题</li>
+<li class="">B. CPU与辅助存储器之间速度不匹配问题</li>
+<li class="">C. 内存储器与辅助存储器之间速度不匹配问题</li>
+<li class="">D. CPU与内存储器之间速度不匹配问题</li>
+</ul>
+<p><strong>2.</strong> 下面关于显示器的4条叙述中，有错误的一条是（　）</p>
+<ul>
+<li class="">A. 显示器的分辨率与微处理器的型号有关</li>
+<li class="">B. 显示器的分辨率为1024×768，表示一屏幕水平方向每行有1024个点，垂直方向每列有768个点</li>
+<li class="">C. 显示卡是驱动、控制计算机显示器以显示文本、图形、图像信息的硬件装置</li>
+<li class="">D. 像素是显示屏上能独立赋予颜色和亮度的最小单位</li>
+</ul>
+<p><strong>3.</strong> 下列叙述中，正确的是（　）</p>
+<ul>
+<li class="">A. 激光打印机属于击打式打印机</li>
+<li class="">B. 计算机运算速度可以用MIPS来表示</li>
+<li class="">C. 磁盘驱动器是存储介质</li>
+<li class="">D. CAI软件属于系统软件</li>
+</ul>
+<p><strong>4.</strong> 下列设备组中，完全属于计算机输出设备的一组是（　）</p>
+<ul>
+<li class="">A. 喷墨式打印机，显示器，键盘</li>
+<li class="">B. 激光打印机，键盘，鼠标器</li>
+<li class="">C. 键盘，鼠标器，扫描仪</li>
+<li class="">D. 打印机，绘图仪，显示器</li>
+</ul>
+<p><strong>5.</strong> 在微型计算机系统中，I/O接口位于（　）</p>
+<ul>
+<li class="">A. 主机和总线之间</li>
+<li class="">B. 主机和I/O设备之间</li>
+<li class="">C. 总线和I/O设备之间</li>
+<li class="">D. CPU和内存设备之间</li>
+</ul>
+<p><strong>6.</strong> 度量中央处理器CPU时钟主频的单位是（　）</p>
+<ul>
+<li class="">A. MIPS</li>
+<li class="">B. MB</li>
+<li class="">C. MHz或GHz</li>
+<li class="">D. Mbps</li>
+</ul>
+<p><strong>7.</strong> 在计算机中的BIOS是（　）</p>
+<ul>
+<li class="">A. RAM芯片</li>
+<li class="">B. ROM芯片</li>
+<li class="">C. 内存条</li>
+<li class="">D. 接口板</li>
+</ul>
+<p><strong>8.</strong> 计算机的系统总线是计算机各部件间传递信息的公共通道，它分为（　）</p>
+<ul>
+<li class="">A. 数据总线和控制总线</li>
+<li class="">B. 地址总线和数据总线</li>
+<li class="">C. 数据总线、控制总线和地址总线</li>
+<li class="">D. 地址总线和控制总线</li>
+</ul>
+<p><strong>9.</strong> CMOS用来保存（　）</p>
+<ul>
+<li class="">A. 操作系统</li>
+<li class="">B. 操作人员对某些系统参数的设定</li>
+<li class="">C. 应用软件</li>
+<li class="">D. 程序设计语言</li>
+</ul>
+<p><strong>10.</strong> 微机主板未插（　）、内存、控制卡时称为裸板</p>
+<ul>
+<li class="">A. BIOS芯片</li>
+<li class="">B. CPU</li>
+<li class="">C. 控制芯片组</li>
+<li class="">D. 硬盘</li>
+</ul>
+<p><strong>11.</strong> 微型计算机中的外存储器，现在普遍采用（　）</p>
+<ul>
+<li class="">A. 电子管存储器</li>
+<li class="">B. 磁表面存储器</li>
+<li class="">C. 半导体存储器</li>
+<li class="">D. 磁芯存储器</li>
+</ul>
+<p><strong>12.</strong> 微型计算机中的内存储器，通常采用（　）</p>
+<ul>
+<li class="">A. 光存储器</li>
+<li class="">B. 磁表面存储器</li>
+<li class="">C. 半导体存储器</li>
+<li class="">D. 磁芯存储器</li>
+</ul>
+<p><strong>13.</strong> 计算机系统的&quot;主机&quot;由（　）构成</p>
+<ul>
+<li class="">A. CPU，内存储器及辅助存储器</li>
+<li class="">B. CPU和内存储器</li>
+<li class="">C. 存放在主机箱内部的全部器件</li>
+<li class="">D. 计算机的主板上的全部器件</li>
+</ul>
+<p><strong>14.</strong> 连接计算机系统结构的五大基本组成部件一般通过（　）</p>
+<ul>
+<li class="">A. 适配器</li>
+<li class="">B. 电缆</li>
+<li class="">C. 中继器</li>
+<li class="">D. 总线</li>
+</ul>
+<p><strong>15.</strong> 下列计算机接口中，可以直接进行&quot;插拔&quot;操作的是（　）</p>
+<ul>
+<li class="">A. COM</li>
+<li class="">B. LPT</li>
+<li class="">C. PCI</li>
+<li class="">D. USB</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="二判断题">二、判断题<a href="#二判断题" class="hash-link" aria-label="Direct link to 二、判断题" title="Direct link to 二、判断题" translate="no">​</a></h3>
+<ol>
+<li class="">通常硬盘安装在主机箱内，因此它属于主存储器。（　）</li>
+<li class="">在插接鼠标时，鼠标的USB接口只能插到主机后置面板上的对应接口。（　）</li>
+<li class="">CPU的主频由外频和倍频决定。（　）</li>
+<li class="">计算机中的CMOS是位于主板上的RAM芯片。（　）</li>
+<li class="">在显示器中，点距越小，分辨率越低，图像越清晰。（　）</li>
+</ol>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="三填空题">三、填空题<a href="#三填空题" class="hash-link" aria-label="Direct link to 三、填空题" title="Direct link to 三、填空题" translate="no">​</a></h3>
+<ol>
+<li class="">磁盘驱动器既是________设备，又是________设备。</li>
+<li class="">在计算机显示器参数中，参数640×800、800×600等表示显示器的________。</li>
+<li class="">微型计算机的硬件系统主要是由________和________两部分组成的。</li>
+<li class="">U盘、硬盘、移动硬盘都是计算机的________存储器。</li>
+<li class="">硬盘经格式化后，都可以划分出磁道、________、柱面等结构。</li>
+</ol>
+<p>以下是两张图片中全部试题的参考答案：</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="参考答案">参考答案<a href="#参考答案" class="hash-link" aria-label="Direct link to 参考答案" title="Direct link to 参考答案" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="一选择题-1">一、选择题<a href="#一选择题-1" class="hash-link" aria-label="Direct link to 一、选择题" title="Direct link to 一、选择题" translate="no">​</a></h4>
+<table><thead><tr><th style="text-align:center">题号</th><th style="text-align:center">答案</th><th style="text-align:center">题号</th><th style="text-align:center">答案</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center"><strong>D</strong></td><td style="text-align:center">9</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:center">2</td><td style="text-align:center"><strong>A</strong></td><td style="text-align:center">10</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center"><strong>B</strong></td><td style="text-align:center">11</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center"><strong>D</strong></td><td style="text-align:center">12</td><td style="text-align:center"><strong>C</strong></td></tr><tr><td style="text-align:center">5</td><td style="text-align:center"><strong>C</strong></td><td style="text-align:center">13</td><td style="text-align:center"><strong>B</strong></td></tr><tr><td style="text-align:center">6</td><td style="text-align:center"><strong>C</strong></td><td style="text-align:center">14</td><td style="text-align:center"><strong>D</strong></td></tr><tr><td style="text-align:center">7</td><td style="text-align:center"><strong>B</strong></td><td style="text-align:center">15</td><td style="text-align:center"><strong>D</strong></td></tr><tr><td style="text-align:center">8</td><td style="text-align:center"><strong>C</strong></td><td style="text-align:center"></td><td style="text-align:center"></td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="选择题解析">选择题解析<a href="#选择题解析" class="hash-link" aria-label="Direct link to 选择题解析" title="Direct link to 选择题解析" translate="no">​</a></h4>
+<ol>
+<li class=""><strong>D</strong> —— 高速缓冲存储器（Cache）解决CPU与内存储器之间速度不匹配问题。</li>
+<li class=""><strong>A</strong> —— 显示器分辨率由显示器本身决定，与微处理器型号无关；B、C、D均正确。</li>
+<li class=""><strong>B</strong> —— MIPS（每秒百万条指令）用于表示运算速度。激光打印机是非击打式（A错）；磁盘驱动器是设备而非存储介质（C错）；CAI是应用软件（D错）。</li>
+<li class=""><strong>D</strong> —— 打印机、绘图仪、显示器均为输出设备；键盘、鼠标、扫描仪为输入设备。</li>
+<li class=""><strong>C</strong> —— I/O接口位于总线和I/O设备之间。</li>
+<li class=""><strong>C</strong> —— CPU主频单位是MHz或GHz。</li>
+<li class=""><strong>B</strong> —— BIOS固化在ROM芯片中。</li>
+<li class=""><strong>C</strong> —— 系统总线分为数据总线、地址总线、控制总线。</li>
+<li class=""><strong>B</strong> —— CMOS保存操作人员对系统参数的设定（时间、日期、硬件配置等）。</li>
+<li class=""><strong>B</strong> —— 未插CPU、内存、控制卡的主板称为裸板。</li>
+<li class=""><strong>B</strong> —— 外存储器普遍采用磁表面存储器（机械硬盘）。</li>
+<li class=""><strong>C</strong> —— 内存储器采用半导体存储器（RAM/ROM）。</li>
+<li class=""><strong>B</strong> —— 主机由CPU和内存储器构成。</li>
+<li class=""><strong>D</strong> —— 五大基本部件通过总线连接。</li>
+<li class=""><strong>D</strong> —— USB支持热插拔，可直接插拔。</li>
+</ol>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="二判断题-1">二、判断题<a href="#二判断题-1" class="hash-link" aria-label="Direct link to 二、判断题" title="Direct link to 二、判断题" translate="no">​</a></h4>
+<table><thead><tr><th style="text-align:center">题号</th><th style="text-align:center">答案</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td style="text-align:center"><strong>×</strong></td></tr><tr><td style="text-align:center">2</td><td style="text-align:center"><strong>×</strong></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center"><strong>√</strong></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center"><strong>√</strong></td></tr><tr><td style="text-align:center">5</td><td style="text-align:center"><strong>×</strong></td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="判断题解析">判断题解析<a href="#判断题解析" class="hash-link" aria-label="Direct link to 判断题解析" title="Direct link to 判断题解析" translate="no">​</a></h4>
+<ol>
+<li class=""><strong>×</strong> —— 硬盘虽安装在主机箱内，但属于外存（辅存），不是主存储器。</li>
+<li class=""><strong>×</strong> —— USB接口可插在主机前置或后置任意USB口，并非只能插后置面板。</li>
+<li class=""><strong>√</strong> —— CPU主频 = 外频 × 倍频。</li>
+<li class=""><strong>√</strong> —— CMOS是主板上的可读写RAM芯片。</li>
+<li class=""><strong>×</strong> —— 点距越小，分辨率越<strong>高</strong>，图像越清晰，不是越低。</li>
+</ol>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="三填空题-1">三、填空题<a href="#三填空题-1" class="hash-link" aria-label="Direct link to 三、填空题" title="Direct link to 三、填空题" translate="no">​</a></h4>
+<table><thead><tr><th style="text-align:center">题号</th><th>答案</th></tr></thead><tbody><tr><td style="text-align:center">1</td><td><strong>输入</strong>；<strong>输出</strong></td></tr><tr><td style="text-align:center">2</td><td><strong>分辨率</strong></td></tr><tr><td style="text-align:center">3</td><td><strong>主机</strong>；<strong>外部设备</strong></td></tr><tr><td style="text-align:center">4</td><td><strong>外（辅助）</strong></td></tr><tr><td style="text-align:center">5</td><td><strong>扇区</strong></td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="填空题解析">填空题解析<a href="#填空题解析" class="hash-link" aria-label="Direct link to 填空题解析" title="Direct link to 填空题解析" translate="no">​</a></h4>
+<ol>
+<li class="">磁盘驱动器既可读盘（输入）又可写盘（输出），因此既是输入设备又是输出设备。</li>
+<li class="">640×800、800×600等参数表示显示器的<strong>显示分辨率</strong>。</li>
+<li class="">微型计算机硬件系统由<strong>主机</strong>和<strong>外部设备</strong>两部分组成。</li>
+<li class="">U盘、硬盘、移动硬盘都属于<strong>外（辅助）存储器</strong>。</li>
+<li class="">硬盘格式化后可划分出磁道、<strong>扇区</strong>、柱面等物理结构。</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="其他作业">其他作业<a href="#其他作业" class="hash-link" aria-label="Direct link to 其他作业" title="Direct link to 其他作业" translate="no">​</a></h2></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/computer-basics/proj2/task4.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/computer-basics/proj2/task3"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">任务三 计算机的工作原理</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/computer-basics/proj2/task5"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">任务五 微型计算机的主要性能指标</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#知识点" class="table-of-contents__link toc-highlight">知识点</a><ul><li><a href="#任务描述" class="table-of-contents__link toc-highlight">任务描述</a></li><li><a href="#预备知识" class="table-of-contents__link toc-highlight">预备知识</a></li><li><a href="#微型计算机硬件组成树形图" class="table-of-contents__link toc-highlight">微型计算机硬件组成（树形图）</a></li><li><a href="#一主机" class="table-of-contents__link toc-highlight">一、主机</a></li><li><a href="#二外部设备" class="table-of-contents__link toc-highlight">二、外部设备</a></li><li><a href="#知识扩展" class="table-of-contents__link toc-highlight">知识扩展</a></li></ul></li><li><a href="#豆包作业主机" class="table-of-contents__link toc-highlight">豆包作业：主机</a><ul><li><a href="#一填空题每空1分共25分" class="table-of-contents__link toc-highlight">一、填空题（每空1分，共25分）</a></li><li><a href="#二单选题每题2分共20分" class="table-of-contents__link toc-highlight">二、单选题（每题2分，共20分）</a></li><li><a href="#三多选题每题3分共15分" class="table-of-contents__link toc-highlight">三、多选题（每题3分，共15分）</a></li><li><a href="#四判断题每题2分共20分" class="table-of-contents__link toc-highlight">四、判断题（每题2分，共20分）</a></li><li><a href="#五简答题每题10分共20分" class="table-of-contents__link toc-highlight">五、简答题（每题10分，共20分）</a></li><li><a href="#第一套参考答案" class="table-of-contents__link toc-highlight">第一套参考答案</a></li></ul></li><li><a href="#豆包作业外部存储器" class="table-of-contents__link toc-highlight">豆包作业：外部存储器</a><ul><li><a href="#一填空题每空1分共25分-1" class="table-of-contents__link toc-highlight">一、填空题（每空1分，共25分）</a></li><li><a href="#二单选题每题2分共20分-1" class="table-of-contents__link toc-highlight">二、单选题（每题2分，共20分）</a></li><li><a href="#三多选题每题3分共15分-1" class="table-of-contents__link toc-highlight">三、多选题（每题3分，共15分）</a></li><li><a href="#四判断题每题2分共20分-1" class="table-of-contents__link toc-highlight">四、判断题（每题2分，共20分）</a></li><li><a href="#五简答题每题10分共20分-1" class="table-of-contents__link toc-highlight">五、简答题（每题10分，共20分）</a></li><li><a href="#第二套参考答案" class="table-of-contents__link toc-highlight">第二套参考答案</a></li></ul></li><li><a href="#豆包作业输入设备" class="table-of-contents__link toc-highlight">豆包作业：输入设备</a><ul><li><a href="#一填空题每空1分共20分" class="table-of-contents__link toc-highlight">一、填空题（每空1分，共20分）</a></li><li><a href="#二单选题每题2分共20分-2" class="table-of-contents__link toc-highlight">二、单选题（每题2分，共20分）</a></li><li><a href="#三多选题每题3分共15分-2" class="table-of-contents__link toc-highlight">三、多选题（每题3分，共15分）</a></li><li><a href="#四判断题每题2分共20分-2" class="table-of-contents__link toc-highlight">四、判断题（每题2分，共20分）</a></li><li><a href="#五简答题每题125分共25分" class="table-of-contents__link toc-highlight">五、简答题（每题12.5分，共25分）</a></li><li><a href="#第三套参考答案" class="table-of-contents__link toc-highlight">第三套参考答案</a></li></ul></li><li><a href="#豆包作业输出设备" class="table-of-contents__link toc-highlight">豆包作业：输出设备</a><ul><li><a href="#一填空题每空1分共25分-2" class="table-of-contents__link toc-highlight">一、填空题（每空1分，共25分）</a></li><li><a href="#二单选题每题2分共20分-3" class="table-of-contents__link toc-highlight">二、单选题（每题2分，共20分）</a></li><li><a href="#三多选题每题3分共15分-3" class="table-of-contents__link toc-highlight">三、多选题（每题3分，共15分）</a></li><li><a href="#四判断题每题2分共20分-3" class="table-of-contents__link toc-highlight">四、判断题（每题2分，共20分）</a></li><li><a href="#五简答题每题10分共20分-2" class="table-of-contents__link toc-highlight">五、简答题（每题10分，共20分）</a></li><li><a href="#输出设备参考答案" class="table-of-contents__link toc-highlight">输出设备参考答案</a></li></ul></li><li><a href="#豆包作业系统总线" class="table-of-contents__link toc-highlight">豆包作业：系统总线</a><ul><li><a href="#一填空题每空1分共20分-1" class="table-of-contents__link toc-highlight">一、填空题（每空1分，共20分）</a></li><li><a href="#二单选题每题2分共20分-4" class="table-of-contents__link toc-highlight">二、单选题（每题2分，共20分）</a></li><li><a href="#三多选题每题3分共15分-4" class="table-of-contents__link toc-highlight">三、多选题（每题3分，共15分）</a></li><li><a href="#四判断题每题2分共20分-4" class="table-of-contents__link toc-highlight">四、判断题（每题2分，共20分）</a></li><li><a href="#五简答题每题125分共25分-1" class="table-of-contents__link toc-highlight">五、简答题（每题12.5分，共25分）</a></li><li><a href="#系统总线参考答案" class="table-of-contents__link toc-highlight">系统总线参考答案</a></li></ul></li><li><a href="#豆包作业主板" class="table-of-contents__link toc-highlight">豆包作业：主板</a><ul><li><a href="#一填空题每空1分共25分-3" class="table-of-contents__link toc-highlight">一、填空题（每空1分，共25分）</a></li><li><a href="#二单选题每题2分共20分-5" class="table-of-contents__link toc-highlight">二、单选题（每题2分，共20分）</a></li><li><a href="#三多选题每题3分共15分-5" class="table-of-contents__link toc-highlight">三、多选题（每题3分，共15分）</a></li><li><a href="#四判断题每题2分共20分-5" class="table-of-contents__link toc-highlight">四、判断题（每题2分，共20分）</a></li><li><a href="#五简答题每题10分共20分-3" class="table-of-contents__link toc-highlight">五、简答题（每题10分，共20分）</a></li><li><a href="#主板参考答案" class="table-of-contents__link toc-highlight">主板参考答案</a></li></ul></li><li><a href="#任务检测" class="table-of-contents__link toc-highlight">任务检测</a><ul><li><a href="#一选择题" class="table-of-contents__link toc-highlight">一、选择题</a></li><li><a href="#二判断题" class="table-of-contents__link toc-highlight">二、判断题</a></li><li><a href="#三填空题" class="table-of-contents__link toc-highlight">三、填空题</a></li><li><a href="#参考答案" class="table-of-contents__link toc-highlight">参考答案</a></li></ul></li><li><a href="#其他作业" class="table-of-contents__link toc-highlight">其他作业</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
