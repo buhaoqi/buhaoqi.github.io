@@ -155,7 +155,7 @@ const sidebars = {
             'csharp/ch03/task2/variable', // 变量
           ],
         },
-        // 任务三 运算符与表达式（二级分类，带子项）
+        // 任务三 运算符与表达式（二级分类，带子项。）
         {
           type: 'category',
           label: '任务三 运算符与表达式',
@@ -779,8 +779,13 @@ const sidebars = {
   netWorkBasicSidebar: [
     {
       type: 'doc',
-      id: 'ninthit/index',  // 
+      id: 'network-basics/index',  // 
       label: '考试大纲',
+    },
+    {
+      type: 'doc',
+      id: 'network-basics/index2',  // 
+      label: '考纲对比',
     },
     // 模块一：计算机网络概述
     {
@@ -789,16 +794,16 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit01/overview', // 概述
+        'network-basics/unit01/overview', // 概述
          {
           type: 'category',
           label: '项目一 网络发展与基本概念',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project1/task1', // 
-            'ninthit/unit01/project1/task2', // 
-            'ninthit/unit01/project1/task3', // 
+            'network-basics/unit01/project1/task1', // 
+            'network-basics/unit01/project1/task2', // 
+            'network-basics/unit01/project1/task3', // 
           ],
         },
         {
@@ -807,8 +812,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project2/task1', // 
-            'ninthit/unit01/project2/task2', // 
+            'network-basics/unit01/project2/task1', // 
+            'network-basics/unit01/project2/task2', // 
           ],
         }, 
         {
@@ -817,8 +822,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project3/task1', // 
-            'ninthit/unit01/project3/task2', // 
+            'network-basics/unit01/project3/task1', // 
+            'network-basics/unit01/project3/task2', // 
           ],
         }, 
         {
@@ -827,8 +832,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project4/task1', // 
-            'ninthit/unit01/project4/task2', // 
+            'network-basics/unit01/project4/task1', // 
+            'network-basics/unit01/project4/task2', // 
           ],
         }, // 任务四 计算机的前沿技术
       ],
@@ -840,11 +845,11 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit02/overview', // 概述
-        'ninthit/unit02/project1', // 任务一 数据通信的基本概念
-        'ninthit/unit02/project2', // 任务二 数据传输方式
-        'ninthit/unit02/project3', // 任务三 数据交换方式
-        'ninthit/unit02/project4', // 任务四 数据通信的性能指标
+        'network-basics/unit02/overview', // 概述
+        'network-basics/unit02/project1', // 任务一 数据通信的基本概念
+        'network-basics/unit02/project2', // 任务二 数据传输方式
+        'network-basics/unit02/project3', // 任务三 数据交换方式
+        'network-basics/unit02/project4', // 任务四 数据通信的性能指标
       ],
     },
     // 模块三: OSI参考模型体系
@@ -854,10 +859,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块四 TCP/IP参考模型体系
@@ -867,10 +872,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块五 局域网技术
@@ -880,10 +885,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块六 局域网组网技术
@@ -893,10 +898,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块七 广域网技术概述
@@ -906,10 +911,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块八 Internet技术与应用
@@ -919,10 +924,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块九 网络安全
@@ -932,10 +937,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
     // 模块十 网络管理与结构化布线
@@ -945,10 +950,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit03/overview', // 概述
+        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
+        'network-basics/unit03/project2', // 任务二 网络协议栈
+        'network-basics/unit03/project3', // 任务三 网络拓扑结构
       ],
     },
   ],
@@ -959,173 +964,208 @@ const sidebars = {
       id: 'ninthit/index',  // 
       label: '考试大纲',
     },
-    // 模块一：计算机网络概述
+    {
+      type: 'doc',
+      id: 'ninthit/index2',  // 
+      label: '考纲新变化',
+    },
+    // 第一章 信息技术基础知识
     {
       type: 'category',
-      label: '模块一 计算机网络概述',
+      label: '第一章 信息技术基础知识',
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit01/overview', // 概述
-         {
+        {
           type: 'category',
-          label: '项目一 网络发展与基本概念',
+          label: '第一节 信息技术基础知识',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project1/task1', // 
-            'ninthit/unit01/project1/task2', // 
-            'ninthit/unit01/project1/task3', // 
+            'ninthit/chapter01/section1/task1', // 
+            'ninthit/chapter01/section1/task2', // 
+            'ninthit/chapter01/section1/task3', // 
           ],
         },
         {
           type: 'category',
-          label: '项目二 网络的分类与拓扑结构',
+          label: '第二节 数据、信息、知识',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project2/task1', // 
-            'ninthit/unit01/project2/task2', // 
+            'ninthit/chapter01/section2/task1', // 
+            'ninthit/chapter01/section2/task2', // 
+            'ninthit/chapter01/section2/task3', // 
+          ],
+        },
+      ],
+    },
+    // 第二章 数据与编码
+    {
+      type: 'category',
+      label: '第二章 数据与编码',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: '第一节 数字化及数据编码',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/chapter02/section1/task1', // 
+            'ninthit/chapter02/section1/task2', // 
+            'ninthit/chapter02/section1/task3', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '第二节 数据采集与整理',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/chapter02/section2/task1', // 
+            'ninthit/chapter02/section2/task2', // 
+            'ninthit/chapter02/section2/task3', // 
+          ],
+        },
+      ],
+    },
+    // 第三章 算法基础知识与编程
+    {
+      type: 'category',
+      label: '第三章 算法基础知识与编程',
+      collapsible: true,
+      collapsed: false,
+      items: [
+            'ninthit/chapter03/section1', // 
+            'ninthit/chapter03/section2', //
+            {
+              type: 'category',
+              label: '第三节 程序设计基础知识',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                'ninthit/chapter03/section3/task1', // 
+                'ninthit/chapter03/section3/task2', // 
+                'ninthit/chapter03/section3/task3', // 
+                'ninthit/chapter03/section3/task4', // 
+                'ninthit/chapter03/section3/task5', // 
+              ],
+            }, 
+            'ninthit/chapter03/section4', // 
+      ],
+    },
+    // 第四章 数据结构
+    {
+      type: 'category',
+      label: '第四章 数据结构',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: '第一节 数据结构与数据类型',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/chapter04/section1/task1', // 
+            'ninthit/chapter04/section1/task2', // 
           ],
         }, 
         {
           type: 'category',
-          label: '项目三 计算机网络传输介质',
+          label: '第二节 数据结构与数据类型',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/unit01/project3/task1', // 
-            'ninthit/unit01/project3/task2', // 
+            'ninthit/chapter04/section2/task1', // 
+            'ninthit/chapter04/section2/task2', // 
+            'ninthit/chapter04/section2/task3', // 
+            'ninthit/chapter04/section2/task4', // 
+            'ninthit/chapter04/section2/task5', // 
+            'ninthit/chapter04/section2/task6', // 
           ],
-        }, 
+        },  
+      ],
+    },
+    // 第五章 信息系统与社会
+    {
+      type: 'category',
+      label: '第五章 信息系统与社会',
+      collapsible: true,
+      collapsed: false,
+      items: [
         {
-          type: 'category',
-          label: '项目四 网络的组成功能应用',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'ninthit/unit01/project4/task1', // 
-            'ninthit/unit01/project4/task2', // 
-          ],
-        }, // 任务四 计算机的前沿技术
+              type: 'category',
+              label: '第一节 信息系统的组成与功能',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                'ninthit/chapter05/section1/task1', // 
+                'ninthit/chapter05/section1/task2', // 
+                'ninthit/chapter05/section1/task3', // 
+                'ninthit/chapter05/section1/task4', // 
+              ],
+            }, 
+        {
+              type: 'category',
+              label: '第二节 网络基础知识与组建',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                'ninthit/chapter05/section2/task1', // 
+                'ninthit/chapter05/section2/task2', // 
+                'ninthit/chapter05/section2/task3', // 
+              ],
+            }, 
+            {
+              type: 'category',
+              label: '第三节 信息系统的安全',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                'ninthit/chapter05/section3/task1', // 
+                'ninthit/chapter05/section3/task2', // 
+                'ninthit/chapter05/section3/task3', // 
+                'ninthit/chapter05/section3/task4', // 
+                'ninthit/chapter05/section3/task5', // 
+              ],
+            },  
       ],
     },
-    // 模块二：数据通信基础
+    // 第六章 信息处理
     {
       type: 'category',
-      label: '模块二：数据通信基础',
+      label: '第六章 信息处理',
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit02/overview', // 概述
-        'ninthit/unit02/project1', // 任务一 数据通信的基本概念
-        'ninthit/unit02/project2', // 任务二 数据传输方式
-        'ninthit/unit02/project3', // 任务三 数据交换方式
-        'ninthit/unit02/project4', // 任务四 数据通信的性能指标
+        'ninthit/chapter06/section1', // 
+        'ninthit/chapter06/section2', //
       ],
     },
-    // 模块三: OSI参考模型体系
+    // 第七章 人工智能基础知识
     {
       type: 'category',
-      label: '模块三 OSI参考模型体系',
+      label: '第七章 人工智能基础知识',
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'ninthit/chapter07/section1', // 
+        'ninthit/chapter07/section2', //
       ],
     },
-    // 模块四 TCP/IP参考模型体系
+    // 第八章 信息社会责任
     {
       type: 'category',
-      label: '模块四 TCP/IP参考模型体系',
+      label: '第八章 信息社会责任',
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
-      ],
-    },
-    // 模块五 局域网技术
-    {
-      type: 'category',
-      label: '模块五 局域网技术',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
-      ],
-    },
-    // 模块六 局域网组网技术
-    {
-      type: 'category',
-      label: '模块六 局域网组网技术',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
-      ],
-    },
-    // 模块七 广域网技术概述
-    {
-      type: 'category',
-      label: '模块七 广域网技术概述',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
-      ],
-    },
-    // 模块八 Internet技术与应用
-    {
-      type: 'category',
-      label: '模块八 Internet技术与应用',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
-      ],
-    },
-    // 模块九 网络安全
-    {
-      type: 'category',
-      label: '模块九 网络安全',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
-      ],
-    },
-    // 模块十 网络管理与结构化布线
-    {
-      type: 'category',
-      label: '模块十 网络管理与结构化布线',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/unit03/overview', // 概述
-        'ninthit/unit03/project1', // 任务一 网络体系结构的基本概念
-        'ninthit/unit03/project2', // 任务二 网络协议栈
-        'ninthit/unit03/project3', // 任务三 网络拓扑结构
+        'ninthit/chapter08/section1', // 
+        'ninthit/chapter08/section2', //
+        'ninthit/chapter08/section3', // 
       ],
     },
   ],

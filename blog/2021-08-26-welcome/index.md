@@ -9,7 +9,7 @@ tags: [facebook, hello, docusaurus]
 
 Here are a few tips you might find useful.
 
-<!-- truncate -->
+
 
 Simply add Markdown files (or folders) to the `blog` directory.
 
@@ -22,7 +22,9 @@ The blog post date can be extracted from filenames, such as:
 
 A blog post folder can be convenient to co-locate blog post images:
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
+
+
+<img alt="Docusaurus Plushie" src="./docusaurus-plushie-banner.jpeg" />
 
 The blog supports tags as well!
 
