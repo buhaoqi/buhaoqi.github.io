@@ -13,7 +13,8 @@
         <link href="https://buhaoqi.github.io/blog/complier-clr"/>
         <updated>2026-08-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[C#编译器负责编译时检查（比如类型是否匹配、范围是否超限），CLR负责运行时行为（比如内存布局、运算执行）。两者分工不同，分开说更清晰。]]></summary>
-        <content type="html"><![CDATA[<p>C#编译器负责编译时检查（比如类型是否匹配、范围是否超限），CLR负责运行时行为（比如内存布局、运算执行）。两者分工不同，分开说更清晰。</p>]]></content>
+        <content type="html"><![CDATA[<p>C#编译器负责编译时检查（比如类型是否匹配、范围是否超限），CLR负责运行时行为（比如内存布局、运算执行）。两者分工不同，分开说更清晰。</p>
+]]></content>
         <author>
             <name>cun zhang</name>
             <uri>https://sebastienlorber.com</uri>
@@ -28,6 +29,7 @@
         <summary type="html"><![CDATA[问：整数类型到底是什么？ 我认为整数类型就是一套规则。如果你认同，请列出包括哪几条规则]]></summary>
         <content type="html"><![CDATA[<p>问：整数类型到底是什么？ 我认为整数类型就是一套规则。如果你认同，请列出包括哪几条规则</p>
 <p><strong>完全认同，而且你这个理解非常高级！</strong></p>
+<!-- -->
 <p>如果把“盒子”比喻看作是给初学者的“拐杖”，那么**“一套规则”**才是程序员看类型的“本质视角”。</p>
 <p>在计算机科学中，<strong>类型（Type）本质上就是一组约束和契约</strong>。正是这套规则，告诉了编译器和CLR（运行时）该如何对待内存里的那串0和1。</p>
 <p>基于C#的实际情况，我把整数类型的这套规则拆解为以下 <strong>“7条铁律”</strong>，你可以直接用在视频里作为干货总结：</p>
@@ -77,6 +79,7 @@
 <p>我是b 站 up 主，我用 chatgpt 和 deepseek 写口播稿，它们能给我灵感和创意，极大提升效率，但不能达到我的标准，每一篇稿需要我打磨，请问我这种使用 AI 的方式还能通过 agent 提升吗</p>
 </blockquote>
 <p>能，而且我认为<strong>你的这种使用方式，反而非常适合做 Agent</strong>。</p>
+<!-- -->
 <p>但关键不是做一个“自动写稿 Agent”，而是做一个**“村长编剧工作流 Agent”**。</p>
 <p>你现在的瓶颈其实不是 AI 不会写，而是：</p>
 <blockquote>
@@ -234,6 +237,7 @@
 <li class=""><strong>引用类型对象存储在堆（Heap）中。</strong></li>
 </ul>
 <p>这句话虽然方便初学者理解，但实际上并不严谨。要真正理解值类型和引用类型，首先必须明白<strong>什么是栈，什么是堆</strong>。</p>
+<!-- -->
 <hr>
 <h1>什么是内存栈（Stack）？</h1>
 <p><strong>栈（Stack）是一块专门用于管理方法调用和局部变量的内存区域。</strong></p>
@@ -383,6 +387,7 @@
         <updated>2026-07-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[问题：在逻辑上，所有方法内的值类型都会进入内存栈，这样理解正确吗？]]></summary>
         <content type="html"><![CDATA[<p>问题：在逻辑上，所有方法内的值类型都会进入内存栈，这样理解正确吗？</p>
+<!-- -->
 <p>ChatGPT:</p>
 <p>这个理解<strong>作为 C# 内存模型的入门逻辑，可以说“基本正确”，但必须加一个限定条件</strong>：</p>
 <blockquote>
@@ -494,6 +499,7 @@
         <updated>2026-07-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[问题：在发布模式下，几乎所有的 C#的简单值都会进寄存器，对吗？什么变量会进内存栈？]]></summary>
         <content type="html"><![CDATA[<p>问题：在发布模式下，几乎所有的 C#的简单值都会进寄存器，对吗？什么变量会进内存栈？</p>
+<!-- -->
 <p>ChatGPT:</p>
 <p>你的理解<strong>方向接近正确，但需要修正一个非常关键的概念</strong>：</p>
 <blockquote>
@@ -661,6 +667,7 @@
         <summary type="html"><![CDATA[如果你的目标不是"普通UP主"，而是想把《秒懂计算机》做成一个长期品牌，我建议不要只参考计算机频道，而是参考设计水平最高的 YouTube 频道。]]></summary>
         <content type="html"><![CDATA[<p>如果你的目标不是"普通UP主"，而是想把**《秒懂计算机》做成一个长期品牌**，我建议不要只参考计算机频道，而是参考<strong>设计水平最高</strong>的 YouTube 频道。</p>
 <p>下面这些是我认为值得长期研究的。</p>
+<!-- -->
 <hr>
 <h1>第一梯队（★★★★★ 必看）</h1>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-fireship计算机">1. Fireship（计算机）<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#1-fireship%E8%AE%A1%E7%AE%97%E6%9C%BA" class="hash-link" aria-label="Direct link to 1. Fireship（计算机）" title="Direct link to 1. Fireship（计算机）" translate="no">​</a></h2>
@@ -854,6 +861,7 @@
         <updated>2026-07-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[油管编程频道 TOP20]]></summary>
         <content type="html"><![CDATA[<p>油管编程频道 TOP20</p>
+<!-- -->
 <p><a href="https://images.openai.com/static-rsc-4/UxydrvqRDnyblwtiLOoozd_bHoPZ04ch8dwDbYJXRzv6QnlQ2_AuEx6NVrxnoeEy6P1ud1vDysImoerBVnGkTeyB0Fi57GQtLU3HECYkkjeWj6p_r4tA0friirj7VSAeTG9p4bUG3sRbsga6hpJL6TvNpQCZcdxsWgSw4AcCeNa02Ay7k0L__ahlxKcmyC5a?purpose=fullsize" target="_blank" rel="noopener noreferrer" class="">Image</a></p>
 <p><a href="https://images.openai.com/static-rsc-4/9XFaeXdJ1I5z-qw2Eo7lEZwutF6AIzYsRI88zdh8u-lXBEOjQkpGR9vQ5V3_70NLafOkzOjagShgGPXaKum2nAuXSpO_Ki2L50mWXu1nE-d8aD69GiAQDwzhCqa1K4fo--ngOzS1CesBYkkZ69qMz4XknxqGPk0ANm_HHTwVc3SDxry4v514EpHLxTJJWO2y?purpose=fullsize" target="_blank" rel="noopener noreferrer" class="">Image</a></p>
 <p><a href="https://images.openai.com/static-rsc-4/Dwrn5BAqXoj9qAnr6EWq4BEhZOweACrCJS_5sSLFeJ8cm9VmGTlnRR1fP0gSEN1pvuE9lGWMyeZf355-joW16ZA9qfCvl-c4aj5GnU904OTyJdNsfR6k8l-9-ZMtb03WMdxlXvr4hJWXY6ov1gzgus22M3T6wuCTFfIu8a3Gteknw82L-RFmylE6x0Dbb2F4?purpose=fullsize" target="_blank" rel="noopener noreferrer" class="">Image</a></p>
@@ -1053,6 +1061,7 @@
         <updated>2026-05-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[测试]]></summary>
         <content type="html"><![CDATA[<p>测试</p>
+<!-- -->
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">This word   has two pronunciations </span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">one for the verb one for the noun.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Let's go through them.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">the first one          console.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">It's a verb meaning that to comfort someone who is  sad or upset.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">And the second one is CONSOLE. A Console is a panel that is used to operate a machine. most commonly you've heard of a games console.</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">For example nintendo switch</span><br></div></code></pre></div></div>]]></content>
         <author>
             <name>Yangshun Tay</name>
@@ -1067,6 +1076,7 @@
         <updated>2026-04-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[好，这一套我给你做成可直接套用的“高点击封面标题库”，不是随便凑数，而是按用户心理 + 视频类型 + 转化目的拆好的。]]></summary>
         <content type="html"><![CDATA[<p>好，这一套我给你做成<strong>可直接套用的“高点击封面标题库”</strong>，不是随便凑数，而是按<strong>用户心理 + 视频类型 + 转化目的</strong>拆好的。</p>
+<!-- -->
 <p>你可以理解为：
 👉 <strong>以后你只需要填关键词，就能批量产封面</strong></p>
 <hr>
@@ -1249,6 +1259,7 @@ if vs switch</p>
         <updated>2026-04-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[你的这个创业方向 其实是可行的，但需要做对定位。我从 市场需求、竞争情况、价格模型、风险、成功概率 五个角度帮你客观分析。]]></summary>
         <content type="html"><![CDATA[<p>你的这个创业方向 <strong>其实是可行的，但需要做对定位</strong>。我从 <strong>市场需求、竞争情况、价格模型、风险、成功概率</strong> 五个角度帮你客观分析。</p>
+<!-- -->
 <hr>
 <h1>一、市场需求：有，但不算巨大</h1>
 <p>整体来看：</p>
@@ -1434,6 +1445,7 @@ if vs switch</p>
 <li class="">单位电脑：<strong>直接改了本地 dev，没拉最新代码</strong></li>
 <li class="">现在想：<strong>把远程最新的 + 你本地改的 安全合并</strong></li>
 </ul>
+<!-- -->
 <hr>
 <h1>正确操作步骤（必看）</h1>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一步先把你本地修改暂存起来防止丢失">第一步：先把你<strong>本地修改暂存起来</strong>（防止丢失）<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%85%88%E6%8A%8A%E4%BD%A0%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E6%9A%82%E5%AD%98%E8%B5%B7%E6%9D%A5%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1" class="hash-link" aria-label="Direct link to 第一步先把你本地修改暂存起来防止丢失" title="Direct link to 第一步先把你本地修改暂存起来防止丢失" translate="no">​</a></h2>
@@ -1499,6 +1511,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <updated>2026-03-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[如果你刚开始学习 C# 和 .NET，一定会频繁遇到一个词——NuGet。它几乎是每个 .NET 项目都离不开的工具。那么，NuGet 究竟是什么？这个奇怪的名字又是怎么来的？这篇文章将一次性讲清楚。]]></summary>
         <content type="html"><![CDATA[<p>如果你刚开始学习 C# 和 .NET，一定会频繁遇到一个词——<strong>NuGet</strong>。它几乎是每个 .NET 项目都离不开的工具。那么，NuGet 究竟是什么？这个奇怪的名字又是怎么来的？这篇文章将一次性讲清楚。</p>
+<!-- -->
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一nuget-是什么">一、NuGet 是什么？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%80nuget-%E6%98%AF%E4%BB%80%E4%B9%88" class="hash-link" aria-label="Direct link to 一、NuGet 是什么？" title="Direct link to 一、NuGet 是什么？" translate="no">​</a></h2>
 <p>NuGet 是 <strong>.NET 平台的包管理器</strong>。通俗地说，它就是一个 <strong>“代码超市”</strong>。</p>
@@ -1589,7 +1602,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[提高可读性]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="提高可读性"><strong>提高可读性</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E6%8F%90%E9%AB%98%E5%8F%AF%E8%AF%BB%E6%80%A7" class="hash-link" aria-label="Direct link to 提高可读性" title="Direct link to 提高可读性" translate="no">​</a></h3>
-<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// 不好的写法</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">a</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">c</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 好的写法</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token interpolation-string string" style="color:#e3116c">$"计算结果：</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">c</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// 不好的写法</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">a</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">c</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token comment" style="color:#999988;font-style:italic">/* truncate */</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 好的写法</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token interpolation-string string" style="color:#e3116c">$"计算结果：</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">c</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用空行分组"><strong>使用空行分组</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E4%BD%BF%E7%94%A8%E7%A9%BA%E8%A1%8C%E5%88%86%E7%BB%84" class="hash-link" aria-label="Direct link to 使用空行分组" title="Direct link to 使用空行分组" translate="no">​</a></h3>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// 输入部分</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">Write</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"请输入姓名："</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> name </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">ReadLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">Write</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"请输入年龄："</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> age </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">int</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">Parse</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">ReadLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 处理部分</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> greeting </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token interpolation-string string" style="color:#e3116c">$"你好，</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">name</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">！"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> ageInfo </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token interpolation-string string" style="color:#e3116c">$"你今年</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">age</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">岁"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 输出部分</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">greeting</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">ageInfo</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="添加注释说明"><strong>添加注释说明</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E" class="hash-link" aria-label="Direct link to 添加注释说明" title="Direct link to 添加注释说明" translate="no">​</a></h3>
@@ -1615,6 +1628,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <p>程序结构只有三种：顺序、分支、循环。这句话正确吗？我认为 break 和 continue 也属于程序结构</p>
 </blockquote>
 <p>这是一个非常经典且深刻的编程理论问题。</p>
+<!-- -->
 <p>直接给结论：<strong>从结构化程序设计（Structured Programming）的理论定义来看，你的教材或老师是对的，但你的直觉也反映了现代编程的实际情况。</strong></p>
 <p>我们可以从以下两个维度来拆解这个问题：</p>
 <hr>
@@ -1667,6 +1681,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <updated>2021-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
         <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
+<!-- -->
 <p>Here are a few tips you might find useful.</p>
 <p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
 <p>Regular blog authors can be added to <code>authors.yml</code>.</p>
@@ -1698,6 +1713,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <updated>2021-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
         <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
+<!-- -->
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
 <!-- -->
 <p>For example, use JSX to create an interactive button:</p>
@@ -1717,6 +1733,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
         <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
 <p>Use a `` comment to limit blog post size in the list view.</p>
+<!-- -->
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
@@ -1747,6 +1764,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <updated>2019-05-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
         <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
+<!-- -->
 <p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
         <author>
             <name>Sébastien Lorber</name>
