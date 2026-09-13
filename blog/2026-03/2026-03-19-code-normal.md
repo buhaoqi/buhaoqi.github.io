@@ -12,6 +12,8 @@ tags: [hola, docusaurus]
 // 不好的写法
 int a=10;int b=20;int c=a+b;Console.WriteLine(c);
 
+{/* truncate */}
+
 // 好的写法
 int a = 10;
 int b = 20;

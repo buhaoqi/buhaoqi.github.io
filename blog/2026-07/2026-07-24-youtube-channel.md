@@ -6,6 +6,8 @@ tags: [design]
 ---
 油管编程频道 TOP20
 
+{/* truncate */}
+
 [Image](https://images.openai.com/static-rsc-4/UxydrvqRDnyblwtiLOoozd_bHoPZ04ch8dwDbYJXRzv6QnlQ2_AuEx6NVrxnoeEy6P1ud1vDysImoerBVnGkTeyB0Fi57GQtLU3HECYkkjeWj6p_r4tA0friirj7VSAeTG9p4bUG3sRbsga6hpJL6TvNpQCZcdxsWgSw4AcCeNa02Ay7k0L__ahlxKcmyC5a?purpose=fullsize)
 
 [Image](https://images.openai.com/static-rsc-4/9XFaeXdJ1I5z-qw2Eo7lEZwutF6AIzYsRI88zdh8u-lXBEOjQkpGR9vQ5V3_70NLafOkzOjagShgGPXaKum2nAuXSpO_Ki2L50mWXu1nE-d8aD69GiAQDwzhCqa1K4fo--ngOzS1CesBYkkZ69qMz4XknxqGPk0ANm_HHTwVc3SDxry4v514EpHLxTJJWO2y?purpose=fullsize)

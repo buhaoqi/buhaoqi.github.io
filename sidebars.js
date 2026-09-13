@@ -841,15 +841,42 @@ const sidebars = {
     // 模块二：数据通信基础
     {
       type: 'category',
-      label: '模块二：数据通信基础',
+      label: '模块二：数据通信基础(不考)',
       collapsible: true,
       collapsed: false,
       items: [
         'network-basics/unit02/overview', // 概述
-        'network-basics/unit02/project1', // 任务一 数据通信的基本概念
-        'network-basics/unit02/project2', // 任务二 数据传输方式
-        'network-basics/unit02/project3', // 任务三 数据交换方式
-        'network-basics/unit02/project4', // 任务四 数据通信的性能指标
+        {
+          type: 'category',
+          label: '项目一 数据通信系统概述',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit02/project1/task1', // 
+            'network-basics/unit02/project1/task2', // 
+            'network-basics/unit02/project1/task3', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 同步技术与多路复用技术',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit02/project2/task1', // 
+            'network-basics/unit02/project2/task2', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目三 数据交换与差错控制技术',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit02/project3/task1', // 
+            'network-basics/unit02/project3/task2', // 
+          ],
+        }, 
       ],
     },
     // 模块三: OSI参考模型体系
@@ -860,9 +887,37 @@ const sidebars = {
       collapsed: false,
       items: [
         'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        {
+          type: 'category',
+          label: '项目一 OSI参考模型概述',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit03/project1/task1', // 
+            'network-basics/unit03/project1/task2', //  
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 OSI中的硬件层次',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit03/project2/task1', // 
+            'network-basics/unit03/project2/task2', //
+            'network-basics/unit03/project2/task3', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目三 OSI中的软件层次',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit03/project3/task1', // 
+            'network-basics/unit03/project3/task2', // 
+          ],
+        }, 
       ],
     },
     // 模块四 TCP/IP参考模型体系
@@ -872,10 +927,38 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit04/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 IP协议',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit04/project1/task1', // 
+            'network-basics/unit04/project1/task2', // 
+            'network-basics/unit04/project1/task3', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 传输层控制协议',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit04/project2/task1', // 
+            'network-basics/unit04/project2/task2', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目三 应用层协议与参数设置',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit04/project3/task1', // 
+            'network-basics/unit04/project3/task2', // 
+          ],
+        },
       ],
     },
     // 模块五 局域网技术
@@ -885,10 +968,38 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit05/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 局域网基础',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit05/project1/task1', // 
+            'network-basics/unit05/project1/task2', // 
+            'network-basics/unit05/project1/task3', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 以太网',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit05/project2/task1', // 
+            'network-basics/unit05/project2/task2', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目三 环型网络',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit05/project3/task1', // 
+            'network-basics/unit05/project3/task2', // 
+          ],
+        },
       ],
     },
     // 模块六 局域网组网技术
@@ -898,10 +1009,28 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit06/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 局域网组网设备与方法',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit06/project1/task1', // 
+            'network-basics/unit06/project1/task2', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 虚拟局域网和无线网络',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit06/project2/task1', // 
+            'network-basics/unit06/project2/task2', //
+            'network-basics/unit06/project2/task3', //
+          ],
+        }, 
       ],
     },
     // 模块七 广域网技术概述
@@ -911,10 +1040,37 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit07/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 广域网组网',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit07/project1/task1', // 
+            'network-basics/unit07/project1/task2', //  
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 广域网实例',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit07/project2/task1', // 
+            'network-basics/unit07/project2/task2', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目三 广域网设备',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit07/project3/task1', // 
+            'network-basics/unit07/project3/task2', // 
+          ],
+        },
       ],
     },
     // 模块八 Internet技术与应用
@@ -924,10 +1080,28 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit08/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 Internet接入与使用',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit08/project1/task1', // 
+            'network-basics/unit08/project1/task2', // 
+            'network-basics/unit08/project1/task3', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 Internet服务与内/外联网',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit08/project2/task1', // 
+            'network-basics/unit08/project2/task2', // 
+          ],
+        }, 
       ],
     },
     // 模块九 网络安全
@@ -937,10 +1111,29 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit09/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 认识网络安全',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit09/project1/task1', // 
+            'network-basics/unit09/project1/task2', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 数据安全与安全威胁',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit09/project2/task1', // 
+            'network-basics/unit09/project2/task2', // 
+            'network-basics/unit09/project2/task3', // 
+            'network-basics/unit09/project2/task4', //
+          ],
+        }, 
       ],
     },
     // 模块十 网络管理与结构化布线
@@ -950,10 +1143,29 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
-        'network-basics/unit03/project1', // 任务一 网络体系结构的基本概念
-        'network-basics/unit03/project2', // 任务二 网络协议栈
-        'network-basics/unit03/project3', // 任务三 网络拓扑结构
+        'network-basics/unit10/overview', // 概述
+        {
+          type: 'category',
+          label: '项目一 网络管理',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit10/project1/task1', // 
+            'network-basics/unit10/project1/task2', // 
+            'network-basics/unit10/project1/task3', // 
+            'network-basics/unit10/project1/task4', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 结构化布线技术',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/unit10/project2/task1', // 
+            'network-basics/unit10/project2/task2', // 
+          ],
+        }, 
       ],
     },
   ],

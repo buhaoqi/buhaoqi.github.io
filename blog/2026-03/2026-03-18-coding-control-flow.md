@@ -10,6 +10,7 @@ tags: [coding-control-flow, docusaurus]
 
 这是一个非常经典且深刻的编程理论问题。
 
+{/* truncate */}
 直接给结论：**从结构化程序设计（Structured Programming）的理论定义来看，你的教材或老师是对的，但你的直觉也反映了现代编程的实际情况。**
 
 我们可以从以下两个维度来拆解这个问题：
