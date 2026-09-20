@@ -1,0 +1,301 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-network-basics/unit03/project1/task2-2" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>任务二 OSI参考模型概述 | 河北对口高考计算机专业</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://buhaoqi.github.io/img/logo-orange-social.png /><meta data-rh=true name=twitter:image content=https://buhaoqi.github.io/img/logo-orange-social.png /><meta data-rh=true property=og:url content=https://buhaoqi.github.io/docs/network-basics/unit03/project1/task2-2 /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="任务二 OSI参考模型概述 | 河北对口高考计算机专业"/><meta data-rh=true name=description content=知识点 /><meta data-rh=true property=og:description content=知识点 /><link data-rh=true rel=icon href=/img/favicon.ico /><link data-rh=true rel=canonical href=https://buhaoqi.github.io/docs/network-basics/unit03/project1/task2-2 /><link data-rh=true rel=alternate href=https://buhaoqi.github.io/docs/network-basics/unit03/project1/task2-2 hreflang=en /><link data-rh=true rel=alternate href=https://buhaoqi.github.io/docs/network-basics/unit03/project1/task2-2 hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://buhaoqi.github.io/docs/network-basics/unit03/project1/task2-2","name":"任务二 OSI参考模型概述","position":1}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="河北对口高考计算机专业 RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="河北对口高考计算机专业 Atom Feed"><link rel=stylesheet href=/assets/css/styles.f8989b77.css /><script src=/assets/js/runtime~main.63e9dec0.js defer></script><script src=/assets/js/main.c35b718e.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-ab2")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/logo.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/logo.png alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/logo.png alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid=csharp/intro href=/docs/csharp/intro>算法与程序设计</a><a class="navbar__item navbar__link" docid=csharptutorials/index href=/docs/csharp-tutorials/>C#课件</a><a class="navbar__item navbar__link" docid=mysql/intro href=/docs/mysql/intro>MySQL教程</a><a class="navbar__item navbar__link" docid=computer-basics/index href=/docs/computer-basics/>计算机应用基础</a><a aria-current=page class="navbar__item navbar__link navbar__link--active" docid=network-basics/index href=/docs/network-basics/>计算机网络基础</a><a class="navbar__item navbar__link" docid=ninthit/index href=/docs/ninthit/>九类信息技术</a><a class="navbar__item navbar__link" href=/docs/bookmarks/intro>网址导航</a><a class="navbar__item navbar__link" href=/blog>Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://buhaoqi.com target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/network-basics/><span class=linkLabel_WmDU>考试大纲</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/network-basics/index2><span class=linkLabel_WmDU>考纲对比</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit01/overview><span class=categoryLinkLabel_W154>模块一 计算机网络概述</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit01/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project1/task1><span class=categoryLinkLabel_W154>项目一 网络发展与基本概念</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project2/task1><span class=categoryLinkLabel_W154>项目二 网络的分类与拓扑结构</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project3/task1-1><span class=categoryLinkLabel_W154>项目三 计算机网络传输介质</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project4/task1><span class=categoryLinkLabel_W154>项目四 网络的组成功能应用</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit02/overview><span class=categoryLinkLabel_W154>模块二：数据通信基础(不考)</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit02/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit02/project1/task1><span class=categoryLinkLabel_W154>项目一 数据通信系统概述</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit02/project2/task1><span class=categoryLinkLabel_W154>项目二 同步技术与多路复用技术</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit02/project3/task1><span class=categoryLinkLabel_W154>项目三 数据交换与差错控制技术</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/network-basics/unit03/overview><span class=categoryLinkLabel_W154>模块三 OSI参考模型体系</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit03/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/network-basics/unit03/project1/task1><span class=categoryLinkLabel_W154>项目一 OSI参考模型概述</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit03/project1/task1><span class=linkLabel_WmDU>任务一 网络标准化有关组织</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit03/project1/task2-1><span class=linkLabel_WmDU>任务二 OSI参考模型概述</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/network-basics/unit03/project1/task2-2><span class=linkLabel_WmDU>任务二 OSI参考模型概述</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit03/project2/task1><span class=categoryLinkLabel_W154>项目二 OSI中的硬件层次</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit03/project3/task1><span class=categoryLinkLabel_W154>项目三 OSI中的软件层次</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit04/overview><span class=categoryLinkLabel_W154>模块四 TCP/IP参考模型体系</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit04/project1/task1><span class=categoryLinkLabel_W154>项目一 IP协议</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit04/project2/task1><span class=categoryLinkLabel_W154>项目二 传输层控制协议</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit04/project3/task1><span class=categoryLinkLabel_W154>项目三 应用层协议与参数设置</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit05/overview><span class=categoryLinkLabel_W154>模块五 局域网技术</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit05/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit05/project1/task1><span class=categoryLinkLabel_W154>项目一 局域网基础</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit05/project2/task1><span class=categoryLinkLabel_W154>项目二 以太网</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit05/project3/task1><span class=categoryLinkLabel_W154>项目三 环型网络</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit06/overview><span class=categoryLinkLabel_W154>模块六 局域网组网技术</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit06/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit06/project1/task1><span class=categoryLinkLabel_W154>项目一 局域网组网设备与方法</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit06/project2/task1><span class=categoryLinkLabel_W154>项目二 虚拟局域网和无线网络</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit07/overview><span class=categoryLinkLabel_W154>模块七 广域网技术概述</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit07/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit07/project1/task1><span class=categoryLinkLabel_W154>项目一 广域网组网</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit07/project2/task1><span class=categoryLinkLabel_W154>项目二 广域网实例</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit07/project3/task1><span class=categoryLinkLabel_W154>项目三 广域网设备</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit08/overview><span class=categoryLinkLabel_W154>模块八 Internet技术与应用</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit08/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit08/project1/task1><span class=categoryLinkLabel_W154>项目一 Internet接入与使用</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit08/project2/task1><span class=categoryLinkLabel_W154>项目二 Internet服务与内/外联网</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit09/overview><span class=categoryLinkLabel_W154>模块九 网络安全</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit09/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit09/project1/task1><span class=categoryLinkLabel_W154>项目一 认识网络安全</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit09/project2/task1><span class=categoryLinkLabel_W154>项目二 数据安全与安全威胁</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit10/overview><span class=categoryLinkLabel_W154>模块十 网络管理与结构化布线</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit10/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit10/project1/task1><span class=categoryLinkLabel_W154>项目一 网络管理</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit10/project2/task1><span class=categoryLinkLabel_W154>项目二 结构化布线技术</span></a></div></ul></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>模块三 OSI参考模型体系</span><li class=breadcrumbs__item><span class=breadcrumbs__link>项目一 OSI参考模型概述</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>任务二 OSI参考模型概述</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>任务二 OSI参考模型概述</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=知识点>知识点<a href=#知识点 class=hash-link aria-label="Direct link to 知识点" title="Direct link to 知识点" translate=no>​</a></h2>
+<ol>
+<li class="">实体是什么？
+答：每一层中，用于实现该层功能的活动单元被称为实体（Entity）实体既可以是</li>
+</ol>
+<ul>
+<li class="">软件实体：进程、电子邮件系统、应用程序；软件实体可以嵌入在本地操作系统中，或者用户应用程序中。</li>
+<li class="">硬件实体：终端、智能输入/输出芯片</li>
+</ul>
+<ol start=2>
+<li class="">什么是对等实体？
+答：
+<strong>不同主机上，处在同一网络层次、执行相同功能的实体，称为对等实体</strong></li>
+</ol>
+<p>例子：主机 A 传输层的传输实体 和 主机 B 传输层的传输实体，互为对等实体。</p>
+<p>简化：不同主机同一层次、功能相同的实体。例：两台主机传输层的传输实体互为对等实体</p>
+<ol start=3>
+<li class="">传输实体是什么
+传输层里负责实现传输层全部功能的软件 / 硬件模块，就是传输层的实体</li>
+</ol>
+<p>传输层中实现传输层服务的模块（TCP/UDP）</p>
+<p>举例：
+主机 A 的 TCP 模块、主机 B 的 TCP 模块，都是<strong>传输实体</strong>；UDP 模块也属于传输实体。</p>
+<ol start=4>
+<li class="">
+<p>对等层是什么？
+答：不同主机之间的相同层次被称为对等层（Peer）。</p>
+</li>
+<li class="">
+<p>对等层协议是什么？
+答：对等实体之间交换数据或通信时必须遵守的规则称为对等层协议（Peer Protocol）。</p>
+</li>
+</ol>
+<p>对等实体之间逻辑通信，双方互相交换协议数据单元（PDU），按约定规则解析对方发来的数据。</p>
+<p>除物理层外，其他六个层都存在对应的协议。</p>
+<p>对等层协议是不同主机同一层次对等实体交换数据时遵守的规则，对等实体间需要传递并解析协议数据单元。
+物理层只在传输介质上传送原始比特流，没有协议数据单元，不存在对等实体之间的数据封装与解析过程。物理层仅规定硬件接口的机械、电气等特性，因此物理层没有对等层协议。其余六层对等实体间都有对应的协议数据单元，需要协议完成双方数据交互。</p>
+<ul>
+<li class="">2~7 层：对等实体互相发 PDU → 有对等协议</li>
+<li class="">物理层：只传裸比特，无 PDU → 无对等层协议</li>
+</ul>
+<ol start=8>
+<li class="">
+<p>对等层之间通信的特点是什么
+答：对等层之间的通信是虚拟通信，它们之间的通信是使用下一层提供的服务来实现的。</p>
+</li>
+<li class="">
+<p>“协议是水平的“这句话的含义？
+答：同一网络中不同主机的对等层，要安装运行相同的网络协议，主机间才能进行有效通信，概括为“协议是水平的”。</p>
+</li>
+</ol>
+<p>协议是对等实体之间的约定，作用在<strong>同一层次</strong>（水平方向）。不同主机同一层的对等实体，依靠相同协议完成逻辑通信，所以说协议是水平的。</p>
+<blockquote>
+<p>配套对比考点：<strong>服务是垂直的</strong>
+下层实体向上层实体提供服务，是在同一台主机内部，由低层向高层提供，是垂直方向。</p>
+</blockquote>
+<p>精简版（适合填空 / 短答）</p>
+<p>协议作用于不同主机的<strong>对等层（水平方向）</strong>，对等实体之间依靠协议通信，因此协议是水平的。</p>
+<p>考试一句话区分</p>
+<p>✅ 协议：水平，<strong>主机之间，同层对等实体</strong>
+✅ 服务：垂直，<strong>同一主机，下层给上层</strong></p>
+<blockquote>
+<p>举例子：
+主机 A 传输层 TCP ↔ 主机 B 传输层 TCP（水平，遵守 TCP 协议）
+同一主机：网络层 → 传输层（垂直，下层提供服务）</p>
+</blockquote>
+<ol start=10>
+<li class="">
+<p>服务是什么？
+答：在OSI分层结构模型中，每一层实体为相邻的上一层实体提供的通信功能称为服务。</p>
+</li>
+<li class="">
+<p>“服务是垂直的”这句话的含义是什么</p>
+</li>
+</ol>
+<p>答：N层实体利用N-1层实体所提供的服务，向N+1层实体提供功能更强大的服务，概括为“服务是垂直的”。</p>
+<ol start=12>
+<li class="">
+<p>N层实体如何和下层服务打交道？
+答：不需要知道N-1层实体所提供的服务是如何实现的以及N-1层实体间的协议，只需要知道下层能提供哪些服务、通过什么接口提供。</p>
+</li>
+<li class="">
+<p>什么是SAP？
+答：N层的服务访问点SAP（Service Access Point）是N层实体提供服务给N+1层的地方，可以理解为下层实体之间的逻辑传输通道。</p>
+</li>
+</ol>
+<p>每一层的SAP都有一个唯一标明它的地址，一个N层可能存在多个SAP。</p>
+<ol start=15>
+<li class="">
+<p>接口和SAP的关系是什么？
+答：接口是为其他实体提供服务的入口，是一个大的概念；SAP是下层对高层提供服务的一个入口，是对高层的一个逻辑接口；接口包含SAP，也还包括其他服务提供方式。</p>
+</li>
+<li class="">
+<p>OSI环境中依靠哪3种数据单元完成通信传输？</p>
+</li>
+</ol>
+<ul>
+<li class="">
+<p>服务数据单元SDU：为实现N层服务所要传送的逻辑数据单元，称为N层服务数据单元（Service Data Unit，SDU），简称（N）SDU。</p>
+</li>
+<li class="">
+<p>协议数据单元PDU：对等实体之间为实现该层协议所交换的信息单元（Protocol Data Unit，PDU），称为协议数据单元。</p>
+</li>
+<li class="">
+<p>接口数据单元IDU：在同一系统上下两层实体的交换信息中，经过SAP的信息单元（Interface Data Unit，IDU），称为接口数据单元。</p>
+</li>
+</ul>
+<ol start=19>
+<li class="">
+<p>发送端N层实体对SDU如何处理？接收端呢？
+答：发送端：N层实体根据本层的协议，将一个SDU划分为多个PDU；接收端：N层实体要将多个PDU恢复成一个本层的SDU。</p>
+</li>
+<li class="">
+<p>N层IDU由哪两部分组成？
+答：N层IDU包括N层服务数据单元和一些供下一层实体用的控制信息（称为接口控制信息ICI）。</p>
+</li>
+<li class="">
+<p>相邻两层中，谁是服务提供者，谁是服务用户？
+答：下层为服务提供者，上层为服务用户。</p>
+</li>
+<li class="">
+<p>下层向上层提供的服务分为哪两类？
+答：面向连接服务（Connection Oriented Service）和无连接服务（Connectionless Service）。</p>
+</li>
+<li class="">
+<p>简述面向连接服务的通信过程。
+答：两个N层实体在数据交换前，必须先建立连接，初始化状态信息，并且为该层实体的信息传输建立一个通道；传输阶段跟踪PDU与SDU交换；数据交换结束后释放连接，去除状态信息，释放网络资源。</p>
+</li>
+<li class="">
+<p>简述无连接服务的通信特点。
+答：两个N层实体通信前，不需要先建立一个连接。发送端到相同目标地址的信息块都独立发送，接收端无需返回确认信息。如果信息块在传输中丢失，就不再重发。无连接的服务通常被称为数据报服务。</p>
+</li>
+<li class="">
+<p>OSI模型中服务通过什么来描述？一共分为几类？
+答：服务是通过一组服务原语（Primitive）来描述的；服务原语被分为4类。</p>
+</li>
+<li class="">
+<p>四类服务原语分别是什么？
+答：请求（Request）、指示（Indication）、响应（Response）、证实（Confirmation）。</p>
+</li>
+<li class="">
+<p>请求（Request）原语的作用？
+答：由服务用户发往服务提供者，请求它完成某项工作。</p>
+</li>
+<li class="">
+<p>指示（Indication）原语的作用？
+答：由服务提供者发往服务用户，指示发生了某些事件。</p>
+</li>
+<li class="">
+<p>响应（Response）原语的作用？
+答：由服务用户发往服务提供者，对前面已经发出的指示的响应。</p>
+</li>
+<li class="">
+<p>证实（Confirmation）原语的作用？
+答：由服务提供者发往服务用户，对前面已经发出的请求的证实。</p>
+</li>
+<li class="">
+<p>OSI模型数据封装时，数据发送方向上层向下层传递数据，每层进行什么操作？
+答：每一层都会给上层递交下来的数据加上自己的报头；数据链路层还要加上尾部DT，形成帧。</p>
+</li>
+<li class="">
+<p>写出各层报头缩写：应用层、表示层、会话层、传输层、网络层、数据链路层。
+答：应用层AH，表示层PH，会话层SH，传输层TH，网络层NH，数据链路层DH。</p>
+</li>
+<li class="">
+<p>目标主机接收数据时，数据链路层对收到的帧做哪些处理？
+答：数据链路层负责去掉数据帧的帧头部DH和尾部DT，同时还进行数据校验。如果数据没有出错，则递交到网络层。</p>
+</li>
+<li class="">
+<p>接收端OSI模型的数据解封装流程特点是什么？
+答：数据从下层向上层递交，每一层会剥掉本层对应的头部（和尾部），逐层递交，最终原始数据递交给目标主机的应用程序。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=豆包出题>豆包出题<a href=#豆包出题 class=hash-link aria-label="Direct link to 豆包出题" title="Direct link to 豆包出题" translate=no>​</a></h2>
+<p>总分：100分</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=一填空题共25空每空1分共25分>一、填空题（共25空，每空1分，共25分）<a href=#一填空题共25空每空1分共25分 class=hash-link aria-label="Direct link to 一、填空题（共25空，每空1分，共25分）" title="Direct link to 一、填空题（共25空，每空1分，共25分）" translate=no>​</a></h2>
+<ol>
+<li class="">OSI模型每一层中，用于实现该层功能的活动单元称为________。</li>
+<li class="">实体分为软件实体和________实体。</li>
+<li class="">软件实体可以嵌入本地操作系统或者________中。</li>
+<li class="">不同机器上位于同一层次、完成相同功能的实体叫做________实体。</li>
+<li class="">不同主机之间的相同层次称为________。</li>
+<li class="">对等实体之间交换数据通信必须遵守的规则称为________协议。</li>
+<li class="">对等层之间的通信是________通信，依靠下层提供的服务实现。</li>
+<li class="">同一网络不同主机对等层要运行相同协议，可概括为“协议是________的”。</li>
+<li class="">OSI分层模型中，每一层实体为相邻上层实体提供的通信功能称为________。</li>
+<li class="">N层实体利用N-1层的服务，向________层提供更强的服务，概括为“服务是垂直的”。</li>
+<li class="">N层实体使用下层服务时，不需要了解下层服务的________细节。</li>
+<li class="">N层实体提供服务给N+1层的访问点简写为________。</li>
+<li class="">SAP可以理解为下层实体之间的逻辑________通道。</li>
+<li class="">接口是广义概念，接口________SAP（填包含/属于）。</li>
+<li class="">OSI环境依靠3种数据单元：SDU、PDU、________。</li>
+<li class="">SDU中文名称是________数据单元。</li>
+<li class="">PDU中文名称是________数据单元。</li>
+<li class="">同一系统上下两层经过SAP交换的信息单元缩写为________。</li>
+<li class="">IDU由N层SDU和________控制信息ICI两部分组成。</li>
+<li class="">相邻两层中，下层是服务提供者，上层是服务________。</li>
+<li class="">下层向上层提供的两类服务：面向连接服务和________服务。</li>
+<li class="">无连接服务也常常被称为________服务。</li>
+<li class="">OSI使用服务________来描述服务，一共分为4类。</li>
+<li class="">四类服务原语：请求、指示、响应、________。</li>
+<li class="">发送端数据链路层封装时，除报头DH外，还要添加尾部________。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=二单项选择题共10题每题2分共20分>二、单项选择题（共10题，每题2分，共20分）<a href=#二单项选择题共10题每题2分共20分 class=hash-link aria-label="Direct link to 二、单项选择题（共10题，每题2分，共20分）" title="Direct link to 二、单项选择题（共10题，每题2分，共20分）" translate=no>​</a></h2>
+<ol>
+<li class="">下列属于硬件实体的是（）
+A. 进程  B. 电子邮件系统  C. 终端  D. 应用程序</li>
+<li class="">主机A传输层实体和主机B传输层实体属于（）
+A. 接口实体  B. 对等实体  C. 服务实体  D. SAP实体</li>
+<li class="">对等层之间的通信本质是（）
+A. 真实物理通信 B. 虚拟通信，依靠下层服务 C. 直接通信 D. 跨层通信</li>
+<li class="">N层服务访问点SAP是（）
+A. 对等实体通信通道 B. N层向N+1层提供服务的入口
+C. 数据校验单元 D. 协议报文</li>
+<li class="">对等实体之间交换信息所用的数据单元是（）
+A. SDU B. PDU C. IDU D. ICI</li>
+<li class="">不需要预先建立连接，数据丢失不重发的服务是（）
+A. 面向连接服务 B. 无连接服务 C. 可靠服务 D. 确认服务</li>
+<li class="">由服务用户发给服务提供者，请求完成某项工作的原语是（）
+A. 请求 B. 指示 C. 响应 D. 证实</li>
+<li class="">数据封装时，哪一层需要额外添加尾部DT（）
+A. 应用层 B. 网络层 C. 数据链路层 D. 物理层</li>
+<li class="">接收端解封装的顺序是（）
+A. 上层→下层 B. 下层→上层 C. 对等层并行 D. 随机顺序</li>
+<li class="">面向连接服务通信结束后需要（）
+A. 直接丢弃数据 B. 释放连接，回收资源 C. 重传所有报文 D. 保存状态永久保留</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=三多项选择题共10题每题3分共30分>三、多项选择题（共10题，每题3分，共30分；）<a href=#三多项选择题共10题每题3分共30分 class=hash-link aria-label="Direct link to 三、多项选择题（共10题，每题3分，共30分；）" title="Direct link to 三、多项选择题（共10题，每题3分，共30分；）" translate=no>​</a></h2>
+<ol>
+<li class="">下列属于软件实体的有（）
+A. 进程 B. 邮件系统 C. 应用程序 D. 智能I/O芯片</li>
+<li class="">OSI模型中三种数据单元包括（）
+A. SDU B. PDU C. IDU D. ICI</li>
+<li class="">属于OSI四类服务原语的是（）
+A. 请求 B. 指示 C. 响应 D. 证实</li>
+<li class="">面向连接服务的特点包含（）
+A. 通信前建立连接 B. 传输时跟踪数据交换 C. 通信结束释放连接 D. 无需建立连接</li>
+<li class="">无连接服务的特点有（）
+A. 无需预先建立连接 B. 信息块独立发送 C. 丢失不重发 D. 又叫数据报服务</li>
+<li class="">关于协议与服务说法正确的是（）
+A. 协议是水平的 B. 服务是垂直的 C. 协议用于对等实体 D. 服务由上层提供给下层</li>
+<li class="">发送端OSI数据封装操作描述正确的是（）
+A. 每层给上层数据添加报头 B. 数据链路层增加尾部DT
+C. 逐层封装 D. 逐层剥离头部</li>
+<li class="">接收端数据链路层收到帧后要完成哪些工作（）
+A. 去掉DH头部和DT尾部 B. 数据校验 C. 出错丢弃 D. 无错递交网络层</li>
+<li class="">关于SAP描述正确的是（）
+A. SAP是逻辑接口 B. 每层SAP有唯一地址 C. 一层可存在多个SAP D. SAP就是接口全部</li>
+<li class="">关于对等协议说法正确的是（）
+A. 除物理层外，其他层都有对等协议 B. 对等实体依靠对等协议通信
+C. 对等通信是虚拟通信 D. 不需要相同协议也能通信</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=四判断题共5题每题5分共25分对打错打>四、判断题（共5题，每题5分，共25分；对打√，错打×）<a href=#四判断题共5题每题5分共25分对打错打 class=hash-link aria-label="Direct link to 四、判断题（共5题，每题5分，共25分；对打√，错打×）" title="Direct link to 四、判断题（共5题，每题5分，共25分；对打√，错打×）" translate=no>​</a></h2>
+<ol>
+<li class="">对等实体之间可以直接进行真实的数据通信。（）</li>
+<li class="">N层实体使用下层服务时，不需要了解下层协议的实现细节。（）</li>
+<li class="">IDU由N层SDU加上接口控制信息ICI共同组成。（）</li>
+<li class="">面向连接服务通信前不需要建立连接，数据丢失不会重传。（）</li>
+<li class="">接收端解封装过程，逐层剥掉本层头部（尾部），最后还原原始数据。（）</li>
+</ol>
+<hr/>
+<h1>参考答案</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=一填空题>一、填空题<a href=#一填空题 class=hash-link aria-label="Direct link to 一、填空题" title="Direct link to 一、填空题" translate=no>​</a></h2>
+<ol>
+<li class="">实体</li>
+<li class="">硬件</li>
+<li class="">用户应用程序</li>
+<li class="">对等</li>
+<li class="">对等层</li>
+<li class="">对等层</li>
+<li class="">虚拟</li>
+<li class="">水平</li>
+<li class="">服务</li>
+<li class="">N+1</li>
+<li class="">实现</li>
+<li class="">SAP</li>
+<li class="">传输</li>
+<li class="">包含</li>
+<li class="">IDU</li>
+<li class="">服务</li>
+<li class="">协议</li>
+<li class="">IDU</li>
+<li class="">接口</li>
+<li class="">用户</li>
+<li class="">无连接</li>
+<li class="">数据报</li>
+<li class="">原语</li>
+<li class="">证实</li>
+<li class="">DT</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=二单项选择题>二、单项选择题<a href=#二单项选择题 class=hash-link aria-label="Direct link to 二、单项选择题" title="Direct link to 二、单项选择题" translate=no>​</a></h2>
+<p>1.C 2.B 3.B 4.B 5.B
+6.B 7.A 8.C 9.B 10.B</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=三多项选择题>三、多项选择题<a href=#三多项选择题 class=hash-link aria-label="Direct link to 三、多项选择题" title="Direct link to 三、多项选择题" translate=no>​</a></h2>
+<p>1.ABC 2.ABC 3.ABCD 4.ABC 5.ABCD
+6.ABC 7.ABC 8.ABCD 9.ABC 10.ABC</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=四判断题>四、判断题<a href=#四判断题 class=hash-link aria-label="Direct link to 四、判断题" title="Direct link to 四、判断题" translate=no>​</a></h2>
+<p>1.× 2.√ 3.√ 4.× 5.√</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/network-basics/unit03/project1/task2-2.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/network-basics/unit03/project1/task2-1><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>任务二 OSI参考模型概述</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/network-basics/unit03/project2/task1><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>任务一 物理层</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#知识点 class="table-of-contents__link toc-highlight">知识点</a><li><a href=#豆包出题 class="table-of-contents__link toc-highlight">豆包出题</a><li><a href=#一填空题共25空每空1分共25分 class="table-of-contents__link toc-highlight">一、填空题（共25空，每空1分，共25分）</a><li><a href=#二单项选择题共10题每题2分共20分 class="table-of-contents__link toc-highlight">二、单项选择题（共10题，每题2分，共20分）</a><li><a href=#三多项选择题共10题每题3分共30分 class="table-of-contents__link toc-highlight">三、多项选择题（共10题，每题3分，共30分；）</a><li><a href=#四判断题共5题每题5分共25分对打错打 class="table-of-contents__link toc-highlight">四、判断题（共5题，每题5分，共25分；对打√，错打×）</a><li><a href=#一填空题 class="table-of-contents__link toc-highlight">一、填空题</a><li><a href=#二单项选择题 class="table-of-contents__link toc-highlight">二、单项选择题</a><li><a href=#三多项选择题 class="table-of-contents__link toc-highlight">三、多项选择题</a><li><a href=#四判断题 class="table-of-contents__link toc-highlight">四、判断题</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Docs</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/intro>Tutorial</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Community</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://stackoverflow.com/questions/tagged/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>Stack Overflow<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://discordapp.com/invite/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>Discord<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://x.com/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>X<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>More</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/blog>Blog</a><li class=footer__item><a href=https://github.com/facebook/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div></body>
