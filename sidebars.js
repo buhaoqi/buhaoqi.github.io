@@ -716,6 +716,7 @@ const sidebars = {
       items: [
         'computer-basics/proj1/index', // 概述
         'computer-basics/proj1/task1', // 
+        'computer-basics/proj1/task1-2', // 
         'computer-basics/proj1/task2', // 
         'computer-basics/proj1/task3', // 
         'computer-basics/proj1/task4', // 
@@ -837,47 +838,6 @@ const sidebars = {
             'network-basics/unit01/project4/task2', // 
           ],
         }, // 任务四 计算机的前沿技术
-      ],
-    },
-    // 模块二：数据通信基础
-    {
-      type: 'category',
-      label: '模块二：数据通信基础(不考)',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'network-basics/unit02/overview', // 概述
-        {
-          type: 'category',
-          label: '项目一 数据通信系统概述',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'network-basics/unit02/project1/task1', // 
-            'network-basics/unit02/project1/task2', // 
-            'network-basics/unit02/project1/task3', // 
-          ],
-        },
-        {
-          type: 'category',
-          label: '项目二 同步技术与多路复用技术',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'network-basics/unit02/project2/task1', // 
-            'network-basics/unit02/project2/task2', // 
-          ],
-        }, 
-        {
-          type: 'category',
-          label: '项目三 数据交换与差错控制技术',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'network-basics/unit02/project3/task1', // 
-            'network-basics/unit02/project3/task2', // 
-          ],
-        }, 
       ],
     },
     // 模块三: OSI参考模型体系
@@ -1173,6 +1133,130 @@ const sidebars = {
       ],
     },
   ],
+  // ============ 中职单招考试大纲 教程侧边栏 ============
+  zzdzSidebar: [
+    {
+      type: 'doc',
+      id: 'zzdz/index',  // 
+      label: '考试大纲',
+    },
+    {
+      type: 'doc',
+      id: 'zzdz/index2',  // 
+      label: '考纲新变化',
+    },
+    // 模块一 计算机基础知识
+    {
+      type: 'category',
+      label: '模块一 计算机基础知识',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter01/task1', // 
+        'zzdz/chapter01/task1-2', // 
+        'zzdz/chapter01/task2', // 
+        'zzdz/chapter01/task3', // 
+        'zzdz/chapter01/task4', // 
+        'zzdz/chapter01/task4-2', // 
+        'zzdz/chapter01/task5', // 
+        'zzdz/chapter01/task6', //
+        'zzdz/chapter01/task7', //
+        'zzdz/chapter01/task8', //
+        'zzdz/chapter01/task9', //
+        'zzdz/chapter01/task10', //
+        'zzdz/chapter01/task11', //
+        'zzdz/chapter01/task12', //
+      ],
+    },
+    // 模块二 Windows操作系统
+    {
+      type: 'category',
+      label: '模块二 Windows操作系统',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter02/task1', // 
+        'zzdz/chapter02/task2', // 
+        'zzdz/chapter02/task3', // 
+        'zzdz/chapter02/task4', // 
+        'zzdz/chapter02/task5', // 
+        'zzdz/chapter02/task6', //
+        'zzdz/chapter02/task7', //
+        'zzdz/chapter02/task8', //
+        'zzdz/chapter02/task9', //
+        'zzdz/chapter02/task10', //
+        'zzdz/chapter02/task11', //
+      ],
+    },
+    // 模块三 计算机信息安全与道德规范
+    {
+      type: 'category',
+      label: '模块三 计算机信息安全与道德规范',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter03/task1', // 
+        'zzdz/chapter03/task2', // 
+        'zzdz/chapter03/task3', // 
+        'zzdz/chapter03/task4', // 
+      ],
+    },
+    // 模块四 计算机网络基础知识
+    {
+      type: 'category',
+      label: '模块四 计算机网络基础知识',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter04/task1', // 
+        'zzdz/chapter04/task2', // 
+        'zzdz/chapter04/task3', // 
+        'zzdz/chapter04/task4', // 
+        'zzdz/chapter04/task5', // 
+        'zzdz/chapter04/task6', //
+        'zzdz/chapter04/task7', //
+        'zzdz/chapter04/task8', //
+        'zzdz/chapter04/task9', //
+        'zzdz/chapter04/task10', //
+        'zzdz/chapter04/task11', //
+        'zzdz/chapter04/task12', //
+        'zzdz/chapter04/task13', //
+      ],
+    },
+    // 模块五 多媒体知识
+    {
+      type: 'category',
+      label: '模块五 多媒体知识',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter05/task1', //
+        'zzdz/chapter05/task2', // 
+      ],
+    },
+    // 模块六 Office办公软件
+    {
+      type: 'category',
+      label: '模块六 Office办公软件',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter06/section1', // 
+        'zzdz/chapter06/section2', //
+      ],
+    },
+    // 模块七 MySQL数据库原理与应用
+    {
+      type: 'category',
+      label: '模块七 MySQL数据库原理与应用',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'zzdz/chapter07/section1', // 
+        'zzdz/chapter07/section2', //
+      ],
+    },
+  ],
   // ============ 普高单招九类信息技术 教程侧边栏 ============
   ninthitSidebar: [
     {
@@ -1185,203 +1269,171 @@ const sidebars = {
       id: 'ninthit/index2',  // 
       label: '考纲新变化',
     },
-    // 第一章 信息技术基础知识
+    
+    // 必修1《数据与计算》
     {
       type: 'category',
-      label: '第一章 信息技术基础知识',
+      label: '必修1《数据与计算》',
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'category',
-          label: '第一节 信息技术基础知识',
+          label: '单元1 初识数据与计算',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/chapter01/section1/task1', // 
-            'ninthit/chapter01/section1/task2', // 
-            'ninthit/chapter01/section1/task3', // 
-          ],
-        },
-        {
-          type: 'category',
-          label: '第二节 数据、信息、知识',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'ninthit/chapter01/section2/task1', // 
-            'ninthit/chapter01/section2/task2', // 
-            'ninthit/chapter01/section2/task3', // 
-          ],
-        },
-      ],
-    },
-    // 第二章 数据与编码
-    {
-      type: 'category',
-      label: '第二章 数据与编码',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: '第一节 数字化及数据编码',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'ninthit/chapter02/section1/task1', // 
-            'ninthit/chapter02/section1/task2', // 
-            'ninthit/chapter02/section1/task3', // 
-          ],
-        },
-        {
-          type: 'category',
-          label: '第二节 数据采集与整理',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'ninthit/chapter02/section2/task1', // 
-            'ninthit/chapter02/section2/task2', // 
-            'ninthit/chapter02/section2/task3', // 
-          ],
-        },
-      ],
-    },
-    // 第三章 算法基础知识与编程
-    {
-      type: 'category',
-      label: '第三章 算法基础知识与编程',
-      collapsible: true,
-      collapsed: false,
-      items: [
-            'ninthit/chapter03/section1', // 
-            'ninthit/chapter03/section2', //
-            {
-              type: 'category',
-              label: '第三节 程序设计基础知识',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                'ninthit/chapter03/section3/task1', // 
-                'ninthit/chapter03/section3/task2', // 
-                'ninthit/chapter03/section3/task3', // 
-                'ninthit/chapter03/section3/task4', // 
-                'ninthit/chapter03/section3/task5', // 
-              ],
-            }, 
-            'ninthit/chapter03/section4', // 
-      ],
-    },
-    // 第四章 数据结构
-    {
-      type: 'category',
-      label: '第四章 数据结构',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: '第一节 数据结构与数据类型',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'ninthit/chapter04/section1/task1', // 
-            'ninthit/chapter04/section1/task2', // 
+            'ninthit/compulsory1/unit1/task1', // 
           ],
         }, 
         {
           type: 'category',
-          label: '第二节 数据结构与数据类型',
+          label: '单元2 编程计算',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/chapter04/section2/task1', // 
-            'ninthit/chapter04/section2/task2', // 
-            'ninthit/chapter04/section2/task3', // 
-            'ninthit/chapter04/section2/task4', // 
-            'ninthit/chapter04/section2/task5', // 
-            'ninthit/chapter04/section2/task6', // 
+            'ninthit/compulsory1/unit2/task1', // 
+            'ninthit/compulsory1/unit2/task2', // 
+            'ninthit/compulsory1/unit2/task3', // 
+            'ninthit/compulsory1/unit2/task4', // 
+            'ninthit/compulsory1/unit2/task5', //
+            'ninthit/compulsory1/unit2/task6', //
+            'ninthit/compulsory1/unit2/task7', //
           ],
-        },  
+        }, 
+        {
+          type: 'category',
+          label: '单元3 认识数据',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory1/unit3/task1', // 
+            'ninthit/compulsory1/unit3/task2', // 
+            'ninthit/compulsory1/unit3/task3', // 
+            'ninthit/compulsory1/unit3/task4', // 
+            'ninthit/compulsory1/unit3/task5', //
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '单元4 计算与问题解决',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory1/unit4/task1', //
+            'ninthit/compulsory1/unit4/task2', //
+            'ninthit/compulsory1/unit4/task3', //
+            'ninthit/compulsory1/unit4/task4', //
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '单元5数据分析与人工智能',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory1/unit5/task1', // 
+            'ninthit/compulsory1/unit5/task2', // 
+          ],
+        },
       ],
     },
-    // 第五章 信息系统与社会
+    // 必修2《信息系统与社会》
     {
       type: 'category',
-      label: '第五章 信息系统与社会',
+      label: '必修2《信息系统与社会》',
       collapsible: true,
       collapsed: false,
       items: [
         {
-              type: 'category',
-              label: '第一节 信息系统的组成与功能',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                'ninthit/chapter05/section1/task1', // 
-                'ninthit/chapter05/section1/task2', // 
-                'ninthit/chapter05/section1/task3', // 
-                'ninthit/chapter05/section1/task4', // 
-              ],
-            }, 
+          type: 'category',
+          label: '单元1 信息系统的组成与功能',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory2/unit1/task1', // 
+            'ninthit/compulsory2/unit1/task2', // 
+          ],
+        },
         {
-              type: 'category',
-              label: '第二节 网络基础知识与组建',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                'ninthit/chapter05/section2/task1', // 
-                'ninthit/chapter05/section2/task2', // 
-                'ninthit/chapter05/section2/task3', // 
-              ],
-            }, 
-            {
-              type: 'category',
-              label: '第三节 信息系统的安全',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                'ninthit/chapter05/section3/task1', // 
-                'ninthit/chapter05/section3/task2', // 
-                'ninthit/chapter05/section3/task3', // 
-                'ninthit/chapter05/section3/task4', // 
-                'ninthit/chapter05/section3/task5', // 
-              ],
-            },  
+          type: 'category',
+          label: '单元2 信息系统的集成',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory2/unit2/task1', // 
+            'ninthit/compulsory2/unit2/task2', //
+            'ninthit/compulsory2/unit2/task3', // 
+            'ninthit/compulsory2/unit2/task4', // 
+            'ninthit/compulsory2/unit2/task5', // 
+            'ninthit/compulsory2/unit2/task6', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '单元3 信息系统的设计与开发',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory2/unit3/task1', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '单元4 信息系统的安全',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory2/unit4/task1', // 
+            'ninthit/compulsory2/unit4/task2', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '单元5 信息社会的建设',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/compulsory2/unit5/task1', // 
+            'ninthit/compulsory2/unit5/task2', // 
+          ],
+        },
       ],
     },
-    // 第六章 信息处理
+    // 办公软件
     {
       type: 'category',
-      label: '第六章 信息处理',
+      label: '办公软件',
       collapsible: true,
       collapsed: false,
       items: [
-        'ninthit/chapter06/section1', // 
-        'ninthit/chapter06/section2', //
-      ],
-    },
-    // 第七章 人工智能基础知识
-    {
-      type: 'category',
-      label: '第七章 人工智能基础知识',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/chapter07/section1', // 
-        'ninthit/chapter07/section2', //
-      ],
-    },
-    // 第八章 信息社会责任
-    {
-      type: 'category',
-      label: '第八章 信息社会责任',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'ninthit/chapter08/section1', // 
-        'ninthit/chapter08/section2', //
-        'ninthit/chapter08/section3', // 
+        {
+          type: 'category',
+          label: '文字处理基础知识',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/office/unit1/task1', // 
+            'ninthit/office/unit1/task2', // 
+            'ninthit/office/unit1/task3', // 
+            'ninthit/office/unit1/task4', // 
+            'ninthit/office/unit1/task5', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '电子表格基础知识',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'ninthit/office/unit2/task1', // 
+            'ninthit/office/unit2/task2', //
+            'ninthit/office/unit2/task3', // 
+            'ninthit/office/unit2/task4', // 
+            'ninthit/office/unit2/task5', // 
+            'ninthit/office/unit2/task6', // 
+          ],
+        },
       ],
     },
   ],

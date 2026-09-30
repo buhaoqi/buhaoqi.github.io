@@ -210,9 +210,18 @@ const config = {
           // 4. 计算机网络基础 - 靠左
           {
             type: 'docSidebar',
+            sidebarId: 'zzdzSidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '对口单招',
+            // 可选：设置默认打开的文档
+            docId: 'zzdz/index',
+          },
+          // 4. 计算机网络基础 - 靠左
+          {
+            type: 'docSidebar',
             sidebarId: 'ninthitSidebar',  // 需要在sidebars.js中定义
             position: 'left',
-            label: '九类信息技术',
+            label: '九类单招',
             // 可选：设置默认打开的文档
             docId: 'ninthit/index',
           },
