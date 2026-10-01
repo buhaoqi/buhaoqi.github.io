@@ -900,6 +900,7 @@ const sidebars = {
           items: [
             'network-basics/unit04/project1/task1', // 
             'network-basics/unit04/project1/task2', // 
+            'network-basics/unit04/project1/task2-2', // 
             'network-basics/unit04/project1/task3', // 
           ],
         },
