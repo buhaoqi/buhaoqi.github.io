@@ -867,6 +867,7 @@ const sidebars = {
           items: [
             'network-basics/unit03/project2/task1', // 
             'network-basics/unit03/project2/task2', //
+            'network-basics/unit03/project2/task2-1', //
             'network-basics/unit03/project2/task3', // 
           ],
         }, 
@@ -899,8 +900,10 @@ const sidebars = {
           collapsed: true,
           items: [
             'network-basics/unit04/project1/task1', // 
-            'network-basics/unit04/project1/task2', // 
-            'network-basics/unit04/project1/task2-2', // 
+            'network-basics/unit04/project1/task2-1', // 
+            'network-basics/unit04/project1/task2-2', //
+            'network-basics/unit04/project1/task2-3', // 
+            'network-basics/unit04/project1/task2-4', // 
             'network-basics/unit04/project1/task3', // 
           ],
         },
@@ -1217,6 +1220,7 @@ const sidebars = {
         'zzdz/chapter04/task6', //
         'zzdz/chapter04/task7', //
         'zzdz/chapter04/task8', //
+        'zzdz/chapter04/task8-2', //
         'zzdz/chapter04/task9', //
         'zzdz/chapter04/task10', //
         'zzdz/chapter04/task11', //
