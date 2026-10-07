@@ -1,0 +1,215 @@
+<!doctype html><html lang=en dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-network-basics/unit04/project1/task2-4" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>任务二 认识IP协议-子网编址16 | 河北对口高考计算机专业</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:image content=https://buhaoqi.github.io/img/logo-orange-social.png /><meta data-rh=true name=twitter:image content=https://buhaoqi.github.io/img/logo-orange-social.png /><meta data-rh=true property=og:url content=https://buhaoqi.github.io/docs/network-basics/unit04/project1/task2-4 /><meta data-rh=true property=og:locale content=en /><meta data-rh=true name=docusaurus_locale content=en /><meta data-rh=true name=docsearch:language content=en /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="任务二 认识IP协议-子网编址16 | 河北对口高考计算机专业"/><meta data-rh=true name=description content=知识点 /><meta data-rh=true property=og:description content=知识点 /><link data-rh=true rel=icon href=/img/favicon.ico /><link data-rh=true rel=canonical href=https://buhaoqi.github.io/docs/network-basics/unit04/project1/task2-4 /><link data-rh=true rel=alternate href=https://buhaoqi.github.io/docs/network-basics/unit04/project1/task2-4 hreflang=en /><link data-rh=true rel=alternate href=https://buhaoqi.github.io/docs/network-basics/unit04/project1/task2-4 hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://buhaoqi.github.io/docs/network-basics/unit04/project1/task2-4","name":"任务二 认识IP协议-子网编址16","position":1}]}</script><link rel=alternate type=application/rss+xml href=/blog/rss.xml title="河北对口高考计算机专业 RSS Feed"><link rel=alternate type=application/atom+xml href=/blog/atom.xml title="河北对口高考计算机专业 Atom Feed"><link rel=stylesheet href=/assets/css/styles.f8989b77.css /><script src=/assets/js/runtime~main.6955f832.js defer></script><script src=/assets/js/main.2d657a45.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-ab2")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/img/logo.png /><div role=region aria-label="Skip to main content"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Skip to main content</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/><div class=navbar__logo><img src=/img/logo.png alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/img/logo.png alt="不好奇 Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate"></b></a><a class="navbar__item navbar__link" docid=csharp/intro href=/docs/csharp/intro>算法与程序设计</a><a class="navbar__item navbar__link" docid=csharptutorials/index href=/docs/csharp-tutorials/>C#课件</a><a class="navbar__item navbar__link" docid=mysql/intro href=/docs/mysql/intro>MySQL教程</a><a class="navbar__item navbar__link" docid=computer-basics/index href=/docs/computer-basics/>计算机应用基础</a><a aria-current=page class="navbar__item navbar__link navbar__link--active" docid=network-basics/index href=/docs/network-basics/>计算机网络基础</a><a class="navbar__item navbar__link" docid=zzdz/index href=/docs/zzdz/>对口单招</a><a class="navbar__item navbar__link" docid=ninthit/index href=/docs/ninthit/>九类单招</a><a class="navbar__item navbar__link" href=/docs/bookmarks/intro>网址导航</a><a class="navbar__item navbar__link" href=/blog>Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://buhaoqi.com target=_blank rel="noopener noreferrer" class="navbar__item navbar__link navbar-external-link">不好奇课堂<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/network-basics/><span class=linkLabel_WmDU>2027年考试大纲</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class=menu__link href=/docs/network-basics/index2><span class=linkLabel_WmDU>考纲对比</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit01/overview><span class=categoryLinkLabel_W154>模块一 计算机网络概述</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit01/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project1/task1><span class=categoryLinkLabel_W154>项目一 网络发展与基本概念</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project2/task1><span class=categoryLinkLabel_W154>项目二 网络的分类与拓扑结构</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project3/task1-1><span class=categoryLinkLabel_W154>项目三 计算机网络传输介质</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit01/project4/task1><span class=categoryLinkLabel_W154>项目四 网络的组成功能应用</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit03/overview><span class=categoryLinkLabel_W154>模块三 OSI参考模型体系</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit03/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit03/project1/task1><span class=categoryLinkLabel_W154>项目一 OSI参考模型概述</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit03/project2/task1><span class=categoryLinkLabel_W154>项目二 OSI中的硬件层次</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit03/project3/task1><span class=categoryLinkLabel_W154>项目三 OSI中的软件层次</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/docs/network-basics/unit04/overview><span class=categoryLinkLabel_W154>模块四 TCP/IP参考模型体系</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/docs/network-basics/unit04/project1/task1><span class=categoryLinkLabel_W154>项目一 IP协议</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/project1/task1><span class=linkLabel_WmDU>任务一 TCP/IP参考模型概述12</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/project1/task2-1><span class=linkLabel_WmDU>任务二 认识IP协议-IP协议13</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/project1/task2-2><span class=linkLabel_WmDU>任务二 认识IP协议-IP地址14</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/project1/task2-3><span class=linkLabel_WmDU>任务二 认识IP协议-子网掩码15</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/network-basics/unit04/project1/task2-4><span class=linkLabel_WmDU>任务二 认识IP协议-子网编址16</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit04/project1/task3><span class=linkLabel_WmDU>任务三 下一代IP协议17</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit04/project2/task1><span class=categoryLinkLabel_W154>项目二 传输层控制协议</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit04/project3/task1><span class=categoryLinkLabel_W154>项目三 应用层协议与参数设置</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit05/overview><span class=categoryLinkLabel_W154>模块五 局域网技术</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit05/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit05/project1/task1><span class=categoryLinkLabel_W154>项目一 局域网基础</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit05/project2/task1><span class=categoryLinkLabel_W154>项目二 以太网</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit05/project3/task1><span class=categoryLinkLabel_W154>项目三 环型网络</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit06/overview><span class=categoryLinkLabel_W154>模块六 局域网组网技术</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit06/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit06/project1/task1><span class=categoryLinkLabel_W154>项目一 局域网组网设备与方法</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit06/project2/task1><span class=categoryLinkLabel_W154>项目二 虚拟局域网和无线网络</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit07/overview><span class=categoryLinkLabel_W154>模块七 广域网技术概述</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit07/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit07/project1/task1><span class=categoryLinkLabel_W154>项目一 广域网组网</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit07/project2/task1><span class=categoryLinkLabel_W154>项目二 广域网实例</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit07/project3/task1><span class=categoryLinkLabel_W154>项目三 广域网设备</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit08/overview><span class=categoryLinkLabel_W154>模块八 Internet技术与应用</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit08/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit08/project1/task1><span class=categoryLinkLabel_W154>项目一 Internet接入与使用</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit08/project2/task1><span class=categoryLinkLabel_W154>项目二 Internet服务与内/外联网</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit09/overview><span class=categoryLinkLabel_W154>模块九 网络安全</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit09/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit09/project1/task1><span class=categoryLinkLabel_W154>项目一 认识网络安全</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit09/project2/task1><span class=categoryLinkLabel_W154>项目二 数据安全与安全威胁</span></a></div></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=true href=/docs/network-basics/unit10/overview><span class=categoryLinkLabel_W154>模块十 网络管理与结构化布线</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/network-basics/unit10/overview><span class=linkLabel_WmDU>概述</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit10/project1/task1><span class=categoryLinkLabel_W154>项目一 网络管理</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/network-basics/unit10/project2/task1><span class=categoryLinkLabel_W154>项目二 结构化布线技术</span></a></div></ul></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Home page" class=breadcrumbs__link href=/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>模块四 TCP/IP参考模型体系</span><li class=breadcrumbs__item><span class=breadcrumbs__link>项目一 IP协议</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>任务二 认识IP协议-子网编址16</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>任务二 认识IP协议-子网编址16</h1></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=知识点>知识点<a href=#知识点 class=hash-link aria-label="Direct link to 知识点" title="Direct link to 知识点" translate=no>​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=1子网编址是什么>1.子网编址是什么<a href=#1子网编址是什么 class=hash-link aria-label="Direct link to 1.子网编址是什么" title="Direct link to 1.子网编址是什么" translate=no>​</a></h3>
+<p>子网编址就是通过借用主机位，划分出多个子网。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=2如何进行子网编址>2.如何进行子网编址？<a href=#2如何进行子网编址 class=hash-link aria-label="Direct link to 2.如何进行子网编址？" title="Direct link to 2.如何进行子网编址？" translate=no>​</a></h3>
+<ul>
+<li class="">① 求主机位：判断IP类别，确定原始网络位、原始主机位
+<code>A/B/C</code>类，写出默认网络位；原始主机位 = 32 − 默认网络位。</li>
+<li class="">② 求子网位：计算需要借用的子网位n
+公式：<code>2^n</code> 所需子网数量，求出最小n（从主机位高位连续借位）。</li>
+<li class="">③ 求总网位和剩余主机位：计算新总网络位、剩余主机位m
+新总网络位 = 原有网络位 + n；m=32-新总网络位。</li>
+<li class="">④ 求出子网掩码
+32位二进制：前【新总网络位】写1，剩·余m位写0，转为点分十进制，也可用CIDR前缀<code>/x</code>表示。</li>
+<li class="">⑤计算块大小（子网增量）
+块大小 = 256-掩码最后非255段的值。</li>
+<li class="">⑥列出全部子网ID
+从主网起始地址开始，每次增加一个块大小，得到每个子网的子网ID。</li>
+<li class="">⑦求每个子网的广播地址
+广播地址 = 本子网子网ID + 块大小 − 1（主机位全部置1）。</li>
+<li class="">⑧求可用IP范围与可用主机数<!-- -->
+<ul>
+<li class="">可用IP：子网ID+1 ～ 广播地址−1</li>
+<li class="">可用主机数量：<code>2^m-2</code>（减去子网ID、广播地址）</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=配套已知ip掩码求该子网信息计算题另一种题型>配套：已知IP+掩码，求该子网信息（计算题，另一种题型）<a href=#配套已知ip掩码求该子网信息计算题另一种题型 class=hash-link aria-label="Direct link to 配套：已知IP+掩码，求该子网信息（计算题，另一种题型）" title="Direct link to 配套：已知IP+掩码，求该子网信息（计算题，另一种题型）" translate=no>​</a></h3>
+<ol>
+<li class="">将IP、子网掩码转为32位二进制。</li>
+<li class="">IP 按位与子网掩码，得到子网ID。</li>
+<li class="">主机ID = IP XOR 子网ID。</li>
+<li class="">计算块大小，求广播地址。</li>
+<li class="">写出可用IP范围，计算可用主机数量。</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=简答默写短句直接写试卷>简答默写短句（直接写试卷）<a href=#简答默写短句直接写试卷 class=hash-link aria-label="Direct link to 简答默写短句（直接写试卷）" title="Direct link to 简答默写短句（直接写试卷）" translate=no>​</a></h3>
+<p>①确定主网原始网络位；②计算借位位数；③确定新子网掩码；④计算块大小，得到各个子网ID；⑤计算广播地址、可用IP范围与可用主机数。</p>
+<p>要不要我给你出一道C类子网划分大题，完整套用这套步骤练习？</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=2为什么要划分子网>2.为什么要划分子网？<a href=#2为什么要划分子网 class=hash-link aria-label="Direct link to 2.为什么要划分子网？" title="Direct link to 2.为什么要划分子网？" translate=no>​</a></h3>
+<p>两级IP结构变为三级IP结构,便于管理和提高地址利用率。</p>
+<ul>
+<li class="">原始两级IP结构（网络ID+主机ID）在大型网络中难以管理（如一个B类网可容纳6万多台主机）。</li>
+<li class="">子网编址从主机ID部分借用若干位作为子网号，形成三级结构：网络ID + 子网ID + 主机ID，把一个大网络划分成多个更小的子网，便于管理和提高地址利用率。</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=10划分子网后外部路由器能否识别内部子网划分>10.划分子网后，外部路由器能否识别内部子网划分？<a href=#10划分子网后外部路由器能否识别内部子网划分 class=hash-link aria-label="Direct link to 10.划分子网后，外部路由器能否识别内部子网划分？" title="Direct link to 10.划分子网后，外部路由器能否识别内部子网划分？" translate=no>​</a></h3>
+<p>不能。子网划分对外透明。</p>
+<p>不能。Internet上的路由器仍认为这些子网都属于原来的大网络ID（如157.60.0.0/16），子网划分对外透明，不需要重新配置Internet中的路由器，只需配置本地路由器。</p>
+<ol start=11>
+<li class="">子网编址的步骤是什么？</li>
+</ol>
+<p>根据组织内部网络环境，规划需要的子网数n和每个子网容纳的主机数m；
+选取最小的b使 n ≤ 2ᵇ，从主机号高位开始借b位作为子网ID；
+子网ID编号从0…00到1…11（共b位）；
+每个子网的主机ID从0…01到1…10（共 32−网络ID位数−子网ID位数 位）；
+注意：主机ID全0和全1必须排除。</p>
+<ol start=12>
+<li class="">例：对157.60.0.0/16借8位划分子网，可划分多少个子网？每个子网多少台主机？</li>
+</ol>
+<p>借8位作子网号 → 2⁸ = 256个子网；
+剩余8位主机号 → 2⁸−2 = 254台主机/子网；
+例如：157.60.1.0/24、157.60.2.0/24、157.60.3.0/24……</p>
+<ol start=13>
+<li class="">什么是ICMP？它的作用是什么？</li>
+</ol>
+<p>ICMP（网际控制报文协议）是IP协议的一部分，由IP数据包承载。主要用于报告数据包无法到达目标以及对传输错误的解释信息（如"目标网络不可达"）。</p>
+<ol start=14>
+<li class="">ICMP差错报告报文的基本格式包含哪些字段？</li>
+</ol>
+<p>类型（0~12）：识别消息类型；
+代码：对特定类型的进一步描述；
+检验和：检验ICMP数据包中的位错误；
+未使用字段；
+原始IP数据包：引起该ICMP报文生成的那个原始IP数据包首部+前8字节。</p>
+<ol start=15>
+<li class="">ICMP类型3（目标不可达）的常见代码有哪些含义？</li>
+</ol>
+<p>0：网络不可达
+1：主机不可达
+2：协议不可达
+3：端口不可达
+4：需要分段但已设置DF（不分段位）
+5：源路由失败</p>
+<ol start=16>
+<li class="">ping命令利用了ICMP的什么报文？</li>
+</ol>
+<p>ping向目标主机发送ICMP类型8、代码0的"回复请求"（回显请求）报文；目标主机收到后回送ICMP类型0、代码0的"回复应答"（回显应答）报文，以此测试网络连通性。</p>
+<ol start=17>
+<li class="">ICMP能否使IP成为可靠协议？为什么？</li>
+</ol>
+<p>不能。ICMP只是尝试报告错误并在特定情况下提供反馈，且ICMP消息本身也是靠IP数据包传输的（本身也可能丢失），因此IP仍然是不可靠的。</p>
+<ol start=18>
+<li class="">为什么需要ARP协议？</li>
+</ol>
+<p>IP数据包最终要通过具体物理网络的链路发送，而物理网络（如以太网）只能识别自己的48位MAC地址。源主机必须知道目标主机的MAC地址才能封装成帧投递。ARP（地址解析协议）就是用来根据已知IP地址查找对应的MAC地址的。</p>
+<ol start=19>
+<li class="">简述ARP的工作过程（以A=192.168.0.1要给B=192.168.0.2发数据为例）。
+A不知道B的MAC地址，先广播一个ARP请求报文，询问"192.168.0.2的MAC地址是什么？"；</li>
+</ol>
+<p>同一以太网中所有主机都收到此广播，但只有B发现目标IP与自己相同，才做出响应；
+B单播回复一个ARP响应报文，携带自己的IP地址和MAC地址给A；
+A把B的IP↔MAC映射存入本机ARP缓冲区（ARP缓存），以后直接查表使用，不必每次都发ARP请求。</p>
+<ol start=20>
+<li class="">什么是ARP缓冲区（ARP缓存）？为什么需要它？</li>
+</ol>
+<p>每台计算机的ARP自动维护一张IP地址与物理地址的转换表（映射表）。有了缓存，A以后再给B发数据时直接从缓存取MAC地址，避免每次都广播ARP请求，减少网络流量。表项如果一段时间未被使用会被自动删除（超时老化）。</p>
+<ol start=21>
+<li class="">RARP协议的作用是什么？</li>
+</ol>
+<p>RARP（反向地址解析协议）完成与ARP相反的转换：已知MAC地址，查找对应的IP地址，常用于无盘工作站启动时获取自己的IP地址。</p>
+<ol start=22>
+<li class="">同一子网内，客户机向服务器发送IP数据包的过程是怎样的？</li>
+</ol>
+<p>查本机路由表，发现存在与服务器IP完全匹配的表项（说明在同一子网）；
+通过ARP获得服务器的MAC地址；
+IP包头附上源IP和目的IP，交给网卡；
+网卡生成以太网帧，广播到局域网；
+服务器网卡捕获帧，检查协议类型字段为IP后上传给IP协议；
+IP协议识别目的IP是本机后，根据"协议"字段把数据部分交给上层协议（TCP/UDP）。</p>
+<ol start=23>
+<li class="">不同子网时，客户机向服务器发送IP数据包的过程是怎样的？</li>
+</ol>
+<p>查路由表，找到与服务器IP网络部分相匹配的表项（如219.220.243.0/24）；
+若找不到具体表项，则使用默认网关表项；
+通过ARP获得网关（路由器）的MAC地址（而非服务器的MAC地址）；
+帧封装好后发给默认网关；
+网关网卡收到帧后上传IP协议，发现目的IP不是本机，按路由表将IP数据包转发出去；
+数据包经过多个路由器逐跳转发，最终到达服务器所在子网，再交付给服务器。</p>
+<ol start=24>
+<li class="">同一子网与跨子网发送时，帧首部中的MAC地址和IP首部中的IP地址分别是谁？</li>
+</ol>
+<p>同一子网：帧首部目的MAC = 服务器MAC；IP首部目的IP = 服务器IP。
+跨子网：帧首部目的MAC = 默认网关的MAC；但IP首部目的IP = 服务器的IP（IP地址端到端不变，MAC地址每跳都变）。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=豆包作业>豆包作业<a href=#豆包作业 class=hash-link aria-label="Direct link to 豆包作业" title="Direct link to 豆包作业" translate=no>​</a></h2>
+<p>子网编址（子网划分）标准解题步骤</p>
+<blockquote>
+<p>分两大类题型：
+题型1：已知【主网络+需要划分的子网数量】，求子网掩码、块大小、各个子网网段（规划类大题）
+题型2：已知【IP+子网掩码】，求本子网的子网ID、主机ID、广播地址、可用IP范围（咱们一直在练的计算题）</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=题型1给定主网划分指定数量子网规划子网>题型1：给定主网，划分指定数量子网（规划子网）<a href=#题型1给定主网划分指定数量子网规划子网 class=hash-link aria-label="Direct link to 题型1：给定主网，划分指定数量子网（规划子网）" title="Direct link to 题型1：给定主网，划分指定数量子网（规划子网）" translate=no>​</a></h2>
+<p>例题：B类网络 <code>150.100.0.0/16</code>，要求划分500个子网
+步骤1：确定主网默认网络位
+B类默认网络位=16位，原始主机位 = 32−16 =16位</p>
+<p>步骤2：计算需要借多少位子网位n
+公式：2^n  需要的子网数量
+本题：2^9=512 500，所以 n=9，向主机位借9位作为子网位</p>
+<p>步骤3：计算新总网络位
+新总网络位 = 原有网络位 + n
+<code>(16+9=25) → 写成CIDR </code>/25</p>
+<p>步骤4：求剩余主机位m
+m=32-新总网络位 = 32-25(=7)</p>
+<p>步骤5：求子网掩码
+32位，前25位写1，后7位写0
+二进制：<code>11111111.11111111.11111111.10000000</code>
+转十进制：<code>255.255.255.128</code></p>
+<p>步骤6：计算块大小（子网增量）
+块大小 = 2^m  或者 块大小 = 256-掩码最后一段
+256-128=128，每128个IP为一个子网</p>
+<p>步骤7：写出所有子网网段
+150.100.0.0/25
+150.100.0.128/25
+150.100.1.0/25
+150.100.1.128/25
+……以此类推</p>
+<p>步骤8：求每个子网参数
+子网ID：网段起始地址
+广播地址 = 子网ID + 块大小 −1
+可用IP：子网ID+1 ~ 广播地址−1
+单个子网可用主机数：2^m-2</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=题型2已知ip掩码求该子网信息高频计算题咱们原题>题型2：已知IP+掩码，求该子网信息（高频计算题，咱们原题）<a href=#题型2已知ip掩码求该子网信息高频计算题咱们原题 class=hash-link aria-label="Direct link to 题型2：已知IP+掩码，求该子网信息（高频计算题，咱们原题）" title="Direct link to 题型2：已知IP+掩码，求该子网信息（高频计算题，咱们原题）" translate=no>​</a></h2>
+<p>已知：IP：150.100.12.178，掩码255.255.255.128（/25）
+步骤1：IP、掩码转为32位二进制
+IP：<code>10010110.01100100.00001100.10110010</code>
+掩码：<code>11111111.11111111.11111111.10000000</code></p>
+<p>步骤2：按位与（AND）求子网ID（网络ID）
+IP AND 子网掩码 = 子网ID
+结果：150.100.12.128</p>
+<p>步骤3：求主机位位数m
+<code>m=32-掩码前缀（/25）\(=7\)位</code></p>
+<p>步骤4：求主机ID
+方法①：IP XOR 子网ID
+方法②：IP AND 掩码反码
+结果：0.0.0.50</p>
+<p>步骤5：计算块大小
+块大小 = 256 -掩码最后一段 = 256-128=128</p>
+<p>步骤6：求广播地址
+广播地址 = 子网ID + 块大小 −1
+150.100.12.128 +128 −1 =150.100.12.255</p>
+<p>步骤7：求可用主机IP范围
+可用IP：子网ID+1 ～ 广播地址−1
+150.100.12.129 ~ 150.100.12.254</p>
+<p>步骤8：可用主机数量
+2^m-2=2^7-2=126台</p>
+<hr/>
+<h1>单招简答题背诵版（直接写卷子）</h1>
+<p>子网编址步骤：</p>
+<ol>
+<li class="">判断IP类型，确定原始网络位；</li>
+<li class="">根据需要的子网数量，计算需要向主机位借用的子网位；</li>
+<li class="">确定新的总网络位，得到子网掩码；</li>
+<li class="">计算块大小，确定各个子网的子网ID；</li>
+<li class="">计算每个子网广播地址、可用IP范围与可用主机数量。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=单招避坑清单>单招避坑清单<a href=#单招避坑清单 class=hash-link aria-label="Direct link to 单招避坑清单" title="Direct link to 单招避坑清单" translate=no>​</a></h2>
+<ol>
+<li class="">借位只能从主机位最高位连续借，不能零散挑选比特</li>
+<li class="">2^n：子网数量；2^m-2：单个子网可用主机</li>
+<li class="">子网ID（主机位全0）、广播地址（主机位全1）不能分配给主机</li>
+<li class="">块大小只看掩码中最后一段不为255的字节</li>
+</ol>
+<p>来，做一道规划类小题：C类网络192.168.1.0/24，要求划分4个子网，完整走一遍上面的步骤？</p>
+<p>若子网掩码为 255.255.255.192，下列 IP 地址属于同一个子网的是（）。A. 156.26.27.71 和 156.26.101.110B. 156.26.101.88 和 156.26.101.132C. 156.26.27.71 和 156.26.27.110D. 156.26.27.7 和 156.27.101.132</div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href=https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/network-basics/unit04/project1/task2-4.md target=_blank rel="noopener noreferrer" class=theme-edit-this-page><svg fill=currentColor height=20 width=20 viewBox="0 0 40 40" class=iconEdit_Z9Sw aria-hidden=true><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"/></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href=/docs/network-basics/unit04/project1/task2-3><div class=pagination-nav__sublabel>Previous</div><div class=pagination-nav__label>任务二 认识IP协议-子网掩码15</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/docs/network-basics/unit04/project1/task3><div class=pagination-nav__sublabel>Next</div><div class=pagination-nav__label>任务三 下一代IP协议17</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#知识点 class="table-of-contents__link toc-highlight">知识点</a><ul><li><a href=#1子网编址是什么 class="table-of-contents__link toc-highlight">1.子网编址是什么</a><li><a href=#2如何进行子网编址 class="table-of-contents__link toc-highlight">2.如何进行子网编址？</a><li><a href=#配套已知ip掩码求该子网信息计算题另一种题型 class="table-of-contents__link toc-highlight">配套：已知IP+掩码，求该子网信息（计算题，另一种题型）</a><li><a href=#简答默写短句直接写试卷 class="table-of-contents__link toc-highlight">简答默写短句（直接写试卷）</a><li><a href=#2为什么要划分子网 class="table-of-contents__link toc-highlight">2.为什么要划分子网？</a><li><a href=#10划分子网后外部路由器能否识别内部子网划分 class="table-of-contents__link toc-highlight">10.划分子网后，外部路由器能否识别内部子网划分？</a></ul><li><a href=#豆包作业 class="table-of-contents__link toc-highlight">豆包作业</a><li><a href=#题型1给定主网划分指定数量子网规划子网 class="table-of-contents__link toc-highlight">题型1：给定主网，划分指定数量子网（规划子网）</a><li><a href=#题型2已知ip掩码求该子网信息高频计算题咱们原题 class="table-of-contents__link toc-highlight">题型2：已知IP+掩码，求该子网信息（高频计算题，咱们原题）</a><li><a href=#单招避坑清单 class="table-of-contents__link toc-highlight">单招避坑清单</a></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Docs</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/docs/intro>Tutorial</a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>Community</div><ul class="footer__items clean-list"><li class=footer__item><a href=https://stackoverflow.com/questions/tagged/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>Stack Overflow<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://discordapp.com/invite/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>Discord<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><li class=footer__item><a href=https://x.com/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>X<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div><div class="theme-layout-footer-column col footer__col"><div class=footer__title>More</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/blog>Blog</a><li class=footer__item><a href=https://github.com/facebook/docusaurus target=_blank rel="noopener noreferrer" class=footer__link-item>GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div></body>
