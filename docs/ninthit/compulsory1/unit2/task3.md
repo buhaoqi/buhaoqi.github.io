@@ -33,21 +33,26 @@ sidebar_position: 1  # 侧边栏中排在第1位
 | `%`    | 取余             | `10 % 3`  | `1`        |
 | `**`   | 幂运算           | `2 ** 3`  | `8`        |
 
+
 ### 1. 加法、减法、乘法
 
-```
-a = 10b = 3print(a + b)  # 13print(a - b)  # 7print(a * b)  # 30
+```python
+a = 10
+b = 3
+print(a + b)  # 13
+print(a - b)  # 7
+print(a * b)  # 30
 ```
 
 这里要注意，`+` 不仅可以做数字加法，还可以拼接字符串：
 
-```
+```python
 print("Python" + "入门")  # Python入门
 ```
 
 但不能直接将字符串和整数相加：
 
-```
+```python
 print("年龄：" + 18)  # TypeError
 ```
 
@@ -55,8 +60,9 @@ print("年龄：" + 18)  # TypeError
 
 `/` 表示普通除法，即使两个数能够整除，结果通常也是 `float` 类型。
 
-```
-print(10 / 2)  # 5.0print(7 / 2)   # 3.5
+```python
+print(10 / 2)  # 5.0
+print(7 / 2)   # 3.5
 print(type(10 / 2))  # <class 'float'>
 ```
 
@@ -66,8 +72,10 @@ print(type(10 / 2))  # <class 'float'>
 
 `//` 表示向下取整除法。它不是简单地删除小数部分，而是将商向负无穷方向取整。
 
-```
-print(10 // 3)    # 3print(9 // 2)     # 4print(-10 // 3)   # -4
+```python
+print(10 // 3)    # 3
+print(9 // 2)     # 4
+print(-10 // 3)   # -4
 ```
 
 为什么 `-10 // 3` 是 `-4`？
@@ -80,36 +88,54 @@ print(10 // 3)    # 3print(9 // 2)     # 4print(-10 // 3)   # -4
 
 典型应用： 将总秒数转换为小时、将总数量转换为整箱数、计算某个数字的十位或百位。
 
-```
-seconds = 3675hours = seconds // 3600minutes = seconds % 3600 // 60remaining_seconds = seconds % 60print(hours, minutes, remaining_seconds)# 1 1 15
+```python
+seconds = 3675
+hours = seconds // 3600
+minutes = seconds % 3600 // 60
+remaining_seconds = seconds % 60
+print(hours, minutes, remaining_seconds) # 1 1 15
 ```
 
 ### 4. 取余 `%`
 
 `%` 用于求除法的余数。
 
-```
-print(10 % 3)  # 1print(12 % 4)  # 0print(7 % 2)   # 1
+```python
+print(10 % 3)  # 1
+print(12 % 4)  # 0
+print(7 % 2)   # 1
 ```
 
 它最常见的用途有三个：
 
 用途一：判断奇偶数
 
-```
-num = 7if num % 2 == 0:    print("偶数")else:    print("奇数")
+```python
+num = 7
+if num % 2 == 0:    
+  print("偶数")
+else:    
+  print("奇数")
 ```
 
 用途二：判断能否整除
 
-```
-num = 15if num % 5 == 0:    print("能被 5 整除")
+```python
+num = 15
+if num % 5 == 0:    
+  print("能被 5 整除")
 ```
 
 用途三：提取整数的某一位数字
 
-```
-num = 583ones = num % 10tens = num // 10 % 10hundreds = num // 100print(ones)      # 3print(tens)      # 8print(hundreds)  # 5
+```python
+num = 583
+ones = num % 10
+tens = num // 10 % 10
+hundreds = num // 100
+print(ones)      # 3
+print(tens)      # 8
+print(hundreds)  # 5
 ```
 
 注意：Python 的取余结果与除数的符号有关。例如，`-10 % 3` 的结果是 `2`，因为 Python 的整除和取余遵循同一套计算关系。
@@ -118,8 +144,10 @@ num = 583ones = num % 10tens = num // 10 % 10hundreds = num // 100print(ones)   
 
 `**` 表示乘方。
 
-```
-print(2 ** 3)   # 8print(5 ** 2)   # 25print(9 ** 0.5) # 3.0
+```python
+print(2 ** 3)   # 8
+print(5 ** 2)   # 25
+print(9 ** 0.5) # 3.0
 ```
 
 其中：
@@ -147,8 +175,9 @@ print(2 ** 3)   # 8print(5 ** 2)   # 25print(9 ** 0.5) # 3.0
 
 这是初学者最容易混淆的地方。
 
-```
-age = 18       # 赋值：把 18 赋给 ageprint(age == 18)  # 比较：age 是否等于 18
+```python
+age = 18       # 赋值：把 18 赋给 age
+print(age == 18)  # 比较：age 是否等于 18
 ```
 
 - `=` 是赋值运算符。
@@ -156,8 +185,9 @@ age = 18       # 赋值：把 18 赋给 ageprint(age == 18)  # 比较：age 是�
 
 错误示例：
 
-```
-if age = 18:    print("成年")
+```python
+if age = 18:    
+  print("成年")
 ```
 
 这不是合法的 Python 条件表达式，会产生语法错误。
@@ -166,22 +196,31 @@ if age = 18:    print("成年")
 
 例如，判断一个人是否成年：
 
-```
-age = 20if age >= 18:    print("已成年")else:    print("未成年")
+```python
+age = 20
+if age >= 18:    
+  print("已成年")
+else:    
+  print("未成年")
 ```
 
 判断成绩是否及格：
 
-```
-score = 59if score >= 60:    print("及格")else:    print("不及格")
+```python
+score = 59
+if score >= 60:    
+  print("及格")
+else:    
+  print("不及格")
 ```
 
 ### 3. Python 支持连续比较
 
 Python 有一个很实用的特点：可以像数学表达式一样连续比较。
 
-```
-score = 85print(60 <= score <= 100)  # True
+```python
+score = 85
+print(60 <= score <= 100)  # True
 ```
 
 它相当于：
@@ -204,8 +243,9 @@ if 60 <= score <= 100:    print("成绩有效")
 
 ### 1. 基本赋值 `=`
 
-```
-money = 100name = "张三"
+```python
+money = 100
+name = "张三"
 ```
 
 这里的 `=` 不是数学中的等号，而是赋值操作。
@@ -228,20 +268,24 @@ money = 100name = "张三"
 
 例如，模拟游戏角色受到伤害：
 
-```
-hp = 100hp -= 30print(hp)  # 70
+```python
+hp = 100
+hp -= 30print(hp)  # 70
 ```
 
 它相当于：
 
-```
+```python
 hp = hp - 30
 ```
 
 再例如，购物后扣除余额：
 
-```
-balance = 500price = 128balance -= priceprint(balance)  # 372
+```python
+balance = 500
+price = 128
+balance -= price
+print(balance)  # 372
 ```
 
 初学者要记住： `x += 1` 表示把 `x` 的值增加 1，并将结果重新赋给 `x`。它不是单纯的数学等式。
@@ -262,8 +306,13 @@ Python 最常见的逻辑运算符有三个：
 
 例如，学生必须同时满足年龄和成绩要求才能参加活动：
 
-```
-age = 20score = 85if age >= 18 and score >= 80:    print("符合参加条件")else:    print("不符合参加条件")
+```python
+age = 20
+score = 85
+if age >= 18 and score >= 80:    
+  print("符合参加条件")
+else:    
+  print("不符合参加条件")
 ```
 
 `and` 要求两个条件都成立。
@@ -279,8 +328,13 @@ age = 20score = 85if age >= 18 and score >= 80:    print("符合参加条件")el
 
 例如，会员满足任意一项条件即可获得优惠：
 
-```
-is_member = Falsetotal = 300if is_member or total >= 200:    print("可以享受优惠")else:    print("不能享受优惠")
+```python
+is_member = False
+total = 300
+if is_member or total >= 200:    
+  print("可以享受优惠")
+else:    
+  print("不能享受优惠")
 ```
 
 这里，因为购物金额达到 200 元，所以即使不是会员，也能享受优惠。
@@ -294,16 +348,24 @@ is_member = Falsetotal = 300if is_member or total >= 200:    print("可以享受
 
 ### 3. `not`：取反
 
-```
-is_raining = Falseif not is_raining:    print("可以考虑户外活动")
+```python
+is_raining = False
+if not is_raining:    
+  print("可以考虑户外活动")
 ```
 
 `not False` 的结果是 `True`，所以条件成立。
 
 ### 4. 综合使用三个逻辑运算符
 
-```
-age = 20score = 85is_banned = Falseif age >= 18 and score >= 60 and not is_banned:    print("允许参加考试")else:    print("不允许参加考试")
+```python
+age = 20
+score = 85
+is_banned = False
+if age >= 18 and score >= 60 and not is_banned:    
+  print("允许参加考试")
+else:    
+  print("不允许参加考试")
 ```
 
 这个条件可以读成：
@@ -319,8 +381,12 @@ Python 的 `and` 和 `or` 有短路求值的特点：
 
 例如：
 
-```
-x = 0if x != 0 and 10 / x > 1:    print("条件成立")else:    print("条件不成立")
+```python
+x = 0
+if x != 0 and 10 / x > 1:    
+  print("条件成立")
+else:    
+  print("条件不成立")
 ```
 
 因为 `x != 0` 为假，Python 不会继续计算 `10 / x`，所以不会发生除以零错误。
@@ -340,14 +406,19 @@ x = 0if x != 0 and 10 / x > 1:    print("条件成立")else:    print("条件不
 
 ### 1. 判断字符串中是否包含某段文字
 
-```
-text = "Python 入门教程"print("Python" in text)      # Trueprint("Java" in text)        # Falseprint("Java" not in text)    # True
+```python
+text = "Python 入门教程"
+print("Python" in text)      # True
+print("Java" in text)        # False
+print("Java" not in text)    # True
 ```
 
 ### 2. 判断列表中是否存在某个元素
 
-```
-scores = [70, 85, 92, 60]if 85 in scores:    print("找到了 85 分")
+```python
+scores = [70, 85, 92, 60]
+if 85 in scores:    
+  print("找到了 85 分")
 ```
 
 ### 3. 判断用户名是否在允许名单中

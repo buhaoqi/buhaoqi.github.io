@@ -707,6 +707,11 @@ const sidebars = {
       id: 'computer-basics/index',  // 确保 docs/computer-basics/ch03-01.md 存在
       label: '考试大纲',
     },
+    {
+      type: 'doc',
+      id: 'computer-basics/index1',  // 确保 docs/computer-basics/ch03-01.md 存在
+      label: '考试大纲',
+    },
     // 项目一：认识计算机
     {
       type: 'category',
@@ -773,6 +778,56 @@ const sidebars = {
         'computer-basics/proj5/index', // 概述
         'computer-basics/proj5/task1', //
         'computer-basics/proj5/task2', //
+      ],
+    },
+    // 项目六 Win10基本概念
+    {
+      type: 'category',
+      label: '项目六 Win10基本概念',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/proj6/task1', // 概述
+        'computer-basics/proj6/task2', //
+        'computer-basics/proj6/task3', //
+        'computer-basics/proj6/task4', //
+        'computer-basics/proj6/task5', //
+      ],
+    },
+    // 项目七 Win10文件管理
+    {
+      type: 'category',
+      label: '项目七 Win10文件管理',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/proj7/index', // 概述
+        'computer-basics/proj7/task1', //
+        'computer-basics/proj7/task2', //
+      ],
+    },
+    // 项目八 Win10个性化设置
+    {
+      type: 'category',
+      label: '项目八 Win10个性化设置',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/proj8/index', // 概述
+        'computer-basics/proj8/task1', //
+        'computer-basics/proj8/task2', //
+      ],
+    },
+    // 项目九 Win10实用工具
+    {
+      type: 'category',
+      label: '项目九 Win10实用工具',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'computer-basics/proj9/index', // 概述
+        'computer-basics/proj9/task1', //
+        'computer-basics/proj9/task2', //
       ],
     },
   ],
@@ -1259,6 +1314,161 @@ const sidebars = {
       items: [
         'zzdz/chapter07/section1', // 
         'zzdz/chapter07/section2', //
+      ],
+    },
+  ],
+  // ============ 普高单招九类信息技术 教程侧边栏 ============
+  officeSidebar: [
+    {
+      type: 'doc',
+      id: 'office/index',  // 
+      label: '考试大纲',
+    },
+    // OFFICE中文教程
+    {
+      type: 'category',
+      label: 'Word2010',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: '模块一 Word2010',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj1-create-doc/task1-start-word', // 
+            'office/word2010/proj1-create-doc/task2-word-ui', // 
+            'office/word2010/proj1-create-doc/task3-create-doc', // 
+            'office/word2010/proj1-create-doc/task4-save-exit', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '模块二 Excel2010',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj2-text-editing/task1', // 
+            'office/word2010/proj2-text-editing/task2', // 
+            'office/word2010/proj2-text-editing/task3', // 
+            'office/word2010/proj2-text-editing/task4', // 
+            'office/word2010/proj2-text-editing/task5', //
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '模块三 word2010',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj3-format-doc/task1', // 
+            'office/word2010/proj3-format-doc/task2', // 
+            'office/word2010/proj3-format-doc/task3', // 
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目四',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj4-page-setting/task1', //
+            'office/word2010/proj4-page-setting/task2', //
+            'office/word2010/proj4-page-setting/task3', //
+            'office/word2010/proj4-page-setting/task4', //
+          ],
+        }, 
+        {
+          type: 'category',
+          label: '项目五',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj5-table/task1', // 
+            'office/word2010/proj5-table/task2', // 
+            'office/word2010/proj5-table/task3', // 
+            'office/word2010/proj5-table/task4', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目六',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj6-text-image-layout/task1', // 
+            'office/word2010/proj6-text-image-layout/task2', // 
+            'office/word2010/proj6-text-image-layout/task3', // 
+            'office/word2010/proj6-text-image-layout/task4', // 
+            'office/word2010/proj6-text-image-layout/task5', // 
+            'office/word2010/proj6-text-image-layout/task6', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目七',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/word2010/proj7-advanced-apply/task1', // 
+            'office/word2010/proj7-advanced-apply/task2', // 
+          ],
+        },
+      ],
+    },
+    // 必修2《信息系统与社会》
+    {
+      type: 'category',
+      label: 'Excel2010',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: '项目一',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/excel2010/proj1/task1', // 
+            'office/excel2010/proj1/task2', // 
+            'office/excel2010/proj1/task3', // 
+            'office/excel2010/proj1/task4', // 
+            'office/excel2010/proj1/task5', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '单元2 信息系统的集成',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/excel2010/proj2/and-or-not', // 
+            'office/excel2010/proj2/average', //
+            'office/excel2010/proj2/count', // 
+          ],
+        },
+      ],
+    },
+    // 办公软件
+    {
+      type: 'category',
+      label: 'PPT2010',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: '文字处理基础知识',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office/ppt2010/proj1', //
+            'office/ppt2010/proj2', //
+            'office/ppt2010/proj3', //
+            'office/ppt2010/proj3', //
+          ],
+        },
       ],
     },
   ],
