@@ -1511,10 +1511,26 @@ const sidebars = {
             'ninthit/compulsory1/unit2/task1', // 
             'ninthit/compulsory1/unit2/task2', // 
             'ninthit/compulsory1/unit2/task3', // 
-            'ninthit/compulsory1/unit2/task4', // 
-            'ninthit/compulsory1/unit2/task5', //
-            'ninthit/compulsory1/unit2/task6', //
-            'ninthit/compulsory1/unit2/task7', //
+            {
+              type: 'category',
+              label: '2.4 运算符与表达式',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                'ninthit/compulsory1/unit2/task4', // 
+                'ninthit/compulsory1/unit2/task5', // 
+                'ninthit/compulsory1/unit2/task6', // 
+                'ninthit/compulsory1/unit2/task7', // 
+                'ninthit/compulsory1/unit2/task8', //
+                'ninthit/compulsory1/unit2/task9', //
+              ],
+            }, 
+            'ninthit/compulsory1/unit2/task10', //
+            'ninthit/compulsory1/unit2/task11', //
+            'ninthit/compulsory1/unit2/task12', //
+            'ninthit/compulsory1/unit2/task13', //
+            'ninthit/compulsory1/unit2/task14', //
+            'ninthit/compulsory1/unit2/task15', //
           ],
         }, 
         {
