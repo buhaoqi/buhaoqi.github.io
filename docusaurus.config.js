@@ -198,6 +198,15 @@ const config = {
             // 可选：设置默认打开的文档
             docId: 'computer-basics/index',
           },
+          // 3. 计算机基础 - 靠左
+          {
+            type: 'docSidebar',
+            sidebarId: 'officeSidebar',  // 需要在sidebars.js中定义
+            position: 'left',
+            label: '中文版OFFICE实用教程',
+            // 可选：设置默认打开的文档
+            docId: 'office/index',
+          },
           // 4. 计算机网络基础 - 靠左
           {
             type: 'docSidebar',
