@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://buhaoqi.github.io/blog</id>
-    <title>河北对口高考计算机专业 Blog</title>
+    <title>河北单招对口计算机备考 Blog</title>
     <updated>2026-08-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://buhaoqi.github.io/blog"/>
-    <subtitle>河北对口高考计算机专业 Blog</subtitle>
+    <subtitle>河北单招对口计算机备考 Blog</subtitle>
     <icon>https://buhaoqi.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[C#编译器VSCLR]]></title>
@@ -33,7 +33,7 @@
 <p>如果把“盒子”比喻看作是给初学者的“拐杖”，那么**“一套规则”**才是程序员看类型的“本质视角”。</p>
 <p>在计算机科学中，<strong>类型（Type）本质上就是一组约束和契约</strong>。正是这套规则，告诉了编译器和CLR（运行时）该如何对待内存里的那串0和1。</p>
 <p>基于C#的实际情况，我把整数类型的这套规则拆解为以下 <strong>“7条铁律”</strong>，你可以直接用在视频里作为干货总结：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="整数类型的七条规则">整数类型的“七条规则”<a href="https://buhaoqi.github.io/blog/what-is-integer-in-csharp#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%83%E6%9D%A1%E8%A7%84%E5%88%99" class="hash-link" aria-label="Direct link to 整数类型的“七条规则”" title="Direct link to 整数类型的“七条规则”" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="整数类型的七条规则">整数类型的“七条规则”<a href="https://buhaoqi.github.io/blog/what-is-integer-in-csharp#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%83%E6%9D%A1%E8%A7%84%E5%88%99" class="hash-link" aria-label="整数类型的“七条规则”的直接链接" title="整数类型的“七条规则”的直接链接" translate="no">​</a></h3>
 <p><strong>规则一：存储空间规则（占多大坑）</strong>
 它严格规定了占用内存的字节数（1B、2B、4B、8B）。这决定了它“能住多大的房子”，是后续所有规则的基础。</p>
 <p><strong>规则二：符号规则（有没有正负）</strong>
@@ -98,7 +98,7 @@
 <li class="">哪些技术表述虽然通俗，但不够严谨</li>
 </ul>
 <p><strong>这些“修改动作”才是最有价值的数据。</strong></p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="你现在的工作方式">你现在的工作方式<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E4%BD%A0%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="Direct link to 你现在的工作方式" title="Direct link to 你现在的工作方式" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="你现在的工作方式">你现在的工作方式<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E4%BD%A0%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="你现在的工作方式的直接链接" title="你现在的工作方式的直接链接" translate="no">​</a></h3>
 <p>大概是：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">你提出主题</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">ChatGPT / DeepSeek 给灵感</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">AI 写初稿</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">你人工打磨</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">   ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">发布</span><br></div></code></pre></div></div>
 <p>这已经很好了。</p>
@@ -110,9 +110,9 @@
 <h1>更重要的是：不要一开始做“多 Agent”</h1>
 <p>我反而<strong>不建议你马上搞什么 10 个 AI 老师互相讨论</strong>。</p>
 <p>你的需求非常适合先做一个：</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="村长编剧-agent">“村长编剧 Agent”<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%9D%91%E9%95%BF%E7%BC%96%E5%89%A7-agent" class="hash-link" aria-label="Direct link to “村长编剧 Agent”" title="Direct link to “村长编剧 Agent”" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="村长编剧-agent">“村长编剧 Agent”<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%9D%91%E9%95%BF%E7%BC%96%E5%89%A7-agent" class="hash-link" aria-label="“村长编剧 Agent”的直接链接" title="“村长编剧 Agent”的直接链接" translate="no">​</a></h2>
 <p>它里面固定几个阶段：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-选题分析">① 选题分析<a href="https://buhaoqi.github.io/blog/cunzhang-agent#-%E9%80%89%E9%A2%98%E5%88%86%E6%9E%90" class="hash-link" aria-label="Direct link to ① 选题分析" title="Direct link to ① 选题分析" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-选题分析">① 选题分析<a href="https://buhaoqi.github.io/blog/cunzhang-agent#-%E9%80%89%E9%A2%98%E5%88%86%E6%9E%90" class="hash-link" aria-label="① 选题分析的直接链接" title="① 选题分析的直接链接" translate="no">​</a></h3>
 <p>输入：</p>
 <blockquote>
 <p>第 14 集：整数类型</p>
@@ -122,7 +122,7 @@
 <p>这一步非常重要。</p>
 <p>因为你现在和 ChatGPT 对话时，其实<strong>你自己就在充当这个“课程架构师”</strong>。</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-生成第一版">② 生成第一版<a href="https://buhaoqi.github.io/blog/cunzhang-agent#-%E7%94%9F%E6%88%90%E7%AC%AC%E4%B8%80%E7%89%88" class="hash-link" aria-label="Direct link to ② 生成第一版" title="Direct link to ② 生成第一版" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-生成第一版">② 生成第一版<a href="https://buhaoqi.github.io/blog/cunzhang-agent#-%E7%94%9F%E6%88%90%E7%AC%AC%E4%B8%80%E7%89%88" class="hash-link" aria-label="② 生成第一版的直接链接" title="② 生成第一版的直接链接" translate="no">​</a></h3>
 <p>然后才让 AI 写口播稿。</p>
 <p>但这里不是简单地告诉它：</p>
 <blockquote>
@@ -137,7 +137,7 @@
 <p>这一层对你价值最大。</p>
 <p>例如生成稿子以后，不要马上让它改。</p>
 <p>先让它扮演：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="村长总编">“村长总编”<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%9D%91%E9%95%BF%E6%80%BB%E7%BC%96" class="hash-link" aria-label="Direct link to “村长总编”" title="Direct link to “村长总编”" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="村长总编">“村长总编”<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%9D%91%E9%95%BF%E6%80%BB%E7%BC%96" class="hash-link" aria-label="“村长总编”的直接链接" title="“村长总编”的直接链接" translate="no">​</a></h3>
 <p>逐条检查：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">技术错误：0</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">概念混淆：2</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">AI 味：3</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">废话：4</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">口播不自然：2</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">初学者理解障碍：3</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">前后逻辑问题：1</span><br></div></code></pre></div></div>
 <p>然后给出：</p>
@@ -202,7 +202,7 @@
 </blockquote>
 <p>这和现在 AI Agent 的评估思路也非常吻合：把“什么叫优秀”明确成评价标准，然后用真实案例持续评估、发现失败模式、改进工作流。(<a href="https://developers.openai.ac.cn/api/docs/guides/agent-evals?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" title="评估智能体工作流 | OpenAI API - OpenAI 教程" class="">OpenAI开发者</a>)</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="我甚至认为你现在已经具备做这个-agent-的最佳条件">我甚至认为你现在已经具备做这个 Agent 的最佳条件<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%88%91%E7%94%9A%E8%87%B3%E8%AE%A4%E4%B8%BA%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%B7%B2%E7%BB%8F%E5%85%B7%E5%A4%87%E5%81%9A%E8%BF%99%E4%B8%AA-agent-%E7%9A%84%E6%9C%80%E4%BD%B3%E6%9D%A1%E4%BB%B6" class="hash-link" aria-label="Direct link to 我甚至认为你现在已经具备做这个 Agent 的最佳条件" title="Direct link to 我甚至认为你现在已经具备做这个 Agent 的最佳条件" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="我甚至认为你现在已经具备做这个-agent-的最佳条件">我甚至认为你现在已经具备做这个 Agent 的最佳条件<a href="https://buhaoqi.github.io/blog/cunzhang-agent#%E6%88%91%E7%94%9A%E8%87%B3%E8%AE%A4%E4%B8%BA%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%B7%B2%E7%BB%8F%E5%85%B7%E5%A4%87%E5%81%9A%E8%BF%99%E4%B8%AA-agent-%E7%9A%84%E6%9C%80%E4%BD%B3%E6%9D%A1%E4%BB%B6" class="hash-link" aria-label="我甚至认为你现在已经具备做这个 Agent 的最佳条件的直接链接" title="我甚至认为你现在已经具备做这个 Agent 的最佳条件的直接链接" translate="no">​</a></h2>
 <p>因为你不是刚开始做内容。</p>
 <p>你已经有：</p>
 <p><strong>100 集 C# 课程规划 + 第 13 集成稿 + 大量修改记录 + 明确的“村长”人格 + 对初学者教学的判断标准。</strong></p>
@@ -242,7 +242,7 @@
 <h1>什么是内存栈（Stack）？</h1>
 <p><strong>栈（Stack）是一块专门用于管理方法调用和局部变量的内存区域。</strong></p>
 <p>它具有三个特点：</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-自动管理">① 自动管理<a href="https://buhaoqi.github.io/blog/stack-heap#-%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86" class="hash-link" aria-label="Direct link to ① 自动管理" title="Direct link to ① 自动管理" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-自动管理">① 自动管理<a href="https://buhaoqi.github.io/blog/stack-heap#-%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86" class="hash-link" aria-label="① 自动管理的直接链接" title="① 自动管理的直接链接" translate="no">​</a></h2>
 <p>当一个方法开始执行时，CLR 会给这个方法分配一块栈空间。</p>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
@@ -255,7 +255,7 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">整个栈帧立即销毁</span><br></div></code></pre></div></div>
 <p>无需 GC（垃圾回收）。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-后进先出lifo">② 后进先出（LIFO）<a href="https://buhaoqi.github.io/blog/stack-heap#-%E5%90%8E%E8%BF%9B%E5%85%88%E5%87%BAlifo" class="hash-link" aria-label="Direct link to ② 后进先出（LIFO）" title="Direct link to ② 后进先出（LIFO）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-后进先出lifo">② 后进先出（LIFO）<a href="https://buhaoqi.github.io/blog/stack-heap#-%E5%90%8E%E8%BF%9B%E5%85%88%E5%87%BAlifo" class="hash-link" aria-label="② 后进先出（LIFO）的直接链接" title="② 后进先出（LIFO）的直接链接" translate="no">​</a></h2>
 <p>Stack 的意思就是：</p>
 <blockquote>
 <p>一摞盘子。</p>
@@ -271,7 +271,7 @@
 <p>所以叫：</p>
 <p><strong>后进先出（Last In First Out）</strong></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-分配速度极快">③ 分配速度极快<a href="https://buhaoqi.github.io/blog/stack-heap#-%E5%88%86%E9%85%8D%E9%80%9F%E5%BA%A6%E6%9E%81%E5%BF%AB" class="hash-link" aria-label="Direct link to ③ 分配速度极快" title="Direct link to ③ 分配速度极快" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-分配速度极快">③ 分配速度极快<a href="https://buhaoqi.github.io/blog/stack-heap#-%E5%88%86%E9%85%8D%E9%80%9F%E5%BA%A6%E6%9E%81%E5%BF%AB" class="hash-link" aria-label="③ 分配速度极快的直接链接" title="③ 分配速度极快的直接链接" translate="no">​</a></h2>
 <p>为什么快？</p>
 <p>因为栈根本不用找空闲内存。</p>
 <p>只需要：</p>
@@ -396,7 +396,7 @@
 </blockquote>
 <p>这两个层面要分开。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一层c逻辑模型教学层面">第一层：C#逻辑模型（教学层面）<a href="https://buhaoqi.github.io/blog/local-variables#%E7%AC%AC%E4%B8%80%E5%B1%82c%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E6%95%99%E5%AD%A6%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="Direct link to 第一层：C#逻辑模型（教学层面）" title="Direct link to 第一层：C#逻辑模型（教学层面）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一层c逻辑模型教学层面">第一层：C#逻辑模型（教学层面）<a href="https://buhaoqi.github.io/blog/local-variables#%E7%AC%AC%E4%B8%80%E5%B1%82c%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E6%95%99%E5%AD%A6%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="第一层：C#逻辑模型（教学层面）的直接链接" title="第一层：C#逻辑模型（教学层面）的直接链接" translate="no">​</a></h2>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">double</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3.14</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
 <p>我们可以画成：</p>
@@ -416,7 +416,7 @@
 </blockquote>
 <p>没有问题。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二层真实运行时jit之后">第二层：真实运行时（JIT之后）<a href="https://buhaoqi.github.io/blog/local-variables#%E7%AC%AC%E4%BA%8C%E5%B1%82%E7%9C%9F%E5%AE%9E%E8%BF%90%E8%A1%8C%E6%97%B6jit%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="Direct link to 第二层：真实运行时（JIT之后）" title="Direct link to 第二层：真实运行时（JIT之后）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二层真实运行时jit之后">第二层：真实运行时（JIT之后）<a href="https://buhaoqi.github.io/blog/local-variables#%E7%AC%AC%E4%BA%8C%E5%B1%82%E7%9C%9F%E5%AE%9E%E8%BF%90%E8%A1%8C%E6%97%B6jit%E4%B9%8B%E5%90%8E" class="hash-link" aria-label="第二层：真实运行时（JIT之后）的直接链接" title="第二层：真实运行时（JIT之后）的直接链接" translate="no">​</a></h2>
 <p>但是 CLR 不这样执行。</p>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">int</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Add</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
@@ -433,24 +433,24 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">a不存在</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">b不存在</span><br></div></code></pre></div></div>
 <p>因为它们只是编译阶段的概念。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="所以准确说法应该是">所以准确说法应该是：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%89%80%E4%BB%A5%E5%87%86%E7%A1%AE%E8%AF%B4%E6%B3%95%E5%BA%94%E8%AF%A5%E6%98%AF" class="hash-link" aria-label="Direct link to 所以准确说法应该是：" title="Direct link to 所以准确说法应该是：" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="不严谨">不严谨：<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%8D%E4%B8%A5%E8%B0%A8" class="hash-link" aria-label="Direct link to 不严谨：" title="Direct link to 不严谨：" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="所以准确说法应该是">所以准确说法应该是：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%89%80%E4%BB%A5%E5%87%86%E7%A1%AE%E8%AF%B4%E6%B3%95%E5%BA%94%E8%AF%A5%E6%98%AF" class="hash-link" aria-label="所以准确说法应该是：的直接链接" title="所以准确说法应该是：的直接链接" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="不严谨">不严谨：<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%8D%E4%B8%A5%E8%B0%A8" class="hash-link" aria-label="不严谨：的直接链接" title="不严谨：的直接链接" translate="no">​</a></h3>
 <blockquote>
 <p>方法内所有值类型都会进入栈。</p>
 </blockquote>
 <p>❌ 不准确</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="更准确">更准确：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%9B%B4%E5%87%86%E7%A1%AE" class="hash-link" aria-label="Direct link to 更准确：" title="Direct link to 更准确：" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="更准确">更准确：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%9B%B4%E5%87%86%E7%A1%AE" class="hash-link" aria-label="更准确：的直接链接" title="更准确：的直接链接" translate="no">​</a></h3>
 <blockquote>
 <p>方法内值类型变量属于栈帧管理范围，但 JIT 编译后可能被放入寄存器、优化消除，或者必要时才存入栈。</p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么很多资料仍然说值类型在栈">为什么很多资料仍然说“值类型在栈”？<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%88%E5%A4%9A%E8%B5%84%E6%96%99%E4%BB%8D%E7%84%B6%E8%AF%B4%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%9C%A8%E6%A0%88" class="hash-link" aria-label="Direct link to 为什么很多资料仍然说“值类型在栈”？" title="Direct link to 为什么很多资料仍然说“值类型在栈”？" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="为什么很多资料仍然说值类型在栈">为什么很多资料仍然说“值类型在栈”？<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BE%88%E5%A4%9A%E8%B5%84%E6%96%99%E4%BB%8D%E7%84%B6%E8%AF%B4%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%9C%A8%E6%A0%88" class="hash-link" aria-label="为什么很多资料仍然说“值类型在栈”？的直接链接" title="为什么很多资料仍然说“值类型在栈”？的直接链接" translate="no">​</a></h2>
 <p>因为它解决的是另一个问题：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="引用类型">引用类型：<a href="https://buhaoqi.github.io/blog/local-variables#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B" class="hash-link" aria-label="Direct link to 引用类型：" title="Direct link to 引用类型：" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="引用类型">引用类型：<a href="https://buhaoqi.github.io/blog/local-variables#%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B" class="hash-link" aria-label="引用类型：的直接链接" title="引用类型：的直接链接" translate="no">​</a></h3>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token class-name">Person</span><span class="token plain"> p </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <p>逻辑：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">Stack</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">p</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">|</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">|</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Heap</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Person对象</span><br></div></code></pre></div></div>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="值类型">值类型：<a href="https://buhaoqi.github.io/blog/local-variables#%E5%80%BC%E7%B1%BB%E5%9E%8B" class="hash-link" aria-label="Direct link to 值类型：" title="Direct link to 值类型：" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="值类型">值类型：<a href="https://buhaoqi.github.io/blog/local-variables#%E5%80%BC%E7%B1%BB%E5%9E%8B" class="hash-link" aria-label="值类型：的直接链接" title="值类型：的直接链接" translate="no">​</a></h3>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> age </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">18</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <p>逻辑：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">Stack</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">age=18</span><br></div></code></pre></div></div>
@@ -462,7 +462,7 @@
 <p>这个模型没有错。</p>
 <p>但它不是 CPU 实际执行模型。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一个非常重要的例外">一个非常重要的例外<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%80%E4%B8%AA%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%E7%9A%84%E4%BE%8B%E5%A4%96" class="hash-link" aria-label="Direct link to 一个非常重要的例外" title="Direct link to 一个非常重要的例外" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一个非常重要的例外">一个非常重要的例外<a href="https://buhaoqi.github.io/blog/local-variables#%E4%B8%80%E4%B8%AA%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A6%81%E7%9A%84%E4%BE%8B%E5%A4%96" class="hash-link" aria-label="一个非常重要的例外的直接链接" title="一个非常重要的例外的直接链接" translate="no">​</a></h2>
 <p>值类型也可能进入堆：</p>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">Person</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> Age</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
@@ -479,7 +479,7 @@
 <p>值类型的数据存储位置取决于它的宿主。</p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="最终建议你在课程中这样表达">最终建议你在课程中这样表达：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%9C%80%E7%BB%88%E5%BB%BA%E8%AE%AE%E4%BD%A0%E5%9C%A8%E8%AF%BE%E7%A8%8B%E4%B8%AD%E8%BF%99%E6%A0%B7%E8%A1%A8%E8%BE%BE" class="hash-link" aria-label="Direct link to 最终建议你在课程中这样表达：" title="Direct link to 最终建议你在课程中这样表达：" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="最终建议你在课程中这样表达">最终建议你在课程中这样表达：<a href="https://buhaoqi.github.io/blog/local-variables#%E6%9C%80%E7%BB%88%E5%BB%BA%E8%AE%AE%E4%BD%A0%E5%9C%A8%E8%AF%BE%E7%A8%8B%E4%B8%AD%E8%BF%99%E6%A0%B7%E8%A1%A8%E8%BE%BE" class="hash-link" aria-label="最终建议你在课程中这样表达：的直接链接" title="最终建议你在课程中这样表达：的直接链接" translate="no">​</a></h2>
 <p>如果面向初学者：</p>
 <blockquote>
 <p><strong>逻辑上，方法内部创建的值类型变量属于栈空间；但实际运行时，JIT 编译器会优化它们的位置，可能放入 CPU 寄存器，甚至完全消除。</strong></p>
@@ -509,7 +509,7 @@
 </blockquote>
 <p>我们一步一步拆开。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-首先纠正一个常见误区">1. 首先纠正一个常见误区<a href="https://buhaoqi.github.io/blog/simple-types#1-%E9%A6%96%E5%85%88%E7%BA%A0%E6%AD%A3%E4%B8%80%E4%B8%AA%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA" class="hash-link" aria-label="Direct link to 1. 首先纠正一个常见误区" title="Direct link to 1. 首先纠正一个常见误区" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-首先纠正一个常见误区">1. 首先纠正一个常见误区<a href="https://buhaoqi.github.io/blog/simple-types#1-%E9%A6%96%E5%85%88%E7%BA%A0%E6%AD%A3%E4%B8%80%E4%B8%AA%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA" class="hash-link" aria-label="1. 首先纠正一个常见误区的直接链接" title="1. 首先纠正一个常见误区的直接链接" translate="no">​</a></h2>
 <p>很多教材会说：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <blockquote>
@@ -527,7 +527,7 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">a</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">CPU寄存器 eax</span><br></div></code></pre></div></div>
 <p>根本没有进入栈。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-那什么时候-int-会进入栈">2. 那什么时候 int 会进入栈？<a href="https://buhaoqi.github.io/blog/simple-types#2-%E9%82%A3%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99-int-%E4%BC%9A%E8%BF%9B%E5%85%A5%E6%A0%88" class="hash-link" aria-label="Direct link to 2. 那什么时候 int 会进入栈？" title="Direct link to 2. 那什么时候 int 会进入栈？" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-那什么时候-int-会进入栈">2. 那什么时候 int 会进入栈？<a href="https://buhaoqi.github.io/blog/simple-types#2-%E9%82%A3%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99-int-%E4%BC%9A%E8%BF%9B%E5%85%A5%E6%A0%88" class="hash-link" aria-label="2. 那什么时候 int 会进入栈？的直接链接" title="2. 那什么时候 int 会进入栈？的直接链接" translate="no">​</a></h2>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">void</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Test</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">ReadLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
 <p>这里 JIT 发现：</p>
@@ -549,7 +549,7 @@
 <p>a 在栈帧里面。</p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-release模式下jit优化非常激进">3. Release模式下，JIT优化非常激进<a href="https://buhaoqi.github.io/blog/simple-types#3-release%E6%A8%A1%E5%BC%8F%E4%B8%8Bjit%E4%BC%98%E5%8C%96%E9%9D%9E%E5%B8%B8%E6%BF%80%E8%BF%9B" class="hash-link" aria-label="Direct link to 3. Release模式下，JIT优化非常激进" title="Direct link to 3. Release模式下，JIT优化非常激进" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-release模式下jit优化非常激进">3. Release模式下，JIT优化非常激进<a href="https://buhaoqi.github.io/blog/simple-types#3-release%E6%A8%A1%E5%BC%8F%E4%B8%8Bjit%E4%BC%98%E5%8C%96%E9%9D%9E%E5%B8%B8%E6%BF%80%E8%BF%9B" class="hash-link" aria-label="3. Release模式下，JIT优化非常激进的直接链接" title="3. Release模式下，JIT优化非常激进的直接链接" translate="no">​</a></h2>
 <p>比如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">static</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:#00009f">int</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">Add</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">return</span><span class="token plain"> c</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
 <p>很多人认为：</p>
@@ -569,17 +569,17 @@
 <p>常量折叠(Constant Folding)</p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-那是不是所有简单值都在寄存器">4. 那是不是所有简单值都在寄存器？<a href="https://buhaoqi.github.io/blog/simple-types#4-%E9%82%A3%E6%98%AF%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E7%AE%80%E5%8D%95%E5%80%BC%E9%83%BD%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8" class="hash-link" aria-label="Direct link to 4. 那是不是所有简单值都在寄存器？" title="Direct link to 4. 那是不是所有简单值都在寄存器？" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-那是不是所有简单值都在寄存器">4. 那是不是所有简单值都在寄存器？<a href="https://buhaoqi.github.io/blog/simple-types#4-%E9%82%A3%E6%98%AF%E4%B8%8D%E6%98%AF%E6%89%80%E6%9C%89%E7%AE%80%E5%8D%95%E5%80%BC%E9%83%BD%E5%9C%A8%E5%AF%84%E5%AD%98%E5%99%A8" class="hash-link" aria-label="4. 那是不是所有简单值都在寄存器？的直接链接" title="4. 那是不是所有简单值都在寄存器？的直接链接" translate="no">​</a></h2>
 <p>不完全。</p>
 <p>更准确说：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况1简单计算变量">情况1：简单计算变量<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B51%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%8F%98%E9%87%8F" class="hash-link" aria-label="Direct link to 情况1：简单计算变量" title="Direct link to 情况1：简单计算变量" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况1简单计算变量">情况1：简单计算变量<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B51%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%8F%98%E9%87%8F" class="hash-link" aria-label="情况1：简单计算变量的直接链接" title="情况1：简单计算变量的直接链接" translate="no">​</a></h3>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> x</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">1</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> y</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">2</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> z</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">x</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">y</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <p>非常可能：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">CPU寄存器</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">eax = 1</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">ebx = 2</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">ecx = 3</span><br></div></code></pre></div></div>
 <p>甚至变量不存在。</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况2需要取地址">情况2：需要取地址<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B52%E9%9C%80%E8%A6%81%E5%8F%96%E5%9C%B0%E5%9D%80" class="hash-link" aria-label="Direct link to 情况2：需要取地址" title="Direct link to 情况2：需要取地址" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况2需要取地址">情况2：需要取地址<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B52%E9%9C%80%E8%A6%81%E5%8F%96%E5%9C%B0%E5%9D%80" class="hash-link" aria-label="情况2：需要取地址的直接链接" title="情况2：需要取地址的直接链接" translate="no">​</a></h3>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">unsafe</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">int</span><span class="token operator" style="color:#393A34">*</span><span class="token plain"> p</span><span class="token operator" style="color:#393A34">=</span><span class="token operator" style="color:#393A34">&amp;</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></div></code></pre></div></div>
 <p>或者：</p>
@@ -588,7 +588,7 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">栈</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">|</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">a</span><br></div></code></pre></div></div>
 <p>因为寄存器没有固定地址。</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况3变量跨越方法调用">情况3：变量跨越方法调用<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B53%E5%8F%98%E9%87%8F%E8%B7%A8%E8%B6%8A%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8" class="hash-link" aria-label="Direct link to 情况3：变量跨越方法调用" title="Direct link to 情况3：变量跨越方法调用" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况3变量跨越方法调用">情况3：变量跨越方法调用<a href="https://buhaoqi.github.io/blog/simple-types#%E6%83%85%E5%86%B53%E5%8F%98%E9%87%8F%E8%B7%A8%E8%B6%8A%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8" class="hash-link" aria-label="情况3：变量跨越方法调用的直接链接" title="情况3：变量跨越方法调用的直接链接" translate="no">​</a></h3>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">SomeMethod</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">a</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <p>调用：</p>
@@ -598,7 +598,7 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">寄存器</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">保存</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"> ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">栈</span><br></div></code></pre></div></div>
 <p>可能发生。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-还有一个更容易混淆的问题值类型对象">5. 还有一个更容易混淆的问题：值类型对象<a href="https://buhaoqi.github.io/blog/simple-types#5-%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%AE%B9%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E9%97%AE%E9%A2%98%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%AF%B9%E8%B1%A1" class="hash-link" aria-label="Direct link to 5. 还有一个更容易混淆的问题：值类型对象" title="Direct link to 5. 还有一个更容易混淆的问题：值类型对象" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-还有一个更容易混淆的问题值类型对象">5. 还有一个更容易混淆的问题：值类型对象<a href="https://buhaoqi.github.io/blog/simple-types#5-%E8%BF%98%E6%9C%89%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%AE%B9%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E9%97%AE%E9%A2%98%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%AF%B9%E8%B1%A1" class="hash-link" aria-label="5. 还有一个更容易混淆的问题：值类型对象的直接链接" title="5. 还有一个更容易混淆的问题：值类型对象的直接链接" translate="no">​</a></h2>
 <p>例如：</p>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">class</span><span class="token plain"> </span><span class="token class-name">Person</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">public</span><span class="token plain"> </span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> Age</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name">Person</span><span class="token plain"> p</span><span class="token operator" style="color:#393A34">=</span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token constructor-invocation class-name">Person</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">p</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">Age</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
 <p>这里：</p>
@@ -616,14 +616,14 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">引用变量p</span><br></div></code></pre></div></div>
 <p>也不一定真的在栈。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-最准确的理解方式">6. 最准确的理解方式<a href="https://buhaoqi.github.io/blog/simple-types#6-%E6%9C%80%E5%87%86%E7%A1%AE%E7%9A%84%E7%90%86%E8%A7%A3%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="Direct link to 6. 最准确的理解方式" title="Direct link to 6. 最准确的理解方式" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-最准确的理解方式">6. 最准确的理解方式<a href="https://buhaoqi.github.io/blog/simple-types#6-%E6%9C%80%E5%87%86%E7%A1%AE%E7%9A%84%E7%90%86%E8%A7%A3%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="6. 最准确的理解方式的直接链接" title="6. 最准确的理解方式的直接链接" translate="no">​</a></h2>
 <p>不要问：</p>
 <blockquote>
 <p>这个变量在栈还是寄存器？</p>
 </blockquote>
 <p>因为 C# 已经进入 JIT 世界后，这个问题不够准确。</p>
 <p>应该问：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="变量是否需要内存地址">变量是否需要内存地址？<a href="https://buhaoqi.github.io/blog/simple-types#%E5%8F%98%E9%87%8F%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80" class="hash-link" aria-label="Direct link to 变量是否需要内存地址？" title="Direct link to 变量是否需要内存地址？" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="变量是否需要内存地址">变量是否需要内存地址？<a href="https://buhaoqi.github.io/blog/simple-types#%E5%8F%98%E9%87%8F%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E5%86%85%E5%AD%98%E5%9C%B0%E5%9D%80" class="hash-link" aria-label="变量是否需要内存地址？的直接链接" title="变量是否需要内存地址？的直接链接" translate="no">​</a></h3>
 <p>如果：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">不需要地址</span><br></div></code></pre></div></div>
 <p>那么：</p>
@@ -634,7 +634,7 @@
 <p>那么：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">栈</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">或者堆</span><br></div></code></pre></div></div>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-给你一个适合教学的总结">7. 给你一个适合教学的总结<a href="https://buhaoqi.github.io/blog/simple-types#7-%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E9%80%82%E5%90%88%E6%95%99%E5%AD%A6%E7%9A%84%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 7. 给你一个适合教学的总结" title="Direct link to 7. 给你一个适合教学的总结" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-给你一个适合教学的总结">7. 给你一个适合教学的总结<a href="https://buhaoqi.github.io/blog/simple-types#7-%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E9%80%82%E5%90%88%E6%95%99%E5%AD%A6%E7%9A%84%E6%80%BB%E7%BB%93" class="hash-link" aria-label="7. 给你一个适合教学的总结的直接链接" title="7. 给你一个适合教学的总结的直接链接" translate="no">​</a></h2>
 <p>如果你制作 C#底层课程，我建议这样讲：</p>
 <blockquote>
 <p>在 Debug 模式下，为了方便调试，局部变量通常会保留在栈中。</p>
@@ -670,7 +670,7 @@
 <!-- -->
 <hr>
 <h1>第一梯队（★★★★★ 必看）</h1>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-fireship计算机">1. Fireship（计算机）<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#1-fireship%E8%AE%A1%E7%AE%97%E6%9C%BA" class="hash-link" aria-label="Direct link to 1. Fireship（计算机）" title="Direct link to 1. Fireship（计算机）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-fireship计算机">1. Fireship（计算机）<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#1-fireship%E8%AE%A1%E7%AE%97%E6%9C%BA" class="hash-link" aria-label="1. Fireship（计算机）的直接链接" title="1. Fireship（计算机）的直接链接" translate="no">​</a></h2>
 <img alt="描述" src="https://images.openai.com/static-rsc-4/tx_5Vs-bRZgp7v3HzC2mzWrTvSHcMtg9VeXHAt9sdui8NB5ZwyW2NF_QtkQRthMrrKwVoEkJ1NlHjEp05d7xPOCykxln_i1MwDj0VDezJfEzddOanPnYt_3JywZWxM79jn8oO8g25i0kXXalpxE_1HOPhiRi7lzuRTxHypjyMayO3_kzDVFswFxHqm4XC4zU?purpose=fullsize">
 <img alt="描述" src="https://images.openai.com/static-rsc-4/21YHYV98wxNkS-VAsCTR84d0J_AHzmKSRTQ0joXH06tJSuYxTy7lKz7YNLyioEMT4g08OyXtML7SOSNRV3P-1ziQfQPKWylu1PzjyD9u7qjjrRCLrnZCqPzswsscwkjSuwptn0ndhTOVfKWvbhPtGdcJK7t4_KEahbPM0gv-7TMdJMQkTLkO0wZ7HI-DepRX?purpose=fullsize">
 <p><strong>推荐指数：10/10</strong></p>
@@ -721,7 +721,7 @@
 <p>专业。</p>
 <hr>
 <h1>第二梯队（设计参考）</h1>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="branch-education">Branch Education<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#branch-education" class="hash-link" aria-label="Direct link to Branch Education" title="Direct link to Branch Education" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="branch-education">Branch Education<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#branch-education" class="hash-link" aria-label="Branch Education的直接链接" title="Branch Education的直接链接" translate="no">​</a></h2>
 <p>推荐指数：</p>
 <p>★★★★★</p>
 <p>这是我非常推荐研究的。</p>
@@ -737,7 +737,7 @@
 <p>纪录片风。</p>
 <p>科技感。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="veritasium">Veritasium<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#veritasium" class="hash-link" aria-label="Direct link to Veritasium" title="Direct link to Veritasium" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="veritasium">Veritasium<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#veritasium" class="hash-link" aria-label="Veritasium的直接链接" title="Veritasium的直接链接" translate="no">​</a></h2>
 <p>推荐指数：</p>
 <p>★★★★★</p>
 <p>虽然不是计算机。</p>
@@ -750,7 +750,7 @@
 <p>大量留白。</p>
 <p>颜色统一。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="kurzgesagt">Kurzgesagt<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#kurzgesagt" class="hash-link" aria-label="Direct link to Kurzgesagt" title="Direct link to Kurzgesagt" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="kurzgesagt">Kurzgesagt<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#kurzgesagt" class="hash-link" aria-label="Kurzgesagt的直接链接" title="Kurzgesagt的直接链接" translate="no">​</a></h2>
 <p>推荐指数：</p>
 <p>★★★★★</p>
 <p>如果你以后：</p>
@@ -760,7 +760,7 @@
 <p>世界顶级。</p>
 <hr>
 <h1>第三梯队（设计感）</h1>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="coldfusion">ColdFusion<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#coldfusion" class="hash-link" aria-label="Direct link to ColdFusion" title="Direct link to ColdFusion" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="coldfusion">ColdFusion<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#coldfusion" class="hash-link" aria-label="ColdFusion的直接链接" title="ColdFusion的直接链接" translate="no">​</a></h2>
 <p>科技频道。</p>
 <p>颜色：</p>
 <p>蓝色。</p>
@@ -768,7 +768,7 @@
 <p>橙色。</p>
 <p>纪录片风。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="asianometry">Asianometry<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#asianometry" class="hash-link" aria-label="Direct link to Asianometry" title="Direct link to Asianometry" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="asianometry">Asianometry<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#asianometry" class="hash-link" aria-label="Asianometry的直接链接" title="Asianometry的直接链接" translate="no">​</a></h2>
 <p>半导体。</p>
 <p>CPU。</p>
 <p>科技历史。</p>
@@ -776,7 +776,7 @@
 <p>非常高级。</p>
 <hr>
 <h1>第四梯队（计算机）</h1>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="low-level-learning">Low Level Learning<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#low-level-learning" class="hash-link" aria-label="Direct link to Low Level Learning" title="Direct link to Low Level Learning" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="low-level-learning">Low Level Learning<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#low-level-learning" class="hash-link" aria-label="Low Level Learning的直接链接" title="Low Level Learning的直接链接" translate="no">​</a></h2>
 <p>讲：</p>
 <p>Linux</p>
 <p>Kernel</p>
@@ -787,7 +787,7 @@
 <p>绿色。</p>
 <p>科技。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bytebytego">ByteByteGo<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#bytebytego" class="hash-link" aria-label="Direct link to ByteByteGo" title="Direct link to ByteByteGo" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bytebytego">ByteByteGo<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#bytebytego" class="hash-link" aria-label="ByteByteGo的直接链接" title="ByteByteGo的直接链接" translate="no">​</a></h2>
 <p>讲：</p>
 <p>系统设计。</p>
 <p>数据库。</p>
@@ -799,13 +799,13 @@
 <h1>我最推荐你研究的颜色</h1>
 <p>如果让我总结 YouTube 高质量科技频道。</p>
 <p>他们几乎都有共同特点：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="背景">背景<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E8%83%8C%E6%99%AF" class="hash-link" aria-label="Direct link to 背景" title="Direct link to 背景" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="背景">背景<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E8%83%8C%E6%99%AF" class="hash-link" aria-label="背景的直接链接" title="背景的直接链接" translate="no">​</a></h3>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">深蓝</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">深灰</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">黑色</span><br></div></code></pre></div></div>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主色">主色<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E4%B8%BB%E8%89%B2" class="hash-link" aria-label="Direct link to 主色" title="Direct link to 主色" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="主色">主色<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E4%B8%BB%E8%89%B2" class="hash-link" aria-label="主色的直接链接" title="主色的直接链接" translate="no">​</a></h3>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">白色</span><br></div></code></pre></div></div>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="点缀">点缀<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E7%82%B9%E7%BC%80" class="hash-link" aria-label="Direct link to 点缀" title="Direct link to 点缀" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="点缀">点缀<a href="https://buhaoqi.github.io/blog/youtube-channels-design2#%E7%82%B9%E7%BC%80" class="hash-link" aria-label="点缀的直接链接" title="点缀的直接链接" translate="no">​</a></h3>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">科技青</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">蓝色</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">绿色</span><br></div></code></pre></div></div>
 <p>很少：</p>
 <p>红色。</p>
@@ -900,7 +900,7 @@
 <hr>
 <h1>2. 常用制作软件</h1>
 <p>这类视频一般会使用：</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adobe-after-effectsae">Adobe After Effects（AE）★★★★★<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#adobe-after-effectsae" class="hash-link" aria-label="Direct link to Adobe After Effects（AE）★★★★★" title="Direct link to Adobe After Effects（AE）★★★★★" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adobe-after-effectsae">Adobe After Effects（AE）★★★★★<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#adobe-after-effectsae" class="hash-link" aria-label="Adobe After Effects（AE）★★★★★的直接链接" title="Adobe After Effects（AE）★★★★★的直接链接" translate="no">​</a></h2>
 <p>最核心。</p>
 <p>负责：</p>
 <ul>
@@ -918,7 +918,7 @@
 <p>数据块从 API 飘进去。</p>
 <p>这种就是 AE 做的。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adobe-illustrator--figma">Adobe Illustrator / Figma<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#adobe-illustrator--figma" class="hash-link" aria-label="Direct link to Adobe Illustrator / Figma" title="Direct link to Adobe Illustrator / Figma" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="adobe-illustrator--figma">Adobe Illustrator / Figma<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#adobe-illustrator--figma" class="hash-link" aria-label="Adobe Illustrator / Figma的直接链接" title="Adobe Illustrator / Figma的直接链接" translate="no">​</a></h2>
 <p>负责：</p>
 <p>制作静态素材。</p>
 <p>比如：</p>
@@ -932,7 +932,7 @@
 <p>通常：</p>
 <p>Figma 设计 → SVG 导出 → AE 动画。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lottie可能使用">Lottie（可能使用）<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#lottie%E5%8F%AF%E8%83%BD%E4%BD%BF%E7%94%A8" class="hash-link" aria-label="Direct link to Lottie（可能使用）" title="Direct link to Lottie（可能使用）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lottie可能使用">Lottie（可能使用）<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#lottie%E5%8F%AF%E8%83%BD%E4%BD%BF%E7%94%A8" class="hash-link" aria-label="Lottie（可能使用）的直接链接" title="Lottie（可能使用）的直接链接" translate="no">​</a></h2>
 <p>很多互联网产品动画会使用：</p>
 <ul>
 <li class="">After Effects</li>
@@ -944,7 +944,7 @@
 <h1>3. 它的视觉风格为什么高级？</h1>
 <p>关键不是软件。</p>
 <p>而是设计原则。</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则1颜色极少">原则1：颜色极少<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%991%E9%A2%9C%E8%89%B2%E6%9E%81%E5%B0%91" class="hash-link" aria-label="Direct link to 原则1：颜色极少" title="Direct link to 原则1：颜色极少" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则1颜色极少">原则1：颜色极少<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%991%E9%A2%9C%E8%89%B2%E6%9E%81%E5%B0%91" class="hash-link" aria-label="原则1：颜色极少的直接链接" title="原则1：颜色极少的直接链接" translate="no">​</a></h2>
 <p>通常：</p>
 <p>背景：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">白色 / 深蓝 / 浅灰</span><br></div></code></pre></div></div>
@@ -952,7 +952,7 @@
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">蓝色</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">绿色</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">橙色</span><br></div></code></pre></div></div>
 <p>不会五颜六色。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则2一个画面只表达一个关系">原则2：一个画面只表达一个关系<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%992%E4%B8%80%E4%B8%AA%E7%94%BB%E9%9D%A2%E5%8F%AA%E8%A1%A8%E8%BE%BE%E4%B8%80%E4%B8%AA%E5%85%B3%E7%B3%BB" class="hash-link" aria-label="Direct link to 原则2：一个画面只表达一个关系" title="Direct link to 原则2：一个画面只表达一个关系" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则2一个画面只表达一个关系">原则2：一个画面只表达一个关系<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%992%E4%B8%80%E4%B8%AA%E7%94%BB%E9%9D%A2%E5%8F%AA%E8%A1%A8%E8%BE%BE%E4%B8%80%E4%B8%AA%E5%85%B3%E7%B3%BB" class="hash-link" aria-label="原则2：一个画面只表达一个关系的直接链接" title="原则2：一个画面只表达一个关系的直接链接" translate="no">​</a></h2>
 <p>例如：</p>
 <p>讲缓存：</p>
 <p>不会同时出现：</p>
@@ -972,7 +972,7 @@
 <p>第三步：</p>
 <p>返回数据</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则3动画服务于理解">原则3：动画服务于理解<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%993%E5%8A%A8%E7%94%BB%E6%9C%8D%E5%8A%A1%E4%BA%8E%E7%90%86%E8%A7%A3" class="hash-link" aria-label="Direct link to 原则3：动画服务于理解" title="Direct link to 原则3：动画服务于理解" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="原则3动画服务于理解">原则3：动画服务于理解<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E5%8E%9F%E5%88%993%E5%8A%A8%E7%94%BB%E6%9C%8D%E5%8A%A1%E4%BA%8E%E7%90%86%E8%A7%A3" class="hash-link" aria-label="原则3：动画服务于理解的直接链接" title="原则3：动画服务于理解的直接链接" translate="no">​</a></h2>
 <p>不是：</p>
 <p>为了炫。</p>
 <p>而是：</p>
@@ -1008,7 +1008,7 @@
 <h1>5. 我建议你的制作路线（适合个人创作者）</h1>
 <p>不用一开始追求复杂。</p>
 <p>推荐：</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一阶段">第一阶段<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="Direct link to 第一阶段" title="Direct link to 第一阶段" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一阶段">第一阶段<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="第一阶段的直接链接" title="第一阶段的直接链接" translate="no">​</a></h2>
 <p>工具：</p>
 <ul>
 <li class="">Figma</li>
@@ -1017,7 +1017,7 @@
 <p>流程：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">Figma设计图</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">导入AE</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">添加移动、缩放、路径动画</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">配音</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">        ↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">剪辑</span><br></div></code></pre></div></div>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二阶段">第二阶段<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="Direct link to 第二阶段" title="Direct link to 第二阶段" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二阶段">第二阶段<a href="https://buhaoqi.github.io/blog/youtube-channels-computer#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5" class="hash-link" aria-label="第二阶段的直接链接" title="第二阶段的直接链接" translate="no">​</a></h2>
 <p>加入：</p>
 <ul>
 <li class="">3D芯片模型</li>
@@ -1080,7 +1080,7 @@
 <p>你可以理解为：
 👉 <strong>以后你只需要填关键词，就能批量产封面</strong></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一先记住一个底层公式很重要">一、先记住一个底层公式（很重要）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%B8%80%E5%85%88%E8%AE%B0%E4%BD%8F%E4%B8%80%E4%B8%AA%E5%BA%95%E5%B1%82%E5%85%AC%E5%BC%8F%E5%BE%88%E9%87%8D%E8%A6%81" class="hash-link" aria-label="Direct link to 一、先记住一个底层公式（很重要）" title="Direct link to 一、先记住一个底层公式（很重要）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一先记住一个底层公式很重要">一、先记住一个底层公式（很重要）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%B8%80%E5%85%88%E8%AE%B0%E4%BD%8F%E4%B8%80%E4%B8%AA%E5%BA%95%E5%B1%82%E5%85%AC%E5%BC%8F%E5%BE%88%E9%87%8D%E8%A6%81" class="hash-link" aria-label="一、先记住一个底层公式（很重要）的直接链接" title="一、先记住一个底层公式（很重要）的直接链接" translate="no">​</a></h2>
 <p>👉 <strong>高点击标题 =（人群）+（时间/难度）+（结果/收益）+（关键词）</strong></p>
 <p>比如：</p>
 <blockquote>
@@ -1089,10 +1089,10 @@
 <p>👉 =
 <strong>3分钟学会循环（新手版）</strong></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二50条高点击模板已分类">二、50条高点击模板（已分类）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%BA%8C50%E6%9D%A1%E9%AB%98%E7%82%B9%E5%87%BB%E6%A8%A1%E6%9D%BF%E5%B7%B2%E5%88%86%E7%B1%BB" class="hash-link" aria-label="Direct link to 二、50条高点击模板（已分类）" title="Direct link to 二、50条高点击模板（已分类）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二50条高点击模板已分类">二、50条高点击模板（已分类）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%BA%8C50%E6%9D%A1%E9%AB%98%E7%82%B9%E5%87%BB%E6%A8%A1%E6%9D%BF%E5%B7%B2%E5%88%86%E7%B1%BB" class="hash-link" aria-label="二、50条高点击模板（已分类）的直接链接" title="二、50条高点击模板（已分类）的直接链接" translate="no">​</a></h2>
 <p>我帮你分成 5 大类，每类最适合不同阶段👇</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-一新手入门型最重要前期主打">🟢 一、新手入门型（最重要，前期主打）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%B8%80%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E5%9E%8B%E6%9C%80%E9%87%8D%E8%A6%81%E5%89%8D%E6%9C%9F%E4%B8%BB%E6%89%93" class="hash-link" aria-label="Direct link to 🟢 一、新手入门型（最重要，前期主打）" title="Direct link to 🟢 一、新手入门型（最重要，前期主打）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-一新手入门型最重要前期主打">🟢 一、新手入门型（最重要，前期主打）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%B8%80%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E5%9E%8B%E6%9C%80%E9%87%8D%E8%A6%81%E5%89%8D%E6%9C%9F%E4%B8%BB%E6%89%93" class="hash-link" aria-label="🟢 一、新手入门型（最重要，前期主打）的直接链接" title="🟢 一、新手入门型（最重要，前期主打）的直接链接" translate="no">​</a></h2>
 <p>👉 目标：降低门槛，让人敢点</p>
 <ol>
 <li class="">0基础也能学会【变量】</li>
@@ -1107,7 +1107,7 @@
 <li class="">看完就会用【变量】</li>
 </ol>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-二速成效率型短视频爆款">🟡 二、速成效率型（短视频爆款）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%BA%8C%E9%80%9F%E6%88%90%E6%95%88%E7%8E%87%E5%9E%8B%E7%9F%AD%E8%A7%86%E9%A2%91%E7%88%86%E6%AC%BE" class="hash-link" aria-label="Direct link to 🟡 二、速成效率型（短视频爆款）" title="Direct link to 🟡 二、速成效率型（短视频爆款）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-二速成效率型短视频爆款">🟡 二、速成效率型（短视频爆款）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%BA%8C%E9%80%9F%E6%88%90%E6%95%88%E7%8E%87%E5%9E%8B%E7%9F%AD%E8%A7%86%E9%A2%91%E7%88%86%E6%AC%BE" class="hash-link" aria-label="🟡 二、速成效率型（短视频爆款）的直接链接" title="🟡 二、速成效率型（短视频爆款）的直接链接" translate="no">​</a></h2>
 <p>👉 目标：快速点击</p>
 <ol>
 <li class="">3分钟搞懂【循环】</li>
@@ -1122,7 +1122,7 @@
 <li class="">学会这个就够了：【方法】</li>
 </ol>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-三痛点错误型点击率最高">🔴 三、痛点/错误型（点击率最高）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%B8%89%E7%97%9B%E7%82%B9%E9%94%99%E8%AF%AF%E5%9E%8B%E7%82%B9%E5%87%BB%E7%8E%87%E6%9C%80%E9%AB%98" class="hash-link" aria-label="Direct link to 🔴 三、痛点/错误型（点击率最高）" title="Direct link to 🔴 三、痛点/错误型（点击率最高）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-三痛点错误型点击率最高">🔴 三、痛点/错误型（点击率最高）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%B8%89%E7%97%9B%E7%82%B9%E9%94%99%E8%AF%AF%E5%9E%8B%E7%82%B9%E5%87%BB%E7%8E%87%E6%9C%80%E9%AB%98" class="hash-link" aria-label="🔴 三、痛点/错误型（点击率最高）的直接链接" title="🔴 三、痛点/错误型（点击率最高）的直接链接" translate="no">​</a></h2>
 <p>👉 目标：让人“不得不点”</p>
 <ol>
 <li class="">新手最容易写错的【if】</li>
@@ -1137,7 +1137,7 @@
 <li class="">避开这个坑，效率翻倍（循环）</li>
 </ol>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-四对比认知型非常吸睛">🔵 四、对比认知型（非常吸睛）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E5%9B%9B%E5%AF%B9%E6%AF%94%E8%AE%A4%E7%9F%A5%E5%9E%8B%E9%9D%9E%E5%B8%B8%E5%90%B8%E7%9D%9B" class="hash-link" aria-label="Direct link to 🔵 四、对比认知型（非常吸睛）" title="Direct link to 🔵 四、对比认知型（非常吸睛）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-四对比认知型非常吸睛">🔵 四、对比认知型（非常吸睛）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E5%9B%9B%E5%AF%B9%E6%AF%94%E8%AE%A4%E7%9F%A5%E5%9E%8B%E9%9D%9E%E5%B8%B8%E5%90%B8%E7%9D%9B" class="hash-link" aria-label="🔵 四、对比认知型（非常吸睛）的直接链接" title="🔵 四、对比认知型（非常吸睛）的直接链接" translate="no">​</a></h2>
 <p>👉 目标：制造“冲突感”</p>
 <ol>
 <li class="">if 和 switch 到底谁更好？</li>
@@ -1152,7 +1152,7 @@
 <li class="">方法重载 vs 重写（别再搞混）</li>
 </ol>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-五实战项目型变现关键">🟣 五、实战项目型（变现关键）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%BA%94%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%9E%8B%E5%8F%98%E7%8E%B0%E5%85%B3%E9%94%AE" class="hash-link" aria-label="Direct link to 🟣 五、实战项目型（变现关键）" title="Direct link to 🟣 五、实战项目型（变现关键）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-五实战项目型变现关键">🟣 五、实战项目型（变现关键）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E4%BA%94%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%9E%8B%E5%8F%98%E7%8E%B0%E5%85%B3%E9%94%AE" class="hash-link" aria-label="🟣 五、实战项目型（变现关键）的直接链接" title="🟣 五、实战项目型（变现关键）的直接链接" translate="no">​</a></h2>
 <p>👉 目标：让用户觉得“有用”</p>
 <ol>
 <li class="">用C#写一个【贪吃蛇】</li>
@@ -1167,10 +1167,10 @@
 <li class="">从零写一个完整小项目</li>
 </ol>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三怎么用最关键">三、怎么用（最关键）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%B8%89%E6%80%8E%E4%B9%88%E7%94%A8%E6%9C%80%E5%85%B3%E9%94%AE" class="hash-link" aria-label="Direct link to 三、怎么用（最关键）" title="Direct link to 三、怎么用（最关键）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三怎么用最关键">三、怎么用（最关键）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%B8%89%E6%80%8E%E4%B9%88%E7%94%A8%E6%9C%80%E5%85%B3%E9%94%AE" class="hash-link" aria-label="三、怎么用（最关键）的直接链接" title="三、怎么用（最关键）的直接链接" translate="no">​</a></h2>
 <p>👉 不要“每个视频都换风格”，要这样用：</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-阶段1前10期">🎯 阶段1（前10期）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E9%98%B6%E6%AE%B51%E5%89%8D10%E6%9C%9F" class="hash-link" aria-label="Direct link to 🎯 阶段1（前10期）" title="Direct link to 🎯 阶段1（前10期）" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-阶段1前10期">🎯 阶段1（前10期）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E9%98%B6%E6%AE%B51%E5%89%8D10%E6%9C%9F" class="hash-link" aria-label="🎯 阶段1（前10期）的直接链接" title="🎯 阶段1（前10期）的直接链接" translate="no">​</a></h3>
 <p>👉 重点用：</p>
 <ul>
 <li class="">新手型 + 速成型</li>
@@ -1181,7 +1181,7 @@
 新手第一步：if判断</p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-阶段2中期">🎯 阶段2（中期）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E9%98%B6%E6%AE%B52%E4%B8%AD%E6%9C%9F" class="hash-link" aria-label="Direct link to 🎯 阶段2（中期）" title="Direct link to 🎯 阶段2（中期）" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-阶段2中期">🎯 阶段2（中期）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E9%98%B6%E6%AE%B52%E4%B8%AD%E6%9C%9F" class="hash-link" aria-label="🎯 阶段2（中期）的直接链接" title="🎯 阶段2（中期）的直接链接" translate="no">​</a></h3>
 <p>👉 加入：</p>
 <ul>
 <li class="">错误型 + 对比型</li>
@@ -1192,7 +1192,7 @@
 if vs switch</p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-阶段3后期--卖课">🎯 阶段3（后期 / 卖课）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E9%98%B6%E6%AE%B53%E5%90%8E%E6%9C%9F--%E5%8D%96%E8%AF%BE" class="hash-link" aria-label="Direct link to 🎯 阶段3（后期 / 卖课）" title="Direct link to 🎯 阶段3（后期 / 卖课）" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-阶段3后期--卖课">🎯 阶段3（后期 / 卖课）<a href="https://buhaoqi.github.io/blog/desing-cover#-%E9%98%B6%E6%AE%B53%E5%90%8E%E6%9C%9F--%E5%8D%96%E8%AF%BE" class="hash-link" aria-label="🎯 阶段3（后期 / 卖课）的直接链接" title="🎯 阶段3（后期 / 卖课）的直接链接" translate="no">​</a></h3>
 <p>👉 主打：</p>
 <ul>
 <li class="">实战型</li>
@@ -1202,7 +1202,7 @@ if vs switch</p>
 <p>用C#写贪吃蛇</p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="四再给你一个封面专用强化技巧">四、再给你一个“封面专用强化技巧”<a href="https://buhaoqi.github.io/blog/desing-cover#%E5%9B%9B%E5%86%8D%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E5%B0%81%E9%9D%A2%E4%B8%93%E7%94%A8%E5%BC%BA%E5%8C%96%E6%8A%80%E5%B7%A7" class="hash-link" aria-label="Direct link to 四、再给你一个“封面专用强化技巧”" title="Direct link to 四、再给你一个“封面专用强化技巧”" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="四再给你一个封面专用强化技巧">四、再给你一个“封面专用强化技巧”<a href="https://buhaoqi.github.io/blog/desing-cover#%E5%9B%9B%E5%86%8D%E7%BB%99%E4%BD%A0%E4%B8%80%E4%B8%AA%E5%B0%81%E9%9D%A2%E4%B8%93%E7%94%A8%E5%BC%BA%E5%8C%96%E6%8A%80%E5%B7%A7" class="hash-link" aria-label="四、再给你一个“封面专用强化技巧”的直接链接" title="四、再给你一个“封面专用强化技巧”的直接链接" translate="no">​</a></h2>
 <p>同一个内容，你这样改👇</p>
 <p>普通版：</p>
 <blockquote>
@@ -1218,7 +1218,7 @@ if vs switch</p>
 </blockquote>
 <p>👉 内容一样，点击差3倍</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="五帮你定一个村长专属风格建议你用">五、帮你定一个“村长专属风格”（建议你用）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%BA%94%E5%B8%AE%E4%BD%A0%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%9D%91%E9%95%BF%E4%B8%93%E5%B1%9E%E9%A3%8E%E6%A0%BC%E5%BB%BA%E8%AE%AE%E4%BD%A0%E7%94%A8" class="hash-link" aria-label="Direct link to 五、帮你定一个“村长专属风格”（建议你用）" title="Direct link to 五、帮你定一个“村长专属风格”（建议你用）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="五帮你定一个村长专属风格建议你用">五、帮你定一个“村长专属风格”（建议你用）<a href="https://buhaoqi.github.io/blog/desing-cover#%E4%BA%94%E5%B8%AE%E4%BD%A0%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%9D%91%E9%95%BF%E4%B8%93%E5%B1%9E%E9%A3%8E%E6%A0%BC%E5%BB%BA%E8%AE%AE%E4%BD%A0%E7%94%A8" class="hash-link" aria-label="五、帮你定一个“村长专属风格”（建议你用）的直接链接" title="五、帮你定一个“村长专属风格”（建议你用）的直接链接" translate="no">​</a></h2>
 <p>你可以固定一种语气👇</p>
 <p>👉 <strong>“简单粗暴 + 结果导向”</strong></p>
 <p>例如：</p>
@@ -1229,7 +1229,7 @@ if vs switch</p>
 </ul>
 <p>👉 这会变成你的“品牌记忆点”</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="六最后一句最重要的话">六、最后一句最重要的话<a href="https://buhaoqi.github.io/blog/desing-cover#%E5%85%AD%E6%9C%80%E5%90%8E%E4%B8%80%E5%8F%A5%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AF%9D" class="hash-link" aria-label="Direct link to 六、最后一句最重要的话" title="Direct link to 六、最后一句最重要的话" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="六最后一句最重要的话">六、最后一句最重要的话<a href="https://buhaoqi.github.io/blog/desing-cover#%E5%85%AD%E6%9C%80%E5%90%8E%E4%B8%80%E5%8F%A5%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AF%9D" class="hash-link" aria-label="六、最后一句最重要的话的直接链接" title="六、最后一句最重要的话的直接链接" translate="no">​</a></h2>
 <p>👉 <strong>封面标题 ≠ 课程标题</strong></p>
 <ul>
 <li class="">课程标题：准确</li>
@@ -1278,7 +1278,7 @@ if vs switch</p>
 <p>你的思路：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">小游戏开发教程</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">↓</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">贪吃蛇</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">坦克大战</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">俄罗斯方块</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">扫雷</span><br></div></code></pre></div></div>
 <p>这种课程有 <strong>3个优势</strong>：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-容易理解">1 容易理解<a href="https://buhaoqi.github.io/blog/business-feasibilit#1-%E5%AE%B9%E6%98%93%E7%90%86%E8%A7%A3" class="hash-link" aria-label="Direct link to 1 容易理解" title="Direct link to 1 容易理解" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-容易理解">1 容易理解<a href="https://buhaoqi.github.io/blog/business-feasibilit#1-%E5%AE%B9%E6%98%93%E7%90%86%E8%A7%A3" class="hash-link" aria-label="1 容易理解的直接链接" title="1 容易理解的直接链接" translate="no">​</a></h3>
 <p>小游戏是 <strong>最好的编程教学方式</strong>。</p>
 <p>很多编程课程也采用类似方式，比如：</p>
 <ul>
@@ -1287,12 +1287,12 @@ if vs switch</p>
 <li class="">小游戏项目</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-非常适合初学者">2 非常适合初学者<a href="https://buhaoqi.github.io/blog/business-feasibilit#2-%E9%9D%9E%E5%B8%B8%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85" class="hash-link" aria-label="Direct link to 2 非常适合初学者" title="Direct link to 2 非常适合初学者" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-非常适合初学者">2 非常适合初学者<a href="https://buhaoqi.github.io/blog/business-feasibilit#2-%E9%9D%9E%E5%B8%B8%E9%80%82%E5%90%88%E5%88%9D%E5%AD%A6%E8%80%85" class="hash-link" aria-label="2 非常适合初学者的直接链接" title="2 非常适合初学者的直接链接" translate="no">​</a></h3>
 <p>很多人学习编程卡在：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">语法学会了</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">不会做项目</span><br></div></code></pre></div></div>
 <p>小游戏正好解决这个问题。</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-内容制作成本低">3 内容制作成本低<a href="https://buhaoqi.github.io/blog/business-feasibilit#3-%E5%86%85%E5%AE%B9%E5%88%B6%E4%BD%9C%E6%88%90%E6%9C%AC%E4%BD%8E" class="hash-link" aria-label="Direct link to 3 内容制作成本低" title="Direct link to 3 内容制作成本低" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-内容制作成本低">3 内容制作成本低<a href="https://buhaoqi.github.io/blog/business-feasibilit#3-%E5%86%85%E5%AE%B9%E5%88%B6%E4%BD%9C%E6%88%90%E6%9C%AC%E4%BD%8E" class="hash-link" aria-label="3 内容制作成本低的直接链接" title="3 内容制作成本低的直接链接" translate="no">​</a></h3>
 <p>你只需要：</p>
 <ul>
 <li class="">录屏</li>
@@ -1335,18 +1335,18 @@ if vs switch</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">课程 = 0收入</span><br></div></code></pre></div></div>
 <p>你需要一个 <strong>流量渠道</strong>：</p>
 <p>例如：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-b站">1 B站<a href="https://buhaoqi.github.io/blog/business-feasibilit#1-b%E7%AB%99" class="hash-link" aria-label="Direct link to 1 B站" title="Direct link to 1 B站" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-b站">1 B站<a href="https://buhaoqi.github.io/blog/business-feasibilit#1-b%E7%AB%99" class="hash-link" aria-label="1 B站的直接链接" title="1 B站的直接链接" translate="no">​</a></h3>
 <p>做视频：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">5分钟写一个小游戏</span><br></div></code></pre></div></div>
 <p>最后引导：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">完整教程19.9</span><br></div></code></pre></div></div>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-抖音">2 抖音<a href="https://buhaoqi.github.io/blog/business-feasibilit#2-%E6%8A%96%E9%9F%B3" class="hash-link" aria-label="Direct link to 2 抖音" title="Direct link to 2 抖音" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-抖音">2 抖音<a href="https://buhaoqi.github.io/blog/business-feasibilit#2-%E6%8A%96%E9%9F%B3" class="hash-link" aria-label="2 抖音的直接链接" title="2 抖音的直接链接" translate="no">​</a></h3>
 <p>做短视频：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">用C#写贪吃蛇</span><br></div></code></pre></div></div>
 <p>这种内容 <strong>很容易火</strong>。</p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-知乎--小红书">3 知乎 / 小红书<a href="https://buhaoqi.github.io/blog/business-feasibilit#3-%E7%9F%A5%E4%B9%8E--%E5%B0%8F%E7%BA%A2%E4%B9%A6" class="hash-link" aria-label="Direct link to 3 知乎 / 小红书" title="Direct link to 3 知乎 / 小红书" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-知乎--小红书">3 知乎 / 小红书<a href="https://buhaoqi.github.io/blog/business-feasibilit#3-%E7%9F%A5%E4%B9%8E--%E5%B0%8F%E7%BA%A2%E4%B9%A6" class="hash-link" aria-label="3 知乎 / 小红书的直接链接" title="3 知乎 / 小红书的直接链接" translate="no">​</a></h3>
 <p>写文章：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">一个C#初学者</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">如何写出坦克大战</span><br></div></code></pre></div></div>
 <hr>
@@ -1370,7 +1370,7 @@ if vs switch</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">贪吃蛇</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">坦克大战</span><br></div></code></pre></div></div>
 <p>收入有限。</p>
 <p>真正赚钱的方法是：</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="做系列课程">做系列课程<a href="https://buhaoqi.github.io/blog/business-feasibilit#%E5%81%9A%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B" class="hash-link" aria-label="Direct link to 做系列课程" title="Direct link to 做系列课程" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="做系列课程">做系列课程<a href="https://buhaoqi.github.io/blog/business-feasibilit#%E5%81%9A%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B" class="hash-link" aria-label="做系列课程的直接链接" title="做系列课程的直接链接" translate="no">​</a></h3>
 <p>例如：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">C#小游戏开发 30讲</span><br></div></code></pre></div></div>
 <p>内容：</p>
@@ -1439,7 +1439,7 @@ if vs switch</p>
         <link href="https://buhaoqi.github.io/blog/git-tip1"/>
         <updated>2026-03-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[情况总结]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况总结">情况总结<a href="https://buhaoqi.github.io/blog/git-tip1#%E6%83%85%E5%86%B5%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 情况总结" title="Direct link to 情况总结" translate="no">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="情况总结">情况总结<a href="https://buhaoqi.github.io/blog/git-tip1#%E6%83%85%E5%86%B5%E6%80%BB%E7%BB%93" class="hash-link" aria-label="情况总结的直接链接" title="情况总结的直接链接" translate="no">​</a></h2>
 <ul>
 <li class="">家里电脑A：<strong>更新了远程 dev 分支</strong></li>
 <li class="">单位电脑：<strong>直接改了本地 dev，没拉最新代码</strong></li>
@@ -1448,22 +1448,22 @@ if vs switch</p>
 <!-- -->
 <hr>
 <h1>正确操作步骤（必看）</h1>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一步先把你本地修改暂存起来防止丢失">第一步：先把你<strong>本地修改暂存起来</strong>（防止丢失）<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%85%88%E6%8A%8A%E4%BD%A0%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E6%9A%82%E5%AD%98%E8%B5%B7%E6%9D%A5%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1" class="hash-link" aria-label="Direct link to 第一步先把你本地修改暂存起来防止丢失" title="Direct link to 第一步先把你本地修改暂存起来防止丢失" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第一步先把你本地修改暂存起来防止丢失">第一步：先把你<strong>本地修改暂存起来</strong>（防止丢失）<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%85%88%E6%8A%8A%E4%BD%A0%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E6%9A%82%E5%AD%98%E8%B5%B7%E6%9D%A5%E9%98%B2%E6%AD%A2%E4%B8%A2%E5%A4%B1" class="hash-link" aria-label="第一步先把你本地修改暂存起来防止丢失的直接链接" title="第一步先把你本地修改暂存起来防止丢失的直接链接" translate="no">​</a></h2>
 <p>打开你的项目 Git 窗口 / 终端</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">git stash</span><br></div></code></pre></div></div>
 <p>作用：
 <strong>把你下午写的代码临时藏起来，不提交，但安全保存。</strong></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二步拉取远程最新的-dev">第二步：拉取远程最新的 dev<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E6%9C%80%E6%96%B0%E7%9A%84-dev" class="hash-link" aria-label="Direct link to 第二步：拉取远程最新的 dev" title="Direct link to 第二步：拉取远程最新的 dev" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第二步拉取远程最新的-dev">第二步：拉取远程最新的 dev<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E6%8B%89%E5%8F%96%E8%BF%9C%E7%A8%8B%E6%9C%80%E6%96%B0%E7%9A%84-dev" class="hash-link" aria-label="第二步：拉取远程最新的 dev的直接链接" title="第二步：拉取远程最新的 dev的直接链接" translate="no">​</a></h2>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">git pull origin dev</span><br></div></code></pre></div></div>
 <p>这一步会把<strong>家里早上更新的内容</strong>拉到你单位电脑。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第三步把你刚才藏起来的代码-恢复回来">第三步：把你刚才藏起来的代码 恢复回来<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%B8%89%E6%AD%A5%E6%8A%8A%E4%BD%A0%E5%88%9A%E6%89%8D%E8%97%8F%E8%B5%B7%E6%9D%A5%E7%9A%84%E4%BB%A3%E7%A0%81-%E6%81%A2%E5%A4%8D%E5%9B%9E%E6%9D%A5" class="hash-link" aria-label="Direct link to 第三步：把你刚才藏起来的代码 恢复回来" title="Direct link to 第三步：把你刚才藏起来的代码 恢复回来" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第三步把你刚才藏起来的代码-恢复回来">第三步：把你刚才藏起来的代码 恢复回来<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E4%B8%89%E6%AD%A5%E6%8A%8A%E4%BD%A0%E5%88%9A%E6%89%8D%E8%97%8F%E8%B5%B7%E6%9D%A5%E7%9A%84%E4%BB%A3%E7%A0%81-%E6%81%A2%E5%A4%8D%E5%9B%9E%E6%9D%A5" class="hash-link" aria-label="第三步：把你刚才藏起来的代码 恢复回来的直接链接" title="第三步：把你刚才藏起来的代码 恢复回来的直接链接" translate="no">​</a></h2>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">git stash pop</span><br></div></code></pre></div></div>
 <p>作用：
 <strong>自动合并：远程最新 + 你本地修改</strong></p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第四步如果没有冲突--直接提交">第四步：如果没有冲突 → 直接提交<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E5%86%B2%E7%AA%81--%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A4" class="hash-link" aria-label="Direct link to 第四步：如果没有冲突 → 直接提交" title="Direct link to 第四步：如果没有冲突 → 直接提交" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="第四步如果没有冲突--直接提交">第四步：如果没有冲突 → 直接提交<a href="https://buhaoqi.github.io/blog/git-tip1#%E7%AC%AC%E5%9B%9B%E6%AD%A5%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89%E5%86%B2%E7%AA%81--%E7%9B%B4%E6%8E%A5%E6%8F%90%E4%BA%A4" class="hash-link" aria-label="第四步：如果没有冲突 → 直接提交的直接链接" title="第四步：如果没有冲突 → 直接提交的直接链接" translate="no">​</a></h2>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">git add .</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git commit -m "合并本地与远程dev"</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git push origin dev</span><br></div></code></pre></div></div>
 <hr>
 <h1>如果出现冲突（红字）怎么办？</h1>
@@ -1480,14 +1480,14 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">git add .</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git commit -m "解决合并冲突"</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git push origin dev</span><br></div></code></pre></div></div>
 <hr>
 <h1>一句话总结流程（你记这个就行）</h1>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="藏代码--拉最新--恢复代码--提交推送">藏代码 → 拉最新 → 恢复代码 → 提交推送<a href="https://buhaoqi.github.io/blog/git-tip1#%E8%97%8F%E4%BB%A3%E7%A0%81--%E6%8B%89%E6%9C%80%E6%96%B0--%E6%81%A2%E5%A4%8D%E4%BB%A3%E7%A0%81--%E6%8F%90%E4%BA%A4%E6%8E%A8%E9%80%81" class="hash-link" aria-label="Direct link to 藏代码 → 拉最新 → 恢复代码 → 提交推送" title="Direct link to 藏代码 → 拉最新 → 恢复代码 → 提交推送" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="藏代码--拉最新--恢复代码--提交推送">藏代码 → 拉最新 → 恢复代码 → 提交推送<a href="https://buhaoqi.github.io/blog/git-tip1#%E8%97%8F%E4%BB%A3%E7%A0%81--%E6%8B%89%E6%9C%80%E6%96%B0--%E6%81%A2%E5%A4%8D%E4%BB%A3%E7%A0%81--%E6%8F%90%E4%BA%A4%E6%8E%A8%E9%80%81" class="hash-link" aria-label="藏代码 → 拉最新 → 恢复代码 → 提交推送的直接链接" title="藏代码 → 拉最新 → 恢复代码 → 提交推送的直接链接" translate="no">​</a></h2>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">git stash</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git pull origin dev</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git stash pop</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git add .</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git commit -m "合并"</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">git push</span><br></div></code></pre></div></div>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="重要提醒">重要提醒<a href="https://buhaoqi.github.io/blog/git-tip1#%E9%87%8D%E8%A6%81%E6%8F%90%E9%86%92" class="hash-link" aria-label="Direct link to 重要提醒" title="Direct link to 重要提醒" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="重要提醒">重要提醒<a href="https://buhaoqi.github.io/blog/git-tip1#%E9%87%8D%E8%A6%81%E6%8F%90%E9%86%92" class="hash-link" aria-label="重要提醒的直接链接" title="重要提醒的直接链接" translate="no">​</a></h2>
 <p><strong>永远记住：
 每次开始写代码前，一定要先 pull 最新代码！</strong></p>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/git-tip1#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 总结" title="Direct link to 总结" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/git-tip1#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接" translate="no">​</a></h3>
 <ol>
 <li class="">你现在的情况<strong>完全可以安全合并</strong>，不会丢代码</li>
 <li class="">按 <code>stash → pull → pop → commit</code> 顺序操作</li>
@@ -1513,10 +1513,10 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <content type="html"><![CDATA[<p>如果你刚开始学习 C# 和 .NET，一定会频繁遇到一个词——<strong>NuGet</strong>。它几乎是每个 .NET 项目都离不开的工具。那么，NuGet 究竟是什么？这个奇怪的名字又是怎么来的？这篇文章将一次性讲清楚。</p>
 <!-- -->
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一nuget-是什么">一、NuGet 是什么？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%80nuget-%E6%98%AF%E4%BB%80%E4%B9%88" class="hash-link" aria-label="Direct link to 一、NuGet 是什么？" title="Direct link to 一、NuGet 是什么？" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一nuget-是什么">一、NuGet 是什么？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%80nuget-%E6%98%AF%E4%BB%80%E4%B9%88" class="hash-link" aria-label="一、NuGet 是什么？的直接链接" title="一、NuGet 是什么？的直接链接" translate="no">​</a></h2>
 <p>NuGet 是 <strong>.NET 平台的包管理器</strong>。通俗地说，它就是一个 <strong>“代码超市”</strong>。</p>
 <p>在开发软件时，很多常见功能（比如解析 JSON、操作 Excel、连接数据库）其实不需要你从头编写。社区和微软已经提供了大量高质量、经过测试的代码库（称为“包”）。NuGet 的任务就是帮你 <strong>找到、下载、安装、更新</strong> 这些包，并自动处理它们之间的依赖关系。</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nuget-的核心功能">NuGet 的核心功能<a href="https://buhaoqi.github.io/blog/what-is-nuget#nuget-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD" class="hash-link" aria-label="Direct link to NuGet 的核心功能" title="Direct link to NuGet 的核心功能" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="nuget-的核心功能">NuGet 的核心功能<a href="https://buhaoqi.github.io/blog/what-is-nuget#nuget-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD" class="hash-link" aria-label="NuGet 的核心功能的直接链接" title="NuGet 的核心功能的直接链接" translate="no">​</a></h3>
 <ol>
 <li class="">
 <p><strong>安装第三方库</strong><br>
@@ -1535,7 +1535,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <!-- -->全球的 .NET 开发者都将自己的包发布到 NuGet 官方仓库 <a href="https://www.nuget.org/" target="_blank" rel="noopener noreferrer" class="">nuget.org</a> 上。目前该仓库已拥有超过 30 万个包，总下载量数十亿次。</p>
 </li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何使用-nuget">如何使用 NuGet？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-nuget" class="hash-link" aria-label="Direct link to 如何使用 NuGet？" title="Direct link to 如何使用 NuGet？" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="如何使用-nuget">如何使用 NuGet？<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-nuget" class="hash-link" aria-label="如何使用 NuGet？的直接链接" title="如何使用 NuGet？的直接链接" translate="no">​</a></h3>
 <p>在 Visual Studio 中，最简单的方式是：</p>
 <ul>
 <li class="">右键单击项目 → “管理 NuGet 程序包”</li>
@@ -1547,13 +1547,13 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <p>对于 .NET Core / .NET 5+ 项目，还可以使用 <code>dotnet</code> 命令：</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token plain">dotnet add package Newtonsoft.Json</span><br></div></code></pre></div></div>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二nuget-这个名字的来历">二、“NuGet” 这个名字的来历<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%BA%8Cnuget-%E8%BF%99%E4%B8%AA%E5%90%8D%E5%AD%97%E7%9A%84%E6%9D%A5%E5%8E%86" class="hash-link" aria-label="Direct link to 二、“NuGet” 这个名字的来历" title="Direct link to 二、“NuGet” 这个名字的来历" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二nuget-这个名字的来历">二、“NuGet” 这个名字的来历<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%BA%8Cnuget-%E8%BF%99%E4%B8%AA%E5%90%8D%E5%AD%97%E7%9A%84%E6%9D%A5%E5%8E%86" class="hash-link" aria-label="二、“NuGet” 这个名字的来历的直接链接" title="二、“NuGet” 这个名字的来历的直接链接" translate="no">​</a></h2>
 <p>“NuGet” 是一个生造的单词，但它背后有一段有趣的故事。</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="从-nupack-到-nuget">从 NuPack 到 NuGet<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%BB%8E-nupack-%E5%88%B0-nuget" class="hash-link" aria-label="Direct link to 从 NuPack 到 NuGet" title="Direct link to 从 NuPack 到 NuGet" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="从-nupack-到-nuget">从 NuPack 到 NuGet<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%BB%8E-nupack-%E5%88%B0-nuget" class="hash-link" aria-label="从 NuPack 到 NuGet的直接链接" title="从 NuPack 到 NuGet的直接链接" translate="no">​</a></h3>
 <p>NuGet 最初的名字叫 <strong>NuPack</strong>（New Package 的缩写），意为“新包”。它在 2010 年由微软的团队开发，旨在为 .NET 提供一个官方的包管理工具。</p>
 <p>然而，在发布前夕，团队发现 “NuPack” 这个名称与另一款商业产品重名。为了避免商标纠纷，他们不得不紧急改名。</p>
 <p>在讨论新名字时，团队成员之一提出了 “NuGet” 的建议。这个名字保留了原名的 <strong>“Nu”</strong> 前缀，又用 <strong>“Get”</strong> 替代了 <strong>“Pack”</strong>。</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="名字的含义">名字的含义<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E5%90%8D%E5%AD%97%E7%9A%84%E5%90%AB%E4%B9%89" class="hash-link" aria-label="Direct link to 名字的含义" title="Direct link to 名字的含义" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="名字的含义">名字的含义<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E5%90%8D%E5%AD%97%E7%9A%84%E5%90%AB%E4%B9%89" class="hash-link" aria-label="名字的含义的直接链接" title="名字的含义的直接链接" translate="no">​</a></h3>
 <ul>
 <li class="">
 <p><strong>Nu</strong> = <strong>New</strong>（新）<br>
@@ -1565,10 +1565,10 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 </li>
 </ul>
 <p>因此，“NuGet” 的字面意思就是 <strong>“获取新组件”</strong>。</p>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="文化彩蛋希腊字母-νυ">文化彩蛋：希腊字母 Νυ<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E6%96%87%E5%8C%96%E5%BD%A9%E8%9B%8B%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D-%CE%BD%CF%85" class="hash-link" aria-label="Direct link to 文化彩蛋：希腊字母 Νυ" title="Direct link to 文化彩蛋：希腊字母 Νυ" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="文化彩蛋希腊字母-νυ">文化彩蛋：希腊字母 Νυ<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E6%96%87%E5%8C%96%E5%BD%A9%E8%9B%8B%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D-%CE%BD%CF%85" class="hash-link" aria-label="文化彩蛋：希腊字母 Νυ的直接链接" title="文化彩蛋：希腊字母 Νυ的直接链接" translate="no">​</a></h3>
 <p>也有一种非官方的说法认为，“Nu” 还暗指希腊字母 $\Nu$（Nu）。在科技领域使用希腊字母命名是一种常见做法（如 μTorrent、π 等），这为名字增添了一丝极客色彩。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三nuget-对-net-开发者的意义">三、NuGet 对 .NET 开发者的意义<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%89nuget-%E5%AF%B9-net-%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%84%8F%E4%B9%89" class="hash-link" aria-label="Direct link to 三、NuGet 对 .NET 开发者的意义" title="Direct link to 三、NuGet 对 .NET 开发者的意义" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三nuget-对-net-开发者的意义">三、NuGet 对 .NET 开发者的意义<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E4%B8%89nuget-%E5%AF%B9-net-%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%84%8F%E4%B9%89" class="hash-link" aria-label="三、NuGet 对 .NET 开发者的意义的直接链接" title="三、NuGet 对 .NET 开发者的意义的直接链接" translate="no">​</a></h2>
 <p>对于 C# 学习者来说，NuGet 可以让你站在巨人的肩膀上。无论是做 Web 开发、桌面应用、移动应用，还是游戏开发，你几乎总能找到一个现成的 NuGet 包来快速实现所需功能。</p>
 <p>类比其他语言：</p>
 <ul>
@@ -1578,7 +1578,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <li class="">.NET 世界：<strong>NuGet</strong></li>
 </ul>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 总结" title="Direct link to 总结" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/what-is-nuget#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接" translate="no">​</a></h2>
 <ul>
 <li class=""><strong>NuGet 是什么</strong>：.NET 的包管理器，帮你下载、安装、管理第三方代码库。</li>
 <li class=""><strong>名字由来</strong>：从 “NuPack” 改名而来，“Nu” 代表 “New”，“Get” 代表获取，合起来就是“获取新组件”，简洁地表达了工具的核心功能。</li>
@@ -1601,11 +1601,11 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <link href="https://buhaoqi.github.io/blog/code-normal"/>
         <updated>2026-03-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[提高可读性]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="提高可读性"><strong>提高可读性</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E6%8F%90%E9%AB%98%E5%8F%AF%E8%AF%BB%E6%80%A7" class="hash-link" aria-label="Direct link to 提高可读性" title="Direct link to 提高可读性" translate="no">​</a></h3>
+        <content type="html"><![CDATA[<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="提高可读性"><strong>提高可读性</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E6%8F%90%E9%AB%98%E5%8F%AF%E8%AF%BB%E6%80%A7" class="hash-link" aria-label="提高可读性的直接链接" title="提高可读性的直接链接" translate="no">​</a></h3>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// 不好的写法</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">a</span><span class="token operator" style="color:#393A34">+</span><span class="token plain">b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">c</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">{</span><span class="token comment" style="color:#999988;font-style:italic">/* truncate */</span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 好的写法</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">10</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> b </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">20</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> c </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> a </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> b</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token interpolation-string string" style="color:#e3116c">$"计算结果：</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">c</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用空行分组"><strong>使用空行分组</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E4%BD%BF%E7%94%A8%E7%A9%BA%E8%A1%8C%E5%88%86%E7%BB%84" class="hash-link" aria-label="Direct link to 使用空行分组" title="Direct link to 使用空行分组" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="使用空行分组"><strong>使用空行分组</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E4%BD%BF%E7%94%A8%E7%A9%BA%E8%A1%8C%E5%88%86%E7%BB%84" class="hash-link" aria-label="使用空行分组的直接链接" title="使用空行分组的直接链接" translate="no">​</a></h3>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// 输入部分</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">Write</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"请输入姓名："</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> name </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">ReadLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">Write</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">"请输入年龄："</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> age </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">int</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">Parse</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">ReadLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 处理部分</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> greeting </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token interpolation-string string" style="color:#e3116c">$"你好，</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">name</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">！"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">string</span><span class="token plain"> ageInfo </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token interpolation-string string" style="color:#e3116c">$"你今年</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">age</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">岁"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 输出部分</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">greeting</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">ageInfo</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="添加注释说明"><strong>添加注释说明</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E" class="hash-link" aria-label="Direct link to 添加注释说明" title="Direct link to 添加注释说明" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="添加注释说明"><strong>添加注释说明</strong><a href="https://buhaoqi.github.io/blog/code-normal#%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A%E8%AF%B4%E6%98%8E" class="hash-link" aria-label="添加注释说明的直接链接" title="添加注释说明的直接链接" translate="no">​</a></h3>
 <div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic">// 1. 初始化数据</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">double</span><span class="token plain"> price </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">99.99</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">int</span><span class="token plain"> quantity </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 2. 计算总价</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">double</span><span class="token plain"> subtotal </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> price </span><span class="token operator" style="color:#393A34">*</span><span class="token plain"> quantity</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">double</span><span class="token plain"> tax </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> subtotal </span><span class="token operator" style="color:#393A34">*</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">0.08</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">  </span><span class="token comment" style="color:#999988;font-style:italic">// 8%税率</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token class-name keyword" style="color:#00009f">double</span><span class="token plain"> total </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> subtotal </span><span class="token operator" style="color:#393A34">+</span><span class="token plain"> tax</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic">// 3. 显示结果</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token interpolation-string string" style="color:#e3116c">$"小计：</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">subtotal</span><span class="token interpolation-string interpolation format-string punctuation" style="color:#393A34">:</span><span class="token interpolation-string interpolation format-string">C</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token interpolation-string string" style="color:#e3116c">$"税金：</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">tax</span><span class="token interpolation-string interpolation format-string punctuation" style="color:#393A34">:</span><span class="token interpolation-string interpolation format-string">C</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">Console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token function" style="color:#d73a49">WriteLine</span><span class="token punctuation" style="color:#393A34">(</span><span class="token interpolation-string string" style="color:#e3116c">$"总计：</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">{</span><span class="token interpolation-string interpolation expression language-csharp">total</span><span class="token interpolation-string interpolation format-string punctuation" style="color:#393A34">:</span><span class="token interpolation-string interpolation format-string">C</span><span class="token interpolation-string interpolation punctuation" style="color:#393A34">}</span><span class="token interpolation-string string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>]]></content>
         <author>
             <name>Sébastien Lorber</name>
@@ -1632,12 +1632,12 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <p>直接给结论：<strong>从结构化程序设计（Structured Programming）的理论定义来看，你的教材或老师是对的，但你的直觉也反映了现代编程的实际情况。</strong></p>
 <p>我们可以从以下两个维度来拆解这个问题：</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-为什么说只有三种理论层面">1. 为什么说“只有三种”？（理论层面）<a href="https://buhaoqi.github.io/blog/coding-control-flow#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4%E5%8F%AA%E6%9C%89%E4%B8%89%E7%A7%8D%E7%90%86%E8%AE%BA%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="Direct link to 1. 为什么说“只有三种”？（理论层面）" title="Direct link to 1. 为什么说“只有三种”？（理论层面）" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-为什么说只有三种理论层面">1. 为什么说“只有三种”？（理论层面）<a href="https://buhaoqi.github.io/blog/coding-control-flow#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4%E5%8F%AA%E6%9C%89%E4%B8%89%E7%A7%8D%E7%90%86%E8%AE%BA%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="1. 为什么说“只有三种”？（理论层面）的直接链接" title="1. 为什么说“只有三种”？（理论层面）的直接链接" translate="no">​</a></h2>
 <p>在计算机科学中，这被称为 <strong>Böhm-Jacopini 定理</strong>。该定理证明了：<strong>任何算法都可以只用这三种基本控制结构来表示。</strong></p>
 <table><thead><tr><th style="text-align:left">结构</th><th style="text-align:left">核心逻辑</th><th style="text-align:left">形象比喻</th></tr></thead><tbody><tr><td style="text-align:left"><strong>顺序 (Sequence)</strong></td><td style="text-align:left">代码按编写顺序从上到下执行。</td><td style="text-align:left">直行道，没有分叉。</td></tr><tr><td style="text-align:left"><strong>分支 (Selection/Branch)</strong></td><td style="text-align:left">根据条件的真假选择不同的路径（<code>if</code>, <code>switch</code>）。</td><td style="text-align:left">十字路口，根据红绿灯选路。</td></tr><tr><td style="text-align:left"><strong>循环 (Iteration/Loop)</strong></td><td style="text-align:left">重复执行一段代码直到满足退出条件（<code>for</code>, <code>while</code>）。</td><td style="text-align:left">操场跑圈，跑够数为止。</td></tr></tbody></table>
 <p>这三种结构之所以被视为“原子级”的基石，是因为它们足以构建任何复杂的逻辑。</p>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-为什么-break-和-continue-不算独立结构语义层面">2. 为什么 <code>break</code> 和 <code>continue</code> 不算独立结构？（语义层面）<a href="https://buhaoqi.github.io/blog/coding-control-flow#2-%E4%B8%BA%E4%BB%80%E4%B9%88-break-%E5%92%8C-continue-%E4%B8%8D%E7%AE%97%E7%8B%AC%E7%AB%8B%E7%BB%93%E6%9E%84%E8%AF%AD%E4%B9%89%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="Direct link to 2-为什么-break-和-continue-不算独立结构语义层面" title="Direct link to 2-为什么-break-和-continue-不算独立结构语义层面" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-为什么-break-和-continue-不算独立结构语义层面">2. 为什么 <code>break</code> 和 <code>continue</code> 不算独立结构？（语义层面）<a href="https://buhaoqi.github.io/blog/coding-control-flow#2-%E4%B8%BA%E4%BB%80%E4%B9%88-break-%E5%92%8C-continue-%E4%B8%8D%E7%AE%97%E7%8B%AC%E7%AB%8B%E7%BB%93%E6%9E%84%E8%AF%AD%E4%B9%89%E5%B1%82%E9%9D%A2" class="hash-link" aria-label="2-为什么-break-和-continue-不算独立结构语义层面的直接链接" title="2-为什么-break-和-continue-不算独立结构语义层面的直接链接" translate="no">​</a></h2>
 <p>你认为它们属于程序结构是有道理的，因为它们确实改变了程序的流向。但在计算机术语中，它们通常被归类为**“跳转语句”（Jump Statements）**，而不是“结构”。</p>
 <ul>
 <li class=""><strong>它们是“附属品”</strong>：<code>break</code> 和 <code>continue</code> 不能独立存在。如果没有循环（或 <code>switch</code>），它们就失去了存在的意义。</li>
@@ -1650,7 +1650,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <li class=""><strong>本质是受限的 <code>goto</code></strong>：在早期的编程中，人们使用 <code>goto</code> 随处跳转，导致代码像“意大利面”一样混乱。为了规范化，现代语言引入了 <code>break</code> 和 <code>continue</code> 作为<strong>有纪律的跳转</strong>，用来辅助优化循环结构。</li>
 </ul>
 <hr>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-你的理解错了吗">3. 你的理解错了吗？<a href="https://buhaoqi.github.io/blog/coding-control-flow#3-%E4%BD%A0%E7%9A%84%E7%90%86%E8%A7%A3%E9%94%99%E4%BA%86%E5%90%97" class="hash-link" aria-label="Direct link to 3. 你的理解错了吗？" title="Direct link to 3. 你的理解错了吗？" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-你的理解错了吗">3. 你的理解错了吗？<a href="https://buhaoqi.github.io/blog/coding-control-flow#3-%E4%BD%A0%E7%9A%84%E7%90%86%E8%A7%A3%E9%94%99%E4%BA%86%E5%90%97" class="hash-link" aria-label="3. 你的理解错了吗？的直接链接" title="3. 你的理解错了吗？的直接链接" translate="no">​</a></h2>
 <p><strong>你并没有错，你只是在用“功能角度”看问题，而定理是在用“最小完备集”看问题。</strong></p>
 <ul>
 <li class=""><strong>理论上</strong>：不需要 <code>break</code>，你也可以通过修改循环条件（比如 <code>while</code> 的布尔值）来实现同样的功能。</li>
@@ -1660,7 +1660,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
 <p><strong>小贴士</strong>：在 C# 中，除了这三种基本结构和跳转语句，还有一种特殊的结构叫 <strong>异常处理 (Exception Handling)</strong>，即 <code>try-catch-finally</code>。虽然它本质上也涉及分支和跳转，但在现代应用开发中，它常被视为第四种重要的流控制方式。</p>
 </blockquote>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/coding-control-flow#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="Direct link to 总结" title="Direct link to 总结" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="总结">总结<a href="https://buhaoqi.github.io/blog/coding-control-flow#%E6%80%BB%E7%BB%93" class="hash-link" aria-label="总结的直接链接" title="总结的直接链接" translate="no">​</a></h3>
 <p>“顺序、分支、循环”是构建大厦的<strong>砖块、钢筋和水泥</strong>；而 <code>break</code> 和 <code>continue</code> 更像是<strong>电梯或紧急出口</strong>——它们很有用，但你不能只用电梯盖出一栋房子。</p>
 <p><strong>既然聊到了跳转，你想看看在嵌套循环中，如何优雅地使用 <code>break</code> 才能避免逻辑混乱吗？</strong></p>]]></content>
         <author>
@@ -1714,7 +1714,7 @@ Git 会告诉你哪个文件冲突，你打开文件，会看到类似：</p>
         <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
         <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
 <!-- -->
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>提示</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
 <!-- -->
 <p>For example, use JSX to create an interactive button:</p>
 <div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></div></code></pre></div></div>
