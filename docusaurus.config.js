@@ -27,7 +27,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: '不好奇课堂', // Usually your GitHub org/user name.
+  organizationName: 'buhaoqi', // Usually your GitHub org/user name.
   projectName: 'buhaoqi.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   //trailingSlash: false, // 显式设置尾部斜杠规则
