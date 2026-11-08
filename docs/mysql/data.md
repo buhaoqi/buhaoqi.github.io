@@ -3,6 +3,7 @@
 title: 数据表  # 文档标题，若无 sidebar_label 则作为侧边栏名
 sidebar_label: 数据表  # 显式指定侧边栏显示名（优先级最高）
 sidebar_position: 4  # 侧边栏中排在第1位
+id: data
 ---
 
 ## 教师表:teacher

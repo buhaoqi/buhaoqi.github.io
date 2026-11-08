@@ -12,6 +12,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -19,8 +20,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            河北对口高考计算机专业考试简介 ⏱️
+            to="https://tiku.buhaoqi.com">
+            题库入口
           </Link>
         </div>
       </div>

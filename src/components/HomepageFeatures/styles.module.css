@@ -9,3 +9,10 @@
   height: 200px;
   width: 200px;
 }
+
+.extras {
+  width: 100%;
+  padding: 3rem 0;
+  /* background: #262b30; */
+  background: #292929;
+}
