@@ -35,7 +35,7 @@ const sidebars = {
   csharpSidebar: [
     {
       type: 'doc',
-      id: 'csharp/intro',  // 确保 docs/csharp/intro.md 存在
+      id: 'csharp/index',  // 确保 docs/csharp/intro.md 存在
       label: '考试大纲',
     },
     // 项目一：算法与程序基础（一级分类）
@@ -45,57 +45,12 @@ const sidebars = {
       collapsible: true, // 可折叠（默认true）
       collapsed: false, // 默认展开（根据需要改true为折叠）
       items: [
-        'csharp/ch01/overview', // 概述
-        // 任务一 
-        {
-          type: 'category',
-          label: '任务一 算法的定义与特性',
-          collapsible: true,
-          collapsed: true, // 默认折叠（显示箭头）
-          items: [
-            'csharp/ch01/task1/1', // 
-            'csharp/ch01/task1/exercises', // 
-          ],
-        },
-        // 任务二
-        {
-          type: 'category',
-          label: '任务二 算法的描述与设计',
-          collapsible: true,
-          collapsed: true, // 默认折叠（显示箭头）
-          items: [
-            'csharp/ch01/task2/1', // 
-            'csharp/ch01/task2/2', // 
-            'csharp/ch01/task2/3', // 
-            'csharp/ch01/task2/exercises', // 
-          ],
-        },
-        // 任务三
-        {
-          type: 'category',
-          label: '任务三 算法分析与评价',
-          collapsible: true,
-          collapsed: true, // 默认折叠（显示箭头）
-          items: [
-            'csharp/ch01/task3/1', // 
-            'csharp/ch01/task3/2', //  
-          ],
-        },
-        'csharp/ch01/task4', // 任务四 算法与程序的关系
-        // 任务
-        {
-          type: 'category',
-          label: '任务五 典型算法举例',
-          collapsible: true,
-          collapsed: true, // 默认折叠（显示箭头）
-          items: [
-            'csharp/ch01/task5/1', // 
-            'csharp/ch01/task5/2', // 
-            'csharp/ch01/task5/3', // 
-            'csharp/ch01/task5/4', // 
-            'csharp/ch01/task5/5', // 
-          ],
-        }
+        'csharp/proj1/task1-algorithm-definition', // 任务一 算法的定义及特性
+        'csharp/proj1/task2-algorithm-description-design', // 任务二 算法的描述与设计
+        'csharp/proj1/task3-algorithm-analysis', // 任务三 算法分析和评价
+        'csharp/proj1/task4-algorithm-program-relationship', // 任务四 算法与程序的关系
+        'csharp/proj1/task5-typical-algorithms', // 任务五 典型算法举例
+        'csharp/proj1/task6-exercises', // 任务六 同步实验与训练
       ],
     },
 
@@ -106,73 +61,26 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch02/overview', // 概述
-        'csharp/ch02/task1', // 任务一
-        'csharp/ch02/task2', // 任务二 
-        'csharp/ch02/task3', // 任务三 
+        'csharp/proj2/task1-csharp-introduction', // 任务一 C#语言简介
+        'csharp/proj2/task2-vs2010-environment', // 任务二 Visual C# 2010开发环境
+        'csharp/proj2/task3-simple-csharp-program', // 任务三 简单C#程序实例
+        'csharp/proj2/task4-exercises', // 任务四 同步实验
+        'csharp/proj2/task5-exercises', // 任务五 同步训练
       ],
     },
 
-    // 项目三：C#语言基础（一级分类，包含带子项的任务 + 练习题）
+    // 项目三：C#语言基础（一级分类）
     {
       type: 'category',
       label: '项目三 C#语言基础',
       collapsible: true,
       collapsed: false,
       items: [
-        // 任务一 数据类型（二级分类，带子项，显示折叠箭头）
-        {
-          type: 'category',
-          label: '任务一 数据类型',
-          collapsible: true,
-          collapsed: true, // 默认折叠（显示箭头）
-          items: [
-            'csharp/ch03/task1/overview', // 
-            'csharp/ch03/task1/type-int', // 
-            'csharp/ch03/task1/type-decimal', // 
-            'csharp/ch03/task1/type-char', // 
-            'csharp/ch03/task1/type-bool', // 
-            'csharp/ch03/task1/type-struct', // 
-            'csharp/ch03/task1/type-enum', // 
-            'csharp/ch03/task1/type-string', // 
-            'csharp/ch03/task1/type-tuple', // 
-            'csharp/ch03/task1/type-alias', // 
-            'csharp/ch03/task1/implicit-convention', // 
-            'csharp/ch03/task1/brace', // 
-            'csharp/ch03/task1/parse', // 
-            'csharp/ch03/task1/convert', // 
-            'csharp/ch03/task1/type-object', // 
-          ],
-        },
-        // 任务二 常量与变量（二级分类，带子项）
-        {
-          type: 'category',
-          label: '任务二 常量与变量',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch03/task2/constant', // 常量
-            'csharp/ch03/task2/variable', // 变量
-          ],
-        },
-        // 任务三 运算符与表达式（二级分类，带子项。）
-        {
-          type: 'category',
-          label: '任务三 运算符与表达式',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch03/task3/overview', // 
-            'csharp/ch03/task3/arithmetic-operators', // 
-            'csharp/ch03/task3/increment-decrement-operators', // 
-            'csharp/ch03/task3/assignment-operators', // 
-            'csharp/ch03/task3/comparison-operators', // 
-            'csharp/ch03/task3/logical-operators', // 
-            'csharp/ch03/task3/conditional-operators', // 
-            'csharp/ch03/task3/precedence-and-associativity', // 
-          ],
-        },
-        'csharp/ch03/exercise', // 练习题（单独的文档项）
+        'csharp/proj3/task1-data-types', // 任务一 数据类型
+        'csharp/proj3/task2-constants-variables', // 任务二 常量与变量
+        'csharp/proj3/task3-operators-expressions', // 任务三 运算符与表达式
+        'csharp/proj3/task4-exercises', // 任务四 同步实验
+        'csharp/proj3/task5-exercises', // 任务五 同步训练
       ],
     },
 
@@ -183,96 +91,28 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch04/overview', // 顺序结构基础
-        // 任务一 顺序结构（二级分类，带子项）
-        {
-          type: 'category',
-          label: '任务一 顺序结构语句',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch04/task1/overview', // 
-            'csharp/ch04/task1/console-writeline', // 
-            'csharp/ch04/task1/console-write', // 
-            'csharp/ch04/task1/console-readline', // 
-            'csharp/ch04/task1/console-read', // 
-            'csharp/ch04/task1/console-readkey', // 
-          ],
-        },
-        // 任务二 分支结构（二级分类，带子项）
-        {
-          type: 'category',
-          label: '任务二 分支结构',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch04/task2/overview', // 
-            'csharp/ch04/task2/if-statement', // if语句
-            'csharp/ch04/task2/switch-statement', // switch语句
-          ],
-        },
-        // 任务三 循环结构（二级分类，带子项）
-        {
-          type: 'category',
-          label: '任务三 循环结构',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch04/task3/loop-for', // for循环
-            'csharp/ch04/task3/exercise-for', // 练习题（单独的文档项）
-            'csharp/ch04/task3/loop-while', // while循环
-            'csharp/ch04/task3/exercise-while', // 练习题（单独的文档项）
-          ],
-        },
-        // 任务四 跳转语句（二级分类，带子项）
-        {
-          type: 'category',
-          label: '任务四 跳转语句',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch04/task4/break-statement', // break语句
-            'csharp/ch04/task4/continue-statement', // continue语句
-          ],
-        },
+        'csharp/proj4/task1-sequence-structure', // 任务一 顺序结构语句
+        'csharp/proj4/task2-branch-structure', // 任务二 分支结构语句
+        'csharp/proj4/task3-loop-structure', // 任务三 循环结构语句
+        'csharp/proj4/task4-jump-statements', // 任务四 跳转语句
+        'csharp/proj4/task5-exercises', // 任务五 同步实验
+        'csharp/proj4/task6-exercises', // 任务六 同步训练
       ],
     },
 
     // 项目五：窗体应用程序开发
     {
       type: 'category',
-      label: '项目五 窗体应用程序开发',
+      label: '项目五 Windows应用程序开发',
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch05/overview', // 概述
-        'csharp/ch05/task1', // 任务一 窗体设计
-        // 任务二 常用控件（二级分类，带子项）
-        {
-          type: 'category',
-          label: '任务二 常用控件',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'csharp/ch05/task2/overview', // 
-            'csharp/ch05/task2/label', // 
-            'csharp/ch05/task2/textbox', //
-            'csharp/ch05/task2/button', //
-            'csharp/ch05/task2/combobox', //
-            'csharp/ch05/task2/listbox', //
-            'csharp/ch05/task2/radiobutton', //
-            'csharp/ch05/task2/checkbox', //
-            'csharp/ch05/task2/hscrollbar-vscrollbar', //
-            'csharp/ch05/task2/timer', //
-            'csharp/ch05/task2/groupbox', // 
-            'csharp/ch05/task2/tabcontrol', // 
-          ],
-        },
-        'csharp/ch05/task3', // 任务三 对话框
-        'csharp/ch05/task4', // 任务四 文档程序设计
-        'csharp/ch05/exercise1', // 任务四 文档程序设计
-        'csharp/ch05/exercise2', // 任务四 文档程序设计
-        'csharp/ch05/exercise3', // 任务四 文档程序设计
+        'csharp/proj5/task1-form-design', // 任务一 窗体设计
+        'csharp/proj5/task2-common-controls', // 任务二 常用控件
+        'csharp/proj5/task3-dialogs', // 任务三 对话框
+        'csharp/proj5/task4-document-program', // 任务四 文档程序设计
+        'csharp/proj5/task5-exercises', // 任务五 同步实验
+        'csharp/proj5/task6-exercises', // 任务六 同步训练
       ],
     },
     // 项目六 数组
@@ -282,13 +122,12 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch06/overview', // 概述
-        'csharp/ch06/task1', // 任务一 一维数组
-        'csharp/ch06/task2', // 任务二 多维数组
-        'csharp/ch06/task3', // 任务三 数组方法
-        'csharp/ch06/task4', // 任务四 数组的排序
-        'csharp/ch06/task5', // 任务五 同步实验
-        'csharp/ch06/task6', // 任务六 同步训练
+        'csharp/proj6/task1-one-dimensional-array', // 任务一 一维数组
+        'csharp/proj6/task2-multidimensional-array', // 任务二 多维数组
+        'csharp/proj6/task3-array-traversal', // 任务三 数组的遍历
+        'csharp/proj6/task4-sorting-searching', // 任务四 数组的排序和查找
+        'csharp/proj6/task5-exercises', // 任务五 同步实验
+        'csharp/proj6/task6-exercises', // 任务六 同步训练
       ],
     },
     // 项目七 面向对象基础
@@ -298,222 +137,100 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-          'csharp/ch07/class_basics/overview-class', // 概述
-          'csharp/ch07/class_basics/class', // 任务一 
-          'csharp/ch07/class_basics/modifiers', // 任务四 
-          'csharp/ch07/class_basics/fields', // 任务二 
-          'csharp/ch07/class_basics/property', // 任务五
-          'csharp/ch07/class_basics/constructor', // 任务三 
-          'csharp/ch07/class_basics/this', // 任务六
-          'csharp/ch07/class_basics/static-class', // 任务六
-          'csharp/ch07/class_basics/nested-class', // 任务六
-          'csharp/ch07/method_basics/overview-method', // 概述
-          'csharp/ch07/method_basics/what-method-is', // 任务一 
-          'csharp/ch07/method_basics/parameters', // 任务二 
-          'csharp/ch07/method_basics/reload', // 任务三 
-          'csharp/ch07/exercise1', // 任务四
-          'csharp/ch07/exercise2', // 任务五
-        ],
+        'csharp/proj7/task1-class', // 任务一 类
+        'csharp/proj7/task2-method', // 任务二 方法
+        'csharp/proj7/task4-exercises', // 任务四 同步实验
+        'csharp/proj7/task5-exercises', // 任务五 同步训练
+      ],
     },
-    // 项目八：面向对象编程
+    // 项目八 面向对象编程
     {
       type: 'category',
       label: '项目八 面向对象编程',
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch08/overview', // 概述
-        'csharp/ch08/task1', // 任务一
-        'csharp/ch08/task2', // 任务二 
-        'csharp/ch08/task3', // 任务三 
-        'csharp/ch08/task4', // 任务一
-        'csharp/ch08/task5', // 任务二 
-        'csharp/ch08/task6', // 任务三 
-        'csharp/ch08/task7', // 任务一
+        'csharp/proj8/task1-encapsulation-inheritance',
+        'csharp/proj8/task2-polymorphism',
+        'csharp/proj8/task3-interface',
+        'csharp/proj8/task4-delegate',
+        'csharp/proj8/task5-exercises',
+        'csharp/proj8/task6-exercises',
       ],
     },
-    // 项目九：C#常用类
+    // 项目九 C#常用类
     {
       type: 'category',
       label: '项目九 C#常用类',
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch09/overview', // 概述
-        'csharp/ch09/task1', // 任务一
-        'csharp/ch09/task2', // 任务二 
-        'csharp/ch09/task3', // 任务三 
-        'csharp/ch09/task4', // 任务一
-        'csharp/ch09/task5', // 任务二 
-        'csharp/ch09/task6', // 任务三 
-        'csharp/ch09/task7', // 任务一
+        'csharp/proj9/task1-math-class',
+        'csharp/proj9/task2-string-class',
+        'csharp/proj9/task3-datetime-class',
+        'csharp/proj9/task4-random-class',
+        'csharp/proj9/task5-convert-class',
+        'csharp/proj9/task6-exercises',
+        'csharp/proj9/task7-exercises',
       ],
     },
-    // 项目示十：C#文件操作
+    // 项目十 C#文件操作
     {
       type: 'category',
-      label: '项目示十 C#文件操作',
+      label: '项目十 C#文件操作',
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch10/overview', // 概述
-        'csharp/ch10/task1', // 任务一
-        'csharp/ch10/task2', // 任务二 
-        'csharp/ch10/task3', // 任务三 
-        'csharp/ch10/task4', // 任务一
-        'csharp/ch10/task5', // 任务二 
+        'csharp/proj10/task1-file-types',
+        'csharp/proj10/task2-create-files',
+        'csharp/proj10/task3-read-write-files',
+        'csharp/proj10/task4-exercises',
+        'csharp/proj10/task5-exercises',
       ],
     },
-    // 项目示十一：C#图形操作
+    // 项目十一 C#图形操作
     {
       type: 'category',
-      label: '项目示十一 C#图形操作',
+      label: '项目十一 C#图形操作',
       collapsible: true,
       collapsed: false,
       items: [
-        'csharp/ch11/overview', // 概述
-        'csharp/ch11/task1', // 任务一
-        'csharp/ch11/task2', // 任务二 
+        'csharp/proj11/task1-graphics-foundation',
+        'csharp/proj11/task2-drawing-tools',
+        'csharp/proj11/task3-font-and-image',
+        'csharp/proj11/task4-exercises',
+        'csharp/proj11/task5-exercises',
+      ],
+    },
+    // 项目十二 数据库应用
+    {
+      type: 'category',
+      label: '项目十二 数据库应用',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'csharp/proj12/task1-connection-string',
+        'csharp/proj12/task2-connection-object',
+        'csharp/proj12/task3-connection-test',
+        'csharp/proj12/task4-exercises',
+        'csharp/proj12/task5-exercises',
       ],
     },
   ],
-  // ============ 新增的 MySQL 教程侧边栏 ============
-  csharpTutorials: [
-     {
-      type: 'doc',
-      id: 'csharp-tutorials/index',  // 确保 docs/mysql/intro.md 存在
-      label: '首页',
-    },
-    // 2026 年 3 月
-    {
-      type: 'category',
-      label: '2026年 1 月',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'csharp-tutorials/202601/0101', // 
-        'csharp-tutorials/202601/0102', // 
-        'csharp-tutorials/202601/0103', // 
-        'csharp-tutorials/202601/0104', // 
-        'csharp-tutorials/202601/0105', // 
-        'csharp-tutorials/202601/0106', // 
-        'csharp-tutorials/202601/0107', // 
-        'csharp-tutorials/202601/0108', // 
-        'csharp-tutorials/202601/0109', // 
-        'csharp-tutorials/202601/0110', // 
-        'csharp-tutorials/202601/0111', // 
-        'csharp-tutorials/202601/0112', // 
-        'csharp-tutorials/202601/0113', // 
-        'csharp-tutorials/202601/0114', // 
-        'csharp-tutorials/202601/0115', // 
-        'csharp-tutorials/202601/0116', // 
-        'csharp-tutorials/202601/0117', // 
-        'csharp-tutorials/202601/0118', // 
-        'csharp-tutorials/202601/0119', // 
-        'csharp-tutorials/202601/0120', // 
-      ],
-    },
-    // 2026 年 3 月
-    {
-      type: 'category',
-      label: '2026年 2 月',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'csharp-tutorials/202602/0201', // 
-        'csharp-tutorials/202602/0202', // 
-        'csharp-tutorials/202602/0203', // 
-        'csharp-tutorials/202602/0204', // 
-        'csharp-tutorials/202602/0205', // 
-        'csharp-tutorials/202602/0206', // 
-        'csharp-tutorials/202602/0207', // 
-        'csharp-tutorials/202602/0208', // 
-        'csharp-tutorials/202602/0209', // 
-        'csharp-tutorials/202602/0210', // 
-      ],
-    },
-    // 2026 年 3 月
-    {
-      type: 'category',
-      label: '2026年 3 月',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'csharp-tutorials/202603/0306', // 
-        'csharp-tutorials/202603/0307', // 
-        'csharp-tutorials/202603/0308', // 
-        'csharp-tutorials/202603/0309', //
-        'csharp-tutorials/202603/0310', //
-        'csharp-tutorials/202603/0311', //
-        'csharp-tutorials/202603/0312', //
-        'csharp-tutorials/202603/0313', // 
-        'csharp-tutorials/202603/0314', // 
-        'csharp-tutorials/202603/0315', // 
-        'csharp-tutorials/202603/0316', // 
-        'csharp-tutorials/202603/0317', // 
-        'csharp-tutorials/202603/0318', // 
-        'csharp-tutorials/202603/0323', // 
-        'csharp-tutorials/202603/0324', // 
-        'csharp-tutorials/202603/0325', // 
-        'csharp-tutorials/202603/0326', // 
-        'csharp-tutorials/202603/0327', // 
-        'csharp-tutorials/202603/0328', //
-        'csharp-tutorials/202603/0329', // 
-        'csharp-tutorials/202603/0330', // 
-        'csharp-tutorials/202603/0331', // 
-      ],
-    },
-    // 2026 年 4 月
-    {
-      type: 'category',
-      label: '2026年 4 月',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'csharp-tutorials/202604/0401', // 
-        'csharp-tutorials/202604/0402', // 
-        'csharp-tutorials/202604/0403', // 
-        'csharp-tutorials/202604/0404', // 
-        'csharp-tutorials/202604/0405', // 
-        'csharp-tutorials/202604/0406', // 
-        'csharp-tutorials/202604/0407', // 
-        'csharp-tutorials/202604/0408', // 
-        'csharp-tutorials/202604/0409', // 
-        'csharp-tutorials/202604/0410', // 
-        'csharp-tutorials/202604/0411', // 
-        'csharp-tutorials/202604/0412', // 
-        'csharp-tutorials/202604/0413', // 
-        'csharp-tutorials/202604/0414', // 
-        'csharp-tutorials/202604/0415', // 
-        'csharp-tutorials/202604/0416', // 
-        'csharp-tutorials/202604/0417', // 
-        'csharp-tutorials/202604/0418', // 
-        'csharp-tutorials/202604/0423', // 
-        'csharp-tutorials/202604/0424', // 
-        'csharp-tutorials/202604/0425', // 
-        'csharp-tutorials/202604/0426', // 
-        'csharp-tutorials/202604/0427', // 
-        'csharp-tutorials/202604/0428', //
-        'csharp-tutorials/202604/0429', // 
-        'csharp-tutorials/202604/0430', // 
-      ],
-    },
-  ],
-  // ============ 新增的 MySQL 教程侧边栏 ============
   mysqlSidebar: [
     {
       type: 'doc',
-      id: 'mysql/intro',  // 确保 docs/mysql/intro.md 存在
+      id: 'mysql/index',
       label: '考试大纲',
     },
-     {
+    {
       type: 'doc',
-      id: 'mysql/important',  // 确保 docs/mysql/intro.md 存在
+      id: 'mysql/important',
       label: '重要概念',
     },
     {
       type: 'doc',
-      id: 'mysql/data',  // 确保 docs/mysql/intro.md 存在
+      id: 'mysql/data',
       label: '数据表',
     },
     // 项目一：绪论
@@ -523,10 +240,9 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch01/overview', // 概述
-        'mysql/ch01/task1', // 任务一 数据库系统概述
-        'mysql/ch01/task2', // 任务二 多维数组
-        'mysql/ch01/task3', // 任务三 数组的遍历
+        'mysql/proj1/task1', // 任务一 数据库系统概述
+        'mysql/proj1/task2', // 任务二 多维数组
+        'mysql/proj1/task3', // 任务三 数组的遍历
       ],
     },
     // 项目二
@@ -536,11 +252,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch02/overview', // 概述
-        'mysql/ch02/task1', // 任务一 
-        'mysql/ch02/task2', // 任务二 
-        'mysql/ch02/task3', // 任务三 
-        'mysql/ch02/task4', // 任务四
+        'mysql/proj2/task1-mysql-overview', // 任务一 MySQL概述
+        'mysql/proj2/task2-mysql-install-config', // 任务二 MySQL安装与配置
+        'mysql/proj2/task3-mysql-service-start-stop', // 任务三 MySQL服务启停
+        'mysql/proj2/task4-mysql-login', // 任务四 MySQL登录
       ],
     },
     // 项目三
@@ -550,13 +265,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch03/overview', // 概述
-        'mysql/ch03/task1', // 任务一 
-        'mysql/ch03/task2', // 任务二 
-        'mysql/ch03/task3', // 任务三
-        'mysql/ch03/task4', // 任务四
-        'mysql/ch03/demo1', // 案例 1
-        'mysql/ch03/demo2', // 案例 2
+        'mysql/proj3/task1-sql-overview', // 任务一 SQL概述
+        'mysql/proj3/task2-mysql-data-types', // 任务二 MySQL数据类型
+        'mysql/proj3/task3-mysql-operators', // 任务三 MySQL运算符
+        'mysql/proj3/task4-mysql-functions', // 任务四 MySQL函数
       ],
     },
     // 项目四
@@ -566,12 +278,11 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch04/overview', // 概述
-        'mysql/ch04/task1', // 任务一 
-        'mysql/ch04/task2', // 任务二 
-        'mysql/ch04/task3', // 任务三 
-        'mysql/ch04/task4', // 任务三 
-        'mysql/ch04/task5', // 任务三 
+        'mysql/proj4/task1-create-database', // 任务一 创建数据库
+        'mysql/proj4/task2-show-database', // 任务二 查看数据库
+        'mysql/proj4/task3-select-database', // 任务三 选择数据库
+        'mysql/proj4/task4-alter-database', // 任务四 修改数据库
+        'mysql/proj4/task5-drop-database', // 任务五 删除数据库
       ],
     },
     // 项目五
@@ -581,13 +292,12 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch05/overview', // 概述
-        'mysql/ch05/task1', // 任务一 
-        'mysql/ch05/task2', // 任务二 
-        'mysql/ch05/task3', // 任务三 
-        'mysql/ch05/task4', // 任务二 
-        'mysql/ch05/task5', // 任务三 
-        'mysql/ch05/task6', // 任务二 
+        'mysql/proj5/task1-create-table', // 任务一 创建表
+        'mysql/proj5/task2-show-columns', // 任务二 查看表结构
+        'mysql/proj5/task3-alter-table', // 任务三 修改表
+        'mysql/proj5/task4-rename-table', // 任务四 重命名表
+        'mysql/proj5/task5-copy-table', // 任务五 复制表
+        'mysql/proj5/task6-drop-table', // 任务六 删除表
       ],
     },
     // 项目六
@@ -597,12 +307,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch06/overview', // 概述
-        'mysql/ch06/task1', // 任务一 
-        'mysql/ch06/task2', // 任务二 
-        'mysql/ch06/task3', // 任务三
-        'mysql/ch06/task4', // 任务四
-        'mysql/ch06/demo1', // 案例 1
+        'mysql/proj6/task1-entity-integrity', // 任务一 实体完整性
+        'mysql/proj6/task2-referential-integrity', // 任务二 参照完整性
+        'mysql/proj6/task3-user-defined-integrity', // 任务三 用户定义完整性
+        'mysql/proj6/task4-constraint-naming', // 任务四 约束命名
       ],
     },
     // 项目七
@@ -612,29 +320,26 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch07/overview', // 概述
-        'mysql/ch07/task1', // 任务一 
-        'mysql/ch07/task2', // 任务二 
-        'mysql/ch07/task3', // 任务三 
-        'mysql/ch07/task4', // 任务一 
-        'mysql/ch07/task5', // 任务二 
-        'mysql/ch07/task6', // 任务三 
-        'mysql/ch07/demo1', // 案例 1
-        'mysql/ch07/demo2', // 案例 2
+        'mysql/proj7/task1-single-table-query', // 任务一 单表查询
+        'mysql/proj7/task2-join-query', // 任务二 连接查询
+        'mysql/proj7/task3-nested-query', // 任务三 嵌套查询
+        'mysql/proj7/task4-insert-data', // 任务四 插入数据
+        'mysql/proj7/task5-update-data', // 任务五 修改数据
+        'mysql/proj7/task6-delete-data', // 任务六 删除数据
       ],
     },
     // 项目八
     {
       type: 'category',
-      label: '项目八  索引与视图',
+      label: '项目八 索引与视图',
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch08/overview', // 概述
-        'mysql/ch08/task1', // 任务一 
-        'mysql/ch08/task2', // 任务二
-        'mysql/ch08/exercise1', // 索引专项训练 
-        'mysql/ch08/exercise2', // 视图专项训练
+        'mysql/proj8/task1-create-index', // 任务一 创建索引
+        'mysql/proj8/task2-drop-index', // 任务二 删除索引
+        'mysql/proj8/task3-create-view', // 任务三 创建与查看视图
+        'mysql/proj8/task4-use-alter-view', // 任务四 使用与修改视图
+        'mysql/proj8/task5-drop-view', // 任务五 删除视图
       ],
     },
     // 项目九
@@ -644,16 +349,13 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch09/overview', // 概述
-        'mysql/ch09/task1', // 任务一 
-        'mysql/ch09/task2', // 任务二 
-        'mysql/ch09/task3', // 任务三
-        'mysql/ch09/task4', // 任务三 
-        'mysql/ch09/atta-variable', // 任务三 
-        'mysql/ch09/exercise1', // 专项训练 
-        'mysql/ch09/exercise2', // 专项训练 
-        'mysql/ch09/exercise3', // 专项训练 
-        'mysql/ch09/exercise4', // 专项训练 
+        'mysql/proj9/task1-trigger-overview-create', // 任务一 触发器概述与创建
+        'mysql/proj9/task2-trigger-view-drop', // 任务二 查看与删除触发器
+        'mysql/proj9/task3-event-overview-create', // 任务三 事件概述与创建
+        'mysql/proj9/task4-event-query-manage', // 任务四 查询与管理事件
+        'mysql/proj9/task5-procedure-overview-create', // 任务五 存储过程概述与创建
+        'mysql/proj9/task6-procedure-call-manage', // 任务六 调用与管理存储过程
+        'mysql/proj9/task7-stored-function', // 任务七 存储函数
       ],
     },
     // 项目十
@@ -663,13 +365,12 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch10/overview', // 概述
-        'mysql/ch10/task1', // 任务一 
-        'mysql/ch10/task2', // 任务二 
-        'mysql/ch10/task3', // 任务三 
-        'mysql/ch10/task4', // 任务一 
-        'mysql/ch10/task5', // 任务二 
-        'mysql/ch10/task6', // 任务三 
+        'mysql/proj10/task1-requirement-analysis', // 任务一 需求分析
+        'mysql/proj10/task2-conceptual-design', // 任务二 概念结构设计
+        'mysql/proj10/task3-logical-design', // 任务三 逻辑结构设计
+        'mysql/proj10/task4-physical-design', // 任务四 物理结构设计
+        'mysql/proj10/task5-implementation-maintenance', // 任务五 数据库的实施和维护
+        'mysql/proj10/task6-normalization', // 任务六 关系模式的规范化
       ],
     },
     // 项目十一
@@ -679,11 +380,10 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch11/overview', // 概述
-        'mysql/ch11/task1', // 任务一 
-        'mysql/ch11/task2', // 任务二 
-        'mysql/ch11/task3', // 任务三 
-        'mysql/ch11/task4', // 任务四
+        'mysql/proj11/task1-security-overview', // 任务一 数据库安全概述
+        'mysql/proj11/task2-user-management', // 任务二 用户管理
+        'mysql/proj11/task3-privilege-management', // 任务三 权限管理
+        'mysql/proj11/task4-role-management', // 任务四 角色管理
       ],
     },
     // 项目十二
@@ -693,10 +393,9 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'mysql/ch12/overview', // 概述
-        'mysql/ch12/task1', // 任务一 
-        'mysql/ch12/task2', // 任务二 
-        'mysql/ch12/task3', // 任务三 
+        'mysql/proj12/task1-backup-overview', // 任务一 数据库备份概述
+        'mysql/proj12/task2-mysqldump-backup', // 任务二 使用MYSQLDUMP命令进行备份
+        'mysql/proj12/task3-data-recovery', // 任务三 MySQL数据恢复
       ],
     }
   ],
@@ -704,12 +403,7 @@ const sidebars = {
   computerBasicSidebar: [
     {
       type: 'doc',
-      id: 'computer-basics/index',  // 确保 docs/computer-basics/ch03-01.md 存在
-      label: '考试大纲',
-    },
-    {
-      type: 'doc',
-      id: 'computer-basics/index1',  // 确保 docs/computer-basics/ch03-01.md 存在
+      id: 'basic-computer/index',  // 
       label: '考试大纲',
     },
     // 项目一：认识计算机
@@ -719,12 +413,11 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj1/index', // 概述
-        'computer-basics/proj1/task1', // 
-        'computer-basics/proj1/task1-2', // 
-        'computer-basics/proj1/task2', // 
-        'computer-basics/proj1/task3', // 
-        'computer-basics/proj1/task4', // 
+        'basic-computer/proj1/task1', // 
+        'basic-computer/proj1/task1-2', // 
+        'basic-computer/proj1/task2', // 
+        'basic-computer/proj1/task3', // 
+        'basic-computer/proj1/task4', // 
       ],
     },
     // 项目二 计算机系统
@@ -734,12 +427,11 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj2/index', // 概述
-        'computer-basics/proj2/task1', // 任务一 计算机的硬件系统
-        'computer-basics/proj2/task2', // 任务二 计算机的软件系统
-        'computer-basics/proj2/task3', // 任务三 计算机的工作原理
-        'computer-basics/proj2/task4', // 任务四 微型计算机的硬件系统
-        'computer-basics/proj2/task5', // 任务五 微型计算机的主要性能指标
+        'basic-computer/proj2/task1', // 任务一 计算机的硬件系统
+        'basic-computer/proj2/task2', // 任务二 计算机的软件系统
+        'basic-computer/proj2/task3', // 任务三 计算机的工作原理
+        'basic-computer/proj2/task4', // 任务四 微型计算机的硬件系统
+        'basic-computer/proj2/task5', // 任务五 微型计算机的主要性能指标
       ],
     },
     // 项目三 信息在计算机中的表示
@@ -749,10 +441,9 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj3/index', // 概述
-        'computer-basics/proj3/task1', // 任务一 信息的表示
-        'computer-basics/proj3/task2', // 任务二 数制及其转换
-        'computer-basics/proj3/task3', // 任务三 字符编码
+        'basic-computer/proj3/task1', // 任务一 信息的表示
+        'basic-computer/proj3/task2', // 任务二 数制及其转换
+        'basic-computer/proj3/task3', // 任务三 字符编码
       ],
     },
     // 项目四 计算机维护
@@ -762,10 +453,9 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj4/index', // 概述
-        'computer-basics/proj4/task1', // 任务一 信息的表示
-        'computer-basics/proj4/task2', // 任务二 数制及其转换
-        'computer-basics/proj4/task3', //
+        'basic-computer/proj4/task1', // 任务一 信息的表示
+        'basic-computer/proj4/task2', // 任务二 数制及其转换
+        'basic-computer/proj4/task3', //
       ],
     },
     // 项目五 中英文录入
@@ -775,9 +465,8 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj5/index', // 概述
-        'computer-basics/proj5/task1', //
-        'computer-basics/proj5/task2', //
+        'basic-computer/proj5/task1', //
+        'basic-computer/proj5/task2', //
       ],
     },
     // 项目六 Win10基本概念
@@ -787,11 +476,11 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj6/task1', // 概述
-        'computer-basics/proj6/task2', //
-        'computer-basics/proj6/task3', //
-        'computer-basics/proj6/task4', //
-        'computer-basics/proj6/task5', //
+        'basic-computer/proj6/task1', // 概述
+        'basic-computer/proj6/task2', //
+        'basic-computer/proj6/task3', //
+        'basic-computer/proj6/task4', //
+        'basic-computer/proj6/task5', //
       ],
     },
     // 项目七 Win10文件管理
@@ -801,9 +490,9 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj7/index', // 概述
-        'computer-basics/proj7/task1', //
-        'computer-basics/proj7/task2', //
+        'basic-computer/proj7/task1', //
+        'basic-computer/proj7/task2', //
+        'basic-computer/proj7/task3', // 概述
       ],
     },
     // 项目八 Win10个性化设置
@@ -813,9 +502,13 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj8/index', // 概述
-        'computer-basics/proj8/task1', //
-        'computer-basics/proj8/task2', //
+        'basic-computer/proj8/task1', //
+        'basic-computer/proj8/task2', //
+        'basic-computer/proj8/task3', //
+        'basic-computer/proj8/task4', //
+        'basic-computer/proj8/task5', //
+        'basic-computer/proj8/task6', //
+        'basic-computer/proj8/task7', //
       ],
     },
     // 项目九 Win10实用工具
@@ -825,9 +518,14 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'computer-basics/proj9/index', // 概述
-        'computer-basics/proj9/task1', //
-        'computer-basics/proj9/task2', //
+        'basic-computer/proj9/task1', //
+        'basic-computer/proj9/task2', //
+        'basic-computer/proj9/task3', //
+        'basic-computer/proj9/task4', //
+        'basic-computer/proj9/task5', //
+        'basic-computer/proj9/task6', //
+        'basic-computer/proj9/task7', //
+        'basic-computer/proj9/task8', //
       ],
     },
   ],
@@ -838,11 +536,6 @@ const sidebars = {
       id: 'network-basics/index',  // 
       label: '考试大纲',
     },
-    {
-      type: 'doc',
-      id: 'network-basics/index2',  // 
-      label: '考纲对比',
-    },
     // 模块一：计算机网络概述
     {
       type: 'category',
@@ -850,16 +543,15 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit01/overview', // 概述
-         {
+        {
           type: 'category',
           label: '项目一 网络发展与基本概念',
           collapsible: true,
-          collapsed: true,
+          collapsed: false,
           items: [
-            'network-basics/unit01/project1/task1', // 
-            'network-basics/unit01/project1/task2', // 
-            'network-basics/unit01/project1/task3', // 
+            'network-basics/block1/proj1/task1-network-development', // 任务一 计算机网络的发展过程
+            'network-basics/block1/proj1/task2-network-definition', // 任务二 计算机网络的定义
+            'network-basics/block1/proj1/task3-network-new-development', // 任务三 网络技术的新发展
           ],
         },
         {
@@ -868,8 +560,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit01/project2/task1', // 
-            'network-basics/unit01/project2/task2', // 
+            'network-basics/block1/proj2/task1-network-classification', // 任务一 计算机网络的分类
+            'network-basics/block1/proj2/task2-network-topology', // 任务二 计算机网络拓扑结构
           ],
         }, 
         {
@@ -878,21 +570,50 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit01/project3/task1-1', // 
-            'network-basics/unit01/project3/task1-2', // 
-            'network-basics/unit01/project3/task2', // 
+            'network-basics/block1/proj3/task1-wired-transmission-media', // 任务一 有线传输介质
+            'network-basics/block1/proj3/task2-wireless-transmission-media', // 任务二 无线传输介质
           ],
-        }, 
+        },
+      ],
+    },
+    // 模块二：数据通信基础
+    {
+      type: 'category',
+      label: '模块二 数据通信基础',
+      collapsible: true,
+      collapsed: false,
+      items: [
         {
           type: 'category',
-          label: '项目四 网络的组成功能应用',
+          label: '项目一 数据通信系统概述',
+          collapsible: true,
+          collapsed: false,
+          items: [
+            'network-basics/block2/proj1/task1-data-communication-overview', // 任务一 数据通信系统概述
+            'network-basics/block2/proj1/task2-communication-modes', // 任务二 通信的基本方式
+            'network-basics/block2/proj1/task3-coding-process', // 任务三 通信系统的编码过程
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 同步技术与多路复用技术',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit01/project4/task1', // 
-            'network-basics/unit01/project4/task2', // 
+            'network-basics/block2/proj2/task1-synchronization-technology', // 任务一 同步技术
+            'network-basics/block2/proj2/task2-multiplexing-technology', // 任务二 多路复用技术
           ],
-        }, // 任务四 计算机的前沿技术
+        },
+        {
+          type: 'category',
+          label: '项目三 数据交换技术与差错控制技术',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'network-basics/block2/proj3/task1-data-switching-technology', // 任务一 数据交换技术
+            'network-basics/block2/proj3/task2-error-control-technology', // 任务二 差错控制技术
+          ],
+        },
       ],
     },
     // 模块三: OSI参考模型体系
@@ -902,16 +623,14 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit03/overview', // 概述
         {
           type: 'category',
           label: '项目一 OSI参考模型概述',
           collapsible: true,
-          collapsed: true,
+          collapsed: false,
           items: [
-            'network-basics/unit03/project1/task1', // 
-            'network-basics/unit03/project1/task2-1', //
-            'network-basics/unit03/project1/task2-2',//  
+            'network-basics/block3/proj1/task1-standardization-organizations', // 任务一 网络标准化有关组织
+            'network-basics/block3/proj1/task2-osi-reference-model', // 任务二 OSI参考模型概述
           ],
         },
         {
@@ -920,22 +639,20 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit03/project2/task1', // 
-            'network-basics/unit03/project2/task2', //
-            'network-basics/unit03/project2/task2-1', //
-            'network-basics/unit03/project2/task3', // 
+            'network-basics/block3/proj2/task1-physical-layer', // 任务一 物理层
+            'network-basics/block3/proj2/task2-data-link-layer', // 任务二 数据链路层
+            'network-basics/block3/proj2/task3-network-layer', // 任务三 网络层
           ],
-        }, 
+        },
         {
           type: 'category',
           label: '项目三 OSI中的软件层次',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit03/project3/task1', // 
-            'network-basics/unit03/project3/task2-1', // 
-            'network-basics/unit03/project3/task2-2', // 
-            'network-basics/unit03/project3/task2-3', // 
+            'network-basics/block3/proj3/task1-transport-layer', // 任务一 传输层
+            'network-basics/block3/proj3/task2-session-presentation-application', // 任务二 会话层、表示层和应用层
+            'network-basics/block3/proj3/task3-synchronized-training', // 任务三 同步训练
           ],
         }, 
       ],
@@ -947,19 +664,15 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit04/overview', // 概述
         {
           type: 'category',
-          label: '项目一 IP协议',
+          label: '项目一 TCP/IP协议',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit04/project1/task1', // 
-            'network-basics/unit04/project1/task2-1', // 
-            'network-basics/unit04/project1/task2-2', //
-            'network-basics/unit04/project1/task2-3', // 
-            'network-basics/unit04/project1/task2-4', // 
-            'network-basics/unit04/project1/task3', // 
+            'network-basics/block4/proj1/task1-tcpip-reference-model', // 任务一 TCP/IP参考模型
+            'network-basics/block4/proj1/task2-ip-protocol', // 任务二 IP协议
+            'network-basics/block4/proj1/task3-ipv6', // 任务三 下一代IP协议——IPv6
           ],
         },
         {
@@ -968,8 +681,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit04/project2/task1', // 
-            'network-basics/unit04/project2/task2', // 
+            'network-basics/block4/proj2/task1-tcp-protocol', // 任务一 TCP协议
+            'network-basics/block4/proj2/task2-udp-protocol', // 任务二 UDP协议
           ],
         }, 
         {
@@ -978,8 +691,9 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit04/project3/task1', // 
-            'network-basics/unit04/project3/task2', // 
+            'network-basics/block4/proj3/task1-application-layer-protocols', // 任务一 应用层协议
+            'network-basics/block4/proj3/task2-windows-tcpip-config', // 任务二 Windows中TCP/IP组件的配置
+            'network-basics/block4/proj3/task3-synchronized-training', // 任务三 同步训练
           ],
         },
       ],
@@ -991,16 +705,16 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit05/overview', // 概述
+        // 'basic-network/unit05/overview', // 概述（原条目：docs 下暂无该文档，待补充后恢复，避免构建报错）
         {
           type: 'category',
           label: '项目一 局域网基础',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit05/project1/task1', // 
-            'network-basics/unit05/project1/task2', // 
-            'network-basics/unit05/project1/task3', // 
+            'network-basics/block5/proj1/task1-lan-overview', // 任务一 局域网概述
+            'network-basics/block5/proj1/task2-lan-reference-model-ieee802', // 任务二 局域网参考模型及IEEE 802标准
+            'network-basics/block5/proj1/task3-lan-components', // 任务三 局域网的基本组成
           ],
         },
         {
@@ -1009,8 +723,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit05/project2/task1', // 
-            'network-basics/unit05/project2/task2', // 
+            'network-basics/block5/proj2/task1-ethernet-working-method', // 任务一 以太网工作方式
+            'network-basics/block5/proj2/task2-ethernet-instances', // 任务二 以太网实例
           ],
         }, 
         {
@@ -1019,8 +733,9 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit05/project3/task1', // 
-            'network-basics/unit05/project3/task2', // 
+            'network-basics/block5/proj3/task1-arcnet-token-bus', // 任务一 ARC网络
+            'network-basics/block5/proj3/task2-token-ring', // 任务二 Token Ring 网络
+            'network-basics/block5/proj3/task3-synchronized-training', // 任务三 同步训练
           ],
         },
       ],
@@ -1032,15 +747,14 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit06/overview', // 概述
         {
           type: 'category',
           label: '项目一 局域网组网设备与方法',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit06/project1/task1', // 
-            'network-basics/unit06/project1/task2', // 
+            'network-basics/block6/proj1/task1-networking-devices', // 任务一 认识组网设备
+            'network-basics/block6/proj1/task2-lan-networking-methods', // 任务二 局域网组网方法
           ],
         },
         {
@@ -1049,9 +763,10 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit06/project2/task1', // 
-            'network-basics/unit06/project2/task2', //
-            'network-basics/unit06/project2/task3', //
+            'network-basics/block6/proj2/task1-virtual-lan', // 任务一 虚拟局域网
+            'network-basics/block6/proj2/task2-wireless-lan', // 任务二 无线局域网
+            'network-basics/block6/proj2/task3-small-wireless-router', // 任务三 小型无线路由器网络
+            'network-basics/block6/proj2/task4-synchronized-training', // 任务四 同步训练
           ],
         }, 
       ],
@@ -1063,15 +778,15 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit07/overview', // 概述
+        // 'basic-network/unit07/overview', // 概述（原条目：docs 下暂无该文档，待补充后恢复，避免构建报错）
         {
           type: 'category',
           label: '项目一 广域网组网',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit07/project1/task1', // 
-            'network-basics/unit07/project1/task2', //  
+            'network-basics/block7/proj1/task1-wan-overview', // 任务一 广域网概述
+            'network-basics/block7/proj1/task2-wan-networking-modes', // 任务二 广域网的组网方式
           ],
         },
         {
@@ -1080,8 +795,8 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit07/project2/task1', // 
-            'network-basics/unit07/project2/task2', // 
+            'network-basics/block7/proj2/task1-typical-wan-technologies', // 任务一 几种典型的广域网
+            'network-basics/block7/proj2/task2-vpn', // 任务二 虚拟专用网络
           ],
         }, 
         {
@@ -1090,8 +805,9 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit07/project3/task1', // 
-            'network-basics/unit07/project3/task2', // 
+            'network-basics/block7/proj3/task1-layer3-switch-firewall', // 任务一 三层交换机与硬件防火墙
+            'network-basics/block7/proj3/task2-router-gateway', // 任务二 路由器与网关
+            'network-basics/block7/proj3/task3-synchronized-training', // 任务三 同步训练
           ],
         },
       ],
@@ -1103,16 +819,16 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit08/overview', // 概述
+        // 'basic-network/unit08/overview', // 概述（docs 下暂无此文档）
         {
           type: 'category',
           label: '项目一 Internet接入与使用',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit08/project1/task1', // 
-            'network-basics/unit08/project1/task2', // 
-            'network-basics/unit08/project1/task3', // 
+            'network-basics/block8/proj1/task1-internet-overview', // 任务一 Internet概述
+            'network-basics/block8/proj1/task2-internet-access-methods', // 任务二 Internet的接入方式
+            'network-basics/block8/proj1/task3-web-browser', // 任务三 网络浏览器
           ],
         },
         {
@@ -1121,8 +837,9 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit08/project2/task1', // 
-            'network-basics/unit08/project2/task2', // 
+            'network-basics/block8/proj2/task1-internet-services', // 任务一 Internet上的服务
+            'network-basics/block8/proj2/task2-intranet-extranet', // 任务二 Intranet与Extranet
+            'network-basics/block8/proj2/task3-synchronized-training', // 任务三 同步训练
           ],
         }, 
       ],
@@ -1134,15 +851,15 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit09/overview', // 概述
+        // 'basic-network/unit09/overview', // 概述（docs 下暂无此文档）
         {
           type: 'category',
           label: '项目一 认识网络安全',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit09/project1/task1', // 
-            'network-basics/unit09/project1/task2', // 
+            'network-basics/block9/proj1/task1-network-security-overview', // 任务一 网络安全概述
+            'network-basics/block9/proj1/task2-network-security-system', // 任务二 计算机网络安全体系
           ],
         },
         {
@@ -1151,10 +868,11 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit09/project2/task1', // 
-            'network-basics/unit09/project2/task2', // 
-            'network-basics/unit09/project2/task3', // 
-            'network-basics/unit09/project2/task4', //
+            'network-basics/block9/proj2/task1-data-security', // 任务一 数据安全
+            'network-basics/block9/proj2/task2-network-virus', // 任务二 网络病毒
+            'network-basics/block9/proj2/task3-hacker-attack', // 任务三 黑客攻击
+            'network-basics/block9/proj2/task4-windows-firewall', // 任务四 Windows 系统的防火墙
+            'network-basics/block9/proj2/task5-synchronized-training', // 任务五 同步训练
           ],
         }, 
       ],
@@ -1166,17 +884,17 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'network-basics/unit10/overview', // 概述
+        // 'basic-network/unit10/overview', // 概述（docs 下暂无此文档，恢复时取消注释）
         {
           type: 'category',
           label: '项目一 网络管理',
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit10/project1/task1', // 
-            'network-basics/unit10/project1/task2', // 
-            'network-basics/unit10/project1/task3', // 
-            'network-basics/unit10/project1/task4', // 
+            'network-basics/block10/proj1/task1-network-management-overview', // 任务一 网络管理概述
+            'network-basics/block10/proj1/task2-snmp', // 任务二 简单网络管理协议
+            'network-basics/block10/proj1/task3-network-management-tools', // 任务三 网络管理工具
+            'network-basics/block10/proj1/task4-network-fault-diagnosis', // 任务四 网络故障诊断
           ],
         },
         {
@@ -1185,267 +903,175 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'network-basics/unit10/project2/task1', // 
-            'network-basics/unit10/project2/task2', // 
+            'network-basics/block10/proj2/task1-structured-cabling-system', // 任务一 认识结构化布线系统
+            'network-basics/block10/proj2/task2-cabling-standards-and-intelligent-building', // 任务二 布线标准与智能大楼
+            'network-basics/block10/proj2/task3-synchronized-training', // 任务三 同步训练
           ],
         }, 
       ],
     },
   ],
-  // ============ 中职单招考试大纲 教程侧边栏 ============
-  zzdzSidebar: [
-    {
-      type: 'doc',
-      id: 'zzdz/index',  // 
-      label: '考试大纲',
-    },
-    {
-      type: 'doc',
-      id: 'zzdz/index2',  // 
-      label: '考纲新变化',
-    },
-    // 模块一 计算机基础知识
-    {
-      type: 'category',
-      label: '模块一 计算机基础知识',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter01/task1', // 
-        'zzdz/chapter01/task1-2', // 
-        'zzdz/chapter01/task2', // 
-        'zzdz/chapter01/task3', // 
-        'zzdz/chapter01/task4', // 
-        'zzdz/chapter01/task4-2', // 
-        'zzdz/chapter01/task5', // 
-        'zzdz/chapter01/task6', //
-        'zzdz/chapter01/task7', //
-        'zzdz/chapter01/task8', //
-        'zzdz/chapter01/task9', //
-        'zzdz/chapter01/task10', //
-        'zzdz/chapter01/task11', //
-        'zzdz/chapter01/task12', //
-      ],
-    },
-    // 模块二 Windows操作系统
-    {
-      type: 'category',
-      label: '模块二 Windows操作系统',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter02/task1', // 
-        'zzdz/chapter02/task2', // 
-        'zzdz/chapter02/task3', // 
-        'zzdz/chapter02/task4', // 
-        'zzdz/chapter02/task5', // 
-        'zzdz/chapter02/task6', //
-        'zzdz/chapter02/task7', //
-        'zzdz/chapter02/task8', //
-        'zzdz/chapter02/task9', //
-        'zzdz/chapter02/task10', //
-        'zzdz/chapter02/task11', //
-      ],
-    },
-    // 模块三 计算机信息安全与道德规范
-    {
-      type: 'category',
-      label: '模块三 计算机信息安全与道德规范',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter03/task1', // 
-        'zzdz/chapter03/task2', // 
-        'zzdz/chapter03/task3', // 
-        'zzdz/chapter03/task4', // 
-      ],
-    },
-    // 模块四 计算机网络基础知识
-    {
-      type: 'category',
-      label: '模块四 计算机网络基础知识',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter04/task1', // 
-        'zzdz/chapter04/task2', // 
-        'zzdz/chapter04/task3', // 
-        'zzdz/chapter04/task4', // 
-        'zzdz/chapter04/task5', // 
-        'zzdz/chapter04/task6', //
-        'zzdz/chapter04/task7', //
-        'zzdz/chapter04/task8', //
-        'zzdz/chapter04/task8-2', //
-        'zzdz/chapter04/task9', //
-        'zzdz/chapter04/task10', //
-        'zzdz/chapter04/task11', //
-        'zzdz/chapter04/task12', //
-        'zzdz/chapter04/task13', //
-      ],
-    },
-    // 模块五 多媒体知识
-    {
-      type: 'category',
-      label: '模块五 多媒体知识',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter05/task1', //
-        'zzdz/chapter05/task2', // 
-      ],
-    },
-    // 模块六 Office办公软件
-    {
-      type: 'category',
-      label: '模块六 Office办公软件',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter06/section1', // 
-        'zzdz/chapter06/section2', //
-      ],
-    },
-    // 模块七 MySQL数据库原理与应用
-    {
-      type: 'category',
-      label: '模块七 MySQL数据库原理与应用',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'zzdz/chapter07/section1', // 
-        'zzdz/chapter07/section2', //
-      ],
-    },
-  ],
-  // ============ 普高单招九类信息技术 教程侧边栏 ============
+
+  // ============ 河北对口升学 中文版OFFICE实用教程 ============
   officeSidebar: [
     {
       type: 'doc',
-      id: 'office/index',  // 
+      id: 'office2010/index',  // 
       label: '考试大纲',
     },
-    // OFFICE中文教程
+    // 模块一 Word2010应用
     {
       type: 'category',
-      label: 'Word2010',
+      label: '模块一 Word2010应用',
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'category',
-          label: '模块一 Word2010',
+          label: '项目一 创建Word2010文档',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj1-create-doc/task1-start-word', // 
-            'office/word2010/proj1-create-doc/task2-word-ui', // 
-            'office/word2010/proj1-create-doc/task3-create-doc', // 
-            'office/word2010/proj1-create-doc/task4-save-exit', // 
+            'office2010/word/proj1-create-doc/task1-start-word2010',
+            'office2010/word/proj1-create-doc/task2-word2010-interface',
+            'office2010/word/proj1-create-doc/task3-new-document',
+            'office2010/word/proj1-create-doc/task4-save-and-exit-document',
           ],
         }, 
         {
           type: 'category',
-          label: '模块二 Excel2010',
+          label: '项目二 编辑文本',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj2-text-editing/task1', // 
-            'office/word2010/proj2-text-editing/task2', // 
-            'office/word2010/proj2-text-editing/task3', // 
-            'office/word2010/proj2-text-editing/task4', // 
-            'office/word2010/proj2-text-editing/task5', //
+            'office2010/word/proj2-text-editing/task1-select-and-delete-text',
+            'office2010/word/proj2-text-editing/task2-move-and-copy-text',
+            'office2010/word/proj2-text-editing/task3-insert-file',
+            'office2010/word/proj2-text-editing/task4-insert-symbols-and-special-characters',
+            'office2010/word/proj2-text-editing/task5-search-and-replace',
           ],
         }, 
         {
           type: 'category',
-          label: '模块三 word2010',
+          label: '项目三 文档格式化',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj3-format-doc/task1', // 
-            'office/word2010/proj3-format-doc/task2', // 
-            'office/word2010/proj3-format-doc/task3', // 
+            'office2010/word/proj3-format-doc/task1-character-formatting',
+            'office2010/word/proj3-format-doc/task2-paragraph-formatting',
+            'office2010/word/proj3-format-doc/task3-apply-styles',
           ],
         }, 
         {
           type: 'category',
-          label: '项目四',
+          label: '项目四 设置页面与打印输出',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj4-page-setting/task1', //
-            'office/word2010/proj4-page-setting/task2', //
-            'office/word2010/proj4-page-setting/task3', //
-            'office/word2010/proj4-page-setting/task4', //
+            'office2010/word/proj4-page-setting/task1-page-setup',
+            'office2010/word/proj4-page-setting/task2-insert-header-footer-page-number',
+            'office2010/word/proj4-page-setting/task3-insert-footnotes-endnotes-captions',
+            'office2010/word/proj4-page-setting/task4-print-output',
           ],
         }, 
         {
           type: 'category',
-          label: '项目五',
+          label: '项目五 Word2010表格应用',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj5-table/task1', // 
-            'office/word2010/proj5-table/task2', // 
-            'office/word2010/proj5-table/task3', // 
-            'office/word2010/proj5-table/task4', // 
+            'office2010/word/proj5-table/task1-create-table',
+            'office2010/word/proj5-table/task2-edit-table',
+            'office2010/word/proj5-table/task3-format-table',
+            'office2010/word/proj5-table/task4-sort-and-calculate-table-data',
           ],
         },
         {
           type: 'category',
-          label: '项目六',
+          label: '项目六 图文混排',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj6-text-image-layout/task1', // 
-            'office/word2010/proj6-text-image-layout/task2', // 
-            'office/word2010/proj6-text-image-layout/task3', // 
-            'office/word2010/proj6-text-image-layout/task4', // 
-            'office/word2010/proj6-text-image-layout/task5', // 
-            'office/word2010/proj6-text-image-layout/task6', // 
+            'office2010/word/proj6-text-image-layout/task1-insert-image-and-set-image-format',
+            'office2010/word/proj6-text-image-layout/task2-draw-shapes',
+            'office2010/word/proj6-text-image-layout/task3-insert-text-box',
+            'office2010/word/proj6-text-image-layout/task4-insert-wordart',
+            'office2010/word/proj6-text-image-layout/task5-insert-formula',
+            'office2010/word/proj6-text-image-layout/task6-create-smartart',
           ],
         },
         {
           type: 'category',
-          label: '项目七',
+          label: '项目七 Word2010高级应用',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/word2010/proj7-advanced-apply/task1', // 
-            'office/word2010/proj7-advanced-apply/task2', // 
+            'office2010/word/proj7-advanced-apply/task1-mail-merge',
+            'office2010/word/proj7-advanced-apply/task2-review-and-track-changes',
           ],
         },
       ],
+
     },
-    // 必修2《信息系统与社会》
+    // 模块二 Excel2010应用
     {
       type: 'category',
-      label: 'Excel2010',
+      label: '模块二 Excel2010应用',
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'category',
-          label: '项目一',
+          label: '项目一 制作常用电子表格',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/excel2010/proj1/task1', // 
-            'office/excel2010/proj1/task2', // 
-            'office/excel2010/proj1/task3', // 
-            'office/excel2010/proj1/task4', // 
-            'office/excel2010/proj1/task5', // 
+            'office2010/excel/proj1/task1-excel-basics', // 
+            'office2010/excel/proj1/task2-workbook-worksheet-operations', // 
+            'office2010/excel/proj1/task3-create-simple-tables', // 
+            'office2010/excel/proj1/task4-beautify-tables', // 
+            'office2010/excel/proj1/task5-export-tables', //
           ],
         },
         {
           type: 'category',
-          label: '单元2 信息系统的集成',
+          label: '项目二 公式与函数',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/excel2010/proj2/and-or-not', // 
-            'office/excel2010/proj2/average', //
-            'office/excel2010/proj2/count', // 
+            'office2010/excel/proj2/task1-use-formulas', // 
+            'office2010/excel/proj2/task2-use-functions', //
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目三 数据处理',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office2010/excel/proj3/task1-sorting', // 
+            'office2010/excel/proj3/task2-filtering', //
+            'office2010/excel/proj3/task3-subtotal', // 
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目四 Excel2010图表',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office2010/excel/proj4/task1-charts', // 
+            'office2010/excel/proj4/task2-sparklines', //
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目五 数据透视表和数据透视图',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office2010/excel/proj5/task1-pivot-tables', // 
+            'office2010/excel/proj5/task2-pivot-charts', //
           ],
         },
       ],
@@ -1453,35 +1079,68 @@ const sidebars = {
     // 办公软件
     {
       type: 'category',
-      label: 'PPT2010',
+      label: '模块三 PowerPoint2010应用',
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'category',
-          label: '文字处理基础知识',
+          label: '项目一 基本操作',
           collapsible: true,
           collapsed: true,
           items: [
-            'office/ppt2010/proj1', //
-            'office/ppt2010/proj2', //
-            'office/ppt2010/proj3', //
-            'office/ppt2010/proj3', //
+            'office2010/ppt/proj1/task1-ppt-basics', //
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目二 演示文稿的效果设置',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office2010/ppt/proj2/task1-insert-objects', //
+            'office2010/ppt/proj2/task2-tables-charts', //
+            'office2010/ppt/proj2/task3-smartart', //
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目三 演示文稿的效果设置',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office2010/ppt/proj3/task1-slide-theme', //
+            'office2010/ppt/proj3/task2-slide-background', //
+            'office2010/ppt/proj3/task3-slide-master', //
+            'office2010/ppt/proj3/task4-slide-animation', //
+            'office2010/ppt/proj3/task5-slide-transition'
+          ],
+        },
+        {
+          type: 'category',
+          label: '项目四 演示文稿的放映与输出',
+          collapsible: true,
+          collapsed: true,
+          items: [
+            'office2010/ppt/proj4/task1-hyperlinks', //
+            'office2010/ppt/proj4/task2-slide-page-setup', //
+            'office2010/ppt/proj4/task3-slide-show-setup', //
+            'office2010/ppt/proj4/task4-package-presentation', //
           ],
         },
       ],
     },
   ],
-  // ============ 普高单招九类信息技术 教程侧边栏 ============
-  ninthitSidebar: [
+  // ============ 普高单招九类十类信息技术============
+  itSidebar: [
     {
       type: 'doc',
-      id: 'ninthit/index',  // 
+      id: 'it/index',  // 
       label: '考试大纲',
     },
     {
       type: 'doc',
-      id: 'ninthit/index2',  // 
+      id: 'it/index2',  // 
       label: '考纲新变化',
     },
     
@@ -1494,78 +1153,58 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: '单元1 初识数据与计算',
+          label: '第1单元 初识数据与计算',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory1/unit1/task1', // 
+            'it/compulsory1/unit1/sec1-1-data-around-us', // 1.1 我们身边的数据
+            'it/compulsory1/unit1/sec1-2-data-computation', // 1.2 数据的计算
           ],
-        }, 
+        },
         {
           type: 'category',
-          label: '单元2 编程计算',
+          label: '第2单元 编程计算',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory1/unit2/overview', // 
-            'ninthit/compulsory1/unit2/task1', // 
-            'ninthit/compulsory1/unit2/task2', // 
-            'ninthit/compulsory1/unit2/task3', // 
-            {
-              type: 'category',
-              label: '2.4 运算符与表达式',
-              collapsible: true,
-              collapsed: true,
-              items: [
-                'ninthit/compulsory1/unit2/task4', // 
-                'ninthit/compulsory1/unit2/task5', // 
-                'ninthit/compulsory1/unit2/task6', // 
-                'ninthit/compulsory1/unit2/task7', // 
-                'ninthit/compulsory1/unit2/task8', //
-                'ninthit/compulsory1/unit2/task9', //
-              ],
-            }, 
-            'ninthit/compulsory1/unit2/task10', //
-            'ninthit/compulsory1/unit2/task11', //
-            'ninthit/compulsory1/unit2/task12', //
-            'ninthit/compulsory1/unit2/task13', //
-            'ninthit/compulsory1/unit2/task14', //
-            'ninthit/compulsory1/unit2/task15', //
+            'it/compulsory1/unit2/sec2-1-problem-solving-process', // 2.1 计算机解决问题的过程
+            'it/compulsory1/unit2/sec2-2-branching', // 2.2 做出判断的分支
+            'it/compulsory1/unit2/sec2-3-loops', // 2.3 周而复始的循环
+            'it/compulsory1/unit2/sec2-4-reusable-code', // 2.4 可以复用的代码
           ],
-        }, 
+        },
         {
           type: 'category',
-          label: '单元3 认识数据',
+          label: '第3单元 认识数据',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory1/unit3/task1', // 
-            'ninthit/compulsory1/unit3/task2', // 
-            'ninthit/compulsory1/unit3/task3', // 
-            'ninthit/compulsory1/unit3/task4', // 
-            'ninthit/compulsory1/unit3/task5', //
+            'it/compulsory1/unit3/sec3-1-data-encoding', // 3.1 数据编码
+            'it/compulsory1/unit3/sec3-2-data-and-structure', // 3.2 数据与结构
+            'it/compulsory1/unit3/sec3-3-data-and-system', // 3.3 数据与系统
+            'it/compulsory1/unit3/sec3-4-encryption', // 3.4 加密与解密
           ],
-        }, 
+        },
         {
           type: 'category',
-          label: '单元4 计算与问题解决',
+          label: '第4单元 计算与问题解决',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory1/unit4/task1', //
-            'ninthit/compulsory1/unit4/task2', //
-            'ninthit/compulsory1/unit4/task3', //
-            'ninthit/compulsory1/unit4/task4', //
+            'it/compulsory1/unit4/sec4-1-algorithms-and-features', // 4.1 算法及其特征
+            'it/compulsory1/unit4/sec4-2-numerical-computation', // 4.2 数值计算
+            'it/compulsory1/unit4/sec4-3-non-numerical-computation', // 4.3 非数值计算
+            'it/compulsory1/unit4/sec4-4-comprehensive-problem-solving', // 4.4 综合问题的解决
           ],
-        }, 
+        },
         {
           type: 'category',
-          label: '单元5数据分析与人工智能',
+          label: '第5单元 数据分析与人工智能',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory1/unit5/task1', // 
-            'ninthit/compulsory1/unit5/task2', // 
+            'it/compulsory1/unit5/sec5-1-data-analysis', // 5.1 走近数据分析
+            'it/compulsory1/unit5/sec5-2-artificial-intelligence', // 5.2 探秘人工智能
           ],
         },
       ],
@@ -1579,55 +1218,61 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: '单元1 信息系统的组成与功能',
+          label: '第1单元 信息系统的组成与功能',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory2/unit1/task1', // 
-            'ninthit/compulsory2/unit1/task2', // 
+            'it/compulsory2/unit1/sec1-1-composition-of-information-system', // 1.1 信息系统的组成
+            'it/compulsory2/unit1/sec1-2-functions-of-information-system', // 1.2 信息系统的功能
           ],
         },
         {
           type: 'category',
-          label: '单元2 信息系统的集成',
+          label: '第2单元 信息系统的集成',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory2/unit2/task1', // 
-            'ninthit/compulsory2/unit2/task2', //
-            'ninthit/compulsory2/unit2/task3', // 
-            'ninthit/compulsory2/unit2/task4', // 
-            'ninthit/compulsory2/unit2/task5', // 
-            'ninthit/compulsory2/unit2/task6', // 
+            'it/compulsory2/unit2/sec2-1-computer-system-composition', // 2.1 计算机系统的组成
+            'it/compulsory2/unit2/sec2-2-computer-system-interconnection', // 2.2 计算机系统互联
+            'it/compulsory2/unit2/sec2-3-wireless-lan-setup', // 2.3 无线局域网的组建
+            'it/compulsory2/unit2/sec2-4-iot-information-system', // 2.4 基于物联网的信息系统
+            'it/compulsory2/unit2/sec2-5-remote-control-system', // 2.5 远程控制系统的组建
+            'it/compulsory2/unit2/sec2-6-small-information-system', // 2.6 小型信息系统的组建
           ],
         },
         {
           type: 'category',
-          label: '单元3 信息系统的设计与开发',
+          label: '第3单元 信息系统的设计与开发',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory2/unit3/task1', // 
+            'it/compulsory2/unit3/sec3-1-information-system-design', // 3.1 信息系统的设计
+            'it/compulsory2/unit3/sec3-2-database-construction', // 3.2 数据库的构建
+            'it/compulsory2/unit3/sec3-3-data-input', // 3.3 信息系统的数据输入
+            'it/compulsory2/unit3/sec3-4-data-processing', // 3.4 信息系统的数据处理
+            'it/compulsory2/unit3/sec3-5-data-presentation', // 3.5 信息系统的数据呈现
           ],
         },
         {
           type: 'category',
-          label: '单元4 信息系统的安全',
+          label: '第4单元 信息系统的安全',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory2/unit4/task1', // 
-            'ninthit/compulsory2/unit4/task2', // 
+            'it/compulsory2/unit4/sec4-1-security-risks', // 4.1 信息系统安全风险
+            'it/compulsory2/unit4/sec4-2-security-technology', // 4.2 信息系统安全技术
+            'it/compulsory2/unit4/sec4-3-security-management', // 4.3 信息系统安全管理
           ],
         },
         {
           type: 'category',
-          label: '单元5 信息社会的建设',
+          label: '第5单元 信息社会的建设',
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/compulsory2/unit5/task1', // 
-            'ninthit/compulsory2/unit5/task2', // 
+            'it/compulsory2/unit5/sec5-1-ethics-and-morality', // 5.1 信息社会的伦理与道德
+            'it/compulsory2/unit5/sec5-2-laws-and-regulations', // 5.2 信息社会的法律与法规
+            'it/compulsory2/unit5/sec5-3-future-development', // 5.3 信息社会的未来发展
           ],
         },
       ],
@@ -1645,11 +1290,11 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/office/unit1/task1', // 
-            'ninthit/office/unit1/task2', // 
-            'ninthit/office/unit1/task3', // 
-            'ninthit/office/unit1/task4', // 
-            'ninthit/office/unit1/task5', // 
+            'it/office/unit1/task1', // 
+            'it/office/unit1/task2', // 
+            'it/office/unit1/task3', // 
+            'it/office/unit1/task4', // 
+            'it/office/unit1/task5', // 
           ],
         },
         {
@@ -1658,12 +1303,12 @@ const sidebars = {
           collapsible: true,
           collapsed: true,
           items: [
-            'ninthit/office/unit2/task1', // 
-            'ninthit/office/unit2/task2', //
-            'ninthit/office/unit2/task3', // 
-            'ninthit/office/unit2/task4', // 
-            'ninthit/office/unit2/task5', // 
-            'ninthit/office/unit2/task6', // 
+            'it/office/unit2/task1', // 
+            'it/office/unit2/task2', //
+            'it/office/unit2/task3', // 
+            'it/office/unit2/task4', // 
+            'it/office/unit2/task5', // 
+            'it/office/unit2/task6', // 
           ],
         },
       ],

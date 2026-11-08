@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '河北对口高考计算机专业',
-  tagline: '知识点总结、练习题强化训练',
+  title: '河北单招对口计算机备考',
+  tagline: '考点精讲、在线刷题题库、真题、配套视频',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://buhaoqi.github.io',
+  url: 'https://buhaoqi.github.io', // Your website URL
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'buhaoqi', // Usually your GitHub org/user name.
+  organizationName: '不好奇课堂', // Usually your GitHub org/user name.
   projectName: 'buhaoqi.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   //trailingSlash: false, // 显式设置尾部斜杠规则
@@ -38,8 +38,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -52,7 +52,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://buhaoqi.github.io',
           
         },
         blog: {
@@ -64,7 +64,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://buhaoqi.github.io',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -85,235 +85,173 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      // navbar: {
-      //   title: 'My Site',
-      //   logo: {
-      //     alt: 'My Site Logo',
-      //     src: 'img/logo.svg',
-      //   },
-      //   items: [
-      //     {
-      //       type: 'docSidebar',
-      //       sidebarId: 'tutorialSidebar',
-      //       position: 'left',
-      //       label: 'Tutorial',
-      //     },
-      //     {to: '/blog', label: 'Blog', position: 'left'},
-      //     {
-      //       href: 'https://github.com/facebook/docusaurus',
-      //       label: 'GitHub',
-      //       position: 'right',
-      //     },
-      //   ],
-      // },
+      
       navbar: {
-        title: '',  // 建议使用你的站点名称
+        title: '不好奇课堂',  // 建议使用你的站点名称
         logo: {
-          alt: '不好奇 Logo',
-          src: 'img/logo.png',  // 确保图片路径正确
+          alt: '不好奇课堂',
+          src: 'img/logo.svg',  // 确保图片路径正确
         },
         
         items: [
-           // 1. C#教程 (docSidebar类型) - 靠左
           {
-            type: 'docSidebar',
-            sidebarId: 'csharpSidebar',  // 需要在sidebars.js中定义
+            href: 'https://tiku.buhaoqi.com',
             position: 'left',
-            label: '算法与程序设计',
-            // 可选：设置默认打开的文档
-            docId: 'csharp/intro',
+            label: '题库',
           },
-          // // 2.1 普通单链接（跳转到文档页面）
-          // {
-          //   type: 'doc', // 链接类型：文档页面
-          //   docId: 'csharp/ch01/index', // 文档 ID（对应 docs/ 下的文件名，无 .md）
-          //   position: 'left', // 位置：left/right
-          //   label: '项目一算法与程序基础', // 导航栏显示的文字
-          // },
-          // {
-          //   type: 'doc', // 链接类型：文档页面
-          //   docId: 'csharp/ch02/index', // 文档 ID（对应 docs/ 下的文件名，无 .md）
-          //   position: 'left', // 位置：left/right
-          //   label: '项目二算法与程序基础', // 导航栏显示的文字
-          // },
-          // {
-          //   type: 'doc', // 链接类型：文档页面
-          //   docId: 'csharp/ch03/index', // 文档 ID（对应 docs/ 下的文件名，无 .md）
-          //   position: 'left', // 位置：left/right
-          //   label: '项目三算法与程序基础', // 导航栏显示的文字
-          // },
-          
-          // 2.2 下拉菜单（分组链接）
-          // {
-          //   type: 'dropdown', // 链接类型：下拉菜单
-          //   label: '资源导航', // 菜单标题
-          //   position: 'left',
-          //   items: [
-          //     // 下拉菜单项 - 文档链接
-          //     {
-          //       type: 'doc',
-          //       docId: 'bookmarks',
-          //       label: '书签收藏',
-          //     },
-          //     {
-          //       type: 'doc',
-          //       docId: '实用网址导航',
-          //       label: '实用网址',
-          //     },
-          //     // 下拉菜单项 - 外部链接
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com',
-          //       // 可选：新标签页打开
-          //       target: '_blank',
-          //       rel: 'noopener noreferrer',
-          //     },
-          //   ]
-          // },
-         
-          // 2. C#课件 (docSidebar类型) - 靠左
+          // 7. 网址导航 (doc类型) - 靠左
           {
-            type: 'docSidebar',
-            sidebarId: 'csharpTutorials',  // 需要在sidebars.js中定义
+            href: 'https://space.bilibili.com/374231022',
             position: 'left',
-            label: 'C#课件',
-            // 可选：设置默认打开的文档
-            docId: 'csharptutorials/index',
+            label: 'B站视频教程',
           },
-          // 3. MySQL教程 (docSidebar类型) - 靠左
+          // 0. 对口教程（一级菜单，下拉包含五个二级菜单）
           {
-            type: 'docSidebar',
-            sidebarId: 'mysqlSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: 'MySQL教程',
-            // 可选：设置默认打开的文档
-            docId: 'mysql/intro',
-          },
-          // 3. 计算机基础 - 靠左
+          type: 'dropdown',
+          label: '对口升学考点',
+          position: 'left',
+          items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'computerBasicSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '计算机应用基础',
-            // 可选：设置默认打开的文档
-            docId: 'computer-basics/index',
+          type: 'docSidebar',
+          sidebarId: 'csharpSidebar',
+          label: '算法与程序设计',
+          docId: 'csharp/index',
+                      },
+                      {
+          type: 'docSidebar',
+          sidebarId: 'mysqlSidebar',
+          label: '数据库原理MySQL',
+          docId: 'mysql/index',
+                      },
+            {
+          type: 'docSidebar',
+          sidebarId: 'netWorkBasicSidebar',
+          label: '计算机网络基础',
+          docId: 'network-basics/index',
           },
-          // 3. 计算机基础 - 靠左
+                      {
+          type: 'docSidebar',
+          sidebarId: 'computerBasicSidebar',
+          label: '计算机基础及应用',
+          docId: 'computer-basics/index',
+                      },
+                      {
+          type: 'docSidebar',
+          sidebarId: 'officeSidebar',
+          label: '中文版OFFICE实用教程',
+          docId: 'office/index',
+                      },
+                    ],
+                    },
+          // 6. 九类单招 - 靠左
+                    {
+          type: 'docSidebar',
+          sidebarId: 'itSidebar',
+          position: 'left',
+          label: '九类十类职测',
+          docId: 'it/index',
+                    },
+          // 8. Blog (无type，内部页面) - 靠左
           {
-            type: 'docSidebar',
-            sidebarId: 'officeSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '中文版OFFICE实用教程',
-            // 可选：设置默认打开的文档
-            docId: 'office/index',
+          to: '/blog',
+          label: 'Blog',
+          position: 'left',
+          // 可选：Blog相关页面都高亮
+          activeBaseRegex: '^/blog',
           },
-          // 4. 计算机网络基础 - 靠左
-          {
-            type: 'docSidebar',
-            sidebarId: 'netWorkBasicSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '计算机网络基础',
-            // 可选：设置默认打开的文档
-            docId: 'network-basics/index',
-          },
-          // 4. 计算机网络基础 - 靠左
-          {
-            type: 'docSidebar',
-            sidebarId: 'zzdzSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '对口单招',
-            // 可选：设置默认打开的文档
-            docId: 'zzdz/index',
-          },
-          // 4. 计算机网络基础 - 靠左
-          {
-            type: 'docSidebar',
-            sidebarId: 'ninthitSidebar',  // 需要在sidebars.js中定义
-            position: 'left',
-            label: '九类单招',
-            // 可选：设置默认打开的文档
-            docId: 'ninthit/index',
-          },
-          // 4. 网址导航 (doc类型) - 靠左
-          {
-            type: 'doc',
-            docId: 'bookmarks/intro',  // 对应 docs/website-guide/intro.md
-            position: 'left',
-            label: '网址导航',
-            // 可选：自定义激活状态
-            // activeBaseRegex: '/docs/website-guide',
-          },
-          // 5. Blog (无type，内部页面) - 靠左
-          {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left',
-            // 可选：Blog相关页面都高亮
-            activeBaseRegex: '^/blog',
-          },
-          
-          // 6. 不好奇课堂 (外部链接) - 靠右
-          {
-            href: 'https://buhaoqi.com',
-            label: '不好奇课堂',
-            position: 'right',
-            // 推荐添加的属性
-            target: '_blank',  // 新窗口打开
-            rel: 'noopener noreferrer',  // 安全属性
-            className: 'navbar-external-link',  // 可自定义样式
-          },
-          
           // 6. 搜索框 (可选，如果需要) - 靠右
           // {
           //   type: 'search',
           //   position: 'right',
           // },
         ],
+
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '考试管理部门',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: '河北省教育考试院',
+                href: 'https://www.hebeea.edu.cn/',
+              },
+              {
+                label: '河北省高职单招综合管理平台',
+                href: 'https://gzdz.hebeea.edu.cn',
+              },
+              {
+                label: '河北科技师范学院本科招生网',
+                href: 'http://zhaosheng.hevttc.edu.cn',
+              },
+              {
+                label: '河北省教育厅(对口考试大纲)',
+                href: 'http://jyt.hebei.gov.cn',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '考试大纲',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: '2027年河北省高职单招考试说明',
+                href: 'https://www.hebeea.edu.cn/c/2025-11-27/489497.html',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '2026年河北省高职单招考试说明',
+                href: 'https://www.hebeea.edu.cn/c/2025-09-12/489051.html',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: '河北省普通高等学校对口招生考试大纲(2026版)',
+                href: 'http://jyt.hebei.gov.cn/col/1410097726928/2023/12/05/1701746999744.html',
               },
+              {
+                label: '河北省普通高等学校对口招生考试大纲(2028版)',
+                href: 'http://jyt.hebei.gov.cn/col/1410097726928/2026/01/05/1767602747215.html',
+              },
+              
             ],
           },
           {
-            title: 'More',
+            title: '报考相关',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: '2026年河北省中等职业学校对口升学专业考试考前提示',
+                href: 'https://www.hebeea.edu.cn/c/2026-03-05/492016.html',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: '2026年河北省高职单招报考须知',
+                href: 'https://www.hebeea.edu.cn/c/2026-01-07/490681.html',
+              },
+              {
+                label: '2026年河北省中等职业学校对口升学专业考试考前提示',
+                href: 'https://www.hebeea.edu.cn/c/2026-03-05/492016.html',
+              },
+              {
+                label: '2026年普通高考及对口升学咨询电话',
+                href: 'https://www.hebeea.edu.cn/c/2026-06-01/492714.html',
+              },
+              {
+                label: '2026河北对口升学专业考试考生常见问题解答',
+                href: 'https://zhaosheng.hevttc.edu.cn/info/1072/2671.htm',
+              },
+              {
+                label: '2026年计算机类对口专业考试安排',
+                href: 'https://zhaosheng.hevttc.edu.cn/info/1072/2681.htm',
+              },
+              {
+                label: '2026年计算机类对口专业技能考试系统下载地址',
+                href: 'https://zhaosheng.hevttc.edu.cn/info/1072/2660.htm',
+              },
+              {
+                label: '2026年河北省对口升学专业考试计算机类应试须知',
+                href: 'https://zhaosheng.hevttc.edu.cn/info/1072/2693.htm',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 不好奇课堂 本站仅为学习交流，非官方平台<br/><a href="https://beian.mps.gov.cn/" target="_blank">冀公网安备13040202001048号</a>  <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">冀ICP备2025101972号-1</a>`,
       },
       prism: {
         theme: prismThemes.github,
