@@ -8,19 +8,18 @@ slug: /office2010/excel/proj2/task2-use-functions
 tags: [Excel2010, 项目二, 任务二, 对口升学]
 ---
 
-## 考点
-1. 统计汇总类: SUM、AVERAGE、MAX、MIN、COUNT、SUMIF、SUMIFS、AVERAGEIF、AVERAGEIFS、COUNTIF、COUNTIFS、RANK、RANK.EQ
-2. 逻辑判断类: IF、AND、OR、NOT、XOR
+## 考点（36个函数）
 
-3. 日期时间类: DATE、TODAY、NOW、YEAR、MONTH、DAY
+1. 统计汇总类(13个): SUM、AVERAGE、MAX、MIN、COUNT、SUMIF、SUMIFS、AVERAGEIF、AVERAGEIFS、COUNTIF、COUNTIFS、RANK、RANK.EQ
+2. 逻辑判断类(5个): IF、AND、OR、NOT、XOR
 
-4. 文本处理类: TRIM、UPPER、LOWER、TEXT、LEFT、RIGHT、MID、LEN、REPLACE、SUBSTITUTE
+3. 日期时间类(6个): DATE、TODAY、NOW、YEAR、MONTH、DAY
 
-5. 查找引用类: VLOOKUP
+4. 文本处理类(10个): TRIM、UPPER、LOWER、TEXT、LEFT、RIGHT、MID、LEN、REPLACE、SUBSTITUTE
 
-6. 数学函数类: ABS
+5. 查找引用类(1个): VLOOKUP
 
-如果你需要，我可以给你做成适合打印背诵的表格版本，或者出一套对应的练习题。
+6. 数学函数类(1个): ABS
 
 
 ## 知识点
