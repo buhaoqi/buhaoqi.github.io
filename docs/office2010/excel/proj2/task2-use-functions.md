@@ -8,6 +8,21 @@ slug: /office2010/excel/proj2/task2-use-functions
 tags: [Excel2010, 项目二, 任务二, 对口升学]
 ---
 
+## 考点
+1. 统计汇总类: SUM、AVERAGE、MAX、MIN、COUNT、SUMIF、SUMIFS、AVERAGEIF、AVERAGEIFS、COUNTIF、COUNTIFS、RANK、RANK.EQ
+2. 逻辑判断类: IF、AND、OR、NOT、XOR
+
+3. 日期时间类: DATE、TODAY、NOW、YEAR、MONTH、DAY
+
+4. 文本处理类: TRIM、UPPER、LOWER、TEXT、LEFT、RIGHT、MID、LEN、REPLACE、SUBSTITUTE
+
+5. 查找引用类: VLOOKUP
+
+6. 数学函数类: ABS
+
+如果你需要，我可以给你做成适合打印背诵的表格版本，或者出一套对应的练习题。
+
+
 ## 知识点
 
 ### 1.什么是函数？函数有什么作用？
@@ -23,6 +38,167 @@ tags: [Excel2010, 项目二, 任务二, 对口升学]
 答：函数的输入有多种方式：
 （1）若用户对函数用法比较熟悉，可直接输入。
 （2）若用户不能确定函数的名称和参数时，可使用"插入函数"对话框搜索并使用函数。方法是单击"插入函数"按钮或按组合键"Shift+F3"，打开"插入函数"对话框，在"搜索函数"框中输入关键词（如"求平均"），单击"转到"按钮即可列出相关函数；也可以在"或选择类别"下拉列表中选择"统计"，在"选择函数"列表中双击需要的函数。
+
+你列出的函数数量较多，我按功能类别整理了它们的核心信息。需要说明的是，部分函数（如 `RANK`）已被新版函数替代，建议优先使用新函数。对于 `TODAY`、`NOW` 等无参数函数，以及 `AND`、`OR`、`NOT`、`XOR` 等逻辑函数，其语法和注意事项相对简单，下面一并列出。
+
+### 📊 数学与统计函数
+
+**SUM**
+*   **用途**：将单个值、单元格引用或区域相加。
+*   **语法**：`=SUM(number1, [number2], ...)`
+*   **参数**：`number1` 必需，后续可选，最多 255 个。可以是数字、单元格引用或区域。
+*   **示例**：`=SUM(A2:A10)` 或 `=SUM(A2:A10, C2:C10)`
+*   **注意**：会忽略引用区域中的文本值；使用区域引用（如 `A1:A3`）比逐个单元格引用（如 `A1,A2,A3`）更稳健，在插入/删除行时能自动更新。
+
+**AVERAGE**
+*   **用途**：返回参数的算术平均值。
+*   **语法**：`=AVERAGE(number1, [number2], ...)`
+*   **参数**：同 SUM，最多 255 个。
+*   **示例**：`=AVERAGE(A2:A6)`
+*   **注意**：会忽略引用中的文本、逻辑值和空单元格，但**包含零值单元格**。
+
+**MAX / MIN**
+*   **用途**：返回一组值中的最大值 (`MAX`) 或最小值 (`MIN`)。
+*   **语法**：`=MAX(number1, [number2], ...)` / `=MIN(number1, [number2], ...)`
+*   **参数**：同 SUM。
+*   **示例**：`=MAX(A2:A6)` / `=MIN(A2:A6)`
+*   **注意**：如果参数中不包含任何数字，则返回 0。
+
+**COUNT**
+*   **用途**：计算包含**数字**的单元格个数以及参数列表中数字的个数。
+*   **语法**：`=COUNT(value1, [value2], ...)`
+*   **参数**：`value1` 必需，后续可选。
+*   **示例**：`=COUNT(A2:A7)`
+*   **注意**：只计算数字、日期或代表数字的文本；会忽略空单元格、文本、逻辑值和错误值。
+
+**ABS**
+*   **用途**：返回数字的绝对值。
+*   **语法**：`=ABS(number)`
+*   **示例**：`=ABS(-5)` 返回 5。
+*   **注意**：参数必须是数值。
+
+**RANK / RANK.EQ**
+*   **用途**：返回某数字在一列数字中相对于其他数值的排位。`RANK` 是旧函数，`RANK.EQ` 是其替代版本。
+*   **语法**：`=RANK(number, ref, [order])` / `=RANK.EQ(number, ref, [order])`
+*   **参数**：`number` 要找排位的数字；`ref` 数字列表的引用；`order` 可选，0 或省略为降序，非零为升序。
+*   **示例**：`=RANK(A3, A2:A6, 1)` (升序排位)
+*   **注意**：对于重复数字，会赋予相同的排位，但会影响后续数字的排位（例如两个并列第5，下一个就是第7）。建议优先使用 `RANK.EQ`。
+
+### 🎯 条件统计与求和
+
+**IF**
+*   **用途**：进行逻辑比较，根据条件真假返回不同结果。
+*   **语法**：`=IF(logical_test, value_if_true, [value_if_false])`
+*   **参数**：`logical_test` 要测试的条件；`value_if_true` 条件为真时的返回值；`value_if_false` 可选，条件为假时的返回值。
+*   **示例**：`=IF(A2>B2, "超出预算", "正常")`
+*   **注意**：文本结果需用双引号括起来；可嵌套使用以进行多重判断。
+
+**SUMIF / SUMIFS**
+*   **用途**：对满足单个条件 (`SUMIF`) 或多个条件 (`SUMIFS`) 的单元格求和。
+*   **语法**：
+    *   `=SUMIF(range, criteria, [sum_range])`
+    *   `=SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)`
+*   **示例**：
+    *   `=SUMIF(A2:A5, ">1600000", B2:B5)` (对A列大于160万的对应B列求和)
+    *   `SUMIFS` 语法为 `=SUMIFS(求和区域, 条件区域1, 条件1, ...)`。
+*   **注意**：条件中的文本或含逻辑/数学符号的条件必须用双引号括起来。`SUMIFS` 的求和区域必须放在第一个参数位置。
+
+**COUNTIF / COUNTIFS**
+*   **用途**：计算满足单个条件 (`COUNTIF`) 或多个条件 (`COUNTIFS`) 的单元格个数。
+*   **语法**：
+    *   `=COUNTIF(range, criteria)`
+    *   `=COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)`
+*   **示例**：`=COUNTIF(A2:A5, "apples")`
+*   **注意**：支持通配符 `?` 和 `*`；匹配超过 255 个字符的字符串时可能返回错误结果。
+
+**AVERAGEIF / AVERAGEIFS**
+*   **用途**：对满足单个条件 (`AVERAGEIF`) 或多个条件 (`AVERAGEIFS`) 的单元格求平均值。
+*   **语法**：与 `SUMIF`/`SUMIFS` 类似，将求和改为求平均。
+*   **示例**：`=AVERAGEIF(A2:A5, ">1600000", B2:B5)`
+*   **注意**：用法和注意事项与对应的 `SUMIF(S)` 一致。
+
+### 🔍 查找与引用
+
+**VLOOKUP**
+*   **用途**：在表格或区域的首列中查找值，并返回该行中指定列的值。
+*   **语法**：`=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])`
+*   **参数**：`lookup_value` 要查找的值；`table_array` 查找范围；`col_index_num` 返回结果所在的列序号（从范围首列算起为1）；`range_lookup` 可选，`FALSE`/`0` 为精确匹配，`TRUE`/`1` 为近似匹配。
+*   **示例**：`=VLOOKUP(A2, A10:C20, 2, FALSE)` (在A10:C20首列精确查找A2，返回第2列的值)
+*   **注意**：查找值必须位于查找范围的第一列；若使用近似匹配，首列必须按升序排列。
+
+### 📅 日期与时间
+
+**DATE**
+*   **用途**：将三个单独的值（年、月、日）合并为一个日期序列号。
+*   **语法**：`=DATE(year, month, day)`
+*   **示例**：`=DATE(2023, 10, 26)`
+*   **注意**：如果 `year` 介于 0-1899，Excel 会将其与 1900 相加；如果 `month` 或 `day` 超出正常范围，Excel 会自动向前或向后推算。
+
+**DAY / MONTH / YEAR**
+*   **用途**：从日期中提取日 (`DAY`，1-31)、月 (`MONTH`，1-12) 或年 (`YEAR`)。
+*   **语法**：`=DAY(serial_number)` 等。
+*   **示例**：`=DAY("2023-10-26")` 返回 26。
+*   **注意**：参数应为有效的日期序列号或日期值。
+
+**TODAY / NOW**
+*   **用途**：返回当前日期 (`TODAY`) 或当前日期和时间 (`NOW`)。
+*   **语法**：`=TODAY()` / `=NOW()` (无参数)
+*   **注意**：它们是易失性函数，每次工作表重新计算时都会更新。
+
+### 📝 文本函数
+
+**TRIM**
+*   **用途**：删除文本中多余的空格，只保留单词间的单个空格。
+*   **语法**：`=TRIM(text)`
+*   **示例**：`=TRIM("  Hello   World  ")` 返回 `"Hello World"`。
+
+**UPPER / LOWER**
+*   **用途**：将文本转换为大写 (`UPPER`) 或小写 (`LOWER`)。
+*   **语法**：`=UPPER(text)` / `=LOWER(text)`
+*   **示例**：`=UPPER("excel")` 返回 `"EXCEL"`。
+
+**TEXT**
+*   **用途**：将数值转换为按指定格式表示的文本。
+*   **语法**：`=TEXT(value, format_text)`
+*   **示例**：`=TEXT(TODAY(), "yyyy-mm-dd")` 将当前日期格式化为文本。
+*   **注意**：`format_text` 需用双引号括起来。
+
+**LEFT / RIGHT / MID**
+*   **用途**：从文本的左侧 (`LEFT`)、右侧 (`RIGHT`) 或中间 (`MID`) 提取指定数量的字符。
+*   **语法**：
+    *   `=LEFT(text, [num_chars])`
+    *   `=RIGHT(text, [num_chars])`
+    *   `=MID(text, start_num, num_chars)`
+*   **示例**：`=LEFT("Excel", 2)` 返回 `"Ex"`；`=MID("Excel", 2, 3)` 返回 `"xce"`。
+
+**LEN**
+*   **用途**：返回文本字符串的字符个数。
+*   **语法**：`=LEN(text)`
+*   **示例**：`=LEN("Excel")` 返回 5。
+
+**REPLACE**
+*   **用途**：用新文本替换文本中指定位置的特定数量字符。
+*   **语法**：`=REPLACE(old_text, start_num, num_chars, new_text)`
+*   **示例**：`=REPLACE("2023", 1, 2, "20")` 返回 `"2023"` (此处为示意，实际是替换前2位)。
+
+**SUBSTITUTE**
+*   **用途**：将文本中指定的旧文本替换为新文本。
+*   **语法**：`=SUBSTITUTE(text, old_text, new_text, [instance_num])`
+*   **示例**：`=SUBSTITUTE("Hello World", "World", "Excel")` 返回 `"Hello Excel"`。
+*   **注意**：与 `REPLACE` 不同，`SUBSTITUTE` 是按内容替换，而非按位置。
+
+### 🔗 逻辑函数
+
+**AND / OR / NOT / XOR**
+*   **用途**：`AND` 检查是否所有条件都为真；`OR` 检查是否有任一条件为真；`NOT` 对逻辑值取反；`XOR` 检查条件是否为奇数个真。
+*   **语法**：`=AND(logical1, [logical2], ...)` 等。
+*   **示例**：`=IF(AND(A2>0, B2>0), "合格", "不合格")`
+*   **注意**：这些函数通常与其他函数（如 `IF`）结合使用，以构建更复杂的逻辑判断。
+
+
+
+----
+
 
 ### 4.SUM函数的语法格式和功能是什么？
 
@@ -49,16 +225,22 @@ tags: [Excel2010, 项目二, 任务二, 对口升学]
 
 ### 7.SUMIFS函数的语法格式和功能是什么？
 
-答：语法：SUMIFS（sum_range，criteria_range1，criteria1，[criteria_range2，criteria2]，…）
+答：
+语法：
+```
+SUMIFS（sum_range，criteria_range1，criteria1，[criteria_range2，criteria2]，…）
+```
 功能：对区域中满足多个条件的单元格求和。
+
 说明：
-（1）sum_range 必需。对一个或多个单元格求和，包括数字或包含数字的名称、区域或单元格引用。忽略空白和文本值。
-（2）criteria_range1 必需。在其中计算关联条件的第一个区域。
-（3）criteria1 必需。条件的形式为数字、表达式、单元格引用或文本，可用来定义将对哪些单元格进行计数。例如，条件可以表示为 32、">32"、B4、"苹果"或"32"。
-（4）criteria_range2，criteria2，… 可选。附加的区域及其关联条件。最多允许 127 个区域/条件对。
-（5）仅在 sum_range 参数中的单元格满足所有相应的指定条件时，才对该单元格求和。
-（6）sum_range 中包含 TRUE 的单元格计算为 1，sum_range 中包含 FALSE 的单元格计算为 0（零）。
-（7）与SUMIF函数中的区域和条件参数不同，SUMIFS函数中每个 criteria_range 参数包含的行数和列数必须与 sum_range 参数相同。
+
+- sum_range 必需。对一个或多个单元格求和，包括数字或包含数字的名称、区域或单元格引用。忽略空白和文本值。
+- criteria_range1 必需。在其中计算关联条件的第一个区域。
+- criteria1 必需。条件的形式为数字、表达式、单元格引用或文本，可用来定义将对哪些单元格进行计数。例如，条件可以表示为 32、">32"、B4、"苹果"或"32"。
+- criteria_range2，criteria2，… 可选。附加的区域及其关联条件。最多允许 127 个区域/条件对。
+- 仅在 sum_range 参数中的单元格满足所有相应的指定条件时，才对该单元格求和。
+- sum_range 中包含 TRUE 的单元格计算为 1，sum_range 中包含 FALSE 的单元格计算为 0（零）。
+- 与SUMIF函数中的区域和条件参数不同，SUMIFS函数中每个 criteria_range 参数包含的行数和列数必须与 sum_range 参数相同。
 
 ### 8.SUMIFS和SUMIF的参数顺序有什么不同？
 
