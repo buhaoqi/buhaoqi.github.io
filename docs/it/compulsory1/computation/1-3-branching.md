@@ -4,7 +4,7 @@ description: 河北省普通高中教科书《信息技术》教科版 必修1�
 keywords: [选择结构, 分支结构, 关系运算符, 比较运算符, 逻辑运算符, and, or, not, 短路求值, 布尔值,  单分支, 双分支, 多分支, if, else, elif, 嵌套, 缩进, 冒号, 条件表达式, 分段函数, 成绩等级, 闰年判断, 奇偶判断, 绝对值, 浮点数比较, 信息科技, 必修1, 编程计算]
 sidebar_label: 2.2 做出判断的分支
 sidebar_position: 2
-slug: /it/compulsory1/unit2/sec2-2-branching
+slug: it/compulsory1/computation/1-3-branching
 tags: [信息技术, 必修1, 第2单元, 编程计算, 对口升学]
 ---
 

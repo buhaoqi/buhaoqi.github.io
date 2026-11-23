@@ -4,7 +4,7 @@ description: 河北省普通高中教科书《信息技术》教科版 必修1�
 keywords: [算法, 算法的描述, 自然语言, 流程图, 伪代码, 起止框, 处理框, 判断框, 输入输出框, 流程线, 顺序结构, Python, IDLE, 交互式, 文件式, 变量, 赋值, 变量命名, 数据类型, int, float, str, bool, type, 类型转换, input, print, sep, end, 算术运算符, 整除, 取余, 幂运算, 优先级, SyntaxError, NameError, ValueError, ZeroDivisionError, 注释, 信息技术, 必修1, 编程计算]
 sidebar_label: 2.1 计算机解决问题的过程
 sidebar_position: 1
-slug: /it/compulsory1/unit2/sec2-1-problem-solving-process
+slug: it/compulsory1/computation/1-1-python-basics
 tags: [信息技术, 必修1, 第2单元, 编程计算, 对口升学]
 ---
 

@@ -1,10 +1,11 @@
 ---
+id: 2-algorithms
 title: 4.1 算法及其特征
 description: 河北省普通高中教科书《信息技术》教科版 必修1《数据与计算》第4单元 计算与问题解决 4.1 算法及其特征知识点总结。系统梳理算法的定义、五个基本特征（有穷性、确定性、可行性、输入、输出）与三种基本结构，比较自然语言、流程图、伪代码、程序语言四种描述方式，归纳衡量算法优劣的四个维度（正确性、可读性、健壮性、效率），并用执行次数直观讲解时间复杂度 O(1)、O(log n)、O(n)、O(n log n)、O(n²) 与空间复杂度、大 O 记法。
 keywords: [算法, 算法的特征, 有穷性, 确定性, 可行性, 输入, 输出, 三种基本结构, 顺序结构, 选择结构, 循环结构, 算法的描述, 自然语言, 流程图, 伪代码, 程序设计语言, 算法的评价, 正确性, 可读性, 健壮性, 效率, 时间复杂度, 空间复杂度, 大O记法, O(1), O(logn), O(n), O(nlogn), O(n²), 算法与程序的区别, 计算思维, 信息技术, 必修1, 计算与问题解决]
-sidebar_label: 4.1 算法及其特征
-sidebar_position: 1
-slug: /it/compulsory1/unit4/sec4-1-algorithms-and-features
+sidebar_label: 算法及其特征
+sidebar_position: 5
+slug: it/compulsory1/computation/2-algorithms
 tags: [信息技术, 必修1, 第4单元, 计算与问题解决, 对口升学]
 ---
 

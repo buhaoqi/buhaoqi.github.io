@@ -4,7 +4,7 @@ description: 河北省普通高中教科书《信息技术》教科版 必修1�
 keywords: [循环结构, for循环, while循环, range函数, 左闭右开, 起始值, 终止值, 步长, 遍历, 累加器, 计数器, 循环变量, 死循环, break, continue, 循环嵌套, 九九乘法表, 穷举, 枚举, 辗转相除法, 最大公约数, 斐波那契, 水仙花数, 素数判断, 缩进, 循环三要素, 信息技术, 必修1, 编程计算]
 sidebar_label: 2.3 周而复始的循环
 sidebar_position: 3
-slug: /it/compulsory1/unit2/sec2-3-loops
+slug: it/compulsory1/computation/1-4-loops
 tags: [信息技术, 必修1, 第2单元, 编程计算, 对口升学]
 ---
 

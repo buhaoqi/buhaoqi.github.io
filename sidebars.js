@@ -1147,66 +1147,30 @@ const sidebars = {
     // 必修1《数据与计算》
     {
       type: 'category',
-      label: '必修1《数据与计算》',
+      label: '必修1:数据',
       collapsible: true,
       collapsed: false,
       items: [
-        {
-          type: 'category',
-          label: '第1单元 初识数据与计算',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'it/compulsory1/unit1/sec1-1-data-around-us', // 1.1 我们身边的数据
-            'it/compulsory1/unit1/sec1-2-data-computation', // 1.2 数据的计算
-          ],
-        },
-        {
-          type: 'category',
-          label: '第2单元 编程计算',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'it/compulsory1/unit2/sec2-1-problem-solving-process', // 2.1 计算机解决问题的过程
-            'it/compulsory1/unit2/sec2-2-branching', // 2.2 做出判断的分支
-            'it/compulsory1/unit2/sec2-3-loops', // 2.3 周而复始的循环
-            'it/compulsory1/unit2/sec2-4-reusable-code', // 2.4 可以复用的代码
-          ],
-        },
-        {
-          type: 'category',
-          label: '第3单元 认识数据',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'it/compulsory1/unit3/sec3-1-data-encoding', // 3.1 数据编码
-            'it/compulsory1/unit3/sec3-2-data-and-structure', // 3.2 数据与结构
-            'it/compulsory1/unit3/sec3-3-data-and-system', // 3.3 数据与系统
-            'it/compulsory1/unit3/sec3-4-encryption', // 3.4 加密与解密
-          ],
-        },
-        {
-          type: 'category',
-          label: '第4单元 计算与问题解决',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'it/compulsory1/unit4/sec4-1-algorithms-and-features', // 4.1 算法及其特征
-            'it/compulsory1/unit4/sec4-2-numerical-computation', // 4.2 数值计算
-            'it/compulsory1/unit4/sec4-3-non-numerical-computation', // 4.3 非数值计算
-            'it/compulsory1/unit4/sec4-4-comprehensive-problem-solving', // 4.4 综合问题的解决
-          ],
-        },
-        {
-          type: 'category',
-          label: '第5单元 数据分析与人工智能',
-          collapsible: true,
-          collapsed: true,
-          items: [
-            'it/compulsory1/unit5/sec5-1-data-analysis', // 5.1 走近数据分析
-            'it/compulsory1/unit5/sec5-2-artificial-intelligence', // 5.2 探秘人工智能
-          ],
-        },
+        'it/compulsory1/data/1-data-info-knowledge', // 1.1 我们身边的数据
+        'it/compulsory1/data/2-data-encoding', // 3.1 数据编码
+        'it/compulsory1/data/3-encryption', // 3.4 加密与解密
+        'it/compulsory1/data/4-big-data', // 5.1 走近数据分析
+        'it/compulsory1/data/5-artificial-intelligence', // 5.2 探秘人工智能
+      ],
+    },
+    {
+      type: 'category',
+      label: '必修1:计算',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'it/compulsory1/computation/1-1-python-basics', // 3.2 数据与结构
+        'it/compulsory1/computation/1-2-numerical-computation', 
+        'it/compulsory1/computation/1-3-branching', 
+        'it/compulsory1/computation/1-4-loops', 
+        'it/compulsory1/computation/1-5-reusable-code', 
+        'it/compulsory1/computation/2-algorithms', 
+        'it/compulsory1/computation/3-data-and-structure', 
       ],
     },
     // 必修2《信息系统与社会》

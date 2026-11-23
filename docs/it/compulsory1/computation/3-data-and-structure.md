@@ -1,12 +1,20 @@
 ---
-title: 3.2 数据与结构
+id: 3-data-and-structure
+title: 11-13.数据与结构
 description: 河北省普通高中教科书《信息技术》教科版 必修1《数据与计算》第3单元 认识数据 3.2 数据与结构知识点总结。讲清数据结构的含义与三种考察层面（逻辑结构、存储结构、操作），梳理线性结构中的数组、栈、队列、链表与非线性结构中的树、图及各自典型应用，并系统整理 Python 中列表、元组、字典、集合与字符串的创建、索引切片、常用方法与二维列表的用法及易错点。
 keywords: [数据结构, 逻辑结构, 存储结构, 线性结构, 非线性结构, 数组, 列表, 栈, 后进先出, LIFO, 队列, 先进先出, FIFO, 链表, 树, 二叉树, 根结点, 叶子结点, 图, 邻接矩阵, Python列表, 索引, 切片, append, insert, remove, pop, sort, len, sum, max, min, 列表推导式, 二维列表, 元组, 不可变, 字典, 键值对, 集合, 去重, 字符串, upper, lower, strip, split, join, find, replace, in运算符, 信息技术, 必修1, 认识数据]
-sidebar_label: 3.2 数据与结构
-sidebar_position: 2
-slug: /it/compulsory1/unit3/sec3-2-data-and-structure
+sidebar_label: 11-13.数据与结构
+sidebar_position: 6
+slug: it/compulsory1/computation/3-data-and-structure
 tags: [信息技术, 必修1, 第3单元, 认识数据, 对口升学]
 ---
+
+
+## 考点
+
+11. 掌握常用的数据类型：整数、浮点数、字符型、字符串、布尔型等；(数据与计算-P56)
+12. 掌握队列、栈等线性数据结构的概念和特点，能够使用编程语言对队列进行操作；(数据与计算-P58)
+13. 了解树、图结构的基本概念及特点；(数据与计算-P60)
 
 ## 知识点
 

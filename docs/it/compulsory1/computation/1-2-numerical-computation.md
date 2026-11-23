@@ -4,7 +4,7 @@ description: 河北省普通高中教科书《信息技术》教科版 必修1�
 keywords: [数值计算, 解析法, 公式法, 迭代法, 迭代终止条件, 精度控制, 二分法, 求根, 牛顿迭代法, 开平方, 级数展开, 计算圆周率, 蒙特卡洛方法, 递推, 递推关系, 累加, 累乘, 穷举法, 枚举法, 百钱百鸡, 水仙花数, 素数, 最大公约数, 辗转相除法, 斐波那契数列, 递归, 阶乘, 浮点误差, abs, 1e-6, 信息技术, 必修1, 数值计算]
 sidebar_label: 4.2 数值计算
 sidebar_position: 2
-slug: /it/compulsory1/unit4/sec4-2-numerical-computation
+slug: it/compulsory1/computation/1-2-numerical-computation
 tags: [信息技术, 必修1, 第4单元, 数值计算, 对口升学]
 ---
 

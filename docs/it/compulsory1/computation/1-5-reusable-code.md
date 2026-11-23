@@ -4,7 +4,7 @@ description: 河北省普通高中教科书《信息技术》教科版 必修1�
 keywords: [函数, 自定义函数, def, 函数调用, 参数, 形参, 实参, 位置参数, 关键字参数, 默认参数, 返回值, return, None, 多个返回值, 元组, 局部变量, 全局变量, 作用域, 库, 模块, import, from import, as, 标准库, math, sqrt, pi, random, randint, choice, 自定义模块, 递归, 阶乘, 汉诺塔, 代码复用, 模块化, 信息技术, 必修1, 编程计算]
 sidebar_label: 2.4 可以复用的代码
 sidebar_position: 4
-slug: /it/compulsory1/unit2/sec2-4-reusable-code
+slug: it/compulsory1/computation/1-5-reusable-code
 tags: [信息技术, 必修1, 第2单元, 编程计算, 对口升学]
 ---
 
